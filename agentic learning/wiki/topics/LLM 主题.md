@@ -1,0 +1,46 @@
+---
+type: map
+topic:
+  - llm
+status: active
+created: 2026-05-05
+updated: 2026-05-05
+related:
+  - "[[LLM]]"
+  - "[[Transformer]]"
+  - "[[Agent 知识地图]]"
+---
+
+# LLM 主题
+
+这个主题页聚合所有 `topic` 包含 `llm` 的笔记。
+
+## 概念卡
+
+```dataview
+TABLE status, updated, related
+FROM "wiki/concepts"
+WHERE contains(topic, "llm")
+SORT file.name ASC
+```
+
+## 下一批概念
+
+- [ ] Token
+- [ ] context window
+- [ ] prompt
+- [ ] hallucination
+- [ ] temperature
+
+## Transformer 地基
+
+- [[Transformer]]
+- [[Self-Attention]]
+- [[Multi-Head Attention]]
+- [[Positional Encoding]]
+
+## 关键边界
+
+LLM 是生成能力，Agent 是行动系统。学习 LLM 时先抓限制，再看 Agent 如何补足限制。
+
+Transformer 是 LLM 的架构地基之一，但不是 Agent 能力本身。

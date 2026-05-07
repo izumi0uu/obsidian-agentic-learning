@@ -1,0 +1,10 @@
+{
+  "theme": "obsidian",
+  "cssTheme": "Minimal",
+  "enabledCssSnippets": [
+    "agentic-learning-fonts"
+  ],
+  "baseFontSize": 16,
+  "nativeMenus": false,
+  "accentColor": ""
+}

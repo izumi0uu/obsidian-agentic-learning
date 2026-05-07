@@ -1,0 +1,80 @@
+# macOS / system
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
+# Obsidian local state
+agentic learning/.obsidian/workspace*.json
+agentic learning/.obsidian/cache/
+agentic learning/.obsidian/trash/
+agentic learning/.trash/
+agentic learning/.obsidian/plugins/
+agentic learning/.obsidian/themes/
+
+# Large source assets kept locally
+agentic learning/raw/papers/assets/
+agentic learning/raw/assets/
+agentic learning/assets/
+
+# PDFs, images, audio, video, and archives
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.bmp
+*.tiff
+*.ico
+*.mp3
+*.wav
+*.m4a
+*.aac
+*.flac
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# Local AI / vector / generated indexes
+.qdrant/
+.chroma/
+.lancedb/
+.cache/
+*.sqlite
+*.sqlite3
+*.db
+*.parquet
+
+# Secrets and machine-local config
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.crt
+secrets/
+
+# Temporary and generated files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+node_modules/
+dist/
+build/
+coverage/
+
+# One-off local crawls / mirrored sites
+scripts/
+agentic learning/raw/articles/xiaolinnote/
