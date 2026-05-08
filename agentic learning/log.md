@@ -176,3 +176,23 @@ related:
 - Result: new 0, changed 0, unchanged 120, errors 0.
 - Updated navigation: [[资料收集索引]], [[04 页面目录]], [[index]]
 - Boundary: this is raw evidence refresh; changed pages still need explicit wiki/concept digestion if their content matters.
+
+## [2026-05-08] query | ReAct 是否仍是 Agent 主流范式
+
+- Question: 现在的 Agent 都在使用 ReAct 范式吗？ReAct 对模型能力、执行效率、提示词和局部最优的依赖现在怎么解决？
+- Updated: [[ReAct]], [[05 Query 写回队列]]
+- Sources checked: [[ReAct - Synergizing Reasoning and Acting in Language Models]], [[Anthropic - Building Effective Agents]], [[OpenAI - A Practical Guide to Building Agents]], [[LangGraph 官方文档]]
+- Boundary: ReAct 仍是理解 [[Agent Loop]] 的经典模式，但现代生产 Agent 通常用 workflow、state graph、tool schema、guardrails、evaluation、trace、human-in-the-loop 和 harness 来包住它，而不是只靠一个 ReAct prompt 模板裸跑。
+
+## [2026-05-08] ingest | Plan-and-Solve Prompting
+
+- Source: [[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models]]
+- Added concept: [[Plan-and-Solve Prompting]]
+- Updated: [[Planning]], [[01 术语表]], [[资料收集索引]], [[Agent 主题]]
+- Boundary: Plan-and-Solve Prompting 是 zero-shot CoT 的 plan-first 提示方法，不是 [[ReAct]]，也不是完整 [[Agent Loop]]；它没有外部 Action 和 [[Observation]] 反馈。
+
+## [2026-05-08] image-ingest | Planning Phase / Solving Phase
+
+- Source: 用户提供截图，录入到 [[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models]]
+- Updated: [[Plan-and-Solve Prompting]], [[Planning]]
+- Boundary: 图片内容更接近 plan-and-execute / plan-and-replan workflow；它能解释 planning 的工程化形态，但不应直接等同于 [[Plan-and-Solve Prompting]] 论文里的纯 prompting 方法。

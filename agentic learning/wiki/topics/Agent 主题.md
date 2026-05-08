@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-05
+updated: 2026-05-08
 related:
   - "[[Agent]]"
   - "[[ReAct]]"
@@ -44,6 +44,7 @@ SORT created DESC
 ## 论文进入的关键概念
 
 - [[ReAct]]
+- [[Plan-and-Solve Prompting]]
 - [[Reasoning Trace]]
 - [[Observation]]
 - [[Coding Agent]]
