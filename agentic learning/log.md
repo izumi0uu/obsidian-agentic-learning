@@ -196,3 +196,16 @@ related:
 - Source: 用户提供截图，录入到 [[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models]]
 - Updated: [[Plan-and-Solve Prompting]], [[Planning]]
 - Boundary: 图片内容更接近 plan-and-execute / plan-and-replan workflow；它能解释 planning 的工程化形态，但不应直接等同于 [[Plan-and-Solve Prompting]] 论文里的纯 prompting 方法。
+
+## [2026-05-08] query | Agent framework 如何接管 prompt loop
+
+- Question: 现在框架是怎么更好地接管 ReAct / Plan-and-Solve 这类 prompt pattern？
+- Updated: [[Agent Framework]], [[05 Query 写回队列]]
+- Sources checked: [[OpenAI Agents SDK 文档]], [[LangGraph 官方文档]], [[Agent Framework]], [[Agent Harness]], [[Tool Calling]], [[Durable Execution]], [[Guardrails]]
+- Boundary: 框架接管的不是“模型思考”本身，而是把工具调用格式、状态、流程、执行恢复、权限和 trace 从 prompt 软约束变成 runtime 工程对象。
+
+## [2026-05-08] concept | Agent State and Agent Workflow
+
+- Added concepts: [[Agent State]], [[Agent Workflow]]
+- Updated: [[Agent Framework]], [[01 术语表]], [[Agent 知识地图]]
+- Boundary: [[Agent State]] 解释框架如何保存当前任务运行状态，不等于 [[Memory]] 或 context window；[[Agent Workflow]] 解释任务路径如何被工程化控制，不等于 [[Agent Loop]] 或 [[Agent Framework]] 本身。

@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-07
+updated: 2026-05-08
 related:
   - "[[Agent]]"
   - "[[前沿主源清单]]"
@@ -43,6 +43,8 @@ LLM 地基：
 - [[Memory]]：Agent 如何保存和使用过去的信息。
 - [[Oh My Codex (OMX)]]：一个具体的 Codex CLI 编排实践，用来观察 Agent Harness 如何落地。
 - [[Agent Framework]]：理解 LangGraph、OpenAI Agents SDK、AutoGen 等框架解决的是哪层工程问题。
+- [[Agent State]]：理解框架如何保存当前任务的进度、中间结果和下一步依据。
+- [[Agent Workflow]]：理解框架如何把任务组织成步骤、分支、循环和交接。
 - [[Durable Execution]]：理解长任务为什么需要暂停、恢复和重试。
 - [[Human-in-the-loop]]：理解人类确认、接管和修正如何进入 Agent loop。
 
@@ -102,6 +104,8 @@ SORT file.name ASC
 - [x] [[Human-in-the-loop]]
 - [x] [[Tool Permissioning]]
 - [x] [[Agent Framework]]
+- [x] [[Agent State]]
+- [x] [[Agent Workflow]]
 - [x] [[Durable Execution]]
 - [x] [[Handoff]]
 - [x] [[Code Execution Sandbox]]

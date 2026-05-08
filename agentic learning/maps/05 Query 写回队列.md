@@ -29,6 +29,7 @@ related:
 | 2026-05-07 | done | “我现在这个项目践行了 LLM Wiki 吗？” | [[Obsidian + LLM Wiki]], [[LLM Wiki 工作流]] | 已写回“早期可用版 / 人工监督的 LLM 学习 wiki”边界 |
 | 2026-05-07 | done | “$ralplan 底层是在做什么？” | [[Oh My Codex (OMX)]], [[oh-my-codex 使用教程]] | 已写回 prompt routing + state + plan artifact + stop hook |
 | 2026-05-08 | done | “现在的 agent 都在使用 ReAct 范式吗？ReAct 的局限现在怎么解决？” | [[ReAct]], [[Agent Loop]], [[Agent Harness]] | 已写回 ReAct 作为行动循环思想、不是所有 Agent 固定模板的边界 |
+| 2026-05-08 | done | “现在框架是怎么更好地接管 ReAct / Plan-and-Solve 这类 prompt pattern？” | [[Agent Framework]], [[Agent Harness]], [[Tool Calling]] | 已写回框架接管 prompt loop 的工具、状态、流程、执行、权限、观测六层 |
 
 ## 写回模板
 
