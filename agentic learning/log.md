@@ -168,3 +168,11 @@ related:
 - Added raw source pages under `raw/articles/xiaolinnote/`: 120 successful pages, 0 failed pages.
 - Updated: [[资料收集索引]], [[04 页面目录]], [[index]]
 - Boundary: this batch is raw evidence import only; it has not yet been digested into concept cards.
+
+## [2026-05-07] source-update | 小林 Note sitemap 面试题
+
+- Source: [[raw/articles/xiaolinnote/小林 Note 面试题索引]]
+- Scope: `all`; checked 120 sitemap URLs.
+- Result: new 0, changed 0, unchanged 120, errors 0.
+- Updated navigation: [[资料收集索引]], [[04 页面目录]], [[index]]
+- Boundary: this is raw evidence refresh; changed pages still need explicit wiki/concept digestion if their content matters.
