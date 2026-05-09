@@ -4,15 +4,16 @@ topic:
   - memory
   - agent
   - frontier
-status: seed
+status: growing
 created: 2026-05-06
-updated: 2026-05-06
-last_checked: 2026-05-07
+updated: 2026-05-08
+last_checked: 2026-05-08
 freshness: stable
 conflicts: []
 source:
   - "[[Letta Memory 官方文档]]"
   - "[[LangGraph Memory 官方文档]]"
+  - "[[Reflexion - Language Agents with Verbal Reinforcement Learning]]"
 evidence:
   - "[[Letta Memory 官方文档#为什么收]]"
   - "[[LangGraph Memory 官方文档#为什么收]]"
@@ -21,6 +22,7 @@ related:
   - "[[Semantic Memory]]"
   - "[[Episodic Memory]]"
   - "[[Evaluation]]"
+  - "[[Reflexion]]"
 ---
 
 # Memory Reflection
@@ -38,6 +40,8 @@ Agent 不能把每条历史都直接塞进长期记忆。Reflection 用来压缩
 Memory Reflection 不是“让模型想一想”。
 
 它应该是有输入、触发条件、写入位置、审查机制和冲突处理的记忆维护流程。
+
+它也不等于 [[Reflexion]]。Reflexion 偏任务执行后的反馈-反思-再尝试循环；Memory Reflection 偏把历史对话、任务轨迹或事件记忆总结成更稳定的长期记忆。
 
 ## 最小例子
 
@@ -68,3 +72,4 @@ Reflection 可以把这些总结成用户学习偏好。
 - [[Long-term Memory]]
 - [[Episodic Memory]]
 - [[Semantic Memory]]
+- [[Reflexion]]

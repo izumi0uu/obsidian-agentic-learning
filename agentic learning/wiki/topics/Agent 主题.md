@@ -44,6 +44,7 @@ SORT created DESC
 ## 论文进入的关键概念
 
 - [[ReAct]]
+- [[Reflexion]]
 - [[Plan-and-Solve Prompting]]
 - [[Reasoning Trace]]
 - [[Observation]]

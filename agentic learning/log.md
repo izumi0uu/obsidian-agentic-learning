@@ -195,6 +195,7 @@ related:
 
 - Source: 用户提供截图，录入到 [[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models]]
 - Updated: [[Plan-and-Solve Prompting]], [[Planning]]
+- Asset: `agentic learning/raw/assets/plan-and-solve-planning-solving-phase.svg`（根据用户截图重绘）
 - Boundary: 图片内容更接近 plan-and-execute / plan-and-replan workflow；它能解释 planning 的工程化形态，但不应直接等同于 [[Plan-and-Solve Prompting]] 论文里的纯 prompting 方法。
 
 ## [2026-05-08] query | Agent framework 如何接管 prompt loop
@@ -209,3 +210,12 @@ related:
 - Added concepts: [[Agent State]], [[Agent Workflow]]
 - Updated: [[Agent Framework]], [[01 术语表]], [[Agent 知识地图]]
 - Boundary: [[Agent State]] 解释框架如何保存当前任务运行状态，不等于 [[Memory]] 或 context window；[[Agent Workflow]] 解释任务路径如何被工程化控制，不等于 [[Agent Loop]] 或 [[Agent Framework]] 本身。
+
+## [2026-05-08] ingest | Reflexion
+
+- Source: [[Reflexion - Language Agents with Verbal Reinforcement Learning]]
+- Added concept: [[Reflexion]]
+- Updated: [[Memory Reflection]], [[01 术语表]], [[Agent 知识地图]], [[资料收集索引]], [[Agent 主题]]
+- Image: 用户提供 Reflexion Agent Loop 截图，已录入 raw note 的图像结构摘要和 Mermaid 重画。
+- Asset: `agentic learning/raw/assets/reflexion-agent-loop.svg`（根据用户截图重绘）
+- Boundary: [[Reflexion]] 是执行后基于反馈生成反思文本并改进下一轮行动的机制；它不是普通 [[Reasoning Trace]]，也不等于 [[Memory Reflection]] 或模型权重训练。

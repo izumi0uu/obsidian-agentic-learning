@@ -46,6 +46,7 @@ LLM 地基：
 - [[Agent State]]：理解框架如何保存当前任务的进度、中间结果和下一步依据。
 - [[Agent Workflow]]：理解框架如何把任务组织成步骤、分支、循环和交接。
 - [[Durable Execution]]：理解长任务为什么需要暂停、恢复和重试。
+- [[Reflexion]]：理解 Agent 如何把失败反馈转成反思文本，并用经验改进下一轮行动。
 - [[Human-in-the-loop]]：理解人类确认、接管和修正如何进入 Agent loop。
 
 ## 知识能力
@@ -107,6 +108,7 @@ SORT file.name ASC
 - [x] [[Agent State]]
 - [x] [[Agent Workflow]]
 - [x] [[Durable Execution]]
+- [x] [[Reflexion]]
 - [x] [[Handoff]]
 - [x] [[Code Execution Sandbox]]
 - [x] [[LLM Gateway]]

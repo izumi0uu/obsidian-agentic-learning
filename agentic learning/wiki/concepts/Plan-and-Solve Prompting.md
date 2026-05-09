@@ -79,10 +79,13 @@ ReAct: Thought -> Action -> Observation -> Thought -> ...
 
 用户提供的 Planning Phase / Solving Phase 图里出现了 Task Agent、Exec、Loop 和 Replan。那张图更接近 plan-and-execute workflow：它把计划变成任务清单，并在执行阶段允许重新规划。它可以帮助理解 planning 的工程形态，但不要直接当成 Plan-and-Solve Prompting 论文方法本身。
 
+![[plan-and-solve-planning-solving-phase.svg]]
+
 ## 证据锚点
 
 - Source: [[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models]]
 - Anchor: [[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models#Ingest 摘要]]
+- Anchor: [[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models#图片录入：Planning Phase / Solving Phase]]
 - Confidence: medium
 
 ## 相关链接
