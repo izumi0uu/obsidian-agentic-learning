@@ -219,3 +219,10 @@ related:
 - Image: 用户提供 Reflexion Agent Loop 截图，已录入 raw note 的图像结构摘要和 Mermaid 重画。
 - Asset: `agentic learning/raw/assets/reflexion-agent-loop.svg`（根据用户截图重绘）
 - Boundary: [[Reflexion]] 是执行后基于反馈生成反思文本并改进下一轮行动的机制；它不是普通 [[Reasoning Trace]]，也不等于 [[Memory Reflection]] 或模型权重训练。
+
+## [2026-05-09] query-writeback | LLM Training Pipeline
+
+- Added concept: [[LLM Training Pipeline]]
+- Added sources: [[Scaling Laws for Neural Language Models]], [[Training Compute-Optimal Large Language Models]], [[Training Language Models to Follow Instructions with Human Feedback]], [[Constitutional AI - Harmlessness from AI Feedback]], [[DeepSeek-R1 - Incentivizing Reasoning Capability in LLMs via Reinforcement Learning]], [[The Llama 3 Herd of Models]]
+- Updated: [[LLM]], [[Evaluation]], [[LLM 主题]], [[01 术语表]], [[05 Query 写回队列]]
+- Boundary: 现代 LLM 变强不是单靠做大模型，而是预训练 scaling、数据质量、后训练、偏好优化、推理强化、工具/Agent 兼容性和评测闭环共同作用；模型训练提升决策质量，但 Agent runtime 仍负责工具、状态、权限、trace 和真实执行。

@@ -4,7 +4,7 @@ topic:
   - llm
 status: active
 created: 2026-05-05
-updated: 2026-05-05
+updated: 2026-05-09
 related:
   - "[[LLM]]"
   - "[[Transformer]]"
@@ -38,6 +38,17 @@ SORT file.name ASC
 - [[Self-Attention]]
 - [[Multi-Head Attention]]
 - [[Positional Encoding]]
+
+## 训练和后训练
+
+- [[LLM Training Pipeline]]
+- [[Toolformer]]
+- [[Scaling Laws for Neural Language Models]]
+- [[Training Compute-Optimal Large Language Models]]
+- [[Training Language Models to Follow Instructions with Human Feedback]]
+- [[Constitutional AI - Harmlessness from AI Feedback]]
+- [[DeepSeek-R1 - Incentivizing Reasoning Capability in LLMs via Reinforcement Learning]]
+- [[The Llama 3 Herd of Models]]
 
 ## 关键边界
 
