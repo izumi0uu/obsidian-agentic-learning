@@ -40,6 +40,18 @@ related:
 - 入口文档：`docs/interview_prep/README.md`
 - README 推荐快速路径：`01_AI` -> `02_后端` -> `03_系统设计` -> `05_项目表达`
 
+## 已录入题库
+
+- 相关知识回链：已为每个题目页补 `## 相关知识 wiki`；能明确匹配到现有概念卡/主题页的题目会直接链接，无直接对应关系的后端/算法题保留为 raw 缺口。
+
+- 题目索引：[[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]
+- 抓取提交：`12bf4c915cca01f513e040935e1917d3687f8b35`
+- 核心问答聚合文件：43
+- 已生成 raw 题目条目：637
+- 数据目录：`raw/repos/agent_java_offer/questions/`
+
+录入粒度比原仓库文件更细：原仓库是“方向 -> 主题 -> 单文件问答”，这里进一步拆成 `question`、`followup-question`、`supplement-section` 和 `algorithm-problem`，方便像小林 Note 那样按单题检索。
+
 ## 一句话
 
 它是“后端转 AI Agent”方向的面试复习索引和问答材料源，适合补表达和追问，不适合作为概念定义的唯一依据。
@@ -53,7 +65,7 @@ related:
 
 ## 可以拆成概念卡
 
-这份资料暂时不急着拆新卡，优先作为既有概念卡的面试表达补充：
+这份资料已经按面试题拆入 raw 层，但暂时不急着拆新概念卡，优先作为既有概念卡的面试表达补充：
 
 - [[Agent]]
 - [[Agent Framework]]

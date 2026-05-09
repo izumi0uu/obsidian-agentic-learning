@@ -1,0 +1,78 @@
+---
+type: source
+source_type: repo
+site: github.com
+repo: "guoguo-tju/agent_java_offer"
+topic:
+  - "interview"
+  - "ai"
+  - "agent"
+  - "framework"
+status: inbox
+created: 2026-05-09
+updated: 2026-05-09
+url: "https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/08_%E6%A1%86%E6%9E%B6%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%8C%96/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md"
+source: "https://github.com/guoguo-tju/agent_java_offer"
+source_path: "docs/interview_prep/01_AI/08_框架协议与工程化/01_核心问答.md"
+commit: "12bf4c915cca01f513e040935e1917d3687f8b35"
+entry_type: "question"
+direction: "01_AI"
+category: "08_框架协议与工程化"
+last_checked: 2026-05-09
+freshness: watch
+sha256: 21bae3fdb8bfd5c2e9417a461c952102eacd4e24558652e6815e9d457fc9616a
+license: "CC BY-NC 4.0"
+related:
+  - "[[agent_java_offer Repo]]"
+  - "[[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]"
+  - "[[资料收集索引]]"
+  - "[[Evaluation]]"
+  - "[[Benchmark]]"
+  - "[[Task Success Rate]]"
+  - "[[RAG]]"
+  - "[[Agent State]]"
+  - "[[Agent Framework]]"
+  - "[[Agent Workflow]]"
+  - "[[Durable Execution]]"
+  - "[[Agent]]"
+---
+
+# 框架选型与架构关系（LangChain/LangGraph/LlamaIndex/RAG框架）
+
+原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
+原始文件：[docs/interview_prep/01_AI/08_框架协议与工程化/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/08_%E6%A1%86%E6%9E%B6%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%8C%96/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
+提交：`12bf4c9`  
+分类：`01_AI` / `08_框架协议与工程化`  
+条目类型：`question`  
+许可证：CC BY-NC 4.0；本页保留为 raw source evidence，后续再决定是否拆入概念卡或面试复盘页。
+
+## 相关知识 wiki
+
+- [[Evaluation]]
+- [[Benchmark]]
+- [[Task Success Rate]]
+- [[RAG]]
+- [[Agent State]]
+- [[Agent Framework]]
+- [[Agent Workflow]]
+- [[Durable Execution]]
+- [[Agent]]
+
+## 题目正文
+
+### 1. 子问题：框架选型与架构关系（LangChain/LangGraph/LlamaIndex/RAG框架）
+
+主问题：常见 Agent/RAG 框架如何选型？
+
+口述答案：
+我的选型逻辑是“问题驱动而非框架驱动”。如果重点是工具编排与流程控制，优先 LangChain/LangGraph；如果重点是知识接入和检索能力，优先 LlamaIndex 或专门 RAG 框架；如果是数据规模和工程复杂度上升，再考虑框架组合。LangChain 更偏组件编排，LangGraph 更偏有状态图编排；很多项目是“LangChain 组件 + LangGraph 托管状态机”。选型最终看任务成功率、时延、成本、可维护性，不看单点 Demo 漂亮程度。
+
+常见追问：
+
+1. CrewAI、AutoGen、Ragflow 适合什么阶段？
+2. 你会如何做框架迁移与回滚？
+3. 如何避免“框架耦合”导致技术锁定？
+
+## 边界提醒
+
+这是来自面试资料库的原始题目/答案片段，适合练习口述和追问。涉及概念定义、工程边界或时效性事实时，仍需要回到论文、官方文档、框架源码或 `wiki/concepts/` 校准。

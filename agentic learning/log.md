@@ -163,7 +163,7 @@ related:
 
 ## [2026-05-07] source | 小林 Note sitemap 面试题抓取
 
-- Source: [[raw/articles/xiaolinnote/小林 Note 面试题索引]]
+- Source: [[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]
 - Crawled: 120 sitemap URLs from <https://xiaolinnote.com/sitemap.xml>.
 - Added raw source pages under `raw/articles/xiaolinnote/`: 120 successful pages, 0 failed pages.
 - Updated: [[资料收集索引]], [[04 页面目录]], [[index]]
@@ -171,7 +171,7 @@ related:
 
 ## [2026-05-07] source-update | 小林 Note sitemap 面试题
 
-- Source: [[raw/articles/xiaolinnote/小林 Note 面试题索引]]
+- Source: [[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]
 - Scope: `all`; checked 120 sitemap URLs.
 - Result: new 0, changed 0, unchanged 120, errors 0.
 - Updated navigation: [[资料收集索引]], [[04 页面目录]], [[index]]
@@ -233,3 +233,41 @@ related:
 - Added raw repo source for <https://github.com/guoguo-tju/agent_java_offer>.
 - Updated: [[资料收集索引]], [[04 页面目录]], [[index]]
 - Boundary: this is an interview-prep source for Java backend / AI Agent / system design material; it is not yet digested into concept cards and should not replace papers, official docs, or framework source evidence.
+
+## [2026-05-09] source-ingest | agent_java_offer interview questions
+
+- Source: [[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]
+- Crawled repo commit: `12bf4c915cca01f513e040935e1917d3687f8b35`.
+- Scope: `docs/interview_prep/`; parsed 43 core Q&A files and generated 637 raw question notes under `raw/repos/agent_java_offer/questions/`.
+- Breakdown: `question` 282, `followup-question` 267, `supplement-section` 39, `algorithm-problem` 49.
+- Updated: [[agent_java_offer Repo]], [[资料收集索引]], [[04 页面目录]], [[index]]
+- Boundary: this batch is raw evidence import only. It improves search and recall for interview practice, but concept cards still require separate digestion and stronger evidence from papers, official docs, or framework source.
+## [2026-05-09] maintenance | agent_java_offer question wiki backlinks
+
+- Updated: [[raw/repos/agent_java_offer/agent_java_offer 面试题索引]] and 637 question notes under `raw/repos/agent_java_offer/questions/`.
+- Added `## 相关知识 wiki` to every question note.
+- Result: 389 notes linked to existing wiki concepts/topics; 248 notes intentionally marked as having no direct existing concept card.
+- Boundary: links are conservative retrieval aids based on title/body/category, not proof that the interview answer is conceptually calibrated.
+
+## [2026-05-09] maintenance | xiaolinnote raw structure alignment
+
+- Source: [[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]
+- Moved 120 小林 Note raw pages from `raw/articles/xiaolinnote/` into `raw/articles/xiaolinnote/questions/`.
+- Updated the index links and source navigation to match the `agent_java_offer` layout: source index page plus `questions/` item pages.
+- Verification: 120 index links checked, missing 0.
+- Boundary: this is a path/layout normalization only; page content and source evidence were preserved.
+
+## [2026-05-09] maintenance | xiaolinnote repo-layout and title normalization
+
+- Source: [[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]
+- Moved xiaolinnote raw source from `raw/articles/xiaolinnote/` to `raw/repos/xiaolinnote/` to align interview-bank layout with [[raw/repos/agent_java_offer/agent_java_offer 面试题索引]].
+- Renamed 120 question pages from URL slug filenames to readable `NNN 分类 子分类 页面标题.md` filenames; normalized each page H1 and index display title to the same cleaned page title.
+- Preserved `source_type: web`, original URLs, sha256 evidence fields, and `crawl-manifest.json`.
+- Boundary: this is raw source structure maintenance only; no new concept cards were created.
+
+## [2026-05-09] maintenance | xiaolinnote question wiki backlinks
+
+- Source: [[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]
+- Updated 120 xiaolinnote raw question cards with `## 相关知识 wiki` sections and matching `related` links.
+- Link vocabulary: 140 unique targets; 85 are intentional redlinks for concepts not yet collected into wiki cards.
+- Boundary: these are retrieval and study-path links only; raw interview notes remain source evidence and have not been promoted into concept cards.

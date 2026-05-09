@@ -1,0 +1,79 @@
+---
+type: source
+source_type: repo
+site: github.com
+repo: "guoguo-tju/agent_java_offer"
+topic:
+  - "interview"
+  - "ai"
+  - "agent"
+  - "framework"
+status: inbox
+created: 2026-05-09
+updated: 2026-05-09
+url: "https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/08_%E6%A1%86%E6%9E%B6%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%8C%96/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md"
+source: "https://github.com/guoguo-tju/agent_java_offer"
+source_path: "docs/interview_prep/01_AI/08_框架协议与工程化/01_核心问答.md"
+commit: "12bf4c915cca01f513e040935e1917d3687f8b35"
+entry_type: "question"
+direction: "01_AI"
+category: "08_框架协议与工程化"
+last_checked: 2026-05-09
+freshness: watch
+sha256: 73d8472b25b00cd9e7dd77ad4ace568ac2dc9120a5105af8d6ec7613d709fbe9
+license: "CC BY-NC 4.0"
+related:
+  - "[[agent_java_offer Repo]]"
+  - "[[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]"
+  - "[[资料收集索引]]"
+  - "[[Audit Log]]"
+  - "[[Trace]]"
+  - "[[Agent State]]"
+  - "[[MCP]]"
+  - "[[Tool Calling]]"
+  - "[[Agent Framework]]"
+  - "[[Agent Workflow]]"
+  - "[[Durable Execution]]"
+  - "[[Agent]]"
+---
+
+# LangGraph 的 Checkpoint 有什么价值？
+
+原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
+原始文件：[docs/interview_prep/01_AI/08_框架协议与工程化/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/08_%E6%A1%86%E6%9E%B6%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%8C%96/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
+提交：`12bf4c9`  
+分类：`01_AI` / `08_框架协议与工程化`  
+条目类型：`question`  
+许可证：CC BY-NC 4.0；本页保留为 raw source evidence，后续再决定是否拆入概念卡或面试复盘页。
+
+## 相关知识 wiki
+
+- [[Audit Log]]
+- [[Trace]]
+- [[Agent State]]
+- [[MCP]]
+- [[Tool Calling]]
+- [[Agent Framework]]
+- [[Agent Workflow]]
+- [[Durable Execution]]
+- [[Agent]]
+
+## 题目正文
+
+### 4. 子问题：LangGraph 的 Checkpoint 有什么价值？
+
+答：
+
+Checkpoint 解决的是可恢复性。长任务中断后可以从最近状态恢复，不必整条链重跑；也便于做审计回放和故障复盘。
+
+生产里我会把 checkpoint 和任务 ID 绑定，确保每次恢复都有可追踪上下文，支持幂等重放。
+
+追问：Checkpoint 恢复后如何避免重复副作用（比如重复下单/重复发消息）？
+
+**Checkpoint 只保证“从哪继续”，幂等设计才保证“不重复副作用”**。
+
+## 4. 补充问：Agent 调 MCP 的逻辑
+
+## 边界提醒
+
+这是来自面试资料库的原始题目/答案片段，适合练习口述和追问。涉及概念定义、工程边界或时效性事实时，仍需要回到论文、官方文档、框架源码或 `wiki/concepts/` 校准。
