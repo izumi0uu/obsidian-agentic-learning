@@ -3,10 +3,10 @@ type: concept
 topic:
   - llm
   - transformer
-status: seed
+status: growing
 created: 2026-05-05
-updated: 2026-05-05
-last_checked: 2026-05-07
+updated: 2026-05-10
+last_checked: 2026-05-10
 freshness: stable
 conflicts: []
 source:
@@ -24,6 +24,17 @@ related:
 ## 一句话
 
 Positional Encoding 是给 Transformer 输入注入位置信息的机制。
+
+## 概念详解
+
+Positional Encoding 的问题背景是 Transformer 的 self-attention 本身对集合式 token 关系很强，但没有 recurrence 或 convolution 时，模型需要额外知道 token 的顺序。自然语言里顺序会改变意义：“狗追人”和“人追狗”包含相同词但关系相反。位置编码把位置信息注入 token 表示，让 attention 在计算关系时能区分第一个、后一个、相隔多远和相对顺序。
+
+[[Attention Is All You Need]] 的 source note 要求重点读 3.5 Positional Encoding，理解为什么去掉 recurrence/convolution 后必须注入位置。原始 Transformer 使用正弦/余弦位置编码，但现代 LLM 可能使用不同的位置方案；因此概念卡要保留稳定抽象：位置编码解决“序列顺序如何进入模型”的问题，而不是把某个具体公式当成唯一实现。
+
+它和上下文窗口、长期记忆、RAG 都不同。位置编码帮助模型在当前序列内部理解位置关系；上下文窗口决定一次能放多少 token；长期记忆和 RAG 决定跨会话或外部知识如何保存/检索。对 Agent 来说，位置编码解释底层模型为什么能处理有序文本，但不负责维护任务状态、文件历史或工具执行结果。
+
+在 Agent 笔记里，这个概念的价值是防止把“模型能处理上下文”误解成“模型拥有外部时间线”。位置编码让模型知道当前输入里 token 的相对/绝对顺序，但它不会知道昨天发生了什么，也不会自动记住上次工具结果。跨会话连续性仍然要靠 conversation state、memory store 或日志恢复。
+
 
 ## 它解决什么问题
 
@@ -46,13 +57,24 @@ Positional Encoding 不是上下文窗口。
 
 ## 边界细节
 
-位置编码和长上下文能力相关，但不是同一个概念。长上下文还涉及训练长度、注意力实现、位置外推、检索和上下文工程。
+Positional Encoding 解决当前序列的位置注入，不解决长文本全部问题。上下文长度、位置外推、检索、记忆和上下文工程是相邻但不同的系统层问题。
+
+## 现代性状态
+
+foundation / transitional。位置注入是稳定问题，原始正弦位置编码是论文时代实现之一；现代 LLM 可能采用不同方案，所以卡片保留抽象边界。
 
 ## 证据锚点
 
-- Source: [[Attention Is All You Need]]
-- Anchor: source note 小节级；段落/页码级证据待精读时补。
+- Evidence type: source evidence — [[Attention Is All You Need#为什么收]]
+- Evidence type: source boundary — 本卡只使用现有 source note / project note 的小节级证据；未伪造段落、页码或不存在的小节。
+- Evidence type: engineering synthesis — “概念详解”“边界细节”“现代性状态”把 [[Attention Is All You Need]] 与本 vault 的 Agent 工程学习目标综合起来。
+- Boundary: source note 多数仍是 seed/growing 级摘要；除 frontmatter 的 `last_checked` 外，不把具体 API 字段、SDK 版本或 registry 状态写成长期稳定事实。
 - Confidence: medium
+
+## 复习触发
+
+- 位置编码解决什么问题，和上下文窗口有什么区别？
+- 为什么原始正弦编码不等于现代所有 LLM 的唯一做法？
 
 ## 相关链接
 

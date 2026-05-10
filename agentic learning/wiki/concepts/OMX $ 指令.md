@@ -5,7 +5,7 @@ topic:
   - coding-agent
   - workflow
   - frontier
-status: seed
+status: growing
 created: 2026-05-10
 updated: 2026-05-10
 last_checked: 2026-05-10
@@ -33,6 +33,17 @@ related:
 ## 一句话
 
 OMX `$` 指令是在 Codex 会话里触发本地 skill / workflow 的入口：它把“让模型随便做”改成“按某种流程纪律做”，例如澄清、计划、执行、并行、评审、研究或目标验收。
+
+## 概念详解
+
+OMX `$` 指令的问题背景是复杂 Codex 任务需要流程纪律，而不是每次都靠用户重新描述“先澄清、再计划、再执行、最后验证”。`$deep-interview`、`$ralplan`、`$ralph`、`$team`、`$ultragoal` 这类入口把常见工作流固化成本地 skill：模型读取对应 `SKILL.md`，按流程决定是否提问、生成计划、执行循环、调用 verifier、写 `.omx/` artifact 或启动 team runtime。
+
+机制上，`$` 指令属于 Codex 会话内的 workflow 触发面，不是 shell 语法。shell 里的 `omx doctor`、`omx team api`、`omx list` 是 CLI；对话里的 `$ralph` 是让当前 Agent 进入某个工作流。两者会互相配合，例如 `$team` 可能通过 tmux 和 worktree 启动 worker，worker 再用 CLI 操作 team state。这个边界很重要：如果把 `$` 当 shell 命令，就会误解状态、权限和 artifact 的归属。
+
+学习这张卡时要看它如何把 Agent Harness 的原则变成操作入口：需求澄清、计划评审、持久执行、并行分派、验证闭环和恢复。它不让模型更聪明，也不保证输出正确；它只是把“什么时候该停下来问、什么时候该验证、什么时候该交给 worker”变得可重复。
+
+边界上，`$` 指令也不是永久模式开关。它只对当前任务或当前工作流生效，仍然受 AGENTS.md、developer 指令、权限和 repo 状态约束。比如 team worker 里即使任务 JSON 提到 delegation，leader 后续 mailbox 明确禁止 subagent，worker 就必须以更新的运行时指令为准。这说明 `$` 入口本质上是可组合的流程层，而不是越权通道。
+
 
 ## 它解决什么问题
 
@@ -190,23 +201,24 @@ flowchart LR
 
 ## 边界细节
 
-可以把 OMX `$` 指令分成三层：
+`$` 指令是 Codex 会话里的 workflow 入口，不是 shell 命令，也不是模型能力。它的边界是流程纪律：澄清、计划、执行、验证和团队分派；任务正确性仍要靠测试、审查和证据。
 
-```text
-skill trigger 层：$ralph / $plan / $ask 触发本地 SKILL.md
-runtime 层：.omx 状态、hooks、HUD、tmux、worktree、ledger
-LLM 层：模型按 skill 规则推理、调用工具、输出结论
-```
+## 现代性状态
 
-真正让 Agent 更稳的不是某一个 `$` 名字，而是这三层配合：模型负责判断和生成，runtime 负责状态和外部动作，workflow 负责 stop condition、验证和可恢复性。
+frontier / volatile。OMX 是本地 coding-agent harness 的快速演进实践，`$` 入口和 skill catalog 会随项目版本变化。稳定价值是 workflow-trigger 心智模型。
 
 ## 证据锚点
 
-- Source: [[Oh My Codex Repo]]
-- Source: [[oh-my-codex 使用教程]]
-- Local evidence: `omx list --json`，2026-05-10，本机 catalog version `2026.02.28.1`。
-- Local evidence: `${CODEX_HOME:-~/.codex}/skills/*/SKILL.md` 中的 active / alias / merged / deprecated / internal 状态和 skill 描述。
-- Confidence: medium-high，本机命令与本地 skill 文件一致；OMX 是快速变化工具，按 `freshness: watch` 复查。
+- Evidence type: source evidence — [[Oh My Codex Repo#为什么收]]；[[oh-my-codex 使用教程#0. 先建立心智模型]]；local: `omx list --json` (2026-05-10, catalog 2026.02.28.1)；local: `${CODEX_HOME:-~/.codex}/skills/*/SKILL.md`
+- Evidence type: source boundary — 本卡只使用现有 source note / project note 的小节级证据；未伪造段落、页码或不存在的小节。
+- Evidence type: engineering synthesis — “概念详解”“边界细节”“现代性状态”把 [[Oh My Codex Repo]]；[[oh-my-codex 使用教程]] 与本 vault 的 Agent 工程学习目标综合起来。
+- Boundary: source note 多数仍是 seed/growing 级摘要；除 frontmatter 的 `last_checked` 外，不把具体 API 字段、SDK 版本或 registry 状态写成长期稳定事实。
+- Confidence: medium
+
+## 复习触发
+
+- 为什么 `$ralph` 不是 shell 命令？
+- `$` 指令给 Codex 增加的是模型能力还是流程纪律？
 
 ## 相关链接
 

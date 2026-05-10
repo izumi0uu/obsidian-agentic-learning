@@ -3,10 +3,10 @@ type: concept
 topic:
   - llm
   - transformer
-status: seed
+status: growing
 created: 2026-05-05
-updated: 2026-05-05
-last_checked: 2026-05-07
+updated: 2026-05-10
+last_checked: 2026-05-10
 freshness: stable
 conflicts: []
 source:
@@ -25,6 +25,17 @@ related:
 ## 一句话
 
 Transformer 是一种主要基于 attention 的序列建模架构，是现代 LLM 的重要架构地基。
+
+## 概念详解
+
+Transformer 的问题背景是早期序列模型很依赖 RNN 或 CNN。RNN 顺序处理 token，训练并行性受限；CNN 需要层层堆叠才能连接远距离位置。Transformer 用 attention 作为主要序列建模机制，让不同位置可以直接交互，并更适合大规模并行训练。[[Attention Is All You Need]] 对本 vault 的学习价值，就是把现代 LLM 的架构地基和 Agent 系统层边界切开。
+
+机制上，Transformer 由 token 表示、位置编码、self-attention/multi-head attention、前馈网络、残差/归一化等结构组成。原论文是 encoder-decoder 架构，但现代 LLM 常用不同变体；因此这张卡不把某个产品等同于 Transformer，而把它作为“基于 attention 的序列建模架构家族”来理解。它解释模型如何在上下文中组合信息，不解释系统怎样行动。
+
+它和 [[LLM]] 的边界：LLM 是训练出来并被产品化的大语言模型，Transformer 是常见架构地基之一。它和 [[Agent]] 的边界更明显：Agent 需要目标、工具、状态、观察、权限、评估和恢复；Transformer 只在模型内部处理表示。理解这个边界，可以避免把“模型更强”误当成“runtime、工具安全和验证都不需要”。
+
+现代 LLM 可能在 Transformer 基础上加入不同规模、训练目标、上下文扩展、对齐方法和推理优化，但这些都没有改变这张卡的学习边界：Transformer 解释模型为何能高效处理序列关系；Agent Harness 解释如何把模型输出接到工具、状态和验证上。两层混在一起，就会把架构能力误读成系统可靠性。
+
 
 ## 它解决什么问题
 
@@ -50,13 +61,24 @@ Transformer 也不是完整的 LLM 产品。它是模型架构层面的东西，
 
 ## 边界细节
 
-对 Agent 学习来说，Transformer 只回答“LLM 为什么能成为强大的语言生成底座”。它不回答“系统如何行动”。
+Transformer 是模型架构层，不是 Agent、产品或完整 LLM 系统。它解释序列建模的底座，不解释权限、安全、工具、评估和工作流。
+
+## 现代性状态
+
+foundation。Transformer 是现代 LLM 的关键架构地基。具体模型架构会演化，但“模型架构层不等于 Agent runtime”这个边界稳定。
 
 ## 证据锚点
 
-- Source: [[Attention Is All You Need]]
-- Anchor: source note 小节级；段落/页码级证据待精读时补。
+- Evidence type: source evidence — [[Attention Is All You Need#为什么收]]
+- Evidence type: source boundary — 本卡只使用现有 source note / project note 的小节级证据；未伪造段落、页码或不存在的小节。
+- Evidence type: engineering synthesis — “概念详解”“边界细节”“现代性状态”把 [[Attention Is All You Need]] 与本 vault 的 Agent 工程学习目标综合起来。
+- Boundary: source note 多数仍是 seed/growing 级摘要；除 frontmatter 的 `last_checked` 外，不把具体 API 字段、SDK 版本或 registry 状态写成长期稳定事实。
 - Confidence: medium
+
+## 复习触发
+
+- Transformer 为什么比 RNN 更适合并行训练？
+- 为什么 Transformer 不等于 Agent？
 
 ## 相关链接
 

@@ -5,7 +5,7 @@ topic:
   - coding-agent
   - workflow
   - frontier
-status: seed
+status: growing
 created: 2026-05-06
 updated: 2026-05-10
 last_checked: 2026-05-10
@@ -32,6 +32,14 @@ related:
 ## 一句话
 
 Oh My Codex, 简称 OMX, 是 OpenAI Codex CLI 的多 Agent 编排和运行时增强层，让 Codex 更容易按“澄清、计划、执行、验证、恢复”的工程流程工作。
+
+## 概念详解
+
+OMX 的问题背景是 Codex CLI 本身能读写代码、跑命令和对话，但复杂任务还需要更外层的工程壳：任务分解、澄清、计划、执行循环、验证、团队协作、状态恢复、日志、hook 和工作区隔离。OMX 把这些能力组织成 Codex 周围的 Agent Harness，让同一个底层模型更容易按可靠流程工作。
+
+机制上，OMX 包含几个层次：skill/workflow 入口负责规定行为；`.omx/` 负责保存 plans、state、logs、memory 和 reports；tmux/team runtime 负责并行 worker；git worktree 负责隔离修改；hooks/HUD/trace 负责观察会话生命周期；CLI 负责 setup、doctor、team api、explore 等运行时操作。source note 和教程都强调“Codex CLI = 执行 Agent，OMX = 外面的 workflow + harness + team runtime + state/logs/hooks”，这正是本卡的核心边界。
+
+它不是新模型，不替代测试、权限和代码审查，也不应在未知仓库或生产凭据旁用强权限模式裸跑。学习 OMX 的价值不是背所有命令，而是理解一个 coding agent 从单轮助手变成工程系统时，需要哪些外部结构：instructions、sandbox、state、review、verification、rollback 和 coordination。
 
 ## 它解决什么问题
 
@@ -129,13 +137,26 @@ OMX 的增强可以理解成 Codex 外面的一层本地 harness：它通过 hoo
 
 所以在 OMX 语境里，“推荐 observability”优先是 HUD + `.omx/` artifacts + hooks + notifications。LangSmith、Langfuse、Phoenix、OpenTelemetry 更适合作为外接观测平台，需要你自己把本地 hook / JSONL / trace 数据适配过去。
 
+## 边界细节
+
+OMX 是 Codex 外层 harness，不是 Codex 替代品。它能组织流程、状态和团队，但不能替代项目测试、权限审查或人的判断。强权限启动方式只适合受控开发环境。
+
+## 现代性状态
+
+frontier / volatile。OMX 属于 Codex 外围生态和本地 runtime，版本、命令和 skill 组合会变化。稳定价值是把 coding agent 工程化为 harness/state/team/verification。
+
 ## 证据锚点
 
-- Source: [[Oh My Codex Repo]]
-- Source: [[oh-my-codex 使用教程]]
-- Source: [[Agent 工程基础设施主源]]
-- Anchor: source note 小节级；段落/页码级证据待精读时补。
+- Evidence type: source evidence — [[Oh My Codex Repo#为什么收]]；[[oh-my-codex 使用教程#0. 先建立心智模型]]
+- Evidence type: source boundary — 本卡只使用现有 source note / project note 的小节级证据；未伪造段落、页码或不存在的小节。
+- Evidence type: engineering synthesis — “概念详解”“边界细节”“现代性状态”把 [[Oh My Codex Repo]]；[[oh-my-codex 使用教程]] 与本 vault 的 Agent 工程学习目标综合起来。
+- Boundary: source note 多数仍是 seed/growing 级摘要；除 frontmatter 的 `last_checked` 外，不把具体 API 字段、SDK 版本或 registry 状态写成长期稳定事实。
 - Confidence: medium
+
+## 复习触发
+
+- OMX 在 Codex 外面加了哪些 harness 层？
+- 为什么 OMX 不能替代测试和权限审查？
 
 ## 相关链接
 
