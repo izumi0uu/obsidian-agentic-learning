@@ -5,7 +5,7 @@ topic:
   - reflection
   - evaluation
   - memory
-status: seed
+status: growing
 created: 2026-05-08
 updated: 2026-05-10
 source:
@@ -32,6 +32,19 @@ related:
 ## 一句话
 
 Reflexion 是一种让语言 Agent 在执行后生成反思文本，并把反思作为经验记忆来改进下一轮行动的机制。
+
+## 概念详解
+
+Reflexion 的核心不是“让模型想一想”，而是把失败轨迹、评价反馈和下一轮行动连接起来。Agent 完成一次尝试后，系统读取 [[Trajectory]] 或最终结果，由 evaluator 给出成功/失败或更细反馈；然后 self-reflection 把反馈转成自然语言经验，写入后续上下文或记忆。下一轮 Actor 再利用这段经验，避免重复同类错误。
+
+它重要的原因是：很多 Agent 错误不是知识缺失，而是策略错误、约束遗漏、工具顺序不当或观察误读。Reflexion 试图用语言形式的经验做“轻量学习”，不改模型权重，也能在同一任务或同类任务上改善行为。
+
+从 evaluation 角度看，Reflexion 依赖 evaluator 的质量。错误反馈会生成错误经验，污染后续行动；过宽的成功判断会让 Agent 学不到边界。因此 Reflexion 不能替代 [[Trajectory Evaluation]]、外部 checker、工具验证或人工确认，而是把评价结果转成可复用经验的一种机制。
+
+
+Reflexion 也可以理解为一种“语言层的 credit assignment”。执行失败后，系统要把失败归因到某个可改变的策略：没有先读题、没有验证工具结果、忽略预算、过早提交答案、没有处理异常。Self-reflection 把这种归因写成下一轮可读的经验。经验写得太泛，就无法改变行为；写得太具体，又可能只适用于一个偶然场景。
+
+这也是它和普通 memory 的边界：Reflexion 里的经验应该来自可追溯的 trajectory 和 evaluator feedback，而不是模型随手生成的座右铭。是否写入长期记忆，需要看反馈是否可靠、是否可泛化、是否会与更高优先级规则冲突。
 
 ## 它解决什么问题
 
@@ -90,12 +103,27 @@ Actor -> Action -> Environment -> Observation -> Trajectory
 
 ![[reflexion-agent-loop.svg]]
 
+## 现代性状态
+
+- 判定：foundation / transitional。
+- 为什么：Reflexion 是理解“轨迹 -> 评价 -> 反思 -> 再行动”的经典 Agent 机制；现代系统常把它的价值吸收到 eval harness、memory、failure summarization 和 retry policy 中。
+- 稳定部分：失败反馈可以转成经验，影响下一轮行为。
+- 易变部分：现代产品是否显式叫 Reflexion、反思写入哪里、如何防止错误经验污染，会随框架和安全策略变化。
+
 ## 证据锚点
 
 - Source: [[Reflexion - Language Agents with Verbal Reinforcement Learning]]
 - Anchor: [[Reflexion - Language Agents with Verbal Reinforcement Learning#Ingest 摘要]]
 - Anchor: [[Reflexion - Language Agents with Verbal Reinforcement Learning#图片录入：Reflexion Agent Loop]]
+- Evidence type: paper source note + concept diagram asset + Agent evaluation synthesis.
 - Confidence: medium
+- Boundary: 图示是 Reflexion 论文机制的学习锚点；现代系统可能用不同实现吸收其“失败经验回流”价值。
+
+## 复习触发
+
+- Reflexion 和普通 Reasoning Trace 的区别是什么？
+- 如果 evaluator 给错反馈，Reflexion 会发生什么风险？
+- 用“Trajectory -> Evaluator -> Self-reflection -> Experience -> Actor”复述 Reflexion loop。
 
 ## 相关链接
 

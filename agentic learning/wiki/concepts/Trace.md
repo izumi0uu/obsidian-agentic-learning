@@ -4,7 +4,7 @@ topic:
   - evaluation
   - observability
   - frontier
-status: seed
+status: growing
 created: 2026-05-05
 updated: 2026-05-10
 last_checked: 2026-05-10
@@ -44,6 +44,19 @@ related:
 
 Trace 是对 Agent / LLM 应用执行过程的结构化可观察记录，包括输入、模型调用、工具调用、工具结果、状态变化、错误、成本、延迟和最终结果。
 
+## 概念详解
+
+Trace 出现的原因，是 Agent 失败往往不是最终答案那一刻才发生。错误可能来自错误计划、坏检索、工具参数、权限拒绝、观察误读、上下文污染、成本爆炸或中途异常。Trace 把一次执行拆成有时间顺序和层级关系的记录，让人能沿着过程回看。
+
+一个好的 trace 通常由多个 span 或 event 组成：用户输入、LLM request、retrieval、rerank、tool call、tool result、guardrail、handoff、exception、evaluator score 和最终输出。它不只是“日志很多”，而是有 run id、span id、父子关系、metadata、latency、token/cost 和错误信息。这样 trace 才能被 [[Observability]] 平台搜索、聚合、可视化，也才能被 [[Eval Harness]] 用来生成失败数据集、回归样本或 trajectory evaluator 输入。
+
+Trace 的学习价值在于它把“系统为什么这样表现”从猜测变成证据。你可以问：失败是否发生在 tool call 前？模型是否看到了正确 observation？检索是否返回了旧文档？高风险动作是否经过 approval？这些问题都需要 trace 材料，而不是只读 final answer。
+
+
+Trace 还承担“关联上下文”的职责。同一个错误如果不能关联到 prompt 版本、model/provider、tool schema、retrieval index、user/session、workflow node 和 deployment version，就很难判断是模型退化、工具接口变化、检索数据过期，还是某个实验分支引入问题。好的 trace 不只是记录步骤，还记录足够的 metadata，让失败能被聚类、比较和回归。
+
+另一个边界是“记录粒度”。开发期可以保存更详细 span 帮助调试；生产期可能因为隐私、成本和合规只保存摘要、采样 trace 或脱敏字段。粒度降低会影响 evaluation harness 能做什么：如果没有工具参数和 observation，trajectory evaluator 就很难判断权限和过程质量。
+
 ## 它解决什么问题
 
 Agent 失败时，单看最终答案很难知道哪里错了。Trace 让我们能看到每一步，定位是计划错、工具错、检索错、权限错、状态错，还是模型误读了观察结果。
@@ -76,48 +89,62 @@ Trace 也不等于 [[Trajectory]]。Trajectory 偏“任务实际走过的路径
 ## 常见误解 / 风险
 
 - 误解：trace 越完整，系统质量越高。实际 trace 只说明可观察性，不自动说明答案正确。
-- 误解：把模型 chain-of-thought 存下来就是 trace。实际生产 trace 更关注可审计事件、工具结果、状态变化和错误边界；显式推理文本还可能有隐私、安全或可靠性问题。
-- 风险：trace 可能包含用户数据、密钥片段、工具返回的敏感内容或内部路径，不能不加筛选地外发给评估模型或第三方平台。
-- 风险：只采样成功 trace 会让评估集失真；失败 trace 才常常是最有价值的 regression 材料。
+- 误解：把模型 chain-of-thought 全量保存就是 trace。完整 trace 还包括工具、状态、观察和结果；而完整推理文本可能不适合保存或展示。
+- 风险：trace 里可能包含 prompt、用户数据、工具返回、密钥片段或业务数据，需要脱敏和访问控制。
+- 风险：不同平台 trace schema 不一致，导致跨系统比较和 eval 回流困难。
 
 ## 边界细节
 
-Trace 是 [[Observability]] 的基础，也是 [[Eval Harness]] 复现失败的重要材料。
+最重要的三分法：
 
-一个实用边界：trace 记录“发生了什么”，score / eval 才判断“好不好”。不要把完整 trace 等同于质量评估。
+```text
+Trajectory = 任务实际走过的路径
+Trace = 系统记录下来的可观察过程数据
+Evaluation = 对结果或过程做质量判断
+```
 
-另一个边界：trajectory 是被记录对象，trace 是记录形式，[[Reasoning Trace]] 是其中的推理文本切片。
+Trace 是 evaluation harness 的材料，不是 evaluator 本身。Harness 可以读取 trace，判断工具顺序是否合理、是否发生越权、是否符合 latency/cost 预算；但这些判断来自 rubric、代码 checker、LLM-as-judge 或人工 review。
 
-和普通日志的最小区别：普通日志常按系统输出文本；trace 通常按一次请求或任务组织出 span 树，例如 model span、retrieval span、tool span、handoff span、guardrail span。
+Trace 也不自动等于 replay。要 replay，还需要固定输入、工具返回、检索结果、环境快照或随机性。Trace 可以告诉你发生过什么，但未必足够重建当时环境。
 
 ## Hook 数据和 Trace 的关系
 
-[[Agent Lifecycle Hook]] 是 trace 的一个上游来源。比如 `PreToolUse` 可以记录“模型想调用什么工具、参数是什么、权限判断是什么”；`PostToolUse` 可以记录“工具返回了什么、耗时多少、是否失败、是否补充反馈”。
+[[Agent Lifecycle Hook]] 常常是生成 trace 的入口：在模型调用前后、工具调用前后、session start/stop、错误和压缩等边界写事件。
 
-但 hook 不等于 trace。Hook 是事件处理入口；trace 是把这些事件和模型调用、工具调用、状态变化、错误、token、成本、延迟串起来的观测记录。一个系统可以没有显式 hook 也自动生成 trace；也可以用 hook 补充更细的 trace span。
+但 hook event 只是原始材料。要变成高质量 trace，还需要：
+
+- correlation id：把同一次任务的事件串起来。
+- span hierarchy：知道哪个 LLM call 触发哪个 tool call。
+- schema：字段名稳定，例如 model、tool、latency、tokens、cost、error。
+- redaction：不要把敏感 prompt、secrets、PII 原样保存。
+- sampling / retention：决定哪些 trace 长期保存。
 
 ## 现代性状态
 
-- 判定：current-practice / frontier-adjacent
+- 判定：current-practice / frontier-adjacent。
 - 为什么：trace 作为 observability 基础已经是当前工程实践；但 OpenTelemetry GenAI、各平台 schema、SDK tracing API 和跨工具标准仍在快速演进。
-- 稳定部分：记录输入输出、工具调用、状态变化、错误、延迟、成本，并把失败转成调试/评估材料。
-- 易变部分：具体字段名、平台 UI、OTel semantic conventions、SDK 自动追踪范围、隐私过滤机制。
+- 稳定部分：记录过程以支持调试、评估、回放和成本/延迟分析。
+- 易变部分：具体 span 字段、平台 API、OTel 语义约定、隐私默认值和 UI 能力。
 - 复查点：当 OpenTelemetry GenAI 或主流 Agent SDK 对 trace/span 语义有重大变化时，更新本卡和 [[OpenTelemetry GenAI]]。
 
 ## 现代系统怎么吸收 Trace 的价值 / 局限
 
-现代 Agent 系统通常把 trace 放在三条链路里：
+现代 Agent 平台通常把 trace 放进三条闭环：
 
-- 开发调试：从失败 trace 定位哪个 prompt、tool、retriever、guardrail 或 state transition 出错。
-- 线上观测：监控 latency、token、cost、error、tool failure、user feedback 和异常路径。
-- 评测闭环：把代表性 trace 放进 dataset，用 evaluator、规则或人工 review 做 regression。
+- 调试闭环：开发者查看失败 trace，定位 prompt、tool、retrieval 或 state 问题。
+- 评测闭环：trace 被标注、打分、加入 dataset，再通过 eval harness 回归测试。
+- 运营闭环：线上监控 latency、token cost、error rate、tool failure 和用户反馈。
 
-局限也很明确：trace 不是自动修复器。它能暴露过程，但仍需要 evaluator、工程规则、人类判断或测试来决定问题是否重要、如何修复。
+局限是：trace 只能记录被系统捕获的内容。没有 hook、没有 span、被脱敏掉或没有 correlation id 的部分，都不会自动出现在 trace 里。因此 trace 的质量取决于 harness 设计。
 
 ## 证据锚点
 
+- Source: [[前沿主源清单]]
+- Anchor: [[前沿主源清单#RAG 进化]]
+- Source: [[ReAct - Synergizing Reasoning and Acting in Language Models]]
+- Anchor: [[ReAct - Synergizing Reasoning and Acting in Language Models#为什么收]]
 - Source: [[LangSmith Evaluation and Observability]]
-- Anchor: [[LangSmith Evaluation and Observability#一句话]] / [[LangSmith Evaluation and Observability#边界提醒]]
+- Anchor: [[LangSmith Evaluation and Observability#为什么收]] / [[LangSmith Evaluation and Observability#边界提醒]]
 - Source: [[Langfuse Observability and Evaluation]]
 - Anchor: [[Langfuse Observability and Evaluation#一句话]] / [[Langfuse Observability and Evaluation#OpenTelemetry 补充]]
 - Source: [[OpenAI Agents SDK 文档]]

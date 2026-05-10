@@ -4,7 +4,7 @@ topic:
   - evaluation
   - agent
   - frontier
-status: seed
+status: growing
 created: 2026-05-06
 updated: 2026-05-10
 last_checked: 2026-05-10
@@ -33,6 +33,21 @@ related:
 ## 一句话
 
 Trajectory Evaluation 是评价 Agent 的行动轨迹，而不是只评价最终答案：它关心过程是否安全、有效、合规、经济、可恢复。
+
+## 概念详解
+
+Trajectory Evaluation 出现的原因，是 Agent 的“怎么做”会带来真实风险。普通问答评测常常只看最终回答是否正确；Agent 会搜索、调用工具、读写文件、访问外部系统、请求权限或让人确认。即使最终答案正确，过程也可能泄露数据、越权调用、浪费大量成本、绕过确认、依赖偶然工具结果或留下不可恢复副作用。
+
+它把一次 [[Trajectory]] 当作评价对象：工具顺序、观察读取、检索质量、权限边界、失败恢复、人工确认、成本、延迟、最终结果都可以进入 rubric。[[Trace]] 是主要证据来源，因为 trace 保存了模型调用、tool call、observation、error 和 score；但 trace 本身不评分，评分来自规则、代码 checker、LLM-as-judge、人工 review 或业务指标。
+
+对 evaluation harness 来说，Trajectory Evaluation 是比 final-answer eval 更重的一类 evaluator。它需要收集过程材料、定义可操作规则、处理隐私、决定哪些场景抽样评估，并把发现反推到 guardrails、approval gate、tool permissioning 和 workflow 设计。
+
+
+Trajectory Evaluation 通常需要把“硬规则”和“软判断”组合起来。硬规则适合检查是否调用禁止工具、是否缺少付款确认、是否超过预算、是否访问敏感数据；软判断适合评估工具顺序是否合理、搜索是否充分、失败恢复是否明智。高风险系统不能只依赖 LLM judge 的软评分，因为 judge 可能忽略权限和合规细节。
+
+它还要求设计负例。只评估顺利完成的轨迹，会让系统看起来稳定；真正有价值的 eval set 应该包含工具失败、检索为空、用户拒绝授权、环境变化、恶意输入和中途异常。这样才能检查 Agent 是否会停止、求助、回滚或升级给人类，而不是为了完成任务硬闯。
+
+对学习者来说，它也是理解 Agent 可靠性的分水岭：普通模型评测问“答得对不对”，Agent 过程评测还问“这样做可不可以”。
 
 ## 它解决什么问题
 
