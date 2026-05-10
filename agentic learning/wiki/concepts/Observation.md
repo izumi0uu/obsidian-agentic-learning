@@ -31,6 +31,15 @@ related:
 
 Observation 是 Agent 执行动作后，由工具、环境、测试、人类或安全策略返回的反馈；它会被写回上下文、[[Agent State]] 或 [[Trace]]，影响下一轮模型决策。
 
+## 概念详解
+
+Observation 是 Agent loop 里最容易被低估的一环。模型可以生成 Thought 或 tool call，但只有外部动作返回的结果进入上下文、state 或 trace，系统才真正知道环境发生了什么。它的本质不是“又一段文本”，而是动作之后的反馈信号：搜索结果、API 返回、测试日志、浏览器状态、文件 diff、用户审批、错误码或安全策略拒绝。
+
+在 ReAct 论文语境里，Observation 通常作为 `Action` 之后追加到轨迹中的环境反馈，用来修正下一轮 reasoning。小林 ReAct 笔记补充了系统如何把工具返回填回历史、错误观察如何影响后续推理。现代工程系统则进一步把 observation 结构化：记录来源、工具名、参数、时间、错误、敏感信息、可信度和是否进入模型上下文。这样做是因为 observation 既是证据，也可能是攻击面。
+
+学习边界：Observation 不是模型自己的思考，也不是工具 schema；它是外部世界对某次行动的回答。Observation 的质量决定 loop 的质量。如果 observation 错误、过期、被注入、被截断，Agent 后续计划可能全部建立在坏地基上。因此现代系统会把 observation 放进 [[Trace]]、[[Agent State]]、guardrails 和 evaluation，而不是只拼回 prompt。
+
+Observation 进入系统后还有“可见性层级”：有些原始结果应该完整保存在 trace 里，有些摘要可以进入模型上下文，有些敏感字段应该被脱敏，有些恶意指令应该被过滤，有些关键事实需要二次验证。这个层级说明 Observation 不是越多越好。把长网页、完整日志或不可信工具返回全部塞给模型，可能同时造成上下文污染、成本上升和安全风险；但过度摘要又可能丢掉调试所需的关键错误行。
 ## 它解决什么问题
 
 Agent 需要知道自己的动作产生了什么结果，才能决定下一步。Observation 把外部世界的状态带回循环中，让 [[ReAct]] 不只是“模型自己想”，而是“想一下、做一下、看结果、再调整”。
@@ -97,6 +106,14 @@ Observation: 2 failed, 14 passed；失败日志显示 Observation 没有写入 s
 - 防护：对外部网页、文档和工具返回值做 [[Guardrails]]，避免把恶意指令当成系统命令。
 - 复查：高风险决策前用二次检索、测试、人工确认或交叉来源验证关键 Observation。
 
+## 现代性状态
+
+- 判定：foundation / current-practice
+- 基础地基：行动后必须接收外部反馈，并让反馈影响下一步，这是 [[Agent Loop]] 和 [[ReAct]] 的稳定结构。
+- 当前工程实践：Observation 通常会被 runtime 结构化、过滤、压缩、溯源，并写入 state / trace / replay 证据。
+- 易变部分：具体框架如何命名 tool result、observation、event、span、message，以及如何做压缩和安全过滤，会随 SDK/API 变化。
+- 关键边界：Observation 可以来自不可信外部环境；进入上下文之前应考虑 prompt injection、数据泄露、权限和来源可信度。
+
 ## 风险
 
 - 污染：网页、文档、工具返回值里可能夹带恶意指令或错误信息，典型问题是 [[Prompt Injection]] 和 [[Tool Poisoning]]。
@@ -112,7 +129,7 @@ Observation: 2 failed, 14 passed；失败日志显示 Observation 没有写入 s
 
 也就是说，Tool Calling 让“调用工具”更可靠，但不自动解决“工具结果是否可信、是否该进入上下文、如何影响下一步”的问题。Observation 的质量，直接决定 Agent 下一轮决策的地基。
 
-## 费曼检查
+## 复习触发
 
 - 为什么 Observation 不是模型自己的 Thought？
 - 如果第一轮 Observation 是错的，ReAct 后面的推理会发生什么？
@@ -122,9 +139,10 @@ Observation: 2 failed, 14 passed；失败日志显示 Observation 没有写入 s
 
 - Source: [[ReAct - Synergizing Reasoning and Acting in Language Models]]
 - Source: [[raw/repos/xiaolinnote/questions/012 ai agent 5. Agent 推理模式有哪些？ReAct 是啥？具体是怎么实现的？]]
-- Anchor: ReAct source note 的方法摘要；小林 ReAct 页对 Thought / Action / Observation 分工、系统填回历史、错误传播的说明。
+- Anchor: [[ReAct - Synergizing Reasoning and Acting in Language Models#为什么收]], [[ReAct - Synergizing Reasoning and Acting in Language Models#Ingest 摘要]], [[raw/repos/xiaolinnote/questions/012 ai agent 5. Agent 推理模式有哪些？ReAct 是啥？具体是怎么实现的？#页面正文]]
+- Evidence type: paper source note + raw tutorial/source note + engineering synthesis.
 - Confidence: medium
-
+- Boundary: ReAct source 支持 observation 作为 action 后的反馈；现代 state/trace/guardrail 处理是工程综合理解，不等于论文逐字定义。
 ## 相关链接
 
 - [[Agent Loop]]

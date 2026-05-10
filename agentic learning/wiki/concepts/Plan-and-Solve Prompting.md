@@ -31,6 +31,17 @@ related:
 
 Plan-and-Solve Prompting 是把 [[Zero-shot CoT]] 从“直接一步步想”改成“先生成计划，再按计划求解”的提示方法。
 
+## 概念详解
+
+Plan-and-Solve Prompting 是 prompt-era planning 的代表：它不先给示例，而是在问题前要求模型先生成解决计划，再按计划求解。它从 [[Zero-shot CoT]] 的经验出发，但指出“让我们一步步思考”仍可能遗漏关键步骤。Plan-and-Solve 的 plan 不是生产系统里的任务图，而是一次回答内部的结构化草稿：先列出要做哪些子步骤，再生成推理和答案。
+
+论文证据主要支持三件事：第一，Zero-shot CoT 容易有 missing-step error；第二，先计划再求解能让模型更显式地覆盖必要步骤；第三，PS+ 通过更具体的指令降低计算、推理和语义理解错误。这个证据边界很重要：它说明 prompt 层的显式计划有价值，但不说明模型已经具备可靠执行、工具使用、状态持久化或失败恢复能力。
+
+现代 Agent 系统吸收它时，通常把“先结构化任务”变成更硬的工程对象：任务列表、验收标准、依赖关系、state graph、planner-executor、replan 节点、human approval 或 evaluator。也就是说，Plan-and-Solve 是 [[Planning]] 的轻量入口：它帮助用户理解“先拆再做”的价值；但一旦任务需要外部世界反馈，就要升级到 [[ReAct]]、[[Agent Loop]] 或 [[Agent Workflow]]。
+
+这张卡也帮助区分“计划作为推理脚手架”和“计划作为执行控制面”。Plan-and-Solve 的 plan 主要给同一次生成中的 solve 阶段使用，通常不会被外部系统单独保存、审查或重排；生产 Agent 的 plan 则可能变成任务队列、状态字段、依赖图、checkpoint 或人类审批材料。前者改善文本推理，后者约束真实行动。把这两层混在一起，会让人误以为 prompt 里出现 plan 就已经拥有了工程意义上的规划能力。
+
+因此它的最佳学习用途，是作为从 CoT 到 Agent planning 的桥。你先看到“步骤显式化会减少遗漏”，再进一步看到“步骤必须被验证和更新”。如果停在第一层，就会高估 prompt 的力量；如果跨到第二层，就能理解为什么现代系统需要 state、tool result、evaluation 和 replan。
 ## 它解决什么问题
 
 普通 [[Zero-shot CoT|Zero-shot Chain-of-Thought]] 常用 “Let's think step by step” 触发逐步推理，但模型可能漏掉关键步骤。
@@ -93,6 +104,14 @@ Plan-and-execute workflow: Goal -> Plan -> Task list -> Execute -> Evaluate/Repl
 
 ![[plan-and-solve-planning-solving-phase.svg]]
 
+## 现代性状态
+
+- 判定：foundation / transitional
+- 基础地基：先显式拆解任务再求解，是理解 [[Planning]]、[[Reasoning Trace]] 和 plan-first workflow 的稳定思想。
+- 历史过渡：把 planning 完全写在 prompt 文本里，属于 prompt-era 轻量实现；它适合教学、单轮推理和低风险任务，不是现代 Agent runtime。
+- 当前工程吸收：复杂系统会把 plan 转成 task graph、state、checklist、eval rubric 或 human-review artifact，再由执行层和 observation 校正。
+- 易变部分：具体模型是否需要显式 plan、是否暴露推理链、如何在 API 中表达 reasoning / planning，会随模型和产品变化。
+
 ## 现代系统怎么吸收 Plan-and-Solve 的价值
 
 现代 Agent 或复杂 LLM 应用通常不会只靠一句“先计划再求解”来托管长任务，而是把这个思想工程化：
@@ -112,7 +131,15 @@ Plan-and-execute workflow: Goal -> Plan -> Task list -> Execute -> Evaluate/Repl
 - Anchor: [[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models#Ingest 摘要]]
 - Anchor: [[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models#图片录入：Planning Phase / Solving Phase]]
 - Asset: `agentic learning/raw/assets/plan-and-solve-planning-solving-phase.svg`（根据用户截图重绘，2026-05-08；用于说明工程类比，不等同于论文原法）
+- Evidence type: paper source note + user-provided visual asset + engineering analogy.
 - Confidence: medium
+- Boundary: 论文证据支持 prompt-level plan-then-solve；“Task Agent / Exec / Replan” 是工程类比，不应反向写成论文方法本身。
+
+## 复习触发
+
+- Plan-and-Solve 和 Zero-shot CoT 的最小差别是什么？
+- 为什么 Plan-and-Solve 还不是 [[ReAct]] 或生产 Agent workflow？
+- 给一个多步问题，指出哪些错误属于 missing-step error，哪些属于计算或语义误解。
 
 ## 相关链接
 
