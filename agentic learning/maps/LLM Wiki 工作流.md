@@ -153,6 +153,33 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 3. 发现新版本或冲突时，不直接覆盖旧卡；先写进 [[06 Wiki 健康检查]] 的“待复查 / 潜在矛盾”。
 4. 更新概念卡时，在“证据锚点”里保留新旧来源的边界。
 
+## 操作 6：现代性 / 前沿性判定
+
+当用户问“这个现在还成立吗”“现代系统怎么吸收 X 的局限”“这是前沿还是历史过渡”时，不直接把它归为前沿。先把问题拆成四类：
+
+- 基础地基（foundation）：论文、经典方法、稳定概念，主要帮助理解语言和边界。例如 [[ReAct]] 作为 reasoning/action/observation 交替思想。
+- 历史过渡（transitional）：曾经主要靠 prompt 或手写格式实现、今天多被框架接管的形态。例如裸 `Thought -> Action -> Observation` prompt loop。
+- 当前工程实践（current-practice）：多个框架或官方指南共同采用、已经相对稳定的工程吸收方式，例如 [[Tool Calling]]、显式 [[Agent State]]、[[Agent Workflow]] / graph、[[Guardrails]]、[[Trace]] / [[Evaluation]]、[[Human-in-the-loop]]。
+- 前沿 / 易变（frontier / volatile）：具体 SDK/API、协议、产品、评测榜单或快速演进实现，例如某个 Agents SDK 的 guardrails、tracing、sessions、computer use、MCP 集成接口。
+
+一句判断规则：
+
+> 论文范式通常是基础地基或历史过渡；框架吸收方式通常是当前工程实践；具体 SDK/API/产品能力才更可能是前沿或易变。
+
+执行步骤：
+
+1. 先读对应概念卡，确认它原本解决的问题和“它不是什么”。
+2. 再查最小证据集：一个原始来源（论文 / 原文）加至少一个现代官方工程来源（框架文档、SDK 文档或官方实践指南）。
+3. 给出四类判定，并说明哪些部分稳定、哪些部分需要 `freshness: watch/volatile`。
+4. 写回概念卡的 `## 现代性状态` 或 `## 现代系统怎么吸收 X 的价值/局限`。
+5. 如果只是具体产品或 API 变化，优先更新 source note 的 `last_checked` / `freshness`，并在 [[03 前沿追踪]] 或 [[06 Wiki 健康检查]] 里留观察项，不把它误写成稳定概念。
+
+写回边界：
+
+- “现代系统怎么做”不等于“这个概念过时了”。很多旧范式会变成现代系统的内部设计原则。
+- “某个框架新增功能”不等于“概念定义改变”。只有当多个来源都改变抽象边界时，才更新概念卡定义。
+- “模型变强”不等于“runtime 消失”。模型可能更会规划和遵循格式，但工具执行、状态、权限、trace、评测和恢复仍属于 [[Agent Harness]] / [[Agent Framework]] 的工程责任。
+
 ## 日志规则
 
 `log.md` 是时间线，追加即可。

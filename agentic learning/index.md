@@ -54,6 +54,7 @@ reviews/ -> 概念触发式复习、费曼回答、写回候选
 - [[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]
 - [[Hello-Agents Repo]]
 - [[oh-my-codex 使用教程]]
+- [[OMX $ 指令]]
 - [[reviews/复习记录索引]]
 - [[reviews/ReAct 概念触发式复习]]
 - [[LLM Wiki 工作流]]

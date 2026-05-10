@@ -5,7 +5,7 @@ topic:
   - workflow
 status: seed
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-05-10
 source:
   - "[[Agent Framework]]"
   - "[[Anthropic - Building Effective Agents]]"
@@ -15,6 +15,7 @@ evidence:
   - "[[Anthropic - Building Effective Agents#为什么收]]"
   - "[[LangGraph 官方文档#为什么收]]"
 last_checked: 2026-05-08
+last_checked: 2026-05-10
 freshness: watch
 conflicts: []
 related:
@@ -74,6 +75,17 @@ triage request
 - handoff：把任务交给另一个 Agent 或人类。
 
 和 [[Planning]] 的关系：Planning 偏“目标如何拆成步骤”；Agent Workflow 偏“系统如何执行这些步骤，并在分支、失败、审批和交接中保持可控”。
+
+## 现代性状态
+
+Workflow 没有“不流行了”。更准确地说，纯固定 workflow 不适合所有开放任务，但 workflow 作为工程控制层仍然是当前实践。
+
+- 基础地基：workflow 继承的是软件工程里的流程、状态机、DAG、router 和审批思想。
+- 历史过渡：把所有步骤都写死、完全没有模型判断的链式 demo，容易显得僵硬；把所有步骤都交给模型临场决定，又会退回脆弱 prompt loop。
+- 当前工程实践：稳定路径用 workflow 固定下来，不确定节点才调用模型或 agent loop；需要长任务、重试、人类确认和恢复时，用 graph 或 durable execution 管起来。
+- 前沿 / 易变：某个框架对 workflow 的 API 命名、节点接口、checkpoint 存储和可视化 trace 会变，但“用 workflow 限制 Agent 自由度”这个原则相对稳定。
+
+所以用户问“workflow 是不是过时了”时，答案不是“过时”，而是“它从单独卖点退回了 Agent 系统的内部控制结构”。
 
 ## 证据锚点
 

@@ -10,6 +10,7 @@ related:
   - "[[ReAct]]"
   - "[[Coding Agent]]"
   - "[[Agent 知识地图]]"
+  - "[[Environment Observation 类型对比]]"
   - "[[Trajectory Trace 类型对比]]"
 ---
 
@@ -38,6 +39,7 @@ SORT created DESC
 ## 相关地图
 
 - [[Agent 知识地图]]
+- [[Environment Observation 类型对比]]
 - [[Trajectory Trace 类型对比]]
 - [[03 前沿追踪]]
 - [[oh-my-codex 使用教程]]
@@ -57,3 +59,4 @@ SORT created DESC
 
 - [[oh-my-codex 使用教程]]
 - [[Oh My Codex (OMX)]]
+- [[OMX $ 指令]]

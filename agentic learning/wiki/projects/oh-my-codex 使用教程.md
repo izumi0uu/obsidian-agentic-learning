@@ -7,11 +7,12 @@ topic:
   - tools
 status: active
 created: 2026-05-06
-updated: 2026-05-07
+updated: 2026-05-10
 source:
   - "[[Oh My Codex Repo]]"
 related:
   - "[[Oh My Codex (OMX)]]"
+  - "[[OMX $ 指令]]"
   - "[[Agent Harness]]"
   - "[[Coding Agent]]"
   - "[[Sandbox Workspace]]"
@@ -22,6 +23,8 @@ related:
 # oh-my-codex 使用教程
 
 这份教程按“零基础但能动手”的方式写。目标不是背完所有命令，而是知道什么时候该用 OMX、怎么安全启动、怎么用核心 workflow、出了问题先查哪里。
+
+如果只想查 `$deep-interview`、`$ralph`、`$autoresearch-goal` 这类入口分别适合什么场景，先看 [[OMX $ 指令]]。
 
 ## 0. 先建立心智模型
 
@@ -416,6 +419,8 @@ unset OMX_LAUNCH_POLICY
 ```
 
 ## 6. 最重要的 5 个入口
+
+完整 active / alias / deprecated 清单见 [[OMX $ 指令]]。本节只保留最常用的学习入口。
 
 ### `$deep-interview`
 

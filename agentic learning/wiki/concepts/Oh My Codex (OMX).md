@@ -7,8 +7,8 @@ topic:
   - frontier
 status: seed
 created: 2026-05-06
-updated: 2026-05-07
-last_checked: 2026-05-07
+updated: 2026-05-10
+last_checked: 2026-05-10
 freshness: watch
 conflicts: []
 source:
@@ -18,6 +18,7 @@ evidence:
   - "[[Oh My Codex Repo#为什么收]]"
   - "[[oh-my-codex 使用教程#0. 先建立心智模型]]"
 related:
+  - "[[OMX $ 指令]]"
   - "[[Agent Harness]]"
   - "[[Coding Agent]]"
   - "[[Sandbox Workspace]]"
@@ -51,6 +52,8 @@ OMX 给 Codex 加了一层 [[Agent Harness]]：
 - 用 `.omx/` 保存 plans、logs、state、memory。
 - 用 git worktree 隔离并行 worker 的修改。
 - 用 hooks 和 HUD 观察会话生命周期。
+
+具体 `$` 入口见 [[OMX $ 指令]]。小边界：这些 `$` 指令是 Codex 会话里的 skill / workflow 触发入口，不等于普通 shell 命令；有些 workflow 会配合 `omx ...` CLI 和 `.omx/` artifact，但两者不是同一层。
 
 ## 它不是什么
 
@@ -110,6 +113,7 @@ $team 3:executor "并行修复 API、前端表单和测试用例"
 ## 相关链接
 
 - [[oh-my-codex 使用教程]]
+- [[OMX $ 指令]]
 - [[Oh My Codex Repo]]
 - [[Agent Harness]]
 - [[Coding Agent]]

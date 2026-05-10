@@ -280,9 +280,11 @@ related:
 - Boundary: historical log entries still mention the old daily plan as past maintenance facts; current navigation no longer treats it as active structure.
 ## [2026-05-10] asset | ReAct tools-LLM-environment diagram
 
-- Asset: `agentic learning/raw/assets/react-tools-llm-environment.svg`（根据用户截图重绘）
-- Updated: [[ReAct]]
-- Boundary: this diagram captures the external components around a ReAct-style loop; the actual loop controller lives in framework/runtime code, not inside the static boxes themselves.
+- Asset: `agentic learning/raw/assets/reAct.png`（用户提供原始透明背景截图）
+- Asset: `agentic learning/raw/assets/reAct-white-bg.png`（为透明 PNG 添加白色背景，保证可见性）
+- Asset: `agentic learning/raw/assets/react-agent-loop.svg`（按 [[Reflexion]] 图风格重绘，便于 LLM 和 Obsidian 理解）
+- Updated: [[ReAct]], [[ReAct - Synergizing Reasoning and Acting in Language Models]]
+- Boundary: the original image captures the external components around a ReAct-style loop; the redraw makes the missing runtime loop explicit: LLM proposes action, harness executes tools/environment steps, observation is written back into context/state, then the next LLM step starts.
 ## [2026-05-10] review | ReAct concept-triggered review
 
 - Added: [[ReAct 概念触发式复习]]
@@ -322,3 +324,15 @@ related:
 - Added: [[Trajectory Trace 类型对比]]
 - Updated: [[RAG 类型对比]], [[Agent 主题]], [[04 页面目录]], [[Trajectory]], [[Trace]], [[Reasoning Trace]]
 - Boundary: 对比型 topic 卡用于学习类比和边界训练，不替代单概念卡；本次为 RAG 类型和 Trajectory/Trace/Reasoning Trace 都补了生活类比。
+## [2026-05-10] map | Environment Observation analogy
+
+- Added: [[Environment Observation 类型对比]]
+- Updated: [[Observation]], [[ReAct]], [[Agent 主题]], [[04 页面目录]]
+- Boundary: Environment 是动作发生的外部世界或系统；[[Observation]] 是这个外部世界对某次 action 返回给 agent runtime 的反馈结果。
+
+## [2026-05-10] concept-update | OMX dollar commands
+
+- Added: [[OMX $ 指令]]
+- Updated: [[Oh My Codex (OMX)]], [[oh-my-codex 使用教程]], [[01 术语表]], [[Agent 知识地图]], [[Agent 主题]], [[04 页面目录]], [[index]]
+- Evidence: local `omx list --json` (catalog `2026.02.28.1`) and local OMX skill definitions under `${CODEX_HOME:-~/.codex}/skills/*/SKILL.md`.
+- Boundary: OMX `$` 指令是 Codex 会话里的 skill/workflow 触发入口，不等于普通 shell CLI；goal 类 shell commands 写 `.omx/` artifacts 和 handoff，不直接修改隐藏 Codex `/goal` 状态。

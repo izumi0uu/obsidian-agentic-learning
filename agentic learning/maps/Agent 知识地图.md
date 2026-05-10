@@ -44,6 +44,7 @@ LLM 地基：
 - [[Planning]]：目标如何拆成步骤，并在执行中调整。
 - [[Memory]]：Agent 如何保存和使用过去的信息。
 - [[Oh My Codex (OMX)]]：一个具体的 Codex CLI 编排实践，用来观察 Agent Harness 如何落地。
+- [[OMX $ 指令]]：理解 OMX 如何把澄清、计划、执行、研究、评审和 goal 验收做成可触发的 skill/workflow 入口。
 - [[Agent Framework]]：理解 LangGraph、OpenAI Agents SDK、AutoGen 等框架解决的是哪层工程问题。
 - [[Agent State]]：理解框架如何保存当前任务的进度、中间结果和下一步依据。
 - [[Agent Workflow]]：理解框架如何把任务组织成步骤、分支、循环和交接。
@@ -128,6 +129,7 @@ SORT file.name ASC
 - [x] [[Trajectory]]
 - [x] [[Prompt Injection]]
 - [x] [[Oh My Codex (OMX)]]
+- [x] [[OMX $ 指令]]
 
 ## 复习入口
 

@@ -6,16 +6,20 @@ topic:
   - workflow
 status: growing
 created: 2026-05-06
-updated: 2026-05-08
-last_checked: 2026-05-08
+updated: 2026-05-10
+last_checked: 2026-05-10
 freshness: watch
 conflicts: []
 source:
   - "[[Agent 工程基础设施主源]]"
+  - "[[Anthropic - Building Effective Agents]]"
+  - "[[OpenAI - A Practical Guide to Building Agents]]"
   - "[[LangGraph 官方文档]]"
   - "[[OpenAI Agents SDK 文档]]"
 evidence:
   - "[[Agent 工程基础设施主源#为什么收]]"
+  - "[[Anthropic - Building Effective Agents#为什么收]]"
+  - "[[OpenAI - A Practical Guide to Building Agents#为什么收]]"
   - "[[LangGraph 官方文档#为什么收]]"
   - "[[OpenAI Agents SDK 文档#为什么收]]"
 related:
@@ -67,6 +71,19 @@ define agent -> register tools -> set state -> run loop/workflow -> trace -> eva
 
 所以“接管”不是让模型不思考，而是把原来靠 prompt 软约束的东西，变成可验证、可恢复、可审计的工程对象。
 
+## 现代性状态
+
+Agent Framework 本身属于当前工程实践，不是单篇论文的旧范式，也不是某个模型自动具备的能力。
+
+更细分：
+
+- 基础地基：[[ReAct]]、[[Planning]]、[[Reflexion]]、[[Tool Calling]] 等概念提供了框架抽象的语言。
+- 历史过渡：早期把 action 格式、scratchpad、停止条件、重试都塞进 prompt；现在这些部分大多被框架或 harness 拆出来。
+- 当前工程实践：Anthropic 的 workflow/agent 边界、OpenAI 的 task/tools/guardrails/evaluation 视角、LangGraph 的 state graph/durable execution、人类确认，以及 Agents SDK 的 tools/handoffs/guardrails/tracing，都指向同一个方向：让 runtime 接管结构、状态、权限和观测。
+- 前沿 / 易变：具体框架 API、SDK 版本、协议集成、内置 memory/session/tracing 形态会变。写概念卡时记录“框架负责哪一层”，具体 API 细节放回对应 source note 并设置 `freshness: watch/volatile`。
+
+判断边界：Codex CLI、Claude Code、Hermes、OMX 这类产品或 harness 的 agent 模式，主要是产品/框架能力；它们调用强模型，但 agent loop、工具注册、文件系统权限、checkpoint、trace 和审批并不等于 LLM 权重里的单一能力。
+
 ## 常见误解和风险
 
 - 框架 demo 看起来强，不代表生产可靠。
@@ -77,6 +94,8 @@ define agent -> register tools -> set state -> run loop/workflow -> trace -> eva
 ## 证据锚点
 
 - Source: [[Agent 工程基础设施主源]]
+- Source: [[Anthropic - Building Effective Agents]]
+- Source: [[OpenAI - A Practical Guide to Building Agents]]
 - Source: [[LangGraph 官方文档]]
 - Source: [[OpenAI Agents SDK 文档]]
 - Anchor: source note 小节级；段落/页码级证据待精读时补。
