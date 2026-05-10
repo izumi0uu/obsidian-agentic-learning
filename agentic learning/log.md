@@ -5,7 +5,7 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-05
-updated: 2026-05-07
+updated: 2026-05-10
 source:
 related:
   - "[[LLM Wiki 工作流]]"
@@ -388,3 +388,17 @@ related:
 - Rule: 概念卡按“双层学习 + 判断卡”写；`## 一句话` 只是入口，不等于整卡只写一句话。够格卡应有问题背景、边界细节、现代性状态、证据锚点和复习触发。
 - Lint finding: 90 张概念卡中，修复 4 张样例卡后仍有 57 张缺 `## 边界细节`，79 张缺 `## 现代性状态`，86 张缺 `## 复习触发`（修复前为 60 / 83 / 90）；已写入 [[06 Wiki 健康检查]] 队列。
 - Boundary: 本次只修标准、模板、健康队列和 4 张样例卡；未批量重写旧概念卡，后续批量修复需要用户确认。
+
+## [2026-05-10] review | ReAct Feynman answers
+
+- Updated: [[01 概念触发式复习]]
+- Feedback: Q1 和 Q3 已掌握；Q2 需要补“Observation 驱动下一轮决策”；Q4 已理解方向但需补权限、格式、停止条件和 trace/eval；Q5 需要继续练习停止、纠错、评估和人工升级四类机制。
+- Next review: 新增 ReAct 第二轮追问 5 题。
+
+## [2026-05-10] concept-update | P1 concept-card repair
+
+- Updated: [[Agent Loop]], [[Agent Framework]], [[Agent State]], [[Agent Workflow]], [[Evaluation]], [[Eval Harness]], [[LLM-as-Judge]], [[RAG Evaluation]], [[06 Wiki 健康检查]]
+- Change: 按新概念卡标准小范围修复 P1 Agent 工程组和 Evaluation 组：补问题背景、最小例子、常见误解/风险、边界细节、现代性状态、现代系统吸收方式、证据锚点、复习触发和相关链接。
+- Verification: 8 张目标卡 section/evidence audit PASS；hard-boundary audit PASS（未改 raw/、AGENTS.md、模板页，未批量改 P2 协议/前沿卡）；`git diff --check` PASS。
+- Health counts: [[06 Wiki 健康检查]] 更新为仍缺 `## 边界细节` 51、`## 现代性状态` 73、`## 复习触发` 78。
+- Boundary: 本次是小范围 P1 修复，不是全量重写；未把卡片扩成百科长文，未把无来源推断写成来源事实。`reviews/` 中的学习记录仍是学习校准材料，不作为 raw evidence。

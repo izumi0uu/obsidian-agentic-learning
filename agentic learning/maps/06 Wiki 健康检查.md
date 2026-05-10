@@ -24,9 +24,9 @@ related:
 - Concept cards: 90
 - Raw source notes: 810（包含按题拆分的 imported question source pages；主源清单仍看 [[资料收集索引]]）
 - Query write-back pending: 0
-- Concept cards missing `## 边界细节`: 57（已用 4 张样例卡修复前为 60）
-- Concept cards missing `## 现代性状态`: 79（已用 4 张样例卡修复前为 83）
-- Concept cards missing `## 复习触发`: 86（已用 4 张样例卡修复前为 90）
+- Concept cards missing `## 边界细节`: 51（P0 样例 + P1 小范围修复后；P1 修复前为 57）
+- Concept cards missing `## 现代性状态`: 73（P0 样例 + P1 小范围修复后；P1 修复前为 79）
+- Concept cards missing `## 复习触发`: 78（P0 样例 + P1 小范围修复后；P1 修复前为 86）
 
 边界：这些数字用于排队和抽样修复，不代表要一次性批量重写旧卡。批量修复旧卡前需要用户确认。
 
@@ -65,8 +65,8 @@ related:
 | P0 | [[Trace]] | 已较完整，但缺现代性和复习触发；需切开 [[Trajectory]] / [[Reasoning Trace]] / eval | 本次作为 observability 样例修复 |
 | P0 | [[Trajectory Evaluation]] | evaluation 判断卡代表；需拆开 trace、trajectory、score、judge 的边界 | 本次作为 eval 样例修复 |
 | P0 | [[RAG]] | 非 Agent 但核心知识概念；需补现代系统吸收和复习触发 | 本次作为 RAG 样例修复 |
-| P1 | [[Agent Loop]], [[Agent Framework]], [[Agent State]], [[Agent Workflow]] | Agent 工程骨架，现代性状态和复习触发不齐 | 下次按 Agent 工程主题成组修 |
-| P1 | [[Evaluation]], [[Eval Harness]], [[LLM-as-Judge]], [[RAG Evaluation]] | 评估概念相互依赖，需统一 “记录 vs 判断 vs harness” 边界 | 下次按 evaluation 主题成组修 |
+| P1 | [[Agent Loop]], [[Agent Framework]], [[Agent State]], [[Agent Workflow]] | Agent 工程骨架，现代性状态和复习触发不齐 | 已完成小范围修复：补齐问题背景、边界、现代性、现代系统吸收、证据锚点和复习触发 |
+| P1 | [[Evaluation]], [[Eval Harness]], [[LLM-as-Judge]], [[RAG Evaluation]] | 评估概念相互依赖，需统一 “记录 vs 判断 vs harness” 边界 | 已完成小范围修复：统一 evaluation / harness / judge / RAG eval 的责任边界和复习触发 |
 | P2 | [[A2A]], [[ACP]], [[MCP]], [[MCP Registry]] | 协议/生态变化较快，需要 freshness 与前沿追踪联动 | 需要查新后再修 |
 
 ### 不做的事
@@ -75,6 +75,22 @@ related:
 - 不把每张卡扩成百科长文。
 - 不把没有证据的工程直觉写成来源结论。
 - 不把 `reviews/` 当作 raw evidence；复习记录只用于学习校准和写回候选。
+
+## 2026-05-10 P1 概念卡小范围修复
+
+本轮只修 P1 的 8 张目标卡，不批量重写旧卡：
+
+- Agent 工程组：[[Agent Loop]], [[Agent Framework]], [[Agent State]], [[Agent Workflow]]
+- Evaluation 组：[[Evaluation]], [[Eval Harness]], [[LLM-as-Judge]], [[RAG Evaluation]]
+
+### 验收结果
+
+- 8 张目标卡均包含：`一句话`、`它解决什么问题`、`它不是什么`、`最小例子`、`常见误解/风险`、`边界细节`、`现代性状态`、`证据锚点`、`复习触发`、`相关链接`。
+- 新增判断均保留来源锚点，或明确作为工程综合理解处理。
+- `git diff --check` 通过。
+- hard boundary 通过：未改 `raw/`、`AGENTS.md`、模板页，也未批量改 P2 协议/前沿卡。
+
+边界：这次完成的是 P1 抽样修复，不代表 90 张旧概念卡已经全部统一；剩余缺口继续按主题小批量排队。
 
 ## Freshness 规则
 
@@ -113,3 +129,4 @@ SORT file.name ASC
 ## 本次维护记录
 
 - 2026-05-07：建立 page catalog、query 写回队列、健康检查页、证据锚点规范、freshness 字段。
+- 2026-05-10：完成 P1 小范围概念卡修复（Agent 工程组 4 张 + Evaluation 组 4 张），并把缺口统计更新为 `边界细节` 51、`现代性状态` 73、`复习触发` 78。

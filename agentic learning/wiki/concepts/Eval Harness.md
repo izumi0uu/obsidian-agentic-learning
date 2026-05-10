@@ -89,6 +89,12 @@ Eval Harness 属于 current-practice。
 - Anchor: source note 小节级；段落/页码级证据待精读时补。
 - Confidence: medium
 
+## 复习触发
+
+- 什么时候一个系统更像 benchmark，什么时候更像 eval harness？
+- 为什么只看最终分数不够？
+- harness 里哪些部分更稳定，哪些部分更容易过期？
+
 ## 相关链接
 
 - [[Agent Harness]]

@@ -56,12 +56,30 @@ LLM-as-Judge 不是绝对裁判。
 - 不要把敏感 trace 原样发给外部裁判模型。
 - 最好保留 rationale 或标签，方便人工复查。
 
+## 边界细节
+
+- LLM-as-Judge 适合做弱监督、批量筛查和辅助评分，不适合当唯一真理。
+- 如果任务有明确规则，优先规则判定；如果涉及主观质量，再用 judge 辅助。
+- judge 结果要当成“可疑信号”而不是最终裁定。
+
+## 现代性状态
+
+- 基础地基：自动评分思想来自测试、rubric 和人工审查流程。
+- 当前工程实践：现代评测系统常把 judge 作为 rubric-backed evaluator 的一部分，而不是单独使用。
+- 前沿 / 易变：具体 judge 模型、prompt、guardrail 和隐私处理方式变化快，应单独跟踪 `freshness`。
+
 ## 证据锚点
 
 - Source: [[LangSmith Evaluation and Observability]]
 - Source: [[Langfuse Observability and Evaluation]]
 - Anchor: source note 小节级；段落/页码级证据待精读时补。
 - Confidence: medium
+
+## 复习触发
+
+- 什么时候应该用规则而不是 judge？
+- judge 为什么需要版本化和校准？
+- 哪些内容不适合送给外部 judge 模型？
 
 ## 相关链接
 

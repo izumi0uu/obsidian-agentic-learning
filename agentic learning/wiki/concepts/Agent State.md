@@ -4,45 +4,52 @@ topic:
   - agent
   - workflow
   - memory
-status: seed
+status: growing
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-05-10
+last_checked: 2026-05-10
+freshness: watch
+conflicts: []
 source:
   - "[[Agent Framework]]"
   - "[[LangGraph 官方文档]]"
+  - "[[OpenAI Agents SDK 文档]]"
+  - "[[OpenAI - A Practical Guide to Building Agents]]"
 evidence:
   - "[[Agent Framework#框架怎样接管 prompt loop]]"
-  - "[[LangGraph 官方文档#为什么收]]"
-last_checked: 2026-05-08
-freshness: watch
-conflicts: []
+  - "[[Agent Framework#现代系统怎么吸收 Agent Framework 的价值 / 局限]]"
+  - "[[LangGraph 官方文档#一句话]]"
+  - "[[OpenAI Agents SDK 文档#Tracing 补充]]"
+  - "[[OpenAI - A Practical Guide to Building Agents#一句话]]"
 related:
   - "[[Agent Framework]]"
   - "[[Agent Loop]]"
+  - "[[Agent Workflow]]"
   - "[[Memory]]"
   - "[[Context Engineering]]"
   - "[[Trace]]"
+  - "[[Durable Execution]]"
 ---
 
 # Agent State
 
 ## 一句话
 
-Agent State 是 Agent 在一次任务运行中用来保存当前位置、已知信息、中间结果和下一步依据的显式状态。
+Agent State 是一次 Agent 运行中被框架显式保存和更新的工作状态：目标、阶段、已知信息、中间结果、工具反馈、错误、审批状态和下一步依据。
 
 ## 它解决什么问题
 
-如果只靠 prompt 和上下文窗口，Agent 很容易忘记任务进度、重复做事、丢掉工具结果，或者不知道自己已经尝试过什么。
+如果只靠 prompt 和 context window，Agent 很容易忘记任务进度、重复做事、丢掉工具结果，或者不知道自己已经尝试过什么。Agent State 把“任务走到哪里了”变成可读写的结构，而不是让模型在自然语言里凭记忆维持整个过程。
 
-Agent State 把这些运行时信息变成框架可读写的结构，例如当前目标、计划、待办、工具结果、错误、审批状态和最近 observation。
+它还解决恢复问题：长任务可能被中断，工具可能失败，人类可能稍后才审批。显式 state 让 runtime 可以暂停、恢复、重试、分支，或者把一次运行归档成 [[Trace]]。
 
 ## 它不是什么
 
-Agent State 不是 [[Memory]] 的同义词。
+Agent State 不是 [[Memory]] 的同义词。Memory 更偏跨时间保存和复用信息；Agent State 更偏当前运行里的工作状态。一次任务结束后，state 可能被丢弃、归档成 trace，或者提炼成长期 memory。
 
-[[Memory]] 更偏跨时间保存和复用信息；Agent State 更偏当前运行里的工作状态。一个任务结束后，state 可能被丢弃、归档成 [[Trace]]，或者提炼成长期 memory。
+Agent State 也不是 context window。context window 是模型本次调用能看到的内容；state 是框架保存的结构化运行数据，只有被选择性注入上下文时，模型才会看到。
 
-Agent State 也不是 context window。context window 是模型本次调用能看到的内容；state 是框架保存的结构化运行数据，只有被选中写入上下文时，模型才会看到。
+Agent State 也不是普通数据库表。数据库可以存业务数据；Agent State 关注的是运行控制：当前阶段、待办、工具结果、错误、权限和下一步依据。
 
 ## 最小例子
 
@@ -56,36 +63,78 @@ plan:
 completed:
   - "读取 raw note"
 last_observation: "论文强调 plan-first prompting"
+last_error: null
 needs_human_approval: false
+next_step: "起草概念卡"
 ```
 
-## 常见误解
+这里最重要的不是 YAML，而是这些字段让 runtime 和下一轮模型调用知道“现在该从哪里继续”。
 
-- 把所有历史对话都塞进 state，会让 state 变成噪音仓库。
-- state 持久化不等于 Agent 变聪明；它只是让运行过程更可恢复。
-- state 里保存敏感信息时，同样需要权限、过期和审计策略。
+## 常见误解 / 风险
+
+- 误解：把所有历史对话都塞进 state 就更安全。风险是 state 变成噪音仓库，反而污染下一轮上下文。
+- 误解：state 持久化等于 Agent 变聪明。state 只是让过程可恢复，不能替代判断、工具质量和评估。
+- 误解：state 和 memory 可以混用。风险是短期错误、敏感数据或一次性工具结果被错误写入长期记忆。
+- 风险：state 里保存敏感信息时，同样需要权限、过期、脱敏和审计策略。
 
 ## 边界细节
 
 可以把三者分开：
 
-- [[Agent State]]：当前任务怎么走到这里。
+- [[Agent State]]：当前任务怎么走到这里，以及下一步依据是什么。
 - [[Memory]]：过去哪些信息值得以后复用。
 - [[Trace]]：这次执行到底发生过什么。
 
-State 是框架接管 prompt loop 的关键：模型不必在自然语言里“记住一切”，框架可以在每一步把必要 state 注入上下文，并在工具返回后更新 state。
+State 是框架接管 prompt loop 的关键：模型不必在自然语言里“记住一切”，框架可以每一步只把必要 state 注入上下文，并在工具返回后更新 state。
+
+工程边界：state 需要 schema、更新规则和清理策略。没有 schema，state 会变成随手堆文本；没有更新规则，工具结果和人工确认可能覆盖错字段；没有清理策略，旧状态会误导新任务。
+
+## 现代性状态
+
+- 判定：current-practice
+- 为什么：显式 state、state graph、checkpoint、session / run 记录是现代 Agent framework 的核心工程层；但具体字段、存储、恢复 API 和持久化策略仍随框架变化。
+- 稳定部分：当前运行需要可读写状态，且只有必要状态应进入模型上下文。
+- 易变部分：LangGraph 等框架的节点/边/state reducer/checkpoint API，OpenAI Agents SDK 的 session/tracing 细节，以及各平台对 state 的可视化方式。
+- 复查点：当主流框架对 state、memory、trace 的边界有新稳定定义时更新本卡。
+
+## 现代系统怎么吸收 Agent State 的价值 / 局限
+
+现代系统通常把 state 分成几层处理：
+
+- runtime state：当前 run 的目标、阶段、工具结果、错误和审批状态。
+- checkpoint：让长任务可以暂停、恢复、重试或回滚。
+- context injection：只把当前模型调用需要的 state 片段放进上下文。
+- trace linkage：把 state transition 和工具调用记录到 trace，方便调试和评估。
+- memory extraction：任务结束后，只把值得长期复用的信息提炼进 memory。
+
+局限是：state 让过程可控，但不会自动判断哪些信息重要。state 设计过粗会丢信息，过细会污染上下文；这部分需要工程 schema、评估和复盘不断校准。
 
 ## 证据锚点
 
 - Source: [[Agent Framework]]
+- Anchor: [[Agent Framework#框架怎样接管 prompt loop]] / [[Agent Framework#现代系统怎么吸收 Agent Framework 的价值 / 局限]]
 - Source: [[LangGraph 官方文档]]
-- Anchor: [[Agent Framework#框架怎样接管 prompt loop]]
+- Anchor: [[LangGraph 官方文档#一句话]]
+- Source: [[OpenAI Agents SDK 文档]]
+- Anchor: [[OpenAI Agents SDK 文档#Tracing 补充]]
+- Source: [[OpenAI - A Practical Guide to Building Agents]]
+- Anchor: [[OpenAI - A Practical Guide to Building Agents#一句话]]
+- Evidence type: official docs/source notes + local engineering synthesis.
 - Confidence: medium
+- Boundary: source notes支持“框架/图/trace 接管运行结构”；state schema/checkpoint/context-injection 的拆分是工程综合。
+
+## 复习触发
+
+- 为什么 Agent State 不是 Memory，也不是 context window？
+- 用一个长任务中断恢复的例子，说明 state、checkpoint、trace 分别保存什么。
+- 如果一个 Agent 反复忘记已经调用过某个工具，你会检查 state 的哪些字段？
 
 ## 相关链接
 
 - [[Agent Framework]]
 - [[Agent Loop]]
+- [[Agent Workflow]]
 - [[Memory]]
 - [[Context Engineering]]
 - [[Trace]]
+- [[Durable Execution]]
