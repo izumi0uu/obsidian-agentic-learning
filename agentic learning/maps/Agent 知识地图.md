@@ -40,7 +40,7 @@ LLM 地基：
 
 ## 行动能力
 
-- [[Tool Calling]]：模型如何请求外部工具执行动作。
+- [[Tool Calling]]：模型如何通过结构化 tool call 和 schema 请求外部工具执行动作。
 - [[Planning]]：目标如何拆成步骤，并在执行中调整。
 - [[Memory]]：Agent 如何保存和使用过去的信息。
 - [[Oh My Codex (OMX)]]：一个具体的 Codex CLI 编排实践，用来观察 Agent Harness 如何落地。

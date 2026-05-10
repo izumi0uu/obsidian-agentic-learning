@@ -402,3 +402,10 @@ related:
 - Verification: 8 张目标卡 section/evidence audit PASS；hard-boundary audit PASS（未改 raw/、AGENTS.md、模板页，未批量改 P2 协议/前沿卡）；`git diff --check` PASS。
 - Health counts: [[06 Wiki 健康检查]] 更新为仍缺 `## 边界细节` 51、`## 现代性状态` 73、`## 复习触发` 78。
 - Boundary: 本次是小范围 P1 修复，不是全量重写；未把卡片扩成百科长文，未把无来源推断写成来源事实。`reviews/` 中的学习记录仍是学习校准材料，不作为 raw evidence。
+
+## [2026-05-10] autoresearch | Tool Calling schema
+
+- Added sources: [[OpenAI Function Calling 文档]], [[Anthropic Tool Use 文档]]
+- Updated: [[Tool Calling]], [[Model Context Protocol 官方文档]], [[资料收集索引]], [[04 页面目录]], [[01 概念触发式复习]]
+- Answer: Tool Calling schema 是工具的说明书 / 参数契约，通常用 JSON Schema 或类似结构表达工具名、描述、参数字段、类型、必填项和枚举约束。
+- Boundary: schema 只约束调用请求的形状，不执行工具，也不替代权限、业务校验、工具结果可信度、trace 或评估。
