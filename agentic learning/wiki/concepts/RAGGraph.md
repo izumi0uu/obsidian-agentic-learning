@@ -7,16 +7,17 @@ topic:
   - frontier
 status: review
 created: 2026-05-06
-updated: 2026-05-06
-last_checked: 2026-05-07
-freshness: stable
-conflicts: []
+updated: 2026-05-10
+last_checked: 2026-05-10
+freshness: watch
+conflicts:
+  - "RAGGraph 不是稳定统一术语，可能被误当作 GraphRAG。"
 source:
   - "[[前沿主源清单]]"
   - "[[RAG 类型对比]]"
 evidence:
   - "[[前沿主源清单#RAG 进化]]"
-  - "[[RAG 类型对比#一张表先抓住]]"
+  - "[[RAG 类型对比#最容易混淆的边界]]"
 related:
   - "[[RAG]]"
   - "[[GraphRAG]]"
@@ -29,6 +30,16 @@ related:
 ## 一句话
 
 RAGGraph 是一个不稳定说法，通常可能指“把 RAG pipeline 编排成图工作流”，也可能指“用图结构组织知识并做检索”。
+
+## 概念详解
+
+RAGGraph 在本库里应该被当成待复查术语，而不是稳定概念。它的问题是命名容易和 [[GraphRAG]] 混淆：GraphRAG 通常指知识图谱、实体关系或图结构参与检索；RAGGraph 更可能指把 RAG 流程本身做成图工作流，例如 query rewrite、retrieve、grade、rerank、answer、fallback 这些节点组成一个有分支和循环的执行图。
+
+普通 RAG 常被画成一条线：query -> retrieve -> answer。但真实系统往往需要条件分支：检索结果不好就改写 query；证据不足就重检索或拒答；引用不支持就回到证据检查；用户权限不足就过滤或请求确认。这类“RAG pipeline as graph”可以用 LangGraph、workflow engine 或自定义状态机实现。它强调的是执行流程图，而不是知识库本身是图数据库。
+
+边界是这张卡的核心价值。看到 RAGGraph 这个词，要先问它来自哪里：是某个 GitHub 项目名、某篇博客的图工作流叫法，还是把 GraphRAG 写反了？如果它指知识图谱检索，应该并入 [[GraphRAG]]；如果它指 RAG workflow 编排，则应和 [[Agentic RAG]]、[[Corrective RAG]]、[[Agent Loop]] 放在一起理解；如果只是项目命名，就不应把它提升成稳定方法。
+
+现代性上，RAGGraph 是 frontier / volatile-ish 的术语，而不是成熟类别。图工作流本身是 current-practice，但“RAGGraph”这个词的语义不稳定。它适合作为混淆提醒卡，帮助学习时不要把 workflow graph、knowledge graph 和 graph database 混为一谈。
 
 ## 它解决什么问题
 
@@ -58,8 +69,6 @@ RAGGraph 不是一个稳定统一的学术概念。
 
 ## 最小例子
 
-一个 RAGGraph 工作流可能是：
-
 ```text
 用户问题
   -> query rewrite
@@ -71,7 +80,7 @@ RAGGraph 不是一个稳定统一的学术概念。
 
 这个图描述的是 RAG 的“执行流程”，不一定说明知识库本身是图数据库。
 
-## 常见误解和风险
+## 常见误解 / 风险
 
 - 误解：RAGGraph 和 [[GraphRAG]] 是同义词。
 - 误解：把流程画成图，效果就会变好。
@@ -79,20 +88,42 @@ RAGGraph 不是一个稳定统一的学术概念。
 - 风险：每一步都让 LLM 判断，成本和不确定性都会上升。
 - 风险：概念名来自不同 GitHub 项目时，含义可能完全不同。
 
-## 学习边界
+## 边界细节
 
-看到 RAGGraph 这个词时，先问三个问题：
+看到 RAGGraph 这个词时，先问三个问题：它说的是 RAG 流程图，还是知识图谱检索？它是通用概念，还是某个项目的命名？它带来的收益是更好召回、更好验证，还是只是更复杂？
 
-1. 它说的是 RAG 流程图，还是知识图谱检索？
-2. 它是通用概念，还是某个项目的命名？
-3. 它带来的收益是更好召回、更好验证，还是只是更复杂？
+和 [[GraphRAG]] 的边界：GraphRAG 是图结构参与知识检索；RAGGraph 更可能是 RAG 执行流程被图编排。
+
+和 [[Agentic RAG]] 的边界：Agentic RAG 强调 Agent 决定检索行为；RAGGraph 强调这些行为可能被实现成图节点和边。
+
+## 现代性状态
+
+- 判定：frontier / volatile terminology。
+- 稳定部分：RAG workflow 可以被实现成图、状态机或有条件循环。
+- 易变部分：RAGGraph 这个词的含义、项目指向和社区用法不稳定。
+- freshness: watch。
+- last_checked: 2026-05-10。
+- 复查点：遇到具体 RAGGraph 项目时，先确认它是 workflow graph、GraphRAG 变体，还是项目名。
+
+## 现代系统怎么吸收 RAGGraph 的价值
+
+现代系统吸收的是“把 RAG 流程显式成可观察图”的价值：每个节点有输入输出、错误处理、重试和评估。不要吸收不稳定术语本身；应该把具体模式落到 [[Agentic RAG]]、[[Corrective RAG]]、[[GraphRAG]] 或 workflow graph 的边界里。
 
 ## 证据锚点
 
 - Source: [[前沿主源清单]]
+- Anchor: [[前沿主源清单#RAG 进化]]
 - Source: [[RAG 类型对比]]
-- Anchor: source note 小节级；段落/页码级证据待精读时补。
+- Anchor: [[RAG 类型对比#最容易混淆的边界]]
+- Evidence type: frontier source map + local comparison map + engineering synthesis.
 - Confidence: medium
+- Boundary: sources support that RAGGraph/GraphRAG is a confusion boundary; the workflow-graph explanation is a cautious synthesis, not a claim that RAGGraph is a stable academic term.
+
+## 复习触发
+
+- RAGGraph 和 GraphRAG 最容易混淆在哪里？
+- 一个 RAG workflow 图增加节点后，必须补哪些 trace/eval？
+- 遇到新项目名时，为什么不能直接把它升格成稳定概念？
 
 ## 相关链接
 
