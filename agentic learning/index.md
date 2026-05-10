@@ -56,7 +56,7 @@ reviews/ -> 概念触发式复习、费曼回答、写回候选
 - [[oh-my-codex 使用教程]]
 - [[OMX $ 指令]]
 - [[reviews/复习记录索引]]
-- [[reviews/ReAct 概念触发式复习]]
+- [[01 概念触发式复习]]
 - [[LLM Wiki 工作流]]
 - [[插件配置]]
 - [[字段规范]]
@@ -147,3 +147,5 @@ SORT updated DESC
 LLM 是会生成文本的模型；Agent 是围绕目标行动的系统。
 
 Agent 通常包含 LLM，但还需要目标、状态、工具、决策循环和反馈修正。会聊天不等于会代理行动。
+
+另一个工程边界：[[Agent Lifecycle Hook]] 不是 LLM 内部能力，而是 runtime / harness 在工具调用、会话、压缩和停止等边界触发的本地或框架处理器。

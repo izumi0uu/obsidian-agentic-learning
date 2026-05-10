@@ -12,7 +12,7 @@ topic:
   - frontier
 created: 2026-05-06
 updated: 2026-05-07
-last_checked: 2026-05-07
+last_checked: 2026-05-10
 freshness: watch
 conflicts: []
 status: seed
@@ -21,6 +21,7 @@ related:
   - "[[Oh My Codex (OMX)]]"
   - "[[oh-my-codex 使用教程]]"
   - "[[Agent Harness]]"
+  - "[[Agent Lifecycle Hook]]"
   - "[[Coding Agent]]"
   - "[[Sandbox Workspace]]"
   - "[[Trace]]"
@@ -67,3 +68,9 @@ OMX 不替代 Codex。它把 Codex 包进一套工程工作流：clarify -> plan
 OMX 的关键价值是编排和运行时纪律，不是让底层模型本身更聪明。
 
 `--madmax` / `--yolo` 这类强权限模式适合受控开发环境，不适合未知仓库、生产凭据、不可逆操作或你还没理解风险的时候直接使用。
+
+## 本地 hook / 可观测性补充
+
+本仓库当前环境里，`~/.codex/hooks.json` 把 `SessionStart`、`UserPromptSubmit`、`PreToolUse`、`PostToolUse`、`PreCompact`、`PostCompact`、`Stop` 等 Codex native hook 事件指向 `oh-my-codex/dist/scripts/codex-native-hook.js`。
+
+`.omx/` 下可以看到 `logs/turns-*.jsonl`、`metrics.json`、`state/session.json`、`state/subagent-tracking.json`、`goals/.../ledger.jsonl` 等 artifact。它们是理解 [[Agent Lifecycle Hook]]、[[Trace]] 和 [[Observability]] 的本地证据，但不是上游 Codex/OpenAI 的通用规范。

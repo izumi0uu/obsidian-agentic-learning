@@ -65,7 +65,7 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 1. 读取 raw source note。
 2. 确认它的 `type: source`、`source_type`、`topic`、`url`、`status`。
 3. 提取 3 类内容：关键主张、可拆概念、不懂的问题。
-4. 更新或创建 `wiki/concepts/` 里的概念卡。
+4. 更新或创建 `wiki/concepts/` 里的概念卡。创建或更新前，先执行 [[LLM Wiki 工作流#操作 6：现代性 / 前沿性判定]]，判断这个概念应放在基础地基、历史过渡、当前工程实践还是前沿 / 易变层。
 5. 给概念卡补 `source` 和 `evidence`。没有段落级证据时，至少链接到 source note 小节。
 6. 如果涉及主题聚合，更新 `wiki/topics/`。
 7. 如果影响导航或复习方式，更新 `maps/Agent 知识地图.md`、[[02 问题池]]、[[05 Query 写回队列]] 或 [[04 页面目录]]。
@@ -74,7 +74,14 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 
 ### 概念卡写法
 
-默认把 `wiki/concepts/` 写成学习卡，而不是百科条目。优先保留这个骨架：
+默认把 `wiki/concepts/` 写成“双层学习 + 判断卡”，而不是百科条目。
+
+- 学习层：让自己能从问题、例子、误解和复述进入概念。
+- 判断层：让自己能判断边界、适用条件、现代工程吸收方式、证据强弱和复习问题。
+
+学习层不单独做成一个固定标题，而是隐含在解释深度、最小例子、边界细节、证据锚点和复习触发里。`## 一句话` 只是入口，不等于整张卡只能写一句话。
+
+优先保留这个骨架：
 
 1. `## 一句话`
 2. `## 它解决什么问题`
@@ -82,13 +89,40 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 4. `## 最小例子`
 5. `## 常见误解` 或 `## 风险`
 6. `## 边界细节`
-7. 对 Agent、prompting、framework、evaluation 类概念，必要时补 `## 现代系统怎么吸收 X 的价值` 或 `## 现代系统怎么吸收 X 的局限`
-8. `## 证据锚点`
-9. `## 相关链接`
+7. `## 现代性状态`：LLM 必须主动判断 foundation / transitional / current-practice / frontier / 不适用。不是前沿就说明为什么不是前沿。
+8. 对 Agent、prompting、framework、evaluation 类概念，必要时补 `## 现代系统怎么吸收 X 的价值` 或 `## 现代系统怎么吸收 X 的局限`
+9. `## 证据锚点`
+10. `## 复习触发`
+11. `## 相关链接`
 
-写法参照 [[Plan-and-Solve Prompting]]：先从这个概念自己解决的问题讲起，再用“它不是什么”“常见误解”和“边界细节”把邻近概念切开；如果它来自论文时代的 prompt / agent 范式，还要说明现代系统如何把它包进 workflow、tool calling、state、guardrails、trace、evaluation 或 human-in-the-loop。
+写法参照 [[Plan-and-Solve Prompting]]：先从这个概念自己解决的问题讲起，再用“它不是什么”“常见误解”和“边界细节”把邻近概念切开；录入时由 LLM 主动判断现代性状态。如果它来自论文时代的 prompt / agent 范式，还要说明现代系统如何把它包进 workflow、tool calling、state、guardrails、trace、evaluation 或 human-in-the-loop。
 
 如果嵌入用户提供的图片或重绘 asset，必须在正文说明这张图是原论文内容、用户截图重绘，还是帮助理解的工程类比；并在 `## 证据锚点` 里写明 asset 路径。
+
+#### “不是浅卡”的验收标准
+
+一张够格概念卡至少满足：
+
+- 有 `## 一句话`，但正文不只停在一句话；必要时用一到多段解释它为什么存在。
+- 有 `## 它解决什么问题`，说明没有这个概念时会出现的具体困难。
+- 有 `## 它不是什么`，至少切开 1-2 个邻近概念或常见混淆。
+- 有 `## 最小例子`；如果概念不适合例子，要说明原因并给替代反例或类比。
+- 有 `## 常见误解` 或 `## 风险`。
+- 有 `## 边界细节`，写适用条件、反例、邻近概念差异或工程落点。
+- 对 Agent、prompting、framework、evaluation、RAG、memory、tooling、安全、协议或产品生态，写 `## 现代性状态`；必要时补现代系统吸收价值/局限的段落。
+- 有 `## 证据锚点`，区分 source evidence、工程类比、用户截图/重绘等非原文证据。
+- 有 `## 复习触发`，给出能检验用户是否真的理解的 1-3 个问题。
+
+#### 深度分级
+
+| 深度 | 适用对象 | 最低要求 |
+|---|---|---|
+| seed-lite | 暂存弱概念、待验证术语 | 骨架可不完整，但必须写清缺口；优先放 [[02 问题池]]，不要大量创建弱卡 |
+| qualified | 大多数稳定概念卡 | 满足“不是浅卡”的验收标准，证据锚点到 source note 小节 |
+| anchor | 地基概念、常用对比概念、风格样板 | 多段解释、邻近概念边界、现代系统吸收、复习触发和相关链接都要完整 |
+| volatile | API、SDK、产品能力、前沿协议 | 除 qualified 外，还要 `last_checked`、`freshness: watch/volatile`，并在 [[03 前沿追踪]] 或 [[06 Wiki 健康检查]] 留观察项 |
+
+边界：统一模板不等于所有卡同样长；它要求每张卡能说明自己的证据、边界和学习检查点。
 
 ## 操作 2：Query
 
@@ -115,6 +149,10 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 
 - 是否有 raw source 没有被消化。
 - 是否有概念卡没有 `它不是什么`。
+- 是否有概念卡缺少 `## 边界细节`。
+- 是否有 Agent / prompting / framework / evaluation / RAG / memory / tooling / security / protocol / product-ecosystem 概念卡缺少 `## 现代性状态`。
+- 是否有概念卡缺少 `## 复习触发`，导致无法进入 `reviews/` 学习检查。
+- 是否有概念卡实际只是一句话解释，没有问题背景、例子、边界或证据。
 - 是否有孤立页。
 - 是否有同义重复页。
 - 是否有重要术语只出现为纯文本，未变成 `[[双链]]`。
@@ -136,7 +174,7 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 
 1. 更新 [[04 页面目录]]。
 2. 运行 missing-link scan。
-3. 检查概念卡是否有 `它不是什么` 和 `证据锚点`。
+3. 检查概念卡是否有 `它不是什么`、`边界细节`、`证据锚点` 和 `复习触发`。
 4. 检查 raw source 的 `status`、`last_checked`、`freshness`。
 5. 处理 [[05 Query 写回队列]] 中的 pending 条目。
 6. 更新 [[06 Wiki 健康检查]]。
@@ -155,7 +193,7 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 
 ## 操作 6：现代性 / 前沿性判定
 
-当用户问“这个现在还成立吗”“现代系统怎么吸收 X 的局限”“这是前沿还是历史过渡”时，不直接把它归为前沿。先把问题拆成四类：
+当用户问“这个现在还成立吗”“现代系统怎么吸收 X 的局限”“这是前沿还是历史过渡”，或 LLM 正在创建 / 更新概念卡时，不直接把它归为前沿。先把问题拆成四类：
 
 - 基础地基（foundation）：论文、经典方法、稳定概念，主要帮助理解语言和边界。例如 [[ReAct]] 作为 reasoning/action/observation 交替思想。
 - 历史过渡（transitional）：曾经主要靠 prompt 或手写格式实现、今天多被框架接管的形态。例如裸 `Thought -> Action -> Observation` prompt loop。
@@ -173,6 +211,13 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 3. 给出四类判定，并说明哪些部分稳定、哪些部分需要 `freshness: watch/volatile`。
 4. 写回概念卡的 `## 现代性状态` 或 `## 现代系统怎么吸收 X 的价值/局限`。
 5. 如果只是具体产品或 API 变化，优先更新 source note 的 `last_checked` / `freshness`，并在 [[03 前沿追踪]] 或 [[06 Wiki 健康检查]] 里留观察项，不把它误写成稳定概念。
+
+概念卡默认行为：
+
+- 新建概念卡时，除非明显不适用，都要有 `## 现代性状态`。
+- 更新旧概念卡时，如果本次更新涉及 Agent、prompting、framework、evaluation、RAG、memory、tooling、安全、协议或产品生态，必须补现代性判定。
+- 如果判定为 `frontier / volatile`，不要只写概念卡；还要检查是否需要更新 [[03 前沿追踪]]、source note 的 `freshness`，或 [[06 Wiki 健康检查]]。
+- 如果判定为 `foundation` 或 `transitional`，要明确它今天的价值：是稳定语言、历史过渡、工程原则，还是已经被现代系统吸收的内部结构。
 
 写回边界：
 

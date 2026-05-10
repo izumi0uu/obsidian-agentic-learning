@@ -16,6 +16,7 @@ last_checked: 2026-05-10
 freshness: stable
 conflicts: []
 related:
+  - "[[Zero-shot CoT]]"
   - "[[Planning]]"
   - "[[Reasoning Trace]]"
   - "[[ReAct]]"
@@ -28,11 +29,11 @@ related:
 
 ## 一句话
 
-Plan-and-Solve Prompting 是把 zero-shot CoT 从“直接一步步想”改成“先生成计划，再按计划求解”的提示方法。
+Plan-and-Solve Prompting 是把 [[Zero-shot CoT]] 从“直接一步步想”改成“先生成计划，再按计划求解”的提示方法。
 
 ## 它解决什么问题
 
-普通 Zero-shot Chain-of-Thought 常用 “Let's think step by step” 触发逐步推理，但模型可能漏掉关键步骤。
+普通 [[Zero-shot CoT|Zero-shot Chain-of-Thought]] 常用 “Let's think step by step” 触发逐步推理，但模型可能漏掉关键步骤。
 
 Plan-and-Solve 先要求模型生成 plan，相当于先搭一个任务骨架，再逐步填答案。这样尤其针对 missing-step error：不是算错某一步，而是根本没做某一步。
 
@@ -116,6 +117,7 @@ Plan-and-execute workflow: Goal -> Plan -> Task list -> Execute -> Evaluate/Repl
 ## 相关链接
 
 - [[Planning]]
+- [[Zero-shot CoT]]
 - [[Reasoning Trace]]
 - [[ReAct]]
 - [[Agent Loop]]

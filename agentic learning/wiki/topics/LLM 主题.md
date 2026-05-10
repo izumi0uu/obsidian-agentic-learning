@@ -4,7 +4,7 @@ topic:
   - llm
 status: active
 created: 2026-05-05
-updated: 2026-05-09
+updated: 2026-05-10
 related:
   - "[[LLM]]"
   - "[[Transformer]]"
@@ -31,6 +31,12 @@ SORT file.name ASC
 - [ ] prompt
 - [ ] hallucination
 - [ ] temperature
+
+## 推理和提示
+
+- [[Zero-shot CoT]]
+- [[Plan-and-Solve Prompting]]
+- [[Reasoning Trace]]
 
 ## Transformer 地基
 

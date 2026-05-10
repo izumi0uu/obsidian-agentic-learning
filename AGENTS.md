@@ -131,7 +131,14 @@ The LLM may write and maintain the wiki, but a concept is not considered learned
 
 Use `agentic learning/reviews/` for that learning check. A review note is not raw evidence and is not a durable concept card; it is a place to capture the user's explanation, Codex follow-up questions, Feynman answers, and write-back candidates.
 
-When updating concept cards, preserve this structure where possible:
+Concept cards are **双层学习 + 判断卡**:
+
+- 学习层：帮助用户从“听过这个词”走到能解释、能举例、能发现误解。
+- 判断层：帮助用户判断边界、适用条件、现代工程吸收方式、证据强弱和下一步复习问题。
+
+The learning layer is implicit, not a separate mandatory heading. It should be visible through explanation depth, examples or analogies, boundary cuts, evidence anchors, modern-system framing, and review triggers.
+
+When creating or materially updating concept cards, preserve this structure where possible:
 
 - 一句话
 - 它解决什么问题
@@ -139,11 +146,19 @@ When updating concept cards, preserve this structure where possible:
 - 最小例子
 - 常见误解 or 风险
 - 边界细节
+- 现代性状态：主动判断 foundation / transitional / current-practice / frontier / 不适用
 - 现代系统怎么吸收这个概念的价值/局限（适用于 Agent、prompting、framework、evaluation 类概念）
 - 证据锚点
+- 复习触发
 - 相关链接
 
+`## 一句话` is only an entry point. It must not become the whole card when the concept needs background, examples, boundary cuts, or evidence. A qualified durable concept card should be more than a label plus one sentence; if it is intentionally short, state why the concept is low-scope or still `seed`.
+
 Style reference: `wiki/concepts/Plan-and-Solve Prompting.md`. Concept cards should start from the concept's own problem, make neighboring boundaries explicit, include common misunderstandings, and explain whether diagrams or assets are source evidence, user-provided redraws, or engineering analogies.
+
+When creating or updating a concept card, the LLM should proactively run the modernity/frontier classification from `maps/LLM Wiki 工作流.md`: decide whether the concept is foundation, historical transition, current engineering practice, frontier/volatile, or not applicable. Do not wait for the user to ask “is this modern/frontier?”. If the concept touches Agent, prompting, framework, evaluation, RAG, memory, tooling, safety, protocols, or product ecosystems, write the classification into `## 现代性状态` or the nearest modern-system section.
+
+Do not batch rewrite old concept cards without explicit user confirmation. First update the standard/template, repair a few style anchors, and put broader gaps into `agentic learning/maps/06 Wiki 健康检查.md` or `agentic learning/maps/05 Query 写回队列.md`.
 
 ## Editing Rules
 

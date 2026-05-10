@@ -287,13 +287,13 @@ related:
 - Boundary: the original image captures the external components around a ReAct-style loop; the redraw makes the missing runtime loop explicit: LLM proposes action, harness executes tools/environment steps, observation is written back into context/state, then the next LLM step starts.
 ## [2026-05-10] review | ReAct concept-triggered review
 
-- Added: [[ReAct 概念触发式复习]]
+- Added: [[01 概念触发式复习]]
 - Updated: [[实验记录索引]], [[index]]
 - Seeded the first concept-triggered review with the user's own ReAct explanation, a calibrated version, five Feynman-style follow-up questions, and write-back candidates.
 - Boundary: this is a review/learning record, not a raw source and not a replacement for [[ReAct]] as the durable concept card.
 ## [2026-05-10] maintenance | review folder and concept-triggered template
 
-- Moved: [[ReAct 概念触发式复习]] into `agentic learning/reviews/`.
+- Moved: [[01 概念触发式复习]] into `agentic learning/reviews/`.
 - Added: [[reviews/复习记录索引]], [[templates/概念触发式复习]]
 - Updated: [[index]], [[04 页面目录]], [[字段规范]], [[LLM Wiki 工作流]], [[实验记录索引]]
 - Boundary: `reviews/` is a learning-process layer for Feynman review and write-back candidates; it is not raw evidence and not a durable concept-card layer.
@@ -336,3 +336,55 @@ related:
 - Updated: [[Oh My Codex (OMX)]], [[oh-my-codex 使用教程]], [[01 术语表]], [[Agent 知识地图]], [[Agent 主题]], [[04 页面目录]], [[index]]
 - Evidence: local `omx list --json` (catalog `2026.02.28.1`) and local OMX skill definitions under `${CODEX_HOME:-~/.codex}/skills/*/SKILL.md`.
 - Boundary: OMX `$` 指令是 Codex 会话里的 skill/workflow 触发入口，不等于普通 shell CLI；goal 类 shell commands 写 `.omx/` artifacts 和 handoff，不直接修改隐藏 Codex `/goal` 状态。
+
+## [2026-05-10] review | Plan-and-Solve concept-triggered review
+
+- Updated: [[01 概念触发式复习]]
+- Source concept: [[Plan-and-Solve Prompting]]
+- Added the user's Feynman-style explanation, a calibrated version, follow-up questions, and write-back candidates.
+- Boundary: the user's description captures modern plan-and-execute / replan [[Agent Workflow]] well, but strict [[Plan-and-Solve Prompting]] is a prompt-layer zero-shot CoT method without external Action, [[Observation]], or runtime replan.
+
+## [2026-05-10] autoresearch | modernity classification rule
+
+- Updated: [[LLM Wiki 工作流]], [[03 前沿追踪]], [[ReAct]], [[Agent Framework]], [[Agent Workflow]]
+- Sources checked: [[ReAct - Synergizing Reasoning and Acting in Language Models]], [[Anthropic - Building Effective Agents]], [[OpenAI - A Practical Guide to Building Agents]], [[LangGraph 官方文档]], [[OpenAI Agents SDK 文档]]
+- Source freshness: refreshed `last_checked` for Anthropic/OpenAI/LangGraph/OpenAI Agents SDK source notes to 2026-05-10; [[ReAct - Synergizing Reasoning and Acting in Language Models]] was already checked today.
+- Rule: 论文范式通常是基础地基或历史过渡；框架吸收方式通常是当前工程实践；具体 SDK/API/产品能力才更可能是前沿或易变。
+- Boundary: “现代系统怎么吸收旧范式”不自动等于前沿。旧范式可能仍是稳定概念语言；裸 prompt 实现可能是历史过渡；runtime、state、tool schema、guardrails、trace 和 eval 是现代工程吸收层。
+
+## [2026-05-10] concept-update | Zero-shot CoT
+
+- Added: [[Zero-shot CoT]]
+- Updated: [[Plan-and-Solve Prompting]], [[01 术语表]], [[LLM 主题]], [[04 页面目录]]
+- Evidence: [[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models]], [[raw/repos/xiaolinnote/questions/012 ai agent 5. Agent 推理模式有哪些？ReAct 是啥？具体是怎么实现的？]], [[raw/repos/xiaolinnote/questions/005 ai agent 14. 如何赋予 LLM 规划能力？]]
+- Boundary: Zero-shot CoT 是 prompt 层的文本推理激活方法，不是 [[ReAct]]、不是 [[Agent Workflow]]，也不是模型真实思维的可靠窗口。
+
+## [2026-05-10] workflow | proactive modernity classification
+
+- Updated: [[LLM Wiki 工作流]], [[templates/概念卡]]
+- Updated project instruction: `AGENTS.md`
+- Updated skill: `obsidian-llm-wiki`
+- Rule: 创建或更新概念卡时，LLM 要主动判断 `foundation / transitional / current-practice / frontier / 不适用`，并写入 `## 现代性状态` 或相邻现代系统段落，不等用户单独追问。
+- Boundary: 这条规则不要求每个普通生活类比或静态基础术语都硬套“前沿”判断；但凡涉及 Agent、prompting、framework、evaluation、RAG、memory、tooling、安全、协议或产品生态，就必须显式判断。
+
+## [2026-05-10] autoresearch | agent lifecycle hooks and observability
+
+- Added: [[Agent Lifecycle Hook]]
+- Added sources: [[Claude Code Hooks 文档]], [[Arize Phoenix Tracing 文档]], [[OpenTelemetry GenAI Semantic Conventions]]
+- Updated: [[Agent Harness]], [[Trace]], [[Observability]], [[OpenTelemetry GenAI]], [[Oh My Codex (OMX)]], [[ReAct]], [[01 术语表]], [[Agent 知识地图]], [[Agent 主题]], [[04 页面目录]], [[资料收集索引]], [[index]]
+- Local evidence: `~/.codex/hooks.json` maps `PreToolUse`, `PostToolUse`, `SessionStart`, `UserPromptSubmit`, `PreCompact`, `PostCompact`, and `Stop` to OMX `codex-native-hook.js`; `.omx/` contains turn logs, metrics, session state, subagent tracking, and autoresearch ledger artifacts.
+- Boundary: lifecycle hooks are runtime / harness control points, not LLM model internals; hook events can feed [[Trace]] and [[Observability]], while action approval and side-effect prevention still belong to [[Agent Harness]], [[Guardrails]], and [[Tool Permissioning]].
+
+## [2026-05-10] query-writeback | OMX observability recommendation
+
+- Updated: [[Oh My Codex (OMX)]], [[Observability]]
+- Answer: OMX 当前更推荐先用本地 operator observability：`.omx/` artifacts、`omx hud --watch/json`、`omx sidecar`、hooks 和 notifications；LangSmith、Langfuse、Phoenix、OpenTelemetry 属于外接观测平台，需要额外 adapter。
+- Boundary: OMX 的 HUD/sidecar/notifications 是本地运行时可见性，不等于标准 APM/OTel trace，也不自动提供质量评估。
+
+## [2026-05-10] workflow | concept-card standardization
+
+- Updated standard: `AGENTS.md`, [[LLM Wiki 工作流]], [[templates/概念卡]], [[06 Wiki 健康检查]]
+- Updated style anchors: [[Agent]], [[Trace]], [[Trajectory Evaluation]], [[RAG]]
+- Rule: 概念卡按“双层学习 + 判断卡”写；`## 一句话` 只是入口，不等于整卡只写一句话。够格卡应有问题背景、边界细节、现代性状态、证据锚点和复习触发。
+- Lint finding: 90 张概念卡中，修复 4 张样例卡后仍有 57 张缺 `## 边界细节`，79 张缺 `## 现代性状态`，86 张缺 `## 复习触发`（修复前为 60 / 83 / 90）；已写入 [[06 Wiki 健康检查]] 队列。
+- Boundary: 本次只修标准、模板、健康队列和 4 张样例卡；未批量重写旧概念卡，后续批量修复需要用户确认。

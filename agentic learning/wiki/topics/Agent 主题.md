@@ -60,3 +60,4 @@ SORT created DESC
 - [[oh-my-codex 使用教程]]
 - [[Oh My Codex (OMX)]]
 - [[OMX $ 指令]]
+- [[Agent Lifecycle Hook]]

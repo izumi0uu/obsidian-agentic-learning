@@ -11,7 +11,7 @@ topic:
   - infrastructure
 created: 2026-05-06
 updated: 2026-05-07
-last_checked: 2026-05-07
+last_checked: 2026-05-10
 freshness: watch
 conflicts: []
 status: seed
@@ -23,6 +23,7 @@ related:
   - "[[LLM Gateway]]"
   - "[[Code Execution Sandbox]]"
   - "[[OpenTelemetry GenAI]]"
+  - "[[Agent Lifecycle Hook]]"
 ---
 
 # Agent 工程基础设施主源
@@ -73,8 +74,11 @@ related:
 
 - OpenTelemetry GenAI semantic conventions: <https://opentelemetry.io/docs/specs/semconv/gen-ai/>
 - Arize Phoenix docs: <https://arize.com/docs/phoenix>
+- Arize Phoenix LLM traces: <https://arize.com/docs/phoenix/tracing/llm-traces>
 - OpenInference / Phoenix docs: <https://phoenix.arize.com/>
 - Langfuse OpenTelemetry docs: <https://langfuse.com/integrations/native/opentelemetry>
+- OpenAI Agents SDK tracing: <https://openai.github.io/openai-agents-python/tracing/>
+- Claude Code hooks: <https://code.claude.com/docs/en/hooks>
 - Promptfoo red teaming docs: <https://www.promptfoo.dev/docs/guides/llm-redteaming/>
 - NVIDIA NeMo Guardrails docs: <https://docs.nvidia.com/nemo/guardrails/latest/index.html>
 - OpenAI Agents SDK guardrails: <https://openai.github.io/openai-agents-python/guardrails/>

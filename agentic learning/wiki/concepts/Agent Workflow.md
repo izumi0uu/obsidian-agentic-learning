@@ -14,7 +14,6 @@ evidence:
   - "[[Agent Framework#框架怎样接管 prompt loop]]"
   - "[[Anthropic - Building Effective Agents#为什么收]]"
   - "[[LangGraph 官方文档#为什么收]]"
-last_checked: 2026-05-08
 last_checked: 2026-05-10
 freshness: watch
 conflicts: []

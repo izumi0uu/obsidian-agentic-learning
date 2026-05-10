@@ -51,6 +51,7 @@ LLM 地基：
 - [[Durable Execution]]：理解长任务为什么需要暂停、恢复和重试。
 - [[Reflexion]]：理解 Agent 如何把失败反馈转成反思文本，并用经验改进下一轮行动。
 - [[Human-in-the-loop]]：理解人类确认、接管和修正如何进入 Agent loop。
+- [[Agent Lifecycle Hook]]：理解 runtime 如何在工具调用前后、会话开始/停止和上下文压缩等边界拦截、记录和恢复 Agent loop。
 
 ## 知识能力
 
@@ -65,6 +66,8 @@ LLM 地基：
 
 - [[Evaluation]]：如何检查 Agent 是否稳定有效。
 - [[RAG Evaluation]]：理解 RAG 失败要分层评估。
+- [[Observability]]：理解 Agent 系统的 trace、span、日志、成本、延迟和错误如何被实时观察。
+- [[Trace]]：理解执行过程如何被保存成可调试、可重放、可评估的记录。
 - [[OpenTelemetry GenAI]]：理解 trace 标准化为什么重要。
 - [[Audit Log]]：理解可审计行动记录和 trace 的边界。
 
@@ -130,6 +133,7 @@ SORT file.name ASC
 - [x] [[Prompt Injection]]
 - [x] [[Oh My Codex (OMX)]]
 - [x] [[OMX $ 指令]]
+- [x] [[Agent Lifecycle Hook]]
 
 ## 复习入口
 
