@@ -425,3 +425,25 @@ related:
 - Evidence: Agent 工程组引用 [[LangGraph 官方文档]], [[OpenAI Agents SDK 文档]], [[Anthropic - Building Effective Agents]], [[OpenAI - A Practical Guide to Building Agents]]；评估组引用 [[LangSmith Evaluation and Observability]], [[Langfuse Observability and Evaluation]], [[SWE-bench]], [[Microsoft RAG 官方文档]]。
 - Verification: P1 8 张目标卡均有 `## 概念详解`、`## 证据锚点` 中的 Evidence type / Boundary；本次未改 `raw/`；`git diff --check` 与 `git diff --cached --check` PASS。
 - Boundary: 本次完成的是 P1 8 张目标卡的深度样例化，不是全量重写 90 张概念卡；后续仍需按主题小批量修复旧卡。
+
+## [2026-05-10] workflow | team concept-card standardization protocol
+
+- Added: [[07 Team 概念卡全量规范化]]
+- Added local audit tool: `scripts/concept_card_audit.py`
+- Updated: [[04 页面目录]], [[index]], `scripts/README.md`
+- Purpose: 将“7 个进程全量修概念卡”变成可分工、可审计、可回滚的执行协议：5 个 writer lane、1 个 evidence auditor、1 个 final verifier。
+- Audit baseline: 90 张概念卡；脚本当前判定 82 张需处理；深度分布为 anchor 22、qualified 28、volatile 37、seed-lite 3。
+- Boundary: 本次只实现协议、脚本和导航，不启动 `$team`，不改 `raw/`，不重写概念卡正文；脚本是辅助 lint，最终仍需 leader/verifier 判断概念详解是否真的讲透。
+
+## [2026-05-10] workflow | review round limit
+
+- Updated: [[01 概念触发式复习]], [[templates/概念触发式复习]], [[reviews/复习记录索引]]
+- Rule: 概念触发式复习最多两轮追问；第一轮暴露误解，第二轮只处理关键卡点，之后必须收束到写回候选、问题池或概念卡。
+- Boundary: 如果两轮后仍不清楚，优先说明概念卡或材料需要重写，不用继续追问拖慢学习节奏。
+
+## [2026-05-10] query-writeback | DeepSeek reasoning model vs Zero-shot CoT
+
+- Updated: [[Zero-shot CoT]], [[DeepSeek-R1 - Incentivizing Reasoning Capability in LLMs via Reinforcement Learning]]
+- Answer: 2024-11-20 的 DeepSeek-R1-Lite-Preview 从用户体验上很像长 CoT / thinking mode，但不等于经典 Zero-shot CoT prompting；它更接近把长推理、验证和反思训练成模型行为，再在推理时展开更多 token。
+- Evidence: DeepSeek 官方 R1-Lite-Preview release note、DeepSeek-R1 release note、DeepSeek-R1 arXiv 摘要。
+- Boundary addendum: DeepSeek-R1 可以说继承 CoT / Zero-shot CoT 的思想脉络，但不能说训练原理只是照搬这篇 prompt 论文；R1 的关键在 RL、可验证奖励、cold-start 数据和多阶段训练。

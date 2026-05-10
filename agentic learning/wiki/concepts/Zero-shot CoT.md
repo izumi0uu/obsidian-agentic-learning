@@ -12,14 +12,18 @@ freshness: stable
 conflicts: []
 source:
   - "[[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models]]"
+  - "[[DeepSeek-R1 - Incentivizing Reasoning Capability in LLMs via Reinforcement Learning]]"
   - "[[raw/repos/xiaolinnote/questions/012 ai agent 5. Agent 推理模式有哪些？ReAct 是啥？具体是怎么实现的？]]"
   - "[[raw/repos/xiaolinnote/questions/005 ai agent 14. 如何赋予 LLM 规划能力？]]"
 evidence:
   - "[[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models#Ingest 摘要]]"
+  - "[[DeepSeek-R1 - Incentivizing Reasoning Capability in LLMs via Reinforcement Learning#R1-Lite-Preview 时间线补充]]"
+  - "[[DeepSeek-R1 - Incentivizing Reasoning Capability in LLMs via Reinforcement Learning#R1 正式版补充]]"
   - "[[raw/repos/xiaolinnote/questions/012 ai agent 5. Agent 推理模式有哪些？ReAct 是啥？具体是怎么实现的？#CoT是什么？]]"
   - "[[raw/repos/xiaolinnote/questions/005 ai agent 14. 如何赋予 LLM 规划能力？#CoT：最简单的激活方式，加一句话就够了]]"
 related:
   - "[[Plan-and-Solve Prompting]]"
+  - "[[LLM Training Pipeline]]"
   - "[[Reasoning Trace]]"
   - "[[ReAct]]"
   - "[[Planning]]"
@@ -69,6 +73,7 @@ Possible answer:
 - 误解：推理步骤写得长就一定更可靠。实际长推理也可能累积错误。
 - 误解：Zero-shot CoT 可以替代工具。实际它拿不到实时数据，也不能执行外部动作。
 - 误解：Zero-shot CoT 和 Few-shot CoT 一样稳定。Few-shot CoT 给了示例格式，通常更可控；Zero-shot CoT 更轻，但格式和深度更靠模型自己发挥。
+- 误解：2024 年底 DeepSeek-R1-Lite-Preview 这类 thinking / reasoning model 就是 Zero-shot CoT。更精确地说，它们输出形态很像长 CoT，但不是单纯靠用户加一句 prompt 触发，而是模型能力和训练 / 推理时 token 预算共同塑造出来的 reasoning behavior。
 
 ## 边界细节
 
@@ -95,12 +100,37 @@ Agent Workflow: Goal -> Plan/State -> Execute -> Evaluate/Replan -> Done
 
 小边界：强模型可能已经更擅长隐式推理，但当你需要教学、审查、调试或复盘时，让它显式写出中间结构仍然有价值。
 
+## 和 reasoning model 的关系
+
+2024 年底的 DeepSeek-R1-Lite-Preview 可以说是“用户体验上很像 CoT 的 thinking model”：它会展示较长的推理过程，并且官方发布页强调“更长推理、更好表现”的 inference scaling。
+
+但它不应该被归类为严格的 Zero-shot CoT：
+
+```text
+Zero-shot CoT: 普通模型 + prompt 触发“请一步步思考”
+Reasoning model: 模型训练 / 后训练阶段已经强化长推理、验证、反思等行为
+```
+
+所以你的记忆可以这样校准：R1-Lite-Preview 和后来 R1 把 CoT 这种“显式中间推理”的价值产品化、模型能力化了；它们不是论文里最原始的 Zero-shot CoT prompt 方法本身。
+
+## 和 DeepSeek-R1 的引用关系
+
+如果说“原理参考这篇论文”，要分两层：
+
+- 思想脉络上：是。DeepSeek-R1 这类 reasoning model 继承了 CoT 研究的核心发现：复杂问题里，让模型展开中间推理步骤通常比直接给答案更有效。
+- 方法实现上：不是简单照搬。Zero-shot CoT 是 prompt 方法；DeepSeek-R1 的核心是用强化学习、可验证奖励、cold-start 数据和多阶段训练，把长推理、验证、反思等行为变成模型能力。
+
+因此更准确的说法是：DeepSeek-R1 不是“用了 Zero-shot CoT prompt”，而是把 CoT 这一类显式推理行为通过训练和推理时扩展内化到了 reasoning model 里。
+
 ## 证据锚点
 
 - Source: [[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models]]
+- Source: [[DeepSeek-R1 - Incentivizing Reasoning Capability in LLMs via Reinforcement Learning]]
 - Source: [[raw/repos/xiaolinnote/questions/012 ai agent 5. Agent 推理模式有哪些？ReAct 是啥？具体是怎么实现的？]]
 - Source: [[raw/repos/xiaolinnote/questions/005 ai agent 14. 如何赋予 LLM 规划能力？]]
 - Anchor: [[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models#Ingest 摘要]]
+- Anchor: [[DeepSeek-R1 - Incentivizing Reasoning Capability in LLMs via Reinforcement Learning#R1-Lite-Preview 时间线补充]]
+- Anchor: [[DeepSeek-R1 - Incentivizing Reasoning Capability in LLMs via Reinforcement Learning#R1 正式版补充]]
 - Confidence: medium
 
 ## 相关链接

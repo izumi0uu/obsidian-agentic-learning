@@ -76,5 +76,7 @@ build/
 coverage/
 
 # One-off local crawls / mirrored sites
-scripts/
+scripts/*
+!scripts/README.md
+!scripts/concept_card_audit.py
 agentic learning/raw/articles/xiaolinnote/
