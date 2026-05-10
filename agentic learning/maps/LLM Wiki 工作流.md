@@ -6,7 +6,7 @@ topic:
   - workflow
 status: active
 created: 2026-05-05
-updated: 2026-05-07
+updated: 2026-05-10
 source: "/Users/idah/Downloads/llm-wiki.md"
 related:
   - "[[Agent 知识地图]]"
@@ -60,7 +60,7 @@ maps/ -> index, reading plans, workflow, questions, frontier tracking
 4. 更新或创建 `wiki/concepts/` 里的概念卡。
 5. 给概念卡补 `source` 和 `evidence`。没有段落级证据时，至少链接到 source note 小节。
 6. 如果涉及主题聚合，更新 `wiki/topics/`。
-7. 如果影响学习路径，更新 `maps/Agent 知识地图.md`、`maps/00 学习路线.md` 或 [[04 页面目录]]。
+7. 如果影响导航或复习方式，更新 `maps/Agent 知识地图.md`、[[02 问题池]]、[[05 Query 写回队列]] 或 [[04 页面目录]]。
 8. 将 source note 的 `status` 从 `inbox` 改成 `seed` 或 `growing`，并补 `last_checked` / `freshness`。
 9. 追加 `log.md`。
 

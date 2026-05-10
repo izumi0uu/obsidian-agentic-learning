@@ -10,7 +10,7 @@ topic:
   - learning-path
   - practice
 created: 2026-05-06
-updated: 2026-05-07
+updated: 2026-05-10
 last_checked: 2026-05-07
 freshness: watch
 conflicts: []
@@ -61,14 +61,14 @@ Hello-Agents 适合作为中文 Agent 系统入门和动手实践教材，但不
 - [[A2A]]
 - [[Evaluation]]
 
-## 怎么放进我的学习路线
+## 怎么用于复习
 
-它更适合插入 [[00 学习路线]]：
+它更适合放进 [[资料收集索引]] 和 [[Agent 知识地图]] 之间，当作中文课程骨架来触发问题：
 
-- 第 1 周：读第 1、3、4 章，补基础。
-- 第 2 周：读第 8、12 章，补记忆、RAG 和评估。
-- 第 3 周：读第 10 章，补协议线。
-- 第 4 周：从综合案例中选一个最小项目，不要一开始全做。
+- 读第 1、3、4 章，补 [[Agent]]、[[Agent Loop]]、[[Tool Calling]] 的基础边界。
+- 读第 8、12 章，补 [[Memory]]、[[RAG]] 和 [[Evaluation]]。
+- 读第 10 章，补 [[MCP]]、[[A2A]] 等协议线。
+- 从综合案例中选一个最小项目，用费曼复述说明它为什么是 Agent，而不是普通 chatbot。
 
 ## 我的疑问
 

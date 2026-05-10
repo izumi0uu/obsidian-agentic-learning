@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-08
+updated: 2026-05-10
 related:
   - "[[Agent]]"
   - "[[ReAct]]"
@@ -37,7 +37,6 @@ SORT created DESC
 ## 相关地图
 
 - [[Agent 知识地图]]
-- [[00 学习路线]]
 - [[03 前沿追踪]]
 - [[oh-my-codex 使用教程]]
 

@@ -271,3 +271,10 @@ related:
 - Updated 120 xiaolinnote raw question cards with `## 相关知识 wiki` sections and matching `related` links.
 - Link vocabulary: 140 unique targets; 85 are intentional redlinks for concepts not yet collected into wiki cards.
 - Boundary: these are retrieval and study-path links only; raw interview notes remain source evidence and have not been promoted into concept cards.
+
+## [2026-05-10] cleanup | remove daily plan and fixed learning route
+
+- Removed `agentic learning/daily/` and the Obsidian daily-notes config.
+- Removed [[00 学习路线]] and cleared current navigation links to the fixed 30-day route.
+- Updated [[index]], [[资料收集索引]], [[Agent 知识地图]], [[02 问题池]], [[04 页面目录]], [[LLM Wiki 工作流]], [[字段规范]], and README toward a question-driven / Feynman-review learning loop.
+- Boundary: historical log entries still mention the old daily plan as past maintenance facts; current navigation no longer treats it as active structure.

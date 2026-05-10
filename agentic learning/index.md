@@ -5,11 +5,10 @@ topic:
   - obsidian
 status: active
 created: 2026-05-05
-updated: 2026-05-09
+updated: 2026-05-10
 related:
   - "[[Agent 知识地图]]"
   - "[[04 页面目录]]"
-  - "[[00 学习路线]]"
   - "[[资料收集索引]]"
   - "[[LLM Wiki 工作流]]"
   - "[[字段规范]]"
@@ -29,7 +28,7 @@ related:
 ```text
 raw/  -> 来源证据：网页、论文、文档、repo
 wiki/ -> 稳定理解：概念卡、主题页、项目页
-maps/ -> 导航和路线：学习路线、术语表、问题池、前沿追踪
+maps/ -> 导航和维护：术语表、问题池、前沿追踪、健康检查
 ```
 
 小边界：raw 记录“我从哪里看到”，wiki 记录“我怎么理解”，maps 只负责“下一步去哪”。
@@ -37,23 +36,20 @@ maps/ -> 导航和路线：学习路线、术语表、问题池、前沿追踪
 ## 快速进入
 
 - [[Agent 知识地图]]
-- [[04 页面目录]]
 - [[前沿主源清单]]
-- [[00 学习路线]]
 - [[01 术语表]]
 - [[02 问题池]]
 - [[03 前沿追踪]]
+- [[04 页面目录]]
 - [[资料收集索引]]
 - [[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]
 - [[agent_java_offer Repo]]
 - [[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]
 - [[Hello-Agents Repo]]
 - [[oh-my-codex 使用教程]]
-- [[2026-05-06]]
 - [[LLM Wiki 工作流]]
 - [[插件配置]]
 - [[字段规范]]
-- [[2026-05-05]]
 
 ## 当前核心概念
 
@@ -70,7 +66,7 @@ SORT updated DESC
 
 ```dataview
 TABLE type, status, topic, updated
-FROM "wiki" OR "maps" OR "raw" OR "daily"
+FROM "wiki" OR "maps" OR "raw"
 SORT file.path ASC
 ```
 
@@ -94,26 +90,17 @@ SORT created DESC
 
 ```dataview
 TABLE type, topic, status, updated
-FROM "wiki" OR "maps" OR "daily"
+FROM "wiki" OR "maps"
 WHERE updated
 SORT updated DESC
 LIMIT 10
 ```
 
-## 30 天学习计划
+## 复习方式
 
-从 [[2026-05-06]] 开始，到 [[2026-06-04]] 结束。每天只做一个最小动作，完整节奏见 [[00 学习路线]]。
+这里采用概念触发式复习：学到一个概念后，直接在空白学习记录里让 Codex 生成问题，我用费曼方式回答，再把暴露出来的边界、误解或新问题写回 [[02 问题池]]、[[05 Query 写回队列]] 或对应概念卡。
 
-```dataview
-TABLE status, related
-FROM "daily"
-WHERE type = "daily"
-SORT file.name ASC
-```
-
-## 今天只做一件事
-
-从 [[02 问题池]] 里选一个问题，把答案沉淀到一张概念卡里。
+今天只做一件事：从当前正在学的概念出发，提出一个能检验理解的问题。
 
 ## 可以直接叫 Codex 做的事
 
@@ -128,7 +115,7 @@ SORT file.name ASC
 3. 写清楚它不是什么。
 4. 举一个最小例子。
 5. 链接到至少两个相关概念。
-6. 用一个问题检查自己是否真的懂了。
+6. 让 Codex 生成追问，用费曼解释检查自己是否真的懂了。
 
 ## Wiki 使用规则
 
