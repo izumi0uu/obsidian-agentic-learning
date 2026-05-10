@@ -19,6 +19,7 @@ last_checked: 2026-05-10
 freshness: stable
 conflicts: []
 related:
+  - "[[Trajectory Trace 类型对比]]"
   - "[[Trace]]"
   - "[[Reasoning Trace]]"
   - "[[Trajectory Evaluation]]"
@@ -101,6 +102,7 @@ Reasoning Trace: 路径中模型显式推理文字的那一部分
 ## 相关链接
 
 - [[Trace]]
+- [[Trajectory Trace 类型对比]]
 - [[Reasoning Trace]]
 - [[Trajectory Evaluation]]
 - [[Agent Loop]]

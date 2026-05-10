@@ -10,6 +10,7 @@ related:
   - "[[ReAct]]"
   - "[[Coding Agent]]"
   - "[[Agent 知识地图]]"
+  - "[[Trajectory Trace 类型对比]]"
 ---
 
 # Agent 主题
@@ -37,6 +38,7 @@ SORT created DESC
 ## 相关地图
 
 - [[Agent 知识地图]]
+- [[Trajectory Trace 类型对比]]
 - [[03 前沿追踪]]
 - [[oh-my-codex 使用教程]]
 

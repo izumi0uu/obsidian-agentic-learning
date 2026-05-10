@@ -16,6 +16,7 @@ evidence:
 related:
   - "[[ReAct]]"
   - "[[Agent Loop]]"
+  - "[[Trajectory Trace 类型对比]]"
   - "[[Trace]]"
   - "[[Trajectory]]"
 ---
@@ -55,6 +56,7 @@ Reasoning Trace 偏“推理文字”；[[Trace]] 更广，包括输入、输出
 ## 相关链接
 
 - [[ReAct]]
+- [[Trajectory Trace 类型对比]]
 - [[Trace]]
 - [[Trajectory]]
 - [[Agent Loop]]

@@ -23,6 +23,7 @@ related:
   - "[[Evaluation]]"
   - "[[Agent Loop]]"
   - "[[Tool Calling]]"
+  - "[[Trajectory Trace 类型对比]]"
   - "[[Trajectory]]"
   - "[[Reasoning Trace]]"
   - "[[Observability]]"
@@ -82,6 +83,7 @@ Trace 是 observability 的基础，也是 eval harness 复现失败的重要材
 - [[Evaluation]]
 - [[Agent Loop]]
 - [[Tool Calling]]
+- [[Trajectory Trace 类型对比]]
 - [[Trajectory]]
 - [[Reasoning Trace]]
 - [[Observability]]

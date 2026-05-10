@@ -317,3 +317,8 @@ related:
 - Added: [[Trajectory]]
 - Updated: [[Trace]], [[Reasoning Trace]], [[Trajectory Evaluation]], [[Reflexion]], [[01 术语表]], [[Agent 知识地图]]
 - Boundary: Trajectory 是任务实际走过的行动路径；[[Trace]] 是对路径的观测记录；[[Reasoning Trace]] 是路径中模型显式推理文字的切片。
+## [2026-05-10] map | analogy comparison cards
+
+- Added: [[Trajectory Trace 类型对比]]
+- Updated: [[RAG 类型对比]], [[Agent 主题]], [[04 页面目录]], [[Trajectory]], [[Trace]], [[Reasoning Trace]]
+- Boundary: 对比型 topic 卡用于学习类比和边界训练，不替代单概念卡；本次为 RAG 类型和 Trajectory/Trace/Reasoning Trace 都补了生活类比。
