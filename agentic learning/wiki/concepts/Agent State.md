@@ -37,6 +37,16 @@ related:
 
 Agent State 是一次 Agent 运行中被框架显式保存和更新的工作状态：目标、阶段、已知信息、中间结果、工具反馈、错误、审批状态和下一步依据。
 
+## 概念详解
+
+Agent State 之所以需要被单独学习，是因为 Agent 的任务不是静态输入到静态输出，而是一个会随外部反馈变化的运行过程。模型读过什么、工具返回了什么、哪些步骤已经完成、哪里失败过、是否等待人工审批，这些信息如果只散落在 prompt 或聊天上下文里，就很容易被截断、污染或遗忘。State 把“任务走到哪里”从自然语言记忆变成可读写的运行数据。
+
+从机制上看，state 至少包含三类东西：控制状态、工作数据和上下文投影。控制状态回答“当前处在哪个阶段、下一步应该去哪、是否需要停或等人”；工作数据保存工具返回、检索片段、中间草稿、错误和尝试记录；上下文投影决定哪些 state 片段会被注入下一次模型调用。[[LangGraph 官方文档]] 的 source note 把状态、节点、边和循环描述为显式工程对象，适合支持这种 stateful graph 理解；[[OpenAI Agents SDK 文档]] 的 tracing 补充说明运行时的模型调用、工具调用、handoff、guardrail 等事件可以被组织成 trace，这给 state transition 可观察化提供了工程证据。
+
+Agent State 的一个细边界是：它不是“模型当前能看到的全部内容”。框架可以持有很多状态，但每次模型调用只应该看到必要片段；否则 state 会变成另一个大上下文垃圾桶。它也不是长期 [[Memory]]：当前任务的错误日志、一次性审批状态、临时检索结果，不一定值得写入长期记忆。任务结束后，state 可能被丢弃、归档为 [[Trace]]，或者抽取少量稳定事实进入 memory。
+
+现代系统通常把 state 设计成 schema + update rule + checkpoint + trace linkage。schema 让字段可解释；更新规则避免工具结果、人工确认和模型草稿互相覆盖；checkpoint 让长任务可以暂停、恢复、重试；trace linkage 让每次状态变化能被调试和评估。这里的证据边界也要分清：source notes 支持“现代框架把状态/图/trace 显式化”；具体 state schema、context injection 和 memory extraction 的分层，是本卡对工程实践的综合整理。
+
 ## 它解决什么问题
 
 如果只靠 prompt 和 context window，Agent 很容易忘记任务进度、重复做事、丢掉工具结果，或者不知道自己已经尝试过什么。Agent State 把“任务走到哪里了”变成可读写的结构，而不是让模型在自然语言里凭记忆维持整个过程。

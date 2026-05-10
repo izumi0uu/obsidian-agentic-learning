@@ -136,11 +136,12 @@ Concept cards are **双层学习 + 判断卡**:
 - 学习层：帮助用户从“听过这个词”走到能解释、能举例、能发现误解。
 - 判断层：帮助用户判断边界、适用条件、现代工程吸收方式、证据强弱和下一步复习问题。
 
-The learning layer is implicit, not a separate mandatory heading. It should be visible through explanation depth, examples or analogies, boundary cuts, evidence anchors, modern-system framing, and review triggers.
+The learning layer must be explicit enough for the user to explain the concept, not merely recognize the label. For `qualified` and `anchor` cards, `## 概念详解` is the main body and should normally carry the highest explanatory weight. `## 一句话` remains only a quick entry point.
 
 When creating or materially updating concept cards, preserve this structure where possible:
 
 - 一句话
+- 概念详解：主体段落；解释概念为什么出现、内部机制/组成部分、论文/官方文档/社区实践如何描述它、以及现代系统如何吸收或限制它
 - 它解决什么问题
 - 它不是什么
 - 最小例子
@@ -152,9 +153,9 @@ When creating or materially updating concept cards, preserve this structure wher
 - 复习触发
 - 相关链接
 
-`## 一句话` is only an entry point. It must not become the whole card when the concept needs background, examples, boundary cuts, or evidence. A qualified durable concept card should be more than a label plus one sentence; if it is intentionally short, state why the concept is low-scope or still `seed`.
+`## 一句话` is only an entry point. It must not become the whole card when the concept needs background, examples, boundary cuts, or evidence. A qualified durable concept card should not be a label plus one sentence plus bullets; it needs a real explanation section. If it is intentionally short, state why the concept is low-scope or still `seed`.
 
-Style reference: `wiki/concepts/Plan-and-Solve Prompting.md`. Concept cards should start from the concept's own problem, make neighboring boundaries explicit, include common misunderstandings, and explain whether diagrams or assets are source evidence, user-provided redraws, or engineering analogies.
+Style reference: `wiki/concepts/Plan-and-Solve Prompting.md`, with one upgrade: modern concept cards should include `## 概念详解` when the concept is important enough to learn deeply. Concept cards should start from the concept's own problem, make neighboring boundaries explicit, include common misunderstandings, and explain whether diagrams or assets are source evidence, user-provided redraws, community summary, or engineering analogy.
 
 When creating or updating a concept card, the LLM should proactively run the modernity/frontier classification from `maps/LLM Wiki 工作流.md`: decide whether the concept is foundation, historical transition, current engineering practice, frontier/volatile, or not applicable. Do not wait for the user to ask “is this modern/frontier?”. If the concept touches Agent, prompting, framework, evaluation, RAG, memory, tooling, safety, protocols, or product ecosystems, write the classification into `## 现代性状态` or the nearest modern-system section.
 

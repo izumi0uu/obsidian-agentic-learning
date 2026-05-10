@@ -401,7 +401,7 @@ related:
 - Change: 按新概念卡标准小范围修复 P1 Agent 工程组和 Evaluation 组：补问题背景、最小例子、常见误解/风险、边界细节、现代性状态、现代系统吸收方式、证据锚点、复习触发和相关链接。
 - Verification: 8 张目标卡 section/evidence audit PASS；hard-boundary audit PASS（未改 raw/、AGENTS.md、模板页，未批量改 P2 协议/前沿卡）；`git diff --check` PASS。
 - Health counts: [[06 Wiki 健康检查]] 更新为仍缺 `## 边界细节` 51、`## 现代性状态` 73、`## 复习触发` 78。
-- Boundary: 本次是小范围 P1 修复，不是全量重写；未把卡片扩成百科长文，未把无来源推断写成来源事实。`reviews/` 中的学习记录仍是学习校准材料，不作为 raw evidence。
+- Boundary: 本次是小范围 P1 结构修复，不是全量重写；未把卡片扩成百科长文，未把无来源推断写成来源事实。`reviews/` 中的学习记录仍是学习校准材料，不作为 raw evidence。用户随后指出：结构完整不等于概念详解充分，后续已升级标准。
 
 ## [2026-05-10] autoresearch | Tool Calling schema
 
@@ -409,3 +409,19 @@ related:
 - Updated: [[Tool Calling]], [[Model Context Protocol 官方文档]], [[资料收集索引]], [[04 页面目录]], [[01 概念触发式复习]]
 - Answer: Tool Calling schema 是工具的说明书 / 参数契约，通常用 JSON Schema 或类似结构表达工具名、描述、参数字段、类型、必填项和枚举约束。
 - Boundary: schema 只约束调用请求的形状，不执行工具，也不替代权限、业务校验、工具结果可信度、trace 或评估。
+
+## [2026-05-10] workflow | concept-detail standard upgrade
+
+- Updated standard: `AGENTS.md`, [[LLM Wiki 工作流]], [[templates/概念卡]], local `obsidian-llm-wiki` skill, [[06 Wiki 健康检查]]
+- Updated deep examples: [[Agent Loop]], [[Evaluation]]
+- Rule: `## 一句话` 只是入口；qualified / anchor 概念卡必须有 `## 概念详解`，且详解应占最高解释比重，覆盖概念动机、机制、论文/官方文档/社区实践描述、现代系统吸收方式和证据边界。
+- Evidence: [[Agent Loop]] 详解引用 ReAct source note、OpenAI/Anthropic/LangGraph/Agents SDK source notes；[[Evaluation]] 详解引用 GAIA、SWE-bench、LangSmith、Langfuse source notes。
+- Boundary: section 完整只是最低门槛；没有连续解释、来源边界和例子的卡仍然是浅卡。P1 剩余 6 张进入详解深度复查队列。
+
+## [2026-05-10] concept-update | P1 concept-detail completion
+
+- Updated: [[Agent Framework]], [[Agent State]], [[Agent Workflow]], [[Eval Harness]], [[LLM-as-Judge]], [[RAG Evaluation]], [[06 Wiki 健康检查]]
+- Change: 补齐 P1 剩余 6 张卡的 `## 概念详解`，让详解成为主体段落，而不是只满足 section 完整；每张都补充动机、机制/组件、官方文档或社区实践证据、现代工程吸收方式和证据边界。
+- Evidence: Agent 工程组引用 [[LangGraph 官方文档]], [[OpenAI Agents SDK 文档]], [[Anthropic - Building Effective Agents]], [[OpenAI - A Practical Guide to Building Agents]]；评估组引用 [[LangSmith Evaluation and Observability]], [[Langfuse Observability and Evaluation]], [[SWE-bench]], [[Microsoft RAG 官方文档]]。
+- Verification: P1 8 张目标卡均有 `## 概念详解`、`## 证据锚点` 中的 Evidence type / Boundary；本次未改 `raw/`；`git diff --check` 与 `git diff --cached --check` PASS。
+- Boundary: 本次完成的是 P1 8 张目标卡的深度样例化，不是全量重写 90 张概念卡；后续仍需按主题小批量修复旧卡。

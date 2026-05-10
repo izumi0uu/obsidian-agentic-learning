@@ -41,6 +41,16 @@ related:
 
 Agent Workflow 是把 Agent 任务组织成可控制步骤、分支、循环、审批和交接的流程结构，让模型自主性只出现在合适节点。
 
+## 概念详解
+
+Agent Workflow 之所以重要，是因为不是每个 agentic task 都应该让模型从头到尾自由决定。很多步骤其实是可预测的：先读取输入，再检索上下文，再生成草稿，再校验格式，再决定是否需要人工审批。把这些步骤写成 workflow，可以把稳定路径工程化，只在真正需要判断的节点调用模型或进入 [[Agent Loop]]。
+
+[[Anthropic - Building Effective Agents]] 的 source note 给了本卡最重要的边界：有效 agentic system 不一定追求最大自主性，而是根据任务选择 workflow 或 agent 模式。这意味着 workflow 不是“低级版本的 Agent”，而是可靠性工具。对确定性高、风险高、可审核的任务，workflow 往往比开放式自主 loop 更好；对环境变化大、需要多轮观察和动态选择工具的任务，workflow 里才需要嵌入更强的 loop 或 agent 节点。
+
+从机制上看，workflow 会把任务拆成节点、边、条件、循环、并行分支、handoff 和 approval gate。[[LangGraph 官方文档]] 的 source note 把图结构、状态、节点、边和循环视为显式工程对象，正好说明 workflow 如何从“流程图”变成可运行结构。[[OpenAI Agents SDK 文档]] 的 source note 提到 tools、handoffs、guardrails 和 tracing，则说明现代 workflow 不只是步骤排列，还包括跨 Agent / 人类交接、风险拦截和过程记录。
+
+它和 [[Planning]] 的差别在于：planning 偏“应该做哪些步骤”的认知或策略层，workflow 偏“系统怎样执行、约束、暂停、恢复、评估这些步骤”的运行层。它和 [[Agent Framework]] 的差别在于：framework 是工具箱，workflow 是用工具箱搭出来的路径。它和 [[Agent Loop]] 的差别在于：loop 强调行动后根据 observation 继续；workflow 强调哪些 loop、固定步骤、人类确认和交接被组织在一起。现代系统通常三者混合：workflow 固定主干，loop 处理不确定节点，framework 提供运行抽象。
+
 ## 它解决什么问题
 
 纯 prompt loop 容易让模型临场决定所有事情：先做什么、何时调用工具、失败后怎么重试、什么时候交给别人、什么时候停。Agent Workflow 把可预测路径放进工程流程，只把需要判断的节点交给模型或 Agent loop。

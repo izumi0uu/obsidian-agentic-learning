@@ -78,19 +78,44 @@ related:
 
 ## 2026-05-10 P1 概念卡小范围修复
 
-本轮只修 P1 的 8 张目标卡，不批量重写旧卡：
+本轮只修 P1 的 8 张目标卡，不批量重写旧卡。注意：这一轮最初完成的是“结构修复”，不是“深度解释完成”；用户反馈后，标准已升级为 `## 概念详解` 为主体。
 
 - Agent 工程组：[[Agent Loop]], [[Agent Framework]], [[Agent State]], [[Agent Workflow]]
 - Evaluation 组：[[Evaluation]], [[Eval Harness]], [[LLM-as-Judge]], [[RAG Evaluation]]
 
-### 验收结果
+### 结构验收结果
 
 - 8 张目标卡均包含：`一句话`、`它解决什么问题`、`它不是什么`、`最小例子`、`常见误解/风险`、`边界细节`、`现代性状态`、`证据锚点`、`复习触发`、`相关链接`。
 - 新增判断均保留来源锚点，或明确作为工程综合理解处理。
 - `git diff --check` 通过。
 - hard boundary 通过：未改 `raw/`、`AGENTS.md`、模板页，也未批量改 P2 协议/前沿卡。
 
-边界：这次完成的是 P1 抽样修复，不代表 90 张旧概念卡已经全部统一；剩余缺口继续按主题小批量排队。
+边界：这次完成的是 P1 抽样修复，不代表 90 张旧概念卡已经全部统一；剩余缺口继续按主题小批量排队。结构完整也不等于概念讲透，后续 qualified / anchor 卡要检查 `## 概念详解` 是否承担主体解释。
+
+## 2026-05-10 概念详解标准升级
+
+用户反馈：概念卡可以保留 `## 一句话`，但详解应该是最高比重；不能只做“一句话解释 + section 补齐”。
+
+### 新增验收点
+
+- qualified / anchor 卡必须有 `## 概念详解`。
+- `## 概念详解` 是主体段落，应解释：概念为什么出现、解决什么原始问题、机制/组成部分、论文/官方文档/社区实践如何描述它、现代系统如何吸收或限制它。
+- `## 证据锚点` 必须区分 paper source、official docs、community practice、engineering synthesis、user redraw / analogy。
+- section 完整只是最低门槛；如果缺少连续解释、来源边界和例子，仍然属于浅卡。
+
+### 已重修为深度样例
+
+- [[Agent Loop]]：加入 ReAct 论文层、LangGraph / Agents SDK 工程层、guardrails / trace / eval 边界。
+- [[Evaluation]]：加入 GAIA、SWE-bench、LangSmith / Langfuse 证据层，并拆成任务、样例、判断方法、运行机制四层。
+
+### 完成状态
+
+P1 8 张目标卡已按新标准补齐 `## 概念详解`：
+
+- 第一批深度样例：[[Agent Loop]], [[Evaluation]]。
+- 本次补齐剩余 6 张：[[Agent Framework]], [[Agent State]], [[Agent Workflow]], [[Eval Harness]], [[LLM-as-Judge]], [[RAG Evaluation]]。
+
+边界：这表示 P1 目标卡完成了“概念详解主体化”，不代表 90 张旧概念卡已全量深修；后续仍按主题小批量推进。
 
 ## Freshness 规则
 
@@ -130,3 +155,4 @@ SORT file.name ASC
 
 - 2026-05-07：建立 page catalog、query 写回队列、健康检查页、证据锚点规范、freshness 字段。
 - 2026-05-10：完成 P1 小范围概念卡修复（Agent 工程组 4 张 + Evaluation 组 4 张），并把缺口统计更新为 `边界细节` 51、`现代性状态` 73、`复习触发` 78。
+- 2026-05-10：完成 P1 8 张目标卡的 `## 概念详解` 深修；后续不按“有 section 即通过”，而按详解是否解释动机、机制、证据和现代工程吸收来验收。

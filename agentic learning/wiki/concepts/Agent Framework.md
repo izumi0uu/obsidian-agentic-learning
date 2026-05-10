@@ -43,6 +43,16 @@ related:
 
 Agent Framework 是帮助开发者构建、编排、运行和观测 Agent 的软件框架：它把工具、状态、流程、交接、护栏、追踪和恢复做成可复用工程抽象。
 
+## 概念详解
+
+Agent Framework 之所以出现，是因为早期 Agent demo 往往把太多责任压在 prompt 和手写脚本里：让模型按文本格式输出动作、让开发者临时解析 action、把工具结果拼回对话、靠日志排查失败、靠人工记住任务进度。这样的系统可以演示，但很难恢复、审计、复用和评估。框架要解决的不是“让模型更聪明”，而是把 Agent 运行时反复出现的工程责任做成稳定抽象。
+
+从机制上看，Agent Framework 通常会接管几组对象：Agent / model 配置、工具注册和 schema、[[Agent State]]、[[Agent Workflow]] 或 graph、handoff、guardrails、trace、checkpoint、以及可能的 human-in-the-loop。[[LangGraph 官方文档]] 的 source note 把 LangGraph 概括为用图结构组织 Agent workflow，让状态、节点、边和循环变成显式工程对象；这说明 framework 的一个核心价值是把“下一步怎么走”从自然语言提示中抽出来，放进图、状态和运行时规则里。[[OpenAI Agents SDK 文档]] 的 source note 则把 Agent、工具、交接、护栏和追踪列为 SDK 抽象；这说明另一条工程路线是把 agentic app 常用部件封装成 SDK 对象。
+
+官方实践材料给 framework 设了一个重要边界。[[OpenAI - A Practical Guide to Building Agents]] 的 source note 强调构建 Agent 的重点是任务、工具、边界和评估，而不是让模型自由发挥；[[Anthropic - Building Effective Agents]] 的 source note 也提醒，有效 agentic system 不一定追求最大自主性，很多任务更适合 workflow。也就是说，框架的好坏不在于“自主性最大”，而在于它能否让开发者选择合适的控制粒度：哪些步骤固定，哪些节点交给模型判断，哪些动作必须审批，哪些结果必须进入 trace 和 eval。
+
+因此，Agent Framework 可以理解为“把 prompt loop 的隐含约束工程化”的层。它把原来靠模型遵守的格式、靠人脑记住的状态、靠临时日志追踪的过程，拆成 tool schema、state schema、workflow graph、guardrail、trace 和 eval hook。但证据边界要清楚：LangGraph / Agents SDK source note 只能支持“现代框架提供这些工程抽象”；本卡把这些抽象合并成“framework 接管 Agent 工程责任”的解释，是面向本 vault 的工程综合理解。
+
 ## 它解决什么问题
 
 真实 Agent 不只是“模型 + prompt”。它需要注册工具、校验参数、保存运行状态、处理分支和循环、等待人工确认、恢复长任务、记录 trace、评估结果，并把危险动作限制在权限边界内。
