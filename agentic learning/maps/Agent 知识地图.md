@@ -10,6 +10,7 @@ related:
   - "[[前沿主源清单]]"
   - "[[LLM]]"
   - "[[Agent Loop]]"
+  - "[[Observation]]"
   - "[[Tool Calling]]"
   - "[[RAG]]"
   - "[[Memory]]"
@@ -28,6 +29,7 @@ related:
 - [[LLM]]：模型如何生成文本，以及它本身不能做什么。
 - [[Agent]]：什么是围绕目标行动的系统。
 - [[Agent Loop]]：Agent 如何在观察、行动和反馈中推进任务。
+- [[Observation]]：Agent 动作后的外部反馈如何回填到上下文、state 或 trace。
 
 LLM 地基：
 
@@ -123,6 +125,7 @@ SORT file.name ASC
 - [x] [[Long-term Memory]]
 - [x] [[Computer Use]]
 - [x] [[Trace]]
+- [x] [[Trajectory]]
 - [x] [[Prompt Injection]]
 - [x] [[Oh My Codex (OMX)]]
 

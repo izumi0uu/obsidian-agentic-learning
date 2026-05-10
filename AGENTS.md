@@ -10,6 +10,10 @@ The vault has three knowledge layers:
 - `agentic learning/wiki/`: structured understanding. These answer "how do I understand this?"
 - `agentic learning/maps/` and `agentic learning/index.md`: navigation, reading plans, indexes, and workflow documents.
 
+Learning-process records live separately:
+
+- `agentic learning/reviews/`: concept-triggered review, Feynman answers, and write-back candidates. These answer "can I explain this in my own words?"
+
 Do not mix raw source excerpts and durable understanding in the same page. A source note may produce several concept cards, but the source note itself remains evidence.
 
 ## Important Files
@@ -24,7 +28,28 @@ Always check these before doing wiki maintenance:
 - `agentic learning/maps/04 页面目录.md`
 - `agentic learning/maps/05 Query 写回队列.md`
 - `agentic learning/maps/06 Wiki 健康检查.md`
+- `agentic learning/reviews/复习记录索引.md`
 - `agentic learning/log.md`
+
+## Tooling Boundary: OMX / Codex
+
+This `AGENTS.md` is the repository's durable human guidance. It should describe the learning vault, workflow, and collaboration rules. It is not an OMX runtime artifact and should not be blindly overwritten by `omx setup`.
+
+Project-scope OMX/Codex artifacts are local tooling state:
+
+- `.codex/`: project-local agents, skills, prompts, config, and hooks.
+- `.omx/`: OMX state, metrics, logs, HUD state, plans, interviews, and caches.
+- `.git/info/exclude`: the preferred place for local-only ignore rules for `.codex/`, `.omx/`, and any untracked project-local `AGENTS.md`.
+
+Keep `.codex/` and `.omx/` out of Git unless the user explicitly asks to version them. Prefer `.git/info/exclude` over committed `.gitignore` changes for these local artifacts.
+
+Do not modify `~/.codex/AGENTS.md` unless the user explicitly asks. For project isolation while reusing the existing local Codex login, launch OMX with:
+
+```bash
+CODEX_HOME="$HOME/.codex" omx --madmax --high
+```
+
+After running `omx setup --scope project`, check `git status --short` and `git diff -- AGENTS.md .gitignore`. If `.gitignore` only gained local OMX/Codex ignore rules, restore it and keep those rules in `.git/info/exclude`. If `AGENTS.md` changed, preserve durable project guidance but remove installer/runtime noise.
 
 ## Main Operations
 
@@ -104,6 +129,8 @@ Status values:
 
 The LLM may write and maintain the wiki, but a concept is not considered learned until the user can explain it in their own words.
 
+Use `agentic learning/reviews/` for that learning check. A review note is not raw evidence and is not a durable concept card; it is a place to capture the user's explanation, Codex follow-up questions, Feynman answers, and write-back candidates.
+
 When updating concept cards, preserve this structure where possible:
 
 - 一句话
@@ -111,7 +138,12 @@ When updating concept cards, preserve this structure where possible:
 - 它不是什么
 - 最小例子
 - 常见误解 or 风险
+- 边界细节
+- 现代系统怎么吸收这个概念的价值/局限（适用于 Agent、prompting、framework、evaluation 类概念）
+- 证据锚点
 - 相关链接
+
+Style reference: `wiki/concepts/Plan-and-Solve Prompting.md`. Concept cards should start from the concept's own problem, make neighboring boundaries explicit, include common misunderstandings, and explain whether diagrams or assets are source evidence, user-provided redraws, or engineering analogies.
 
 ## Editing Rules
 

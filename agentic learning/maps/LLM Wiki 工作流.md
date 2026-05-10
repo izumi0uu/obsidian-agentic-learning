@@ -31,6 +31,14 @@ wiki/ -> concept cards, topics, projects, people
 maps/ -> index, reading plans, workflow, questions, frontier tracking
 ```
 
+学习过程记录单独放在 `reviews/`：
+
+```text
+reviews/ -> concept-triggered review, Feynman answers, write-back candidates
+```
+
+小边界：`reviews/` 记录“我怎么检查自己有没有懂”，不替代 `wiki/` 的稳定概念卡，也不作为 `raw/` 的来源证据。
+
 ## 角色分工
 
 ### 用户负责
@@ -63,6 +71,24 @@ maps/ -> index, reading plans, workflow, questions, frontier tracking
 7. 如果影响导航或复习方式，更新 `maps/Agent 知识地图.md`、[[02 问题池]]、[[05 Query 写回队列]] 或 [[04 页面目录]]。
 8. 将 source note 的 `status` 从 `inbox` 改成 `seed` 或 `growing`，并补 `last_checked` / `freshness`。
 9. 追加 `log.md`。
+
+### 概念卡写法
+
+默认把 `wiki/concepts/` 写成学习卡，而不是百科条目。优先保留这个骨架：
+
+1. `## 一句话`
+2. `## 它解决什么问题`
+3. `## 它不是什么`
+4. `## 最小例子`
+5. `## 常见误解` 或 `## 风险`
+6. `## 边界细节`
+7. 对 Agent、prompting、framework、evaluation 类概念，必要时补 `## 现代系统怎么吸收 X 的价值` 或 `## 现代系统怎么吸收 X 的局限`
+8. `## 证据锚点`
+9. `## 相关链接`
+
+写法参照 [[Plan-and-Solve Prompting]]：先从这个概念自己解决的问题讲起，再用“它不是什么”“常见误解”和“边界细节”把邻近概念切开；如果它来自论文时代的 prompt / agent 范式，还要说明现代系统如何把它包进 workflow、tool calling、state、guardrails、trace、evaluation 或 human-in-the-loop。
+
+如果嵌入用户提供的图片或重绘 asset，必须在正文说明这张图是原论文内容、用户截图重绘，还是帮助理解的工程类比；并在 `## 证据锚点` 里写明 asset 路径。
 
 ## 操作 2：Query
 

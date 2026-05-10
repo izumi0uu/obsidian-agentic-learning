@@ -5,8 +5,8 @@ topic:
   - evaluation
 status: seed
 created: 2026-05-05
-updated: 2026-05-05
-last_checked: 2026-05-07
+updated: 2026-05-10
+last_checked: 2026-05-10
 freshness: stable
 conflicts: []
 source:
@@ -17,6 +17,7 @@ related:
   - "[[ReAct]]"
   - "[[Agent Loop]]"
   - "[[Trace]]"
+  - "[[Trajectory]]"
 ---
 
 # Reasoning Trace
@@ -35,13 +36,15 @@ Reasoning Trace 不一定等于模型真实内部原因。
 
 它也不一定应该暴露给用户。生产系统可能只保留结构化 trace 或摘要，而不展示完整推理文本。
 
+Reasoning Trace 也不等于 [[Trajectory]]。Trajectory 是一次任务的完整行动路径；Reasoning Trace 只是这条路径里模型显式推理文字的部分。
+
 ## 最小例子
 
 ReAct 里的 `Thought` 字段就是一种 reasoning trace。
 
 ## 边界细节
 
-Reasoning Trace 偏“推理文字”；[[Trace]] 更广，包括输入、输出、工具调用、工具结果、状态变化和成本延迟等执行记录。
+Reasoning Trace 偏“推理文字”；[[Trace]] 更广，包括输入、输出、工具调用、工具结果、状态变化和成本延迟等执行记录；[[Trajectory]] 则偏任务实际走过的路径本身。
 
 ## 证据锚点
 
@@ -53,4 +56,5 @@ Reasoning Trace 偏“推理文字”；[[Trace]] 更广，包括输入、输出
 
 - [[ReAct]]
 - [[Trace]]
+- [[Trajectory]]
 - [[Agent Loop]]

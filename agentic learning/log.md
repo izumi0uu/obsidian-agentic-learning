@@ -278,3 +278,42 @@ related:
 - Removed [[00 学习路线]] and cleared current navigation links to the fixed 30-day route.
 - Updated [[index]], [[资料收集索引]], [[Agent 知识地图]], [[02 问题池]], [[04 页面目录]], [[LLM Wiki 工作流]], [[字段规范]], and README toward a question-driven / Feynman-review learning loop.
 - Boundary: historical log entries still mention the old daily plan as past maintenance facts; current navigation no longer treats it as active structure.
+## [2026-05-10] asset | ReAct tools-LLM-environment diagram
+
+- Asset: `agentic learning/raw/assets/react-tools-llm-environment.svg`（根据用户截图重绘）
+- Updated: [[ReAct]]
+- Boundary: this diagram captures the external components around a ReAct-style loop; the actual loop controller lives in framework/runtime code, not inside the static boxes themselves.
+## [2026-05-10] review | ReAct concept-triggered review
+
+- Added: [[ReAct 概念触发式复习]]
+- Updated: [[实验记录索引]], [[index]]
+- Seeded the first concept-triggered review with the user's own ReAct explanation, a calibrated version, five Feynman-style follow-up questions, and write-back candidates.
+- Boundary: this is a review/learning record, not a raw source and not a replacement for [[ReAct]] as the durable concept card.
+## [2026-05-10] maintenance | review folder and concept-triggered template
+
+- Moved: [[ReAct 概念触发式复习]] into `agentic learning/reviews/`.
+- Added: [[reviews/复习记录索引]], [[templates/概念触发式复习]]
+- Updated: [[index]], [[04 页面目录]], [[字段规范]], [[LLM Wiki 工作流]], [[实验记录索引]]
+- Boundary: `reviews/` is a learning-process layer for Feynman review and write-back candidates; it is not raw evidence and not a durable concept-card layer.
+## [2026-05-10] maintenance | concept card style rule
+
+- Updated: [[Plan-and-Solve Prompting]], [[LLM Wiki 工作流]]
+- Updated skill: `obsidian-llm-wiki`
+- Updated project instruction: `AGENTS.md`
+- Boundary: durable concept cards should follow the [[ReAct]]-style learning-card shape, with explicit "它不是什么", "边界细节", evidence anchors, and a modern-system absorption section when a paper/prompting pattern needs to be separated from production Agent runtime behavior.
+## [2026-05-10] correction | concept card style reference
+
+- Corrected style reference from [[ReAct]] to [[Plan-and-Solve Prompting]] in `obsidian-llm-wiki`, [[LLM Wiki 工作流]], and `AGENTS.md`.
+- Updated: [[ReAct]]
+- Boundary: [[Plan-and-Solve Prompting]] is the preferred concept-card standard because it includes the fuller learning-card flow: problem, non-goals, common misunderstanding, boundary details, modern-system absorption, evidence anchors, and related links.
+
+## [2026-05-10] concept-update | Observation
+
+- Updated: [[Observation]], [[01 术语表]], [[Agent 知识地图]]
+- Evidence: [[ReAct - Synergizing Reasoning and Acting in Language Models]], [[raw/repos/xiaolinnote/questions/012 ai agent 5. Agent 推理模式有哪些？ReAct 是啥？具体是怎么实现的？]]
+- Boundary: Observation 是动作后的外部反馈，不是模型 Thought，也不是 Action 本身；本次重点补充了来源类型（tool result、environment state、user feedback、test output、browser state）和风险（污染、过期、格式不稳定、被模型误读）。
+## [2026-05-10] concept-update | Trajectory boundary
+
+- Added: [[Trajectory]]
+- Updated: [[Trace]], [[Reasoning Trace]], [[Trajectory Evaluation]], [[Reflexion]], [[01 术语表]], [[Agent 知识地图]]
+- Boundary: Trajectory 是任务实际走过的行动路径；[[Trace]] 是对路径的观测记录；[[Reasoning Trace]] 是路径中模型显式推理文字的切片。

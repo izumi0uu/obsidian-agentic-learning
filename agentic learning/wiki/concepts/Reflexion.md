@@ -7,20 +7,21 @@ topic:
   - memory
 status: seed
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-05-10
 source:
   - "[[Reflexion - Language Agents with Verbal Reinforcement Learning]]"
 evidence:
   - "[[Reflexion - Language Agents with Verbal Reinforcement Learning#为什么收]]"
   - "[[Reflexion - Language Agents with Verbal Reinforcement Learning#Ingest 摘要]]"
   - "[[Reflexion - Language Agents with Verbal Reinforcement Learning#图片录入：Reflexion Agent Loop]]"
-last_checked: 2026-05-08
+last_checked: 2026-05-10
 freshness: stable
 conflicts: []
 related:
   - "[[Agent Loop]]"
   - "[[Memory Reflection]]"
   - "[[Evaluation]]"
+  - "[[Trajectory]]"
   - "[[Trajectory Evaluation]]"
   - "[[Long-term Memory]]"
   - "[[Reasoning Trace]]"
@@ -82,7 +83,7 @@ Actor -> Action -> Environment -> Observation -> Trajectory
 
 其中：
 
-- Trajectory 是短期记忆，记录当前尝试的过程。
+- [[Trajectory]] 是短期记忆，记录当前尝试的过程。
 - Evaluator 把轨迹或结果转成反馈信号。
 - Self-reflection 把反馈转成 reflective text。
 - Experience 是长期经验记忆，影响下一轮 Actor。
@@ -101,6 +102,7 @@ Actor -> Action -> Environment -> Observation -> Trajectory
 - [[Agent Loop]]
 - [[Memory Reflection]]
 - [[Evaluation]]
+- [[Trajectory]]
 - [[Trajectory Evaluation]]
 - [[Long-term Memory]]
 - [[Reasoning Trace]]

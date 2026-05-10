@@ -10,6 +10,7 @@ related:
   - "[[Agent 知识地图]]"
   - "[[04 页面目录]]"
   - "[[资料收集索引]]"
+  - "[[reviews/复习记录索引]]"
   - "[[LLM Wiki 工作流]]"
   - "[[字段规范]]"
   - "[[插件配置]]"
@@ -23,7 +24,7 @@ related:
 
 ## Vault 结构
 
-这个 vault 只保留三层：
+这个 vault 的核心知识只保留三层：
 
 ```text
 raw/  -> 来源证据：网页、论文、文档、repo
@@ -31,7 +32,13 @@ wiki/ -> 稳定理解：概念卡、主题页、项目页
 maps/ -> 导航和维护：术语表、问题池、前沿追踪、健康检查
 ```
 
-小边界：raw 记录“我从哪里看到”，wiki 记录“我怎么理解”，maps 只负责“下一步去哪”。
+学习过程记录单独放在：
+
+```text
+reviews/ -> 概念触发式复习、费曼回答、写回候选
+```
+
+小边界：raw 记录“我从哪里看到”，wiki 记录“我怎么理解”，maps 只负责“下一步去哪”，reviews 记录“我怎么检查自己是否真的懂”。
 
 ## 快速进入
 
@@ -47,6 +54,8 @@ maps/ -> 导航和维护：术语表、问题池、前沿追踪、健康检查
 - [[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]
 - [[Hello-Agents Repo]]
 - [[oh-my-codex 使用教程]]
+- [[reviews/复习记录索引]]
+- [[reviews/ReAct 概念触发式复习]]
 - [[LLM Wiki 工作流]]
 - [[插件配置]]
 - [[字段规范]]
@@ -66,7 +75,7 @@ SORT updated DESC
 
 ```dataview
 TABLE type, status, topic, updated
-FROM "wiki" OR "maps" OR "raw"
+FROM "wiki" OR "maps" OR "raw" OR "reviews"
 SORT file.path ASC
 ```
 
@@ -90,7 +99,7 @@ SORT created DESC
 
 ```dataview
 TABLE type, topic, status, updated
-FROM "wiki" OR "maps"
+FROM "wiki" OR "maps" OR "reviews"
 WHERE updated
 SORT updated DESC
 LIMIT 10
@@ -101,6 +110,13 @@ LIMIT 10
 这里采用概念触发式复习：学到一个概念后，直接在空白学习记录里让 Codex 生成问题，我用费曼方式回答，再把暴露出来的边界、误解或新问题写回 [[02 问题池]]、[[05 Query 写回队列]] 或对应概念卡。
 
 今天只做一件事：从当前正在学的概念出发，提出一个能检验理解的问题。
+
+```dataview
+TABLE source, status, updated, related
+FROM "reviews"
+WHERE type = "review"
+SORT updated DESC
+```
 
 ## 可以直接叫 Codex 做的事
 
