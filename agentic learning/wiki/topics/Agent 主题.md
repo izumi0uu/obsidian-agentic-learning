@@ -60,5 +60,6 @@ SORT created DESC
 - [[oh-my-codex 使用教程]]
 - [[Oh My Codex (OMX)]]
 - [[Hermes Agent]]
+- [[LangChain DeepAgents]]
 - [[OMX $ 指令]]
 - [[Agent Lifecycle Hook]]

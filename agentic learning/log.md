@@ -485,3 +485,11 @@ related:
 - Evidence: 有本地 extracted/PDF 的论文优先锚到 `raw/papers/extracted/` page；其余论文使用论文 abstract / paper page 的短摘，并标明 `last checked 2026-05-11`。已用脚本核对短摘能回到本地 extracted 或 arXiv 页面。
 - Verification: `python3 scripts/paper_source_audit.py` PASS；`python3 scripts/concept_card_audit.py --format markdown` Needs action 0；`git diff --check` PASS；scoped deslop 未发现 TODO / 临时 fallback / 待精读占位。
 - Boundary: 本次只改 raw paper source notes 和审计脚本，不改 `wiki/concepts/`；raw note 仍是 evidence 层，不替代稳定概念卡。原文短摘保持短句，长内容只用中文概括，不伪造页码或段落级证据。
+
+## [2026-05-11] autoresearch-goal | LangChain DeepAgents
+
+- Added source: [[LangChain Deep Agents 官方文档]]
+- Added concept: [[LangChain DeepAgents]]
+- Updated: [[资料收集索引]], [[前沿主源清单]], [[Agent 知识地图]], [[01 术语表]], [[Agent 主题]], [[03 前沿追踪]], [[04 页面目录]], [[05 Query 写回队列]]
+- Evidence: LangChain Deep Agents docs, LangChain products / layer docs, `langchain-ai/deepagents` repo, and existing [[LangGraph 官方文档]] source note checked on 2026-05-11.
+- Boundary: This card records LangChain / LangGraph `deepagents` as a volatile SDK / harness, not the universal definition of deep agent and not RUC-NLPIR DeepAgent.

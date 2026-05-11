@@ -5,7 +5,7 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-11
 related:
   - "[[LLM Wiki 工作流]]"
   - "[[02 问题池]]"
@@ -31,6 +31,7 @@ related:
 | 2026-05-08 | done | “现在的 agent 都在使用 ReAct 范式吗？ReAct 的局限现在怎么解决？” | [[ReAct]], [[Agent Loop]], [[Agent Harness]] | 已写回 ReAct 作为行动循环思想、不是所有 Agent 固定模板的边界 |
 | 2026-05-08 | done | “现在框架是怎么更好地接管 ReAct / Plan-and-Solve 这类 prompt pattern？” | [[Agent Framework]], [[Agent Harness]], [[Tool Calling]] | 已写回框架接管 prompt loop 的工具、状态、流程、执行、权限、观测六层 |
 | 2026-05-09 | done | “现在的 LLM 模型是怎么被训练得越来越强的？” | [[LLM]], [[Evaluation]], [[LLM Training Pipeline]] | 已写回：预训练 scaling、数据质量、SFT、偏好优化/RLHF/RLAIF、推理强化、工具/代码/多模态训练、评测闭环和 Agent 框架兼容性 |
+| 2026-05-11 | done | “Deep Agent 是什么？” | [[LangChain DeepAgents]], [[03 前沿追踪]] | 已写回 LangChain / LangGraph `deepagents` 作为具体 SDK / harness；边界区分通用 deep agent 形态和 RUC-NLPIR DeepAgent 论文/项目名 |
 
 ## 写回模板
 

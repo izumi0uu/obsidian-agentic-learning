@@ -47,6 +47,7 @@ LLM 地基：
 - [[Hermes Agent]]：一个具体的 self-improving Agent runtime，用来观察 memory、skills、messaging gateway、MCP、security approval 和 `/goal` 如何组合。
 - [[OMX $ 指令]]：理解 OMX 如何把澄清、计划、执行、研究、评审和 goal 验收做成可触发的 skill/workflow 入口。
 - [[Agent Framework]]：理解 LangGraph、OpenAI Agents SDK、AutoGen 等框架解决的是哪层工程问题。
+- [[LangChain DeepAgents]]：理解 LangChain 如何在 LangGraph runtime 上封装长任务 Agent harness。
 - [[Agent State]]：理解框架如何保存当前任务的进度、中间结果和下一步依据。
 - [[Agent Workflow]]：理解框架如何把任务组织成步骤、分支、循环和交接。
 - [[Durable Execution]]：理解长任务为什么需要暂停、恢复和重试。
@@ -135,6 +136,7 @@ SORT file.name ASC
 - [x] [[Oh My Codex (OMX)]]
 - [x] [[OMX $ 指令]]
 - [x] [[Agent Lifecycle Hook]]
+- [x] [[LangChain DeepAgents]]
 
 ## 复习入口
 
