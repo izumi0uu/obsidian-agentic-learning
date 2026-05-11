@@ -14,7 +14,7 @@ source:
   - "[[前沿主源清单]]"
   - "[[Oh My Codex Repo]]"
 evidence:
-  - "[[前沿主源清单#RAG 进化]]"
+  - "[[前沿主源清单#代码 Agent]]"
   - "[[Oh My Codex Repo#为什么收]]"
 related:
   - "[[Agent]]"
@@ -108,7 +108,7 @@ leader
 
 - Source: [[前沿主源清单]]
 - Source: [[Oh My Codex Repo]]
-- Anchor: [[前沿主源清单#RAG 进化]], [[Oh My Codex Repo#为什么收]]
+- Anchor: [[前沿主源清单#代码 Agent]], [[Oh My Codex Repo#为什么收]]
 - Evidence type: frontier/source index note + local orchestration repo source note + engineering synthesis.
 - Confidence: medium
 - Boundary: OMX `$team` 是本地 coding-agent orchestration 例子；不要把它的 worker/mailbox/worktree 机制直接外推为所有多 Agent 系统的标准。

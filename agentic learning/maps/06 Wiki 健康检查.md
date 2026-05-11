@@ -156,3 +156,22 @@ SORT file.name ASC
 - 2026-05-07：建立 page catalog、query 写回队列、健康检查页、证据锚点规范、freshness 字段。
 - 2026-05-10：完成 P1 小范围概念卡修复（Agent 工程组 4 张 + Evaluation 组 4 张），并把缺口统计更新为 `边界细节` 51、`现代性状态` 73、`复习触发` 78。
 - 2026-05-10：完成 P1 8 张目标卡的 `## 概念详解` 深修；后续不按“有 section 即通过”，而按详解是否解释动机、机制、证据和现代工程吸收来验收。
+
+## 2026-05-11 Team 概念卡全量规范化收尾
+
+本轮接续 `$team 7` 的 worktree 结果完成 leader 收尾。原 tmux pane 被误关后，team state 仍保留；已合并 5 个 writer lane，并按 worker-6 / worker-7 报告修复剩余问题。
+
+### 验收结果
+
+- `scripts/concept_card_audit.py --format markdown`：90 张概念卡，Needs action = 0。
+- `git diff --check`：PASS。
+- `git diff --cached --check`：PASS。
+- raw 边界：从 checkpoint `0a9362d` 到当前 HEAD / 工作区未修改 `agentic learning/raw/`。
+- 证据锚点：修正 [[Agent Harness]]、[[Multi-agent Orchestration]]、[[Trace]]、[[Computer Use]] 中误指向 `[[前沿主源清单#RAG 进化]]` 的锚点，改为更贴近语义的 `#代码 Agent`、`#评测与观测`、`#计算机使用`。
+
+### 本轮重点补齐
+
+- worker-2 runtime / memory lane 的残留深度缺口：[[Memory]], [[Durable Execution]], [[Handoff]], [[Agent Lifecycle Hook]], [[Code Execution Sandbox]], [[LLM Gateway]], [[Long-term Memory]], [[Semantic Memory]], [[Episodic Memory]], [[Memory Reflection]], [[Non-Parametric Memory]], [[Parametric Memory]], [[双链]], [[AGENTS.md]]。
+- seed-lite 卡不强行扩写成长文，但补清 `## 边界细节`、`## 现代性状态` 和 `## 复习触发`，明确为什么保持 seed-lite。
+
+边界：审计脚本为 0 表示结构 / 深度阈值 / evidence marker 达到当前规范，不等于每张卡已经达到论文级精读。后续维护仍应按 source freshness、用户复习暴露的问题和新资料证据继续小步迭代。

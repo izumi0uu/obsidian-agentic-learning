@@ -447,3 +447,11 @@ related:
 - Answer: 2024-11-20 的 DeepSeek-R1-Lite-Preview 从用户体验上很像长 CoT / thinking mode，但不等于经典 Zero-shot CoT prompting；它更接近把长推理、验证和反思训练成模型行为，再在推理时展开更多 token。
 - Evidence: DeepSeek 官方 R1-Lite-Preview release note、DeepSeek-R1 release note、DeepSeek-R1 arXiv 摘要。
 - Boundary addendum: DeepSeek-R1 可以说继承 CoT / Zero-shot CoT 的思想脉络，但不能说训练原理只是照搬这篇 prompt 论文；R1 的关键在 RL、可验证奖励、cold-start 数据和多阶段训练。
+
+## [2026-05-11] concept-update | team concept-card full standardization completion
+
+- Merged team writer lanes: worker-1 Agent foundations, worker-3 evaluation/observability, worker-4 RAG/retrieval, worker-5 security/protocol/frontier, plus worker-2 runtime/memory lane follow-up.
+- Updated runtime/memory residuals: [[Memory]], [[Durable Execution]], [[Handoff]], [[Agent Lifecycle Hook]], [[Code Execution Sandbox]], [[LLM Gateway]], [[Long-term Memory]], [[Semantic Memory]], [[Episodic Memory]], [[Memory Reflection]], [[Non-Parametric Memory]], [[Parametric Memory]], [[AGENTS.md]], [[双链]].
+- Evidence cleanup: corrected stale `[[前沿主源清单#RAG 进化]]` anchors in [[Agent Harness]], [[Multi-agent Orchestration]], [[Trace]], [[Computer Use]].
+- Verification: `python3 scripts/concept_card_audit.py --format markdown` reports 90 cards / Needs action 0; `git diff --check` PASS; `git diff --cached --check` PASS; raw boundary check PASS.
+- Boundary: This completes current structural/depth standardization, not final human learning. A concept is still only learned when the user can explain it in their own words via `reviews/`.

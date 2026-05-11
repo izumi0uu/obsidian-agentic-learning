@@ -18,7 +18,7 @@ source:
   - "[[OpenAI Agents SDK 文档]]"
   - "[[Claude Code Hooks 文档]]"
 evidence:
-  - "[[前沿主源清单#RAG 进化]]"
+  - "[[前沿主源清单#评测与观测]]"
   - "[[ReAct - Synergizing Reasoning and Acting in Language Models#为什么收]]"
   - "[[LangSmith Evaluation and Observability#为什么收]]"
   - "[[LangSmith Evaluation and Observability#边界提醒]]"
@@ -140,7 +140,7 @@ Trace 也不自动等于 replay。要 replay，还需要固定输入、工具返
 ## 证据锚点
 
 - Source: [[前沿主源清单]]
-- Anchor: [[前沿主源清单#RAG 进化]]
+- Anchor: [[前沿主源清单#评测与观测]]
 - Source: [[ReAct - Synergizing Reasoning and Acting in Language Models]]
 - Anchor: [[ReAct - Synergizing Reasoning and Acting in Language Models#为什么收]]
 - Source: [[LangSmith Evaluation and Observability]]

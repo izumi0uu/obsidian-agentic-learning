@@ -33,8 +33,11 @@ LLM Gateway 是统一管理模型调用的网关层，负责路由、重试、fa
 
 它在架构上像“模型调用入口”，但不是模型本身。对 Agent 来说，gateway 还会影响 tool calling 的稳定性、trace 的完整性、prompt 日志的隐私边界、评测数据的采集，以及不同供应商行为差异带来的回归风险。
 
-代表生态包括 LiteLLM、Portkey、OpenRouter、Vercel AI Gateway。学习时重点不是把它们当同义词，而是理解 gateway 解决的是调用治理和可观测性问题。
+社区常把 LiteLLM、Portkey、OpenRouter、Vercel AI Gateway 这类产品放在同一类里，但它们的定位并不完全相同：有的偏 provider 兼容和路由，有的偏日志与治理，有的偏模型市场入口。概念上不要把“能转发请求”误认为“能保证质量”；gateway 最多提供可控入口，质量仍要靠评测、prompt/tool schema、数据和人工边界验证。
 
+在现代 Agent 系统中，gateway 往往是 observability、policy、evaluation 和 cost control 的连接点。它记录每次模型调用的 metadata，让团队知道哪个任务用了哪个模型、花了多少钱、失败在哪里，也让模型升级可以通过灰度、A/B 和回滚，而不是一次性替换全系统。
+
+对 learning vault 来说，LLM Gateway 是理解“模型不是孤立 API 调用”的入口。它把模型选择、供应商失败、成本预算、审计日志和数据边界显式化；但它不会自动理解业务目标，也不会替代 Agent 的 planning、tool permissioning 或 final verification。
 ## 它解决什么问题
 
 生产 Agent 往往不只调用一个模型。不同任务需要不同模型、价格、延迟、上下文长度和可用性。Gateway 把这些策略集中管理。
