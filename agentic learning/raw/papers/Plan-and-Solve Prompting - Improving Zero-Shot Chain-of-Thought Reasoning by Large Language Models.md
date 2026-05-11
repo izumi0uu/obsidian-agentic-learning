@@ -16,8 +16,8 @@ topic:
   - reasoning
   - planning
 created: 2026-05-08
-updated: 2026-05-08
-last_checked: 2026-05-08
+updated: 2026-05-11
+last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: seed
@@ -47,43 +47,93 @@ related:
 
 ## 需要我读的内容
 
-目标：理解它如何改进 Zero-shot Chain-of-Thought，以及它为什么不是完整 Agent 框架。
+目标：理解 Plan-and-Solve 是 prompting 层的 plan-first 推理方法，不是带工具和环境反馈的 Agent workflow。
 
 ### 必读
 
-- Abstract：抓住 plan-first 的主张。
-- Introduction：看论文认为 Zero-shot-CoT 容易出现哪些错误。
-- Method：理解先生成 plan，再按 plan solve 的两阶段提示。
-- PS+：看它如何加入更细的 instruction 来减少计算和推理错误。
+> 使用规则：必读部分要直接提取证据。短内容摘 1-3 句原文并概括；长内容只摘最关键原话，其余用中文概括。原文证据和自己的概括必须分开标注。
+
+#### 必读块 1：Abstract / Zero-shot-CoT 的三类错误
+
+- 位置：ACL Anthology / arXiv abstract / 2305.04091 / last checked 2026-05-11
+- 为什么必读：这里说明论文为什么要提出 PS：不是泛泛“先计划更好”，而是针对 Zero-shot-CoT 的错误类型。
+- 原文短摘：
+  > still suffers from three pitfalls: calculation errors, missing-step errors, and semantic misunderstanding errors.
+- 中文概括：
+  - Zero-shot-CoT 的 “Let’s think step by step” 能触发推理，但不保证步骤完整、计算正确或语义理解正确。
+  - Plan-and-Solve 首先针对 missing-step error：先列计划，再按计划求解。
+- 我需要理解的机制：
+  1. zero-shot CoT error analysis
+  2. missing-step error
+  3. plan-first prompting
+- 支撑概念：
+  - [[Plan-and-Solve Prompting]]
+  - [[Zero-shot CoT]]
+  - [[Reasoning Trace]]
+- 证据边界：
+  - 这段只证明 PS 的问题背景；不能推出“所有复杂任务都先让模型自由规划”就是好设计。
+
+#### 必读块 2：Method / Plan then Solve
+
+- 位置：ACL Anthology / arXiv abstract / 2305.04091 / last checked 2026-05-11
+- 为什么必读：这里支撑 PS 和 PS+ 的机制边界：计划与求解仍发生在一次语言推理流程中。
+- 原文短摘：
+  > devising a plan to divide the entire task into smaller subtasks, and then carrying out the subtasks according to the plan.
+- 中文概括：
+  - PS 的核心是把任务先拆成子任务，再按子任务求解。
+  - PS+ 进一步加入更细的 instruction，以减少计算和推理质量问题。
+- 我需要理解的机制：
+  1. task decomposition in prompt
+  2. solving according to plan
+  3. PS+ instruction refinement
+- 支撑概念：
+  - [[Plan-and-Solve Prompting]]
+  - [[Planning]]
+- 证据边界：
+  - PS 不包含外部 Action、Observation、权限、状态保存或失败恢复；这些属于 Agent framework / workflow。
 
 ### 选读
 
-- 各 benchmark 的实验结果。
-- 与 Zero-shot-CoT、Manual-CoT 的对比。
+- 实验表格、ablation 或 benchmark 细节：用于确认效果边界，不作为第一轮理解入口。
+- appendix / prompt 模板 / 训练细节：等核心机制理解后再补。
 
 ### 可以先跳过
 
-- 具体 prompt ablation 的全部表格。
-- 每个数据集的细节分数。
+- 与当前 Agent / LLM / RAG 学习目标无关的长表格、完整推导或重复实验设置。
 
 ### 读完要能回答
 
-- [[Plan-and-Solve Prompting]] 和 [[Planning]] 的关系是什么？
-- 它和 [[ReAct]] 的差别在哪里？
-- 为什么“先计划”能减少 missing-step error？
-- PS+ 比 PS 多解决了什么问题？
-- 它为什么仍然不是生产级 Agent 系统？
+- PS 的 plan 和 Agent workflow 的 plan 有什么不同？
+- PS+ 为什么要额外约束计算和推理细节？
 
 ### 读完要更新
 
 - [[Plan-and-Solve Prompting]]
-- [[Planning]]
+- [[Zero-shot CoT]]
 - [[Reasoning Trace]]
-- [[ReAct]]
+- [[Planning]]
 
 ## 一句话
 
 Plan-and-Solve Prompting 是一种 zero-shot CoT 改进方法：先让模型写计划，再让模型按计划求解。
+
+
+## 论文主张
+
+| Claim | Evidence anchor | Confidence | Target concept |
+|---|---|---|---|
+| Plan-and-Solve 针对 Zero-shot-CoT 的计算、漏步骤和语义误解错误。 | Abstract | high | [[Plan-and-Solve Prompting]] |
+| PS 先制定计划，再按子任务执行求解。 | Method / Abstract | high | [[Planning]] |
+
+边界：这张 source note 只记录论文证据与定位；稳定解释仍应写入 `wiki/concepts/`，并回链到本页小节或 PDF / section。
+
+
+## 现代性 / 前沿性初判
+
+- transitional / foundation：作为 prompting 时代的 planning 思想仍有学习价值，但现代系统通常把计划、任务图、状态和验证交给 runtime。
+- 稳定部分：先拆解再求解能减少漏步骤。
+- 已被吸收部分：plan-and-execute、graph workflow、replan loop 把它工程化。
+- freshness：stable。
 
 ## Ingest 摘要
 

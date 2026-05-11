@@ -14,8 +14,8 @@ topic:
   - evaluation
   - memory
 created: 2026-05-08
-updated: 2026-05-08
-last_checked: 2026-05-08
+updated: 2026-05-11
+last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: seed
@@ -47,44 +47,95 @@ Reflexion 是理解 Agent “执行后学习”的关键论文之一。它把任
 
 ## 需要我读的内容
 
-目标：理解 Reflexion 如何用自然语言反馈改进 Agent，而不是通过更新模型权重来学习。
+目标：理解 Reflexion 如何把评价反馈转成语言经验记忆，而不是更新模型权重。
 
 ### 必读
 
-- Abstract：抓住 verbal reinforcement learning 的主张。
-- Method：理解 Actor、Evaluator、Self-reflection 三个角色。
-- Memory 部分：看 trajectory 和 experience 分别是什么。
-- Experiments：只看任务类型和失败后改进的逻辑。
+> 使用规则：必读部分要直接提取证据。短内容摘 1-3 句原文并概括；长内容只摘最关键原话，其余用中文概括。原文证据和自己的概括必须分开标注。
+
+#### 必读块 1：Abstract / linguistic feedback 而非权重更新
+
+- 位置：arXiv abstract / 2303.11366 / last checked 2026-05-11
+- 为什么必读：这里支撑 Reflexion 和传统 RL/微调的边界：它通过语言反馈改进行为。
+- 原文短摘：
+  > not by updating weights, but instead through linguistic feedback.
+- 中文概括：
+  - Reflexion 把任务结果或评价转成自然语言反思。
+  - 下一次尝试时，Agent 读取这些反思作为经验，而不是依赖参数更新。
+- 我需要理解的机制：
+  1. verbal reinforcement learning
+  2. self-reflection
+  3. feedback-to-text
+- 支撑概念：
+  - [[Reflexion]]
+  - [[Memory Reflection]]
+  - [[Long-term Memory]]
+- 证据边界：
+  - 这段证明 Reflexion 的学习载体是文本经验；不能把它等同于真正更新模型能力或保证未来一定改进。
+
+#### 必读块 2：Abstract / episodic memory buffer
+
+- 位置：arXiv abstract / 2303.11366 / last checked 2026-05-11
+- 为什么必读：这里说明反思文本为什么属于 Agent memory 设计的一部分。
+- 原文短摘：
+  > agents verbally reflect on task feedback signals, then maintain their own reflective text in an episodic memory buffer
+- 中文概括：
+  - Evaluator 或环境反馈触发 self-reflection，生成 reflective text。
+  - 这些文本进入 episodic/experience memory，影响下一轮 Actor 的选择。
+- 我需要理解的机制：
+  1. trajectory evaluation
+  2. episodic memory
+  3. experience reuse
+- 支撑概念：
+  - [[Trajectory Evaluation]]
+  - [[Agent Loop]]
+  - [[Long-term Memory]]
+- 证据边界：
+  - episodic memory 中的反思可能错误或过拟合失败样例；现代系统需要 memory 写入门槛、过期策略和验证。
 
 ### 选读
 
-- 与 chain-of-thought、ReAct 或普通重试的对比。
-- 具体 benchmark 结果。
+- 实验表格、ablation 或 benchmark 细节：用于确认效果边界，不作为第一轮理解入口。
+- appendix / prompt 模板 / 训练细节：等核心机制理解后再补。
 
 ### 可以先跳过
 
-- 每个环境的详细实验设置。
-- 全部 prompt 模板。
+- 与当前 Agent / LLM / RAG 学习目标无关的长表格、完整推导或重复实验设置。
 
 ### 读完要能回答
 
-- [[Reflexion]] 和普通 “请反思一下” 有什么区别？
-- [[Reflexion]] 和 [[Memory Reflection]] 的边界是什么？
-- Evaluator 给的是内部反馈、外部反馈，还是两者都有？
-- 为什么反思文字可以被看成一种经验记忆？
-- 这种机制有哪些风险：错误反思、过拟合失败样例、把噪音写进记忆？
+- Reflexion 和普通“再试一次并反思”有什么结构差异？
+- 什么时候反思应该进入长期记忆，什么时候只留在当前任务上下文？
 
 ### 读完要更新
 
 - [[Reflexion]]
-- [[Agent Loop]]
 - [[Memory Reflection]]
-- [[Evaluation]]
+- [[Long-term Memory]]
 - [[Trajectory Evaluation]]
+- [[Agent Loop]]
 
 ## 一句话
 
 Reflexion 让语言 Agent 在执行任务后，根据评价反馈生成自我反思文本，并把它作为经验记忆用于下一轮尝试。
+
+
+## 论文主张
+
+| Claim | Evidence anchor | Confidence | Target concept |
+|---|---|---|---|
+| Reflexion 通过语言反馈改进行为，而不是更新模型权重。 | arXiv abstract | high | [[Reflexion]] |
+| 反思文本保存在 episodic memory buffer 中影响后续尝试。 | arXiv abstract | high | [[Memory Reflection]] |
+
+边界：这张 source note 只记录论文证据与定位；稳定解释仍应写入 `wiki/concepts/`，并回链到本页小节或 PDF / section。
+
+
+## 现代性 / 前沿性初判
+
+- foundation / current-practice：作为 evaluator-optimizer、memory reflection、self-improvement workflow 的基础思想仍重要。
+- 稳定部分：从失败轨迹提取经验可改进后续尝试。
+- 工程限制：反思写入必须有质量门槛，否则会固化错误经验。
+- freshness：stable。
 
 ## Ingest 摘要
 

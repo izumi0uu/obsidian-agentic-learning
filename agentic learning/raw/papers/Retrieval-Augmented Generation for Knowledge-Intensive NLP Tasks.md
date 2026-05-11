@@ -12,8 +12,8 @@ topic:
   - rag
   - retrieval
 created: 2026-05-05
-updated: 2026-05-07
-last_checked: 2026-05-07
+updated: 2026-05-11
+last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: growing
@@ -40,48 +40,96 @@ related:
 
 ## 需要我读的内容
 
-目标：理解 [[RAG]] 的原始边界：生成模型参数里的知识和外部可检索知识如何结合。
+目标：理解 RAG 的原始边界：参数化记忆与非参数化外部记忆如何组合。
 
 ### 必读
 
-- Abstract：抓住 parametric memory 与 non-parametric memory 的组合。
-- 1 Introduction：理解只依赖模型参数的缺点：难更新、难溯源、可能 hallucination。
-- Figure 1：看 RAG 的整体流程：query -> retriever -> document index -> generator。
-- 2 Methods：只理解 retriever 和 generator 两个组件。
-- 2.1 Models：只抓 RAG-Sequence 和 RAG-Token 的区别，不深入公式。
-- 2.5 Retriever：理解 dense vector index 和 top-K retrieval。
-- 6 Discussion / Conclusion：看作者如何描述知识更新和检索边界。
+> 使用规则：必读部分要直接提取证据。短内容摘 1-3 句原文并概括；长内容只摘最关键原话，其余用中文概括。原文证据和自己的概括必须分开标注。
+
+#### 必读块 1：Abstract / parametric + non-parametric memory
+
+- 位置：Extracted Markdown `Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.extracted.md` / Page 1 / Abstract
+- 为什么必读：这里是 [[RAG]] 的经典定义来源：生成模型和外部检索记忆组合。
+- 原文短摘：
+  > models which combine pre-trained parametric and non-parametric memory for language generation
+- 中文概括：
+  - RAG 把预训练 seq2seq 模型作为参数化记忆，把可检索文档索引作为非参数化记忆。
+  - 生成过程不是只依赖 prompt，而是条件化在检索到的文档上。
+- 我需要理解的机制：
+  1. parametric memory
+  2. non-parametric memory
+  3. retrieval-augmented generation
+- 支撑概念：
+  - [[RAG]]
+  - [[Parametric Memory]]
+  - [[Non-Parametric Memory]]
+- 证据边界：
+  - 这段定义的是 RAG 原始架构，不等于现代所有 RAG pipeline、agentic retrieval 或企业搜索实现。
+
+#### 必读块 2：Figure 1 / retriever + generator 流程
+
+- 位置：Extracted Markdown `Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.extracted.md` / Page 2 / Figure 1
+- 为什么必读：这里把 RAG 拆成 retriever、document index、generator，支撑后续概念卡的组件边界。
+- 原文短摘：
+  > We combine a pre-trained retriever (Query Encoder + Document Index) with a pre-trained seq2seq model (Generator)
+- 中文概括：
+  - Retriever 用 query encoder 和 document index 找 top-K 文档。
+  - Generator 基于输入和检索文档生成输出；RAG-Sequence 与 RAG-Token 的差别在于文档如何参与生成。
+- 我需要理解的机制：
+  1. query encoder
+  2. document index
+  3. top-K retrieval
+  4. generator conditioning
+- 支撑概念：
+  - [[Retriever]]
+  - [[RAG]]
+  - [[LLM]]
+- 证据边界：
+  - Figure 1 说明组件关系；不能证明检索到的文档一定正确，也不能保证最终回答有事实性。
 
 ### 选读
 
-- Ablation 相关段落：看 learned retrieval 为什么重要。
-- Human evaluation：看 RAG 是否更 factual/specific。
+- 实验表格、ablation 或 benchmark 细节：用于确认效果边界，不作为第一轮理解入口。
+- appendix / prompt 模板 / 训练细节：等核心机制理解后再补。
 
 ### 可以先跳过
 
-- 详细概率公式。
-- 每个数据集的实验表格。
-- Appendix 的训练细节。
+- 与当前 Agent / LLM / RAG 学习目标无关的长表格、完整推导或重复实验设置。
 
 ### 读完要能回答
 
-- [[Parametric Memory]] 和 [[Non-Parametric Memory]] 分别是什么？
-- [[Retriever]] 在 RAG 里具体负责什么？
-- RAG 为什么能更新知识，但仍不能保证正确？
-- RAG 和 [[Memory]] 为什么不能画等号？
-- 这篇论文里的 RAG 和现在的 [[Agentic RAG]] 差在哪里？
+- [[Parametric Memory]] 和 [[Non-Parametric Memory]] 为什么不能混用？
+- RAG 为什么能改善可更新性，却不能自动保证事实正确？
 
 ### 读完要更新
 
 - [[RAG]]
-- [[Retriever]]
 - [[Parametric Memory]]
 - [[Non-Parametric Memory]]
-- [[Memory]]
+- [[Retriever]]
+- [[LLM]]
 
 ## 一句话
 
 RAG 把检索器和生成模型结合起来，让模型在回答时使用外部文档作为知识来源。
+
+
+## 论文主张
+
+| Claim | Evidence anchor | Confidence | Target concept |
+|---|---|---|---|
+| RAG 组合参数化语言模型记忆和非参数化检索记忆。 | Page 1 / Abstract | high | [[RAG]] |
+| RAG 使用 retriever/document index 找文档，再由 generator 生成答案。 | Page 2 / Figure 1 | high | [[Retriever]] |
+
+边界：这张 source note 只记录论文证据与定位；稳定解释仍应写入 `wiki/concepts/`，并回链到本页小节或 PDF / section。
+
+
+## 现代性 / 前沿性初判
+
+- foundation：RAG 是外部知识增强的基础架构语言。
+- 稳定部分：检索器、索引、生成器边界仍稳定。
+- 已扩展部分：现代系统加入 chunking、reranking、query rewriting、citation、eval、agentic retrieval。
+- freshness：stable。
 
 ## 已提取文件
 

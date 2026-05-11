@@ -12,8 +12,8 @@ topic:
   - llm
   - transformer
 created: 2026-05-05
-updated: 2026-05-07
-last_checked: 2026-05-07
+updated: 2026-05-11
+last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: growing
@@ -40,49 +40,94 @@ related:
 
 ## 需要我读的内容
 
-目标：只建立 [[Transformer]] 作为 [[LLM]] 架构地基的理解，不做深度数学推导。
+目标：理解 Transformer 为什么能作为现代 LLM 的架构地基，而不是把它误读成 Agent 论文。
 
 ### 必读
 
-- Abstract：抓住“去掉 recurrence 和 convolution，只靠 attention”的主张。
-- 1 Introduction：理解为什么 RNN 的顺序计算限制并行训练。
-- 3 Model Architecture：只看 encoder-decoder、encoder stack、decoder stack 的整体结构。
-- 3.2 Attention：理解 query、key、value 和 weighted sum。
-- 3.2.2 Multi-Head Attention：理解为什么需要多个 head。
-- 3.5 Positional Encoding：理解为什么没有 recurrence/convolution 后必须注入位置。
-- 4 Why Self-Attention：理解 self-attention 相比 recurrent/convolutional layer 的三个比较维度。
+> 使用规则：必读部分要直接提取证据。短内容摘 1-3 句原文并概括；长内容只摘最关键原话，其余用中文概括。原文证据和自己的概括必须分开标注。
+
+#### 必读块 1：Abstract / Transformer 的核心主张
+
+- 位置：Extracted Markdown `Attention Is All You Need.extracted.md` / Page 1 / Abstract
+- 为什么必读：这里直接支撑 [[Transformer]] 的定义：用 attention 取代 recurrence/convolution，成为后续 LLM 架构的基础。
+- 原文短摘：
+  > We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.
+- 中文概括：
+  - 论文的关键不是“attention 很重要”这么泛泛一句，而是提出一种主要由 attention 机制组成的序列转导架构。
+  - 它把 encoder-decoder 中原本依赖循环或卷积的部分替换为 attention，从而让训练并行化能力成为架构优势。
+- 我需要理解的机制：
+  1. attention-only 架构主张
+  2. encoder-decoder stack 的整体结构
+  3. 训练并行化和序列依赖建模之间的权衡
+- 支撑概念：
+  - [[Transformer]]
+  - [[Self-Attention]]
+  - [[LLM]]
+- 证据边界：
+  - 这段只证明 Transformer 论文的架构主张；不能推出所有现代 LLM 都只由原版 Transformer 细节构成，也不能把 attention 权重直接等同于可解释因果。
+
+#### 必读块 2：Introduction / 顺序计算瓶颈
+
+- 位置：Extracted Markdown `Attention Is All You Need.extracted.md` / Page 2 / Section 1 Introduction
+- 为什么必读：这里解释为什么论文要摆脱 RNN 式顺序计算：不是为了“更像人思考”，而是为了训练效率和长距离依赖。
+- 原文短摘：
+  > The fundamental constraint of sequential computation, however, remains.
+- 中文概括：
+  - RNN 把位置与时间步绑定，训练样本内部难以完全并行。
+  - Transformer 的 attention 让任意位置间的依赖更直接，降低了长距离依赖学习的路径长度问题。
+- 我需要理解的机制：
+  1. sequential computation bottleneck
+  2. global dependency
+  3. parallelization within training examples
+- 支撑概念：
+  - [[Transformer]]
+  - [[Self-Attention]]
+  - [[Positional Encoding]]
+- 证据边界：
+  - 这段解释的是模型训练和序列建模瓶颈；它不解释工具调用、状态管理、权限、任务规划这些 Agent runtime 问题。
 
 ### 选读
 
-- Table 1：只看三列含义：复杂度、顺序操作数、最大路径长度。
-- Figure 1：只看 Transformer 由 encoder/decoder stack 组成。
-- Figure 2：只看 Scaled Dot-Product Attention 和 Multi-Head Attention 的关系。
+- 实验表格、ablation 或 benchmark 细节：用于确认效果边界，不作为第一轮理解入口。
+- appendix / prompt 模板 / 训练细节：等核心机制理解后再补。
 
 ### 可以先跳过
 
-- 训练细节、BLEU 结果、参数表。
-- 公式推导细节。
-- Appendix 的 attention visualization。
+- 与当前 Agent / LLM / RAG 学习目标无关的长表格、完整推导或重复实验设置。
 
 ### 读完要能回答
 
-- [[Transformer]] 为什么能比 RNN 更适合并行训练？
-- [[Self-Attention]] 解决的是哪类序列依赖问题？
-- [[Multi-Head Attention]] 为什么不是多个 Agent？
-- [[Positional Encoding]] 为什么不是长期记忆？
-- 这篇论文为什么不直接教我做 [[Agent]]？
+- 为什么 Transformer 的并行化优势主要发生在训练阶段？
+- 为什么 [[Multi-Head Attention]] 不是“多个 Agent”？
 
 ### 读完要更新
 
-- [[LLM]]
 - [[Transformer]]
 - [[Self-Attention]]
-- [[Multi-Head Attention]]
+- [[LLM]]
 - [[Positional Encoding]]
 
 ## 一句话
 
 Transformer 用 attention 机制替代传统循环结构，让模型可以更高效地处理序列中的依赖关系。
+
+
+## 论文主张
+
+| Claim | Evidence anchor | Confidence | Target concept |
+|---|---|---|---|
+| Transformer 用 attention 机制替代 recurrent/convolutional 结构作为主要架构。 | Page 1 / Abstract | high | [[Transformer]] |
+| 论文动机之一是减少顺序计算瓶颈、提高训练并行化。 | Page 2 / Section 1 Introduction | high | [[Self-Attention]] |
+
+边界：这张 source note 只记录论文证据与定位；稳定解释仍应写入 `wiki/concepts/`，并回链到本页小节或 PDF / section。
+
+
+## 现代性 / 前沿性初判
+
+- foundation：这是现代 LLM 架构语言的地基。
+- 稳定部分：attention、encoder/decoder stack、position information 仍是理解 LLM 的核心入口。
+- 已变化部分：现代模型在归一化、位置编码、长上下文、解码策略、训练数据和后训练上已经远超原始论文。
+- freshness：stable；除非更新长上下文或新架构对比，不需要频繁复查。
 
 ## 已提取文件
 

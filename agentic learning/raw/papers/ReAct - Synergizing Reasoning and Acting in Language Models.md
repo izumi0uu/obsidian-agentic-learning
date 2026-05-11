@@ -13,8 +13,8 @@ topic:
   - tool-use
   - reasoning
 created: 2026-05-05
-updated: 2026-05-10
-last_checked: 2026-05-10
+updated: 2026-05-11
+last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: growing
@@ -42,48 +42,96 @@ ReAct 是理解 Agent Loop 的关键论文之一。它把 reasoning traces 和 a
 
 ## 需要我读的内容
 
-目标：理解 [[Agent Loop]] 为什么要把 reasoning、action、[[Observation]] 放在一个循环里。
+目标：理解 ReAct 的核心是 interleaved reasoning/action/observation，而不是“把思维链展示出来”。
 
 ### 必读
 
-- Abstract：抓住 interleaved reasoning and acting。
-- 1 Introduction：理解人类任务中“想”和“做”为什么会交替出现。
-- ReAct 方法段落：只看 Thought / Action / Observation 的结构。
-- QA / fact verification 示例：看工具反馈如何减少 hallucination 和 error propagation。
-- Interactive decision making 示例：看环境反馈如何改变后续行动。
-- Conclusion：看 ReAct 的边界和适用场景。
+> 使用规则：必读部分要直接提取证据。短内容摘 1-3 句原文并概括；长内容只摘最关键原话，其余用中文概括。原文证据和自己的概括必须分开标注。
+
+#### 必读块 1：Abstract / reasoning traces 与 actions 交错生成
+
+- 位置：Extracted Markdown `ReAct - Synergizing Reasoning and Acting in Language Models.extracted.md` / Page 1 / Abstract
+- 为什么必读：这里是 ReAct 的核心定义：reasoning 和 acting 不是两个独立模块，而是交错发生。
+- 原文短摘：
+  > generate both reasoning traces and task-specific actions in an interleaved manner
+- 中文概括：
+  - ReAct 把语言推理轨迹和具体动作放进同一个循环。
+  - 推理用于跟踪计划、处理异常、更新行动；动作让模型从外部工具或环境获得信息。
+- 我需要理解的机制：
+  1. Thought / Action / Observation loop
+  2. reasoning trace
+  3. task-specific action
+- 支撑概念：
+  - [[ReAct]]
+  - [[Agent Loop]]
+  - [[Reasoning Trace]]
+- 证据边界：
+  - 这段证明 ReAct 的范式；不能推出生产系统应该展示完整 reasoning trace。
+
+#### 必读块 2：Abstract / 外部信息和 hallucination
+
+- 位置：Extracted Markdown `ReAct - Synergizing Reasoning and Acting in Language Models.extracted.md` / Page 1 / Abstract
+- 为什么必读：这里说明 action 的价值：不仅是执行动作，也能通过外部信息减少错误传播。
+- 原文短摘：
+  > actions allow it to interface with and gather additional information from external sources
+- 中文概括：
+  - 在 QA/fact verification 中，ReAct 可通过 Wikipedia API 查询事实。
+  - Observation 进入后续上下文，使模型能根据外部结果修正后续推理或行动。
+- 我需要理解的机制：
+  1. external source access
+  2. observation feedback
+  3. error propagation control
+- 支撑概念：
+  - [[Observation]]
+  - [[Tool Calling]]
+  - [[Trace]]
+- 证据边界：
+  - 论文中的简单 API/环境反馈不等于现代工具权限系统；真实系统还需要 schema、auth、sandbox、trace 和 human-in-the-loop。
 
 ### 选读
 
-- HotpotQA / FEVER：偏知识问答，帮助理解工具查询。
-- ALFWorld / WebShop：偏环境交互，帮助理解 Agent Loop。
+- 实验表格、ablation 或 benchmark 细节：用于确认效果边界，不作为第一轮理解入口。
+- appendix / prompt 模板 / 训练细节：等核心机制理解后再补。
 
 ### 可以先跳过
 
-- ReAct 抽取文本里的图例页，因为这份 PDF 抽取有大量 `(cid:)` 噪声。
-- 具体 benchmark 分数和表格。
-- prompt 细节模板。
+- 与当前 Agent / LLM / RAG 学习目标无关的长表格、完整推导或重复实验设置。
 
 ### 读完要能回答
 
-- [[ReAct]] 和 [[Agent Loop]] 的关系是什么？
-- [[Reasoning Trace]] 解决什么问题，又有什么风险？
-- [[Observation]] 为什么会改变下一步行动？
-- ReAct 为什么不是完整生产级 Agent？
-- 真实产品里是否应该展示完整 reasoning trace？
+- ReAct 与 Toolformer 的工具使用边界是什么？
+- Observation 为什么必须写回上下文或状态？
 
 ### 读完要更新
 
-- [[Agent Loop]]
 - [[ReAct]]
+- [[Agent Loop]]
 - [[Reasoning Trace]]
 - [[Observation]]
-- [[Trace]]
 - [[Tool Calling]]
+- [[Trace]]
 
 ## 一句话
 
 ReAct 让模型交替进行推理和行动，通过外部环境反馈修正后续步骤。
+
+
+## 论文主张
+
+| Claim | Evidence anchor | Confidence | Target concept |
+|---|---|---|---|
+| ReAct 让模型交错生成 reasoning traces 和 task-specific actions。 | Page 1 / Abstract | high | [[ReAct]] |
+| 外部 actions 可帮助模型获取额外信息并缓解 hallucination/error propagation。 | Page 1 / Abstract | high | [[Observation]] |
+
+边界：这张 source note 只记录论文证据与定位；稳定解释仍应写入 `wiki/concepts/`，并回链到本页小节或 PDF / section。
+
+
+## 现代性 / 前沿性初判
+
+- foundation / transitional：ReAct 是 Agent loop 语言和工具交互思想的地基；裸 ReAct prompt loop 在现代系统中常被框架吸收。
+- 稳定部分：reasoning/action/observation 交替仍是理解工具型 Agent 的核心。
+- 已被吸收部分：现代框架把 action execution、tool schema、state、trace、guardrails 外置。
+- freshness：stable。
 
 ## 已提取文件
 

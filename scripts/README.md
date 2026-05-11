@@ -54,3 +54,20 @@ python3 scripts/concept_card_audit.py --format json --output .omx/reports/concep
 - 输出 5 个 writer lane + evidence auditor + final verifier 的 `$team 7` 分工依据。
 
 注意：脚本只做结构和浅层质量审计；最终仍要人工/leader 判断概念详解是否真的讲透。
+
+## 论文 source note 审计
+
+```bash
+cd /Users/idah/Projects-combined/obsidian-agentic-learning
+python3 scripts/paper_source_audit.py
+```
+
+脚本行为：
+
+- 只读检查 `agentic learning/raw/papers/*.md`。
+- 确认每张论文 source note 保留 `type: source`、`source_type: paper`。
+- 检查最低核心 section：`为什么收`、`一句话`、`需要我读的内容`、`论文主张`、`可以拆成概念卡`、`我的疑问`、`边界提醒`。
+- 检查 `### 必读` 下至少有一个 `#### 必读块`，且包含位置、为什么必读、原文短摘、中文概括、机制、支撑概念、证据边界。
+- 检查原文短摘长度，避免把长篇原文搬进 raw note。
+
+注意：脚本只验证结构与短摘长度，不证明论文理解正确；证据真实性仍需要回到 PDF、extracted markdown 或论文页面核对。

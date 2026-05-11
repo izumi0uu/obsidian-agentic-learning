@@ -476,3 +476,12 @@ related:
 - Updated: [[templates/论文]], [[资料收集索引]]
 - Rule: `raw/papers/` 的 `### 必读` 不再只是阅读清单，而是必读证据提取区；每个必读块要写位置、为什么必读、原文短摘、中文概括、支撑概念和证据边界。
 - Boundary: 内容过多时只摘 1-3 句关键原话，其余用中文概括；原文短摘负责证据，中文概括负责学习，不把长篇原文搬进 raw note，也不把概括伪装成论文原话。
+
+## [2026-05-11] source-maintenance | paper source-note required-reading extraction
+
+- Updated: all 15 `raw/papers/*.md` paper source notes.
+- Added audit: `scripts/paper_source_audit.py`; documented in `scripts/README.md`; `.gitignore` now allows this audit script to be versioned beside `concept_card_audit.py`.
+- Change: 全量把 `### 必读` 从阅读清单升级为“必读证据提取区”；每篇至少 2 个 `#### 必读块`，分开写位置、为什么必读、原文短摘、中文概括、机制、支撑概念和证据边界。
+- Evidence: 有本地 extracted/PDF 的论文优先锚到 `raw/papers/extracted/` page；其余论文使用论文 abstract / paper page 的短摘，并标明 `last checked 2026-05-11`。已用脚本核对短摘能回到本地 extracted 或 arXiv 页面。
+- Verification: `python3 scripts/paper_source_audit.py` PASS；`python3 scripts/concept_card_audit.py --format markdown` Needs action 0；`git diff --check` PASS；scoped deslop 未发现 TODO / 临时 fallback / 待精读占位。
+- Boundary: 本次只改 raw paper source notes 和审计脚本，不改 `wiki/concepts/`；raw note 仍是 evidence 层，不替代稳定概念卡。原文短摘保持短句，长内容只用中文概括，不伪造页码或段落级证据。
