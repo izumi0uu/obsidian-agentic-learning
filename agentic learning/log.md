@@ -470,3 +470,9 @@ related:
 - Updated: [[字段规范]], [[资料收集索引]], [[04 页面目录]]
 - Rule: `raw/papers/` 新建论文 source note 使用 paper 专属 frontmatter（`pdf`、`arxiv`、`doi`、`venue`、`pages`、`extracted`）和固定证据 section；raw note 只回答“论文原文说了什么、可支撑哪些概念”，不替代 `wiki/concepts/` 的稳定理解。
 - Boundary: 本次只增加模板和规则约束，不批量迁移或重写已有 `raw/papers/*.md`；已有论文笔记后续可按需小批量规范化。
+
+## [2026-05-11] workflow | paper required-reading extraction rule
+
+- Updated: [[templates/论文]], [[资料收集索引]]
+- Rule: `raw/papers/` 的 `### 必读` 不再只是阅读清单，而是必读证据提取区；每个必读块要写位置、为什么必读、原文短摘、中文概括、支撑概念和证据边界。
+- Boundary: 内容过多时只摘 1-3 句关键原话，其余用中文概括；原文短摘负责证据，中文概括负责学习，不把长篇原文搬进 raw note，也不把概括伪装成论文原话。
