@@ -4,7 +4,7 @@ topic:
   - agent
   - infrastructure
   - observability
-status: seed
+status: growing
 created: 2026-05-10
 updated: 2026-05-10
 last_checked: 2026-05-10
@@ -41,6 +41,14 @@ related:
 
 Agent Lifecycle Hook 是 Agent runtime 在会话、用户输入、工具调用前后、上下文压缩、停止等生命周期边界触发的外部 handler，用来拦截、记录、补充反馈或恢复 agent loop。
 
+## 概念详解
+
+Agent lifecycle hook 把“模型输出之外但会影响任务安全和连续性”的动作放到 runtime 边界上。模型可以提出 tool call，或根据 observation 继续推理；但工具调用前是否需要权限确认、工具调用后如何记录、上下文压缩前保存什么、停止时是否允许结束，这些通常由 CLI、framework、plugin 或 harness 的 hook 处理。
+
+它的学习价值在于把 [[ReAct]] 里模糊的 `Action -> Observation` 拆成更工程化的边界：PreToolUse 关注动作是否允许发生，PostToolUse 关注动作发生后怎样反馈和记录，SessionStart / Stop 关注任务生命周期，PreCompact / PostCompact 关注上下文被压缩时哪些状态必须保留。
+
+因此 hook 不是 agent “更聪明”的证据，而是 agent runtime 更可控的证据。它让权限、日志、trace、checkpoint、通知、格式修复和人工接管有明确插槽，而不是全部塞进 prompt 纪律。
+
 ## 它解决什么问题
 
 [[ReAct]] 只描述了 `Action -> Observation` 这种行动反馈关系，但真实系统还要回答：
@@ -54,9 +62,7 @@ Hook 把这些“模型输出之外的边界动作”放进 [[Agent Harness]]，
 
 ## 它不是什么
 
-Agent Lifecycle Hook 不是 LLM 自身能力。
-
-LLM 可以决定“我想调用工具”，但 `PreToolUse`、`PostToolUse` 这类 hook 的触发、执行、阻断、记录和反馈，属于本地产品 / CLI / framework / harness 的运行时能力。
+Agent Lifecycle Hook 不是 LLM 自身能力。LLM 可以决定“我想调用工具”，但 `PreToolUse`、`PostToolUse` 这类 hook 的触发、执行、阻断、记录和反馈，属于本地产品 / CLI / framework / harness 的运行时能力。
 
 它也不等于 [[Observation]]。Observation 是工具或环境返回给 agent 的反馈；hook 是 runtime 在关键边界触发的处理机会。一个 `PostToolUse` hook 可以读到 observation-like 的工具结果，但 hook 本身不是 observation。
 
@@ -89,15 +95,17 @@ LLM 生成 tool call
 - 事件槽：`~/.codex/hooks.json` 注册了 `SessionStart`、`UserPromptSubmit`、`PreToolUse`、`PostToolUse`、`PreCompact`、`PostCompact`、`Stop` 等事件。
 - handler：这些事件当前指向 `oh-my-codex/dist/scripts/codex-native-hook.js`，所以具体增强逻辑来自 OMX 本地 harness。
 
-因此更准确的说法是：`PreToolUse` / `PostToolUse` 这种生命周期边界不是模型能力；在你的环境里，事件配置属于 Codex 本地 hook 配置，行为增强主要由 OMX handler 承接。
-
 可观测数据也分层：
 
 - 本地 raw artifact：`.omx/logs/turns-*.jsonl`、`.omx/metrics.json`、`.omx/state/session.json`、`.omx/state/subagent-tracking.json`、`.omx/goals/.../ledger.jsonl`。
 - Trace / span：把模型调用、工具调用、handoff、guardrail、错误、延迟和 token 记录成结构化执行轨迹。
 - Dashboard / OTLP：把 trace 送到 LangSmith、Langfuse、Phoenix、OpenAI Agents tracing 或 OpenTelemetry collector，做实时观察、调试、评估和成本分析。
 
+因此更准确的说法是：`PreToolUse` / `PostToolUse` 这种生命周期边界不是模型能力；在你的环境里，事件配置属于 Codex 本地 hook 配置，行为增强主要由 OMX handler 承接。
+
 ## 现代性状态
+
+Agent Lifecycle Hook 是基础软件思想 + 当前 Agent 工程实践。
 
 - 基础地基：hook 是软件系统里长期存在的生命周期扩展点思想。
 - 当前工程实践：代码 Agent / Agent framework 用 hook、trace、approval gate、guardrails 和 state artifact 接管 ReAct loop 的工具执行边界。
@@ -118,16 +126,20 @@ ReAct 的弱点之一是 action 格式、权限、失败恢复和循环停止都
 
 ## 证据锚点
 
-- Source: [[Claude Code Hooks 文档]]
-- Source: [[OpenAI Agents SDK 文档]]
-- Source: [[Oh My Codex Repo]]
-- Source: [[LangSmith Evaluation and Observability]]
-- Source: [[Langfuse Observability and Evaluation]]
-- Source: [[Arize Phoenix Tracing 文档]]
-- Source: [[OpenTelemetry GenAI Semantic Conventions]]
+- Evidence type: official docs note — [[Claude Code Hooks 文档]]，支持 hook event / handler 这种本地生命周期扩展点。
+- Evidence type: official docs note — [[OpenAI Agents SDK 文档]]，主要支持 tracing / agent framework 侧的运行可观测性语境。
+- Evidence type: local repo / engineering evidence — [[Oh My Codex Repo]] 与本地 hook 配置，用于说明当前环境里 OMX handler 承接 hook 行为。
+- Evidence type: observability docs — [[LangSmith Evaluation and Observability]]、[[Langfuse Observability and Evaluation]]、[[Arize Phoenix Tracing 文档]]、[[OpenTelemetry GenAI Semantic Conventions]]，用于支持 trace / span / dashboard / OTLP 边界。
 - Local evidence: `~/.codex/hooks.json` 注册了 hook event，并指向 `oh-my-codex/dist/scripts/codex-native-hook.js`。
 - Local evidence: `.omx/logs/turns-2026-05-10.jsonl`、`.omx/metrics.json`、`.omx/state/session.json`、`.omx/state/subagent-tracking.json`、`.omx/goals/autoresearch/.../ledger.jsonl` 存在本地可观测 artifact。
-- Confidence: medium
+- Boundary: 本卡把多个来源综合成 runtime 边界解释；不同 CLI / SDK 的 hook 事件名、字段和安全语义需要回到对应官方文档确认。
+- Confidence: medium。
+
+## 复习触发
+
+- 为什么 `PreToolUse` 更适合阻断危险动作，而 `PostToolUse` 更适合记录和补救？
+- Hook、Observation、Trace 三者分别处在哪一层？
+- 如果一个 Agent 在上下文压缩后继续任务，hook 需要帮助保存哪些信息？
 
 ## 相关链接
 
