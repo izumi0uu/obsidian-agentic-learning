@@ -463,3 +463,10 @@ related:
 - Updated: [[资料收集索引]], [[前沿主源清单]], [[Agent 知识地图]], [[01 术语表]], [[Agent 主题]], [[03 前沿追踪]], [[04 页面目录]], [[06 Wiki 健康检查]]
 - Evidence: official GitHub repo, official docs raw markdown for architecture / memory / skills / security / MCP / persistent goals, and GitHub latest release API checked on 2026-05-11 (`v2026.5.7`, Hermes Agent v0.13.0).
 - Boundary: Hermes Agent is recorded as a volatile concrete runtime/project, not as the general definition of Agent and not as proof that self-improving skills are reliable without evaluation.
+
+## [2026-05-11] workflow | paper source template and constraints
+
+- Added: [[templates/论文]]
+- Updated: [[字段规范]], [[资料收集索引]], [[04 页面目录]]
+- Rule: `raw/papers/` 新建论文 source note 使用 paper 专属 frontmatter（`pdf`、`arxiv`、`doi`、`venue`、`pages`、`extracted`）和固定证据 section；raw note 只回答“论文原文说了什么、可支撑哪些概念”，不替代 `wiki/concepts/` 的稳定理解。
+- Boundary: 本次只增加模板和规则约束，不批量迁移或重写已有 `raw/papers/*.md`；已有论文笔记后续可按需小批量规范化。
