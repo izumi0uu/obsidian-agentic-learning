@@ -5,7 +5,7 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-07
-updated: 2026-05-10
+updated: 2026-05-11
 related:
   - "[[LLM Wiki 工作流]]"
   - "[[04 页面目录]]"
@@ -21,8 +21,8 @@ related:
 
 - Last lint: 2026-05-10
 - Missing links: none
-- Concept cards: 90
-- Raw source notes: 810（包含按题拆分的 imported question source pages；主源清单仍看 [[资料收集索引]]）
+- Concept cards: 91
+- Raw source notes: 813（包含按题拆分的 imported question source pages；主源清单仍看 [[资料收集索引]]）
 - Query write-back pending: 0
 - Concept cards missing `## 边界细节`: 51（P0 样例 + P1 小范围修复后；P1 修复前为 57）
 - Concept cards missing `## 现代性状态`: 73（P0 样例 + P1 小范围修复后；P1 修复前为 79）
@@ -156,6 +156,7 @@ SORT file.name ASC
 - 2026-05-07：建立 page catalog、query 写回队列、健康检查页、证据锚点规范、freshness 字段。
 - 2026-05-10：完成 P1 小范围概念卡修复（Agent 工程组 4 张 + Evaluation 组 4 张），并把缺口统计更新为 `边界细节` 51、`现代性状态` 73、`复习触发` 78。
 - 2026-05-10：完成 P1 8 张目标卡的 `## 概念详解` 深修；后续不按“有 section 即通过”，而按详解是否解释动机、机制、证据和现代工程吸收来验收。
+- 2026-05-11：录入 [[Hermes Agent]] / [[Hermes Agent Repo]] 后，`scripts/concept_card_audit.py --format markdown` 显示 91 张概念卡，Needs action = 0；`git diff --check` PASS。
 
 ## 2026-05-11 Team 概念卡全量规范化收尾
 

@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-10
+updated: 2026-05-11
 related:
   - "[[Agent]]"
   - "[[ReAct]]"
@@ -59,5 +59,6 @@ SORT created DESC
 
 - [[oh-my-codex 使用教程]]
 - [[Oh My Codex (OMX)]]
+- [[Hermes Agent]]
 - [[OMX $ 指令]]
 - [[Agent Lifecycle Hook]]

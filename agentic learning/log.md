@@ -455,3 +455,11 @@ related:
 - Evidence cleanup: corrected stale `[[前沿主源清单#RAG 进化]]` anchors in [[Agent Harness]], [[Multi-agent Orchestration]], [[Trace]], [[Computer Use]].
 - Verification: `python3 scripts/concept_card_audit.py --format markdown` reports 90 cards / Needs action 0; `git diff --check` PASS; `git diff --cached --check` PASS; raw boundary check PASS.
 - Boundary: This completes current structural/depth standardization, not final human learning. A concept is still only learned when the user can explain it in their own words via `reviews/`.
+
+## [2026-05-11] autoresearch-goal | Hermes Agent
+
+- Added source: [[Hermes Agent Repo]]
+- Added concept: [[Hermes Agent]]
+- Updated: [[资料收集索引]], [[前沿主源清单]], [[Agent 知识地图]], [[01 术语表]], [[Agent 主题]], [[03 前沿追踪]], [[04 页面目录]], [[06 Wiki 健康检查]]
+- Evidence: official GitHub repo, official docs raw markdown for architecture / memory / skills / security / MCP / persistent goals, and GitHub latest release API checked on 2026-05-11 (`v2026.5.7`, Hermes Agent v0.13.0).
+- Boundary: Hermes Agent is recorded as a volatile concrete runtime/project, not as the general definition of Agent and not as proof that self-improving skills are reliable without evaluation.
