@@ -5,7 +5,7 @@ topic:
   - obsidian
 status: active
 created: 2026-05-05
-updated: 2026-05-10
+updated: 2026-05-12
 related:
   - "[[Agent 知识地图]]"
   - "[[04 页面目录]]"
@@ -86,6 +86,7 @@ SORT file.path ASC
 - [[Agent 主题]]
 - [[LLM 主题]]
 - [[RAG 主题]]
+- [[ReAct Plan-and-Solve Reflexion 对比]]
 - [[前沿主源清单]]
 
 ## 待整理来源

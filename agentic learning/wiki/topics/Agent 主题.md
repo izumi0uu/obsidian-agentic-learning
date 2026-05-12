@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-11
+updated: 2026-05-12
 related:
   - "[[Agent]]"
   - "[[ReAct]]"
@@ -12,6 +12,7 @@ related:
   - "[[Agent 知识地图]]"
   - "[[Environment Observation 类型对比]]"
   - "[[Trajectory Trace 类型对比]]"
+  - "[[ReAct Plan-and-Solve Reflexion 对比]]"
 ---
 
 # Agent 主题
@@ -41,6 +42,7 @@ SORT created DESC
 - [[Agent 知识地图]]
 - [[Environment Observation 类型对比]]
 - [[Trajectory Trace 类型对比]]
+- [[ReAct Plan-and-Solve Reflexion 对比]]
 - [[03 前沿追踪]]
 - [[oh-my-codex 使用教程]]
 

@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-11
+updated: 2026-05-12
 related:
   - "[[Agent]]"
   - "[[前沿主源清单]]"
@@ -16,6 +16,7 @@ related:
   - "[[Memory]]"
   - "[[Planning]]"
   - "[[Evaluation]]"
+  - "[[ReAct Plan-and-Solve Reflexion 对比]]"
 ---
 
 # Agent 知识地图
@@ -84,6 +85,14 @@ LLM 地基：
 
 - [[前沿主源清单]]：Agent 领域当前需要追踪的概念结构。
 - [[03 前沿追踪]]：还没稳定成概念卡的新词和前沿判断记录。
+
+
+## 对比入口
+
+- [[ReAct Plan-and-Solve Reflexion 对比]]：从“行动前计划 / 执行中观察校正 / 执行后反思经验”切开 ReAct、Plan-and-Solve 和 Reflexion。
+- [[Environment Observation 类型对比]]：区分 Environment、Observation、Tool Result 等反馈来源。
+- [[Trajectory Trace 类型对比]]：区分 trajectory、trace、reasoning trace、trajectory evaluation 和 replay。
+- [[RAG 类型对比]]：区分 RAG、Agentic RAG、Corrective RAG、Self-RAG 等检索增强路线。
 
 ## 当前概念卡
 

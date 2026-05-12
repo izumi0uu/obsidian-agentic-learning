@@ -5,7 +5,7 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-07
-updated: 2026-05-11
+updated: 2026-05-12
 related:
   - "[[LLM Wiki 工作流]]"
   - "[[02 问题池]]"
@@ -32,9 +32,25 @@ related:
 | 2026-05-08 | done | “现在框架是怎么更好地接管 ReAct / Plan-and-Solve 这类 prompt pattern？” | [[Agent Framework]], [[Agent Harness]], [[Tool Calling]] | 已写回框架接管 prompt loop 的工具、状态、流程、执行、权限、观测六层 |
 | 2026-05-09 | done | “现在的 LLM 模型是怎么被训练得越来越强的？” | [[LLM]], [[Evaluation]], [[LLM Training Pipeline]] | 已写回：预训练 scaling、数据质量、SFT、偏好优化/RLHF/RLAIF、推理强化、工具/代码/多模态训练、评测闭环和 Agent 框架兼容性 |
 | 2026-05-11 | done | “Deep Agent 是什么？” | [[LangChain DeepAgents]], [[03 前沿追踪]] | 已写回 LangChain / LangGraph `deepagents` 作为具体 SDK / harness；边界区分通用 deep agent 形态和 RUC-NLPIR DeepAgent 论文/项目名 |
+| 2026-05-12 | done | “建立概念对比 / 类比 topic 机制，并以 ReAct / Plan-and-Solve / Reflexion 做样板” | [[LLM Wiki 工作流]], [[ReAct Plan-and-Solve Reflexion 对比]], [[概念对比页]] | 已写回准入标准、证据边界、模板、样板页和候选队列 |
 
 ## 写回模板
 
 ```md
 | YYYY-MM-DD | pending | 问题 | `目标页面` | 处理动作 |
 ```
+
+
+## 概念对比候选队列
+
+准入规则见 [[LLM Wiki 工作流#概念对比 / 类比 topic 页写法]]。候选只代表“值得排查 / 可能值得写”，不是自动新建页面；执行前仍要确认每个概念有足够证据锚点。
+
+| 优先级 | 状态 | 候选概念组 | 为什么值得对比 | 下一步 |
+|---|---|---|---|---|
+| P1 | done | [[ReAct]] / [[Plan-and-Solve Prompting]] / [[Reflexion]] | 都改善复杂任务可靠性，但分别介入行动前、行动中、行动后；混淆风险高且 paper source note 充分 | 已写入 [[ReAct Plan-and-Solve Reflexion 对比]] |
+| P1 | pending | [[Agent Framework]] / [[Agent Harness]] / [[Agent Workflow]] / [[Agent State]] | 都描述 Agent 工程承载层，但边界分别是框架、运行支架、流程图/步骤和状态数据；容易混成“框架万能” | 先核对四张卡证据，再决定是否新建工程分层对比页 |
+| P1 | pending | [[Tool Use]] / [[Tool Calling]] / [[Tool Registry]] / [[Tool Permissioning]] | 都和工具有关，但分别是能力范畴、结构化调用契约、工具发现/注册和权限边界 | 先核对 [[Toolformer]] raw / docs 证据，避免把历史 tool-use 论文和现代 schema 混写 |
+| P2 | pending | [[Memory]] / [[Long-term Memory]] / [[Semantic Memory]] / [[Episodic Memory]] / [[Memory Reflection]] | 都是 Agent memory 线索，但分别是总类、长期保存、事实/语义、事件经验和反思生成 | 适合在 memory 主题小批量复查后写对比页 |
+| P2 | pending | [[Prompt Injection]] / [[Indirect Prompt Injection]] / [[Tool Poisoning]] / [[Data Exfiltration]] | 都是安全风险，但攻击入口、传播路径和防护边界不同 | 先确认 OWASP / MCP threat-model source anchors 后再写 |
+| P2 | existing | [[Trajectory]] / [[Trace]] / [[Reasoning Trace]] / [[Trajectory Evaluation]] / [[Replay]] | 已有高价值边界页，说明 trajectory、trace 和 reasoning trace 的层级差异 | 见 [[Trajectory Trace 类型对比]]；后续只做维护 |
+| P2 | existing | [[RAG]] / [[Agentic RAG]] / [[Corrective RAG]] / [[Self-RAG]] | 已有 RAG 类型比较入口，适合继续补 evidence / modernity | 见 [[RAG 类型对比]]；后续只做维护 |

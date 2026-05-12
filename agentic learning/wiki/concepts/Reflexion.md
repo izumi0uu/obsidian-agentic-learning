@@ -7,7 +7,7 @@ topic:
   - memory
 status: growing
 created: 2026-05-08
-updated: 2026-05-10
+updated: 2026-05-12
 source:
   - "[[Reflexion - Language Agents with Verbal Reinforcement Learning]]"
 evidence:
@@ -25,6 +25,7 @@ related:
   - "[[Trajectory Evaluation]]"
   - "[[Long-term Memory]]"
   - "[[Reasoning Trace]]"
+  - "[[ReAct Plan-and-Solve Reflexion 对比]]"
 ---
 
 # Reflexion
@@ -134,3 +135,4 @@ Actor -> Action -> Environment -> Observation -> Trajectory
 - [[Trajectory Evaluation]]
 - [[Long-term Memory]]
 - [[Reasoning Trace]]
+- [[ReAct Plan-and-Solve Reflexion 对比]]

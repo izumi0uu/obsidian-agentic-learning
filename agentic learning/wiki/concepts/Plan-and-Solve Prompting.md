@@ -6,7 +6,7 @@ topic:
   - planning
 status: seed
 created: 2026-05-08
-updated: 2026-05-10
+updated: 2026-05-12
 source:
   - "[[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models]]"
 evidence:
@@ -23,6 +23,7 @@ related:
   - "[[Agent Loop]]"
   - "[[Agent Workflow]]"
   - "[[Evaluation]]"
+  - "[[ReAct Plan-and-Solve Reflexion 对比]]"
 ---
 
 # Plan-and-Solve Prompting
@@ -150,3 +151,4 @@ Plan-and-execute workflow: Goal -> Plan -> Task list -> Execute -> Evaluate/Repl
 - [[Agent Loop]]
 - [[Agent Workflow]]
 - [[Evaluation]]
+- [[ReAct Plan-and-Solve Reflexion 对比]]

@@ -493,3 +493,13 @@ related:
 - Updated: [[资料收集索引]], [[前沿主源清单]], [[Agent 知识地图]], [[01 术语表]], [[Agent 主题]], [[03 前沿追踪]], [[04 页面目录]], [[05 Query 写回队列]]
 - Evidence: LangChain Deep Agents docs, LangChain products / layer docs, `langchain-ai/deepagents` repo, and existing [[LangGraph 官方文档]] source note checked on 2026-05-11.
 - Boundary: This card records LangChain / LangGraph `deepagents` as a volatile SDK / harness, not the universal definition of deep agent and not RUC-NLPIR DeepAgent.
+
+## [2026-05-12] workflow | concept comparison topic mechanism
+
+- Added standard/template: [[LLM Wiki 工作流]], [[概念对比页]]
+- Added exemplar: [[ReAct Plan-and-Solve Reflexion 对比]]
+- Updated navigation: [[Agent 主题]], [[Agent 知识地图]], [[04 页面目录]], [[05 Query 写回队列]], [[index]]
+- Updated backlinks: [[ReAct]], [[Plan-and-Solve Prompting]], [[Reflexion]]
+- Rule: 概念对比页用于训练边界辨析；对比组可以是 2/N 者，但必须满足混淆风险、相近问题不同介入点、证据锚点、现代工程边界和复习价值。
+- Evidence: 样板页锚到 ReAct、Plan-and-Solve、Reflexion 三张概念卡和对应 paper source note 的必读块。
+- Boundary: 本次只建立机制、模板、首个样板页和候选队列；未批量重写旧卡，未新建弱对比页，未修改 `raw/` source notes。
