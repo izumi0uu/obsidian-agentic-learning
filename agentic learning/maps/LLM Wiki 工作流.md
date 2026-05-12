@@ -39,6 +39,8 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 
 小边界：`reviews/` 记录“我怎么检查自己有没有懂”，不替代 `wiki/` 的稳定概念卡，也不作为 `raw/` 的来源证据。
 
+写回约束：追问卡一旦回答完，每张卡都必须有写回归宿。成熟、稳定、可复用的边界写回 `wiki/concepts/` 或 `wiki/topics/`；还不稳定但值得保留的缺口写入 [[02 问题池]] 或 [[05 Query 写回队列]]；不能只把反馈留在 `reviews/` 里就结束。
+
 ## 角色分工
 
 ### 用户负责

@@ -18,6 +18,7 @@ related:
   - "[[Evaluation]]"
   - "[[ReAct Plan-and-Solve Reflexion 对比]]"
   - "[[Agent 工程分层对比]]"
+  - "[[Agent Framework 编排范式对比]]"
   - "[[Tool 接口层对比]]"
 ---
 
@@ -50,6 +51,12 @@ LLM 地基：
 - [[Hermes Agent]]：一个具体的 self-improving Agent runtime，用来观察 memory、skills、messaging gateway、MCP、security approval 和 `/goal` 如何组合。
 - [[OMX $ 指令]]：理解 OMX 如何把澄清、计划、执行、研究、评审和 goal 验收做成可触发的 skill/workflow 入口。
 - [[Agent Framework]]：理解 LangGraph、OpenAI Agents SDK、AutoGen 等框架解决的是哪层工程问题。
+- [[Agent Framework 编排范式对比]]：区分 AutoGen、AgentScope、CAMEL、LangGraph、Microsoft Agent Framework 和 DeepAgents 的编排范式。
+- [[AutoGen]]：理解 conversation-first team / group chat 多 Agent 编排。
+- [[AgentScope]]：理解 message-centered multi-agent application platform。
+- [[CAMEL]]：理解 role-playing / inception prompting 进入多 Agent 协作的范式。
+- [[LangGraph]]：理解 state graph orchestration runtime。
+- [[Microsoft Agent Framework]]：理解微软 AutoGen + Semantic Kernel 的 agent / workflow 统一路线。
 - [[LangChain DeepAgents]]：理解 LangChain 如何在 LangGraph runtime 上封装长任务 Agent harness。
 - [[Agent State]]：理解框架如何保存当前任务的进度、中间结果和下一步依据。
 - [[Agent Workflow]]：理解框架如何把任务组织成步骤、分支、循环和交接。
@@ -92,6 +99,7 @@ LLM 地基：
 ## 对比入口
 
 - [[Agent 工程分层对比]]：区分 framework、harness、workflow、state 和 loop。
+- [[Agent Framework 全量选型对比 2026-05]]：按当前官方文档横向比较 13 个热门 Agent framework / SDK / toolkit 的抽象层、状态/流程、多 Agent、RAG/memory、观测评测、部署和选型边界。
 - [[Tool 接口层对比]]：区分 tool use、tool calling、registry、permissioning、MCP 和 registry。
 - [[Agent 安全控制点对比]]：区分 prompt injection、tool poisoning、data exfiltration、guardrails、policy engine、approval gate 和 least privilege tools。
 - [[Agent Memory 类型对比]]：区分 state、long-term、episodic、semantic、reflection、parametric / non-parametric memory。

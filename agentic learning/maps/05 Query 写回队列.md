@@ -33,6 +33,7 @@ related:
 | 2026-05-09 | done | “现在的 LLM 模型是怎么被训练得越来越强的？” | [[LLM]], [[Evaluation]], [[LLM Training Pipeline]] | 已写回：预训练 scaling、数据质量、SFT、偏好优化/RLHF/RLAIF、推理强化、工具/代码/多模态训练、评测闭环和 Agent 框架兼容性 |
 | 2026-05-11 | done | “Deep Agent 是什么？” | [[LangChain DeepAgents]], [[03 前沿追踪]] | 已写回 LangChain / LangGraph `deepagents` 作为具体 SDK / harness；边界区分通用 deep agent 形态和 RUC-NLPIR DeepAgent 论文/项目名 |
 | 2026-05-12 | done | “建立概念对比 / 类比 topic 机制，并以 ReAct / Plan-and-Solve / Reflexion 做样板” | [[LLM Wiki 工作流]], [[ReAct Plan-and-Solve Reflexion 对比]], [[概念对比页]] | 已写回准入标准、证据边界、模板、样板页和候选队列 |
+| 2026-05-12 | done | “当前热门 Agent Framework 全量对比，覆盖 13 个框架并写入 wiki” | [[Agent Framework 全量选型对比 2026-05]], [[Agent Framework]] | 已写回官方来源、选型矩阵、全量对比表、现代性状态和复习触发 |
 
 ## 写回模板
 
@@ -64,3 +65,4 @@ related:
 | P3 | done | [[Transformer]] / [[Self-Attention]] / [[Multi-Head Attention]] / [[Positional Encoding]] | 都是 LLM 架构地基，容易把架构、机制和位置编码混成同一层 | 已写入 [[LLM 基础结构对比]] |
 | P3 | pending | [[LLM]] / [[LLM Training Pipeline]] / [[Zero-shot CoT]] / [[Plan-and-Solve Prompting]] | 都和 LLM 能力来源有关，但训练流程、模型能力、prompt-time reasoning pattern 证据层级不同 | 暂不强行成页；需补齐训练主源和 prompting paper 边界后再写 |
 | P3 | pending | [[Oh My Codex (OMX)]] / [[Hermes Agent]] / [[LangChain DeepAgents]] / [[Agent Framework]] | 都是具体 runtime / 产品 / framework 生态，变化快且容易把产品能力误当通用 Agent 定义 | 暂不强行成页；需查新版本和产品边界后再写 |
+| P3 | done | [[LangGraph]] / OpenAI Agents SDK / [[Microsoft Agent Framework]] / [[AutoGen]] / CrewAI / LlamaIndex / Pydantic AI / Agno / Mastra / Vercel AI SDK / Google ADK / [[AgentScope]] / [[CAMEL]] | 都是热门 Agent framework / SDK / toolkit，但分别位于 state graph、provider SDK、enterprise workflow、conversation team、crew/flow、data/RAG、typed Python、platform stack、TS workflow、frontend toolkit、Google Cloud ADK、message platform、role-playing society 等不同层 | 旧范式页见 [[Agent Framework 编排范式对比]]；全量选型已写入 [[Agent Framework 全量选型对比 2026-05]] |

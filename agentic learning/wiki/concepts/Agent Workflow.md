@@ -5,7 +5,7 @@ topic:
   - workflow
 status: growing
 created: 2026-05-08
-updated: 2026-05-10
+updated: 2026-05-12
 last_checked: 2026-05-10
 freshness: watch
 conflicts: []
@@ -98,6 +98,8 @@ triage request
 - evaluator-optimizer：生成后由评估器检查并迭代改进。
 - handoff：把任务交给另一个 Agent 或人类。
 
+当 plan 一开始错了，workflow 的补救不等于“让人插一句新 prompt”。更稳定的做法是让 [[Agent State]] 记录失败发生在哪个节点，用工具结果、测试输出、检索结果或 evaluator 产出失败证据，再由 replan 节点修改后续路径；只有当系统缺少目标、权限、业务判断或风险确认时，才升级到 [[Human-in-the-loop]]、human approval 或 handoff。
+
 边界判断：如果路径主要由工程预先定义，它更像 workflow；如果下一步主要由模型根据 observation 动态选择，它更像 Agent loop。真实系统常混合：稳定路径用 workflow 固定，不确定节点进入 loop。
 
 ## 现代性状态
@@ -117,6 +119,7 @@ triage request
 - 用 [[Agent State]] 保存每个节点的输入输出、错误和下一步依据。
 - 用 [[Durable Execution]] 支持长任务暂停、恢复、重试和人工等待。
 - 用 [[Trace]] / [[Evaluation]] 检查路径是否安全、经济、合规，而不只看最终答案。
+- 用 replan / retry / escalation gate 处理错误计划：先根据 evidence 改路径，再在必要时请用户或人类审批介入。
 
 局限是：workflow 需要设计。设计过窄会卡在异常路径，设计过宽会失去控制；它应该和 eval、trace、human-in-the-loop 一起迭代，而不是一次画完就固定。
 

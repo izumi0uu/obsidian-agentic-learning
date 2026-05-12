@@ -5,7 +5,7 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-05
-updated: 2026-05-10
+updated: 2026-05-12
 source:
 related:
   - "[[LLM Wiki 工作流]]"
@@ -506,11 +506,46 @@ related:
 
 ## [2026-05-12] review | ReAct Plan-and-Solve Reflexion follow-up cards
 
-- Added: [[02 ReAct Plan-and-Solve Reflexion 追问卡]]
+- Added: [[01-2 ReAct Plan-and-Solve Reflexion 追问卡]]
 - Updated: [[复习记录索引]]
 - Purpose: 基于 [[01 概念触发式复习]] 暴露出的卡点生成独立追问卡，避免继续拉长原复习页。
 - Focus: ReAct 原地打转止损、一次性 tool calling vs ReAct、plan 文本 / Agent State task list / context 投影、代码任务越过 prompt-only Plan-and-Solve、workflow replan 补救、Reflexion Experience 与长期记忆边界、三者执行时序对比。
 - Boundary: 本次只生成复习追问卡，不把学习记录当作 raw evidence，也不直接改概念卡定义。
+
+## [2026-05-12] review-feedback | ReAct Plan-and-Solve Reflexion follow-up answers
+
+- Updated: [[01-2 ReAct Plan-and-Solve Reflexion 追问卡]]
+- Added Codex feedback for all 7 follow-up answers and marked this second-round review as 收束.
+- Writeback candidates: card 5 workflow replan boundary, card 6 Experience-to-long-term-memory filter, card 7 execution-order comparison.
+- Remaining review-only gaps: card 1 still needs repeat-action detection -> correction/escalation; card 3 still needs state vs context projection boundary.
+- Boundary: This is learning-process calibration, not raw evidence and not yet a concept-card writeback.
+
+## [2026-05-12] review-writeback | ReAct Plan-and-Solve Reflexion follow-up answers
+
+- Updated: [[Agent Workflow]], [[Long-term Memory]], [[Memory Reflection]], [[ReAct Plan-and-Solve Reflexion 对比]], [[01-2 ReAct Plan-and-Solve Reflexion 追问卡]]
+- Writeback: card 5 plan-error recovery boundary added to workflow replan / evidence / escalation; card 6 Experience-to-long-term-memory filter added to long-term memory and memory reflection; card 7 execution-order knife-edge added to the comparison topic.
+- Deferred: card 1 repeat-action correction/escalation and card 3 state vs context projection remain review-only gaps.
+- Boundary: Review answers are learning calibration, not raw evidence; concept-card evidence remains anchored to existing docs and paper source notes.
+
+## [2026-05-12] review | classic agent paradigms chapter practice
+
+- Added: [[02 经典智能体范式综合实践]]
+- Updated: [[复习记录索引]]
+- Purpose: 把用户提供的章节综合题整理成第二轮实践入口，覆盖 ReAct / Plan-and-Solve / Reflection 的范式选型、代码解析、工具扩展、动态重规划、Reflection 终止条件、提示词工程和电商客服智能体产品设计。
+- Boundary: 本页是 review/practice，不是 raw evidence；先保留回答区、实验记录和写回候选，等待用户逐题作答或实际编写代码后再反馈和写回概念卡。
+
+## [2026-05-12] review-writeback | deferred 01-2 boundaries
+
+- Updated: [[Agent Harness]], [[Agent State]], [[01-2 ReAct Plan-and-Solve Reflexion 追问卡]]
+- Writeback: card 1 repeat-action loop control added to Agent Harness; card 3 plan text / state task list / context projection boundary added to Agent State.
+- Reason for prior deferral: original answers covered the stopping and high-level distinction, but not the full correction/escalation chain or state-vs-context projection boundary; this writeback uses Codex-calibrated feedback rather than treating the original answers as fully mastered.
+- Boundary: Review notes remain learning calibration, not raw evidence; durable cards keep evidence anchored to existing source notes and label these additions as engineering synthesis.
+
+## [2026-05-12] workflow | review card mandatory writeback constraint
+
+- Updated: [[复习记录索引]], [[LLM Wiki 工作流]], [[templates/概念触发式复习]]
+- Rule: 追问卡回答完后，每张卡都必须有写回归宿；成熟边界写回概念卡 / 对比页，不成熟但重要的缺口写入 [[02 问题池]] 或 [[05 Query 写回队列]]。
+- Boundary: mandatory writeback does not mean forcing half-understood material into durable concept cards; weak or unstable items must be preserved as questions or pending writeback instead.
 
 ## [2026-05-12] topic-update | comparison topic standard retrofit
 
@@ -526,3 +561,27 @@ related:
 - Method: `$team 4:executor` with worker launch args `--model gpt-5.5 -c model_reasoning_effort="xhigh"`; workers used worktrees and leader integrated commits.
 - Evidence: comparison pages anchor definitions/differences to existing concept cards and source notes; learning analogies are labeled non-evidence; runtime/product and LLM ability-source P3 groups remain pending rather than forced into weak pages.
 - Boundary: worker-2 / worker-3 lifecycle had false terminal failures from read-only probe state, but their artifacts were already integrated into leader HEAD and recorded in mailbox evidence. `raw/` source notes were not modified.
+
+## [2026-05-12] autoresearch-goal | agent framework comparison
+
+- Added source notes: [[AutoGen 官方文档]], [[AgentScope 官方文档]], [[CAMEL-AI 官方文档]], [[Microsoft Agent Framework 官方文档]]; refreshed [[LangGraph 官方文档]].
+- Added concept cards: [[AutoGen]], [[AgentScope]], [[CAMEL]], [[LangGraph]], [[Microsoft Agent Framework]].
+- Added comparison topic: [[Agent Framework 编排范式对比]].
+- Updated navigation: [[资料收集索引]], [[前沿主源清单]], [[04 页面目录]], [[05 Query 写回队列]], [[Agent 知识地图]], [[Agent 主题]], [[Agent Framework]].
+- Evidence: 官方 docs / paper/source notes anchor each framework's abstraction center: AutoGen conversation team, AgentScope message-centered platform, CAMEL role-playing/inception prompting, LangGraph state graph runtime, Microsoft Agent Framework agent/workflow SDK and AutoGen + Semantic Kernel successor boundary, LangChain DeepAgents harness on LangGraph.
+- Boundary: 本次对比训练的是 framework 编排范式和责任层，不做框架排行榜、性能评测或最新 API 教程；所有框架生态标记为 watch/volatile，需要按官方文档持续复查。
+
+## [2026-05-12] autoresearch-goal | 13-agent-framework full comparison
+
+- Added source notes: [[CrewAI 官方文档]], [[LlamaIndex Agents 官方文档]], [[Pydantic AI 官方文档]], [[Agno 官方文档]], [[Mastra 官方文档]], [[Vercel AI SDK 官方文档]], [[Google ADK 官方文档]].
+- Updated source notes: [[OpenAI Agents SDK 文档]], [[LangGraph 官方文档]], [[AutoGen 官方文档]], [[AgentScope 官方文档]], [[CAMEL-AI 官方文档]], [[Microsoft Agent Framework 官方文档]].
+- Added comparison topic: [[Agent Framework 全量选型对比 2026-05]].
+- Updated navigation: [[资料收集索引]], [[Agent 知识地图]], [[Agent 主题]], [[04 页面目录]], [[05 Query 写回队列]], [[Agent Framework]], [[Agent Framework 编排范式对比]].
+- Evidence: official docs / first-party source notes for LangGraph, OpenAI Agents SDK, Microsoft Agent Framework, AutoGen, CrewAI, LlamaIndex, Pydantic AI, Agno, Mastra, Vercel AI SDK, Google ADK, AgentScope, and CAMEL checked on 2026-05-12.
+- Boundary: this is a volatile framework selection map, not a benchmark, popularity ranking, API tutorial, or production readiness guarantee; concrete SDK APIs, preview status, cloud platform features, and commercial control planes require periodic re-check.
+
+## [2026-05-12] query-writeback | Agent State explicit vs implicit
+
+- Updated: [[Agent State]]
+- Writeback: clarified that some orchestration frameworks expose state as a first-class object, while others hide state in message history, session, trace, workflow variables, or caller-owned storage.
+- Boundary: absence of a field named `state` is not absence of runtime state; the learning question is who owns it, who updates it, how it is projected into context, and whether it supports recovery.

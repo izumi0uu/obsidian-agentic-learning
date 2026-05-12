@@ -6,7 +6,7 @@ topic:
   - frontier
 status: growing
 created: 2026-05-06
-updated: 2026-05-10
+updated: 2026-05-12
 last_checked: 2026-05-07
 freshness: watch
 conflicts: []
@@ -15,15 +15,19 @@ source:
   - "[[Letta Memory 官方文档]]"
   - "[[Zep Memory 官方文档]]"
   - "[[Mem0 Memory 官方文档]]"
+  - "[[Reflexion - Language Agents with Verbal Reinforcement Learning]]"
 evidence:
   - "[[LangGraph Memory 官方文档#为什么收]]"
   - "[[Letta Memory 官方文档#为什么收]]"
   - "[[Zep Memory 官方文档#为什么收]]"
   - "[[Mem0 Memory 官方文档#为什么收]]"
+  - "[[Reflexion - Language Agents with Verbal Reinforcement Learning#必读块 2：Abstract / episodic memory buffer]]"
 related:
   - "[[Memory]]"
   - "[[Semantic Memory]]"
   - "[[Episodic Memory]]"
+  - "[[Memory Reflection]]"
+  - "[[Reflexion]]"
   - "[[RAG]]"
 ---
 
@@ -72,6 +76,7 @@ Agent 把这条偏好写入用户记忆。之后你问 [[MCP]]，它会先说明
 - 错误记忆比没记忆更危险。
 - 用户记忆、项目记忆、任务记忆需要分开。
 - 记忆必须能被删除、审计和解释来源。
+- [[Reflexion]] 里的 Experience 不会自动变成长期记忆；它先是下一轮 Actor 可读的任务经验，只有通过筛选和治理后才适合跨会话保存。
 
 ## 边界细节
 
@@ -80,6 +85,8 @@ Agent 把这条偏好写入用户记忆。之后你问 [[MCP]]，它会先说明
 和 [[Durable Execution]] 的边界：durable execution 让当前流程可恢复；long-term memory 让跨流程信息可复用。一个 agent 可以在没有长期记忆的情况下恢复同一任务，也可以在没有 durable workflow 的情况下记住用户偏好。
 
 和 [[Semantic Memory]] / [[Episodic Memory]] 的边界：长期记忆是能力层，semantic / episodic 是内容分类。
+
+从 [[Reflexion]] 的 Experience 写入长期记忆，需要额外门槛：经验要可靠、可验证、可泛化，不包含敏感泄露，不会把一次性失败、临时工具参数或当前 repo 状态污染到未来任务。局部经验更适合留在当前 context、trace、episode 或短期任务记忆里；稳定偏好、反复出现的失败模式、用户确认过的规则，才更适合进入长期记忆。
 
 ## 现代性状态
 
@@ -101,8 +108,10 @@ Long-term Memory 是当前工程实践 + 前沿 / 易变实现层。
 - Evidence type: official docs note — [[Letta Memory 官方文档]]，支持专门 memory agent / memory block 语境。
 - Evidence type: official docs note — [[Zep Memory 官方文档]]，支持会话记忆和记忆服务语境。
 - Evidence type: official docs note — [[Mem0 Memory 官方文档]]，支持 memory service 生态语境。
+- Evidence type: paper source — [[Reflexion - Language Agents with Verbal Reinforcement Learning]]，支持 Experience / episodic memory buffer 的任务反思语境。
 - Boundary: 当前卡片综合多个 memory 系统的共同问题，不声称它们采用同一存储模型、同一 API 或同一隐私策略。
 - Engineering synthesis: “写入、检索、更新、冲突、过期、删除、权限和来源”是长期记忆治理框架，需要回到具体产品文档核对实现。
+- Engineering synthesis: Experience 写入长期记忆的筛选门槛来自 memory governance 边界综合；Reflexion 论文支持 experience 机制，但不等于自动长期记忆治理。
 - Confidence: medium。
 
 ## 复习触发
@@ -110,6 +119,7 @@ Long-term Memory 是当前工程实践 + 前沿 / 易变实现层。
 - 为什么长期记忆不是聊天记录归档？
 - Long-term Memory 和 Durable Execution 的边界是什么？
 - 一条用户偏好进入长期记忆前，应该检查哪些来源和权限问题？
+- Reflexion 里的 Experience 什么时候只留在当前任务里，什么时候才适合写入长期记忆？
 
 ## 相关链接
 

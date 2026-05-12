@@ -108,6 +108,12 @@ During attempt:  ReAct style action-observation loop
 After attempt:   Reflexion style evaluation-reflection-memory loop
 ```
 
+复习时的最小刀口：
+
+- Plan-and-Solve 的 `plan` 和 `solve` 主要发生在一次 prompt-level 回答里，通常没有外部 observation 改写后续步骤。
+- ReAct 的 `Observation` 会回到当前 trajectory，驱动下一轮 action 或 final answer。
+- Reflexion 的 evaluator 不直接产生下一次 action，而是经过 `Self-reflection -> Experience`，再影响下一轮 Actor。
+
 这条时间线是学习综合，不是三篇论文共同给出的统一架构。
 
 ## 学习类比（非证据）
