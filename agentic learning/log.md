@@ -503,3 +503,11 @@ related:
 - Rule: 概念对比页用于训练边界辨析；对比组可以是 2/N 者，但必须满足混淆风险、相近问题不同介入点、证据锚点、现代工程边界和复习价值。
 - Evidence: 样板页锚到 ReAct、Plan-and-Solve、Reflexion 三张概念卡和对应 paper source note 的必读块。
 - Boundary: 本次只建立机制、模板、首个样板页和候选队列；未批量重写旧卡，未新建弱对比页，未修改 `raw/` source notes。
+
+## [2026-05-12] review | ReAct Plan-and-Solve Reflexion follow-up cards
+
+- Added: [[02 ReAct Plan-and-Solve Reflexion 追问卡]]
+- Updated: [[复习记录索引]]
+- Purpose: 基于 [[01 概念触发式复习]] 暴露出的卡点生成独立追问卡，避免继续拉长原复习页。
+- Focus: ReAct 原地打转止损、一次性 tool calling vs ReAct、plan 文本 / Agent State task list / context 投影、代码任务越过 prompt-only Plan-and-Solve、workflow replan 补救、Reflexion Experience 与长期记忆边界、三者执行时序对比。
+- Boundary: 本次只生成复习追问卡，不把学习记录当作 raw evidence，也不直接改概念卡定义。
