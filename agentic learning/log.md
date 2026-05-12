@@ -586,6 +586,13 @@ related:
 - Writeback: clarified that some orchestration frameworks expose state as a first-class object, while others hide state in message history, session, trace, workflow variables, or caller-owned storage.
 - Boundary: absence of a field named `state` is not absence of runtime state; the learning question is who owns it, who updates it, how it is projected into context, and whether it supports recovery.
 
+## [2026-05-12] review | LangGraph special answer workspace
+
+- Added: [[02 LangGraph 专项回答]]
+- Updated: [[复习记录索引]]
+- Purpose: 基于三步 Tavily 搜索助手案例，创建专项回答页，覆盖 LangGraph state graph、线性流程图、reflection 条件边、循环型应用设计、state / checkpoint / trace 分层和框架选型。
+- Boundary: 本页是 review/practice，不是 raw evidence；先保留回答区和写回候选，等待用户作答后再校准并写回 [[LangGraph]]、[[Agent Workflow]]、[[Agent State]]、[[Evaluation]] 或框架对比页。
+
 ## [2026-05-12] autoresearch-goal | missing concept cards for full framework comparison
 
 - Added concept cards: [[State Graph Runtime]], [[Provider-first Agent SDK]], [[Crew Orchestration]], [[Role-playing Agent]], [[Data-first Agent Framework]], [[Type-safe Agent SDK]], [[Frontend-first AI Toolkit]], [[Agent Control Plane]].
@@ -600,3 +607,11 @@ related:
 - Updated navigation: [[Agent 知识地图]], [[04 页面目录]], [[05 Query 写回队列]].
 - Evidence: existing RAG concept cards, [[Retrieval 组件对比]], [[RAG 类型对比]], [[Context RAG Memory 对比]], [[Microsoft RAG 官方文档]], [[Neo4j GraphRAG 官方文档]].
 - Boundary: this pass supplements the RAG topic map and one high-value missing concept; it does not force every retrieval sub-technique such as query rewrite, citation faithfulness, or access control into standalone concept cards.
+
+## [2026-05-12] autoresearch-goal | rag and llm boundary backlog
+
+- Added concept cards: [[RAG Citation Faithfulness]], [[RAG Access Control]], [[Query Rewrite]], [[Query Planning]], [[Graph Construction Evaluation]], [[Entity Resolution]], [[Token]], [[Context Window]], [[Prompt]], [[Hallucination]].
+- Added comparison topics: [[RAG 可靠性与治理对比]], [[Query Rewrite Query Planning Agentic Retrieval 对比]], [[GraphRAG 构图与评估对比]], [[LLM 输入输出基础边界对比]].
+- Updated navigation: [[RAG 主题]], [[LLM 主题]], [[Agent 知识地图]], [[04 页面目录]], [[05 Query 写回队列]].
+- Evidence: existing concept cards and source notes including [[RAG Evaluation]], [[Microsoft RAG 官方文档]], [[Azure AI Search Agentic Retrieval]], [[Neo4j GraphRAG 官方文档]], [[Attention Is All You Need]], [[OpenAI - A Practical Guide to Building Agents]], [[OWASP LLM Top 10 2025]], and [[OWASP Agentic Applications Top 10]].
+- Boundary: this pass closes the recommended RAG / LLM boundary backlog without forcing [[temperature]] or every decoding parameter into a weak card; those remain follow-up candidates in [[LLM 主题]].
