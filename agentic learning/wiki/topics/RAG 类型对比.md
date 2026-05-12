@@ -5,162 +5,174 @@ topic:
   - comparison
 status: active
 created: 2026-05-06
-updated: 2026-05-10
+updated: 2026-05-12
 source:
   - "[[RAG]]"
+  - "[[Retriever]]"
+  - "[[Hybrid Search]]"
+  - "[[Reranking]]"
   - "[[GraphRAG]]"
   - "[[Agentic RAG]]"
   - "[[Agentic Retrieval]]"
   - "[[Corrective RAG]]"
   - "[[Self-RAG]]"
   - "[[Neo4j GraphRAG 官方文档]]"
+evidence:
+  - "[[RAG#证据锚点]]"
+  - "[[GraphRAG#证据锚点]]"
+  - "[[Agentic RAG#证据锚点]]"
+  - "[[Agentic Retrieval#证据锚点]]"
+  - "[[Corrective RAG#证据锚点]]"
+  - "[[Self-RAG#证据锚点]]"
+  - "[[Hybrid Search#证据锚点]]"
+  - "[[Reranking#证据锚点]]"
+  - "[[Neo4j#证据锚点]]"
 related:
   - "[[RAG 主题]]"
   - "[[前沿主源清单]]"
   - "[[Retriever]]"
   - "[[Neo4j]]"
+  - "[[RAG Evaluation]]"
 ---
 
 # RAG 类型对比
 
-这页专门回答：不同 RAG 到底差在哪里。
+## 一句话总览
 
-核心边界：有些是 RAG 方法，有些是检索模式，有些是工程工具。不要把 [[GraphRAG]]、[[Self-RAG]]、[[Neo4j]]、向量数据库混成同一层级。
+这页回答：不同 RAG 形态到底差在哪里。核心边界不是“哪个更高级”，而是它们分别改造了 RAG 链路的不同位置：文档处理、检索方式、排序、图关系、检索决策、证据纠错或生成时自检。
 
-## 一张表先抓住
+最小判断：[[RAG]] 是基本模式；Vector / Hybrid / Reranked RAG 改检索质量；[[GraphRAG]] 改知识结构；[[Agentic RAG]] / [[Agentic Retrieval]] 改检索决策；[[Corrective RAG]] / [[Self-RAG]] 改证据评估和自适应控制。
 
-| 类型 | 核心变化 | 主要解决什么问题 | 最适合的场景 | 它不是什么 |
-|---|---|---|---|---|
-| [[RAG]] | 检索外部资料，再生成回答 | 模型知识过时、不可引用、不能访问私有资料 | 文档问答、知识库问答、个人笔记问答 | 不是长期记忆全部，也不能保证答案正确 |
-| Vector RAG | 用 embedding 做语义相似检索 | 用户问法和文档措辞不同 | FAQ、语义相近的文档检索 | 不是“语义相似就一定正确” |
-| Hybrid RAG | 向量检索 + 关键词/全文检索 | 语义检索漏关键词，关键词检索不懂语义 | 专有名词、代码、产品文档、法律/医疗文本 | 不是简单把两个结果拼一起 |
-| Reranked RAG | 初检后用 reranker 重新排序 | top-k 里有相关材料但排序不好 | 高准确问答、长文档检索 | 不是扩大召回本身 |
-| [[GraphRAG]] | 用实体、关系、社区或知识图谱增强检索 | 多跳关系、跨文档实体关系、全局总结 | 组织知识、人物/公司/项目关系、复杂知识网络 | 不是用了图数据库就自动更好 |
-| [[Neo4j]] GraphRAG | 用 Neo4j 图数据库、Cypher、向量/全文/图遍历做 GraphRAG | 把图结构落到可查询、可维护的工程系统 | 已有实体关系、需要可视化/可查询图谱、Graph + Vector 混合 | 不是一个新 RAG 概念，而是实现生态 |
-| [[Agentic RAG]] | Agent 决定何时检索、检索什么、是否重查 | 复杂任务需要规划、多轮检索、证据判断 | 多步骤研究、比较任务、工具型 Agent | 不是加一个 Agent 就变强 |
-| [[Agentic Retrieval]] | 检索层做 query planning、子问题分解、多源检索 | 单次 query / top-k 不够 | 企业搜索、多源知识库、复杂问题拆解 | 不是完整 Agent |
-| [[Corrective RAG]] | 检索后评估证据质量，不够好就补救 | 坏检索导致坏答案 | 高准确问答、需要质量门的 RAG | 不是多搜几次 |
-| [[Self-RAG]] | 模型判断是否检索、如何生成、证据是否支持答案 | 固定检索浪费或引入噪音 | 需要自适应检索和证据批判的任务 | 不是 prompt 里说“请反思” |
+## 为什么这组值得对比
 
-## 生活类比
+- 混淆风险高：GraphRAG、Agentic RAG、Self-RAG、Corrective RAG 都容易被说成“更高级的 RAG”。
+- 共同问题域相同：都围绕“如何把外部知识带入生成，并让答案更可证据化”。
+- 介入点不同：有的改 retrieve，有的改 rank，有的改知识结构，有的加 evaluator，有的让模型决定是否检索。
+- 证据密度足够：相关概念卡已有 paper / docs / source note 锚点。
+- 现代工程价值高：能帮助判断什么时候只要普通 RAG，什么时候才值得引入图、agent、纠错或自检。
 
-把 RAG 想成“你要写一份旅行攻略，先去找资料，再组织成答案”：
+边界：这页不替代每张概念卡，也不声称这些 RAG 类型构成严格谱系；它只用于学习时切开工程介入点。
 
-| RAG 类型 | 生活中的对应物 | 为什么这样类比 |
-|---|---|---|
-| [[RAG]] | 先去书架拿几本旅游书，再写攻略 | 模型不是只靠记忆回答，而是先拿外部资料 |
-| Vector RAG | 你按“意思相近”找资料，比如搜“适合亲子玩水的地方” | 重点是语义相似，即使原文没有完全相同的词 |
-| Hybrid RAG | 你既按意思找，也按具体关键词找，比如“冲绳”“儿童票”“浮潜” | 语义检索和关键词检索互补，避免漏掉专有名词 |
-| Reranked RAG | 你先拿到一堆资料，再把最有用的几篇放到最上面 | 它不是找更多资料，而是把已有候选重新排序 |
-| [[GraphRAG]] | 你画一张人物/地点/交通关系图，再根据关系写攻略 | 重点是实体和关系，不只是相似文本片段 |
-| [[Neo4j]] GraphRAG | 你用一个专业地图和关系数据库来管理这张关系图 | Neo4j 是工程工具和数据库生态，不是新 RAG 方法本身 |
-| [[Agentic RAG]] | 你让一个助理自己决定先查机票、再查酒店、再比较路线，不够就继续查 | 检索决策进入 Agent 行动循环，不是一次固定检索 |
-| [[Agentic Retrieval]] | 图书管理员先帮你拆问题，再去不同书架分别找资料 | 它更偏检索层的 query planning 和多源检索 |
-| [[Corrective RAG]] | 你拿到资料后先检查是否靠谱，不靠谱就换关键词重查 | 核心是证据质量评估和补救路径 |
-| [[Self-RAG]] | 写攻略的人边写边判断：这句话需要查证吗？证据支持吗？ | 核心是模型自适应决定检索、生成和批判 |
+## 共同问题域
 
-这组类比里最关键的一刀是：普通 RAG 是“先找资料再回答”；GraphRAG 是“用关系图找资料”；Agentic RAG 是“让助理决定怎么查”；Corrective/Self-RAG 是“查完或写作中检查证据是否够好”。
+共同问题是：模型参数里没有、过时、不可引用或私有的知识，如何从外部资料中取回，并在生成时正确使用。
 
-## 按问题选型
-
-### 我只是想让模型回答我的文档
-
-先用普通 [[RAG]]。
-
-最小流程：
+RAG 链路可以粗略拆成：
 
 ```text
-文档 -> chunk -> embedding -> vector search -> LLM answer
+source -> ingest/chunk -> index -> retrieve -> rank/filter -> generate -> verify/evaluate
 ```
 
-不要一开始就上 GraphRAG 或 Agentic RAG。先验证：文档是否切得好，检索结果是否相关，答案是否引用来源。
+不同 RAG 类型的差异，往往不是“有没有检索”，而是它改造了这条链路的哪一段。
 
-### 我的问题包含实体关系和多跳关联
+## 核心区别表
 
-考虑 [[GraphRAG]] 或 [[Neo4j]] GraphRAG。
-
-适合例子：
-
-- 某公司和哪些人物、项目、技术路线有关？
-- 一个代码库里模块之间怎样调用？
-- 一个研究主题有哪些子领域和代表论文？
-
-不适合例子：
-
-- 单段 FAQ。
-- 简单事实查询。
-- 图关系抽取质量很差的资料。
-
-### 我的问题很复杂，需要多次查资料
-
-考虑 [[Agentic RAG]] 或 [[Agentic Retrieval]]。
-
-典型问题：
-
-> 比较 LangGraph、OpenAI Agents SDK 和 AutoGen 在 memory、trace、human-in-the-loop 上的差异。
-
-这种问题不是一次 top-k 就能解决，需要拆维度、分来源检索、判断证据是否够。
-
-### 我担心检索结果不可靠
-
-考虑 [[Corrective RAG]]。
-
-它的重点是 retrieval evaluator：
-
-```text
-retrieve -> grade evidence -> enough? -> answer / rewrite / retrieve again / fallback
-```
-
-### 我想让模型自己判断是否需要检索
-
-看 [[Self-RAG]]。
-
-但要注意：原始 Self-RAG 是论文方法，核心是训练和 reflection tokens。工程上用 prompt 模拟自检，只能算近似。
-
-## Neo4j 应该放在哪一层
-
-[[Neo4j]] 属于 GraphRAG 的工程实现层。
-
-它能提供：
-
-- 图数据库：节点、关系、属性。
-- Cypher 查询：结构化图查询。
-- 向量索引：支持 vector search。
-- 全文搜索：支持关键词/全文检索。
-- 图遍历：沿关系扩展上下文。
-- LLM Knowledge Graph Builder：从非结构文本抽取实体、关系和 chunk。
-
-但它不自动解决：
-
-- 实体抽取质量。
-- 图 schema 设计。
-- 关系是否真实。
-- 检索策略是否适合问题。
-- 生成答案是否忠实引用证据。
+| 类型 | 主要介入点 | 时序 / loop | 输入 | 输出 | 证据锚点 |
+|---|---|---|---|---|---|
+| [[RAG]] | 最小检索增强生成模式 | `query -> retrieve -> generate` | 用户问题、外部文档 | 带上下文的回答 | [[RAG#证据锚点]] |
+| Vector RAG | 向量相似检索 | ingest 后索引，query 时相似搜索 | embedding、向量库 | top-k 相似 chunk | [[Vector Database]], [[Embedding]] |
+| [[Hybrid Search]] | 向量 + 关键词/全文互补 | retrieve 阶段并行或融合 | query、embedding、关键词 | 更稳的候选集合 | [[Hybrid Search#证据锚点]] |
+| [[Reranking]] | 初检后的重新排序 | retrieve 后、generate 前 | 候选 chunk、query | 重新排序后的证据 | [[Reranking#证据锚点]] |
+| [[GraphRAG]] | 实体/关系/社区结构 | ingest 建图，query 时图遍历/图上下文 | 文档、实体、关系 | 图增强上下文 | [[GraphRAG#证据锚点]] |
+| [[Neo4j]] GraphRAG | 图数据库实现层 | 图存储、Cypher、向量/全文/遍历组合 | 节点、关系、向量索引 | 可查询图谱 + RAG 上下文 | [[Neo4j#证据锚点]] |
+| [[Agentic RAG]] | Agent 决定检索策略 | 多轮 plan / retrieve / judge / retry | 复杂任务、多源资料 | 多步检索与综合答案 | [[Agentic RAG#证据锚点]] |
+| [[Agentic Retrieval]] | 检索层 query planning | retrieve 前拆问题、多源检索 | 企业搜索问题、多源索引 | 分解后的检索结果 | [[Agentic Retrieval#证据锚点]] |
+| [[Corrective RAG]] | 检索后证据质量门 | retrieve -> grade -> repair / answer | 检索结果、质量判断 | 纠错后的证据路径 | [[Corrective RAG#证据锚点]] |
+| [[Self-RAG]] | 生成时自适应检索/批判 | decide retrieve / generate / critique | query、模型判断、证据 | 自适应检索和证据批判 | [[Self-RAG#证据锚点]] |
 
 ## 最容易混淆的边界
 
-- [[GraphRAG]] vs [[Neo4j]]：前者是模式/方法，后者是图数据库和工具生态。
-- [[GraphRAG]] vs [[RAGGraph]]：GraphRAG 通常指图增强检索；RAGGraph 可能只是把 RAG pipeline 做成图工作流。
-- [[Agentic RAG]] vs [[Agentic Retrieval]]：前者是整个 RAG 系统的决策模式；后者更偏检索层。
-- [[Corrective RAG]] vs [[Self-RAG]]：前者偏工程流程里的检索质量评估；后者来自模型自适应检索/生成/批判论文线。
-- Hybrid RAG vs [[GraphRAG]]：Hybrid 解决向量/关键词互补；GraphRAG 解决实体关系和图结构上下文。
+- [[GraphRAG]] vs [[Neo4j]]：前者是图增强检索模式，后者是图数据库和工程生态。
+- [[GraphRAG]] vs [[RAGGraph]]：GraphRAG 通常强调图结构知识；RAGGraph 可能只是把 RAG pipeline 编排成 graph workflow。
+- [[Agentic RAG]] vs [[Agentic Retrieval]]：前者是整个 RAG 系统进入 Agent 决策；后者更偏检索层 query planning、多源检索和子问题分解。
+- [[Corrective RAG]] vs [[Self-RAG]]：前者偏工程流程里检索质量评估和补救；后者来自模型自适应检索 / 生成 / 批判论文线。
+- [[Hybrid Search]] vs [[GraphRAG]]：Hybrid 解决语义和关键词互补；GraphRAG 解决实体关系和图结构上下文。
+- [[Reranking]] vs 扩大 top-k：reranking 主要重排候选，不等于扩大召回本身。
 
-## 对我的学习建议
+## 执行时序 / 机制差异
 
-当前阶段先按这个顺序学：
+```text
+Basic RAG:       Query -> Retrieve -> Generate
+Hybrid/Rerank:   Query -> Retrieve many ways -> Rerank/Filter -> Generate
+GraphRAG:        Query -> Entity/Relation/Community context -> Generate
+Agentic RAG:     Goal -> Plan/Search -> Evaluate evidence -> Re-search/Answer
+Corrective RAG:  Retrieve -> Grade evidence -> Correct/Retrieve again -> Generate
+Self-RAG:        Generate-time decisions: retrieve? evidence enough? critique?
+```
 
-1. [[RAG]]：理解最小流程。
-2. [[Retriever]]：理解检索错误如何影响回答。
-3. Vector / Hybrid / Reranking：理解检索质量的基础工程。
-4. [[GraphRAG]] + [[Neo4j GraphRAG 官方文档]]：理解图结构什么时候值得引入。
-5. [[Agentic RAG]] / [[Agentic Retrieval]]：理解复杂任务里的检索决策。
-6. [[Corrective RAG]] / [[Self-RAG]]：理解证据质量和自适应检索。
+这组时序是学习综合，不是所有论文或产品共享的统一实现。
+
+## 学习类比（非证据）
+
+> 这一节只是 learning analogy，不是论文或官方文档证据。
+
+把 RAG 想成“写旅行攻略前找资料”：
+
+| RAG 类型 | 生活中的对应物 | 类比边界 |
+|---|---|---|
+| [[RAG]] | 先拿旅游书，再写攻略 | 说明外部资料进入回答，不说明资料一定正确 |
+| Vector RAG | 按“意思相近”找资料 | 语义相似不等于事实支持 |
+| [[Hybrid Search]] | 既按意思找，也按地名/票价等关键词找 | 互补检索，不是简单拼接结果 |
+| [[Reranking]] | 先拿一摞资料，再把最有用的排前面 | 排序不是召回本身 |
+| [[GraphRAG]] | 先画人物/地点/交通关系图 | 图关系质量决定效果 |
+| [[Agentic RAG]] | 让助理自己决定先查什么、再比较什么 | 助理决策需要 trace/eval 约束 |
+| [[Corrective RAG]] | 发现资料不靠谱就换资料或补查 | 关键是证据质量门 |
+| [[Self-RAG]] | 写作时边写边判断“这句要不要查证” | 工程 prompt 模拟不等于论文训练方法 |
+
+## 现代系统如何吸收或限制
+
+### 来源支持的稳定部分
+
+- [[RAG]] 卡和 source note 支持“检索外部资料再生成”的基本模式。
+- [[Hybrid Search]]、[[Reranking]] 和 [[Retriever]] 相关卡支持“检索质量是独立工程层”的判断。
+- [[GraphRAG]] / [[Neo4j]] 相关卡支持“实体关系和图数据库可以增强检索”的工程边界。
+- [[Corrective RAG]] 和 [[Self-RAG]] 的 paper/source note 支持“证据质量判断”和“自适应检索/批判”是 RAG 可靠性的关键问题。
+
+### 工程综合 / inference
+
+现代 RAG 系统通常不是只选一个标签，而是组合多层：先做好 ingestion / chunking / hybrid retrieval / reranking，再按任务复杂度选择 GraphRAG、Agentic Retrieval 或 corrective loop。把所有高级词都堆上去，常常比最小 RAG 更难调试。
+
+## 什么时候用哪个判断
+
+| 场景 | 更应该看哪个概念 | 为什么 | 风险 |
+|---|---|---|---|
+| 文档问答、个人知识库问答 | [[RAG]] | 最小链路足够先验证切分、检索和引用 | 不要一开始过度工程化 |
+| 专有名词、代码、产品文档 | [[Hybrid Search]] + [[Reranking]] | 语义和关键词互补，排序改善证据质量 | 融合策略可能带来噪音 |
+| 多跳实体关系、跨文档网络 | [[GraphRAG]] / [[Neo4j]] | 图结构表达关系和全局上下文 | 图抽取错误会污染上下文 |
+| 多步骤研究、多源比较 | [[Agentic RAG]] / [[Agentic Retrieval]] | 需要分解问题、决定查什么和是否重查 | Agent 决策需要预算、trace、eval |
+| 高准确任务，坏检索代价高 | [[Corrective RAG]] | 检索结果先过质量门 | evaluator 错误会导致过度补救或错杀证据 |
+| 模型需要判断是否检索和证据是否支持 | [[Self-RAG]] | 自适应检索/生成/批判 | prompt 近似不等于论文训练机制 |
+
+## 它们共同不是什么
+
+- 都不是“加了检索就不会幻觉”。
+- 都不是长期记忆的全部；RAG 更偏外部知识检索，记忆还涉及写入、更新、遗忘和权限。
+- 都不是越复杂越好；复杂 RAG 会增加调试、成本、延迟和证据污染风险。
+- 都不自动保证引用忠实；还需要 [[RAG Evaluation]]、trace、答案-证据一致性检查和人工抽检。
+
+## 证据锚点
+
+- Concept anchors: [[RAG#证据锚点]], [[GraphRAG#证据锚点]], [[Agentic RAG#证据锚点]], [[Agentic Retrieval#证据锚点]], [[Corrective RAG#证据锚点]], [[Self-RAG#证据锚点]], [[Hybrid Search#证据锚点]], [[Reranking#证据锚点]], [[Neo4j#证据锚点]]
+- Source examples: [[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]], [[Microsoft RAG 官方文档]], [[Neo4j GraphRAG 官方文档]], [[Azure AI Search Agentic Retrieval]], [[Corrective Retrieval Augmented Generation]], [[Self-RAG - Learning to Retrieve Generate and Critique]]
+- Evidence type: concept-card synthesis + paper/docs source notes + learning analogy.
+- Confidence: medium-high for layer distinctions; medium for specific “when to use” judgments because they depend on corpus quality、latency、成本和评测目标。
+- Boundary: 表格里的 Vector / Hybrid / Reranked RAG 是工程模式标签；不是每个都有同等级论文来源。类比只用于学习，不是来源证据。
+
+## 复习触发
+
+1. 如果一个系统用了 Neo4j，它一定是 GraphRAG 吗？为什么？
+2. Hybrid Search 和 Reranking 分别改造 RAG 链路的哪一段？
+3. Agentic RAG 和 Agentic Retrieval 的最小区别是什么？
+4. Corrective RAG 和 Self-RAG 都会“检查证据”，它们的检查位置有什么不同？
+5. 给一个简单 FAQ 场景，说明为什么不应该一开始就上 GraphRAG / Agentic RAG。
 
 ## 相关链接
 
 - [[RAG 主题]]
 - [[RAG]]
+- [[Retriever]]
+- [[Hybrid Search]]
+- [[Reranking]]
 - [[GraphRAG]]
 - [[RAGGraph]]
 - [[Agentic RAG]]
@@ -168,4 +180,5 @@ retrieve -> grade evidence -> enough? -> answer / rewrite / retrieve again / fal
 - [[Corrective RAG]]
 - [[Self-RAG]]
 - [[Neo4j]]
+- [[RAG Evaluation]]
 - [[Neo4j GraphRAG 官方文档]]

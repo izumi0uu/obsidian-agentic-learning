@@ -511,3 +511,10 @@ related:
 - Purpose: 基于 [[01 概念触发式复习]] 暴露出的卡点生成独立追问卡，避免继续拉长原复习页。
 - Focus: ReAct 原地打转止损、一次性 tool calling vs ReAct、plan 文本 / Agent State task list / context 投影、代码任务越过 prompt-only Plan-and-Solve、workflow replan 补救、Reflexion Experience 与长期记忆边界、三者执行时序对比。
 - Boundary: 本次只生成复习追问卡，不把学习记录当作 raw evidence，也不直接改概念卡定义。
+
+## [2026-05-12] topic-update | comparison topic standard retrofit
+
+- Updated: [[RAG 类型对比]], [[Environment Observation 类型对比]], [[Trajectory Trace 类型对比]]
+- Change: 按 [[LLM Wiki 工作流#概念对比 / 类比 topic 页写法]] 补齐旧对比 topic 的准入理由、共同问题域、核心区别表、机制差异、非证据类比、现代系统吸收/工程推论边界、选型判断、共同非目标、证据锚点和复习触发。
+- Evidence: 旧 topic 的差异判断回链到对应概念卡 `## 证据锚点` 和已有 paper/docs source notes；类比均标注为 learning analogy / 非证据。
+- Boundary: 本次只改已有对比类 topic 页；未强行把 [[Agent 主题]]、[[LLM 主题]]、[[RAG 主题]] 等普通入口页套进对比模板，未修改 `raw/`。
