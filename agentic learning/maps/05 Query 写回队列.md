@@ -34,6 +34,7 @@ related:
 | 2026-05-11 | done | “Deep Agent 是什么？” | [[LangChain DeepAgents]], [[03 前沿追踪]] | 已写回 LangChain / LangGraph `deepagents` 作为具体 SDK / harness；边界区分通用 deep agent 形态和 RUC-NLPIR DeepAgent 论文/项目名 |
 | 2026-05-12 | done | “建立概念对比 / 类比 topic 机制，并以 ReAct / Plan-and-Solve / Reflexion 做样板” | [[LLM Wiki 工作流]], [[ReAct Plan-and-Solve Reflexion 对比]], [[概念对比页]] | 已写回准入标准、证据边界、模板、样板页和候选队列 |
 | 2026-05-12 | done | “当前热门 Agent Framework 全量对比，覆盖 13 个框架并写入 wiki” | [[Agent Framework 全量选型对比 2026-05]], [[Agent Framework]] | 已写回官方来源、选型矩阵、全量对比表、现代性状态和复习触发 |
+| 2026-05-12 | done | “Agent Framework 全量选型对比页里还有概念没有创建概念卡” | [[State Graph Runtime]], [[Provider-first Agent SDK]], [[Crew Orchestration]], [[Role-playing Agent]], [[Data-first Agent Framework]], [[Type-safe Agent SDK]], [[Frontend-first AI Toolkit]], [[Agent Control Plane]] | 已创建 8 张 framework 选型边界概念卡，并回链 [[Agent Framework 全量选型对比 2026-05]] |
 
 ## 写回模板
 

@@ -585,3 +585,11 @@ related:
 - Updated: [[Agent State]]
 - Writeback: clarified that some orchestration frameworks expose state as a first-class object, while others hide state in message history, session, trace, workflow variables, or caller-owned storage.
 - Boundary: absence of a field named `state` is not absence of runtime state; the learning question is who owns it, who updates it, how it is projected into context, and whether it supports recovery.
+
+## [2026-05-12] autoresearch-goal | missing concept cards for full framework comparison
+
+- Added concept cards: [[State Graph Runtime]], [[Provider-first Agent SDK]], [[Crew Orchestration]], [[Role-playing Agent]], [[Data-first Agent Framework]], [[Type-safe Agent SDK]], [[Frontend-first AI Toolkit]], [[Agent Control Plane]].
+- Updated topic: [[Agent Framework 全量选型对比 2026-05]] now links the recurring boundary terms to durable concept cards.
+- Updated navigation: [[Agent 知识地图]], [[Agent 主题]], [[04 页面目录]], [[05 Query 写回队列]].
+- Evidence: existing official source notes for LangGraph, OpenAI Agents SDK, CrewAI, CAMEL-AI, LlamaIndex Agents, Pydantic AI, Vercel AI SDK, Mastra, Agno, AgentScope, Google ADK, and the full comparison topic.
+- Boundary: this pass creates only high-value framework-selection boundary cards; it does not force every API name, product module, or vendor feature into a concept card.

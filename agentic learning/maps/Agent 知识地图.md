@@ -74,6 +74,18 @@ LLM 地基：
 - [[Neo4j]]：GraphRAG 工程实现层，帮助理解图数据库、知识图谱和检索系统如何结合。
 - [[Obsidian + LLM Wiki]]：我的个人知识库如何适配 LLM 辅助学习。
 
+
+## Framework 选型边界概念
+
+- [[State Graph Runtime]]：区分状态图运行时和普通 SDK / UI toolkit。
+- [[Provider-first Agent SDK]]：区分供应商优先 SDK 和通用 workflow runtime。
+- [[Crew Orchestration]]：区分 crew / 角色任务协作和普通 group chat。
+- [[Role-playing Agent]]：理解 CAMEL 式 role-playing / inception prompting 的稳定地基与生产边界。
+- [[Data-first Agent Framework]]：区分 data/RAG-first 框架和通用状态图框架。
+- [[Type-safe Agent SDK]]：区分类型/结构验证和事实正确性。
+- [[Frontend-first AI Toolkit]]：区分 UI streaming/tool-loop toolkit 和完整 Agent platform。
+- [[Agent Control Plane]]：区分 SDK、runtime 和平台治理控制面。
+
 ## 可靠性
 
 - [[Evaluation]]：如何检查 Agent 是否稳定有效。

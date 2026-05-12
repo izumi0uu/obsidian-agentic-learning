@@ -48,20 +48,28 @@ related:
   - "[[Trace]]"
   - "[[Evaluation]]"
   - "[[Human-in-the-loop]]"
+  - "[[Agent Control Plane]]"
+  - "[[Frontend-first AI Toolkit]]"
+  - "[[Type-safe Agent SDK]]"
+  - "[[Data-first Agent Framework]]"
+  - "[[Role-playing Agent]]"
+  - "[[Crew Orchestration]]"
+  - "[[Provider-first Agent SDK]]"
+  - "[[State Graph Runtime]]"
 ---
 
 # Agent Framework 全量选型对比 2026-05
 
 ## 一句话总览
 
-这 13 个热门 Agent framework / SDK / toolkit 不在同一层：[[LangGraph]]、[[Microsoft Agent Framework]]、Google ADK、Mastra 更接近 workflow/runtime；OpenAI Agents SDK、Pydantic AI、Vercel AI SDK 更像模型/应用 SDK；CrewAI、AutoGen、CAMEL、AgentScope 更强调多 Agent 协作范式或平台；LlamaIndex 从 data/RAG 生态进入；Agno 更像 SDK + runtime + control plane 的 Agent platform stack。
+这 13 个热门 Agent framework / SDK / toolkit 不在同一层：[[LangGraph]]、[[Microsoft Agent Framework]]、Google ADK、Mastra 更接近 workflow/[[State Graph Runtime|runtime]]；OpenAI Agents SDK、Pydantic AI、Vercel AI SDK 更像模型/应用 SDK；CrewAI、AutoGen、CAMEL、AgentScope 更强调多 Agent 协作范式或平台；LlamaIndex 从 data/RAG 生态进入；Agno 更像 SDK + runtime + [[Agent Control Plane|control plane]] 的 Agent platform stack。
 
 最小选型问题不是“哪个最火”，而是：**你需要谁来负责状态、流程、工具权限、数据/RAG、多人协作、观测评测和部署？** 如果这些责任没有先分层，framework 热度只会放大复杂度。
 
 ## 为什么这组值得对比
 
 - 用户明确要求覆盖：LangGraph、OpenAI Agents SDK、Microsoft Agent Framework、AutoGen、CrewAI、LlamaIndex、Pydantic AI、Agno、Mastra、Vercel AI SDK、Google ADK、AgentScope、CAMEL。
-- 它们都声称能构建 agentic applications，但抽象中心不同：graph、SDK、workflow、team、role-playing、data/RAG、type-safe Python、frontend streaming、platform runtime。
+- 它们都声称能构建 agentic applications，但抽象中心不同：graph、SDK、workflow、team、[[Role-playing Agent|role-playing]]、[[Data-first Agent Framework|data/RAG]]、[[Type-safe Agent SDK|type-safe Python]]、[[Frontend-first AI Toolkit|frontend streaming]]、[[Agent Control Plane|platform runtime]]。
 - 这些差异会直接影响工程责任：状态是否显式、恢复是否可靠、人工审批在哪里、工具副作用如何限制、trace/eval 是否可用、是否绑定某个云/模型/语言生态。
 - 证据足够：每个条目都有官方文档或一手 source note 锚点；本页的选型建议是基于文档的工程综合，而不是性能 benchmark。
 
@@ -83,41 +91,45 @@ LLM call
 
 差异在于谁是“第一抽象”：有的先画图，有的先定义 Agent 类，有的先定义 crew/team，有的先定义 role-playing society，有的先处理 RAG/data，有的先接 UI streaming。
 
+## 本页新增概念卡入口
+
+这些卡不是框架排行榜，而是把选型时反复出现的边界词沉淀成可复习概念：[[State Graph Runtime]]、[[Provider-first Agent SDK]]、[[Crew Orchestration]]、[[Role-playing Agent]]、[[Data-first Agent Framework]]、[[Type-safe Agent SDK]]、[[Frontend-first AI Toolkit]]、[[Agent Control Plane]]。
+
 ## 快速选型矩阵
 
 | 你真正需要的是 | 优先看 | 为什么 | 先警惕什么 |
 |---|---|---|---|
 | 可恢复、可审计的状态图 / human-in-the-loop workflow | LangGraph | state、nodes、edges、checkpoint、durable execution 是核心 | 图复杂度、状态 schema、节点幂等和部署治理仍要自己设计 |
-| OpenAI-first 的 agent app，内置 handoffs / guardrails / tracing | OpenAI Agents SDK | SDK 直接围绕 OpenAI 平台抽象 Agent、tools、handoffs、guardrails、traces | 不要把它当通用 state graph runtime；平台 API 易变 |
+| OpenAI-first 的 agent app，内置 handoffs / guardrails / tracing | OpenAI Agents SDK | SDK 直接围绕 OpenAI 平台抽象 Agent、tools、handoffs、guardrails、traces | 不要把它当通用 [[State Graph Runtime|state graph runtime]]；平台 API 易变 |
 | 微软 / Azure / .NET / Semantic Kernel / AutoGen 迁移路线 | Microsoft Agent Framework | 官方当前把 agents 与 workflows 放进统一框架，并承接 AutoGen + SK 经验 | public preview / 继任路线仍 volatile；迁移成本需复查 |
 | 对话式 multi-agent team / group chat 原型 | AutoGen | AgentChat Teams 以 group chat、speaker selection、termination、handoff 为核心 | 微软官方新路线偏 MAF；AutoGen 更适合沉淀 conversation-first 范式 |
-| 业务角色协作 + crew + flow + 企业控制台 | CrewAI | agents / crews / tasks / flows 同时覆盖角色协作和自动化流程 | 角色多不等于责任清；平台/企业能力边界需验证 |
+| 业务角色协作 + [[Crew Orchestration|crew]] + flow + 企业控制台 | CrewAI | agents / crews / tasks / flows 同时覆盖角色协作和自动化流程 | 角色多不等于责任清；平台/企业能力边界需验证 |
 | 知识密集型 Agent / RAG / query engine as tool | LlamaIndex | 数据连接、索引、query engine、AgentWorkflow 与 RAG 生态强 | 不要把 RAG 框架误当所有控制流的最佳 runtime |
 | Python 类型安全、结构化输出、依赖注入、eval | Pydantic AI | Pydantic 验证 + deps/output/tools/evals/Logfire 适合后端工程 | 类型正确不等于事实正确；复杂流程可能还要 graph/workflow runtime |
-| Agent 平台栈：SDK + runtime + control plane | Agno | 官方三层架构强调 agents/teams/workflows、runtime service、AgentOS/control plane | 开源/商业/平台边界和组织治理成本需复查 |
+| Agent 平台栈：SDK + runtime + [[Agent Control Plane|control plane]] | Agno | 官方三层架构强调 agents/teams/workflows、runtime service、AgentOS/control plane | 开源/商业/平台边界和组织治理成本需复查 |
 | TypeScript-first full-stack agents + workflows + evals | Mastra | agents、workflows、memory、approval、observability、evals、deploy 同栈 | API/product 演进快；与 Vercel AI SDK 分工需明确 |
-| Next.js / frontend streaming UI / lightweight tool loop | Vercel AI SDK | ToolLoopAgent、provider、streaming UI、telemetry、workflow patterns 贴近应用层 | 不是完整多 Agent 平台；复杂状态/恢复可能外接 runtime |
+| Next.js / frontend streaming UI / lightweight tool loop | Vercel AI SDK | ToolLoopAgent、provider、[[Frontend-first AI Toolkit|streaming UI]]、telemetry、workflow patterns 贴近应用层 | 不是完整多 Agent 平台；复杂状态/恢复可能外接 runtime |
 | Google / Gemini / Vertex / multi-language production agents | Google ADK | multi-agent、workflow agents、graph workflows、eval、deploy、context、Cloud path | 语言版本和 ADK 2.0 等能力状态需复查；生态绑定要评估 |
 | message-centered multi-agent platform / 分布式实验与应用 | AgentScope | message、agent、tool、memory、observability、deployment、distributed 是平台线索 | 官方能力广，不等于所有部署都低成本可扩展 |
-| role-playing / agent society / communicative agents 研究与框架 | CAMEL | 原始地基是 role-playing + inception prompting，现代扩展到 agents/societies/memory/RAG | paper 范式不等于生产成熟度；与 AutoGen group chat 要切开 |
+| [[Role-playing Agent|role-playing]] / agent society / communicative agents 研究与框架 | CAMEL | 原始地基是 role-playing + inception prompting，现代扩展到 agents/societies/memory/RAG | paper 范式不等于生产成熟度；与 AutoGen group chat 要切开 |
 
 ## 全量对比表
 
 | 框架 | 首要抽象 | 语言 / 生态 | 状态与流程 | 多 Agent | 数据 / 记忆 / RAG | 观测 / 评测 / 部署 | 现代性判断 |
 |---|---|---|---|---|---|---|---|
-| LangGraph | state graph runtime | Python / JS，LangChain / LangSmith | 强：state、nodes、edges、checkpoint、durable execution、HITL | 可建 multi-agent graph | memory / store / persistence 可接入 | LangSmith、部署/平台能力 | current-practice；API watch |
-| OpenAI Agents SDK | OpenAI-first agent SDK | Python，OpenAI platform | 中：agent loop、sessions、handoff；非底层 graph | handoffs 是核心协作方式 | tools、MCP、sessions；RAG 依赖外部/平台 | tracing、guardrails、platform 集成 | current-practice / volatile |
+| LangGraph | [[State Graph Runtime|state graph runtime]] | Python / JS，LangChain / LangSmith | 强：state、nodes、edges、checkpoint、durable execution、HITL | 可建 multi-agent graph | memory / store / persistence 可接入 | LangSmith、部署/平台能力 | current-practice；API watch |
+| OpenAI Agents SDK | [[Provider-first Agent SDK|OpenAI-first agent SDK]] | Python，OpenAI platform | 中：agent loop、sessions、handoff；非底层 graph | handoffs 是核心协作方式 | tools、MCP、sessions；RAG 依赖外部/平台 | tracing、guardrails、platform 集成 | current-practice / volatile |
 | Microsoft Agent Framework | agent + workflow 统一 SDK | Python / .NET / Microsoft / Azure | 强：agents vs workflows、state、middleware、telemetry | 支持 multi-agent / orchestration | Semantic Kernel / Azure 生态衔接 | telemetry、middleware、Azure path | frontier/volatile；preview 边界 |
 | AutoGen | conversation-first team | Python，Microsoft / AutoGen | 中：team preset、termination、state；非首要 graph runtime | 强：group chat、speaker selection、handoff | tools / memory 可接入 | observability 有文档，但路线需看 MAF | transitional -> current-practice pattern |
 | CrewAI | agents + crews + flows | Python / CrewAI platform | 中强：crews 管协作，flows 管显式流程 | 强：role/task/crew 协作 | memory、knowledge、tools | guardrails、observability、enterprise console | current-practice / volatile |
-| LlamaIndex | data/RAG-first agent workflow | Python / TS，LlamaCloud | 中：AgentWorkflow、FunctionAgent、workflows | 有 multi-agent patterns | 强：indexes、query engine、retrieval、RAG | observability/evaluating/LlamaCloud | current-practice；data-first |
-| Pydantic AI | type-safe Python agent SDK | Python / Pydantic / Logfire | 中：Agent、deps、output、Pydantic Graph / durable | 有 MCP/A2A 等集成线索 | tools、structured output、deps；RAG 外接 | Pydantic Evals、Logfire | current-practice / volatile |
-| Agno | SDK + runtime + control plane | Python/platform，AgentOS | 中强：agents/teams/workflows + runtime | 强：teams / multi-agent demos | memory、knowledge、context providers | OTel、audit logs、RBAC、deploy | platform-frontier / volatile |
+| LlamaIndex | [[Data-first Agent Framework|data/RAG-first agent workflow]] | Python / TS，LlamaCloud | 中：AgentWorkflow、FunctionAgent、workflows | 有 multi-agent patterns | 强：indexes、query engine、retrieval、RAG | observability/evaluating/LlamaCloud | current-practice；data-first |
+| Pydantic AI | [[Type-safe Agent SDK|type-safe Python agent SDK]] | Python / Pydantic / Logfire | 中：Agent、deps、output、Pydantic Graph / durable | 有 MCP/A2A 等集成线索 | tools、structured output、deps；RAG 外接 | Pydantic Evals、Logfire | current-practice / volatile |
+| Agno | SDK + runtime + [[Agent Control Plane|control plane]] | Python/platform，AgentOS | 中强：agents/teams/workflows + runtime | 强：teams / multi-agent demos | memory、knowledge、context providers | OTel、audit logs、RBAC、deploy | platform-frontier / volatile |
 | Mastra | TypeScript agent + workflow framework | TypeScript / full-stack | 强：agents for open-ended，workflows for deterministic control | supervisor agents / multi-agent | memory、tools、MCP、structured output | observability、evals、deploy | current-practice / volatile |
-| Vercel AI SDK | frontend-first AI app toolkit | TypeScript / Next.js / UI | 轻中：ToolLoopAgent、loop control、workflow patterns | subagents pattern | memory/context；RAG 外接 | telemetry、streaming UI、Vercel app stack | toolkit-current / volatile |
+| Vercel AI SDK | [[Frontend-first AI Toolkit|frontend-first AI app toolkit]] | TypeScript / Next.js / UI | 轻中：ToolLoopAgent、loop control、workflow patterns | subagents pattern | memory/context；RAG 外接 | telemetry、streaming UI、Vercel app stack | toolkit-current / volatile |
 | Google ADK | multi-language agent development kit | Python / TS / Go / Java，Google Cloud | 强：workflow agents、graph workflows、sessions/context | 强：multi-agent systems、routing | memory/context/artifacts/tools/MCP | eval、observability、Cloud Run/GKE/Agent Runtime | frontier/volatile |
 | AgentScope | message-centered multi-agent platform | Python / Alibaba / AgentScope | 中强：Msg、agent、orchestration、distribution | 强：message hub / multi-agent | tools、memory、MCP/A2A | observability、deployment、distributed | current-practice / volatile |
-| CAMEL | role-playing / agent society | Python / CAMEL-AI | 中：role-playing/society；现代模块扩展 | 强：communicative agents / societies | memory、RAG、synthetic data | framework/docs 能力需按版本核验 | foundation/transitional + volatile framework |
+| CAMEL | [[Role-playing Agent|role-playing]] / agent society | Python / CAMEL-AI | 中：role-playing/society；现代模块扩展 | 强：communicative agents / societies | memory、RAG、synthetic data | framework/docs 能力需按版本核验 | foundation/transitional + volatile framework |
 
 ## 维度横切判断
 
@@ -136,7 +148,7 @@ LLM call
 
 ### LangGraph vs OpenAI Agents SDK
 
-LangGraph 首先是 state graph runtime：你显式设计状态、节点、边、循环和恢复。OpenAI Agents SDK 首先是 OpenAI-first SDK：你用 Agent、tools、handoffs、guardrails、tracing 快速构建 agentic app。前者更像“底层控制流骨架”，后者更像“平台 SDK”。
+LangGraph 首先是 [[State Graph Runtime|state graph runtime]]：你显式设计状态、节点、边、循环和恢复。OpenAI Agents SDK 首先是 OpenAI-first SDK：你用 Agent、tools、handoffs、guardrails、tracing 快速构建 agentic app。前者更像“底层控制流骨架”，后者更像“平台 SDK”。
 
 ### Microsoft Agent Framework vs AutoGen
 
@@ -191,7 +203,7 @@ Pydantic AI 的关键是 Python 类型、Pydantic 验证、依赖注入和结构
 
 ### Source notes
 
-- [[LangGraph 官方文档]]：state graph runtime、durable execution、human-in-the-loop。
+- [[LangGraph 官方文档]]：[[State Graph Runtime|state graph runtime]]、durable execution、human-in-the-loop。
 - [[OpenAI Agents SDK 文档]]：Agent、tools、handoffs、guardrails、tracing、sessions、MCP。
 - [[Microsoft Agent Framework 官方文档]]：agents vs workflows、AutoGen + Semantic Kernel successor / preview 边界。
 - [[AutoGen 官方文档]]：Teams / group chat、speaker selection、termination、handoff。
@@ -225,7 +237,7 @@ Evidence type: 官方文档 / 官方 source note + 工程综合。Confidence: me
 
 ## 复习触发
 
-1. 如果你要做一个“能恢复、能审批、能回放”的长任务 Agent，为什么先看 state/workflow/runtime，而不是先看哪个框架 demo 最酷？
+1. 如果你要做一个“能恢复、能审批、能回放”的长任务 Agent，为什么先看 state/workflow/[[State Graph Runtime|runtime]]，而不是先看哪个框架 demo 最酷？
 2. CrewAI、AutoGen、CAMEL 都强调多 Agent，三者的第一抽象分别是什么？
 3. LlamaIndex、LangGraph、Mastra 都能做 workflow，为什么 LlamaIndex 更偏 data/RAG，LangGraph 更偏 state graph，Mastra 更偏 TS full-stack？
 4. OpenAI Agents SDK、Pydantic AI、Vercel AI SDK 都像 SDK，它们分别围绕什么生态建立边界？

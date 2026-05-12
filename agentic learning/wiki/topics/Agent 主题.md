@@ -65,6 +65,18 @@ SORT created DESC
 - [[Repo Context]]
 - [[Patch Validation]]
 
+
+## Framework 选型边界概念
+
+- [[State Graph Runtime]]
+- [[Provider-first Agent SDK]]
+- [[Crew Orchestration]]
+- [[Role-playing Agent]]
+- [[Data-first Agent Framework]]
+- [[Type-safe Agent SDK]]
+- [[Frontend-first AI Toolkit]]
+- [[Agent Control Plane]]
+
 ## 工程工具教程
 
 - [[oh-my-codex 使用教程]]
