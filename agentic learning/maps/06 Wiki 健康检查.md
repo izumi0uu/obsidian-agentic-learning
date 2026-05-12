@@ -5,7 +5,7 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-07
-updated: 2026-05-11
+updated: 2026-05-12
 related:
   - "[[LLM Wiki 工作流]]"
   - "[[04 页面目录]]"
@@ -19,11 +19,11 @@ related:
 
 ## 当前状态
 
-- Last lint: 2026-05-10
+- Last lint: 2026-05-12
 - Missing links: none
 - Concept cards: 91
 - Raw source notes: 813（包含按题拆分的 imported question source pages；主源清单仍看 [[资料收集索引]]）
-- Query write-back pending: 0
+- Query write-back pending: 2（概念对比候选队列中 P3 两项暂不强行成页）
 - Concept cards missing `## 边界细节`: 51（P0 样例 + P1 小范围修复后；P1 修复前为 57）
 - Concept cards missing `## 现代性状态`: 73（P0 样例 + P1 小范围修复后；P1 修复前为 79）
 - Concept cards missing `## 复习触发`: 78（P0 样例 + P1 小范围修复后；P1 修复前为 86）
@@ -116,6 +116,31 @@ P1 8 张目标卡已按新标准补齐 `## 概念详解`：
 - 本次补齐剩余 6 张：[[Agent Framework]], [[Agent State]], [[Agent Workflow]], [[Eval Harness]], [[LLM-as-Judge]], [[RAG Evaluation]]。
 
 边界：这表示 P1 目标卡完成了“概念详解主体化”，不代表 90 张旧概念卡已全量深修；后续仍按主题小批量推进。
+
+
+## 2026-05-12 Team 概念对比 topic 全量更新
+
+本轮按 `$team 4:executor` 启动 4 个 `gpt-5.5 xhigh` worker，目标是把 P1/P2/P3 中证据足够的概念组写成边界判断型 topic 对比页。
+
+### 新增 / 集成页面
+
+- Agent 工程 / 协议：[[Agent 工程分层对比]], [[Tool 接口层对比]], [[Multi-agent Handoff Protocol 对比]]。
+- 安全 / 执行边界：[[Agent 安全控制点对比]], [[Browser Computer Use 执行栈对比]], [[Coding Agent 执行边界对比]]。
+- Memory / RAG / retrieval：[[Agent Memory 类型对比]], [[Context RAG Memory 对比]], [[Retrieval 组件对比]]。
+- Evaluation / observability：[[Evaluation 层次对比]], [[Observability Audit 对比]]。
+- LLM 地基：[[LLM 基础结构对比]]。
+
+### 验收边界
+
+- 所有新增对比页都应保留 [[LLM Wiki 工作流#概念对比 / 类比 topic 页写法]] 要求的 section：一句话总览、为什么值得对比、共同问题域、核心区别表、混淆边界、机制差异、非证据类比、现代系统吸收/限制、什么时候用哪个判断、共同不是什么、证据锚点、复习触发、相关链接。
+- `raw/` 仍保持 evidence 层，本轮不编辑 raw source notes。
+- [[Oh My Codex (OMX)]] / [[Hermes Agent]] / [[LangChain DeepAgents]] / [[Agent Framework]] 这类 runtime / 产品对比暂不强行成页；它们变化快，进入 [[05 Query 写回队列]] 的 P3 pending。
+- [[LLM]] / [[LLM Training Pipeline]] / [[Zero-shot CoT]] / [[Plan-and-Solve Prompting]] 的“能力来源”对比也暂不强行成页；需先补训练主源与 prompting paper 的证据边界。
+
+### Team lifecycle 备注
+
+- worker 页面内容已通过 team auto-commit / cherry-pick 集成到 leader branch。
+- worker-2 / worker-3 的 task lifecycle 曾因 native subagent read-only probe 误判进入 `failed` terminal；后续 mailbox 和 commit 证据显示对应内容已存在于 leader HEAD。最终关闭 team 时按“terminal failed but acknowledged / deliverable integrated”处理，而不是继续重复派发弱修复任务。
 
 ## Freshness 规则
 

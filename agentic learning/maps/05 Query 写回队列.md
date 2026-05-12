@@ -48,9 +48,19 @@ related:
 | 优先级 | 状态 | 候选概念组 | 为什么值得对比 | 下一步 |
 |---|---|---|---|---|
 | P1 | done | [[ReAct]] / [[Plan-and-Solve Prompting]] / [[Reflexion]] | 都改善复杂任务可靠性，但分别介入行动前、行动中、行动后；混淆风险高且 paper source note 充分 | 已写入 [[ReAct Plan-and-Solve Reflexion 对比]] |
-| P1 | pending | [[Agent Framework]] / [[Agent Harness]] / [[Agent Workflow]] / [[Agent State]] | 都描述 Agent 工程承载层，但边界分别是框架、运行支架、流程图/步骤和状态数据；容易混成“框架万能” | 先核对四张卡证据，再决定是否新建工程分层对比页 |
-| P1 | pending | [[Tool Use]] / [[Tool Calling]] / [[Tool Registry]] / [[Tool Permissioning]] | 都和工具有关，但分别是能力范畴、结构化调用契约、工具发现/注册和权限边界 | 先核对 [[Toolformer]] raw / docs 证据，避免把历史 tool-use 论文和现代 schema 混写 |
-| P2 | pending | [[Memory]] / [[Long-term Memory]] / [[Semantic Memory]] / [[Episodic Memory]] / [[Memory Reflection]] | 都是 Agent memory 线索，但分别是总类、长期保存、事实/语义、事件经验和反思生成 | 适合在 memory 主题小批量复查后写对比页 |
-| P2 | pending | [[Prompt Injection]] / [[Indirect Prompt Injection]] / [[Tool Poisoning]] / [[Data Exfiltration]] | 都是安全风险，但攻击入口、传播路径和防护边界不同 | 先确认 OWASP / MCP threat-model source anchors 后再写 |
+| P1 | done | [[Agent Framework]] / [[Agent Harness]] / [[Agent Workflow]] / [[Agent State]] / [[Agent Loop]] | 都描述 Agent 工程承载层，但边界分别是框架、运行支架、流程图/步骤、状态数据和循环机制 | 已写入 [[Agent 工程分层对比]] |
+| P1 | done | [[Tool Use]] / [[Tool Calling]] / [[Tool Registry]] / [[Tool Permissioning]] / [[MCP]] / [[MCP Registry]] | 都和工具有关，但分别是能力范畴、结构化调用契约、工具发现/注册、权限边界和协议生态 | 已写入 [[Tool 接口层对比]] |
+| P1 | done | [[Prompt Injection]] / [[Indirect Prompt Injection]] / [[Tool Poisoning]] / [[Data Exfiltration]] / [[Guardrails]] / [[Policy Engine]] / [[Approval Gate]] / [[Least Privilege Tools]] | 都是 Agent 安全控制点，但攻击入口、传播路径、策略判断、人类批准和最小权限边界不同 | 已写入 [[Agent 安全控制点对比]] |
+| P2 | done | [[Memory]] / [[Agent State]] / [[Long-term Memory]] / [[Episodic Memory]] / [[Semantic Memory]] / [[Memory Reflection]] / [[Parametric Memory]] / [[Non-Parametric Memory]] | 都是 Agent memory 线索，但分别是运行态、长期保存、事实/语义、事件经验、反思生成和模型内外知识来源 | 已写入 [[Agent Memory 类型对比]] |
+| P2 | done | [[Evaluation]] / [[Benchmark]] / [[Eval Harness]] / [[LLM-as-Judge]] / [[Task Success Rate]] / [[RAG Evaluation]] / [[Trajectory Evaluation]] | 都和“判断系统是否有效”有关，但分别位于指标、数据集、运行支架、judge 方法和任务/轨迹/RAG 层 | 已写入 [[Evaluation 层次对比]] |
+| P2 | done | [[Observability]] / [[Trace]] / [[Audit Log]] / [[Replay]] / [[OpenTelemetry GenAI]] | 都记录系统行为，但分别服务实时可观测、结构化执行记录、审计责任、复现调试和标准化 telemetry | 已写入 [[Observability Audit 对比]] |
+| P2 | done | [[Browser Agent]] / [[Computer Use]] / [[GUI Grounding]] / [[Observation]] / [[Sandbox Workspace]] / [[Code Execution Sandbox]] / [[Tool Permissioning]] | 都在 GUI / computer-use 执行栈上相邻，但感知、行动、反馈、隔离和权限控制边界不同 | 已写入 [[Browser Computer Use 执行栈对比]] |
+| P2 | done | [[Context Engineering]] / [[RAG]] / [[Memory]] / [[Repo Context]] / [[Retriever]] / [[Chunking]] / [[Embedding]] | 都在给模型提供上下文，但分别负责上下文设计、外部检索、跨轮保留、代码仓库投影和检索组件 | 已写入 [[Context RAG Memory 对比]] |
+| P2 | done | [[Retriever]] / [[Hybrid Search]] / [[Reranking]] / [[Vector Database]] / [[Embedding]] / [[Document Ingestion]] | 都是 retrieval pipeline 组件，但分别对应资料入库、向量表示、候选召回、多路召回和排序校正 | 已写入 [[Retrieval 组件对比]] |
+| P2 | done | [[Multi-agent Orchestration]] / [[Handoff]] / [[A2A]] / [[ACP]] / [[MCP]] / [[Agent Workflow]] / [[Durable Execution]] | 都处理 Agent 协作或跨边界连接，但 workflow、handoff、agent-to-agent 协议、tool/resource 协议和持久执行不是同一层 | 已写入 [[Multi-agent Handoff Protocol 对比]] |
+| P2 | done | [[Coding Agent]] / [[Repo Context]] / [[Patch Validation]] / [[Sandbox Workspace]] / [[Code Execution Sandbox]] / [[AGENTS.md]] | 都在代码 Agent 执行边界附近，但分别是行动主体、上下文、补丁验证、工作区隔离、代码执行隔离和人类规则入口 | 已写入 [[Coding Agent 执行边界对比]] |
 | P2 | existing | [[Trajectory]] / [[Trace]] / [[Reasoning Trace]] / [[Trajectory Evaluation]] / [[Replay]] | 已有高价值边界页，说明 trajectory、trace 和 reasoning trace 的层级差异 | 见 [[Trajectory Trace 类型对比]]；后续只做维护 |
 | P2 | existing | [[RAG]] / [[Agentic RAG]] / [[Corrective RAG]] / [[Self-RAG]] | 已有 RAG 类型比较入口，适合继续补 evidence / modernity | 见 [[RAG 类型对比]]；后续只做维护 |
+| P3 | done | [[Transformer]] / [[Self-Attention]] / [[Multi-Head Attention]] / [[Positional Encoding]] | 都是 LLM 架构地基，容易把架构、机制和位置编码混成同一层 | 已写入 [[LLM 基础结构对比]] |
+| P3 | pending | [[LLM]] / [[LLM Training Pipeline]] / [[Zero-shot CoT]] / [[Plan-and-Solve Prompting]] | 都和 LLM 能力来源有关，但训练流程、模型能力、prompt-time reasoning pattern 证据层级不同 | 暂不强行成页；需补齐训练主源和 prompting paper 边界后再写 |
+| P3 | pending | [[Oh My Codex (OMX)]] / [[Hermes Agent]] / [[LangChain DeepAgents]] / [[Agent Framework]] | 都是具体 runtime / 产品 / framework 生态，变化快且容易把产品能力误当通用 Agent 定义 | 暂不强行成页；需查新版本和产品边界后再写 |

@@ -4,11 +4,13 @@ topic:
   - rag
 status: active
 created: 2026-05-05
-updated: 2026-05-06
+updated: 2026-05-12
 related:
   - "[[RAG]]"
   - "[[Retriever]]"
   - "[[RAG 类型对比]]"
+  - "[[Context RAG Memory 对比]]"
+  - "[[Retrieval 组件对比]]"
   - "[[Obsidian + LLM Wiki]]"
 ---
 
@@ -19,6 +21,8 @@ related:
 ## 先看这个
 
 - [[RAG 类型对比]]：不同 RAG 类型的横向对比。
+- [[Context RAG Memory 对比]]：区分 context engineering、RAG、memory 和 repo context 的上下文供给边界。
+- [[Retrieval 组件对比]]：区分 ingestion、embedding、vector database、retriever、hybrid search 和 reranking 的 pipeline 位置。
 - [[Neo4j GraphRAG 官方文档]]：GraphRAG / Knowledge Graph RAG 的重要工程主源之一。
 - [[Neo4j]]：GraphRAG 的重要工程实现生态，不是一个独立 RAG 方法名。
 

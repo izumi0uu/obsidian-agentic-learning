@@ -17,6 +17,8 @@ related:
   - "[[Planning]]"
   - "[[Evaluation]]"
   - "[[ReAct Plan-and-Solve Reflexion 对比]]"
+  - "[[Agent 工程分层对比]]"
+  - "[[Tool 接口层对比]]"
 ---
 
 # Agent 知识地图
@@ -89,10 +91,21 @@ LLM 地基：
 
 ## 对比入口
 
+- [[Agent 工程分层对比]]：区分 framework、harness、workflow、state 和 loop。
+- [[Tool 接口层对比]]：区分 tool use、tool calling、registry、permissioning、MCP 和 registry。
+- [[Agent 安全控制点对比]]：区分 prompt injection、tool poisoning、data exfiltration、guardrails、policy engine、approval gate 和 least privilege tools。
+- [[Agent Memory 类型对比]]：区分 state、long-term、episodic、semantic、reflection、parametric / non-parametric memory。
+- [[Multi-agent Handoff Protocol 对比]]：区分 orchestration、handoff、A2A、ACP、MCP、workflow 和 durable execution。
+- [[Browser Computer Use 执行栈对比]]：区分 browser agent、computer use、GUI grounding、observation、sandbox 和 permissioning。
+- [[Coding Agent 执行边界对比]]：区分 coding agent、repo context、patch validation、sandbox、code execution sandbox 和 AGENTS.md。
+- [[Evaluation 层次对比]]：区分 evaluation、benchmark、eval harness、LLM-as-Judge、task success rate、RAG evaluation 和 trajectory evaluation。
+- [[Observability Audit 对比]]：区分 observability、trace、audit log、replay 和 OpenTelemetry GenAI。
 - [[ReAct Plan-and-Solve Reflexion 对比]]：从“行动前计划 / 执行中观察校正 / 执行后反思经验”切开 ReAct、Plan-and-Solve 和 Reflexion。
 - [[Environment Observation 类型对比]]：区分 Environment、Observation、Tool Result 等反馈来源。
 - [[Trajectory Trace 类型对比]]：区分 trajectory、trace、reasoning trace、trajectory evaluation 和 replay。
 - [[RAG 类型对比]]：区分 RAG、Agentic RAG、Corrective RAG、Self-RAG 等检索增强路线。
+- [[Context RAG Memory 对比]]：区分 context engineering、RAG、memory、repo context 和 retriever。
+- [[Retrieval 组件对比]]：区分 retrieval pipeline 的入库、表示、召回、混合检索和重排。
 
 ## 当前概念卡
 

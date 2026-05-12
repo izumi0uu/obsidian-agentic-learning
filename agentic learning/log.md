@@ -518,3 +518,11 @@ related:
 - Change: 按 [[LLM Wiki 工作流#概念对比 / 类比 topic 页写法]] 补齐旧对比 topic 的准入理由、共同问题域、核心区别表、机制差异、非证据类比、现代系统吸收/工程推论边界、选型判断、共同非目标、证据锚点和复习触发。
 - Evidence: 旧 topic 的差异判断回链到对应概念卡 `## 证据锚点` 和已有 paper/docs source notes；类比均标注为 learning analogy / 非证据。
 - Boundary: 本次只改已有对比类 topic 页；未强行把 [[Agent 主题]]、[[LLM 主题]]、[[RAG 主题]] 等普通入口页套进对比模板，未修改 `raw/`。
+
+## [2026-05-12] topic-update | P1/P2/P3 comparison topic full update
+
+- Added: [[Agent 工程分层对比]], [[Tool 接口层对比]], [[Agent 安全控制点对比]], [[Agent Memory 类型对比]], [[Evaluation 层次对比]], [[Observability Audit 对比]], [[Browser Computer Use 执行栈对比]], [[Context RAG Memory 对比]], [[Retrieval 组件对比]], [[Multi-agent Handoff Protocol 对比]], [[Coding Agent 执行边界对比]], [[LLM 基础结构对比]].
+- Updated navigation: [[04 页面目录]], [[05 Query 写回队列]], [[06 Wiki 健康检查]], [[Agent 知识地图]], [[Agent 主题]], [[RAG 主题]], [[LLM 主题]].
+- Method: `$team 4:executor` with worker launch args `--model gpt-5.5 -c model_reasoning_effort="xhigh"`; workers used worktrees and leader integrated commits.
+- Evidence: comparison pages anchor definitions/differences to existing concept cards and source notes; learning analogies are labeled non-evidence; runtime/product and LLM ability-source P3 groups remain pending rather than forced into weak pages.
+- Boundary: worker-2 / worker-3 lifecycle had false terminal failures from read-only probe state, but their artifacts were already integrated into leader HEAD and recorded in mailbox evidence. `raw/` source notes were not modified.

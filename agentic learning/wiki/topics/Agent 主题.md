@@ -10,8 +10,9 @@ related:
   - "[[ReAct]]"
   - "[[Coding Agent]]"
   - "[[Agent 知识地图]]"
-  - "[[Environment Observation 类型对比]]"
-  - "[[Trajectory Trace 类型对比]]"
+  - "[[Agent 工程分层对比]]"
+  - "[[Tool 接口层对比]]"
+  - "[[Agent 安全控制点对比]]"
   - "[[ReAct Plan-and-Solve Reflexion 对比]]"
 ---
 
@@ -40,6 +41,13 @@ SORT created DESC
 ## 相关地图
 
 - [[Agent 知识地图]]
+- [[Agent 工程分层对比]]
+- [[Tool 接口层对比]]
+- [[Agent 安全控制点对比]]
+- [[Agent Memory 类型对比]]
+- [[Multi-agent Handoff Protocol 对比]]
+- [[Browser Computer Use 执行栈对比]]
+- [[Coding Agent 执行边界对比]]
 - [[Environment Observation 类型对比]]
 - [[Trajectory Trace 类型对比]]
 - [[ReAct Plan-and-Solve Reflexion 对比]]

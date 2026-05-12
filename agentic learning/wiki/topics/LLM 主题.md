@@ -8,6 +8,7 @@ updated: 2026-05-10
 related:
   - "[[LLM]]"
   - "[[Transformer]]"
+  - "[[LLM 基础结构对比]]"
   - "[[Agent 知识地图]]"
 ---
 
@@ -40,6 +41,7 @@ SORT file.name ASC
 
 ## Transformer 地基
 
+- [[LLM 基础结构对比]]：先用一张边界页切开 Transformer、self-attention、multi-head attention 和 positional encoding。
 - [[Transformer]]
 - [[Self-Attention]]
 - [[Multi-Head Attention]]
