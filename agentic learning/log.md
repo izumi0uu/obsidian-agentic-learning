@@ -593,3 +593,10 @@ related:
 - Updated navigation: [[Agent 知识地图]], [[Agent 主题]], [[04 页面目录]], [[05 Query 写回队列]].
 - Evidence: existing official source notes for LangGraph, OpenAI Agents SDK, CrewAI, CAMEL-AI, LlamaIndex Agents, Pydantic AI, Vercel AI SDK, Mastra, Agno, AgentScope, Google ADK, and the full comparison topic.
 - Boundary: this pass creates only high-value framework-selection boundary cards; it does not force every API name, product module, or vendor feature into a concept card.
+## [2026-05-12] autoresearch-goal | rag topic supplement
+
+- Updated topic: [[RAG 主题]] now includes learning route, RAG pipeline layers, component/type entrances, boundary judgments, failure diagnosis path, evidence anchors, and review triggers.
+- Added concept card: [[Knowledge Graph]] to clarify the graph-structure layer behind GraphRAG / Neo4j.
+- Updated navigation: [[Agent 知识地图]], [[04 页面目录]], [[05 Query 写回队列]].
+- Evidence: existing RAG concept cards, [[Retrieval 组件对比]], [[RAG 类型对比]], [[Context RAG Memory 对比]], [[Microsoft RAG 官方文档]], [[Neo4j GraphRAG 官方文档]].
+- Boundary: this pass supplements the RAG topic map and one high-value missing concept; it does not force every retrieval sub-technique such as query rewrite, citation faithfulness, or access control into standalone concept cards.

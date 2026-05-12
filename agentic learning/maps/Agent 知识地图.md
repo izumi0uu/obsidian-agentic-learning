@@ -67,11 +67,11 @@ LLM 地基：
 
 ## 知识能力
 
-- [[RAG]]：如何从外部知识库检索资料再生成回答。
-- [[Document Ingestion]]：理解资料进入知识库前的解析、切分和元数据质量。
-- [[Vector Database]]：理解向量检索底座。
-- [[Hybrid Search]] 和 [[Reranking]]：理解生产 RAG 的检索质量层。
-- [[Neo4j]]：GraphRAG 工程实现层，帮助理解图数据库、知识图谱和检索系统如何结合。
+- [[RAG]]：如何从外部知识库检索资料再生成回答；完整学习入口见 [[RAG 主题]]。
+- [[Document Ingestion]]、[[Chunking]] 和 [[Embedding]]：理解资料进入知识库、被切成证据单元并变成语义表示的入口质量。
+- [[Retriever]]、[[Vector Database]]、[[Hybrid Search]] 和 [[Reranking]]：理解生产 RAG 的召回、基础设施、混合检索和排序质量层。
+- [[Knowledge Graph]]、[[GraphRAG]] 和 [[Neo4j]]：理解关系结构、图增强检索和图数据库工程生态如何结合。
+- [[RAG Evaluation]]：理解 RAG 失败要分层评估检索、上下文、引用和最终回答。
 - [[Obsidian + LLM Wiki]]：我的个人知识库如何适配 LLM 辅助学习。
 
 

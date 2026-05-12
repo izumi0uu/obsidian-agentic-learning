@@ -35,6 +35,7 @@ related:
 | 2026-05-12 | done | “建立概念对比 / 类比 topic 机制，并以 ReAct / Plan-and-Solve / Reflexion 做样板” | [[LLM Wiki 工作流]], [[ReAct Plan-and-Solve Reflexion 对比]], [[概念对比页]] | 已写回准入标准、证据边界、模板、样板页和候选队列 |
 | 2026-05-12 | done | “当前热门 Agent Framework 全量对比，覆盖 13 个框架并写入 wiki” | [[Agent Framework 全量选型对比 2026-05]], [[Agent Framework]] | 已写回官方来源、选型矩阵、全量对比表、现代性状态和复习触发 |
 | 2026-05-12 | done | “Agent Framework 全量选型对比页里还有概念没有创建概念卡” | [[State Graph Runtime]], [[Provider-first Agent SDK]], [[Crew Orchestration]], [[Role-playing Agent]], [[Data-first Agent Framework]], [[Type-safe Agent SDK]], [[Frontend-first AI Toolkit]], [[Agent Control Plane]] | 已创建 8 张 framework 选型边界概念卡，并回链 [[Agent Framework 全量选型对比 2026-05]] |
+| 2026-05-12 | done | “补充 RAG 主题页，沉淀学习路线、组件边界、类型入口和诊断路径” | [[RAG 主题]], [[Knowledge Graph]] | 已补充 RAG 主题导航、pipeline、失败诊断、证据锚点和复习触发，并创建 [[Knowledge Graph]] 概念卡 |
 
 ## 写回模板
 
