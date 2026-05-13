@@ -615,3 +615,23 @@ related:
 - Updated navigation: [[RAG 主题]], [[LLM 主题]], [[Agent 知识地图]], [[04 页面目录]], [[05 Query 写回队列]].
 - Evidence: existing concept cards and source notes including [[RAG Evaluation]], [[Microsoft RAG 官方文档]], [[Azure AI Search Agentic Retrieval]], [[Neo4j GraphRAG 官方文档]], [[Attention Is All You Need]], [[OpenAI - A Practical Guide to Building Agents]], [[OWASP LLM Top 10 2025]], and [[OWASP Agentic Applications Top 10]].
 - Boundary: this pass closes the recommended RAG / LLM boundary backlog without forcing [[temperature]] or every decoding parameter into a weak card; those remain follow-up candidates in [[LLM 主题]].
+
+## [2026-05-13] query-writeback | LangGraph production project blueprint
+
+- Updated: [[05 Query 写回队列]]
+- Writeback: added pending synthesis for a realistic LangGraph-oriented production project blueprint covering multi-source retrieval, tool execution, human approval, checkpoint/resume, trace/eval, deployment, and governance boundaries.
+- Boundary: this is queued as a project blueprint candidate rather than a new concept card, because the answer combines multiple existing concepts instead of introducing one stable standalone concept.
+
+## [2026-05-13] autoresearch-goal | Claw Bot / OpenClaw intake decision
+
+- Updated: [[05 Query 写回队列]]
+- Decision: Claw Bot is worth tracking only as OpenClaw / Clawbot legacy alias, a volatile concrete Agent gateway / personal-assistant harness source.
+- Boundary: do not create a stable [[Claw Bot]] concept card; if ingested later, start from [[OpenClaw Repo]], [[03 前沿追踪]], [[Agent Harness]], and [[Coding Agent 执行边界对比]].
+
+## [2026-05-13] autoresearch-goal | OpenClaw Repo vs Hermes Agent
+
+- Added source note: [[OpenClaw Repo]].
+- Added comparison topic: [[OpenClaw Repo vs Hermes Agent]].
+- Updated navigation: [[资料收集索引]], [[前沿主源清单]], [[03 前沿追踪]], [[Agent 知识地图]], [[Agent 主题]], [[04 页面目录]], [[05 Query 写回队列]].
+- Evidence: OpenClaw official repo/docs checked on 2026-05-13, including README, Gateway architecture, Agent runtime, Agent workspace, Memory, Skills, Multi-agent routing, Background tasks, Security, Sandboxing, Clawbot alias, and GitHub latest release API; Hermes evidence reused from [[Hermes Agent Repo]] and [[Hermes Agent]].
+- Boundary: OpenClaw is recorded as a volatile project/source and compared as a Gateway-first personal assistant harness; no stable [[Claw Bot]] or [[OpenClaw]] concept card was created.

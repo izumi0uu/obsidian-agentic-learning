@@ -4,13 +4,14 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-12
+updated: 2026-05-13
 related:
   - "[[Agent]]"
   - "[[ReAct]]"
   - "[[Coding Agent]]"
   - "[[Agent 知识地图]]"
   - "[[Agent 工程分层对比]]"
+  - "[[OpenClaw Repo vs Hermes Agent]]"
   - "[[Tool 接口层对比]]"
   - "[[Agent 安全控制点对比]]"
   - "[[ReAct Plan-and-Solve Reflexion 对比]]"
@@ -48,6 +49,7 @@ SORT created DESC
 - [[Multi-agent Handoff Protocol 对比]]
 - [[Browser Computer Use 执行栈对比]]
 - [[Coding Agent 执行边界对比]]
+- [[OpenClaw Repo vs Hermes Agent]]
 - [[Environment Observation 类型对比]]
 - [[Trajectory Trace 类型对比]]
 - [[ReAct Plan-and-Solve Reflexion 对比]]
@@ -82,6 +84,7 @@ SORT created DESC
 - [[oh-my-codex 使用教程]]
 - [[Oh My Codex (OMX)]]
 - [[Hermes Agent]]
+- [[OpenClaw Repo]]
 - [[LangChain DeepAgents]]
 - [[AutoGen]]
 - [[AgentScope]]

@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-12
+updated: 2026-05-13
 related:
   - "[[Agent]]"
   - "[[前沿主源清单]]"
@@ -49,6 +49,7 @@ LLM 地基：
 - [[Memory]]：Agent 如何保存和使用过去的信息。
 - [[Oh My Codex (OMX)]]：一个具体的 Codex CLI 编排实践，用来观察 Agent Harness 如何落地。
 - [[Hermes Agent]]：一个具体的 self-improving Agent runtime，用来观察 memory、skills、messaging gateway、MCP、security approval 和 `/goal` 如何组合。
+- [[OpenClaw Repo]]：一个 local-first personal assistant / Agent gateway source，用来观察多渠道入口、workspace memory、skills、sandbox、security audit 和 background tasks 如何组合。
 - [[OMX $ 指令]]：理解 OMX 如何把澄清、计划、执行、研究、评审和 goal 验收做成可触发的 skill/workflow 入口。
 - [[Agent Framework]]：理解 LangGraph、OpenAI Agents SDK、AutoGen 等框架解决的是哪层工程问题。
 - [[Agent Framework 编排范式对比]]：区分 AutoGen、AgentScope、CAMEL、LangGraph、Microsoft Agent Framework 和 DeepAgents 的编排范式。
@@ -122,6 +123,7 @@ LLM 地基：
 - [[Multi-agent Handoff Protocol 对比]]：区分 orchestration、handoff、A2A、ACP、MCP、workflow 和 durable execution。
 - [[Browser Computer Use 执行栈对比]]：区分 browser agent、computer use、GUI grounding、observation、sandbox 和 permissioning。
 - [[Coding Agent 执行边界对比]]：区分 coding agent、repo context、patch validation、sandbox、code execution sandbox 和 AGENTS.md。
+- [[OpenClaw Repo vs Hermes Agent]]：区分 OpenClaw 的 Gateway-first personal assistant harness 和 Hermes 的 runtime-first self-improving agent harness。
 - [[Evaluation 层次对比]]：区分 evaluation、benchmark、eval harness、LLM-as-Judge、task success rate、RAG evaluation 和 trajectory evaluation。
 - [[Observability Audit 对比]]：区分 observability、trace、audit log、replay 和 OpenTelemetry GenAI。
 - [[ReAct Plan-and-Solve Reflexion 对比]]：从“行动前计划 / 执行中观察校正 / 执行后反思经验”切开 ReAct、Plan-and-Solve 和 Reflexion。

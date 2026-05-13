@@ -103,32 +103,32 @@ flowchart TD
 
 以 2026-05-10 本机 `omx list --json` 为准，当前 active skills 共 24 个。
 
-| 指令 | 类型 | 适合什么时候用 | 关键边界 |
-|---|---|---|---|
-| `$deep-interview` | planning | 需求模糊、成功标准不清，需要先问问题 | 只负责澄清，不直接实现 |
-| `$plan` | planning | 想先产出计划、review 计划或做多视角共识 | 明确任务可直接执行时不一定需要 |
-| `$ralplan` | planning | `$plan --consensus`，让 Planner / Architect / Critic 形成共识计划 | 产物是 plan / handoff，不是实现 |
-| `$autopilot` | execution | 从较清楚的需求一路跑到 reviewed code | 严格链路是 `$ralplan -> $ralph -> $code-review` |
-| `$ralph` | execution | 任务边界清楚，需要持续执行、验证、修到完成 | 不是需求探索器；需要先有足够清楚的目标 |
-| `$ultrawork` | execution | 多个独立子任务可并行，需要高吞吐执行 | 不自带 Ralph 的持久循环和最终 architect sign-off |
-| `$team` | execution | 需要 tmux worker、worktree、共享状态和长时间并行 | 操作敏感；小并行优先用 Codex native subagents |
-| `$ultraqa` | execution | 测试、验证、修复反复循环，直到质量目标达成 | 需要清楚的 QA 目标和停止条件 |
-| `$pipeline` | execution | 想把多个阶段按固定 pipeline 串起来 | 适合流程化交付，不适合开放式闲聊 |
-| `$ultragoal` | execution | 大目标要拆成多个 durable goals | OMX 记录 goal ledger，Codex 线程仍负责 active goal 状态 |
-| `$autoresearch` | execution | 研究任务需要验证门和持久 nudging | 是 skill-first 研究循环，不是旧的 direct CLI |
-| `$autoresearch-goal` | execution | 研究任务需要 professor-critic rubric 和 pass verdict | 通过前不算完成；shell 不会直接改隐藏 `/goal` |
-| `$performance-goal` | execution | 性能优化要有 evaluator 和通过标准 | 没有 evaluator contract 不应开始优化 |
-| `$analyze` | shortcut | 只读分析代码库、追因、解释架构或影响面 | 默认不改代码；输出要区分 evidence 和 inference |
-| `$ai-slop-cleaner` | shortcut | 代码能跑但臃肿、重复、AI 味重，需要保行为清理 | 不是重写功能；先保护行为和测试 |
-| `$code-review` | shortcut | 对代码修改做综合 review | review findings 优先，不把总结放前面 |
-| `$visual-ralph` | shortcut | 前端 UI 需要视觉目标、截图、pixel diff 和反复迭代 | 取代旧 `$web-clone` / `$visual-verdict` 的新入口 |
-| `$ask` | shortcut | 调本地 Claude 或 Gemini CLI 做第二意见 | 依赖本机安装对应 CLI；会产出可复用 artifact |
-| `$cancel` | utility | 退出或清理当前 OMX mode | 用于停止工作流状态，不等于撤销文件修改 |
-| `$doctor` | utility | 诊断 OMX / Codex 安装、路径、hook、配置问题 | 绿灯不代表真实模型调用一定成功 |
-| `$skill` | utility | 管理本地 skills：list、add、remove、search、edit | 是元技能，不是业务交付流程 |
-| `$hud` | utility | 查看或配置 OMX HUD / 状态栏 | 观察状态，不负责修复任务 |
-| `$omx-setup` | utility | 安装或刷新 OMX project / user scope | 会改配置和 skills，操作前要注意 scope |
-| `$configure-notifications` | utility | 配置 Discord / Telegram / Slack / OpenClaw 通知 | 只处理通知集成，不处理任务本身 |
+| 指令                         | 类型        | 适合什么时候用                                                   | 关键边界                                          |
+| -------------------------- | --------- | --------------------------------------------------------- | --------------------------------------------- |
+| `$deep-interview`          | planning  | 需求模糊、成功标准不清，需要先问问题                                        | 只负责澄清，不直接实现                                   |
+| `$plan`                    | planning  | 想先产出计划、review 计划或做多视角共识                                   | 明确任务可直接执行时不一定需要                               |
+| `$ralplan`                 | planning  | `$plan --consensus`，让 Planner / Architect / Critic 形成共识计划 | 产物是 plan / handoff，不是实现                       |
+| `$autopilot`               | execution | 从较清楚的需求一路跑到 reviewed code                                 | 严格链路是 `$ralplan -> $ralph -> $code-review`    |
+| `$ralph`                   | execution | 任务边界清楚，需要持续执行、验证、修到完成                                     | 不是需求探索器；需要先有足够清楚的目标                           |
+| `$ultrawork`               | execution | 多个独立子任务可并行，需要高吞吐执行                                        | 不自带 Ralph 的持久循环和最终 architect sign-off         |
+| `$team`                    | execution | 需要 tmux worker、worktree、共享状态和长时间并行                        | 操作敏感；小并行优先用 Codex native subagents            |
+| `$ultraqa`                 | execution | 测试、验证、修复反复循环，直到质量目标达成                                     | 需要清楚的 QA 目标和停止条件                              |
+| `$pipeline`                | execution | 想把多个阶段按固定 pipeline 串起来                                    | 适合流程化交付，不适合开放式闲聊                              |
+| `$ultragoal`               | execution | 大目标要拆成多个 durable goals                                    | OMX 记录 goal ledger，Codex 线程仍负责 active goal 状态 |
+| `$autoresearch`            | execution | 研究任务需要验证门和持久 nudging                                      | 是 skill-first 研究循环，不是旧的 direct CLI            |
+| `$autoresearch-goal`       | execution | 研究任务需要 professor-critic rubric 和 pass verdict             | 通过前不算完成；shell 不会直接改隐藏 `/goal`                 |
+| `$performance-goal`        | execution | 性能优化要有 evaluator 和通过标准                                    | 没有 evaluator contract 不应开始优化                  |
+| `$analyze`                 | shortcut  | 只读分析代码库、追因、解释架构或影响面                                       | 默认不改代码；输出要区分 evidence 和 inference             |
+| `$ai-slop-cleaner`         | shortcut  | 代码能跑但臃肿、重复、AI 味重，需要保行为清理                                  | 不是重写功能；先保护行为和测试                               |
+| `$code-review`             | shortcut  | 对代码修改做综合 review                                           | review findings 优先，不把总结放前面                    |
+| `$visual-ralph`            | shortcut  | 前端 UI 需要视觉目标、截图、pixel diff 和反复迭代                          | 取代旧 `$web-clone` / `$visual-verdict` 的新入口     |
+| `$ask`                     | shortcut  | 调本地 Claude 或 Gemini CLI 做第二意见                             | 依赖本机安装对应 CLI；会产出可复用 artifact                  |
+| `$cancel`                  | utility   | 退出或清理当前 OMX mode                                          | 用于停止工作流状态，不等于撤销文件修改                           |
+| `$doctor`                  | utility   | 诊断 OMX / Codex 安装、路径、hook、配置问题                            | 绿灯不代表真实模型调用一定成功                               |
+| `$skill`                   | utility   | 管理本地 skills：list、add、remove、search、edit                   | 是元技能，不是业务交付流程                                 |
+| `$hud`                     | utility   | 查看或配置 OMX HUD / 状态栏                                       | 观察状态，不负责修复任务                                  |
+| `$omx-setup`               | utility   | 安装或刷新 OMX project / user scope                            | 会改配置和 skills，操作前要注意 scope                     |
+| `$configure-notifications` | utility   | 配置 Discord / Telegram / Slack / OpenClaw 通知               | 只处理通知集成，不处理任务本身                               |
 
 ## 别名和合并入口
 
