@@ -5,7 +5,7 @@ topic:
   - workflow
 status: growing
 created: 2026-05-08
-updated: 2026-05-12
+updated: 2026-05-14
 last_checked: 2026-05-10
 freshness: watch
 conflicts: []
@@ -15,6 +15,7 @@ source:
   - "[[OpenAI - A Practical Guide to Building Agents]]"
   - "[[LangGraph 官方文档]]"
   - "[[OpenAI Agents SDK 文档]]"
+  - "[[Agentproof - Static Verification of Agent Workflow Graphs]]"
 evidence:
   - "[[Agent Framework#框架怎样接管 prompt loop]]"
   - "[[Agent Framework#现代系统怎么吸收 Agent Framework 的价值 / 局限]]"
@@ -23,6 +24,7 @@ evidence:
   - "[[OpenAI - A Practical Guide to Building Agents#一句话]]"
   - "[[LangGraph 官方文档#一句话]]"
   - "[[OpenAI Agents SDK 文档#一句话]]"
+  - "[[Agentproof - Static Verification of Agent Workflow Graphs#论文主张]]"
 related:
   - "[[Agent Framework]]"
   - "[[Agent Loop]]"
@@ -33,6 +35,7 @@ related:
   - "[[Multi-agent Orchestration]]"
   - "[[Trace]]"
   - "[[Evaluation]]"
+  - "[[Agent Workflow Static Verification]]"
 ---
 
 # Agent Workflow
@@ -123,6 +126,8 @@ triage request
 
 局限是：workflow 需要设计。设计过窄会卡在异常路径，设计过宽会失去控制；它应该和 eval、trace、human-in-the-loop 一起迭代，而不是一次画完就固定。
 
+另一个正在出现的吸收方向是 [[Agent Workflow Static Verification]]：当 workflow 已经被框架表达成 graph，系统可以在部署前检查 dead end、不可达 exit、human gate 覆盖、tool declaration 和部分 temporal policy。这个方向不会替代 runtime guardrails，但能补上“未触发路径也可能已经不安全”的结构层缺口。
+
 ## 证据锚点
 
 - Source: [[Anthropic - Building Effective Agents]]
@@ -133,6 +138,8 @@ triage request
 - Anchor: [[OpenAI - A Practical Guide to Building Agents#一句话]]
 - Source: [[LangGraph 官方文档]] / [[OpenAI Agents SDK 文档]]
 - Anchor: [[LangGraph 官方文档#一句话]] / [[OpenAI Agents SDK 文档#一句话]]
+- Source: [[Agentproof - Static Verification of Agent Workflow Graphs]]
+- Anchor: [[Agentproof - Static Verification of Agent Workflow Graphs#论文主张]]
 - Evidence type: official docs/source notes + engineering synthesis.
 - Confidence: medium
 - Boundary: workflow patterns 和 graph/handoff/approval 的组合是工程综合；具体 API 和平台能力属于 watch。

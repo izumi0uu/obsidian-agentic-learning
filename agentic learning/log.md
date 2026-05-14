@@ -649,3 +649,11 @@ related:
 - Embedded: [[Drawing 2026-05-11 21.47.57.excalidraw]] and [[Drawing 2026-05-11 21.47.57.excalidraw 1]]
 - Writeback: 将 LG-A 线性流程图和 LG-B 反思循环图都嵌入对应回答区，并标注为已回答的用户图。
 - Boundary: 图是用户学习图 / Excalidraw 作答，不作为 raw evidence；本次只整理 review 页，不更新概念卡。
+
+## [2026-05-14] ingest | Agentproof paper
+
+- Added source note: [[Agentproof - Static Verification of Agent Workflow Graphs]].
+- Added concept card: [[Agent Workflow Static Verification]].
+- Updated navigation: [[资料收集索引]], [[前沿主源清单]], [[03 前沿追踪]], [[Agent 知识地图]], [[Agent 主题]], [[04 页面目录]], [[Agent Workflow]], [[LangGraph]].
+- Evidence: arXiv abstract/PDF/HTML checked on 2026-05-14, local PDF and extracted text saved under `raw/papers/assets/` and `raw/papers/extracted/`.
+- Boundary: recorded Agentproof as a frontier / watch research artifact; the durable concept is not “Agentproof is production standard”, but that explicit agent workflow graphs can be checked for topology-level defects before deployment.

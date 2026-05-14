@@ -4,11 +4,12 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-13
+updated: 2026-05-14
 related:
   - "[[Agent]]"
   - "[[ReAct]]"
   - "[[Coding Agent]]"
+  - "[[Agent Workflow Static Verification]]"
   - "[[Agent 知识地图]]"
   - "[[Agent 工程分层对比]]"
   - "[[OpenClaw Repo vs Hermes Agent]]"
@@ -66,6 +67,7 @@ SORT created DESC
 - [[Coding Agent]]
 - [[Repo Context]]
 - [[Patch Validation]]
+- [[Agent Workflow Static Verification]]
 
 
 ## Framework 选型边界概念
@@ -95,3 +97,4 @@ SORT created DESC
 - [[Agent Framework 全量选型对比 2026-05]]
 - [[OMX $ 指令]]
 - [[Agent Lifecycle Hook]]
+- [[Agent Workflow Static Verification]]

@@ -7,7 +7,7 @@ topic:
   - infrastructure
 status: growing
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-14
 last_checked: 2026-05-12
 freshness: volatile
 conflicts: []
@@ -21,6 +21,7 @@ evidence:
 related:
   - "[[Agent Framework]]"
   - "[[Agent Workflow]]"
+  - "[[Agent Workflow Static Verification]]"
   - "[[Agent State]]"
   - "[[Durable Execution]]"
   - "[[LangChain DeepAgents]]"
@@ -91,12 +92,16 @@ Checkpoint: save state after every node
 
 局限是 graph 只能表达控制结构，不自动给你正确的任务分解、可靠 evaluator、幂等副作用或安全策略。LangGraph 需要和 [[Tool Permissioning]]、[[Trace]]、[[Evaluation]]、[[Guardrails]] 一起使用。
 
+[[Agentproof - Static Verification of Agent Workflow Graphs]] 还补了一条新边界：LangGraph 这类显式 state graph runtime 让 workflow topology 变成可静态检查对象。也就是说，graph 不只是执行结构，还可以在部署前被检查 dead end、不可达 exit、human gate 覆盖或部分 temporal policy。但这种检查仍然不证明 LLM 输出语义正确，也不替代运行时 guardrails。
+
 ## 证据锚点
 
 - Source: [[LangGraph 官方文档]]
 - Anchor: [[LangGraph 官方文档#一句话]], [[LangGraph 官方文档#边界提醒]]
 - Source: [[LangChain Deep Agents 官方文档]]
 - Anchor: [[LangChain Deep Agents 官方文档#需要我读的内容]]
+- Source: [[Agentproof - Static Verification of Agent Workflow Graphs]]
+- Anchor: [[Agentproof - Static Verification of Agent Workflow Graphs#论文主张]]
 - Evidence type: official docs source notes + engineering synthesis.
 - Confidence: medium-high for state graph / runtime boundary; medium for product-layer positioning because LangChain ecosystem changes quickly.
 - Boundary: 本卡不声明最新 API 细节，只沉淀 LangGraph 作为 state graph orchestration runtime 的学习边界。

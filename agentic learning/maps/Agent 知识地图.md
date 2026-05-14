@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-13
+updated: 2026-05-14
 related:
   - "[[Agent]]"
   - "[[前沿主源清单]]"
@@ -61,6 +61,7 @@ LLM 地基：
 - [[LangChain DeepAgents]]：理解 LangChain 如何在 LangGraph runtime 上封装长任务 Agent harness。
 - [[Agent State]]：理解框架如何保存当前任务的进度、中间结果和下一步依据。
 - [[Agent Workflow]]：理解框架如何把任务组织成步骤、分支、循环和交接。
+- [[Agent Workflow Static Verification]]：理解显式 workflow graph 如何在部署前检查死路、不可达、human gate 覆盖和时序安全策略。
 - [[Durable Execution]]：理解长任务为什么需要暂停、恢复和重试。
 - [[Reflexion]]：理解 Agent 如何把失败反馈转成反思文本，并用经验改进下一轮行动。
 - [[Human-in-the-loop]]：理解人类确认、接管和修正如何进入 Agent loop。
@@ -97,6 +98,7 @@ LLM 地基：
 - [[RAG Evaluation]]：理解 RAG 失败要分层评估。
 - [[Observability]]：理解 Agent 系统的 trace、span、日志、成本、延迟和错误如何被实时观察。
 - [[Trace]]：理解执行过程如何被保存成可调试、可重放、可评估的记录。
+- [[Agent Workflow Static Verification]]：理解 workflow topology 的静态检查和 runtime trace / guardrails 的互补关系。
 - [[OpenTelemetry GenAI]]：理解 trace 标准化为什么重要。
 - [[Audit Log]]：理解可审计行动记录和 trace 的边界。
 
@@ -106,6 +108,7 @@ LLM 地基：
 - [[LLM Gateway]]：理解模型调用路由、fallback、限流和成本治理。
 - [[MCP Registry]]：理解工具发现和供应链治理。
 - [[Guardrails]]、[[Tool Permissioning]]、[[Data Exfiltration]]：理解生产 Agent 的安全边界。
+- [[Agent Workflow Static Verification]]：理解部署前 graph safety check 和运行时防护的边界。
 
 ## 前沿扩展
 
