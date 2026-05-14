@@ -7,13 +7,16 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-14
 source:
   - "[[Prompt Injection]]"
   - "[[Indirect Prompt Injection]]"
   - "[[Tool Poisoning]]"
   - "[[Data Exfiltration]]"
   - "[[Guardrails]]"
+  - "[[Workflow Guardrails]]"
+  - "[[Workflow Guardrails 主源]]"
+  - "[[Workflow Guardrails 与 Prefect 控制点映射]]"
   - "[[Policy Engine]]"
   - "[[Approval Gate]]"
   - "[[Least Privilege Tools]]"
@@ -27,6 +30,8 @@ evidence:
   - "[[Tool Poisoning#证据锚点]]"
   - "[[Data Exfiltration#证据锚点]]"
   - "[[Guardrails#证据锚点]]"
+  - "[[Workflow Guardrails#证据锚点]]"
+  - "[[Workflow Guardrails 与 Prefect 控制点映射#证据锚点]]"
   - "[[Policy Engine#证据锚点]]"
   - "[[Approval Gate#证据锚点]]"
   - "[[Least Privilege Tools#证据锚点]]"
@@ -37,6 +42,7 @@ related:
   - "[[Tool Poisoning]]"
   - "[[Data Exfiltration]]"
   - "[[Guardrails]]"
+  - "[[Workflow Guardrails]]"
   - "[[Policy Engine]]"
   - "[[Approval Gate]]"
   - "[[Least Privilege Tools]]"
@@ -47,7 +53,7 @@ related:
 
 ## 一句话总览
 
-这页回答：Agent 安全里哪些是攻击入口、哪些是风险结果、哪些是控制机制。最小边界是：[[Prompt Injection]] / [[Indirect Prompt Injection]] / [[Tool Poisoning]] 是诱导或污染入口，[[Data Exfiltration]] 是常见高危结果，[[Least Privilege Tools]] 是授权原则，[[Tool Permissioning]] / [[Policy Engine]] / [[Approval Gate]] / [[Guardrails]] 是运行时控制点。
+这页回答：Agent 安全里哪些是攻击入口、哪些是风险结果、哪些是控制机制。最小边界是：[[Prompt Injection]] / [[Indirect Prompt Injection]] / [[Tool Poisoning]] 是诱导或污染入口，[[Data Exfiltration]] 是常见高危结果，[[Least Privilege Tools]] 是授权原则，[[Tool Permissioning]] / [[Policy Engine]] / [[Approval Gate]] / [[Guardrails]] 是运行时控制点，[[Workflow Guardrails]] 进一步回答这些控制点应该落在 workflow 的哪些边界。
 
 不要把“安全”只理解成最终回答过滤。Agent 一旦接入工具、文件、浏览器、MCP server 或企业数据，安全边界必须前移到输入来源、工具可见性、参数范围、执行前审批、输出通道和 trace/audit。
 
@@ -87,6 +93,7 @@ untrusted input / tool metadata / external content
 | [[Data Exfiltration]] | 敏感数据跨出授权边界的结果风险 | 读取敏感数据后，通过输出或工具通道外送时 | 私密文件、数据库、cookie、邮件、tool result | 聊天回复、HTTP、邮件、日志、第三方工具参数等外泄 | [[Data Exfiltration#证据锚点]] |
 | [[Least Privilege Tools]] | 最小工具、最小数据、最小参数和最短授权原则 | 任务开始前授权；任务阶段变化时收窄 | 任务目标、用户身份、工具集合、数据范围 | 缩小后的可见工具和可执行动作边界 | [[Least Privilege Tools#证据锚点]] |
 | [[Guardrails]] | 输入、输出、工具动作的防护层组合 | 模型调用前后、工具调用前后 | 规则、分类器、schema、敏感信息检测、policy、trace | 拦截、修正、拒绝、降级、触发审批 | [[Guardrails#证据锚点]] |
+| [[Workflow Guardrails]] | workflow 边界上的 guardrail placement | 输入、检索后、模型/工具调用周围、写库/commit 前、状态变化时 | validator、policy、approval、transaction、state hook、automation | 阻断、重试、修正、转人工、rollback、audit | [[Workflow Guardrails#证据锚点]] |
 | [[Policy Engine]] | 模型外的规则/风险决策核心 | 工具选择前、参数提交前、输出发送前 | 上下文、用户、工具、参数、数据分类、风险等级 | allow / deny / require approval / redact / sandbox-only | [[Policy Engine#证据锚点]] |
 | [[Approval Gate]] | 高风险或不可逆动作执行前的人类/策略准入点 | 执行器真正动作前 | 工具名、参数、目标对象、来源、风险说明 | 用户确认、拒绝、修改或升级审核 | [[Approval Gate#证据锚点]] |
 
@@ -97,6 +104,7 @@ untrusted input / tool metadata / external content
 - [[Tool Poisoning]] vs [[MCP Registry]] 风险：registry 让 server 可发现，不等于 server 可信。工具上架、可安装、可调用分别是不同信任层。
 - [[Data Exfiltration]] vs injection：injection 是诱导手段，data exfiltration 是可能结果。没有敏感数据访问或输出通道时，注入不一定造成外泄。
 - [[Guardrails]] vs [[Policy Engine]]：guardrails 是宽防护层；policy engine 是更偏规则/风险决策的核心组件，常被 guardrails 调用。
+- [[Guardrails]] vs [[Workflow Guardrails]]：guardrails 是防护层总称；workflow guardrails 是“把防护层放到 workflow 哪些边界”的工程判断，例如 retrieval 后、tool call 前、validated output 写库前和 state hook 处。
 - [[Least Privilege Tools]] vs [[Tool Permissioning]]：最小权限是原则，permissioning 是实现机制；本页把最小权限作为设计原则，工具接口页讨论 permissioning 机制。
 - [[Approval Gate]] vs [[Human-in-the-loop]]：approval gate 特指高风险执行前的准入点；human-in-the-loop 还可以用于澄清、标注、评审、接管或训练数据校准。
 
@@ -149,6 +157,7 @@ untrusted input / tool metadata / external content
 - [[OWASP Agentic Applications Top 10]] 与 [[Least Privilege Tools#证据锚点]] / [[Policy Engine#证据锚点]] 支持“Agent 的过度行动能力、身份、工具和人类信任边界需要显式控制”。
 - [[MCP Tool Poisoning Threat Model]] 与 [[Tool Poisoning#证据锚点]] 支持“工具描述、返回内容、server/host/client 边界和供应链本身是攻击面”。
 - [[OpenAI Agents SDK 文档]] 与 [[Guardrails#证据锚点]] 支持“guardrails、tools、tracing 等已成为现代 Agent runtime 的工程抽象”。
+- [[Workflow Guardrails 主源]] 与 [[Workflow Guardrails#证据锚点]] 支持“guardrails 已经被多个框架放到 before/after/around model/tool、retrieval、execution、validator、filter、callback 等 workflow control points”。
 - [[OpenAI Computer Use 文档]] / [[Anthropic Computer Use 文档]] 与 [[Approval Gate#证据锚点]] 支持“GUI / computer-use / 外部动作需要 sandbox、allowlist 和 human confirmation”。
 
 ### 工程综合 / inference
@@ -173,6 +182,7 @@ untrusted input / tool metadata / external content
 | 需要把规则变成可执行决策 | [[Policy Engine]] | 模型外判定 allow / deny / approval | 规则不可测会变成黑箱 |
 | 高风险动作需要用户确认 | [[Approval Gate]] | 在执行前展示动作、参数、来源和风险 | 只弹“确认吗”但不给上下文会让用户机械点击 |
 | 需要输入/输出/工具动作多点防护 | [[Guardrails]] | guardrails 是组合防护层，可调用 policy、分类器、schema 和审批 | guardrails 会误判漏判，不能单独保证安全 |
+| 需要把 guardrail 接到 flow/task/DB 写入/失败处置 | [[Workflow Guardrails]] | 它关注 guardrail placement、failure policy 和副作用边界 | 不要把 hook、callback 或 transaction 误当成安全判断本身 |
 
 ## 它们共同不是什么
 
@@ -184,7 +194,7 @@ untrusted input / tool metadata / external content
 
 ## 证据锚点
 
-- Concept anchors: [[Prompt Injection#证据锚点]], [[Indirect Prompt Injection#证据锚点]], [[Tool Poisoning#证据锚点]], [[Data Exfiltration#证据锚点]], [[Least Privilege Tools#证据锚点]], [[Guardrails#证据锚点]], [[Policy Engine#证据锚点]], [[Approval Gate#证据锚点]], [[Tool Permissioning#证据锚点]]
+- Concept anchors: [[Prompt Injection#证据锚点]], [[Indirect Prompt Injection#证据锚点]], [[Tool Poisoning#证据锚点]], [[Data Exfiltration#证据锚点]], [[Least Privilege Tools#证据锚点]], [[Guardrails#证据锚点]], [[Workflow Guardrails#证据锚点]], [[Policy Engine#证据锚点]], [[Approval Gate#证据锚点]], [[Tool Permissioning#证据锚点]]
 - Source examples: [[OWASP LLM Top 10 2025]], [[OWASP Agentic Applications Top 10]], [[MCP Tool Poisoning Threat Model]], [[OpenAI Agents SDK 文档]], [[OpenAI Computer Use 文档]], [[Anthropic Computer Use 文档]]
 - Evidence type: concept-card synthesis + security source notes + official docs source notes + engineering synthesis + learning analogy.
 - Confidence: medium-high for attack/control taxonomy; medium for exact runtime layering because不同框架会把 policy、guardrails、approval 和 permissioning 命名或实现为不同组件。
@@ -208,6 +218,8 @@ untrusted input / tool metadata / external content
 - [[Least Privilege Tools]]
 - [[Tool Permissioning]]
 - [[Guardrails]]
+- [[Workflow Guardrails]]
+- [[Workflow Guardrails 与 Prefect 控制点映射]]
 - [[Policy Engine]]
 - [[Approval Gate]]
 - [[Tool Registry]]

@@ -657,3 +657,18 @@ related:
 - Updated navigation: [[资料收集索引]], [[前沿主源清单]], [[03 前沿追踪]], [[Agent 知识地图]], [[Agent 主题]], [[04 页面目录]], [[Agent Workflow]], [[LangGraph]].
 - Evidence: arXiv abstract/PDF/HTML checked on 2026-05-14, local PDF and extracted text saved under `raw/papers/assets/` and `raw/papers/extracted/`.
 - Boundary: recorded Agentproof as a frontier / watch research artifact; the durable concept is not “Agentproof is production standard”, but that explicit agent workflow graphs can be checked for topology-level defects before deployment.
+
+## [2026-05-14] autoresearch-goal | workflow guardrails sources
+
+- Added source notes: [[Workflow Guardrails 主源]], [[Prefect Workflow Control Points]].
+- Added concept card: [[Workflow Guardrails]].
+- Added mapping topic: [[Workflow Guardrails 与 Prefect 控制点映射]].
+- Updated navigation and anchors: [[Guardrails]], [[Agent 安全控制点对比]], [[资料收集索引]], [[前沿主源清单]], [[03 前沿追踪]], [[Agent 知识地图]], [[Agent 主题]], [[04 页面目录]].
+- Evidence: OpenAI Agents SDK, LangChain, NVIDIA NeMo Guardrails, AWS Bedrock ApplyGuardrail, Guardrails AI, Semantic Kernel filters, Google ADK callbacks, Anthropic Building Effective Agents, IBM Research orchestration page, Agentproof, and Prefect docs checked on 2026-05-14.
+- Boundary: recorded the durable idea as guardrail placement at workflow boundaries; concrete SDK/API names remain watch/volatile source details, not standalone stable concept cards.
+
+## [2026-05-14] cleanup | project-context label removed
+
+- Updated: [[Workflow Guardrails 主源]], [[Workflow Guardrails]], [[Workflow Guardrails 与 Prefect 控制点映射]].
+- Change: removed a project-specific context label from wiki prose and replaced it with generic “业务项目 / Prefect” wording.
+- Boundary: preserved the workflow guardrails engineering mapping while avoiding project-context leakage in durable wiki pages.

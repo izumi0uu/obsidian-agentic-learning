@@ -19,6 +19,7 @@ related:
   - "[[ReAct Plan-and-Solve Reflexion 对比]]"
   - "[[Agent 工程分层对比]]"
   - "[[Agent Framework 编排范式对比]]"
+  - "[[Workflow Guardrails 与 Prefect 控制点映射]]"
   - "[[Tool 接口层对比]]"
 ---
 
@@ -62,6 +63,7 @@ LLM 地基：
 - [[Agent State]]：理解框架如何保存当前任务的进度、中间结果和下一步依据。
 - [[Agent Workflow]]：理解框架如何把任务组织成步骤、分支、循环和交接。
 - [[Agent Workflow Static Verification]]：理解显式 workflow graph 如何在部署前检查死路、不可达、human gate 覆盖和时序安全策略。
+- [[Workflow Guardrails]]：理解 guardrails 应该放在 workflow 的输入、检索、工具、输出、状态和副作用边界，而不是只做最终回答过滤。
 - [[Durable Execution]]：理解长任务为什么需要暂停、恢复和重试。
 - [[Reflexion]]：理解 Agent 如何把失败反馈转成反思文本，并用经验改进下一轮行动。
 - [[Human-in-the-loop]]：理解人类确认、接管和修正如何进入 Agent loop。
@@ -107,7 +109,7 @@ LLM 地基：
 - [[Code Execution Sandbox]]：理解 Agent 运行代码为什么需要隔离。
 - [[LLM Gateway]]：理解模型调用路由、fallback、限流和成本治理。
 - [[MCP Registry]]：理解工具发现和供应链治理。
-- [[Guardrails]]、[[Tool Permissioning]]、[[Data Exfiltration]]：理解生产 Agent 的安全边界。
+- [[Guardrails]]、[[Workflow Guardrails]]、[[Tool Permissioning]]、[[Data Exfiltration]]：理解生产 Agent 的安全边界。
 - [[Agent Workflow Static Verification]]：理解部署前 graph safety check 和运行时防护的边界。
 
 ## 前沿扩展
@@ -122,6 +124,7 @@ LLM 地基：
 - [[Agent Framework 全量选型对比 2026-05]]：按当前官方文档横向比较 13 个热门 Agent framework / SDK / toolkit 的抽象层、状态/流程、多 Agent、RAG/memory、观测评测、部署和选型边界。
 - [[Tool 接口层对比]]：区分 tool use、tool calling、registry、permissioning、MCP 和 registry。
 - [[Agent 安全控制点对比]]：区分 prompt injection、tool poisoning、data exfiltration、guardrails、policy engine、approval gate 和 least privilege tools。
+- [[Workflow Guardrails 与 Prefect 控制点映射]]：把 guardrail placement 映射到 Prefect state hook、transaction、automation 和副作用控制点。
 - [[Agent Memory 类型对比]]：区分 state、long-term、episodic、semantic、reflection、parametric / non-parametric memory。
 - [[Multi-agent Handoff Protocol 对比]]：区分 orchestration、handoff、A2A、ACP、MCP、workflow 和 durable execution。
 - [[Browser Computer Use 执行栈对比]]：区分 browser agent、computer use、GUI grounding、observation、sandbox 和 permissioning。
@@ -192,6 +195,7 @@ SORT file.name ASC
 - [x] [[OMX $ 指令]]
 - [x] [[Agent Lifecycle Hook]]
 - [x] [[LangChain DeepAgents]]
+- [x] [[Workflow Guardrails]]
 
 ## 复习入口
 
