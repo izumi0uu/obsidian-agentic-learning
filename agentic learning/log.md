@@ -588,7 +588,7 @@ related:
 
 ## [2026-05-12] review | LangGraph special answer workspace
 
-- Added: [[02 LangGraph 专项回答]]
+- Added: [[03 LangGraph 专项回答]]
 - Updated: [[复习记录索引]]
 - Purpose: 基于三步 Tavily 搜索助手案例，创建专项回答页，覆盖 LangGraph state graph、线性流程图、reflection 条件边、循环型应用设计、state / checkpoint / trace 分层和框架选型。
 - Boundary: 本页是 review/practice，不是 raw evidence；先保留回答区和写回候选，等待用户作答后再校准并写回 [[LangGraph]]、[[Agent Workflow]]、[[Agent State]]、[[Evaluation]] 或框架对比页。
@@ -635,3 +635,17 @@ related:
 - Updated navigation: [[资料收集索引]], [[前沿主源清单]], [[03 前沿追踪]], [[Agent 知识地图]], [[Agent 主题]], [[04 页面目录]], [[05 Query 写回队列]].
 - Evidence: OpenClaw official repo/docs checked on 2026-05-13, including README, Gateway architecture, Agent runtime, Agent workspace, Memory, Skills, Multi-agent routing, Background tasks, Security, Sandboxing, Clawbot alias, and GitHub latest release API; Hermes evidence reused from [[Hermes Agent Repo]] and [[Hermes Agent]].
 - Boundary: OpenClaw is recorded as a volatile project/source and compared as a Gateway-first personal assistant harness; no stable [[Claw Bot]] or [[OpenClaw]] concept card was created.
+
+## [2026-05-13] review | LangGraph reflection loop answer
+
+- Updated: [[03 LangGraph 专项回答]]
+- Embedded: [[Drawing 2026-05-11 21.47.57.excalidraw 1]]
+- Writeback: 整理 LG-B 反思节点答案，明确 `reflect` 是必要新增节点，`rewrite_query` / `regenerate_answer` 可视为对 `understand_query` / `generate_answer` 的可选拆分。
+- Boundary: 本次只整理 review 练习答案和图嵌入；暂不更新 [[LangGraph]] / [[Agent Workflow]] 概念卡。
+
+## [2026-05-14] review | LangGraph diagrams embedded
+
+- Updated: [[03 LangGraph 专项回答]]
+- Embedded: [[Drawing 2026-05-11 21.47.57.excalidraw]] and [[Drawing 2026-05-11 21.47.57.excalidraw 1]]
+- Writeback: 将 LG-A 线性流程图和 LG-B 反思循环图都嵌入对应回答区，并标注为已回答的用户图。
+- Boundary: 图是用户学习图 / Excalidraw 作答，不作为 raw evidence；本次只整理 review 页，不更新概念卡。
