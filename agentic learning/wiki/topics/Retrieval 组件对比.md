@@ -13,6 +13,7 @@ source:
   - "[[Reranking]]"
   - "[[Vector Database]]"
   - "[[Embedding]]"
+  - "[[TF-IDF]]"
   - "[[Document Ingestion]]"
   - "[[RAG]]"
   - "[[Microsoft RAG 官方文档]]"
@@ -24,6 +25,7 @@ evidence:
   - "[[Reranking#证据锚点]]"
   - "[[Vector Database#证据锚点]]"
   - "[[Embedding#证据锚点]]"
+  - "[[TF-IDF#证据锚点]]"
   - "[[Document Ingestion#证据锚点]]"
   - "[[RAG#证据锚点]]"
 related:
@@ -32,15 +34,16 @@ related:
   - "[[Context RAG Memory 对比]]"
   - "[[RAG Evaluation]]"
   - "[[常用向量数据库对比]]"
+  - "[[TF-IDF]]"
 ---
 
 # Retrieval 组件对比
 
 ## 一句话总览
 
-这页回答：Retrieval 链路里的 Document Ingestion、Chunking/Embedding、Vector Database、Retriever、Hybrid Search、Reranking 分别负责什么。
+这页回答：Retrieval 链路里的 Document Ingestion、Chunking/Embedding、TF-IDF、Vector Database、Retriever、Hybrid Search、Reranking 分别负责什么。
 
-最小边界：[[Document Ingestion]] 决定资料怎样进库；[[Embedding]] 把内容变成语义向量；[[Vector Database]] 存和搜向量；[[Retriever]] 从索引里找候选；[[Hybrid Search]] 把向量和关键词/全文信号结合；[[Reranking]] 在候选集上重新排序。它们共同服务 [[RAG]]，但没有一个单独等于 RAG 本身。
+最小边界：[[Document Ingestion]] 决定资料怎样进库；[[Embedding]] 把内容变成语义向量；[[TF-IDF]] 把文本变成稀疏词项权重向量；[[Vector Database]] 存和搜向量；[[Retriever]] 从索引里找候选；[[Hybrid Search]] 把向量和关键词/全文信号结合；[[Reranking]] 在候选集上重新排序。它们共同服务 [[RAG]]，但没有一个单独等于 RAG 本身。
 
 ## 为什么这组值得对比
 
@@ -60,7 +63,7 @@ related:
 raw docs
   -> Document Ingestion
   -> chunk + metadata
-  -> Embedding
+  -> Embedding / TF-IDF sparse features
   -> Vector Database / search index
   -> Retriever
   -> Hybrid Search / filters
@@ -76,6 +79,7 @@ raw docs
 |---|---|---|---|---|---|
 | [[Document Ingestion]] | 原始资料进入知识库的入口流程 | 离线或增量更新时 | PDF、网页、表格、代码、图片说明、权限信息 | 清洗后的文本、结构、metadata、待切分资料 | [[Document Ingestion#证据锚点]] |
 | [[Embedding]] | 语义表示 | 入库时给 chunk 向量；查询时给 query 向量 | chunk、query、文本/图片对象 | 向量，用于相似度搜索 | [[Embedding#证据锚点]] |
+| [[TF-IDF]] | 稀疏词项权重表示 | 入库/索引时建立词表和权重；查询时按词面匹配打分 | 文档、query、词表、语料统计 | sparse vector / TF-IDF feature matrix | [[TF-IDF#证据锚点]] |
 | [[Vector Database]] | 向量存储与近似搜索基础设施 | 入库后保存，查询时 top-k 搜索 | embedding、metadata、过滤条件 | 相似向量候选、metadata | [[Vector Database#证据锚点]] |
 | [[Retriever]] | 找候选证据的组件或流程 | 生成前，可在 agentic loop 中多次调用 | query、索引、权限/filter、retrieval strategy | candidate passages / chunks / records | [[Retriever#证据锚点]] |
 | [[Hybrid Search]] | 向量语义检索 + 关键词/全文检索融合 | retrieve 阶段并行或融合 | query、embedding、关键词、metadata filter | 语义与精确匹配互补的候选集合 | [[Hybrid Search#证据锚点]] |
@@ -91,7 +95,7 @@ raw docs
 
 ### Embedding vs Retriever
 
-[[Embedding]] 是表示方法：把 query 和 chunk 变成可比较的向量。[[Retriever]] 是组件或流程：用 embedding、关键词、metadata filter、权限规则、hybrid search 等手段找候选资料。
+[[Embedding]] 是 dense 语义表示方法：把 query 和 chunk 变成可比较的稠密向量。[[TF-IDF]] 是 sparse 词法表示方法：把文本放到词表维度上，用词频和逆文档频率形成稀疏权重。[[Retriever]] 是组件或流程：用 embedding、关键词、metadata filter、权限规则、hybrid search 等手段找候选资料。
 
 纯向量相似只是 retriever 的一种策略。现代 retriever 可能包含 query rewrite、metadata filter、全文检索、hybrid search、去重、权限过滤和 reranking。
 
@@ -137,6 +141,7 @@ Failure diagnosis:
 |---|---|---|
 | [[Document Ingestion]] | 把新书拆封、登记、去重、贴标签、放进馆藏系统 | 整理错了，后面很难找对 |
 | [[Embedding]] | 给每段内容生成“语义坐标” | 坐标相近不等于答案正确 |
+| [[TF-IDF]] | 给每段内容做关键词权重索引 | 词面命中强，不等于理解同义表达 |
 | [[Vector Database]] | 存这些语义坐标并快速找近邻的柜子 | 柜子不是整座图书馆服务 |
 | [[Retriever]] | 按问题找一批可能有用的资料 | 找到候选不等于最终答案 |
 | [[Hybrid Search]] | 既按意思找，也按书名、编号、关键词找 | 融合策略需要调试 |
@@ -146,7 +151,7 @@ Failure diagnosis:
 
 ### 来源支持
 
-- [[Document Ingestion]]、[[Chunking]]、[[Embedding]] 支持：RAG 质量受资料入口、切分和表示限制。
+- [[Document Ingestion]]、[[Chunking]]、[[Embedding]]、[[TF-IDF]] 支持：RAG 质量受资料入口、切分和表示限制；表示层既可能是 dense semantic vector，也可能是 sparse lexical vector。
 - [[Retriever]]、[[Hybrid Search]]、[[Reranking]] 支持：检索质量可以拆成召回、融合和排序多个环节。
 - [[Vector Database]] 支持：向量库是基础设施层，不等于完整 RAG。
 - [[Microsoft RAG 官方文档]]、[[Agent 工程基础设施主源]] 和 [[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]] 支持：现代 RAG 需要数据治理、索引、检索、生成和评估的组合。
@@ -165,7 +170,7 @@ Failure diagnosis:
 |---|---|---|---|
 | PDF 表格、网页结构、权限标签混乱 | [[Document Ingestion]] | 问题在资料进入系统前后的结构保真和治理 | 后续检索会在脏数据上工作 |
 | 语义相近但不同措辞找不到 | [[Embedding]] / [[Retriever]] | 需要检查 query/chunk 表示和召回策略 | 语义相似仍可能找来无关资料 |
-| 专有名词、编号、代码符号漏召回 | [[Hybrid Search]] | 需要关键词/全文信号补足向量检索 | 分数融合和去重可能引入噪音 |
+| 专有名词、编号、代码符号漏召回 | [[TF-IDF]] / [[Hybrid Search]] | 需要稀疏词项或关键词/全文信号补足向量检索 | 分数融合和去重可能引入噪音 |
 | 找到正确文档但排在很后 | [[Reranking]] | 候选已召回，但需要精排进入上下文预算 | 初召回缺证据时 rerank 无能为力 |
 | 数据量、更新、metadata filter、权限要求上升 | [[Vector Database]] / search infra | 需要可靠索引、删除、过滤和多租户能力 | 基础设施升级不自动提升答案忠实性 |
 | Agent/RAG 项目要选向量库 | [[常用向量数据库对比]] + [[Vector Database#Agent / RAG 选型边界]] | 先看现有后端/搜索栈、数据规模、QPS、metadata/权限、更新频率、hybrid search 和运维成本 | 把 Qdrant、pgvector、Chroma、FAISS、Milvus、Weaviate、Pinecone 当成同一层 vendor 排名，会忽略本地库、Postgres 扩展、专用服务、搜索系统和图数据库的层级差异 |
@@ -180,7 +185,7 @@ Failure diagnosis:
 
 ## 证据锚点
 
-- Concept anchors: [[Document Ingestion#证据锚点]], [[Embedding#证据锚点]], [[Vector Database#证据锚点]], [[Retriever#证据锚点]], [[Hybrid Search#证据锚点]], [[Reranking#证据锚点]], [[RAG#证据锚点]]
+- Concept anchors: [[Document Ingestion#证据锚点]], [[Embedding#证据锚点]], [[TF-IDF#证据锚点]], [[Vector Database#证据锚点]], [[Retriever#证据锚点]], [[Hybrid Search#证据锚点]], [[Reranking#证据锚点]], [[RAG#证据锚点]]
 - Topic anchor: [[RAG 类型对比#最容易混淆的边界]] / [[RAG 类型对比#证据锚点]]
 - Source examples: [[Agent 工程基础设施主源]], [[Microsoft RAG 官方文档]], [[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]]
 - Evidence type: concept-card synthesis + existing comparison topic + docs/paper/source-note evidence + engineering synthesis + learning analogy.
@@ -202,6 +207,7 @@ Failure diagnosis:
 - [[Reranking]]
 - [[Vector Database]]
 - [[Embedding]]
+- [[TF-IDF]]
 - [[Document Ingestion]]
 - [[Chunking]]
 - [[RAG]]

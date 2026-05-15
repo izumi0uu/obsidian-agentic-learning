@@ -72,6 +72,7 @@ Request-meta boundary:
 
 - Treat user-side intake-decision phrasing, recording requests, project names, local task names, and incidental side comments as operation context, not as knowledge content.
 - Do not write intake-decision wording into durable concept cards, topic pages, or source-note synthesis. Convert it into neutral knowledge language such as "学习价值", "应沉淀为某类边界", "证据支持的概念", or omit it.
+- Hard rule: any paragraph whose main job is to say who supplied it, which batch it came from, where to index it, or which frontier judgment to follow must be deleted from source-note/topic/concept正文 instead of rewritten in place; keep only neutral evidence, learning value, or write-back metadata.
 - If the user's side context matters only for the current request, keep it in the reply or log at most; do not promote it into `wiki/` unless it is itself the subject being documented.
 
 Map boundary:

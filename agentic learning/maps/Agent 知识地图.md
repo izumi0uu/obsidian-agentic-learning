@@ -75,11 +75,12 @@ LLM 地基：
 
 - [[RAG]]：如何从外部知识库检索资料再生成回答；完整学习入口见 [[RAG 主题]]。
 - [[Document Ingestion]]、[[Chunking]] 和 [[Embedding]]：理解资料进入知识库、被切成证据单元并变成语义表示的入口质量。
-- [[Retriever]]、[[Top-K]]、[[Vector Database]]、[[Hybrid Search]] 和 [[Reranking]]：理解生产 RAG 的召回数量、检索基础设施、混合检索和排序质量层；常见实现生态见 [[常用向量数据库对比]]。
+- [[Retriever]]、[[Top-K]]、[[TF-IDF]]、[[Vector Database]]、[[Hybrid Search]] 和 [[Reranking]]：理解生产 RAG 的召回数量、稀疏词项表示、检索基础设施、混合检索和排序质量层；常见实现生态见 [[常用向量数据库对比]]。
 - [[Knowledge Graph]]、[[GraphRAG]] 和 [[Neo4j]]：理解关系结构、图增强检索和图数据库工程生态如何结合。
 - [[RAG Evaluation]]：理解 RAG 失败要分层评估检索、上下文、引用和最终回答。
 - [[RAG Citation Faithfulness]] 和 [[RAG Access Control]]：理解 RAG 可靠性不只看答案，还要看引用支持和权限过滤。
 - [[Query Rewrite]]、[[Query Planning]] 和 [[Agentic Retrieval]]：理解检索层如何从改写 query 走向检索计划和多轮检索控制。
+- [[Parallel Search and Explicit Merging 检索模式]]：理解 deep search / agentic RAG 如何在单个 reasoning step 里扩展多 query 检索，并用显式合并控制信噪比。
 - [[Entity Resolution]] 和 [[Graph Construction Evaluation]]：理解 GraphRAG 的构图质量、实体合并和评估边界。
 - [[RAG 可靠性与治理对比]]、[[Query Rewrite Query Planning Agentic Retrieval 对比]]、[[GraphRAG 构图与评估对比]]：RAG 可靠性、检索决策和构图评估的对比入口。
 - [[Obsidian + LLM Wiki]]：我的个人知识库如何适配 LLM 辅助学习。
@@ -143,6 +144,7 @@ LLM 地基：
 - [[常用向量数据库对比]]：区分 Chroma、FAISS、pgvector、Qdrant、Milvus、Weaviate、Pinecone、Elasticsearch/OpenSearch 和 Neo4j 的层级。
 - [[RAG 可靠性与治理对比]]：区分 RAG evaluation、citation faithfulness、access control、trace 和 audit 的治理位置。
 - [[Query Rewrite Query Planning Agentic Retrieval 对比]]：区分 query rewrite、query planning、agentic retrieval 和 agentic RAG。
+- [[Parallel Search and Explicit Merging 检索模式]]：区分 parallel multi-query search、explicit merging、Hybrid Search、Reranking 和 RAG Evaluation 的层级。
 - [[GraphRAG 构图与评估对比]]：区分 knowledge graph、entity resolution、graph construction evaluation、GraphRAG 和 Neo4j。
 - [[LLM 输入输出基础边界对比]]：区分 token、context window、prompt 和 hallucination。
 
@@ -162,6 +164,7 @@ SORT file.name ASC
 - [x] [[Prompt]]
 - [x] [[Hallucination]]
 - [x] [[Embedding]]
+- [x] [[TF-IDF]]
 - [x] [[Vector Database]]
 - [x] [[Top-K]]
 - [x] [[Chunking]]

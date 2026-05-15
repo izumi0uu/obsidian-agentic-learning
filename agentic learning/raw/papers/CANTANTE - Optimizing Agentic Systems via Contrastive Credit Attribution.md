@@ -54,8 +54,6 @@ related:
 
 这篇把 multi-agent system 优化切成 credit assignment 问题：系统只有整体得分，但局部参数属于各 agent。它适合学习多 Agent 不是“多放几个角色”，而是要分配贡献、优化配置和控制局部更新。
 
-本页来自 2026-05-14 对 arXiv cs.AI recent 的 Agent 论文批次 2 录入，批次索引见 [[资料收集索引#第四轮补充：2026-05-14 arXiv Agent 论文批次 2]]，前沿判断见 [[03 前沿追踪#2026-05-14 arXiv Agent 论文批次 2]]。
-
 ## 一句话
 
 CANTANTE 用 contrastive credit attribution 把系统级奖励分解成 per-agent update signals，用于优化多 Agent prompts / configurations。
@@ -150,7 +148,7 @@ CANTANTE 用 contrastive credit attribution 把系统级奖励分解成 per-agen
 
 - 这篇论文把 Agent 问题切到哪一层：memory、planning、trajectory、multi-agent、evaluation、safety 还是 high-risk application？
 - 它最容易被误读成什么？
-- 它给当前 vault 哪张概念卡提供证据？
+- 它能支撑哪张概念卡、topic 或问题池条目？
 
 ### 读完要更新
 
@@ -200,8 +198,7 @@ CANTANTE 用 contrastive credit attribution 把系统级奖励分解成 per-agen
 
 ## Ingest 摘要
 
-- 已沉淀到 wiki 的概念：本轮先作为 source note 录入，不创建批次型 map。
-- 批次归档位置：[[资料收集索引]], [[前沿主源清单]], [[03 前沿追踪]]。
+- 已沉淀到 wiki 的概念：暂无；本页先作为 raw source evidence，后续精读后再决定是否拆卡。
 - 还没处理的证据：PDF 正文、实验细节、limitations、artifact / code。
 
 ## 可以拆成概念卡

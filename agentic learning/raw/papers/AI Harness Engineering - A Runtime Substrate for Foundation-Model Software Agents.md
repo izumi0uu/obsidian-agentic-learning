@@ -54,9 +54,7 @@ related:
 
 ## 为什么收
 
-这篇是本轮最值得先读的原因：它把软件 Agent 可靠性从“模型够不够强”改写成“模型 + harness + environment 的系统能力”。它正好补强 vault 里 [[Agent Harness]] 的证据层，让你看到 harness 不是泛泛的外壳，而是任务规格、上下文选择、工具、项目记忆、状态、可观测性、失败归因、验证、权限、熵审计和人工干预记录等责任的集合。
-
-本页来自 2026-05-14 对 arXiv cs.AI recent 的 Agent 论文批次 1 录入，批次索引见 [[资料收集索引#第四轮补充：2026-05-14 arXiv Agent 论文批次 1]]，前沿判断见 [[03 前沿追踪#2026-05-14 arXiv Agent 论文批次 1-8]]。
+这篇值得优先读的原因：它把软件 Agent 可靠性从“模型够不够强”改写成“模型 + harness + environment 的系统能力”。它能补强 [[Agent Harness]] 的证据层，让读者看到 harness 不是泛泛的外壳，而是任务规格、上下文选择、工具、项目记忆、状态、可观测性、失败归因、验证、权限、熵审计和人工干预记录等责任的集合。
 
 ## 一句话
 
@@ -100,11 +98,11 @@ related:
 #### 必读块 2：Harness responsibilities
 
 - 位置：extracted Page 1 / Abstract（必要时连同 Page 1 Introduction 交叉核对）
-- 为什么必读：精读 11 个 component responsibilities，把它们映射到当前 vault 的 tool access、project memory、task state、observability、verification、permissions。
+- 为什么必读：精读 11 个 component responsibilities，并对应到 tool access、project memory、task state、observability、verification、permissions 等 Agent harness 责任。
 - 原文短摘：
   > We formalize this substrate as anAI Harness Engineering and identify eleven component responsibilities: task specification, context selection, tool access, project memory, task state, observability, failure attribution, verification, permissions, entropy auditing, and intervention recording.
 - 中文概括：
-  - 这段原文直接支撑本块阅读目标：精读 11 个 component responsibilities，把它们映射到当前 vault 的 tool access、project memory、task state、observability、verification、permissions。
+  - 这段原文直接支撑本块阅读目标：精读 11 个 component responsibilities，并对应到 tool access、project memory、task state、observability、verification、permissions 等 Agent harness 责任。
   - 当前摘录只证明作者在摘要或第一页如何界定问题、机制或结果；后续写稳定概念卡时仍要回正文核对方法、实验设置和限制。
 - 我需要理解的机制：
   1. 原文里的对象、动作、约束和评价层级分别是什么。
@@ -152,7 +150,7 @@ related:
 
 - 这篇论文把 Agent 问题切到哪一层：模型、harness、workflow、trace、evaluation、security 还是 tool/action space？
 - 它最容易被误读成什么？
-- 它给当前 vault 哪张概念卡提供证据？
+- 它能支撑哪张概念卡、topic 或问题池条目？
 
 ### 读完要更新
 
@@ -202,8 +200,7 @@ related:
 
 ## Ingest 摘要
 
-- 已沉淀到 wiki 的概念：本轮先作为 source note 录入，不创建批次型 map。
-- 批次归档位置：[[资料收集索引]], [[前沿主源清单]], [[03 前沿追踪]]。
+- 已沉淀到 wiki 的概念：暂无；本页先作为 raw source evidence，后续精读后再决定是否拆卡。
 - 还没处理的证据：PDF 正文、实验细节、limitations、artifact / code。
 
 ## 可以拆成概念卡
@@ -218,7 +215,7 @@ related:
 
 - 论文的 H0-H3 ladder 与当前 Codex / Claude Code / OpenHands 的实际 harness 能力如何对应？
 - “entropy auditing” 具体检测什么，和重复 action / 无新信息循环有什么关系？
-- episode package 的最小字段能不能落到本 vault 的 Agent 评测模板？
+- episode package 的最小字段能不能落到 Agent 评测模板？
 
 ## 边界提醒
 

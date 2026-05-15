@@ -57,8 +57,6 @@ related:
 
 这篇值得靠前读，因为它把 Agent 评估的证据单位从 headline score 拉回 rollout record。对 Agent 学习来说，这是一个很重要的边界：同一段行为可能因为截取、失败统计、cost/token 规则不同而得到不同分数。
 
-本页来自 2026-05-14 对 arXiv cs.AI recent 的 Agent 论文批次 1 录入，批次索引见 [[资料收集索引#第四轮补充：2026-05-14 arXiv Agent 论文批次 1]]，前沿判断见 [[03 前沿追踪#2026-05-14 arXiv Agent 论文批次 1-8]]。
-
 ## 一句话
 
 Rollout Cards 主张 Agent 研究复现时应公开 rollout record、reporting rules 和 drops manifest，而不只报告分数。
@@ -153,7 +151,7 @@ Rollout Cards 主张 Agent 研究复现时应公开 rollout record、reporting r
 
 - 这篇论文把 Agent 问题切到哪一层：模型、harness、workflow、trace、evaluation、security 还是 tool/action space？
 - 它最容易被误读成什么？
-- 它给当前 vault 哪张概念卡提供证据？
+- 它能支撑哪张概念卡、topic 或问题池条目？
 
 ### 读完要更新
 
@@ -203,8 +201,7 @@ Rollout Cards 主张 Agent 研究复现时应公开 rollout record、reporting r
 
 ## Ingest 摘要
 
-- 已沉淀到 wiki 的概念：本轮先作为 source note 录入，不创建批次型 map。
-- 批次归档位置：[[资料收集索引]], [[前沿主源清单]], [[03 前沿追踪]]。
+- 已沉淀到 wiki 的概念：暂无；本页先作为 raw source evidence，后续精读后再决定是否拆卡。
 - 还没处理的证据：PDF 正文、实验细节、limitations、artifact / code。
 
 ## 可以拆成概念卡

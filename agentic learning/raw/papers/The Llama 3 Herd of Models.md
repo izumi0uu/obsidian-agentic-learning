@@ -34,7 +34,6 @@ related:
 
 Llama 3 把大规模预训练、数据治理、指令调优、偏好优化、安全训练和多任务评测组合成完整模型家族训练流程。
 
-
 ## 论文主张
 
 | Claim | Evidence anchor | Confidence | Target concept |
@@ -43,7 +42,6 @@ Llama 3 把大规模预训练、数据治理、指令调优、偏好优化、安
 | 论文覆盖 405B 模型的预训练和后训练版本。 | arXiv abstract | high | post-training |
 
 边界：这张 source note 只记录论文证据与定位；稳定解释仍应写入 `wiki/concepts/`，并回链到本页小节或 PDF / section。
-
 
 ## 现代性 / 前沿性初判
 

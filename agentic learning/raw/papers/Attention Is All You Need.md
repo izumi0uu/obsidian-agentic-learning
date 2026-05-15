@@ -111,7 +111,6 @@ related:
 
 Transformer 用 attention 机制替代传统循环结构，让模型可以更高效地处理序列中的依赖关系。
 
-
 ## 论文主张
 
 | Claim | Evidence anchor | Confidence | Target concept |
@@ -120,7 +119,6 @@ Transformer 用 attention 机制替代传统循环结构，让模型可以更高
 | 论文动机之一是减少顺序计算瓶颈、提高训练并行化。 | Page 2 / Section 1 Introduction | high | [[Self-Attention]] |
 
 边界：这张 source note 只记录论文证据与定位；稳定解释仍应写入 `wiki/concepts/`，并回链到本页小节或 PDF / section。
-
 
 ## 现代性 / 前沿性初判
 

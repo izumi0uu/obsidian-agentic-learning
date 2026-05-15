@@ -35,7 +35,6 @@ related:
 
 Constitutional AI 用一组原则引导模型自我修改回答，并用 AI feedback 训练更无害的助手行为。
 
-
 ## 论文主张
 
 | Claim | Evidence anchor | Confidence | Target concept |
@@ -44,7 +43,6 @@ Constitutional AI 用一组原则引导模型自我修改回答，并用 AI feed
 | 方法包含监督学习阶段和强化学习阶段。 | arXiv abstract | high | [[LLM Training Pipeline]] |
 
 边界：这张 source note 只记录论文证据与定位；稳定解释仍应写入 `wiki/concepts/`，并回链到本页小节或 PDF / section。
-
 
 ## 现代性 / 前沿性初判
 

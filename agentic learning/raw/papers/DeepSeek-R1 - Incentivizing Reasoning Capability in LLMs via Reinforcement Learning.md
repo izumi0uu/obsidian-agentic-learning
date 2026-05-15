@@ -36,7 +36,6 @@ related:
 
 DeepSeek-R1 探索用强化学习激发 LLM 的推理能力，尤其是数学、代码和可验证问题上的多步推理。
 
-
 ## 论文主张
 
 | Claim | Evidence anchor | Confidence | Target concept |
@@ -45,7 +44,6 @@ DeepSeek-R1 探索用强化学习激发 LLM 的推理能力，尤其是数学、
 | 论文观察到 self-reflection、verification、long CoT 等 reasoning pattern。 | arXiv abstract | medium | [[Reasoning Trace]] |
 
 边界：这张 source note 只记录论文证据与定位；稳定解释仍应写入 `wiki/concepts/`，并回链到本页小节或 PDF / section。
-
 
 ## 现代性 / 前沿性初判
 

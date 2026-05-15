@@ -62,8 +62,6 @@ related:
 
 OLIVIA 适合补 ReAct 的现代边界：部署中重复处理相关多步任务时，小的 action-selection 错误会累积；单靠 prompt / retrieval 间接改行为，不如显式建一个可更新的 action selection layer。
 
-本页来自 2026-05-14 对 arXiv cs.AI recent 的 Agent 论文批次 2 录入，批次索引见 [[资料收集索引#第四轮补充：2026-05-14 arXiv Agent 论文批次 2]]，前沿判断见 [[03 前沿追踪#2026-05-14 arXiv Agent 论文批次 2]]。
-
 ## 一句话
 
 OLIVIA 在 ReAct-style Agent 的推理时动作选择层做在线适应，让候选 action 可评分、可表示不确定性、可由反馈更新。
@@ -158,7 +156,7 @@ OLIVIA 在 ReAct-style Agent 的推理时动作选择层做在线适应，让候
 
 - 这篇论文把 Agent 问题切到哪一层：memory、planning、trajectory、multi-agent、evaluation、safety 还是 high-risk application？
 - 它最容易被误读成什么？
-- 它给当前 vault 哪张概念卡提供证据？
+- 它能支撑哪张概念卡、topic 或问题池条目？
 
 ### 读完要更新
 
@@ -208,8 +206,7 @@ OLIVIA 在 ReAct-style Agent 的推理时动作选择层做在线适应，让候
 
 ## Ingest 摘要
 
-- 已沉淀到 wiki 的概念：本轮先作为 source note 录入，不创建批次型 map。
-- 批次归档位置：[[资料收集索引]], [[前沿主源清单]], [[03 前沿追踪]]。
+- 已沉淀到 wiki 的概念：暂无；本页先作为 raw source evidence，后续精读后再决定是否拆卡。
 - 还没处理的证据：PDF 正文、实验细节、limitations、artifact / code。
 
 ## 可以拆成概念卡

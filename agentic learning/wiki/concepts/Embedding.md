@@ -5,21 +5,24 @@ topic:
   - llm
 status: growing
 created: 2026-05-06
-updated: 2026-05-10
+updated: 2026-05-15
 last_checked: 2026-05-10
 freshness: stable
 conflicts: []
 source:
   - "[[Agent 工程基础设施主源]]"
   - "[[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]]"
+  - "[[TF-IDF]]"
 evidence:
   - "[[Agent 工程基础设施主源#RAG / 检索基础设施]]"
   - "[[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks#需要我读的内容]]"
+  - "[[TF-IDF#边界细节]]"
 related:
   - "[[RAG]]"
   - "[[Vector Database]]"
   - "[[Retriever]]"
   - "[[Chunking]]"
+  - "[[TF-IDF]]"
 ---
 
 # Embedding
@@ -72,6 +75,8 @@ Embedding 不是理解本身，也不是事实验证。
 
 和 [[Hybrid Search]] 的边界：embedding 检索偏语义；hybrid search 把语义检索和关键词/全文检索结合起来。
 
+和 [[TF-IDF]] 的边界：TF-IDF 是词表维度上的稀疏词项权重，擅长精确词面匹配；embedding 是模型学习出的稠密语义表示，擅长语义相似。
+
 和 [[Reranking]] 的边界：embedding 常用于初召回；reranker 在较小候选集上做更精细的相关性排序。
 
 ## 现代性状态
@@ -107,3 +112,4 @@ Embedding 不是理解本身，也不是事实验证。
 - [[Vector Database]]
 - [[Retriever]]
 - [[Chunking]]
+- [[TF-IDF]]

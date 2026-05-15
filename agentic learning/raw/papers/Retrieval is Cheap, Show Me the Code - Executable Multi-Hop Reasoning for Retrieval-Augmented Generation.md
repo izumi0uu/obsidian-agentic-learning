@@ -66,9 +66,6 @@ related:
 
 这篇把 multi-hop RAG 从自然语言推理轨迹转成可执行程序，适合补“研究助手应该留下可复现分析过程，而不是只给最终答案”的边界。
 
-
-本页来自 2026-05-14 对用户提供的 Hermes arXiv cs.AI recent Agent 论文补充清单录入，批次索引见 [[资料收集索引#第四轮补充：2026-05-14 arXiv Agent 论文 Hermes 补充]]，前沿判断见 [[03 前沿追踪#2026-05-14 arXiv Agent 论文 Hermes 补充]]。
-
 ## 一句话
 
 PyRAG 把 multi-hop RAG 表示为调用 retrieval / QA tools 的可执行 Python 程序，让中间状态、错误和修复更可检查。
@@ -157,7 +154,7 @@ PyRAG 把 multi-hop RAG 表示为调用 retrieval / QA tools 的可执行 Python
 
 - 这篇论文把 Agent 问题切到哪一层：memory、planning、trajectory、multi-agent、evaluation、safety、tool use、RAG 还是 high-risk application？
 - 它最容易被误读成什么？
-- 它给当前 vault 哪张概念卡提供证据？
+- 它能支撑哪张概念卡、topic 或问题池条目？
 
 ### 读完要更新
 
@@ -207,7 +204,7 @@ PyRAG 把 multi-hop RAG 表示为调用 retrieval / QA tools 的可执行 Python
 
 ## Ingest 摘要
 
-- 已沉淀到 wiki 的概念：本轮先作为 source note 录入到 Hermes 补充来源批次。
+- 已沉淀到 wiki 的概念：暂无；本页先作为 raw source evidence，后续精读后再决定是否拆卡。
 - 还没处理的证据：PDF 正文、实验细节、limitations、artifact / code。
 
 ## 可以拆成概念卡

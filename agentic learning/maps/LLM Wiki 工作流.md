@@ -68,6 +68,8 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 
 用户在提问里夹带收录决策或执行请求时，这些词是操作意图，不是知识内容。LLM 只能把最后沉淀出的概念、边界、证据和学习价值写进 wiki，不能把当时的请求话术写进概念卡、主题页或 source note 正文。
 
+硬性规则：凡是只负责说明“谁提供的、哪个批次、先录到哪、前沿判断见哪、为什么先收/先读”的 intake / batch / provenance 话术，一律不得保留为 source note、topic 页或概念卡正文；需要时只能转写成中性的证据锚点、学习价值或写回队列说明。
+
 必须过滤掉的元信息：
 
 - 收录价值判断、是否建卡或是否进入 wiki 的决策话术。

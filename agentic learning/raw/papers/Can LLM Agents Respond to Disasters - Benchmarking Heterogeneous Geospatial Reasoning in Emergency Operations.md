@@ -65,8 +65,6 @@ related:
 
 DORA / disaster response 方向的学习价值在于：它把 Agent 评估从通用 tool use 推到真实应急流程：多传感器、道路网络、人口和设施、撤离规划、报告生成，还带 108 个 specialized tools。
 
-本页来自 2026-05-14 对 arXiv cs.AI recent 的 Agent 论文批次 2 录入，批次索引见 [[资料收集索引#第四轮补充：2026-05-14 arXiv Agent 论文批次 2]]，前沿判断见 [[03 前沿追踪#2026-05-14 arXiv Agent 论文批次 2]]。
-
 ## 一句话
 
 DORA 用真实灾害事件和可重放 tool-call gold trajectories，评估 LLM Agents 的端到端灾害响应工作流。
@@ -161,7 +159,7 @@ DORA 用真实灾害事件和可重放 tool-call gold trajectories，评估 LLM 
 
 - 这篇论文把 Agent 问题切到哪一层：memory、planning、trajectory、multi-agent、evaluation、safety 还是 high-risk application？
 - 它最容易被误读成什么？
-- 它给当前 vault 哪张概念卡提供证据？
+- 它能支撑哪张概念卡、topic 或问题池条目？
 
 ### 读完要更新
 
@@ -211,8 +209,7 @@ DORA 用真实灾害事件和可重放 tool-call gold trajectories，评估 LLM 
 
 ## Ingest 摘要
 
-- 已沉淀到 wiki 的概念：本轮先作为 source note 录入，不创建批次型 map。
-- 批次归档位置：[[资料收集索引]], [[前沿主源清单]], [[03 前沿追踪]]。
+- 已沉淀到 wiki 的概念：暂无；本页先作为 raw source evidence，后续精读后再决定是否拆卡。
 - 还没处理的证据：PDF 正文、实验细节、limitations、artifact / code。
 
 ## 可以拆成概念卡

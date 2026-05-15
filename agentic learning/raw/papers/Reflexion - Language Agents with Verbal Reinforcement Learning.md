@@ -120,7 +120,6 @@ Reflexion 是理解 Agent “执行后学习”的关键论文之一。它把任
 
 Reflexion 让语言 Agent 在执行任务后，根据评价反馈生成自我反思文本，并把它作为经验记忆用于下一轮尝试。
 
-
 ## 论文主张
 
 | Claim | Evidence anchor | Confidence | Target concept |
@@ -129,7 +128,6 @@ Reflexion 让语言 Agent 在执行任务后，根据评价反馈生成自我反
 | 反思文本保存在 episodic memory buffer 中影响后续尝试。 | arXiv abstract | high | [[Memory Reflection]] |
 
 边界：这张 source note 只记录论文证据与定位；稳定解释仍应写入 `wiki/concepts/`，并回链到本页小节或 PDF / section。
-
 
 ## 现代性 / 前沿性初判
 

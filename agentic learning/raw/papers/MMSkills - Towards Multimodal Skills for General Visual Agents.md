@@ -63,9 +63,6 @@ related:
 
 这篇补 visual agent 的 skill 边界：多模态任务里的可复用技能不只是文本 prompt 或代码，还要包含状态识别、视觉证据和进展 / 失败判断。
 
-
-本页来自 2026-05-14 对用户提供的 Hermes arXiv cs.AI recent Agent 论文补充清单录入，批次索引见 [[资料收集索引#第四轮补充：2026-05-14 arXiv Agent 论文 Hermes 补充]]，前沿判断见 [[03 前沿追踪#2026-05-14 arXiv Agent 论文 Hermes 补充]]。
-
 ## 一句话
 
 MMSkills 把视觉 Agent 的可复用 procedure 表示为文本步骤、state cards 和 multi-view keyframes 组合的多模态技能包。
@@ -154,7 +151,7 @@ MMSkills 把视觉 Agent 的可复用 procedure 表示为文本步骤、state ca
 
 - 这篇论文把 Agent 问题切到哪一层：memory、planning、trajectory、multi-agent、evaluation、safety、tool use、RAG 还是 high-risk application？
 - 它最容易被误读成什么？
-- 它给当前 vault 哪张概念卡提供证据？
+- 它能支撑哪张概念卡、topic 或问题池条目？
 
 ### 读完要更新
 
@@ -204,7 +201,7 @@ MMSkills 把视觉 Agent 的可复用 procedure 表示为文本步骤、state ca
 
 ## Ingest 摘要
 
-- 已沉淀到 wiki 的概念：本轮先作为 source note 录入到 Hermes 补充来源批次。
+- 已沉淀到 wiki 的概念：暂无；本页先作为 raw source evidence，后续精读后再决定是否拆卡。
 - 还没处理的证据：PDF 正文、实验细节、limitations、artifact / code。
 
 ## 可以拆成概念卡
@@ -217,13 +214,13 @@ MMSkills 把视觉 Agent 的可复用 procedure 表示为文本步骤、state ca
 
 ## 我的疑问
 
-- MMSkills 和 Hermes / OMX 的文本 skill 概念有什么不同？
+- MMSkills 和文本式 skill / registry skill 概念有什么不同？
 - 视觉 keyframe 会不会造成过度锚定和 UI 版本过期？
 - 公共 trajectory 生成 skill 如何避免 benchmark leakage？
 
 ## 边界提醒
 
-- 这里的 Skills 是 visual agent 的多模态程序知识包，不等同于 Hermes skills、OMX skills 或 SKILL.md registry 条目。
+- 这里的 Skills 是 visual agent 的多模态程序知识包，不等同于文本式 workflow skill 或 SKILL.md registry 条目。
 - 本页不是稳定概念卡；如果后续要写概念卡，必须回链到本页小节或 PDF section。
 - 如果论文标题里的术语和现代 framework / docs 用法不同，以正文定义和工程证据为准。
 

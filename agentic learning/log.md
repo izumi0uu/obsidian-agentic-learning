@@ -800,3 +800,38 @@ related:
 - Added a stricter local quality audit check for this maintenance pass: `scripts/paper_source_quality_audit.py` flags placeholder wording, keyword-only excerpts, and overlong/too-short blockquotes.
 - Verification: `scripts/paper_source_audit.py --root 'agentic learning/raw/papers'` and `scripts/paper_source_quality_audit.py --root 'agentic learning/raw/papers'` pass across the localized paper set: structural audit for 45 `raw/papers/` notes and quality audit for 47 `source_type: paper` notes under `raw/`.
 - Boundary: this pass improves raw/source evidence cards only. It does not claim full paper精读, does not create weak concept cards, and still requires PDF section/table/figure checks before moving numerical claims or method details into durable `wiki/concepts/` pages.
+
+## [2026-05-15] autoresearch-goal | parallel search and explicit merging topic added
+
+- Added topic: [[Parallel Search and Explicit Merging 检索模式]].
+- Updated navigation: [[RAG 主题]], [[Query Rewrite Query Planning Agentic Retrieval 对比]], [[Agent 知识地图]], and [[04 页面目录]].
+- Evidence: [[Scaling Retrieval-Augmented Reasoning with Parallel Search and Explicit Merging#论文主张]], [[Scaling Retrieval-Augmented Reasoning with Parallel Search and Explicit Merging#方法 / 机制]], extracted Page 1 / Abstract, Page 4 / Method, Page 6-8 / Experiments, and Page 18 / Limitations.
+- Boundary: this page treats MultiSearch as a frontier/watch evidence source for retrieval-during-reasoning, not as a stable default RAG architecture; QA benchmark and static-corpus limits remain explicit.
+
+## [2026-05-15] wiki | TF-IDF and sparse retrieval boundary clarified
+
+- Updated [[Hybrid Search]] to state that sparse retrieval is the broader term, BM25 is the common modern sparse-retrieval representative, and TF-IDF is an older term-weighting method rather than a strict synonym.
+- Evidence: [[Hybrid Search#概念详解]], [[Hybrid Search#边界细节]], and [[raw/repos/xiaolinnote/questions/026 ai rag 13. 什么是多路召回？具体怎么做？#第二路：BM25 关键词检索（Sparse Retrieval）]].
+- Boundary: this clarifies a terminology edge case for RAG study notes; it does not create a new standalone concept card for sparse retrieval or TF-IDF.
+
+## [2026-05-15] ralph | source-note intake metadata cleanup
+
+- Removed per-paper intake provenance paragraphs from paper source notes, keeping only source evidence and learning-value framing.
+- Neutralized project-specific supplement/list wording into stable “arXiv Agent 论文补充批次” navigation in [[资料收集索引]], [[前沿主源清单]], and [[03 前沿追踪]].
+- Cleaned remaining source-note template wording into neutral learning prompts about concept cards, topics, and question-pool writeback.
+- Preserved true [[Hermes Agent Repo]] / [[Hermes Agent]] references where Hermes is the actual source/project topic.
+- Verification: `scripts/paper_source_audit.py --root 'agentic learning/raw/papers'` PASS; `scripts/paper_source_quality_audit.py --root 'agentic learning/raw'` PASS; targeted request-meta grep returned no matches; `git diff --check` PASS.
+- Boundary: this cleanup changes source-note and navigation wording only; it does not claim full paper精读 and does not create weak concept cards.
+
+## [2026-05-15] maintenance | hard rule added for intake/provenance text
+
+- Added a hard rule to [[LLM Wiki 工作流]] and `AGENTS.md`: any paragraph whose main job is to say who supplied a source, which batch it belongs to, where it is indexed, or which frontier judgment to follow must be deleted from source-note/topic/concept正文 instead of rewritten in place.
+- Boundary: preserve only neutral evidence, learning value, and write-back metadata; keep request-side provenance out of durable knowledge pages.
+
+## [2026-05-15] autoresearch-goal | TF-IDF concept recorded
+
+- Added source note: [[scikit-learn TF-IDF 文档]].
+- Added concept: [[TF-IDF]] as a sparse retrieval / text vectorization boundary card.
+- Updated navigation: [[Embedding]], [[Hybrid Search]], [[Retrieval 组件对比]], [[RAG 主题]], [[01 术语表]], [[Agent 知识地图]], [[04 页面目录]], and [[Agent 工程基础设施主源]].
+- Evidence: scikit-learn TF-IDF user guide and `TfidfVectorizer` API reference checked on 2026-05-15.
+- Boundary: TF-IDF is recorded as a foundation concept for sparse lexical vectors and hybrid search, not as dense embedding or a default production RAG ranking algorithm.

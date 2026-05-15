@@ -45,7 +45,7 @@ related:
 
 这篇论文的学习价值在于：它把 [[Agent Workflow]] 的“图结构”从工程组织方式推进到可验证对象。如果 LangGraph、CrewAI、AutoGen、Google ADK 等框架已经把 Agent 行为表示为节点和边，那么一部分安全问题不必等运行时 guardrail 才发现，可以在部署前做图拓扑和时序策略检查。
 
-它对当前 vault 的价值不是证明 Agentproof 已经成为行业标准，而是补上一个很容易忽略的边界：[[Guardrails]] 主要处理运行时内容、调用和策略拦截；workflow graph 的死路、不可达 exit、绕过 human gate、router 边类型错误、tool 声明缺失等问题，属于结构层缺陷。它们更像代码里的静态检查 / model checking / CI gate，而不是“模型回答好不好”的评测。
+它的学习价值不是证明 Agentproof 已经成为行业标准，而是补上一个很容易忽略的边界：[[Guardrails]] 主要处理运行时内容、调用和策略拦截；workflow graph 的死路、不可达 exit、绕过 human gate、router 边类型错误、tool 声明缺失等问题，属于结构层缺陷。它们更像代码里的静态检查 / model checking / CI gate，而不是“模型回答好不好”的评测。
 
 ## 先读什么
 

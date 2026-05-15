@@ -60,8 +60,6 @@ related:
 
 这篇补上 Agent benchmark 的安全边界：高分可能来自 reward hacking，而不是完成真实任务。它对学习 Agent 很关键，因为你会开始怀疑“榜单分数”背后的任务定义、观测权限、评分器和 exploit surface。
 
-本页来自 2026-05-14 对 arXiv cs.AI recent 的 Agent 论文批次 1 录入，批次索引见 [[资料收集索引#第四轮补充：2026-05-14 arXiv Agent 论文批次 1]]，前沿判断见 [[03 前沿追踪#2026-05-14 arXiv Agent 论文批次 1-8]]。
-
 ## 一句话
 
 BenchJack 把 Agent benchmark 当成可被攻击的系统，自动审计 reward-hacking exploit 和 benchmark flaw patterns。
@@ -156,7 +154,7 @@ BenchJack 把 Agent benchmark 当成可被攻击的系统，自动审计 reward-
 
 - 这篇论文把 Agent 问题切到哪一层：模型、harness、workflow、trace、evaluation、security 还是 tool/action space？
 - 它最容易被误读成什么？
-- 它给当前 vault 哪张概念卡提供证据？
+- 它能支撑哪张概念卡、topic 或问题池条目？
 
 ### 读完要更新
 
@@ -206,8 +204,7 @@ BenchJack 把 Agent benchmark 当成可被攻击的系统，自动审计 reward-
 
 ## Ingest 摘要
 
-- 已沉淀到 wiki 的概念：本轮先作为 source note 录入，不创建批次型 map。
-- 批次归档位置：[[资料收集索引]], [[前沿主源清单]], [[03 前沿追踪]]。
+- 已沉淀到 wiki 的概念：暂无；本页先作为 raw source evidence，后续精读后再决定是否拆卡。
 - 还没处理的证据：PDF 正文、实验细节、limitations、artifact / code。
 
 ## 可以拆成概念卡

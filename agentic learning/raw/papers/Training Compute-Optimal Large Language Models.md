@@ -33,7 +33,6 @@ related:
 
 在固定训练计算量下，模型参数量和训练 token 数需要更平衡，模型才更 compute-optimal。
 
-
 ## 论文主张
 
 | Claim | Evidence anchor | Confidence | Target concept |
@@ -42,7 +41,6 @@ related:
 | 固定计算预算下，参数和 token 应共同扩展。 | arXiv abstract | high | data scaling |
 
 边界：这张 source note 只记录论文证据与定位；稳定解释仍应写入 `wiki/concepts/`，并回链到本页小节或 PDF / section。
-
 
 ## 现代性 / 前沿性初判
 

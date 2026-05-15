@@ -45,6 +45,7 @@ related:
 - OpenSearch vector search docs: <https://docs.opensearch.org/latest/vector-search/>
 - Neo4j GraphRAG docs: <https://neo4j.com/developer/genai-ecosystem/>
 - Neo4j vector index docs: <https://neo4j.com/docs/cypher-manual/current/indexes/semantic-indexes/vector-indexes/>
+- scikit-learn TF-IDF docs: <https://scikit-learn.org/stable/modules/feature_extraction.html#tfidf-term-weighting>
 - Ragas docs: <https://docs.ragas.io/>
 - DeepEval docs: <https://deepeval.com/docs/introduction>
 

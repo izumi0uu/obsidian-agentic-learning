@@ -56,10 +56,7 @@ related:
 
 ## 为什么收
 
-这篇是 Hermes 清单里最值得优先读的 memory 边界论文：它提醒“持续由 LLM 总结和更新的记忆”可能先变好再退化，甚至低于 no-memory baseline。它能直接支撑本 vault raw evidence / wiki synthesis 分层的设计判断。
-
-
-本页来自 2026-05-14 对用户提供的 Hermes arXiv cs.AI recent Agent 论文补充清单录入，批次索引见 [[资料收集索引#第四轮补充：2026-05-14 arXiv Agent 论文 Hermes 补充]]，前沿判断见 [[03 前沿追踪#2026-05-14 arXiv Agent 论文 Hermes 补充]]。
+这篇是值得优先读的 memory 边界论文：它提醒“持续由 LLM 总结和更新的记忆”可能先变好再退化，甚至低于 no-memory baseline。它能直接支撑 raw evidence / wiki synthesis 分层的设计判断。
 
 ## 一句话
 
@@ -149,7 +146,7 @@ Useful Memories Become Faulty 说明 Agent memory 不是越持续重写越好；
 
 - 这篇论文把 Agent 问题切到哪一层：memory、planning、trajectory、multi-agent、evaluation、safety、tool use、RAG 还是 high-risk application？
 - 它最容易被误读成什么？
-- 它给当前 vault 哪张概念卡提供证据？
+- 它能支撑哪张概念卡、topic 或问题池条目？
 
 ### 读完要更新
 
@@ -199,7 +196,7 @@ Useful Memories Become Faulty 说明 Agent memory 不是越持续重写越好；
 
 ## Ingest 摘要
 
-- 已沉淀到 wiki 的概念：本轮先作为 source note 录入到 Hermes 补充来源批次。
+- 已沉淀到 wiki 的概念：暂无；本页先作为 raw source evidence，后续精读后再决定是否拆卡。
 - 还没处理的证据：PDF 正文、实验细节、limitations、artifact / code。
 
 ## 可以拆成概念卡

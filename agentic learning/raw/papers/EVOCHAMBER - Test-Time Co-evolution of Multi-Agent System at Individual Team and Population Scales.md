@@ -59,8 +59,6 @@ related:
 
 EVOCHAMBER 的学习价值在于区分“单 Agent 自我演化复制 N 次”和“多 Agent 系统共同演化”。多 Agent 还要演化谁合作、怎么合作、知识如何在群体中流动。
 
-本页来自 2026-05-14 对 arXiv cs.AI recent 的 Agent 论文批次 2 录入，批次索引见 [[资料收集索引#第四轮补充：2026-05-14 arXiv Agent 论文批次 2]]，前沿判断见 [[03 前沿追踪#2026-05-14 arXiv Agent 论文批次 2]]。
-
 ## 一句话
 
 EVOCHAMBER 把多 Agent test-time evolution 分成个体、团队和群体尺度，强调协作结构与知识流也会演化。
@@ -155,7 +153,7 @@ EVOCHAMBER 把多 Agent test-time evolution 分成个体、团队和群体尺度
 
 - 这篇论文把 Agent 问题切到哪一层：memory、planning、trajectory、multi-agent、evaluation、safety 还是 high-risk application？
 - 它最容易被误读成什么？
-- 它给当前 vault 哪张概念卡提供证据？
+- 它能支撑哪张概念卡、topic 或问题池条目？
 
 ### 读完要更新
 
@@ -205,8 +203,7 @@ EVOCHAMBER 把多 Agent test-time evolution 分成个体、团队和群体尺度
 
 ## Ingest 摘要
 
-- 已沉淀到 wiki 的概念：本轮先作为 source note 录入，不创建批次型 map。
-- 批次归档位置：[[资料收集索引]], [[前沿主源清单]], [[03 前沿追踪]]。
+- 已沉淀到 wiki 的概念：暂无；本页先作为 raw source evidence，后续精读后再决定是否拆卡。
 - 还没处理的证据：PDF 正文、实验细节、limitations、artifact / code。
 
 ## 可以拆成概念卡

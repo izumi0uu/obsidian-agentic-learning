@@ -59,9 +59,6 @@ related:
 
 这篇补 RAG reasoning agent 的搜索形态：复杂研究不应每步只发一个 query，而应多角度并行检索，再显式合并证据。它适合写回 [[Query Rewrite Query Planning Agentic Retrieval 对比]]。
 
-
-本页来自 2026-05-14 对用户提供的 Hermes arXiv cs.AI recent Agent 论文补充清单录入，批次索引见 [[资料收集索引#第四轮补充：2026-05-14 arXiv Agent 论文 Hermes 补充]]，前沿判断见 [[03 前沿追踪#2026-05-14 arXiv Agent 论文 Hermes 补充]]。
-
 ## 一句话
 
 MultiSearch 把每个 reasoning step 的单查询检索改成多 query 并行搜索，再通过 explicit merging 提升信噪比。
@@ -150,7 +147,7 @@ MultiSearch 把每个 reasoning step 的单查询检索改成多 query 并行搜
 
 - 这篇论文把 Agent 问题切到哪一层：memory、planning、trajectory、multi-agent、evaluation、safety、tool use、RAG 还是 high-risk application？
 - 它最容易被误读成什么？
-- 它给当前 vault 哪张概念卡提供证据？
+- 它能支撑哪张概念卡、topic 或问题池条目？
 
 ### 读完要更新
 
@@ -200,7 +197,7 @@ MultiSearch 把每个 reasoning step 的单查询检索改成多 query 并行搜
 
 ## Ingest 摘要
 
-- 已沉淀到 wiki 的概念：本轮先作为 source note 录入到 Hermes 补充来源批次。
+- 已沉淀到 wiki 的概念：暂无；本页先作为 raw source evidence，后续精读后再决定是否拆卡。
 - 还没处理的证据：PDF 正文、实验细节、limitations、artifact / code。
 
 ## 可以拆成概念卡
