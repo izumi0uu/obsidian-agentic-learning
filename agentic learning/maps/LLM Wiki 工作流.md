@@ -6,7 +6,7 @@ topic:
   - workflow
 status: active
 created: 2026-05-05
-updated: 2026-05-15
+updated: 2026-05-16
 source: "/Users/idah/Downloads/llm-wiki.md"
 related:
   - "[[Agent 知识地图]]"
@@ -84,6 +84,65 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 
 验收规则：`wiki/`、`raw/` 的 synthesis 段落、`maps/05 Query 写回队列.md` 的问题栏，都不应出现用户侧收录决策关键词；历史 log 可以记录操作，但也应优先写成中性边界语言。
 
+## 中英文术语对齐 / Bilingual Terminology Audit
+
+当任务涉及新增概念卡、更新概念卡、给面试题/raw 正文加概念链接、维护 alias map、或整理一批中文面试题术语时，必须先做中英文术语对齐。目标不是把所有中文词都建卡，而是避免“中文词被错误映射到相邻英文概念”。
+
+### 触发条件
+
+- 中文术语和英文术语同时出现，例如 `多路召回 / Multi-Route Retrieval`、`上下文召回率 / Context Recall`。
+- 中文资料使用了工程俗称，但 `wiki/concepts/` 里只有英文概念卡。
+- 一个中文词可能对应多个英文边界，例如“召回”可能是 retrieval、recall metric、candidate generation。
+- 批量脚本、team、alias map 或 raw-question 内联链接会影响很多页面。
+
+### 审计步骤
+
+1. 同时搜索中文词、英文候选名、缩写和常见变体：`wiki/concepts/`、`wiki/topics/`、`raw/`、`maps/`、`scripts/interview_question_concept_aliases.json`、[[08 面试题概念卡待补充]]。
+2. 建立术语判断表，至少记录：中文术语、英文候选、当前链接、是否已有概念卡、是否在 alias map、证据页、判断、风险。
+3. 每个术语只能进入一个状态：
+   - 已有概念卡：补 `aliases`、正文边界或 alias map。
+   - 新建概念卡：有足够 evidence 和边界，按概念卡标准写入。
+   - 并入已有卡：术语只是已有卡的别名、子策略或指标，不单独建卡。
+   - 候选 backlog：英文 canonical name、证据或边界不稳。
+   - 禁止映射：属于 false friend，后续 alias map 不得自动链接。
+4. canonical name 选择优先级：
+   - 论文、官方文档或事实标准中的稳定英文名优先。
+   - 社区工程常用英文名其次。
+   - 仅来自中文材料的直译名不直接升格为卡名；先进入候选 backlog。
+   - 如果英文名不确定，宁可写 `pending`，不要创建弱卡。
+5. 对高混淆词必须写边界：它和相邻概念最小区别是什么、为什么不能简单等号、是否只是组合关系或代表关系。
+
+### 落地同步
+
+确认一个术语后，按影响面同步：
+
+- 新建/更新 `wiki/concepts/<Canonical Name>.md`，技术概念优先用稳定英文卡名。
+- 在概念卡 frontmatter `aliases` 记录中文名、缩写和常见写法。
+- 必要时更新 `up` / `relations`，区分严格上位、代表、组合、思想来源和普通相关。
+- 若面试题自动链接需要识别该术语，更新 `scripts/interview_question_concept_aliases.json`。
+- 更新相关 raw-question 页的 `related` 和 `## 相关知识 wiki`，但不把 raw source 改写成概念解释。
+- 不确定项写入 [[08 面试题概念卡待补充]]；更宽的整理问题写入 [[05 Query 写回队列]]。
+- 追加 `log.md`，说明本次同步了哪些控制面。
+
+### 反例边界
+
+- `多路召回` 不能默认等于 [[Hybrid Search]]。Hybrid Search 常指 sparse + dense / vector + BM25 的混合；多路召回可以更宽，包括多 Query、图检索、metadata filter、不同索引粒度或多 retriever。
+- `Memory` 不能默认链接 JVM memory、off-heap memory 或数据库缓存。
+- `ReAct` 不能默认链接 Netty Reactor。
+- `Context Recall` 是 RAG evaluation 指标，不是普通“召回层”的同义词。
+
+### 验收
+
+- 已有概念卡、中文别名、alias map 和 raw-question 链接不互相矛盾。
+- 不稳定术语进入 backlog，而不是弱概念卡。
+- false friend 有明确禁止映射或边界说明。
+- 批量改动后至少运行 `git diff --check`；涉及面试题内联链接时运行：
+
+```bash
+python3 scripts/interview_question_concept_links.py --self-test
+python3 scripts/interview_question_concept_links.py --dry-run
+```
+
 ## 角色分工
 
 ### 用户负责
@@ -100,6 +159,21 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 - 补双链。
 - 发现矛盾、重复、缺口和孤立页。
 - 维护索引和 log。
+
+## 检索工具默认顺序
+
+当任务是回答 vault 内问题、维护 wiki 页面、查找概念边界、整理相关页或做健康检查时，优先使用 Obsidian hybrid search MCP 工具，再做大范围文件系统搜索。
+
+推荐顺序：
+
+1. `obsidian_status`：确认索引可用、是否最新、忽略规则是否正确。
+2. `obsidian_search`：用于概念 / topic 发现、相关页召回、标题模糊搜索、语义召回和多 query fan-out。
+3. `obsidian_read`：在综合、修改或引用前读取精确页面正文。
+4. `rg` / 直接读文件：用于 MCP 不可用、索引陈旧、已知精确路径、脚本符号搜索或需要验证未索引文件时。
+
+边界：检索工具只改变“怎么找资料”，不改变三层知识边界。回答和写回仍然先从 `wiki/` 与 `maps/` 形成理解，`raw/` 只作为证据；不要因为语义搜索召回了 raw note，就直接把 raw 内容当成稳定概念解释。
+
+运行态边界：不要把代理、模型缓存、MCP 安装命令或本机 Codex 配置写入 wiki 正文。`.omx/**`、`.codex/**`、`.obsidian/**`、templates 和 canvas 文件应保持在 hybrid search 索引之外。
 
 ## 操作 1：Ingest
 

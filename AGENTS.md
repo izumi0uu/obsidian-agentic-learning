@@ -2,6 +2,50 @@
 
 This repository is an Obsidian vault for learning Agents from zero. Treat it as a persistent LLM-maintained wiki, not as a pile of notes.
 
+## Top Hard Rule: Systemic Change Propagation
+
+When a change is **systemic** rather than a simple one-page/source/card edit, the agent must propagate the new constraint to the vault's durable control surfaces before claiming completion.
+
+A systemic change includes any full-batch, incremental-batch, multi-lane, script-driven, schema/template, alias-map, backlink/navigation, raw-ingest policy, concept-card standard, or validation-rule change. Examples: adding bilingual concept-linking across interview pages, changing concept frontmatter, introducing new `up` / `relations` semantics, changing raw-source annotation rules, or adding an audit script.
+
+Hard requirements:
+
+1. Identify whether the work is **simple content work** or **systemic change**.
+2. If systemic, update every affected durable control surface, as applicable:
+   - project rule: `AGENTS.md`
+   - workflow rule: `agentic learning/maps/LLM Wiki 工作流.md`
+   - field/schema rule: `agentic learning/maps/字段规范.md`
+   - template: `agentic learning/templates/`
+   - automation: `scripts/` and alias/config files
+   - navigation/backlog: relevant `maps/`, indexes, or `05 Query 写回队列`
+   - operation record: `agentic learning/log.md`
+3. If future concept cards, raw notes, or topic pages must follow the new behavior, write that behavior as a durable rule, not only as a one-time implementation detail.
+4. If a systemic change reveals missing concepts or uncertain Chinese/English canonical names, add them to the appropriate backlog instead of silently treating the current implementation as complete.
+5. Final reports for systemic changes must state which control surfaces were updated, which validations were run, and which surfaces were intentionally not changed.
+
+Boundary: a single concept card, one raw source note, or a small typo/link fix does not require rewriting standards. It must still follow the existing standards. But once a change modifies how future cards/sources/maps/scripts should behave, the standards must move with it.
+
+## Top Hard Rule: Bilingual Terminology Audit
+
+When adding or updating concepts, raw-source links, interview-question links, alias maps, or terminology-heavy topic pages, run a **Chinese/English terminology gate** before writing durable links or concept cards.
+
+Hard requirements:
+
+1. Search both the Chinese term and likely English names across `wiki/concepts/`, `wiki/topics/`, `raw/`, `maps/`, `scripts/interview_question_concept_aliases.json`, and `maps/08 面试题概念卡待补充.md`.
+2. Choose one canonical concept name before linking. For Agent / RAG / LLM / tooling / evaluation technical concepts, prefer the stable English term when it is the established paper/docs/community name; store Chinese names as aliases or link display text.
+3. Classify each bilingual pair as exactly one of:
+   - existing concept card / add alias only
+   - new concept card with evidence
+   - merge into an existing broader card
+   - backlog candidate because the English canonical name or boundary is uncertain
+   - forbidden mapping / false friend
+4. Do not map a Chinese term to the nearest English card just because it is related. Example: `多路召回` may overlap with `[[Hybrid Search]]`, but it is broader than vector+BM25 hybrid search and must not be silently equated.
+5. If the term is not stable enough for a card, write it to `[[08 面试题概念卡待补充]]` or `[[05 Query 写回队列]]`; do not create weak concept cards.
+6. When a new canonical concept is accepted, synchronize all affected surfaces: concept card frontmatter `aliases`, `related` / `up` / `relations`, relevant raw-question `related` and `## 相关知识 wiki`, `scripts/interview_question_concept_aliases.json` when interview auto-linking should know it, maps/indexes when navigation changes, and `log.md`.
+7. Validate with the relevant audit path, at minimum `git diff --check`; for interview links also run `python3 scripts/interview_question_concept_links.py --self-test` and a dry-run.
+
+Boundary: this gate is mandatory for terminology alignment. It does not mean every bilingual term deserves a card; it means every durable mapping must have an explicit boundary decision.
+
 ## Core Principle
 
 The vault has three knowledge layers:
@@ -50,6 +94,18 @@ CODEX_HOME="$HOME/.codex" omx --madmax --high
 ```
 
 After running `omx setup --scope project`, check `git status --short` and `git diff -- AGENTS.md .gitignore`. If `.gitignore` only gained local OMX/Codex ignore rules, restore it and keep those rules in `.git/info/exclude`. If `AGENTS.md` changed, preserve durable project guidance but remove installer/runtime noise.
+
+## Retrieval Tooling
+
+When answering questions against this vault or maintaining wiki pages, prefer the Obsidian hybrid search MCP tools before broad filesystem search:
+
+1. Use `obsidian_status` when tool availability, index freshness, or ignore rules matter.
+2. Use `obsidian_search` for concept/topic discovery, related-note lookup, fuzzy title lookup, and semantic recall across the vault.
+3. Use `obsidian_read` to read exact notes before synthesizing, editing, or citing them.
+4. Start from wiki/maps for synthesis and use raw notes as evidence; do not let semantic retrieval flatten the raw/wiki/map layer boundary.
+5. Fall back to `rg` and direct file reads when MCP is unavailable, stale, or when an exact path/symbol search is already the narrower check.
+
+Do not store runtime details such as proxy settings, model cache paths, local MCP install commands, or local Codex config in this file. Keep `.omx/**`, `.codex/**`, `.obsidian/**`, templates, and canvas files out of the search index.
 
 ## Main Operations
 

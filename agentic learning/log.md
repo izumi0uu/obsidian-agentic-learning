@@ -865,3 +865,17 @@ related:
 - 更新 [[插件配置]]：记录 Abstract Folder 使用 `up`、Breadcrumbs 使用默认 `up/down` 并 rebuild graph、Juggl 只作为 Breadcrumbs/Obsidian 图的可视化层。
 - 示例边界：用 BM25 / TF-IDF / Sparse Retrieval / Hybrid Search 说明 taxonomy、代表关系、思想来源和组合关系的区别。
 - Boundary: 本阶段只改规范、模板和插件配置说明；不移动物理文件夹，不新增临时 map，不批量修改旧概念卡。
+
+## [2026-05-16] maintenance | bilingual terminology audit rule recorded
+
+- Added project-level hard rule in `AGENTS.md` requiring a Chinese/English terminology gate before durable concept links, concept cards, raw-question links, alias-map changes, or terminology-heavy topic updates.
+- Updated [[LLM Wiki 工作流]] with the bilingual terminology audit workflow: trigger conditions, audit table, canonical-name priority, backlog/forbidden-mapping states, landing synchronization, false-friend examples, and validation commands.
+- Updated [[字段规范]] and [[概念卡]] template with `aliases` guidance for concept cards, including the boundary that aliases are same-concept names only and do not replace `scripts/interview_question_concept_aliases.json` for interview auto-linking.
+- Boundary: this records the rule and template/schema guidance only. It does not complete the full bilingual terminology audit or create new concept cards for pending terms such as Multi-Route Retrieval, RRF, or Context Recall.
+
+## [2026-05-16] maintenance | hybrid search MCP retrieval default recorded
+
+- Added project-level retrieval tooling guidance to `AGENTS.md`: prefer `obsidian_status` / `obsidian_search` / `obsidian_read` for vault query and maintenance before broad filesystem search.
+- Updated [[LLM Wiki 工作流]] with the same retrieval order and the boundary that semantic recall does not collapse the `raw/`、`wiki/`、`maps/` knowledge layers.
+- Updated the local `obsidian-llm-wiki` skill so future skill-triggered wiki work uses the hybrid search MCP tools by default when available.
+- Boundary: this records retrieval behavior only. Runtime details such as proxy settings, model cache paths, MCP install commands, and local Codex config remain outside durable wiki content.
