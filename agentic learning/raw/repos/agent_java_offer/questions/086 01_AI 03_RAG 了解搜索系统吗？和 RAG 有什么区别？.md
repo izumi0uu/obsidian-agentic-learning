@@ -10,7 +10,7 @@ topic:
   - "rag"
 status: inbox
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-05-15
 url: "https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/03_RAG/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md"
 source: "https://github.com/guoguo-tju/agent_java_offer"
 source_path: "docs/interview_prep/01_AI/03_RAG/01_核心问答.md"
@@ -28,6 +28,7 @@ related:
   - "[[资料收集索引]]"
   - "[[RAG]]"
   - "[[LLM]]"
+  - "[[RAG Citation Faithfulness]]"
   - "[[RAG 主题]]"
 ---
 
@@ -44,6 +45,7 @@ related:
 
 - [[RAG]]
 - [[LLM]]
+- [[RAG Citation Faithfulness]]
 - [[RAG 主题]]
 
 ## 题目正文
