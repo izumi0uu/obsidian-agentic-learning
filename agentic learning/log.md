@@ -749,3 +749,39 @@ related:
 - Updated [[资料收集索引]] with the current paper-localization status.
 - Verification: 47 / 47 `source_type: paper` notes now resolve to local PDFs and extracted Markdown files; `scripts/paper_source_audit.py --root 'agentic learning/raw/papers'` passes.
 - Boundary: local PDFs and extracted text improve evidence availability, but extracted text remains lossy for figures, formulas, tables, footnotes, references, and two-column order.
+
+## [2026-05-15] query | vector database selection boundary queued
+
+- Added pending write-back: vector database product/category selection boundary for Agent/RAG development.
+- Target pages: [[Vector Database]], [[Retrieval 组件对比]], [[RAG 主题]], [[Context RAG Memory 对比]].
+- Boundary: record category-level selection heuristics and interview framing; do not create stable concept cards for every vendor (Qdrant, Milvus, Pinecone, etc.) without official docs or project-practice source notes.
+
+## [2026-05-15] wiki | vector database selection boundary recorded
+
+- Updated concept: [[Vector Database]] with Agent / RAG 选型边界 covering Chroma, FAISS, PostgreSQL + pgvector, Qdrant, Milvus, Weaviate, Pinecone, Elasticsearch/OpenSearch, and Neo4j.
+- Updated topics: [[Retrieval 组件对比]], [[RAG 主题]], [[Context RAG Memory 对比]].
+- Updated source links: [[Agent 工程基础设施主源#RAG / 检索基础设施]] now includes official/project docs for the added vector/search/graph options checked on 2026-05-15.
+- Writeback: closed the 2026-05-15 query queue item as done.
+- Boundary: this is a category-level selection heuristic and interview framing, not a vendor benchmark or permanent product ranking; Agent 长期记忆 should separate semantic recall from deterministic state, permissions, preferences, config, and audit records.
+
+## [2026-05-15] autoresearch-goal | Top-K concept card recorded
+
+- Added concept: [[Top-K]] as a lightweight RAG / retrieval / decoding-boundary card.
+- Updated navigation: [[01 术语表]], [[RAG 主题]], [[Agent 知识地图]], [[04 页面目录]], and [[LLM 主题]].
+- Writeback: closed the Top-K query item in [[05 Query 写回队列]] as done.
+- Evidence: [[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks#必读块 2：Figure 1 / retriever + generator 流程]], [[Retriever#概念详解]], [[Vector Database#概念详解]], [[Reranking#概念详解]], [[RAG Evaluation#概念详解]], and [[Self-RAG - Learning to Retrieve Generate and Critique#必读块 1：Abstract / adaptive retrieval]].
+- Boundary: Top-K is recorded as a stable selection rule and confusion boundary, not a fixed tuning recommendation; retrieval Top-K and decoding top-k are adjacent terms but live in different layers.
+
+## [2026-05-15] wiki | 常用向量数据库对比录入
+
+- Added topic: [[常用向量数据库对比]].
+- Covered: Chroma, FAISS, PostgreSQL + pgvector, Qdrant, Milvus, Weaviate, Pinecone, Elasticsearch/OpenSearch vector search, and Neo4j vector / GraphRAG ecosystem.
+- Updated navigation: [[Vector Database]], [[Retrieval 组件对比]], [[RAG 主题]], [[Agent 知识地图]], [[04 页面目录]].
+- Evidence: official/project docs linked through [[Agent 工程基础设施主源#RAG / 检索基础设施]] and checked on 2026-05-15.
+- Boundary: this is a category-level learning and selection page, not a benchmark or permanent product ranking; 产品能力、API、价格、部署方式和 hybrid search support remain watch-level details.
+
+## [2026-05-15] maintenance | request-meta wording filtered
+
+- Cleaned request-side intake wording from existing durable notes and queued write-backs.
+- Updated guardrails: `AGENTS.md` and [[LLM Wiki 工作流]] now treat 收录价值判断、执行请求、项目名、任务名和临时 side context as operation metadata rather than wiki knowledge.
+- Boundary: durable pages should preserve learning value, evidence, and concept boundaries; user prompt scaffolding belongs in the current reply or, at most, this maintenance log.

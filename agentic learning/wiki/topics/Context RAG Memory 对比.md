@@ -7,7 +7,7 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-15
 source:
   - "[[Context Engineering]]"
   - "[[RAG]]"
@@ -162,6 +162,7 @@ Repo path:
 | 文档检索命中率低 | [[Chunking]] / [[Embedding]] / [[Retriever]] | 失败可能在切分、表示或召回 | 只调 prompt 会掩盖上游问题 |
 | 模型看到资料却答错 | [[Context Engineering]] | 可能是上下文排序、引用规则、压缩或冲突问题 | 正确资料被淹没或未显式要求使用 |
 | 系统要记住用户偏好 | [[Memory]] | 需要跨会话写入和治理 | 不应混进普通文档 RAG 索引而无作用域 |
+| Agent 长期记忆要落库 | [[Memory]] + [[Vector Database#Agent / RAG 选型边界]] | 偏好、配置、权限、当前状态更像结构化 state，通常适合关系库 / KV / 事件日志；对话摘要、文档 chunk、经验片段才适合向量召回 | 全部塞向量库会削弱确定性读写、权限、审计、删除和精确更新 |
 | 代码 Agent 找不到该改哪里 | [[Repo Context]] | 需要文件、符号、测试和约定切片 | 语义相似文件不一定是正确修改点 |
 | 上下文太大、噪音太多 | [[Context Engineering]] | 需要预算、优先级、压缩和来源边界 | 大窗口不等于高质量上下文 |
 

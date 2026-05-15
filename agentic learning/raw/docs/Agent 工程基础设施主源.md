@@ -10,8 +10,8 @@ topic:
   - frontier
   - infrastructure
 created: 2026-05-06
-updated: 2026-05-07
-last_checked: 2026-05-10
+updated: 2026-05-15
+last_checked: 2026-05-15
 freshness: watch
 conflicts: []
 status: seed
@@ -34,10 +34,17 @@ related:
 
 ## RAG / 检索基础设施
 
+- pgvector GitHub / README: <https://github.com/pgvector/pgvector>
+- Chroma docs: <https://docs.trychroma.com/>
+- FAISS repo / docs: <https://github.com/facebookresearch/faiss>
 - Pinecone docs: <https://docs.pinecone.io/>
 - Weaviate search docs: <https://docs.weaviate.io/weaviate/concepts/search>
 - Qdrant docs: <https://qdrant.tech/documentation/overview/>
+- Milvus docs: <https://milvus.io/docs>
+- Elasticsearch vector search docs: <https://www.elastic.co/docs/solutions/search/vector>
+- OpenSearch vector search docs: <https://docs.opensearch.org/latest/vector-search/>
 - Neo4j GraphRAG docs: <https://neo4j.com/developer/genai-ecosystem/>
+- Neo4j vector index docs: <https://neo4j.com/docs/cypher-manual/current/indexes/semantic-indexes/vector-indexes/>
 - Ragas docs: <https://docs.ragas.io/>
 - DeepEval docs: <https://deepeval.com/docs/introduction>
 

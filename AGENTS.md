@@ -68,6 +68,12 @@ Use when the user adds a source or asks to process a raw note.
 9. Append durable query answers to `maps/05 Query 写回队列.md` or write them directly into wiki pages.
 10. Append an entry to `agentic learning/log.md`.
 
+Request-meta boundary:
+
+- Treat user-side intake-decision phrasing, recording requests, project names, local task names, and incidental side comments as operation context, not as knowledge content.
+- Do not write intake-decision wording into durable concept cards, topic pages, or source-note synthesis. Convert it into neutral knowledge language such as "学习价值", "应沉淀为某类边界", "证据支持的概念", or omit it.
+- If the user's side context matters only for the current request, keep it in the reply or log at most; do not promote it into `wiki/` unless it is itself the subject being documented.
+
 Map boundary:
 
 - Do not create new map files just because a source batch, paper batch, repo batch, or "recent / speed-read" collection was ingested.

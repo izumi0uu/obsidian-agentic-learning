@@ -6,7 +6,7 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-15
 source:
   - "[[Retriever]]"
   - "[[Hybrid Search]]"
@@ -31,6 +31,7 @@ related:
   - "[[RAG 类型对比]]"
   - "[[Context RAG Memory 对比]]"
   - "[[RAG Evaluation]]"
+  - "[[常用向量数据库对比]]"
 ---
 
 # Retrieval 组件对比
@@ -167,6 +168,7 @@ Failure diagnosis:
 | 专有名词、编号、代码符号漏召回 | [[Hybrid Search]] | 需要关键词/全文信号补足向量检索 | 分数融合和去重可能引入噪音 |
 | 找到正确文档但排在很后 | [[Reranking]] | 候选已召回，但需要精排进入上下文预算 | 初召回缺证据时 rerank 无能为力 |
 | 数据量、更新、metadata filter、权限要求上升 | [[Vector Database]] / search infra | 需要可靠索引、删除、过滤和多租户能力 | 基础设施升级不自动提升答案忠实性 |
+| Agent/RAG 项目要选向量库 | [[常用向量数据库对比]] + [[Vector Database#Agent / RAG 选型边界]] | 先看现有后端/搜索栈、数据规模、QPS、metadata/权限、更新频率、hybrid search 和运维成本 | 把 Qdrant、pgvector、Chroma、FAISS、Milvus、Weaviate、Pinecone 当成同一层 vendor 排名，会忽略本地库、Postgres 扩展、专用服务、搜索系统和图数据库的层级差异 |
 | 不知道 RAG 错在检索还是生成 | trace + [[RAG Evaluation]] | 需要分开看 recall、rerank、faithfulness、citation | 只看最终答案会误判根因 |
 
 ## 它们共同不是什么
@@ -207,3 +209,4 @@ Failure diagnosis:
 - [[Context RAG Memory 对比]]
 - [[RAG Evaluation]]
 - [[LLM Wiki 工作流]]
+- [[常用向量数据库对比]]

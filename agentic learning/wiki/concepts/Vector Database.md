@@ -5,9 +5,9 @@ topic:
   - infrastructure
 status: growing
 created: 2026-05-06
-updated: 2026-05-10
-last_checked: 2026-05-10
-freshness: stable
+updated: 2026-05-15
+last_checked: 2026-05-15
+freshness: watch
 conflicts: []
 source:
   - "[[Agent 工程基础设施主源]]"
@@ -20,6 +20,7 @@ related:
   - "[[Embedding]]"
   - "[[Retriever]]"
   - "[[Hybrid Search]]"
+  - "[[常用向量数据库对比]]"
 ---
 
 # Vector Database
@@ -71,6 +72,24 @@ Vector Database 不是 RAG 本身。
 
 和 [[Hybrid Search]] 的边界：vector database 偏向向量召回；hybrid search 会把向量与关键词/全文信号合并。
 
+## Agent / RAG 选型边界
+
+这个问题应沉淀为“类别级选型边界”，而不是给 Qdrant、pgvector、Chroma、FAISS、Milvus、Weaviate、Pinecone 等每个名字都建稳定概念卡。原因是：产品能力、API、价格、托管方式和性能数据变化很快；更稳定的学习价值是看清它们分别属于本地索引、Postgres 扩展、专用向量服务、搜索系统向量检索、图数据库 + 向量/全文索引这些不同层。
+
+| 场景 | 常用选择 | 为什么 | 不要误用 |
+|---|---|---|---|
+| 本地 demo / 学习 | Chroma、FAISS | 接入快，适合先跑通 RAG / memory 的最小闭环 | 不要把本地 demo 的便利性误当成生产治理能力 |
+| 小中型产品 / 后端已有 Postgres | PostgreSQL + pgvector | 结构化数据、metadata、权限字段和向量检索可放在同一套数据库里，少一层同步和运维 | 如果向量规模、QPS、过滤复杂度或多租户隔离上来，可能需要专用搜索/向量服务 |
+| 生产级专用向量服务 | Qdrant、Milvus、Weaviate、Pinecone | 更聚焦向量索引、过滤、扩展、服务化、客户端生态和部署形态 | 不要只按“哪个最 AI”排序；要看数据规模、更新频率、filter、hybrid search、成本、运维和数据边界 |
+| 已经有搜索系统 | Elasticsearch / OpenSearch vector search | 可以把关键词检索、全文检索、向量检索和部分 hybrid search 放在同一搜索栈里 | 如果只是小型语义检索 demo，引入完整搜索系统可能过重 |
+| 关系密集 / GraphRAG | Neo4j + 向量 / 全文索引，或图数据库 + 向量库组合 | 适合实体关系、路径遍历、多跳关系和向量召回组合 | Neo4j 不是“更高级的向量库”；构图质量、实体消歧和关系维护才是主要成本 |
+
+### Agent 长期记忆的存储边界
+
+Agent 长期记忆不应该理解成“所有东西都塞进向量库”。用户偏好、配置、权限、账户状态、当前任务状态、审批状态、删除/保留策略等信息，通常更适合关系库、KV、事件日志或明确的 state store；它们需要确定性读写、权限控制、审计和精确更新。向量数据库更适合语义召回：对话摘要、文档 chunk、经验片段、案例片段、用户过去表达过的自然语言偏好等。
+
+面试式回答可以压缩成：Agent 里的向量数据库主要用于 RAG 和长期记忆的语义检索；学习/原型用 Chroma 或 FAISS，真实项目 MVP 若已有 Postgres 可优先 pgvector，数据量/QPS/filter/服务化要求上来再看 Qdrant、Milvus、Weaviate、Pinecone，已有搜索系统时评估 Elasticsearch/OpenSearch，关系密集或 GraphRAG 场景再考虑 Neo4j + 向量/全文/图遍历组合。选型看数据规模、过滤条件、更新频率、运维成本、权限和 hybrid search，而不是看哪个名字更像 AI 基础设施。
+
 ## 现代性状态
 
 - 判定：current-practice。
@@ -88,9 +107,9 @@ Vector Database 不是 RAG 本身。
 - Anchor: [[Agent 工程基础设施主源#RAG / 检索基础设施]]
 - Source: [[Microsoft RAG 官方文档]]
 - Anchor: [[Microsoft RAG 官方文档#一句话]]
-- Evidence type: infrastructure source note + official docs source note + engineering synthesis.
+- Evidence type: infrastructure source note + official docs source note + official/project docs checked on 2026-05-15 + engineering synthesis.
 - Confidence: medium
-- Boundary: sources 支持向量数据库作为检索基础设施；具体厂商能力、性能和 API 是易变实现细节。
+- Boundary: sources 支持向量数据库作为检索基础设施；选型表是类别级工程综合，具体厂商能力、性能、价格和 API 是易变实现细节。
 
 ## 复习触发
 
@@ -105,3 +124,4 @@ Vector Database 不是 RAG 本身。
 - [[Chunking]]
 - [[Retriever]]
 - [[Hybrid Search]]
+- [[常用向量数据库对比]]

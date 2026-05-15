@@ -5,7 +5,7 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-07
-updated: 2026-05-14
+updated: 2026-05-15
 related:
   - "[[LLM Wiki 工作流]]"
   - "[[02 问题池]]"
@@ -38,7 +38,9 @@ related:
 | 2026-05-12 | done | “补充 RAG 主题页，沉淀学习路线、组件边界、类型入口和诊断路径” | [[RAG 主题]], [[Knowledge Graph]] | 已补充 RAG 主题导航、pipeline、失败诊断、证据锚点和复习触发，并创建 [[Knowledge Graph]] 概念卡 |
 | 2026-05-12 | done | “RAG and LLM boundary backlog：补齐 RAG 可靠性治理、检索决策、GraphRAG 构图评估和 LLM 输入输出基础边界” | [[RAG Citation Faithfulness]], [[RAG Access Control]], [[Query Rewrite]], [[Query Planning]], [[Graph Construction Evaluation]], [[Entity Resolution]], [[Token]], [[Context Window]], [[Prompt]], [[Hallucination]], [[RAG 可靠性与治理对比]], [[Query Rewrite Query Planning Agentic Retrieval 对比]], [[GraphRAG 构图与评估对比]], [[LLM 输入输出基础边界对比]] | 已创建 10 张概念卡和 4 张对比 topic，并写回 RAG / LLM / Agent 导航 |
 | 2026-05-13 | done | “一个真实的 LangGraph 向实战项目是什么样子，需要解决什么方案，涉及什么技术？” | [[LangGraph 生产项目蓝图]], [[LangGraph]], [[Agent Workflow]], [[Agent State]], [[Durable Execution]], [[Human-in-the-loop]], [[Trace]], [[Evaluation]], [[Agent Framework 全量选型对比 2026-05]] | 已沉淀为 [[LangGraph 生产项目蓝图]]：多源检索 + 工具执行 + 审批 + checkpoint/resume + trace/eval + 部署治理 |
-| 2026-05-13 | done | “Claw Bot 值得录入吗？创建 OpenClaw Repo，并做 OpenClaw Repo vs Hermes topic” | [[OpenClaw Repo]], [[OpenClaw Repo vs Hermes Agent]], [[03 前沿追踪]], [[Agent Harness]], [[Coding Agent 执行边界对比]] | 已创建 OpenClaw official repo source note 和 OpenClaw / Hermes 对比 topic；结论保留：按 OpenClaw / Clawbot legacy alias 录入为 volatile 具体 Agent gateway / personal assistant harness source，不建 “Claw Bot” 稳定概念卡 |
+| 2026-05-13 | done | “Claw Bot / OpenClaw 与 Hermes 的边界是什么？” | [[OpenClaw Repo]], [[OpenClaw Repo vs Hermes Agent]], [[03 前沿追踪]], [[Agent Harness]], [[Coding Agent 执行边界对比]] | 已创建 OpenClaw official repo source note 和 OpenClaw / Hermes 对比 topic；边界：按 OpenClaw / Clawbot legacy alias 处理为 volatile 具体 Agent gateway / personal assistant harness source，不建 “Claw Bot” 稳定概念卡 |
+| 2026-05-15 | done | “向量数据库 Qdrant / pgvector / Chroma / FAISS / Milvus / Weaviate / Pinecone 等 Agent 开发选型边界是什么？” | [[Vector Database]], [[Retrieval 组件对比]], [[RAG 主题]], [[Context RAG Memory 对比]] | 已写回 [[Vector Database#Agent / RAG 选型边界]]、[[Retrieval 组件对比#什么时候用哪个判断]]、[[RAG 主题#组件入口]]、[[Context RAG Memory 对比#什么时候用哪个判断]]；结论：记录为类别级选型边界，不为每个 vendor 直接建稳定概念卡。 |
+| 2026-05-15 | done | “Top-K 是什么 / 补概念卡” | [[Top-K]], [[01 术语表]], [[RAG 主题]], [[Agent 知识地图]] | 已创建 [[Top-K]] 轻量概念卡，补 retrieval Top-K / decoding top-k 边界，并接入术语表、RAG 主题和 Agent 知识地图。 |
 
 ## 写回模板
 

@@ -30,7 +30,7 @@ related:
 
 ## 为什么收
 
-这组资料值得录入，不是因为“guardrails”这个词本身新，而是因为多个框架和厂商文档都在把 guardrails 放到 workflow / agent execution 的具体控制点上：input、output、tool call、retrieval、execution、callback、filter、validator、state hook、transaction 和 automation。
+这组资料的学习价值不在于“guardrails”这个词本身新，而在于多个框架和厂商文档都在把 guardrails 放到 workflow / agent execution 的具体控制点上：input、output、tool call、retrieval、execution、callback、filter、validator、state hook、transaction 和 automation。
 
 这能补上当前 wiki 里 [[Guardrails]] 卡的一个边界：guardrails 不只是最终回答过滤器，也不只是某个 SDK 的功能名；它正在变成 [[Agent Workflow]] 里的节点/边/中间件/状态边界。
 
@@ -38,9 +38,9 @@ related:
 
 Workflow guardrails 是把安全、质量、权限、格式和副作用控制放在 workflow 的关键边界上，而不是只在最终回答上做一次检查。
 
-## 值得先读的主源
+## 主源阅读顺序
 
-| 来源 | 链接 | 支撑什么 | 录入判断 |
+| 来源 | 链接 | 支撑什么 | 学习用途 |
 |---|---|---|---|
 | OpenAI Agents SDK Guardrails | <https://openai.github.io/openai-agents-python/guardrails/> | 明确 input guardrails、output guardrails、tool guardrails 的 workflow boundaries；input 只跑第一层，output 只跑最终输出，tool guardrails 包在自定义 function tool 调用周围。 | 高优先级；支撑 [[Workflow Guardrails]] 的“不是只看 agent 输入输出”边界。 |
 | LangChain Guardrails | <https://docs.langchain.com/oss/python/langchain/guardrails> | 把 guardrails 作为 middleware 放在 before agent、after agent、around model/tool calls；区分 deterministic 和 model-based guardrails，并有 PII / HITL 方向。 | 高优先级；支撑 middleware / execution control point 视角。 |
@@ -53,7 +53,7 @@ Workflow guardrails 是把安全、质量、权限、格式和副作用控制放
 | Google ADK Callbacks | <https://google.github.io/adk-docs/callbacks/> | before/after agent、model、tool 等 callback 控制点，可观察或干预 agent 行为。 | 中；支撑 callback 控制点，但具体 API 快速变化。 |
 | Anthropic - Building Effective Agents | <https://www.anthropic.com/research/building-effective-agents> | parallelization workflow 可让一个模型处理请求、另一个模型筛查不当内容。 | 中；支撑 guardrail 可以是并行 workflow 分支。 |
 | IBM Research - Guardrails in generative AI workflows via orchestration | <https://research.ibm.com/publications/guardrails-in-generative-ai-workflows-via-orchestration> | 通过 orchestration 编排 detector/model server；强调 production-ready 要考虑 performance、scalability、extensibility、maintainability。 | 中；支撑 workflow orchestration 视角。 |
-| Agentproof - Static Verification of Agent Workflow Graphs | <https://arxiv.org/abs/2603.20356> | runtime guardrails 只能对执行路径反应；显式 workflow graph 可在部署前做结构/时序检查。 | 已录入；用于切开 runtime guardrails 与 static verification。 |
+| Agentproof - Static Verification of Agent Workflow Graphs | <https://arxiv.org/abs/2603.20356> | runtime guardrails 只能对执行路径反应；显式 workflow graph 可在部署前做结构/时序检查。 | 已沉淀；用于切开 runtime guardrails 与 static verification。 |
 
 ## 可以拆成概念卡
 

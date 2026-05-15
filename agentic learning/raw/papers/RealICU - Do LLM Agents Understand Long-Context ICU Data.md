@@ -62,7 +62,7 @@ related:
 
 ## 为什么收
 
-RealICU 值得录入，是因为它提醒医疗 Agent benchmark 不能简单把历史医生行为当 ground truth。ICU 数据长、密、会随时间变化，而医生当时行动可能受不完整信息限制。
+RealICU 的学习价值在于：它提醒医疗 Agent benchmark 不能简单把历史医生行为当 ground truth。ICU 数据长、密、会随时间变化，而医生当时行动可能受不完整信息限制。
 
 本页来自 2026-05-14 对 arXiv cs.AI recent 的 Agent 论文批次 2 录入，批次索引见 [[资料收集索引#第四轮补充：2026-05-14 arXiv Agent 论文批次 2]]，前沿判断见 [[03 前沿追踪#2026-05-14 arXiv Agent 论文批次 2]]。
 

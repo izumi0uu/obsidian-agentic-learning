@@ -4,7 +4,7 @@ topic:
   - llm
 status: active
 created: 2026-05-05
-updated: 2026-05-12
+updated: 2026-05-15
 related:
   - "[[LLM]]"
   - "[[Token]]"
@@ -79,7 +79,7 @@ SORT file.name ASC
 ## 下一批概念
 
 - [ ] temperature：采样随机性、稳定输出和 creative variation 的边界是否需要单独成卡？
-- [ ] top-p / top-k / decoding：是否作为 generation control 对比页处理？
+- [ ] top-p / decoding：[[Top-K]] 已补 retrieval / decoding 混淆边界；是否还需要 generation control 对比页？
 - [ ] structured output：和 [[Tool Calling]]、schema validation、[[Type-safe Agent SDK]] 的边界需要补吗？
 
 ## 推理和提示

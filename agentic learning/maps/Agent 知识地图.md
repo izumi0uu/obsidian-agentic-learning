@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-14
+updated: 2026-05-15
 related:
   - "[[Agent]]"
   - "[[前沿主源清单]]"
@@ -75,7 +75,7 @@ LLM 地基：
 
 - [[RAG]]：如何从外部知识库检索资料再生成回答；完整学习入口见 [[RAG 主题]]。
 - [[Document Ingestion]]、[[Chunking]] 和 [[Embedding]]：理解资料进入知识库、被切成证据单元并变成语义表示的入口质量。
-- [[Retriever]]、[[Vector Database]]、[[Hybrid Search]] 和 [[Reranking]]：理解生产 RAG 的召回、基础设施、混合检索和排序质量层。
+- [[Retriever]]、[[Top-K]]、[[Vector Database]]、[[Hybrid Search]] 和 [[Reranking]]：理解生产 RAG 的召回数量、检索基础设施、混合检索和排序质量层；常见实现生态见 [[常用向量数据库对比]]。
 - [[Knowledge Graph]]、[[GraphRAG]] 和 [[Neo4j]]：理解关系结构、图增强检索和图数据库工程生态如何结合。
 - [[RAG Evaluation]]：理解 RAG 失败要分层评估检索、上下文、引用和最终回答。
 - [[RAG Citation Faithfulness]] 和 [[RAG Access Control]]：理解 RAG 可靠性不只看答案，还要看引用支持和权限过滤。
@@ -140,6 +140,7 @@ LLM 地基：
 - [[RAG 类型对比]]：区分 RAG、Agentic RAG、Corrective RAG、Self-RAG 等检索增强路线。
 - [[Context RAG Memory 对比]]：区分 context engineering、RAG、memory、repo context 和 retriever。
 - [[Retrieval 组件对比]]：区分 retrieval pipeline 的入库、表示、召回、混合检索和重排。
+- [[常用向量数据库对比]]：区分 Chroma、FAISS、pgvector、Qdrant、Milvus、Weaviate、Pinecone、Elasticsearch/OpenSearch 和 Neo4j 的层级。
 - [[RAG 可靠性与治理对比]]：区分 RAG evaluation、citation faithfulness、access control、trace 和 audit 的治理位置。
 - [[Query Rewrite Query Planning Agentic Retrieval 对比]]：区分 query rewrite、query planning、agentic retrieval 和 agentic RAG。
 - [[GraphRAG 构图与评估对比]]：区分 knowledge graph、entity resolution、graph construction evaluation、GraphRAG 和 Neo4j。
@@ -162,6 +163,7 @@ SORT file.name ASC
 - [x] [[Hallucination]]
 - [x] [[Embedding]]
 - [x] [[Vector Database]]
+- [x] [[Top-K]]
 - [x] [[Chunking]]
 - [x] [[Reranking]]
 - [x] [[Hybrid Search]]

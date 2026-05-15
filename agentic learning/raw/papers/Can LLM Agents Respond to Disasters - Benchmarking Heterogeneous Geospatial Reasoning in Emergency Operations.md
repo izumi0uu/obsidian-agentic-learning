@@ -63,7 +63,7 @@ related:
 
 ## 为什么收
 
-DORA / disaster response 方向值得录入，因为它把 Agent 评估从通用 tool use 推到真实应急流程：多传感器、道路网络、人口和设施、撤离规划、报告生成，还带 108 个 specialized tools。
+DORA / disaster response 方向的学习价值在于：它把 Agent 评估从通用 tool use 推到真实应急流程：多传感器、道路网络、人口和设施、撤离规划、报告生成，还带 108 个 specialized tools。
 
 本页来自 2026-05-14 对 arXiv cs.AI recent 的 Agent 论文批次 2 录入，批次索引见 [[资料收集索引#第四轮补充：2026-05-14 arXiv Agent 论文批次 2]]，前沿判断见 [[03 前沿追踪#2026-05-14 arXiv Agent 论文批次 2]]。
 
