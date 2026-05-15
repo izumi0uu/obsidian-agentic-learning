@@ -785,3 +785,10 @@ related:
 - Cleaned request-side intake wording from existing durable notes and queued write-backs.
 - Updated guardrails: `AGENTS.md` and [[LLM Wiki 工作流]] now treat 收录价值判断、执行请求、项目名、任务名和临时 side context as operation metadata rather than wiki knowledge.
 - Boundary: durable pages should preserve learning value, evidence, and concept boundaries; user prompt scaffolding belongs in the current reply or, at most, this maintenance log.
+
+## [2026-05-15] autoresearch-goal | Hybrid Search concept strengthened
+
+- Updated concept: [[Hybrid Search]].
+- Added clearer sparse/dense retrieval framing, BM25/fulltext boundary, RRF as a common fusion idea, and the distinction from [[Reranking]], [[Agentic Retrieval]], [[GraphRAG]], and [[RAG Evaluation]].
+- Evidence: [[Agent 工程基础设施主源#RAG / 检索基础设施]], [[RAG 类型对比#一张表先抓住]], [[Microsoft RAG 官方文档#一句话]], [[Azure Search OpenAI Demo Repo#一句话]], and [[raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？#第三层：召回优化]].
+- Boundary: keep Hybrid Search as a stable retrieval-quality concept; keep product defaults, fusion weights, API details, and benchmark claims under watch-level review.
