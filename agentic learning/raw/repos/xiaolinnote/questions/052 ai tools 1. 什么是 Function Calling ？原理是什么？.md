@@ -39,7 +39,7 @@ related:
 ---
 
 
-👔面试官：来聊聊 Function Calling 吧，说说它是什么、原理是怎样的？
+👔面试官：来聊聊 [[Tool Calling|Function Calling]] 吧，说说它是什么、原理是怎样的？
 
 🙋‍♂️我：Function Calling 就是让大模型直接调用 API 嘛，模型自己去访问网络、查数据库，然后把结果返回给用户。
 

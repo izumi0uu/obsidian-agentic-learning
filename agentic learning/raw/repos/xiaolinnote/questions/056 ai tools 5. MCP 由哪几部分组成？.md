@@ -41,7 +41,7 @@ related:
 ---
 
 
-👔面试官：说说 MCP 由哪几部分组成？
+👔面试官：说说 [[MCP]] 由哪几部分组成？
 
 🙋‍♂️我：MCP 就是一个协议嘛，主要就是 Client 和 Server 两部分，Client 发请求，Server 返回结果，跟普通的 HTTP 接口差不多。
 
