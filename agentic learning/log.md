@@ -857,3 +857,11 @@ related:
 - Cleaned obvious false-friend `related` entries in both frontmatter and `## 相关知识 wiki` where backend terms had been mapped to Agent concepts, including Netty Reactor vs [[ReAct]], JVM/off-heap memory vs [[Memory]], and `volatile`/AQS backend state vs RAG/Agent links.
 - Verification target: post-apply dry-run remains 757 scanned pages, 757 related sections, 0 would-modify pages, 0 missing concept candidates, and 0 protected-region violations.
 - Boundary: this is a narrow semantic cleanup for the interview-question linking exception; it does not create backend concept cards or broaden raw-page synthesis rules.
+
+## [2026-05-16] wiki | 概念层级字段规范阶段 1 落地
+
+- 更新 [[字段规范]]：新增概念关系字段 `up` / `relations` / `children` 的边界，明确 `up` 只表示严格上位概念，`relations` 承载代表、思想来源、组合与高混淆相关关系。
+- 更新 [[概念卡]] 模板：frontmatter 增加 `up` 与 `relations`，并加入不要为了插件图谱强行加 `up` 的提示。
+- 更新 [[插件配置]]：记录 Abstract Folder 使用 `up`、Breadcrumbs 使用默认 `up/down` 并 rebuild graph、Juggl 只作为 Breadcrumbs/Obsidian 图的可视化层。
+- 示例边界：用 BM25 / TF-IDF / Sparse Retrieval / Hybrid Search 说明 taxonomy、代表关系、思想来源和组合关系的区别。
+- Boundary: 本阶段只改规范、模板和插件配置说明；不移动物理文件夹，不新增临时 map，不批量修改旧概念卡。
