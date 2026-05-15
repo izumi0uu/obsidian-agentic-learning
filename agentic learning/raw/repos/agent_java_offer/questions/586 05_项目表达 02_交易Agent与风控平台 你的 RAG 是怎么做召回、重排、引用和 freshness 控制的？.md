@@ -50,7 +50,7 @@ related:
 
 ## 题目正文
 
-追问题目：4. 你的 RAG 是怎么做召回、重排、引用和 freshness 控制的？
+追问题目：4. 你的 [[RAG]] 是怎么做[[Retriever|召回]]、[[Reranking|重排]]、引用和 freshness 控制的？
 
 出现位置：原文内容
 

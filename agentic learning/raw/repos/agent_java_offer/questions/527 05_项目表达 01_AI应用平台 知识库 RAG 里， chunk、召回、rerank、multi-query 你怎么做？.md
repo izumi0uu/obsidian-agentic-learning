@@ -54,7 +54,7 @@ related:
 
 ## 题目正文
 
-追问题目：1. 知识库/RAG 里，**chunk、召回、rerank、multi-query** 你怎么做？
+追问题目：1. 知识库/[[RAG]] 里，**[[Chunking|chunk]]、[[Retriever|召回]]、[[Reranking|rerank]]、multi-query** 你怎么做？
 
 出现位置：你今晚最该准备的 8 个题眼
 

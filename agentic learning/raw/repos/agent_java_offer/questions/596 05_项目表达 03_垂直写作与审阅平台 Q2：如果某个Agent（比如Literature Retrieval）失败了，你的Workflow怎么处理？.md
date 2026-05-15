@@ -48,7 +48,7 @@ related:
 
 ## 题目正文
 
-追问题目：Q2：如果某个Agent（比如Literature Retrieval）失败了，你的Workflow怎么处理？
+追问题目：Q2：如果某个[[Agent]]（比如Literature Retrieval）失败了，你的[[Agent Workflow|Workflow]]怎么处理？
 
 出现位置：额外加分点（展示你懂企业落地）
 

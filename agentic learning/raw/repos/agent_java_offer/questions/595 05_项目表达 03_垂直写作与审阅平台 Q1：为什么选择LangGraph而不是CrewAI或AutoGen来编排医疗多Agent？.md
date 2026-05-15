@@ -52,7 +52,7 @@ related:
 
 ## 题目正文
 
-追问题目：Q1：为什么选择LangGraph而不是CrewAI或AutoGen来编排医疗多Agent？
+追问题目：Q1：为什么选择LangGraph而不是CrewAI或AutoGen来编排医疗多[[Agent]]？
 
 出现位置：额外加分点（展示你懂企业落地）
 

@@ -48,7 +48,7 @@ related:
 
 ## 题目正文
 
-追问题目：“Prompt injection 怎么防？”
+追问题目：“[[Prompt Injection|Prompt injection]] 怎么防？”
 
 出现位置：原文内容
 

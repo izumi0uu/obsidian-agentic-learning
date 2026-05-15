@@ -48,7 +48,7 @@ related:
 
 追问题目：“为什么用 order mode 而不是多 API 串联？”
 
-出现位置：如果岗位偏链上 / Wallet / Onchain Agent，再加这组题
+出现位置：如果岗位偏链上 / Wallet / Onchain [[Agent]]，再加这组题
 
 ## 边界提醒
 

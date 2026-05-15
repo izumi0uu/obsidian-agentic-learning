@@ -52,12 +52,12 @@ related:
 
 ## 题目正文
 
-**2. Agent 为什么不能只做成固定 workflow？什么时候该用 planning？**
+**2. [[Agent]] 为什么不能只做成固定 [[Agent Workflow|workflow]]？什么时候该用 [[Planning|planning]]？**
 你要能区分：
 固定流程适合低风险、强约束任务；
 Agent/planning 适合不确定查询、需要多轮推理和多工具决策；
 而交易场景里真正高风险的动作，常常不能完全交给自由规划，必须加**硬规则/风控闸门**。
-这题是典型的 “AI 工程能力 + 业务安全感” 题。结合现在后端/AI 工程岗位的高频题，Agent 的 planning、memory、tools、action 本身就是常见考点。
+这题是典型的 “AI 工程能力 + 业务安全感” 题。结合现在后端/AI 工程岗位的高频题，Agent 的 planning、[[Memory|memory]]、tools、action 本身就是常见考点。
 
 ## 边界提醒
 

@@ -49,7 +49,7 @@ related:
 
 ### 如果岗位偏链上 / Wallet / Onchain Agent，再加这组题
 
-某链上钱包产品 官方还有一条 **某链上钱包产品 Skill** 产品线，主打“**为 AI Agent 而生**”、**0 Gas 交易**、**一键跨链**、**x402 自主支付**、**8+ 主流公链**、**Order Mode**，还给了 `swapQuote / swapSend / orderQuote / orderCreate / orderSubmit` 的代码示例。
+某链上钱包产品 官方还有一条 **某链上钱包产品 Skill** 产品线，主打“**为 [[Agent|AI Agent]] 而生**”、**0 Gas 交易**、**一键跨链**、**x402 自主支付**、**8+ 主流公链**、**Order Mode**，还给了 `swapQuote / swapSend / orderQuote / orderCreate / orderSubmit` 的代码示例。
 如果你的 JD 里出现 **Wallet / Onchain / Skill / x402 / cross-chain / no gas** 这些词，就要额外准备：
 “Gasless 交易怎么实现？”
 “跨链订单状态机怎么设计？”

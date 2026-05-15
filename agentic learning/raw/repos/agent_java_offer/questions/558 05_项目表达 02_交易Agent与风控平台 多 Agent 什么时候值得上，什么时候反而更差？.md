@@ -48,7 +48,7 @@ related:
 
 ## 题目正文
 
-追问题目：“多 Agent 什么时候值得上，什么时候反而更差？”
+追问题目：“[[Multi-agent Orchestration|多 Agent]] 什么时候值得上，什么时候反而更差？”
 
 出现位置：原文内容
 

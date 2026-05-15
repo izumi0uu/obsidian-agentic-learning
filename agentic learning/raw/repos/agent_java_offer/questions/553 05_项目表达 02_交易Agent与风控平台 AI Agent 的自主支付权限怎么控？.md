@@ -46,7 +46,7 @@ related:
 
 ## 题目正文
 
-追问题目：“AI Agent 的自主支付权限怎么控？”
+追问题目：“[[Agent|AI Agent]] 的自主支付权限怎么控？”
 
 出现位置：如果岗位偏链上 / Wallet / Onchain Agent，再加这组题
 

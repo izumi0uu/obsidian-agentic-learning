@@ -48,7 +48,7 @@ related:
 
 ## 题目正文
 
-追问题目：“你这个系统为什么一定要用 Agent，不是 workflow 就够了吗？”
+追问题目：“你这个系统为什么一定要用 [[Agent]]，不是 [[Agent Workflow|workflow]] 就够了吗？”
 
 出现位置：原文内容
 

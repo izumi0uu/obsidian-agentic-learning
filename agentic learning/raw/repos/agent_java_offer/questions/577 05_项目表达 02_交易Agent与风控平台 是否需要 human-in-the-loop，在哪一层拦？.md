@@ -46,7 +46,7 @@ related:
 
 ## 题目正文
 
-追问题目：“是否需要 human-in-the-loop，在哪一层拦？”
+追问题目：“是否需要 [[Human-in-the-loop|human-in-the-loop]]，在哪一层拦？”
 
 出现位置：原文内容
 

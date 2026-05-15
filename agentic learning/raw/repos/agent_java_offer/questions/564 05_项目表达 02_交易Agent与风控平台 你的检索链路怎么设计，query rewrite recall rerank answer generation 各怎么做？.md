@@ -50,7 +50,7 @@ related:
 
 ## 题目正文
 
-追问题目：“你的检索链路怎么设计，query rewrite / recall / rerank / answer generation 各怎么做？”
+追问题目：“你的[[Retriever|检索]]链路怎么设计，query rewrite / recall / [[Reranking|rerank]] / answer generation 各怎么做？”
 
 出现位置：原文内容
 

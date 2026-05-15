@@ -54,8 +54,8 @@ related:
 
 ## 题目正文
 
-**4. 如何做 RAG，文档切片怎么设计，如何评估效果？**
-这是现在 AI 工程方向的通用高频题。你至少要能回答：chunk 大小、overlap、metadata、hybrid retrieval、MMR 去重、重排序、离线评估与线上指标。牛客整理的 2026 Java/AI 工程题里，把 RAG 架构、检索优化、长上下文处理和效果评估都列成高频点。
+**4. 如何做 [[RAG]]，文档切片怎么设计，如何评估效果？**
+这是现在 AI 工程方向的通用高频题。你至少要能回答：[[Chunking|chunk]] 大小、overlap、metadata、hybrid retrieval、MMR 去重、[[Reranking|重排]]序、离线评估与线上指标。牛客整理的 2026 Java/AI 工程题里，把 RAG 架构、[[Retriever|检索]]优化、长上下文处理和效果评估都列成高频点。
 
 ## 边界提醒
 

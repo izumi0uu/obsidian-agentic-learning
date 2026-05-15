@@ -50,7 +50,7 @@ related:
 
 ## 题目正文
 
-追问题目：“为什么选这个 embedding 模型和向量库？”
+追问题目：“为什么选这个 [[Embedding|embedding]] 模型和[[Vector Database|向量库]]？”
 
 出现位置：原文内容
 

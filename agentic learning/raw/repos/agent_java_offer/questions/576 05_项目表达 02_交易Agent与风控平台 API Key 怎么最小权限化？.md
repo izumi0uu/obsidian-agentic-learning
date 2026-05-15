@@ -50,7 +50,7 @@ related:
 
 ## 题目正文
 
-追问题目：“API Key 怎么最小权限化？”
+追问题目：“API Key 怎么[[Least Privilege Tools|最小权限]]化？”
 
 出现位置：原文内容
 

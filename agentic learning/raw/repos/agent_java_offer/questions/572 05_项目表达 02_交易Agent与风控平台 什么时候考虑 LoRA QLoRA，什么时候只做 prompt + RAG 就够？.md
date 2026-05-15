@@ -50,7 +50,7 @@ related:
 
 ## 题目正文
 
-追问题目：“什么时候考虑 LoRA / QLoRA，什么时候只做 prompt + RAG 就够？”
+追问题目：“什么时候考虑 LoRA / QLoRA，什么时候只做 prompt + [[RAG]] 就够？”
 
 出现位置：原文内容
 

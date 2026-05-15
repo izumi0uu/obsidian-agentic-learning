@@ -48,7 +48,7 @@ related:
 
 ## 题目正文
 
-追问题目：1. prompt injection 在交易场景里最危险的后果是什么，怎么防？
+追问题目：1. [[Prompt Injection|prompt injection]] 在交易场景里最危险的后果是什么，怎么防？
 
 出现位置：原文内容
 

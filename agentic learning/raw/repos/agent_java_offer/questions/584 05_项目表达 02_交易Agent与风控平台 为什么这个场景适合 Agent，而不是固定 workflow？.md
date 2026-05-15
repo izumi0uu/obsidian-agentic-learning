@@ -48,7 +48,7 @@ related:
 
 ## 题目正文
 
-追问题目：2. 为什么这个场景适合 Agent，而不是固定 workflow？
+追问题目：2. 为什么这个场景适合 [[Agent]]，而不是固定 [[Agent Workflow|workflow]]？
 
 出现位置：原文内容
 

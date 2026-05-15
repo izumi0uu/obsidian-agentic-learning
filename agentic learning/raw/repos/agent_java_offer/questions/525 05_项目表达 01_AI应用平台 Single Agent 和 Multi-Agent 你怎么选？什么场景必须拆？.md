@@ -48,7 +48,7 @@ related:
 
 ## 题目正文
 
-追问题目：2. **Single Agent 和 Multi-Agent** 你怎么选？什么场景必须拆？
+追问题目：2. **Single [[Agent]] 和 [[Multi-agent Orchestration|Multi-Agent]]** 你怎么选？什么场景必须拆？
 
 出现位置：你今晚最该准备的 8 个题眼
 

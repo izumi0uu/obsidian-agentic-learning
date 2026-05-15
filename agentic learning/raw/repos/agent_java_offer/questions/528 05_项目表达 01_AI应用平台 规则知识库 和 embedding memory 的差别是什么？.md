@@ -48,7 +48,7 @@ related:
 
 ## 题目正文
 
-追问题目：2. **规则知识库** 和 **embedding memory** 的差别是什么？
+追问题目：2. **规则知识库** 和 **[[Embedding|embedding]] [[Memory|memory]]** 的差别是什么？
 
 出现位置：你今晚最该准备的 8 个题眼
 

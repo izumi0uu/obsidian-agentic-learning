@@ -50,7 +50,7 @@ related:
 
 ## 题目正文
 
-追问题目：“MCP、tool calling、function calling、workflow orchestration 到底有什么区别？”
+追问题目：“[[MCP]]、[[Tool Calling|tool calling]]、function calling、[[Agent Workflow|workflow orchestration]] 到底有什么区别？”
 
 出现位置：原文内容
 
