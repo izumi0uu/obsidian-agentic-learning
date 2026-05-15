@@ -835,3 +835,10 @@ related:
 - Updated navigation: [[Embedding]], [[Hybrid Search]], [[Retrieval 组件对比]], [[RAG 主题]], [[01 术语表]], [[Agent 知识地图]], [[04 页面目录]], and [[Agent 工程基础设施主源]].
 - Evidence: scikit-learn TF-IDF user guide and `TfidfVectorizer` API reference checked on 2026-05-15.
 - Boundary: TF-IDF is recorded as a foundation concept for sparse lexical vectors and hybrid search, not as dense embedding or a default production RAG ranking algorithm.
+
+## [2026-05-15] wiki | sparse retrieval and BM25 concept cards recorded
+
+- Added concepts: [[Sparse Retrieval]] and [[BM25]] as RAG retrieval boundary cards.
+- Updated navigation: [[Hybrid Search]], [[TF-IDF]], [[Retrieval 组件对比]], [[RAG 主题]], [[Agent 知识地图]], and [[04 页面目录]].
+- Evidence: [[raw/repos/xiaolinnote/questions/024 ai rag 11. 请你介绍一下向量检索和关键词检索的区别？#关键词检索：字面匹配，靠统计]], [[raw/repos/xiaolinnote/questions/026 ai rag 13. 什么是多路召回？具体怎么做？#第二路：BM25 关键词检索（Sparse Retrieval）]], and [[raw/repos/xiaolinnote/questions/023 ai rag 10. 你使用 RAG 给大模型一个输入，系统是怎样的工作流程？#第三步：向量检索（ANN 搜索）+ 多路召回]].
+- Boundary: [[TF-IDF]] is the foundation term-weighting intuition, [[BM25]] is the common sparse retrieval representative, [[Sparse Retrieval]] is the broader lexical retrieval family, and [[Hybrid Search]] is the fusion strategy that combines sparse and dense signals.
