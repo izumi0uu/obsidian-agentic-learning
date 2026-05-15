@@ -10,7 +10,7 @@ topic:
   - "rag"
 status: inbox
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-05-15
 url: "https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/03_RAG/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md"
 source: "https://github.com/guoguo-tju/agent_java_offer"
 source_path: "docs/interview_prep/01_AI/03_RAG/01_核心问答.md"
@@ -36,6 +36,12 @@ related:
   - "[[Chunking]]"
   - "[[Document Ingestion]]"
   - "[[LLM]]"
+  - "[[RAG Citation Faithfulness]]"
+  - "[[Knowledge Graph]]"
+  - "[[BM25]]"
+  - "[[Sparse Retrieval]]"
+  - "[[TF-IDF]]"
+  - "[[Vector Database]]"
 ---
 
 # 除了基础的向量检索，你还知道哪些可以提升 RAG 检索质量的技术？
@@ -59,6 +65,12 @@ related:
 - [[Chunking]]
 - [[Document Ingestion]]
 - [[LLM]]
+- [[RAG Citation Faithfulness]]
+- [[Knowledge Graph]]
+- [[BM25]]
+- [[Sparse Retrieval]]
+- [[TF-IDF]]
+- [[Vector Database]]
 
 ## 题目正文
 

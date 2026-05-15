@@ -10,7 +10,7 @@ topic:
   - "memory"
 status: inbox
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-05-15
 url: "https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/04_%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B7%A5%E7%A8%8B%E4%B8%8E%E8%AE%B0%E5%BF%86/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md"
 source: "https://github.com/guoguo-tju/agent_java_offer"
 source_path: "docs/interview_prep/01_AI/04_上下文工程与记忆/01_核心问答.md"
@@ -36,6 +36,11 @@ related:
   - "[[Context Engineering]]"
   - "[[Agent Workflow]]"
   - "[[Planning]]"
+  - "[[Tool Use]]"
+  - "[[Knowledge Graph]]"
+  - "[[Context Window]]"
+  - "[[Prompt]]"
+  - "[[LLM]]"
 ---
 
 # Memory 是 Agent 的一个关键模块。请问如何为 Agent 设计短期记忆和长期记忆系统？可以借助哪些外部工具或技术？
@@ -59,6 +64,11 @@ related:
 - [[Context Engineering]]
 - [[Agent Workflow]]
 - [[Planning]]
+- [[Tool Use]]
+- [[Knowledge Graph]]
+- [[Context Window]]
+- [[Prompt]]
+- [[LLM]]
 
 ## 题目正文
 
