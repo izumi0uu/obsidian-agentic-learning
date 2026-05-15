@@ -42,7 +42,7 @@ related:
 ---
 
 
-👔面试官：RAG 里的文档是怎么存进向量库的？你说说 Chunking 怎么做。
+👔面试官：RAG 里的文档是怎么存进[[Vector Database|向量库]]的？你说说 [[Chunking]] 怎么做。
 
 🙋‍♂️我：文档直接整篇存进去就好了吧？反正向量模型什么都能处理。
 
@@ -82,7 +82,7 @@ related:
 
 ![](https://cdn.xiaolincoding.com//picgo/1776782122213-ba05a890-c0bb-4fa9-b5f8-2559dcb552b8.png)
 
-所以文档入库的完整流程是这样的：
+所以[[Document Ingestion|文档入库]]的完整流程是这样的：
 
 ![](https://cdn.xiaolincoding.com//picgo/image-20260304222654203.png?image_process=watermark,text_eGlhb2xpbm5vdGUuY29tQOWwj-ael-mdouivleeslOiusA,g_south,size_35,type_aHloZWk,color_304ffe)
 

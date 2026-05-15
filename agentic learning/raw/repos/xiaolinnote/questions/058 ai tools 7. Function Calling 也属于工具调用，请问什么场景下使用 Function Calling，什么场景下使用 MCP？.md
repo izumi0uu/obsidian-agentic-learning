@@ -39,7 +39,7 @@ related:
 ---
 
 
-👔面试官：Function Calling 和 MCP 都能做工具调用，那具体什么场景下该选哪个？
+👔面试官：[[Tool Calling|Function Calling]] 和 [[MCP]] 都能做工具调用，那具体什么场景下该选哪个？
 
 🙋‍♂️我：这个简单，小项目用 Function Calling，大项目用 MCP 就行了，主要看项目规模。
 

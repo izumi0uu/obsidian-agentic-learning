@@ -46,9 +46,9 @@ related:
 ---
 
 
-👔面试官：你来说说 ReAct、Plan-and-Execute、Reflection 三种范式的区别？
+👔面试官：你来说说 [[ReAct]]、[[Plan-and-Solve Prompting|Plan-and-Execute]]、[[Reflexion|Reflection]] 三种范式的区别？
 
-🙋‍♂️我：ReAct 是边想边执行，Plan-and-Execute 是先规划再执行，Reflection 是……执行完之后反思？
+🙋‍♂️我：ReAct 是边想边执行，Plan-and-Execute 是先[[Planning|规划]]再执行，Reflection 是……执行完之后反思？
 
 👔面试官：Reflection 的定位你说对了，但它和另外两个是同一个层面的东西吗？你有没有想过它为什么单独列出来？
 

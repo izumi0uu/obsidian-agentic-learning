@@ -39,7 +39,7 @@ related:
 ---
 
 
-👔面试官：来聊聊 MCP 和 Function Calling 的区别吧。
+👔面试官：来聊聊 [[MCP]] 和 [[Tool Calling|Function Calling]] 的区别吧。
 
 🙋‍♂️我：MCP 就是 Function Calling 的升级版嘛，MCP 出来之后 Function Calling 就被淘汰了，以后工具调用都走 MCP 就行了。
 

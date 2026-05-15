@@ -40,7 +40,7 @@ related:
 ---
 
 
-👔面试官：RAG 里用的 Embedding 算法有哪些？你了解过几代演进？
+👔面试官：RAG 里用的 [[Embedding]] 算法有哪些？你了解过几代演进？
 
 🙋‍♂️我：Embedding 算法我知道，Word2Vec 嘛，把词变成向量。
 

@@ -44,7 +44,7 @@ related:
 ---
 
 
-👔面试官：RAG 和微调（Fine-tuning）有什么区别？各自适合什么场景？
+👔面试官：[[RAG]] 和[[LLM Training Pipeline|微调]]（Fine-tuning）有什么区别？各自适合什么场景？
 
 🙋‍♂️我：微调就是拿自己的数据训练一下模型，RAG 也是拿自己的数据训练一下模型，只是方法不同。
 

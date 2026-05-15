@@ -41,7 +41,7 @@ related:
 ---
 
 
-👔面试官：Function Calling、Skill、MCP 这三个概念有什么区别？
+👔面试官：[[Tool Calling|Function Calling]]、[[Tool Use|Skill]]、[[MCP]] 这三个概念有什么区别？
 
 🙋‍♂️我：这三个都是让模型调用外部工具的方式吧？Function Calling 是 OpenAI 的方案，MCP 是 Anthropic 的方案，Skill 也是 Anthropic 的方案，它们是不同时期搞出来的竞争方案。
 

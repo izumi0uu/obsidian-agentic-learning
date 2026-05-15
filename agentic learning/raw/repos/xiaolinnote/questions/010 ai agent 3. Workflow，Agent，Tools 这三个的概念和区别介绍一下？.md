@@ -46,7 +46,7 @@ related:
 ---
 
 
-👔面试官：Workflow、Agent、Tools 这三个概念说一下，区别是什么？
+👔面试官：[[Agent Workflow|Workflow]]、Agent、[[Tool Calling|Tools]] 这三个概念说一下，区别是什么？
 
 🙋‍♂️我：Tools 是工具函数，Agent 是能调工具的智能体，Workflow 是把多个 Agent 串起来的流程，三者是从小到大的关系。
 
@@ -147,7 +147,7 @@ def execute_send_email(to: str, subject: str, body: str) -> str:
 
 另外还有一个行业趋势值得关注。随着工具越来越多，怎么管理和发现工具本身也变成了一个工程问题。
 
-Anthropic 在 2024 年底提出了 MCP（Model Context Protocol），它的思路是把工具的注册、描述、调用做成一套标准化协议，这样不同的 Agent 框架和不同的工具提供方就能互通了，不用每接一个新工具就写一套适配代码。你可以把 MCP 理解成工具世界的「USB 接口」，只要工具按这个标准暴露自己的能力，任何支持 MCP 的 Agent 都能直接调用。
+Anthropic 在 2024 年底提出了 MCP（Model Context Protocol），它的思路是把工具的注册、描述、调用做成一套标准化协议，这样不同的 [[Agent Framework|Agent 框架]]和不同的工具提供方就能互通了，不用每接一个新工具就写一套适配代码。你可以把 MCP 理解成工具世界的「USB 接口」，只要工具按这个标准暴露自己的能力，任何支持 MCP 的 Agent 都能直接调用。
 
 ### [第二层：Agent，拿着工具自己做决定的人](#第二层-agent-拿着工具自己做决定的人)
 
