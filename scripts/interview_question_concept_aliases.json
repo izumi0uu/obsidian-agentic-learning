@@ -42,6 +42,7 @@
   "MCP Registry": ["MCP Registry", "MCP 注册表", "MCP 市场"],
   "Memory": ["Memory", "记忆", "记忆系统"],
   "Memory Reflection": ["Memory Reflection", "记忆反思", "记忆总结"],
+  "Multi-Route Retrieval": ["Multi-Route Retrieval", "多路召回", "多路检索", "多路召回策略"],
   "Multi-agent Orchestration": ["Multi-agent Orchestration", "多智能体编排", "多 Agent 编排", "多 Agent 协作"],
   "Neo4j": ["Neo4j"],
   "Non-Parametric Memory": ["Non-Parametric Memory", "非参数记忆", "外部记忆"],

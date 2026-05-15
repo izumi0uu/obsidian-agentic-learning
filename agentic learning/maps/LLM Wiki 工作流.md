@@ -143,6 +143,48 @@ python3 scripts/interview_question_concept_links.py --self-test
 python3 scripts/interview_question_concept_links.py --dry-run
 ```
 
+## 新概念反向提及扫描 / New Concept Mention Backlink Sweep
+
+新增概念卡、确认新的 canonical name、给旧卡补重要 alias、或扩大概念边界后，必须回扫项目里已经提到该概念的地方，补上正确引用。目标是让新卡进入已有知识网络，而不是成为孤立页。
+
+### 触发条件
+
+- 新建 `wiki/concepts/<Concept>.md`。
+- 旧概念卡新增重要中文名、英文名、缩写或同义工程说法。
+- 从 backlog/面试题/raw 中确认一个术语应落到某张卡。
+- 修改 `scripts/interview_question_concept_aliases.json`，导致同一概念未来会自动链接更多页面。
+
+### 回扫步骤
+
+1. 生成搜索词组：canonical title、中文 aliases、英文变体、缩写、常见大小写和连字符/空格变体。
+2. 搜索范围至少覆盖：`wiki/concepts/`、`wiki/topics/`、`raw/`、`maps/`、`reviews/`、`scripts/interview_question_concept_aliases.json`；本地运行时优先用 Obsidian hybrid search，再用 `rg` 做确定性复核。
+3. 对命中逐条分类：
+   - 同一概念：补 `[[Concept]]` 或 `[[Concept|中文术语]]`。
+   - raw/source 证据页：不改写原文或长摘；只更新 frontmatter `related`、`## 相关知识 wiki`、中性 synthesis、或证据锚点。
+   - 相邻概念/上下位/组合关系：必要时写入 `relations` 或正文边界，不把它当同义链接。
+   - false friend / 歧义命中：不链接；把禁止映射或待判定项写入边界、[[08 面试题概念卡待补充]]、[[05 Query 写回队列]] 或 [[06 Wiki 健康检查]]。
+   - 高频重复命中：只链接首个学习有效位置，避免每句都加链接。
+4. 同步双向关系：新卡的 `source` / `evidence` / `related`，提及页的 `related` 或 `## 相关知识 wiki`，以及必要的主题页、地图和索引。
+5. 在 log 中记录搜索词、主要落点、跳过/不链接的边界。
+
+### 验收
+
+- 新概念卡不是孤立页；至少说明已搜索哪些 aliases/变体。
+- 已知同义中文提及能跳到 canonical 卡；歧义提及没有被强行链接。
+- raw 证据层没有被改写成概念解释。
+- 至少运行：
+
+```bash
+git diff --check
+```
+
+若修改了面试题链接脚本或 alias map，还要运行：
+
+```bash
+python3 scripts/interview_question_concept_links.py --self-test
+python3 scripts/interview_question_concept_links.py --dry-run
+```
+
 ## 角色分工
 
 ### 用户负责

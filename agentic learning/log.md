@@ -879,3 +879,19 @@ related:
 - Updated [[LLM Wiki 工作流]] with the same retrieval order and the boundary that semantic recall does not collapse the `raw/`、`wiki/`、`maps/` knowledge layers.
 - Updated the local `obsidian-llm-wiki` skill so future skill-triggered wiki work uses the hybrid search MCP tools by default when available.
 - Boundary: this records retrieval behavior only. Runtime details such as proxy settings, model cache paths, MCP install commands, and local Codex config remain outside durable wiki content.
+
+## [2026-05-16] wiki | multi-route retrieval concept recorded
+
+- Added concept: [[Multi-Route Retrieval]] as the broader RAG multi-route recall pattern behind dense, sparse/BM25, multi-query, graph, filter, or multi-retriever candidate recall.
+- Updated navigation and comparison surfaces: [[raw/repos/xiaolinnote/questions/026 ai rag 13. 什么是多路召回？具体怎么做？]], [[Hybrid Search]], [[Retrieval 组件对比]], [[RAG 主题]], [[Agent 知识地图]], [[04 页面目录]], and [[08 面试题概念卡待补充]].
+- Updated interview alias map so `多路召回` and `多路检索` resolve to [[Multi-Route Retrieval]] instead of being collapsed into [[Hybrid Search]].
+- Synchronized the new concept mention backlink-sweep rule into `AGENTS.md`, [[LLM Wiki 工作流]], [[概念卡]], and the local `obsidian-llm-wiki` skill so future concept cards trigger a project-wide mention check.
+- Evidence: [[raw/repos/xiaolinnote/questions/026 ai rag 13. 什么是多路召回？具体怎么做？#什么是多路召回？]], its Dense Retrieval / BM25 / multi Query / RRF sections, and [[raw/repos/xiaolinnote/questions/024 ai rag 11. 请你介绍一下向量检索和关键词检索的区别？#混合检索：两者结合]].
+- Boundary: this records Multi-Route Retrieval as broader than [[Hybrid Search]] and separate from [[Reranking]]; RRF, Multi-Query Retrieval, and Dense Retrieval remain candidate concepts unless later evidence justifies separate cards.
+
+## [2026-05-16] maintenance | new concept mention backlink sweep rule recorded
+
+- Added a project-level hard rule in `AGENTS.md`: after creating a new concept card or accepting a major alias/canonical name, scan the vault for existing mentions and add correct Obsidian references or record why a hit remains unlinked.
+- Updated [[LLM Wiki 工作流]] with the new concept backlink sweep workflow: triggers, search scope, hit classification, raw-source boundary, two-way synchronization, and validation commands.
+- Updated [[概念卡]] template with a reminder that new cards and important aliases must trigger a backlink sweep before completion.
+- Boundary: this records the future rule only. It does not run a full backlink sweep for existing concepts in this pass.

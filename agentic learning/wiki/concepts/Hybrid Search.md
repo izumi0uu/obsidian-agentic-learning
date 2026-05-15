@@ -33,10 +33,11 @@ related:
   - "[[Retriever]]"
   - "[[Reranking]]"
   - "[[Agentic Retrieval]]"
-  - "[[RAG Evaluation]]"
-  - "[[TF-IDF]]"
-  - "[[Sparse Retrieval]]"
-  - "[[BM25]]"
+- "[[RAG Evaluation]]"
+- "[[TF-IDF]]"
+- "[[Sparse Retrieval]]"
+- "[[BM25]]"
+- "[[Multi-Route Retrieval]]"
 ---
 
 # Hybrid Search
@@ -65,7 +66,7 @@ Hybrid Search 的边界是检索召回与初排。它能提高“找得到相关
 
 Hybrid Search 不是简单把两个结果列表拼起来，也不是“向量数据库的另一个名字”。
 
-真实系统还要处理权重或 RRF、去重、排序、过滤、权限、rerank 和引用。它也不是 [[Agentic Retrieval]]：Hybrid Search 合并检索信号，Agentic Retrieval 规划多个信息需求和检索动作。
+真实系统还要处理权重或 RRF、去重、排序、过滤、权限、rerank 和引用。它也不是 [[Multi-Route Retrieval]] 的完整同义词：Hybrid Search 常是 dense/vector + sparse/BM25 的常见双路形态，而 Multi-Route Retrieval 还可以包含多 Query、图检索、metadata filter、不同索引粒度或多个 retriever。它也不是 [[Agentic Retrieval]]：Hybrid Search 合并检索信号，Agentic Retrieval 规划多个信息需求和检索动作。
 
 ## 最小例子
 
@@ -102,6 +103,8 @@ query
 和 [[Sparse Retrieval]] / [[BM25]] / [[TF-IDF]] 的边界：sparse retrieval 是稀疏词法检索的总称，BM25 是常见工程代表；TF-IDF 是更早期的词项权重方法，不应直接等同于 sparse retrieval 本身。
 
 和 [[Agentic Retrieval]] 的边界：hybrid search 不负责拆解复杂问题，也不决定查几个知识源；它只是一次或多次检索动作内部的信号融合。Agentic Retrieval 可以调用 hybrid search，但两者不在同一层。
+
+和 [[Multi-Route Retrieval]] 的边界：hybrid search 是常见的多信号融合方式；Multi-Route Retrieval 是更宽的召回组织模式，可以把 hybrid search 当作一路或一个子策略。
 
 和 [[RAG Evaluation]] 的边界：hybrid search 是否有用，要看目标问题集上的 recall、hit rate、rerank 前后变化、citation 支持率和延迟成本；不能只看某个 demo 的 top-k 样例。
 

@@ -46,6 +46,24 @@ Hard requirements:
 
 Boundary: this gate is mandatory for terminology alignment. It does not mean every bilingual term deserves a card; it means every durable mapping must have an explicit boundary decision.
 
+## Top Hard Rule: New Concept Mention Backlink Sweep
+
+When a new concept card is created, or when an existing card receives a new canonical name / major alias / materially broader boundary, the agent must run a project-wide mention sweep before claiming completion.
+
+Hard requirements:
+
+1. Search the vault for the concept's canonical title, Chinese aliases, English variants, abbreviations, and high-confidence phrase forms across `agentic learning/wiki/`, `agentic learning/wiki/topics/` when present, `agentic learning/raw/`, `agentic learning/maps/`, `agentic learning/reviews/`, and relevant automation such as `scripts/interview_question_concept_aliases.json`.
+2. Classify each hit before editing:
+   - same concept and educationally useful: add an Obsidian link, usually first meaningful mention or local `## 相关知识 wiki`; use display aliases like `[[Canonical Concept|中文术语]]` when preserving Chinese prose.
+   - raw-source evidence: do not rewrite quoted/source text; add or update `related`, `## 相关知识 wiki`, synthesis notes, or evidence anchors around the source.
+   - ambiguous, broader/narrower, or false friend: do not link; record the boundary in the concept card, backlog, or audit note when it may recur.
+   - already linked or noisy repeated mention: leave as-is to avoid link spam.
+3. Update both directions where appropriate: the new concept card's `source` / `evidence` / `related`, the mentioning page's `related` or local wiki-link section, and maps/indexes when the concept changes navigation.
+4. If the sweep finds many uncertain or weak hits, do not create weak cards or force links; put candidates into `[[08 面试题概念卡待补充]]`, `[[05 Query 写回队列]]`, or `[[06 Wiki 健康检查]]` with the unresolved boundary.
+5. Validate with the smallest reproducible check: at minimum a search summary plus `git diff --check`; for interview-question links also run `python3 scripts/interview_question_concept_links.py --self-test` and a dry-run when the script/alias map is touched.
+
+Boundary: this rule requires a backlink/mention sweep, not indiscriminate auto-linking. Links are learning/navigation commitments; ambiguous mentions are better recorded as backlog than silently linked to the wrong concept.
+
 ## Core Principle
 
 The vault has three knowledge layers:
@@ -118,11 +136,12 @@ Use when the user adds a source or asks to process a raw note.
 3. Extract key claims, concepts, questions, and boundaries.
 4. Create or update concept cards in `wiki/concepts/`.
 5. Add `source` and evidence anchors. Prefer `[[Source#Section]]`; use page/section notes when available.
-6. Update relevant topic pages in `wiki/topics/`.
-7. Update existing maps or indexes only when durable navigation changes.
-8. Add unanswered questions to `maps/02 问题池.md`.
-9. Append durable query answers to `maps/05 Query 写回队列.md` or write them directly into wiki pages.
-10. Append an entry to `agentic learning/log.md`.
+6. For every new canonical concept or major alias, run the New Concept Mention Backlink Sweep: search existing pages, add correct `[[Concept]]` references, and record ambiguous/non-link hits as backlog.
+7. Update relevant topic pages in `wiki/topics/`.
+8. Update existing maps or indexes only when durable navigation changes.
+9. Add unanswered questions to `maps/02 问题池.md`.
+10. Append durable query answers to `maps/05 Query 写回队列.md` or write them directly into wiki pages.
+11. Append an entry to `agentic learning/log.md`.
 
 Request-meta boundary:
 

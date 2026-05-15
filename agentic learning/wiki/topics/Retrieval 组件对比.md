@@ -16,6 +16,7 @@ source:
   - "[[TF-IDF]]"
   - "[[Sparse Retrieval]]"
   - "[[BM25]]"
+  - "[[Multi-Route Retrieval]]"
   - "[[Document Ingestion]]"
   - "[[RAG]]"
   - "[[Microsoft RAG 官方文档]]"
@@ -30,6 +31,7 @@ evidence:
   - "[[TF-IDF#证据锚点]]"
   - "[[Sparse Retrieval#证据锚点]]"
   - "[[BM25#证据锚点]]"
+  - "[[Multi-Route Retrieval#证据锚点]]"
   - "[[Document Ingestion#证据锚点]]"
   - "[[RAG#证据锚点]]"
 related:
@@ -41,15 +43,16 @@ related:
   - "[[TF-IDF]]"
   - "[[Sparse Retrieval]]"
   - "[[BM25]]"
+  - "[[Multi-Route Retrieval]]"
 ---
 
 # Retrieval 组件对比
 
 ## 一句话总览
 
-这页回答：Retrieval 链路里的 Document Ingestion、Chunking/Embedding、TF-IDF、Sparse Retrieval、BM25、Vector Database、Retriever、Hybrid Search、Reranking 分别负责什么。
+这页回答：Retrieval 链路里的 Document Ingestion、Chunking/Embedding、TF-IDF、Sparse Retrieval、BM25、Vector Database、Retriever、Multi-Route Retrieval、Hybrid Search、Reranking 分别负责什么。
 
-最小边界：[[Document Ingestion]] 决定资料怎样进库；[[Embedding]] 把内容变成语义向量；[[TF-IDF]] 帮你理解稀疏词项权重；[[Sparse Retrieval]] 是词法/稀疏检索家族；[[BM25]] 是常见关键词检索打分代表；[[Vector Database]] 存和搜向量；[[Retriever]] 从索引里找候选；[[Hybrid Search]] 把向量和关键词/全文信号结合；[[Reranking]] 在候选集上重新排序。它们共同服务 [[RAG]]，但没有一个单独等于 RAG 本身。
+最小边界：[[Document Ingestion]] 决定资料怎样进库；[[Embedding]] 把内容变成语义向量；[[TF-IDF]] 帮你理解稀疏词项权重；[[Sparse Retrieval]] 是词法/稀疏检索家族；[[BM25]] 是常见关键词检索打分代表；[[Vector Database]] 存和搜向量；[[Retriever]] 从索引里找候选；[[Multi-Route Retrieval]] 组织多条召回路线并融合候选；[[Hybrid Search]] 把向量和关键词/全文信号结合；[[Reranking]] 在候选集上重新排序。它们共同服务 [[RAG]]，但没有一个单独等于 RAG 本身。
 
 ## 为什么这组值得对比
 
@@ -72,7 +75,7 @@ raw docs
   -> Embedding / sparse features ([[TF-IDF]] / [[BM25]])
   -> Vector Database / search index
   -> Retriever
-  -> Hybrid Search / filters
+  -> Multi-Route Retrieval / Hybrid Search / filters
   -> Reranking
   -> context for generation
 ```
@@ -90,6 +93,7 @@ raw docs
 | [[BM25]] | 关键词检索打分代表 | 查询时对词面命中的文档或 chunk 排序 | query 词项、文档词频、文档频率、长度信息 | BM25 排序候选 | [[BM25#证据锚点]] |
 | [[Vector Database]] | 向量存储与近似搜索基础设施 | 入库后保存，查询时 top-k 搜索 | embedding、metadata、过滤条件 | 相似向量候选、metadata | [[Vector Database#证据锚点]] |
 | [[Retriever]] | 找候选证据的组件或流程 | 生成前，可在 agentic loop 中多次调用 | query、索引、权限/filter、retrieval strategy | candidate passages / chunks / records | [[Retriever#证据锚点]] |
+| [[Multi-Route Retrieval]] | 多路线候选召回与粗融合 | retrieve 阶段并行多路执行，rerank 前合并 | query、多 query 变体、dense/sparse/graph/filter route、多个索引 | 合并去重后的候选集合 | [[Multi-Route Retrieval#证据锚点]] |
 | [[Hybrid Search]] | 向量语义检索 + 关键词/全文检索融合 | retrieve 阶段并行或融合 | query、embedding、关键词、metadata filter | 语义与精确匹配互补的候选集合 | [[Hybrid Search#证据锚点]] |
 | [[Reranking]] | 初检候选的精排 | retrieve 后、上下文生成前 | query、候选 chunks、业务权重或 reranker 模型 | 更适合放入上下文的排序结果 | [[Reranking#证据锚点]] |
 
@@ -119,6 +123,12 @@ raw docs
 
 [[Reranking]] 提升候选排序：在已经召回的一批候选上，用更精细模型或规则重新判断相关性。它不能凭空创造未召回的正确证据。
 
+### Multi-Route Retrieval vs Hybrid Search
+
+[[Multi-Route Retrieval]] 是更宽的召回组织模式：可以同时用向量、BM25、多 Query、图检索、metadata filter、不同索引粒度或多个 retriever 召回候选，再做去重和融合。
+
+[[Hybrid Search]] 是其中最常见的稳定形态之一，通常强调 dense/vector 与 sparse/BM25/全文信号互补。不要把“多路召回”自动等同为 Hybrid Search，否则会漏掉多 Query 扩展、图路线和多源 retriever 的设计空间。
+
 ## 执行时序 / 机制差异
 
 ```text
@@ -126,7 +136,7 @@ Offline / ingestion time:
   source -> parse/clean -> metadata/permissions -> chunk -> embedding + sparse index -> vector db / search index
 
 Online / query time:
-  query -> query embedding / rewrite -> vector search + BM25/sparse keyword search -> merge/filter -> rerank -> context
+  query -> query embedding / rewrite -> vector search + BM25/sparse keyword search + optional multi-query route -> merge/filter -> rerank -> context
 
 Failure diagnosis:
   bad source parse? -> ingestion
@@ -154,6 +164,7 @@ Failure diagnosis:
 | [[BM25]] | 给关键词命中的资料做更稳的相关性排序 | 是 sparse retrieval 的代表，不是整个检索系统 |
 | [[Vector Database]] | 存这些语义坐标并快速找近邻的柜子 | 柜子不是整座图书馆服务 |
 | [[Retriever]] | 按问题找一批可能有用的资料 | 找到候选不等于最终答案 |
+| [[Multi-Route Retrieval]] | 同时走多条查找路线再合并候选 | 路线越多，越需要去重、融合、trace 和评估 |
 | [[Hybrid Search]] | 既按意思找，也按书名、编号、关键词找 | 融合策略需要调试 |
 | [[Reranking]] | 从候选资料中重新排最该先读的 | 只能排已找到的资料 |
 
@@ -162,7 +173,7 @@ Failure diagnosis:
 ### 来源支持
 
 - [[Document Ingestion]]、[[Chunking]]、[[Embedding]]、[[TF-IDF]]、[[Sparse Retrieval]]、[[BM25]] 支持：RAG 质量受资料入口、切分和表示限制；表示层既可能是 dense semantic vector，也可能是 sparse lexical / keyword signal。
-- [[Retriever]]、[[Hybrid Search]]、[[Reranking]] 支持：检索质量可以拆成召回、融合和排序多个环节。
+- [[Retriever]]、[[Multi-Route Retrieval]]、[[Hybrid Search]]、[[Reranking]] 支持：检索质量可以拆成召回路线、融合和排序多个环节。
 - [[Vector Database]] 支持：向量库是基础设施层，不等于完整 RAG。
 - [[Microsoft RAG 官方文档]]、[[Agent 工程基础设施主源]] 和 [[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]] 支持：现代 RAG 需要数据治理、索引、检索、生成和评估的组合。
 
@@ -181,6 +192,7 @@ Failure diagnosis:
 | PDF 表格、网页结构、权限标签混乱 | [[Document Ingestion]] | 问题在资料进入系统前后的结构保真和治理 | 后续检索会在脏数据上工作 |
 | 语义相近但不同措辞找不到 | [[Embedding]] / [[Retriever]] | 需要检查 query/chunk 表示和召回策略 | 语义相似仍可能找来无关资料 |
 | 专有名词、编号、代码符号漏召回 | [[Sparse Retrieval]] / [[BM25]] / [[Hybrid Search]] | 需要稀疏词项或关键词/全文信号补足向量检索；[[TF-IDF]] 可作为理解词项权重的基础入口 | 分数融合和去重可能引入噪音 |
+| 同一问题存在多种表述、多个来源或多种索引路线 | [[Multi-Route Retrieval]] | 需要同时覆盖 dense、sparse、多 Query、图路线或多源 retriever | 路线过多会增加成本、重复和融合调试难度 |
 | 找到正确文档但排在很后 | [[Reranking]] | 候选已召回，但需要精排进入上下文预算 | 初召回缺证据时 rerank 无能为力 |
 | 数据量、更新、metadata filter、权限要求上升 | [[Vector Database]] / search infra | 需要可靠索引、删除、过滤和多租户能力 | 基础设施升级不自动提升答案忠实性 |
 | Agent/RAG 项目要选向量库 | [[常用向量数据库对比]] + [[Vector Database#Agent / RAG 选型边界]] | 先看现有后端/搜索栈、数据规模、QPS、metadata/权限、更新频率、hybrid search 和运维成本 | 把 Qdrant、pgvector、Chroma、FAISS、Milvus、Weaviate、Pinecone 当成同一层 vendor 排名，会忽略本地库、Postgres 扩展、专用服务、搜索系统和图数据库的层级差异 |
@@ -195,7 +207,7 @@ Failure diagnosis:
 
 ## 证据锚点
 
-- Concept anchors: [[Document Ingestion#证据锚点]], [[Embedding#证据锚点]], [[TF-IDF#证据锚点]], [[Sparse Retrieval#证据锚点]], [[BM25#证据锚点]], [[Vector Database#证据锚点]], [[Retriever#证据锚点]], [[Hybrid Search#证据锚点]], [[Reranking#证据锚点]], [[RAG#证据锚点]]
+- Concept anchors: [[Document Ingestion#证据锚点]], [[Embedding#证据锚点]], [[TF-IDF#证据锚点]], [[Sparse Retrieval#证据锚点]], [[BM25#证据锚点]], [[Vector Database#证据锚点]], [[Retriever#证据锚点]], [[Multi-Route Retrieval#证据锚点]], [[Hybrid Search#证据锚点]], [[Reranking#证据锚点]], [[RAG#证据锚点]]
 - Topic anchor: [[RAG 类型对比#最容易混淆的边界]] / [[RAG 类型对比#证据锚点]]
 - Source examples: [[Agent 工程基础设施主源]], [[Microsoft RAG 官方文档]], [[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]]
 - Evidence type: concept-card synthesis + existing comparison topic + docs/paper/source-note evidence + engineering synthesis + learning analogy.
@@ -206,13 +218,15 @@ Failure diagnosis:
 
 1. 为什么有 [[Vector Database]] 不等于有可靠 [[RAG]]？
 2. [[Hybrid Search]] 和 [[Reranking]] 分别解决召回链路的哪一类问题？
-3. 如果正确答案所在 PDF 表格被解析错，你会先检查哪个组件？为什么？
-4. [[Embedding]] 和 [[Retriever]] 的边界是什么？
-5. 初召回没有找到正确 chunk 时，为什么 [[Reranking]] 救不了？
+3. [[Multi-Route Retrieval]] 和 [[Hybrid Search]] 的最小区别是什么？
+4. 如果正确答案所在 PDF 表格被解析错，你会先检查哪个组件？为什么？
+5. [[Embedding]] 和 [[Retriever]] 的边界是什么？
+6. 初召回没有找到正确 chunk 时，为什么 [[Reranking]] 救不了？
 
 ## 相关链接
 
 - [[Retriever]]
+- [[Multi-Route Retrieval]]
 - [[Hybrid Search]]
 - [[Reranking]]
 - [[Vector Database]]
