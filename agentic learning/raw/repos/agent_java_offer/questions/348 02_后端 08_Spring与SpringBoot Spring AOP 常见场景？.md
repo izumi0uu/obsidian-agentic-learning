@@ -60,7 +60,7 @@ related:
 
 1. 日志与链路追踪
 
-统一记录接口入参、耗时、traceId，不污染业务代码。统计方法 RT、成功率、异常率，上报 Prometheus 等监控系统。
+统一记录接口入参、耗时、[[Trace|traceId]]，不污染业务代码。统计方法 RT、[[Task Success Rate|成功率]]、异常率，上报 Prometheus 等[[Observability|监控]]系统。
 
 1. 事务管理
 
@@ -70,7 +70,7 @@ related:
 
 在 Controller/Service 入口做统一权限校验，失败直接拦截。
 
-1. 审计与合规
+1. [[Audit Log|审计与合规]]
 
 对敏感操作统一留痕（谁在什么时候做了什么）。
 
