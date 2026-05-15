@@ -37,7 +37,7 @@ related:
 ---
 
 
-👔面试官：[[MCP]] 协议通常采用什么通信方式？
+👔面试官：MCP 协议通常采用什么通信方式？
 
 🙋‍♂️我：MCP 应该是用 WebSocket 吧？因为需要双向通信，Client 发请求、Server 推结果，WebSocket 全双工正好合适。
 
