@@ -1,6 +1,6 @@
 # Agentproof - Static Verification of Agent Workflow Graphs - Extracted Text
 
-- Source PDF: `Agentproof - Static Verification of Agent Workflow Graphs.pdf`
+- Source PDF: `assets/Agentproof - Static Verification of Agent Workflow Graphs.pdf`
 - Pages: 26
 
 ## Page 1

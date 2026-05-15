@@ -672,3 +672,80 @@ related:
 - Updated: [[Workflow Guardrails 主源]], [[Workflow Guardrails]], [[Workflow Guardrails 与 Prefect 控制点映射]].
 - Change: removed a project-specific context label from wiki prose and replaced it with generic “业务项目 / Prefect” wording.
 - Boundary: preserved the workflow guardrails engineering mapping while avoiding project-context leakage in durable wiki pages.
+
+## [2026-05-14] autoresearch-goal | LangGraph production project blueprint
+
+- Added topic: [[LangGraph 生产项目蓝图]].
+- Updated navigation: [[05 Query 写回队列]], [[04 页面目录]], [[Agent 知识地图]].
+- Writeback: closed the 2026-05-13 LangGraph production-project queue item with a blueprint covering business fit, architecture, state schema, nodes/edges, multi-source RAG, tool permissioning, human approval, checkpoint/resume, trace/eval, deployment governance, and failure modes.
+- Evidence: [[LangGraph 官方文档]], [[LangGraph GitHub Repo]], [[LangSmith Evaluation and Observability]], [[LangGraph Memory 官方文档]], plus official LangGraph / LangSmith pages checked on 2026-05-14.
+- Boundary: this is a production blueprint and engineering synthesis, not a LangGraph API tutorial, framework ranking, or claim that every Agent requires LangGraph.
+
+## [2026-05-14] autoresearch-goal | arXiv Agent paper shortlist 1-8 intake
+
+- Added reading map: `Agent 论文速读清单 2026-05-14` (later removed by cleanup).
+- Added source notes: [[AI Harness Engineering - A Runtime Substrate for Foundation-Model Software Agents]], [[How to Interpret Agent Behavior]], [[Rollout Cards - A Reproducibility Standard for Agent Research]], [[Do Androids Dream of Breaking the Game - BenchJack]], [[AgentLens - Revealing The Lucky Pass Problem in SWE-Agent Evaluation]], [[MAP - A Map-then-Act Paradigm for Long-Horizon Interactive Agent Reasoning]], [[ToolCUA - Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents]], [[Under the Hood of SKILL.md - Semantic Supply-chain Attacks on AI Agent Skill Registry]].
+- Updated navigation: [[index]], [[资料收集索引]], [[前沿主源清单]], [[03 前沿追踪]], [[Agent 主题]], [[Agent 知识地图]], [[04 页面目录]].
+- Evidence: arXiv cs.AI recent / abstract pages checked on 2026-05-14; each paper note is `status: seed` and explicitly marks PDF/extracted text as not yet downloaded.
+- Boundary: this pass records source evidence and a reading route only; it does not create weak concept cards or treat arXiv preprints as stable production standards.
+
+## [2026-05-14] review | RAG concept-triggered review 04
+
+- Added review note: [[04 RAG 概念触发式复习]].
+- Updated navigation: [[复习记录索引]], [[04 页面目录]].
+- Review focus: RAG pipeline, vector database boundary, RAG / Memory / Context Engineering distinction, layered failure diagnosis, and upgrade triggers for Agentic RAG / GraphRAG / Corrective RAG.
+- Boundary: this is a learning-check page under `reviews/`; it is not raw evidence and does not rewrite the durable [[RAG]] concept card.
+
+## [2026-05-14] workflow | map admission boundary tightened
+
+- Updated project guidance: [[LLM Wiki 工作流]] and `AGENTS.md`.
+- Decision: maps are scarce durable navigation/control surfaces, not automatic records for every ingest batch.
+- New boundary: do not create or spread "近期论文速读入口", "速读清单", "第 N 梯队清单", or similar batch-specific map entries unless explicitly requested as a durable reading route.
+- Preferred homes: batch source notes stay in [[资料收集索引]] or raw notes; unstable questions go to [[02 问题池]]; future write-backs go to [[05 Query 写回队列]]; frontier observations go to [[03 前沿追踪]].
+
+## [2026-05-14] ingest | arXiv Agent paper shortlist second tier
+
+- Added reading map: `Agent 论文第二梯队速读清单 2026-05-14` (later removed by cleanup).
+- Added source notes: [[Executable Agentic Memory for GUI Agent]], [[Goal-Oriented Reasoning for RAG-based Memory in Conversational Agentic LLM Systems]], [[Cognifold - Always-On Proactive Memory via Cognitive Folding]], [[Harnessing Agentic Evolution]], [[PIVOT - Bridging Planning and Execution in LLM Agents via Trajectory Refinement]], [[OLIVIA - Online Learning via Inference-time Action Adaptation for Decision Making in LLM ReAct Agents]], [[CANTANTE - Optimizing Agentic Systems via Contrastive Credit Attribution]], [[EVOCHAMBER - Test-Time Co-evolution of Multi-Agent System at Individual Team and Population Scales]], [[Position - Assistive Agents Need Accessibility Alignment]], [[RealICU - Do LLM Agents Understand Long-Context ICU Data]], [[Can LLM Agents Respond to Disasters - Benchmarking Heterogeneous Geospatial Reasoning in Emergency Operations]].
+- Updated navigation at the time: [[index]], `Agent 论文速读清单 2026-05-14` (later removed), [[资料收集索引]], [[前沿主源清单]], [[03 前沿追踪]], [[Agent 主题]], [[Agent 知识地图]], [[04 页面目录]].
+- Evidence: arXiv cs.AI recent / abstract pages checked on 2026-05-14; each paper note is `status: seed` and marks PDF/extracted text as not yet downloaded.
+- Boundary: second-tier intake records source evidence and a reading route only; no weak concept cards were created for title terms such as agentic evolution, cognitive folding, or accessibility alignment.
+
+## [2026-05-14] cleanup | remove batch reading maps
+
+- Deleted batch maps: `Agent 论文速读清单 2026-05-14` and `Agent 论文第二梯队速读清单 2026-05-14`.
+- Cleaned active navigation: [[index]], [[Agent 主题]], [[Agent 知识地图]], [[04 页面目录]], [[资料收集索引]], [[03 前沿追踪]], and [[前沿主源清单]] no longer promote the batch maps as durable entry points.
+- Updated 19 raw paper source notes to point their batch context at [[资料收集索引]] and [[03 前沿追踪]] instead of deleted speed-read maps.
+- Boundary: raw paper source notes remain evidence; only the temporary map/control-surface layer was removed.
+
+## [2026-05-14] workflow | paper reading priority rule
+
+- Updated durable rules: `AGENTS.md`, [[LLM Wiki 工作流]], and [[资料收集索引]].
+- Added current raw/papers priority tiers: P0 for core/foundation and high-leverage Agent judgment papers, P1 for current Agent engineering frontier papers, P2 for topic-triggered expansion, and P3 for LLM training/alignment background.
+- Decision: paper priority is based on learning leverage and boundary yield, not recency or ingest batch order.
+- Boundary: this priority lives in existing source/workflow surfaces; no new paper priority map was created.
+
+## [2026-05-14] maintenance | paper source and extracted paths completed
+
+- Updated 37 `source_type: paper` raw notes so `source` points back to each original paper URL.
+- Added or verified `pdf` and `extracted` frontmatter for all existing paper notes, including GAIA and SWE-bench source notes outside `raw/papers/`.
+- Generated 30 new extracted Markdown files under `raw/papers/extracted/` from the corresponding PDF URLs.
+- Updated [[资料收集索引]] paper table to show `source`, `pdf`, and `extracted` for all `source_type: paper` notes, including paper notes outside `raw/papers/`.
+- Boundary: extracted files are automatic plain-text evidence helpers only; formulas, tables, figures, footnotes, references, and two-column reading order may be lossy, so precision claims still need PDF page / section checks before being written into concept cards.
+
+## [2026-05-14] autoresearch-goal | Hermes arXiv Agent paper supplement intake
+
+- Added source notes: [[Useful Memories Become Faulty When Continuously Updated by LLMs]], [[Scaling Retrieval-Augmented Reasoning with Parallel Search and Explicit Merging]], [[Retrieval is Cheap, Show Me the Code - Executable Multi-Hop Reasoning for Retrieval-Augmented Generation]], [[It's not the Language Model, it's the Tool - Deterministic Mediation for Scientific Workflows]], [[Beyond Cooperative Simulators - Generating Realistic User Personas for Robust Evaluation of LLM Agents]], [[MMSkills - Towards Multimodal Skills for General Visual Agents]], [[RS-Claw - Progressive Active Tool Exploration via Hierarchical Skill Trees for Remote Sensing Agents]], [[ScioMind - Cognitively Grounded Multi-Agent Social Simulation with Anchoring-Based Belief Dynamics and Dynamic Profiles]], [[Hierarchical Attacks for Multi-Modal Multi-Agent Reasoning]], [[Position - Agentic AI System Is a Foreseeable Pathway to AGI]].
+- Reused existing source notes in the same source-index batch: [[Harnessing Agentic Evolution]], [[How to Interpret Agent Behavior]], [[Cognifold - Always-On Proactive Memory via Cognitive Folding]], [[MAP - A Map-then-Act Paradigm for Long-Horizon Interactive Agent Reasoning]], [[RealICU - Do LLM Agents Understand Long-Context ICU Data]].
+- Updated navigation / priority surfaces: [[资料收集索引]], [[前沿主源清单]], [[03 前沿追踪]], [[04 页面目录]].
+- Evidence: user-provided Hermes list plus official arXiv abstract/API metadata checked on 2026-05-14; new paper notes are `status: seed`, with remote PDF links and no local extracted text yet.
+- Boundary: per map admission rules, no new batch speed-read map was kept; this pass records source evidence, priority placement, and frontier observations only, without creating weak concept cards for title terms.
+
+## [2026-05-15] maintenance | paper PDFs downloaded and extracted completed
+
+- Downloaded 40 missing paper PDFs into `raw/papers/assets/` and updated paper source-note `pdf` fields to local relative paths.
+- Generated 10 missing extracted Markdown files under `raw/papers/extracted/`.
+- Normalized 10 new paper notes from quoted `type/source_type` values to `type: source` and `source_type: paper` so `scripts/paper_source_audit.py` can verify them.
+- Updated [[资料收集索引]] with the current paper-localization status.
+- Verification: 47 / 47 `source_type: paper` notes now resolve to local PDFs and extracted Markdown files; `scripts/paper_source_audit.py --root 'agentic learning/raw/papers'` passes.
+- Boundary: local PDFs and extracted text improve evidence availability, but extracted text remains lossy for figures, formulas, tables, footnotes, references, and two-column order.

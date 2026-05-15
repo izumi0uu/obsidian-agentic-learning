@@ -3,6 +3,8 @@ type: source
 source_type: paper
 title: "Model Context Protocol Threat Modeling and Analyzing Vulnerabilities to Prompt Injection with Tool Poisoning"
 url: "https://arxiv.org/abs/2603.22489"
+pdf: "assets/MCP Tool Poisoning Threat Model.pdf"
+extracted: "extracted/MCP Tool Poisoning Threat Model.extracted.md"
 author: Charoes Huang, Xin Huang, Ngoc Phu Tran, Amin Milani Fard
 site: arxiv.org
 topic:
@@ -11,12 +13,12 @@ topic:
   - agent
   - frontier
 created: 2026-05-06
-updated: 2026-05-11
+updated: 2026-05-15
 last_checked: 2026-05-11
 freshness: volatile
 conflicts: []
 status: seed
-source:
+source: "https://arxiv.org/abs/2603.22489"
 related:
   - "[[Tool Poisoning]]"
   - "[[MCP]]"
@@ -128,6 +130,12 @@ MCP tool poisoning 关注恶意或被污染的工具描述/结果如何诱导模
 - [[Prompt Injection]]
 - [[Tool Registry]]
 - [[Trace]]
+
+## 已提取文件
+
+- PDF：`assets/MCP Tool Poisoning Threat Model.pdf`
+- Extracted Markdown：`extracted/MCP Tool Poisoning Threat Model.extracted.md`
+- 抽取质量提醒：PDF 已本地保存；extracted 由 PDF 自动抽取为纯文本，公式、表格、图、脚注和双栏阅读顺序可能有损失，精读引用仍需回到 PDF 页码 / section 校验。
 
 ## 可以拆成概念卡
 

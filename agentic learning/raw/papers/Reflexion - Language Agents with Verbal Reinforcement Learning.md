@@ -3,7 +3,8 @@ type: source
 source_type: paper
 title: "Reflexion: Language Agents with Verbal Reinforcement Learning"
 url: "https://arxiv.org/abs/2303.11366"
-pdf: "https://arxiv.org/pdf/2303.11366"
+pdf: "assets/Reflexion - Language Agents with Verbal Reinforcement Learning.pdf"
+extracted: "extracted/Reflexion - Language Agents with Verbal Reinforcement Learning.extracted.md"
 author:
   - Shinn et al.
 site: arXiv
@@ -14,12 +15,12 @@ topic:
   - evaluation
   - memory
 created: 2026-05-08
-updated: 2026-05-11
+updated: 2026-05-15
 last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: seed
-source:
+source: "https://arxiv.org/abs/2303.11366"
 related:
   - "[[Reflexion]]"
   - "[[Agent Loop]]"
@@ -136,6 +137,12 @@ Reflexion 让语言 Agent 在执行任务后，根据评价反馈生成自我反
 - 稳定部分：从失败轨迹提取经验可改进后续尝试。
 - 工程限制：反思写入必须有质量门槛，否则会固化错误经验。
 - freshness：stable。
+
+## 已提取文件
+
+- PDF：`assets/Reflexion - Language Agents with Verbal Reinforcement Learning.pdf`
+- Extracted Markdown：`extracted/Reflexion - Language Agents with Verbal Reinforcement Learning.extracted.md`
+- 抽取质量提醒：PDF 已本地保存；extracted 由 PDF 自动抽取为纯文本，公式、表格、图、脚注和双栏阅读顺序可能有损失，精读引用仍需回到 PDF 页码 / section 校验。
 
 ## Ingest 摘要
 

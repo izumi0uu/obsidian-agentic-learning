@@ -3,7 +3,8 @@ type: source
 source_type: paper
 title: "Constitutional AI: Harmlessness from AI Feedback"
 url: "https://arxiv.org/abs/2212.08073"
-pdf: "https://arxiv.org/pdf/2212.08073"
+pdf: "assets/Constitutional AI - Harmlessness from AI Feedback.pdf"
+extracted: "extracted/Constitutional AI - Harmlessness from AI Feedback.extracted.md"
 author:
   - Bai et al.
 site: arXiv
@@ -12,12 +13,12 @@ topic:
   - training
   - alignment
 created: 2026-05-09
-updated: 2026-05-11
+updated: 2026-05-15
 last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: seed
-source:
+source: "https://arxiv.org/abs/2212.08073"
 related:
   - "[[LLM Training Pipeline]]"
   - "[[LLM]]"
@@ -120,6 +121,12 @@ Constitutional AI 用一组原则引导模型自我修改回答，并用 AI feed
 - RLAIF
 - AI feedback
 - alignment
+
+## 已提取文件
+
+- PDF：`assets/Constitutional AI - Harmlessness from AI Feedback.pdf`
+- Extracted Markdown：`extracted/Constitutional AI - Harmlessness from AI Feedback.extracted.md`
+- 抽取质量提醒：PDF 已本地保存；extracted 由 PDF 自动抽取为纯文本，公式、表格、图、脚注和双栏阅读顺序可能有损失，精读引用仍需回到 PDF 页码 / section 校验。
 
 ## 可以拆成概念卡
 

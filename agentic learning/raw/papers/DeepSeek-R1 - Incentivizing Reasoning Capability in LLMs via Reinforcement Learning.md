@@ -3,7 +3,8 @@ type: source
 source_type: paper
 title: "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"
 url: "https://arxiv.org/abs/2501.12948"
-pdf: "https://arxiv.org/pdf/2501.12948"
+pdf: "assets/DeepSeek-R1 - Incentivizing Reasoning Capability in LLMs via Reinforcement Learning.pdf"
+extracted: "extracted/DeepSeek-R1 - Incentivizing Reasoning Capability in LLMs via Reinforcement Learning.extracted.md"
 author:
   - DeepSeek-AI
 site: arXiv
@@ -12,12 +13,12 @@ topic:
   - reasoning
   - training
 created: 2026-05-09
-updated: 2026-05-11
+updated: 2026-05-15
 last_checked: 2026-05-11
 freshness: watch
 conflicts: []
 status: seed
-source:
+source: "https://arxiv.org/abs/2501.12948"
 related:
   - "[[LLM Training Pipeline]]"
   - "[[Reasoning Trace]]"
@@ -122,6 +123,12 @@ DeepSeek-R1 探索用强化学习激发 LLM 的推理能力，尤其是数学、
 - verifiable reward
 - [[Zero-shot CoT]]
 - [[Evaluation]]
+
+## 已提取文件
+
+- PDF：`assets/DeepSeek-R1 - Incentivizing Reasoning Capability in LLMs via Reinforcement Learning.pdf`
+- Extracted Markdown：`extracted/DeepSeek-R1 - Incentivizing Reasoning Capability in LLMs via Reinforcement Learning.extracted.md`
+- 抽取质量提醒：PDF 已本地保存；extracted 由 PDF 自动抽取为纯文本，公式、表格、图、脚注和双栏阅读顺序可能有损失，精读引用仍需回到 PDF 页码 / section 校验。
 
 ## 可以拆成概念卡
 

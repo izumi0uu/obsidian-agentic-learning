@@ -3,7 +3,8 @@ type: source
 source_type: paper
 title: "The Llama 3 Herd of Models"
 url: "https://arxiv.org/abs/2407.21783"
-pdf: "https://arxiv.org/pdf/2407.21783"
+pdf: "assets/The Llama 3 Herd of Models.pdf"
+extracted: "extracted/The Llama 3 Herd of Models.extracted.md"
 author:
   - Dubey et al.
 site: arXiv
@@ -11,12 +12,12 @@ topic:
   - llm
   - training
 created: 2026-05-09
-updated: 2026-05-11
+updated: 2026-05-15
 last_checked: 2026-05-11
 freshness: watch
 conflicts: []
 status: seed
-source:
+source: "https://arxiv.org/abs/2407.21783"
 related:
   - "[[LLM Training Pipeline]]"
   - "[[LLM]]"
@@ -120,6 +121,12 @@ Llama 3 把大规模预训练、数据治理、指令调优、偏好优化、安
 - [[Tool Use]]
 - post-training
 - synthetic data
+
+## 已提取文件
+
+- PDF：`assets/The Llama 3 Herd of Models.pdf`
+- Extracted Markdown：`extracted/The Llama 3 Herd of Models.extracted.md`
+- 抽取质量提醒：PDF 已本地保存；extracted 由 PDF 自动抽取为纯文本，公式、表格、图、脚注和双栏阅读顺序可能有损失，精读引用仍需回到 PDF 页码 / section 校验。
 
 ## 可以拆成概念卡
 

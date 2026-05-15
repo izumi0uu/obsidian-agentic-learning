@@ -13,12 +13,12 @@ topic:
   - coding-agent
   - evaluation
 created: 2026-05-05
-updated: 2026-05-07
+updated: 2026-05-15
 last_checked: 2026-05-07
 freshness: stable
 conflicts: []
 status: growing
-source:
+source: "https://arxiv.org/abs/2310.06770"
 related:
   - "[[Evaluation]]"
   - "[[Agent]]"
@@ -88,7 +88,8 @@ SWE-bench 用真实软件工程问题评估模型或 Agent 修改代码解决 is
 ## 已提取文件
 
 - PDF：`../papers/assets/SWE-bench.pdf`
-- 抽取正文：`../papers/extracted/SWE-bench.extracted.md`
+- Extracted Markdown：`../papers/extracted/SWE-bench.extracted.md`
+- 抽取质量提醒：PDF 已本地保存；extracted 由 PDF 自动抽取为纯文本，公式、表格、图、脚注和双栏阅读顺序可能有损失，精读引用仍需回到 PDF 页码 / section 校验。
 
 ## Ingest 摘要
 

@@ -3,7 +3,8 @@ type: source
 source_type: paper
 title: "Training Compute-Optimal Large Language Models"
 url: "https://arxiv.org/abs/2203.15556"
-pdf: "https://arxiv.org/pdf/2203.15556"
+pdf: "assets/Training Compute-Optimal Large Language Models.pdf"
+extracted: "extracted/Training Compute-Optimal Large Language Models.extracted.md"
 author:
   - Hoffmann et al.
 site: arXiv
@@ -11,12 +12,12 @@ topic:
   - llm
   - training
 created: 2026-05-09
-updated: 2026-05-11
+updated: 2026-05-15
 last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: seed
-source:
+source: "https://arxiv.org/abs/2203.15556"
 related:
   - "[[LLM Training Pipeline]]"
   - "[[LLM]]"
@@ -117,6 +118,12 @@ related:
 - data scaling
 - [[LLM Training Pipeline]]
 - scaling law
+
+## 已提取文件
+
+- PDF：`assets/Training Compute-Optimal Large Language Models.pdf`
+- Extracted Markdown：`extracted/Training Compute-Optimal Large Language Models.extracted.md`
+- 抽取质量提醒：PDF 已本地保存；extracted 由 PDF 自动抽取为纯文本，公式、表格、图、脚注和双栏阅读顺序可能有损失，精读引用仍需回到 PDF 页码 / section 校验。
 
 ## 可以拆成概念卡
 

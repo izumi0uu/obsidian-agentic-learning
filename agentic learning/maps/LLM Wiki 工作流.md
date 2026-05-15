@@ -6,7 +6,7 @@ topic:
   - workflow
 status: active
 created: 2026-05-05
-updated: 2026-05-12
+updated: 2026-05-14
 source: "/Users/idah/Downloads/llm-wiki.md"
 related:
   - "[[Agent 知识地图]]"
@@ -21,14 +21,14 @@ related:
 
 这页把 `llm-wiki.md` 的方法改造成当前 Agent 学习 vault 的操作规则。
 
-核心思想：不要让 LLM 每次回答问题时都从 raw 资料里重新拼答案，而是让 LLM 持续维护一个可增长的 wiki。raw 是来源，wiki 是已经沉淀的理解，maps 是导航。
+核心思想：不要让 LLM 每次回答问题时都从 raw 资料里重新拼答案，而是让 LLM 持续维护一个可增长的 wiki。raw 是来源，wiki 是已经沉淀的理解，maps 是导航。maps 是稀缺控制面，不是每次录入资料时自动生成的批次记录。
 
 ## 三层结构
 
 ```text
 raw/  -> source notes, immutable evidence
 wiki/ -> concept cards, topics, projects, people
-maps/ -> index, reading plans, workflow, questions, frontier tracking
+maps/ -> durable navigation, durable indexes, workflow, questions, frontier tracking
 ```
 
 学习过程记录单独放在 `reviews/`：
@@ -38,6 +38,29 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 ```
 
 小边界：`reviews/` 记录“我怎么检查自己有没有懂”，不替代 `wiki/` 的稳定概念卡，也不作为 `raw/` 的来源证据。
+
+## Map 准入边界
+
+`maps/` 只放会长期帮助“下一步去哪”的控制面。不要把每次 source batch、paper batch、repo batch 或“近期 / 速读”收集都做成新 map。
+
+允许创建或更新 map 的情况：
+
+- 用户明确要求一个阅读路线、索引、健康检查、问题池、前沿追踪或工作流规则。
+- 新内容改变了长期导航，例如新增稳定主题、核心概念群、对比入口或维护流程。
+- 现有 map 已经承载这个职责，只需要小范围追加入口或状态。
+
+不应该创建或扩散 map 的情况：
+
+- 只是一次论文 / 资料录入批次，不会长期作为学习入口。
+- 只是为了记录“近期论文速读入口”“速读清单”“第 N 梯队清单”这类临时分组。
+- 只是因为本轮新增文件很多，就把它们复制到多个 topic / index 页面。
+
+替代归宿：
+
+- 批次来源记录：写入 [[资料收集索引]] 的对应来源区，或保留在 raw source note。
+- 不稳定但重要的问题：写入 [[02 问题池]]。
+- 值得未来整理的理解：写入 [[05 Query 写回队列]]。
+- 前沿观察：写入 [[03 前沿追踪]]，不要为每个批次新建 map。
 
 写回约束：追问卡一旦回答完，每张卡都必须有写回归宿。成熟、稳定、可复用的边界写回 `wiki/concepts/` 或 `wiki/topics/`；还不稳定但值得保留的缺口写入 [[02 问题池]] 或 [[05 Query 写回队列]]；不能只把反馈留在 `reviews/` 里就结束。
 
@@ -70,7 +93,7 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 4. 更新或创建 `wiki/concepts/` 里的概念卡。创建或更新前，先执行 [[LLM Wiki 工作流#操作 6：现代性 / 前沿性判定]]，判断这个概念应放在基础地基、历史过渡、当前工程实践还是前沿 / 易变层。
 5. 给概念卡补 `source` 和 `evidence`。没有段落级证据时，至少链接到 source note 小节。
 6. 如果涉及主题聚合，更新 `wiki/topics/`。
-7. 如果影响导航或复习方式，更新 `maps/Agent 知识地图.md`、[[02 问题池]]、[[05 Query 写回队列]] 或 [[04 页面目录]]。
+7. 如果影响长期导航或复习方式，优先更新现有 map：`maps/Agent 知识地图.md`、[[02 问题池]]、[[03 前沿追踪]]、[[05 Query 写回队列]] 或 [[04 页面目录]]。不要仅因本轮录入了一批资料就新建“速读清单 / 近期入口 / 梯队清单”类 map。
 8. 将 source note 的 `status` 从 `inbox` 改成 `seed` 或 `growing`，并补 `last_checked` / `freshness`。
 9. 追加 `log.md`。
 
@@ -272,6 +295,35 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 - “现代系统怎么做”不等于“这个概念过时了”。很多旧范式会变成现代系统的内部设计原则。
 - “某个框架新增功能”不等于“概念定义改变”。只有当多个来源都改变抽象边界时，才更新概念卡定义。
 - “模型变强”不等于“runtime 消失”。模型可能更会规划和遵循格式，但工具执行、状态、权限、trace、评测和恢复仍属于 [[Agent Harness]] / [[Agent Framework]] 的工程责任。
+
+## 操作 7：Paper 阅读优先级判定
+
+当 raw paper 数量增加时，不按“最新 / 最多 / 批次顺序”阅读，而按学习杠杆排序。优先级记录在 [[资料收集索引]]，不要为每批 paper 新建 map。
+
+### 判定维度
+
+1. **地基依赖**：是否支撑多个核心概念卡，例如 [[ReAct]]、[[RAG]]、[[Toolformer]]、[[Reflexion]]、[[Agent Harness]]、[[Evaluation]]。
+2. **误解纠偏**：是否能纠正常见误解，例如“benchmark 分数等于可靠性”“test pass 等于过程可靠”“tool use 等于 Agent”。
+3. **当前路线相关性**：是否直接服务当前学习线，例如 Agent harness、trace、trajectory evaluation、workflow safety、tool security、RAG reliability。
+4. **证据成熟度**：是否已有 source note、PDF / extracted text、必读锚点或至少足够摘要证据。只有标题和 abstract 的前沿论文先保持 `seed`。
+5. **专题必要性**：是否只在进入某个专题时才需要，例如 GUI memory、多 Agent 优化、医疗 / 灾害高风险应用。
+
+### 优先级含义
+
+| 优先级 | 含义 | 默认动作 |
+|---|---|---|
+| P0 | 先读 / 精读。它直接支撑当前知识地基或高频判断边界。 | 读完后必须写回概念卡、topic、问题池或复习卡。 |
+| P1 | 下一批细读。它直接增强当前 Agent 工程判断，但不一定是所有概念的地基。 | 读时围绕一个明确问题，不从标题直接新建弱概念卡。 |
+| P2 | 专题触发阅读。只有进入 memory、GUI、多 Agent、高风险应用等专题时才读。 | 先保留 source note 和问题，不急着升格。 |
+| P3 | 背景 / 按需阅读。主要解释模型训练、规模化或对齐背景。 | 当用户问 LLM 能力来源、训练或对齐时再提升优先级。 |
+
+### 规则
+
+- P0/P1 不是“价值最高”的绝对排名，而是对当前 vault 的学习收益最大。
+- 新 paper 录入后先给临时优先级；精读后可调整，但必须说明调整原因。
+- 如果一篇前沿论文只提供新名词、没有稳定证据或不能改进现有边界判断，默认 P2，不创建新概念卡。
+- 如果一篇模型训练论文对 Agent runtime 没有直接影响，默认 P3；当学习 LLM / alignment 主题时可以局部提升。
+- 每次维护优先级时，只更新 [[资料收集索引]] 的优先级规则或现有列表，不新建“速读清单 / 梯队清单”map。
 
 ## 日志规则
 

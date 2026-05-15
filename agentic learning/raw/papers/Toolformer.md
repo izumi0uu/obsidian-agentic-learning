@@ -12,12 +12,12 @@ topic:
   - llm
   - tool-use
 created: 2026-05-05
-updated: 2026-05-11
+updated: 2026-05-15
 last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: growing
-source:
+source: "https://arxiv.org/abs/2302.04761"
 related:
   - "[[Tool Calling]]"
   - "[[LLM]]"
@@ -129,7 +129,8 @@ Toolformer 探索让语言模型学习何时、如何调用外部工具来增强
 ## 已提取文件
 
 - PDF：`assets/Toolformer.pdf`
-- 抽取正文：`extracted/Toolformer.extracted.md`
+- Extracted Markdown：`extracted/Toolformer.extracted.md`
+- 抽取质量提醒：PDF 已本地保存；extracted 由 PDF 自动抽取为纯文本，公式、表格、图、脚注和双栏阅读顺序可能有损失，精读引用仍需回到 PDF 页码 / section 校验。
 
 ## Ingest 摘要
 

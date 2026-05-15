@@ -8,7 +8,7 @@ The vault has three knowledge layers:
 
 - `agentic learning/raw/`: immutable source notes. These answer "where did this come from?"
 - `agentic learning/wiki/`: structured understanding. These answer "how do I understand this?"
-- `agentic learning/maps/` and `agentic learning/index.md`: navigation, reading plans, indexes, and workflow documents.
+- `agentic learning/maps/` and `agentic learning/index.md`: durable navigation, durable indexes, workflow documents, and explicitly requested learning routes. Maps are scarce control surfaces, not a place to record every ingest batch.
 
 Learning-process records live separately:
 
@@ -63,10 +63,24 @@ Use when the user adds a source or asks to process a raw note.
 4. Create or update concept cards in `wiki/concepts/`.
 5. Add `source` and evidence anchors. Prefer `[[Source#Section]]`; use page/section notes when available.
 6. Update relevant topic pages in `wiki/topics/`.
-7. Update maps or indexes when navigation changes.
+7. Update existing maps or indexes only when durable navigation changes.
 8. Add unanswered questions to `maps/02 问题池.md`.
 9. Append durable query answers to `maps/05 Query 写回队列.md` or write them directly into wiki pages.
 10. Append an entry to `agentic learning/log.md`.
+
+Map boundary:
+
+- Do not create new map files just because a source batch, paper batch, repo batch, or "recent / speed-read" collection was ingested.
+- Do not add "近期论文速读入口", "速读清单", or similar batch-specific links to main topic pages unless the user explicitly asks for a durable reading route.
+- Prefer updating existing stable maps: `资料收集索引`, `Agent 知识地图`, `04 页面目录`, `03 前沿追踪`, `05 Query 写回队列`, or the relevant topic page.
+- A new map is allowed only when it is durable navigation that will still be useful after the current ingest batch, such as a stable topic map, workflow rule, health-check page, or explicitly requested reading plan.
+- Temporary paper/source triage belongs in the source index, a raw source note, the question pool, or query write-back queue, not in a new standalone map.
+
+Paper reading priority:
+
+- When maintaining paper sources, rank papers by learning leverage, not recency: P0 = unlocks core concepts or prevents common misunderstandings; P1 = directly strengthens current Agent engineering judgment; P2 = topic-specific expansion; P3 = background/model-training context to read on demand.
+- Record durable priority rules in `资料收集索引` or `LLM Wiki 工作流`; do not create one-off paper priority maps.
+- Before creating stable concept cards from frontier paper titles, check whether the paper is P0/P1 and whether it has enough evidence beyond abstract-level intake.
 
 ### Query
 

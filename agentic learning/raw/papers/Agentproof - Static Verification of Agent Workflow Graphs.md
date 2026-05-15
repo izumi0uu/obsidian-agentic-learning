@@ -22,12 +22,12 @@ topic:
   - framework
   - frontier
 created: 2026-05-14
-updated: 2026-05-14
+updated: 2026-05-15
 last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: growing
-source:
+source: "https://arxiv.org/abs/2603.20356"
 related:
   - "[[Agent Workflow Static Verification]]"
   - "[[Agent Workflow]]"
@@ -225,8 +225,8 @@ Agentproof 把现代 Agent framework 暴露出的 workflow graph 当成静态分
 ## 已提取文件
 
 - PDF：`assets/Agentproof - Static Verification of Agent Workflow Graphs.pdf`
-- 抽取正文：`extracted/Agentproof - Static Verification of Agent Workflow Graphs.extracted.md`
-- Artifact repo：<https://github.com/NordicAgents/AgentProof>
+- Extracted Markdown：`extracted/Agentproof - Static Verification of Agent Workflow Graphs.extracted.md`
+- 抽取质量提醒：PDF 已本地保存；extracted 由 PDF 自动抽取为纯文本，公式、表格、图、脚注和双栏阅读顺序可能有损失，精读引用仍需回到 PDF 页码 / section 校验。
 
 ## 抽取质量提醒
 

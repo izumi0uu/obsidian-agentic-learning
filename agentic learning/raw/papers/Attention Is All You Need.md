@@ -12,12 +12,12 @@ topic:
   - llm
   - transformer
 created: 2026-05-05
-updated: 2026-05-11
+updated: 2026-05-15
 last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: growing
-source:
+source: "https://arxiv.org/abs/1706.03762"
 related:
   - "[[LLM]]"
   - "[[Transformer]]"
@@ -132,7 +132,8 @@ Transformer 用 attention 机制替代传统循环结构，让模型可以更高
 ## 已提取文件
 
 - PDF：`assets/Attention Is All You Need.pdf`
-- 抽取正文：`extracted/Attention Is All You Need.extracted.md`
+- Extracted Markdown：`extracted/Attention Is All You Need.extracted.md`
+- 抽取质量提醒：PDF 已本地保存；extracted 由 PDF 自动抽取为纯文本，公式、表格、图、脚注和双栏阅读顺序可能有损失，精读引用仍需回到 PDF 页码 / section 校验。
 
 ## Ingest 摘要
 

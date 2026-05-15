@@ -19,6 +19,7 @@ related:
   - "[[ReAct Plan-and-Solve Reflexion 对比]]"
   - "[[Agent 工程分层对比]]"
   - "[[Agent Framework 编排范式对比]]"
+  - "[[LangGraph 生产项目蓝图]]"
   - "[[Workflow Guardrails 与 Prefect 控制点映射]]"
   - "[[Tool 接口层对比]]"
 ---
@@ -58,6 +59,7 @@ LLM 地基：
 - [[AgentScope]]：理解 message-centered multi-agent application platform。
 - [[CAMEL]]：理解 role-playing / inception prompting 进入多 Agent 协作的范式。
 - [[LangGraph]]：理解 state graph orchestration runtime。
+- [[LangGraph 生产项目蓝图]]：把 LangGraph 从概念推进到生产项目蓝图，串起多源检索、工具权限、审批、checkpoint/resume、trace/eval 和部署治理。
 - [[Microsoft Agent Framework]]：理解微软 AutoGen + Semantic Kernel 的 agent / workflow 统一路线。
 - [[LangChain DeepAgents]]：理解 LangChain 如何在 LangGraph runtime 上封装长任务 Agent harness。
 - [[Agent State]]：理解框架如何保存当前任务的进度、中间结果和下一步依据。
