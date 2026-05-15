@@ -48,7 +48,7 @@ related:
 
 ## 题目正文
 
-### 2.13 模型训练用的TFRecord是什么
+### 2.13 [[LLM Training Pipeline|模型训练]]用的TFRecord是什么
 
 TFRecord 是 TensorFlow 常用的训练数据二进制格式。
 “模型训练前的 TFRecord”通常指：把原始样本（CSV / Parquet / 日志）先清洗、特征化，然后序列化成 `.tfrecord` 文件再喂给训练。

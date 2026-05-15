@@ -51,7 +51,7 @@ related:
 
 追问题目：主问题：LangGraph 在生产里怎么做“可控、可恢复、可治理”？
 
-出现位置：LangGraph生产治理（LCEL/防循环/Checkpoint）
+出现位置：LangGraph生产治理（LCEL/防循环/[[Durable Execution|Checkpoint]]）
 
 ## 边界提醒
 

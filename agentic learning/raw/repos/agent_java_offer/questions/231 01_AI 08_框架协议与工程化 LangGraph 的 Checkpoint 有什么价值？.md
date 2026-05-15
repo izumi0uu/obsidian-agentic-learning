@@ -60,13 +60,13 @@ related:
 
 ## 题目正文
 
-### 4. 子问题：LangGraph 的 Checkpoint 有什么价值？
+### 4. 子问题：LangGraph 的 [[Durable Execution|Checkpoint]] 有什么价值？
 
 答：
 
-Checkpoint 解决的是可恢复性。长任务中断后可以从最近状态恢复，不必整条链重跑；也便于做审计回放和故障复盘。
+Checkpoint 解决的是可恢复性。长任务中断后可以从最近状态恢复，不必整条链重跑；也便于做[[Audit Log|审计回放]]和故障复盘。
 
-生产里我会把 checkpoint 和任务 ID 绑定，确保每次恢复都有可追踪上下文，支持幂等重放。
+生产里我会把 checkpoint 和任务 ID 绑定，确保每次恢复都有可[[Trace|追踪]]上下文，支持幂等重放。
 
 追问：Checkpoint 恢复后如何避免重复副作用（比如重复下单/重复发消息）？
 

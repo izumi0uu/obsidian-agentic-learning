@@ -53,7 +53,7 @@ related:
 
 ## 题目正文
 
-追问题目：主问题：常见 Agent/RAG 框架如何选型？
+追问题目：主问题：常见 [[Agent]]/[[RAG]] 框架如何选型？
 
 出现位置：框架选型与架构关系（LangChain/LangGraph/LlamaIndex/RAG框架）
 

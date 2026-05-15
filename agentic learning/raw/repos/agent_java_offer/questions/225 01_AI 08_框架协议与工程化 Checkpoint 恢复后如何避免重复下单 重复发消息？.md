@@ -49,7 +49,7 @@ related:
 
 ## 题目正文
 
-追问题目：2. Checkpoint 恢复后如何避免重复下单/重复发消息？
+追问题目：2. [[Durable Execution|Checkpoint]] 恢复后如何避免重复下单/重复发消息？
 
 出现位置：LangGraph生产治理（LCEL/防循环/Checkpoint）
 

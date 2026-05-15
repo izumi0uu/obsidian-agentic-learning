@@ -52,7 +52,7 @@ related:
 
 ## 题目正文
 
-### 3. 子问题：LangChain/LangGraph 里工具调用怎么做可靠性治理？
+### 3. 子问题：LangChain/LangGraph 里[[Tool Calling|工具调用]]怎么做可靠性治理？
 
 答：
 我会做三层治理：工具输入 schema 校验、调用层重试与超时、结果层幂等与去重。工具返回统一结构（status/data/error），禁止“字符串拼接式”返回。再配合回退策略（备用工具/降级答案）避免单工具故障拖垮全链路。

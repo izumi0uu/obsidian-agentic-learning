@@ -50,7 +50,7 @@ related:
 
 ## 题目正文
 
-### 2.14 TensorFlow 和 Transformer 架构 是啥关系啊
+### 2.14 TensorFlow 和 [[Transformer]] 架构 是啥关系啊
 
 两者是“框架”和“模型架构”的关系：
 - TensorFlow：深度学习框架（训练 / 推理工具链）；

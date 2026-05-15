@@ -49,7 +49,7 @@ related:
 
 ## 题目正文
 
-追问题目：追问：Checkpoint 恢复后如何避免重复副作用（比如重复下单/重复发消息）？
+追问题目：追问：[[Durable Execution|Checkpoint]] 恢复后如何避免重复副作用（比如重复下单/重复发消息）？
 
 出现位置：LangGraph 的 Checkpoint 有什么价值？
 

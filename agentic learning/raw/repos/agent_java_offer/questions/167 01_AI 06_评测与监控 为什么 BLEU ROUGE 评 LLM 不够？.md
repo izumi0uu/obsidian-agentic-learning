@@ -57,9 +57,9 @@ related:
 
 ## 题目正文
 
-追问题目：1. 为什么 BLEU/ROUGE 评 LLM 不够？
+追问题目：1. 为什么 BLEU/ROUGE 评 [[LLM]] 不够？
 
-出现位置：评估体系与线上监控（LLM/Agent）
+出现位置：[[Evaluation|评估体系]]与[[Observability|线上监控]]（LLM/[[Agent]]）
 
 ## 边界提醒
 

@@ -57,7 +57,7 @@ related:
 ### 5. 子问题：LangChain 和 LangGraph 的关系与区别？
 
 答：
-LangChain 更偏组件库和表达式编排（Prompt、Model、Retriever、Tools、Runnable），适合快速搭建链路。LangGraph 是面向有状态、多步骤、可恢复任务的图编排框架，适合 Agent 工作流。两者不是替代关系，常见是用 LangChain 组件 + LangGraph 做状态机编排。
+LangChain 更偏组件库和表达式编排（Prompt、Model、[[Retriever]]、Tools、Runnable），适合快速搭建链路。LangGraph 是面向有状态、多步骤、[[Durable Execution|可恢复]]任务的[[Agent Workflow|图编排]]框架，适合 [[Agent]] 工作流。两者不是替代关系，常见是用 LangChain 组件 + LangGraph 做状态机编排。
 
 追问：什么时候必须从 LangChain Chain 升级到 LangGraph 图？
 

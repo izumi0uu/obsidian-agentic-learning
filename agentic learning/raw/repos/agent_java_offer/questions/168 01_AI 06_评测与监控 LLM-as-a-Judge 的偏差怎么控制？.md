@@ -59,9 +59,9 @@ related:
 
 ## 题目正文
 
-追问题目：2. LLM-as-a-Judge 的偏差怎么控制？
+追问题目：2. [[LLM-as-Judge|LLM-as-a-Judge]] 的偏差怎么控制？
 
-出现位置：评估体系与线上监控（LLM/Agent）
+出现位置：[[Evaluation|评估体系]]与[[Observability|线上监控]]（[[LLM]]/[[Agent]]）
 
 ## 边界提醒
 

@@ -58,19 +58,19 @@ related:
 
 ## 题目正文
 
-### 2. 子问题：请比较两个流行的 Agent 开发框架，如 LangChain 和 LlamaIndex。它们的核心应用场景有何不同？
+### 2. 子问题：请比较两个流行的 [[Agent Framework|Agent 开发框架]]，如 LangChain 和 LlamaIndex。它们的核心应用场景有何不同？
 
 答：
-我一般按“逻辑编排驱动”还是“数据检索驱动”来选。LangChain 强在工作流编排、多工具协作和 Agent 执行控制，适合复杂任务链；LlamaIndex 强在数据接入、索引构建和检索优化，适合知识库问答与高质量 RAG。实际项目常是组合用：用 LlamaIndex 管数据能力，用 LangChain 做上层编排。
+我一般按“逻辑编排驱动”还是“数据检索驱动”来选。LangChain 强在[[Agent Workflow|工作流编排]]、多工具协作和 [[Agent]] 执行控制，适合复杂任务链；LlamaIndex 强在数据接入、索引构建和检索优化，适合知识库问答与高质量 [[RAG]]。实际项目常是组合用：用 LlamaIndex 管数据能力，用 LangChain 做上层编排。
 
-- **参考答案：** LangChain和LlamaIndex是构建LLM应用最流行的两个开源框架，它们都极大地简化了开发流程，但它们的**核心哲学和设计重点有所不同**，导致了它们在应用场景上的差异。
+- **参考答案：** LangChain和LlamaIndex是构建[[LLM]]应用最流行的两个开源框架，它们都极大地简化了开发流程，但它们的**核心哲学和设计重点有所不同**，导致了它们在应用场景上的差异。
 **核心定位的差异：**
   - **LangChain：一个通用的LLM应用“编排”框架 (General-purpose Orchestration Framework)**
     - **哲学：** LangChain的目标是提供一个全面的工具集，用于将LLM与各种组件（工具、记忆、数据源）“链接”在一起，构建复杂的应用程序，其中Agent是其核心应用之一。它更关注于 **“工作流”的构建**。
-    - **核心抽象：** Chains (调用链), Agents (智能体), Memory (记忆模块), Callbacks (回调系统)。
+    - **核心抽象：** Chains (调用链), Agents (智能体), [[Memory]] (记忆模块), Callbacks (回调系统)。
   - **LlamaIndex：一个专注于外部数据的“数据”框架 (Data Framework for External Data)**
     - **哲学：** LlamaIndex的出发点是解决LLM与私有或外部数据连接的核心问题，即**RAG (Retrieval-Augmented Generation)**。它专注于如何高效地**摄入（ingest）、索引（index）、和查询（query）外部数据。它更关注于“数据流”的管理**。
-    - **核心抽象：** Data Connectors (数据连接器), Indexes (索引结构), Retrievers (检索器), Query Engines (查询引擎)。
+    - **核心抽象：** Data Connectors (数据连接器), Indexes (索引结构), Retrievers ([[Retriever|检索器]]), Query Engines (查询引擎)。
     **核心应用场景的不同：**
 
   | **特性**     | **LangChain**                                                                                                  | **LlamaIndex**                                                                                                                 |

@@ -60,12 +60,12 @@ related:
 
 ## 题目正文
 
-### 1. 子问题：框架选型与架构关系（LangChain/LangGraph/LlamaIndex/RAG框架）
+### 1. 子问题：框架选型与架构关系（LangChain/LangGraph/LlamaIndex/[[RAG]]框架）
 
-主问题：常见 Agent/RAG 框架如何选型？
+主问题：常见 [[Agent]]/RAG 框架如何选型？
 
 口述答案：
-我的选型逻辑是“问题驱动而非框架驱动”。如果重点是工具编排与流程控制，优先 LangChain/LangGraph；如果重点是知识接入和检索能力，优先 LlamaIndex 或专门 RAG 框架；如果是数据规模和工程复杂度上升，再考虑框架组合。LangChain 更偏组件编排，LangGraph 更偏有状态图编排；很多项目是“LangChain 组件 + LangGraph 托管状态机”。选型最终看任务成功率、时延、成本、可维护性，不看单点 Demo 漂亮程度。
+我的选型逻辑是“问题驱动而非框架驱动”。如果重点是工具编排与流程控制，优先 LangChain/LangGraph；如果重点是知识接入和检索能力，优先 LlamaIndex 或专门 RAG 框架；如果是数据规模和工程复杂度上升，再考虑框架组合。LangChain 更偏组件编排，LangGraph 更偏有状态[[Agent Workflow|图编排]]；很多项目是“LangChain 组件 + LangGraph 托管状态机”。选型最终看[[Task Success Rate|任务成功率]]、时延、成本、可维护性，不看单点 Demo 漂亮程度。
 
 常见追问：
 
