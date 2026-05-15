@@ -120,8 +120,9 @@ When answering questions against this vault or maintaining wiki pages, prefer th
 1. Use `obsidian_status` when tool availability, index freshness, or ignore rules matter.
 2. Use `obsidian_search` for concept/topic discovery, related-note lookup, fuzzy title lookup, and semantic recall across the vault.
 3. Use `obsidian_read` to read exact notes before synthesizing, editing, or citing them.
-4. Start from wiki/maps for synthesis and use raw notes as evidence; do not let semantic retrieval flatten the raw/wiki/map layer boundary.
-5. Fall back to `rg` and direct file reads when MCP is unavailable, stale, or when an exact path/symbol search is already the narrower check.
+4. For synthesis, concept comparison, wiki edits, or evidence claims, if `obsidian_read` output is truncated, re-read the core note individually with a larger `snippet_length` or without truncation before making claims.
+5. Start from wiki/maps for synthesis and use raw notes as evidence; do not let semantic retrieval flatten the raw/wiki/map layer boundary.
+6. Fall back to `rg` and direct file reads when MCP is unavailable, stale, or when an exact path/symbol search is already the narrower check.
 
 Do not store runtime details such as proxy settings, model cache paths, local MCP install commands, or local Codex config in this file. Keep `.omx/**`, `.codex/**`, `.obsidian/**`, templates, and canvas files out of the search index.
 

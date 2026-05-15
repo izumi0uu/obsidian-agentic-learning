@@ -895,3 +895,9 @@ related:
 - Updated [[LLM Wiki 工作流]] with the new concept backlink sweep workflow: triggers, search scope, hit classification, raw-source boundary, two-way synchronization, and validation commands.
 - Updated [[概念卡]] template with a reminder that new cards and important aliases must trigger a backlink sweep before completion.
 - Boundary: this records the future rule only. It does not run a full backlink sweep for existing concepts in this pass.
+
+## [2026-05-16] maintenance | hybrid search truncated-read rule recorded
+
+- Updated `AGENTS.md`, [[LLM Wiki 工作流]], and the local `obsidian-llm-wiki` skill with a truncated-read rule for hybrid search MCP usage.
+- Rule: for synthesis, concept comparison, wiki edits, or evidence claims, if `obsidian_read` returns truncated content, re-read the core note individually with a larger `snippet_length` or without truncation before making claims.
+- Boundary: this is a usage rule for MCP reads, not a runtime configuration or model/cache setting.

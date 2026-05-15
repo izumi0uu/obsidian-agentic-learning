@@ -211,7 +211,8 @@ python3 scripts/interview_question_concept_links.py --dry-run
 1. `obsidian_status`：确认索引可用、是否最新、忽略规则是否正确。
 2. `obsidian_search`：用于概念 / topic 发现、相关页召回、标题模糊搜索、语义召回和多 query fan-out。
 3. `obsidian_read`：在综合、修改或引用前读取精确页面正文。
-4. `rg` / 直接读文件：用于 MCP 不可用、索引陈旧、已知精确路径、脚本符号搜索或需要验证未索引文件时。
+4. 当任务是概念对比、wiki 写入、判断生成或引用证据时，如果 `obsidian_read` 返回内容出现 truncated，应单独重读核心页面，并提高 `snippet_length` 或取消截断后再下结论。
+5. `rg` / 直接读文件：用于 MCP 不可用、索引陈旧、已知精确路径、脚本符号搜索或需要验证未索引文件时。
 
 边界：检索工具只改变“怎么找资料”，不改变三层知识边界。回答和写回仍然先从 `wiki/` 与 `maps/` 形成理解，`raw/` 只作为证据；不要因为语义搜索召回了 raw note，就直接把 raw 内容当成稳定概念解释。
 
