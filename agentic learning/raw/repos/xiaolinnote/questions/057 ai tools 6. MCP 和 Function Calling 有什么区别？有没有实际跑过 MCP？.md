@@ -18,7 +18,6 @@ related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[MCP]]"
-  - "[[Function Calling]]"
   - "[[Tool Calling]]"
 ---
 # 6. MCP 和 Function Calling 有什么区别？有没有实际跑过 MCP？
@@ -30,7 +29,6 @@ related:
 ## 相关知识 wiki
 
 - [[MCP]]
-- [[Function Calling]]
 - [[Tool Calling]]
 
 ## 页面正文

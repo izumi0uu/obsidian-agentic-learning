@@ -15,8 +15,6 @@ sha256: 716e34097de17f07b88ab0d646a70421c6020e22289cd194ae1652538213df62
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Linux Filesystem]]"
-  - "[[File Operations]]"
 ---
 # 第3章 文件与目录的日常操作
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Linux Filesystem]]
-- [[File Operations]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

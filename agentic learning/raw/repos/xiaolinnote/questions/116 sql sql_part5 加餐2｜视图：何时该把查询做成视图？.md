@@ -15,8 +15,6 @@ sha256: 4562746944f37cf35f40cbf8e73670b086c90b7b88fc989b5a33688dd8bd6d51
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[SQL View]]"
-  - "[[SQL]]"
 ---
 # 加餐2｜视图：何时该把查询做成视图？
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[SQL View]]
-- [[SQL]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

@@ -18,7 +18,6 @@ sha256: 64d5dd3aa053011dfb93731e02ca398f2cbda9334f4107d36034e5403df5029d
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[LangChain]]"
   - "[[Agent Framework]]"
   - "[[Tool Calling]]"
 ---
@@ -30,7 +29,6 @@ related:
 
 ## 相关知识 wiki
 
-- [[LangChain]]
 - [[Agent Framework]]
 - [[Tool Calling]]
 

@@ -15,9 +15,6 @@ sha256: dcd0941dc7113066d3d8b659665600b1452ec2bacfee03263749295bb036ee51
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Database Transaction]]"
-  - "[[ACID]]"
-  - "[[SQL]]"
 ---
 # 10｜事务：如何保证一组操作要么都成功？
 
@@ -27,9 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Database Transaction]]
-- [[ACID]]
-- [[SQL]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

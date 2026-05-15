@@ -15,8 +15,6 @@ sha256: cb91064ff4b22dc645db42a234f5a47f8b714ce93263732c97a31236b6e89ab4
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Linux Permissions]]"
-  - "[[User and Group]]"
 ---
 # 第4章 权限、所有权与用户基础
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Linux Permissions]]
-- [[User and Group]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

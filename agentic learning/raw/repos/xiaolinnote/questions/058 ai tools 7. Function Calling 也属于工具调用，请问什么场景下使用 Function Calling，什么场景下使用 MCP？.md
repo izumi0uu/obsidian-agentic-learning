@@ -19,7 +19,6 @@ related:
   - "[[资料收集索引]]"
   - "[[Tool Calling]]"
   - "[[MCP]]"
-  - "[[Function Calling]]"
 ---
 # 7. Function Calling 也属于工具调用，请问什么场景下使用 Function Calling，什么场景下使用 MCP？
 
@@ -31,7 +30,6 @@ related:
 
 - [[Tool Calling]]
 - [[MCP]]
-- [[Function Calling]]
 
 ## 页面正文
 

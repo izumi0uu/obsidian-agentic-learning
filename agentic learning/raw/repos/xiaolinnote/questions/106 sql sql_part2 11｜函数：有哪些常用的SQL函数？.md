@@ -15,8 +15,6 @@ sha256: f0932a6a59768a6213ca86ff674a4737477b0244b85ec199f6d34a979b04bfc5
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[SQL Function]]"
-  - "[[SQL]]"
 ---
 # 11｜函数：有哪些常用的SQL函数？
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[SQL Function]]
-- [[SQL]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

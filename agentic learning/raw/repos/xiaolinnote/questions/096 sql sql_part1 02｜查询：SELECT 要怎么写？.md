@@ -15,8 +15,6 @@ sha256: d90453f1431bd2911a8cf6e2945e9b585a2d869cd265c686792d630e00f666b4
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[SQL SELECT]]"
-  - "[[SQL]]"
 ---
 # 02｜查询：SELECT 要怎么写？
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[SQL SELECT]]
-- [[SQL]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

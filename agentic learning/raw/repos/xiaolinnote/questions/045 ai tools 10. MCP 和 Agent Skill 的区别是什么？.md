@@ -18,9 +18,8 @@ related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[MCP]]"
-  - "[[Agent Skill]]"
-  - "[[Tool Calling]]"
   - "[[Tool Use]]"
+  - "[[Tool Calling]]"
 ---
 # 10. MCP 和 Agent Skill 的区别是什么？
 
@@ -31,9 +30,8 @@ related:
 ## 相关知识 wiki
 
 - [[MCP]]
-- [[Agent Skill]]
-- [[Tool Calling]]
 - [[Tool Use]]
+- [[Tool Calling]]
 
 ## 页面正文
 

@@ -15,9 +15,6 @@ sha256: fc4c190f239aeb7e6bdb24d459ec1e0c2a0fb3cc53cc2014e609e586c7042a2e
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Data Modeling]]"
-  - "[[SQL Practice]]"
-  - "[[SQL]]"
 ---
 # 15｜实战：商城订单应用
 
@@ -27,9 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Data Modeling]]
-- [[SQL Practice]]
-- [[SQL]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

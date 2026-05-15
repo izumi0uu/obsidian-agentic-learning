@@ -15,8 +15,6 @@ sha256: be9e11eb1cd144a0cf26c778ebdfeaf3458a462bbdc627e5ab41cb9674f241a0
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Window Function]]"
-  - "[[SQL]]"
 ---
 # 加餐3｜窗口函数：组内计算该怎么写？
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Window Function]]
-- [[SQL]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

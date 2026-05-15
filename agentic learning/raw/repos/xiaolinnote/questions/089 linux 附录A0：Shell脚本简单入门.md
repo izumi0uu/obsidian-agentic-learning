@@ -15,8 +15,6 @@ sha256: 3054ba24712a429c575902103ed5e1ad1bbe9992b0bd80cc893f4894e0d8c4b5
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Shell Script]]"
-  - "[[Bash]]"
 ---
 # 附录A0：Shell脚本简单入门
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Shell Script]]
-- [[Bash]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

@@ -15,8 +15,6 @@ sha256: 175820e6013876236adfdc19669180c9acf9e19fb6d64425fa4a891626d1d21b
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Linux]]"
-  - "[[Command Line]]"
 ---
 # 附录A1：常用命令速查表
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Linux]]
-- [[Command Line]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

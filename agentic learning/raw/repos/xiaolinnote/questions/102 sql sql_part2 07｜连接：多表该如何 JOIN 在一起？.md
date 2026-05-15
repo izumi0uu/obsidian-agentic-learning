@@ -15,9 +15,6 @@ sha256: adb94c995d9442cbb0be8483993779a485c205a61da9383e49a613f33003f43d
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[SQL JOIN]]"
-  - "[[Relational Database]]"
-  - "[[SQL]]"
 ---
 # 07｜连接：多表该如何 JOIN 在一起？
 
@@ -27,9 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[SQL JOIN]]
-- [[Relational Database]]
-- [[SQL]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

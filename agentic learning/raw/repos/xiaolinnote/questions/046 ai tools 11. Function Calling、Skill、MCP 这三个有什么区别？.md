@@ -17,10 +17,9 @@ sha256: bcf45bbd511d79328395d947ef1a4eef41a191a283603ac7e32c42028e097b78
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Function Calling]]"
   - "[[Tool Calling]]"
   - "[[MCP]]"
-  - "[[Agent Skill]]"
+  - "[[Tool Use]]"
 ---
 # 11. Function Calling、Skill、MCP 这三个有什么区别？
 
@@ -30,10 +29,9 @@ related:
 
 ## 相关知识 wiki
 
-- [[Function Calling]]
 - [[Tool Calling]]
 - [[MCP]]
-- [[Agent Skill]]
+- [[Tool Use]]
 
 ## 页面正文
 

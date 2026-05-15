@@ -18,9 +18,6 @@ related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[MCP]]"
-  - "[[Server-Sent Events]]"
-  - "[[WebSocket]]"
-  - "[[Realtime Communication]]"
 ---
 # 13. MCP 协议通常采用什么通信方式？
 
@@ -31,9 +28,6 @@ related:
 ## 相关知识 wiki
 
 - [[MCP]]
-- [[Server-Sent Events]]
-- [[WebSocket]]
-- [[Realtime Communication]]
 
 ## 页面正文
 

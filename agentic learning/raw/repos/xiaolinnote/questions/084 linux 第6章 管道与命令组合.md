@@ -15,8 +15,6 @@ sha256: 8a4e271a7b0fa034c75721276f8ca61fa10fc52f9f3ce4381aefe26a921772f1
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Unix Pipeline]]"
-  - "[[Shell]]"
 ---
 # 第6章 管道与命令组合
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Unix Pipeline]]
-- [[Shell]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

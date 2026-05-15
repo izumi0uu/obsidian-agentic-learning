@@ -17,9 +17,6 @@ sha256: 3ae6cef7f455d25cce531c8a7dc74b4cd876764a37708118bef0c46bc5619f16
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Server-Sent Events]]"
-  - "[[WebSocket]]"
-  - "[[Realtime Communication]]"
 ---
 # 14. 说说 WebSocket 和 SSE 通信的区别及局限性？
 
@@ -29,9 +26,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Server-Sent Events]]
-- [[WebSocket]]
-- [[Realtime Communication]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

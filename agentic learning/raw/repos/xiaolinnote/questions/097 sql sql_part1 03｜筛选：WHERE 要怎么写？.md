@@ -15,8 +15,6 @@ sha256: b5560574409e062e2ab5768240809823411d8a29a9529c55cc7bcc73720302af
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[SQL WHERE]]"
-  - "[[SQL]]"
 ---
 # 03｜筛选：WHERE 要怎么写？
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[SQL WHERE]]
-- [[SQL]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

@@ -15,9 +15,6 @@ sha256: 79f7af2ff1820cbd3d343169e529b8457e01ddfac0cf81b11dc9b0990c2eec55
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[SQL GROUP BY]]"
-  - "[[Aggregate Function]]"
-  - "[[SQL]]"
 ---
 # 08｜聚合与分组：统计与分组该怎么做？
 
@@ -27,9 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[SQL GROUP BY]]
-- [[Aggregate Function]]
-- [[SQL]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

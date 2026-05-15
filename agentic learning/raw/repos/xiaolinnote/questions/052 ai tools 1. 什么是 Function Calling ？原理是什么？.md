@@ -17,7 +17,6 @@ sha256: 18456357159414fc5cc67bfbd74ec640bc49a1aa5f606ff1820befd3b4a96b52
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Function Calling]]"
   - "[[Tool Calling]]"
   - "[[Tool Registry]]"
 ---
@@ -29,7 +28,6 @@ related:
 
 ## 相关知识 wiki
 
-- [[Function Calling]]
 - [[Tool Calling]]
 - [[Tool Registry]]
 

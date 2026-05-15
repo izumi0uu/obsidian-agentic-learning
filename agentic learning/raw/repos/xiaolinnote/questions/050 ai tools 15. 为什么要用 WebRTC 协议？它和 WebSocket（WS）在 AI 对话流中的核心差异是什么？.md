@@ -17,9 +17,6 @@ sha256: ce982c618b14c3c4ab92554dc91ad3da4b0dc3315d5d73c047b829e84b99cece
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[WebRTC]]"
-  - "[[WebSocket]]"
-  - "[[Realtime Communication]]"
 ---
 # 15. 为什么要用 WebRTC 协议？它和 WebSocket（WS）在 AI 对话流中的核心差异是什么？
 
@@ -29,9 +26,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[WebRTC]]
-- [[WebSocket]]
-- [[Realtime Communication]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

@@ -15,9 +15,6 @@ sha256: 4a4a1017293bab8a33d40e26cc4cd4db90861a43e82624cd61e5303bbe67d35b
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Terminal]]"
-  - "[[Shell]]"
-  - "[[Command Line]]"
 ---
 # 第1章 走进命令行
 
@@ -27,9 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Terminal]]
-- [[Shell]]
-- [[Command Line]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

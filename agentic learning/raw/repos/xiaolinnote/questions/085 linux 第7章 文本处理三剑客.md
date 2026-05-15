@@ -15,10 +15,6 @@ sha256: 9929647f0ea75ac608598a0c30814051d5cd8136fc37b89f4da59f0d91e8db48
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[grep]]"
-  - "[[awk]]"
-  - "[[sed]]"
-  - "[[Regular Expression]]"
 ---
 # 第7章 文本处理三剑客
 
@@ -28,10 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[grep]]
-- [[awk]]
-- [[sed]]
-- [[Regular Expression]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

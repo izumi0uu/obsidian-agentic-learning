@@ -15,8 +15,6 @@ sha256: 5b540e36ce653ae6a14bd7f938bdc7b3d4a8fb138a65c75926713856d2011058
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Database Permission]]"
-  - "[[SQL]]"
 ---
 # 加餐4｜权限：用户与角色该如何授予与回收？
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Database Permission]]
-- [[SQL]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

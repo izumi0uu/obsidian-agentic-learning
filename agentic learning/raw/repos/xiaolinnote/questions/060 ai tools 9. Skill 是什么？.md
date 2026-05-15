@@ -17,7 +17,6 @@ sha256: f9bfa78700048b2dc4ec2324746cba204f6b6a93c1617f16427b256ce99616e2
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Agent Skill]]"
   - "[[Tool Use]]"
   - "[[Tool Calling]]"
 ---
@@ -29,7 +28,6 @@ related:
 
 ## 相关知识 wiki
 
-- [[Agent Skill]]
 - [[Tool Use]]
 - [[Tool Calling]]
 

@@ -15,8 +15,6 @@ sha256: f39ccdb2f6c5fdcc7ebf44ee43006294c1e8485f559bc3a942a5845ae42d4040
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Git]]"
-  - "[[Version Control]]"
 ---
 # Git 命令快速入门教程
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Git]]
-- [[Version Control]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

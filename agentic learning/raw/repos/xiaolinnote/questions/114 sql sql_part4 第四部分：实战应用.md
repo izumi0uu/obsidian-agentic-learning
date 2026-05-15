@@ -15,8 +15,6 @@ sha256: 995913878493090b170ad8be5e1c28ae1274e8219d8ea2198ff68929f097ce2e
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[SQL Practice]]"
-  - "[[Data Modeling]]"
 ---
 # 第四部分：实战应用
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[SQL Practice]]
-- [[Data Modeling]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

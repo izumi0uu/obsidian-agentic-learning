@@ -15,8 +15,6 @@ sha256: 8f67fe02bd23ec7f56839f56605024e8c50a32ccec50d70172bb9ee2bb8ccd21
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Database Normalization]]"
-  - "[[Relational Database]]"
 ---
 # 13｜范式设计：数据库的范化有那些？？
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Database Normalization]]
-- [[Relational Database]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

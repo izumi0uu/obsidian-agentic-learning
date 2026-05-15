@@ -15,8 +15,6 @@ sha256: f731405c5f0793f7b2465c86af2e528245e521ae0cb47b3e5ad1bb15a923110b
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[SQL INSERT]]"
-  - "[[SQL]]"
 ---
 # 05｜插入：数据该怎么写进表？
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[SQL INSERT]]
-- [[SQL]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

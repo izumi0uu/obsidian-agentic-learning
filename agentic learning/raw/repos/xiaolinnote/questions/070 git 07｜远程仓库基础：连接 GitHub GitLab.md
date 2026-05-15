@@ -15,10 +15,6 @@ sha256: ac4e7c3ce1a98eef1bc86422424bb6347203eb0e13d4bda5a0040fdc0fa70125
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Git Remote]]"
-  - "[[GitHub]]"
-  - "[[GitLab]]"
-  - "[[Git]]"
 ---
 # 07｜远程仓库基础：连接 GitHub GitLab
 
@@ -28,10 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Git Remote]]
-- [[GitHub]]
-- [[GitLab]]
-- [[Git]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

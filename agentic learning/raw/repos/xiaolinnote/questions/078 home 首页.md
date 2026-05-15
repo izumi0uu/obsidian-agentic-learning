@@ -18,9 +18,6 @@ related:
   - "[[LLM]]"
   - "[[Agent]]"
   - "[[RAG]]"
-  - "[[Git]]"
-  - "[[Linux]]"
-  - "[[SQL]]"
 ---
 # 首页
 
@@ -33,9 +30,6 @@ related:
 - [[LLM]]
 - [[Agent]]
 - [[RAG]]
-- [[Git]]
-- [[Linux]]
-- [[SQL]]
 
 ## 页面正文
 

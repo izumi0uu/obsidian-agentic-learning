@@ -15,8 +15,6 @@ sha256: d5487b5689812465bf614457a9cdb98c47d50b0e5e95b196397d2b6eec8a586b
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[SQL]]"
-  - "[[Database]]"
 ---
 # 第二部分：SQL进阶
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[SQL]]
-- [[Database]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

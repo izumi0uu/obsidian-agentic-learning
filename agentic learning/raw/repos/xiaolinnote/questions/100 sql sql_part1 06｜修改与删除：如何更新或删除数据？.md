@@ -15,9 +15,6 @@ sha256: ef064c8e55b5854a3833c6503a6f9250851b9e60cfeb7f6dbbadcdbd12f1f24b
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[SQL UPDATE]]"
-  - "[[SQL DELETE]]"
-  - "[[SQL]]"
 ---
 # 06｜修改与删除：如何更新或删除数据？
 
@@ -27,9 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[SQL UPDATE]]
-- [[SQL DELETE]]
-- [[SQL]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

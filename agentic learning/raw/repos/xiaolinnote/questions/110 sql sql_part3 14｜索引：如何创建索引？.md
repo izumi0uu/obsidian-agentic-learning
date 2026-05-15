@@ -15,8 +15,6 @@ sha256: c0e0b365ea65ec60d975bc5e847c25263fe9fd97a43fd7bccd28d34960786e77
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Database Index]]"
-  - "[[SQL]]"
 ---
 # 14｜索引：如何创建索引？
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Database Index]]
-- [[SQL]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

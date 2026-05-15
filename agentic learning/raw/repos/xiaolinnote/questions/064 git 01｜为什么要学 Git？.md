@@ -15,8 +15,6 @@ sha256: 27aa41f3982d103abdea0157a045dd4af494953945f2757dbc88c7626b8bbbd6
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Git]]"
-  - "[[Version Control]]"
 ---
 # 01｜为什么要学 Git？
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Git]]
-- [[Version Control]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

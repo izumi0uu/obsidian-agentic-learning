@@ -15,8 +15,6 @@ sha256: 05082b7a9617370ae80f45c70183d92d2fb0545b2f556a1884e04e0787e8255f
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Linux Monitoring]]"
-  - "[[System Resource]]"
 ---
 # 第9章 系统监控与资源排查
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Linux Monitoring]]
-- [[System Resource]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

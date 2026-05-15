@@ -15,9 +15,6 @@ sha256: 5f268a2fdb6250f6fb7eace315cab96aa14dd27f0eddde0dac77e74185710523
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[DDL]]"
-  - "[[Database Schema]]"
-  - "[[SQL]]"
 ---
 # 12｜表结构：表该如何创建、修改与删除？
 
@@ -27,9 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[DDL]]
-- [[Database Schema]]
-- [[SQL]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

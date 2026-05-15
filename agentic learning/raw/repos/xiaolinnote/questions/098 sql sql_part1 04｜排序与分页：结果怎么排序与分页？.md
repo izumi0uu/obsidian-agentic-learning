@@ -15,9 +15,6 @@ sha256: c41e0980e124e0b9f94d4ae7c23a60d09226ab8089808f1a942dda1f587bd8aa
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[SQL ORDER BY]]"
-  - "[[Pagination]]"
-  - "[[SQL]]"
 ---
 # 04｜排序与分页：结果怎么排序与分页？
 
@@ -27,9 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[SQL ORDER BY]]
-- [[Pagination]]
-- [[SQL]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

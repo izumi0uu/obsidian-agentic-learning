@@ -15,8 +15,6 @@ sha256: c10e6a8228f107e35eef656427858089453616c4fbee9bc2d0e2e8954183befd
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Shell Safety]]"
-  - "[[Linux]]"
 ---
 # 附录A3：新手常见坑与安全小贴士
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Shell Safety]]
-- [[Linux]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

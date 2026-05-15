@@ -20,7 +20,6 @@ related:
   - "[[Tool Calling]]"
   - "[[Tool Use]]"
   - "[[MCP]]"
-  - "[[Function Calling]]"
 ---
 # 03｜ LLM工具调用面试题
 
@@ -33,7 +32,6 @@ related:
 - [[Tool Calling]]
 - [[Tool Use]]
 - [[MCP]]
-- [[Function Calling]]
 
 ## 页面正文
 

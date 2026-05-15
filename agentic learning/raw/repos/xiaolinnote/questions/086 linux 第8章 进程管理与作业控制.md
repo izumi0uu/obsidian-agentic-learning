@@ -15,8 +15,6 @@ sha256: 629a0d9d058cb875f4ed3039d22d6f0efef7cbae644a1af4ca7ede06e507df09
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Linux Process]]"
-  - "[[Job Control]]"
 ---
 # 第8章 进程管理与作业控制
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Linux Process]]
-- [[Job Control]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

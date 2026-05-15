@@ -15,9 +15,6 @@ sha256: 60dfb2b37617476e515df7dd13020baf1ac473a152379cc54319dab88142f864
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Linux Filesystem]]"
-  - "[[Path]]"
-  - "[[Command Line]]"
 ---
 # 第2章 路径与文件系统导航
 
@@ -27,9 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[Linux Filesystem]]
-- [[Path]]
-- [[Command Line]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 

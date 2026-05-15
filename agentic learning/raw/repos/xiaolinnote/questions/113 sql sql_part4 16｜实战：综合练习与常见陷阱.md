@@ -15,8 +15,6 @@ sha256: 2586d149ff7933387ea472f7a169e0b5bd1695e1d5d6bb0db8f81ef339474c63
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[SQL Practice]]"
-  - "[[SQL]]"
 ---
 # 16｜实战：综合练习与常见陷阱
 
@@ -26,8 +24,7 @@ related:
 
 ## 相关知识 wiki
 
-- [[SQL Practice]]
-- [[SQL]]
+- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
 
 ## 页面正文
 
