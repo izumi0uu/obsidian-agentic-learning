@@ -842,3 +842,11 @@ related:
 - Updated navigation: [[Hybrid Search]], [[TF-IDF]], [[Retrieval 组件对比]], [[RAG 主题]], [[Agent 知识地图]], and [[04 页面目录]].
 - Evidence: [[raw/repos/xiaolinnote/questions/024 ai rag 11. 请你介绍一下向量检索和关键词检索的区别？#关键词检索：字面匹配，靠统计]], [[raw/repos/xiaolinnote/questions/026 ai rag 13. 什么是多路召回？具体怎么做？#第二路：BM25 关键词检索（Sparse Retrieval）]], and [[raw/repos/xiaolinnote/questions/023 ai rag 10. 你使用 RAG 给大模型一个输入，系统是怎样的工作流程？#第三步：向量检索（ANN 搜索）+ 多路召回]].
 - Boundary: [[TF-IDF]] is the foundation term-weighting intuition, [[BM25]] is the common sparse retrieval representative, [[Sparse Retrieval]] is the broader lexical retrieval family, and [[Hybrid Search]] is the fusion strategy that combines sparse and dense signals.
+
+## [2026-05-16] team | 面试题正文概念链接审计脚本补齐
+
+- Added deterministic helper: `scripts/interview_question_concept_links.py` with dry-run/apply/report/backlog support and conservative protected-region handling for frontmatter、代码块、URL、已有链接、source metadata 与 `## 相关知识 wiki`。
+- Added alias map: `scripts/interview_question_concept_aliases.json` for high-confidence Agent / RAG / tool / memory / evaluation terms.
+- Created backlog page: [[08 面试题概念卡待补充]] from the approved template; current audit found no unresolved related-link targets, so it remains a candidate intake page rather than a concept explanation page.
+- Verification: script self-test PASS; full dry-run and post-apply audit both scanned 757 question pages（120 xiaolinnote + 637 agent_java_offer）, found 757 related sections, 0 missing targets, 0 protected-region violations, and 0 request-meta hits; `git diff --check` PASS.
+- Boundary: this pass adds the missing reproducible audit/control surface for the team run. It does not create weak concept cards, does not rewrite interview answers, and leaves skipped/no-match backend/Git/Linux/SQL pages as conservative non-links unless future concept scope is explicitly expanded.
