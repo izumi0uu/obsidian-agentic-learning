@@ -52,10 +52,16 @@ SOURCE_META_PREFIXES = (
     "source_path:",
     "commit:",
     "license:",
+    "父级题组：",
+    "出现位置：",
+    "来源：",
+    "**来源**：",
 )
 
 # Hard skip aliases that are too broad even when a page's related section gates a target.
 FORBIDDEN_ALIASES = {
+    "Memory",
+    "memory",
     "工具",
     "模型",
     "系统",
@@ -72,6 +78,17 @@ FORBIDDEN_ALIASES = {
     "库",
     "图",
     "节点",
+    # Too ambiguous in Chinese interview pages:
+    # - "观察/观测" often means human inspection or monitoring rather than
+    #   ReAct Observation.
+    # - "重排" also means JVM/CPU instruction reordering, not only RAG reranking.
+    "观察",
+    "观测",
+    "重排",
+    # "成功率" is too broad: in interview answers it may describe tool calls,
+    # service availability, business conversion, or task success. Keep the
+    # precise "任务成功率" alias instead.
+    "成功率",
 }
 
 REQUEST_META_PHRASES = (
@@ -305,6 +322,13 @@ def boundary_ok(text: str, start: int, end: int, alias: str) -> bool:
             return False
         if nxt and is_ascii_word_char(nxt):
             return False
+    # A few Chinese aliases are meaningful as terms but become false positives
+    # inside longer everyday words. "工作流" can be a valid Agent Workflow
+    # alias, but "工作流程" is usually just "process / procedure" and should
+    # stay plain text unless a future concept explicitly covers that term.
+    nxt = text[end] if end < len(text) else ""
+    if alias == "工作流" and nxt == "程":
+        return False
     return True
 
 
@@ -318,16 +342,24 @@ def context_snippet(text: str, start: int, end: int, radius: int = 28) -> str:
     return text[left:right].replace("\n", " ").strip()
 
 
+def overlaps(a_start: int, a_end: int, b_start: int, b_end: int) -> bool:
+    return not (a_end <= b_start or a_start >= b_end)
+
+
 def parse_body_wikilinks(text: str, protector: SpanProtector) -> set[str]:
     linked: set[str] = set()
     for m in WIKI_LINK_RE.finditer(text):
-        if protector.in_related(m.start(), m.end()):
+        start, end = m.span()
+        if protector.in_related(start, end):
             continue
-        # Existing links in frontmatter/code are not body concept links.
-        if protector.protected(m.start(), m.end()) and not any(
-            s.kind == "obsidian-link" and s.start == m.start() and s.end == m.end()
-            for s in protector.spans
-        ):
+        # The link span itself is protected, but links inside frontmatter/code/URL/source
+        # metadata should not count as existing body concept links.
+        non_link_protected = any(
+            span.kind not in {"obsidian-link", "markdown-link"}
+            and overlaps(start, end, span.start, span.end)
+            for span in protector.spans
+        )
+        if non_link_protected:
             continue
         target = normalize_target(m.group(1))
         if target:
@@ -341,6 +373,7 @@ def choose_proposal_for_target(
     target: str,
     aliases: list[str],
     occupied: list[tuple[int, int]],
+    longer_alias_spans: list[tuple[int, int, str, str]],
 ) -> tuple[LinkProposal | None, int]:
     protected_hits = 0
     matches: list[tuple[int, int, str]] = []
@@ -351,6 +384,17 @@ def choose_proposal_for_target(
                 continue
             if protector.protected(start, end):
                 protected_hits += 1
+                continue
+            # Avoid linking a short alias inside another candidate concept's longer
+            # alias, e.g. `Prompt` inside `Prompt Injection` or `观测` inside
+            # `可观测性`. This keeps candidate-gated linking conservative when a
+            # related section contains neighboring concepts.
+            if any(
+                other_target != target
+                and (other_end - other_start) > (end - start)
+                and overlaps(start, end, other_start, other_end)
+                for other_start, other_end, other_target, _other_alias in longer_alias_spans
+            ):
                 continue
             if any(not (end <= a or start >= b) for a, b in occupied):
                 continue
@@ -406,6 +450,17 @@ def process_page(
     already = [t for t in existing_targets if t in body_links]
     report.already_linked_targets = already
 
+    longer_alias_spans: list[tuple[int, int, str, str]] = []
+    for target in existing_targets:
+        for alias in alias_candidates(target, alias_map):
+            for m in re.finditer(re.escape(alias), text):
+                start, end = m.span()
+                if not boundary_ok(text, start, end, alias):
+                    continue
+                if protector.protected(start, end):
+                    continue
+                longer_alias_spans.append((start, end, target, alias))
+
     proposals: list[LinkProposal] = []
     occupied: list[tuple[int, int]] = []
     unsafe_hits = 0
@@ -414,7 +469,14 @@ def process_page(
         if target in body_links:
             continue
         aliases = alias_candidates(target, alias_map)
-        proposal, protected_hits = choose_proposal_for_target(text, protector, target, aliases, occupied)
+        proposal, protected_hits = choose_proposal_for_target(
+            text,
+            protector,
+            target,
+            aliases,
+            occupied,
+            longer_alias_spans,
+        )
         unsafe_hits += protected_hits
         if proposal:
             proposals.append(proposal)
@@ -686,7 +748,22 @@ def run_self_tests() -> None:
     # Fake resolver by monkeypatching a minimal object.
     class FakeResolver:
         def resolve(self, target: str):
-            return Path(target + ".md") if target in {"Agent", "Tool Calling", "RAG", "ReAct"} else None
+            return (
+                Path(target + ".md")
+                if target in {
+                    "Agent",
+                    "Tool Calling",
+                    "RAG",
+                    "ReAct",
+                    "Agent Workflow",
+                    "Task Success Rate",
+                    "Prompt",
+                    "Prompt Injection",
+                    "Observation",
+                    "Observability",
+                }
+                else None
+            )
     import tempfile
     with tempfile.TemporaryDirectory() as td:
         p = Path(td) / "sample.md"
@@ -707,6 +784,60 @@ def run_self_tests() -> None:
         out = p.read_text(encoding="utf-8")
         assert "Reactor 不是 [[ReAct]]" in out
         assert report.applied_links == 1
+    # Chinese alias boundary: "工作流程" is not the Agent Workflow concept.
+    text = "## 相关知识 wiki\n\n- [[Agent Workflow]]\n\n## 页面正文\n\n普通工作流程不是智能体工作流。\n"
+    with tempfile.TemporaryDirectory() as td:
+        p = Path(td) / "workflow.md"
+        p.write_text(text, encoding="utf-8")
+        report, _ = process_page(
+            p,
+            "workflow.md",
+            "test",
+            FakeResolver(),
+            {"Agent Workflow": ["工作流", "智能体工作流"]},
+            apply=True,
+        )
+        out = p.read_text(encoding="utf-8")
+        assert "普通工作流程" in out
+        assert "[[Agent Workflow|工作流]]程" not in out
+        assert "[[Agent Workflow|智能体工作流]]" in out
+        assert report.applied_links == 1
+    # Broad metric word "成功率" is not precise enough for Task Success Rate.
+    text = "## 相关知识 wiki\n\n- [[Task Success Rate]]\n\n## 页面正文\n\n工具调用成功率要和任务成功率分开看。\n"
+    with tempfile.TemporaryDirectory() as td:
+        p = Path(td) / "success-rate.md"
+        p.write_text(text, encoding="utf-8")
+        report, _ = process_page(
+            p,
+            "success-rate.md",
+            "test",
+            FakeResolver(),
+            {"Task Success Rate": ["成功率", "任务成功率"]},
+            apply=True,
+        )
+        out = p.read_text(encoding="utf-8")
+        assert "工具调用成功率" in out
+        assert "[[Task Success Rate|成功率]]" not in out
+        assert "[[Task Success Rate|任务成功率]]" in out
+        assert report.applied_links == 1
+    # Short alias must not be linked inside another page candidate's longer alias.
+    text = "## 相关知识 wiki\n\n- [[Prompt]]\n- [[Prompt Injection]]\n- [[Observation]]\n- [[Observability]]\n\n## 页面正文\n\n提示注入（Prompt Injection）和可观测性不是普通 Observation。\n"
+    with tempfile.TemporaryDirectory() as td:
+        p = Path(td) / "overlap.md"
+        p.write_text(text, encoding="utf-8")
+        aliases = {
+            "Prompt": ["提示", "Prompt"],
+            "Prompt Injection": ["提示注入", "Prompt Injection"],
+            "Observation": ["观察", "观测"],
+            "Observability": ["可观测性"],
+        }
+        report, _ = process_page(p, "overlap.md", "test", FakeResolver(), aliases, apply=True)
+        out = p.read_text(encoding="utf-8")
+        assert "[[Prompt Injection|提示注入]]（Prompt Injection）" in out
+        assert "和[[Observability|可观测性]]不是普通 [[Observation]]" in out
+        assert "[[Prompt|Prompt]] Injection" not in out
+        assert "可[[Observation|观测]]性" not in out
+        assert report.applied_links == 3
 
 
 def main(argv: list[str] | None = None) -> int:

@@ -37,7 +37,7 @@ related:
   - "[[Agent 主题]]"
 ---
 
-# 你如何定义一个基于 LLM 的智能体（Agent）？它通常由哪些核心组件构成？
+# 你如何定义一个基于 [[LLM]] 的[[Agent|智能体]]（Agent）？它通常由哪些核心组件构成？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/01_Agent基础/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/01_Agent%E5%9F%BA%E7%A1%80/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -64,7 +64,7 @@ related:
 ### 2. 子问题：你如何定义一个基于 LLM 的智能体（Agent）？它通常由哪些核心组件构成？
 
 答：
-我会把 Agent 定义为“以 LLM 为决策大脑、能在环境中持续闭环执行任务的系统”。与普通问答不同，它具备自主性和循环性。核心组件可讲四层：规划模块、记忆模块、工具模块，再加上底层 LLM 本身。面试时建议强调：真正拉开差距的是工程控制面，比如状态管理、异常恢复和可观测性。
+我会把 Agent 定义为“以 LLM 为决策大脑、能在环境中持续闭环执行任务的系统”。与普通问答不同，它具备自主性和循环性。核心组件可讲四层：[[Planning|规划]]模块、[[Memory|记忆]]模块、工具模块，再加上底层 LLM 本身。面试时建议强调：真正拉开差距的是工程控制面，比如状态管理、异常恢复和[[Observability|可观测性]]。
 
 ## 边界提醒
 

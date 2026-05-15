@@ -40,7 +40,7 @@ related:
   - "[[Observability]]"
 ---
 
-# Chain、Agent、Workflow 三者怎么区分？
+# Chain、[[Agent]]、[[Agent Workflow|Workflow]] 三者怎么区分？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/02_Workflow与多Agent/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/02_Workflow%E4%B8%8E%E5%A4%9AAgent/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -72,9 +72,9 @@ related:
 答：
 Chain 是固定顺序管道，适合确定性流程；Agent 是模型驱动决策，适合开放任务；Workflow（特别是 LangGraph）是显式状态机，适合把 Agent 决策放进可控节点里。我的实践是“固定流程优先 Chain，复杂闭环用 LangGraph Workflow 托管 Agent”。
 
-追问：你会如何限制 Agent 的自由度，避免乱调用工具？
+追问：你会如何限制 Agent 的自由度，避免乱[[Tool Calling|调用工具]]？
 
-对，首先是工具白名单和最少最小权限的放行。然后还有是限制最大部署、最大调用次数、超时和成本，以及超阈值的容量降低降级。就是写作操作加密等件，以及高风险动作必须人工来审批。再配合全链路的监控和日常告警，可以做到可追溯、可回滚、可治理。
+对，首先是工具白名单和最少[[Least Privilege Tools|最小权限]]的放行。然后还有是限制最大部署、最大调用次数、超时和成本，以及超阈值的容量降低降级。就是写作操作加密等件，以及高风险动作必须人工来审批。再配合全链路的监控和日常告警，可以做到可追溯、可回滚、可治理。
 
 ## 边界提醒
 

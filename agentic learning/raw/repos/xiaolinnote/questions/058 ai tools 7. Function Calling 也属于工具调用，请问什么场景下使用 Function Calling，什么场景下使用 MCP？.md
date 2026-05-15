@@ -20,7 +20,7 @@ related:
   - "[[Tool Calling]]"
   - "[[MCP]]"
 ---
-# 7. Function Calling 也属于工具调用，请问什么场景下使用 Function Calling，什么场景下使用 MCP？
+# 7. [[Tool Calling|Function Calling]] 也属于工具调用，请问什么场景下使用 Function Calling，什么场景下使用 [[MCP]]？
 
 原始链接：https://xiaolinnote.com/ai/tools/7_fc_vs_mcp_usage.html
 

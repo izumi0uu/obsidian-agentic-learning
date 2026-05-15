@@ -41,7 +41,7 @@ related:
   - "[[Knowledge Graph]]"
 ---
 
-# RAG检索优化与高级范式（重排/图谱/自适应检索/向量库）
+# [[RAG]]检索优化与高级范式（重排/图谱/自适应检索/[[Vector Database|向量库]]）
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/03_RAG/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/03_RAG/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -73,7 +73,7 @@ related:
 主问题：如何持续提升 RAG 的召回质量与问答效果？
 
 口述答案：
-优化路径通常是“召回更准 + 排序更稳 + 上下文更干净”。可用混合检索（向量+关键词）、重排模型、多查询改写、HyDE、元数据过滤、知识图谱增强等手段。遇到 Lost in the Middle，要做上下文重排和压缩。向量库选型上，FAISS 适合单机实验，pgvector 适合和关系数据强耦合，Milvus 适合大规模服务化。
+优化路径通常是“召回更准 + 排序更稳 + 上下文更干净”。可用[[Hybrid Search|混合检索]]（向量+关键词）、重排模型、多[[Query Rewrite|查询改写]]、HyDE、元数据过滤、[[Knowledge Graph|知识图谱]]增强等手段。遇到 Lost in the Middle，要做上下文重排和压缩。向量库选型上，FAISS 适合单机实验，pgvector 适合和关系数据强耦合，Milvus 适合大规模服务化。
 
 常见追问：
 

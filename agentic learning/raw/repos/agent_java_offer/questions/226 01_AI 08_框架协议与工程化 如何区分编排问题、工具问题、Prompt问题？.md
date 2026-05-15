@@ -51,7 +51,7 @@ related:
 
 追问题目：3. 如何区分编排问题、工具问题、Prompt问题？
 
-出现位置：LangGraph生产治理（LCEL/防循环/[[Durable Execution|Checkpoint]]）
+出现位置：LangGraph生产治理（LCEL/防循环/Checkpoint）
 
 ## 边界提醒
 

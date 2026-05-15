@@ -37,7 +37,7 @@ related:
   - "[[RAG 主题]]"
 ---
 
-# 请解释“Lost in the Middle”问题。它描述了 RAG 中的什么现象？有什么方法可以缓解这个问题？
+# 请解释“Lost in the Middle”问题。它描述了 [[RAG]] 中的什么现象？有什么方法可以缓解这个问题？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/03_RAG/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/03_RAG/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -68,8 +68,8 @@ related:
 缓解思路有四类：
 
 - 文档重排把高价值证据放首尾. 将**最相关**的文档放置在上下文的**开头**和**结尾**，而将次要相关的文档放在中间。
-- 减少 TopK 降噪. 严格控制Top-K中的K值，例如只取Top-3或Top-5。这需要前端的检索和重排序步骤有更高的精度，确保召回的文档质量足够高。
-- 在提示词中明确“需基于全部证据回答”.
+- 减少 TopK 降噪. 严格控制[[Top-K]]中的K值，例如只取Top-3或Top-5。这需要前端的检索和[[Reranking|重排序]]步骤有更高的精度，确保召回的文档质量足够高。
+- 在[[Prompt|提示词]]中明确“需基于全部证据回答”.
 - 必要时做长上下文微调. 通过这种方式，可以“强迫”模型学会不忽略中间内容。这是最根本但成本也最高的解决方案。
 
 ## 边界提醒

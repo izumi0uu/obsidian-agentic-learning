@@ -32,7 +32,7 @@ related:
   - "[[Agent 主题]]"
 ---
 
-# 了解 A2A 框架吗？它和普通 Agent 框架的区别在哪，挑一个最关键的不同点说明。
+# 了解 [[A2A]] 框架吗？它和普通 [[Agent Framework|Agent 框架]]的区别在哪，挑一个最关键的不同点说明。
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/02_Workflow与多Agent/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/02_Workflow%E4%B8%8E%E5%A4%9AAgent/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -54,7 +54,7 @@ related:
 ### 4. 子问题：了解 A2A 框架吗？它和普通 Agent 框架的区别在哪，挑一个最关键的不同点说明。
 
 答：
-A2A（Agent-to-Agent）最关键在“协议层”, A2A是一个通讯协议，类似于HTTP那样的底层协议，它关注的是**多个异构Agent之间的通信和协作**。它试图定义一套**通用的标准、协议和语言**，使得由不同开发者、使用不同技术栈、为了不同目标而构建的Agent们，能够相互发现、理解和协作。
+A2A（Agent-to-Agent）最关键在“协议层”, A2A是一个通讯协议，类似于HTTP那样的底层协议，它关注的是**多个异构[[Agent]]之间的通信和协作**。它试图定义一套**通用的标准、协议和语言**，使得由不同开发者、使用不同技术栈、为了不同目标而构建的Agent们，能够相互发现、理解和协作。
 
  一句话总结：前者解决“群体协作标准”，后者解决“个体执行能力”。多团队、多技术栈协作时，A2A 的价值会明显放大。
 

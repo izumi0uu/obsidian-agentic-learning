@@ -35,7 +35,7 @@ related:
   - "[[LLM 主题]]"
 ---
 
-# 补充原文：BERT、NLP、TFRecord 与 TensorFlow / Transformer 关系
+# 补充原文：BERT、NLP、TFRecord 与 TensorFlow / [[Transformer]] 关系
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/05_模型调优与微调/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/05_%E6%A8%A1%E5%9E%8B%E8%B0%83%E4%BC%98%E4%B8%8E%E5%BE%AE%E8%B0%83/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -58,19 +58,19 @@ related:
 
 ## 5. 补充原文：BERT、NLP、TFRecord 与 TensorFlow / Transformer 关系
 
-### 2.10 Bert模型与现在大语言模型LLM的区别?
+### 2.10 Bert模型与现在大语言模型[[LLM]]的区别?
 
 BERT 可以理解为“擅长理解文本、不擅长自由生成”的 Transformer 模型。
 - BERT：Encoder-only，偏“理解”；
 - 主流 LLM（如 GPT 类）：Decoder-only，自回归逐词生成，偏“生成 + 推理”。
-- 结果上：BERT 常用于打分 / 判别；LLM 常用于对话、生成、Agent。
+- 结果上：BERT 常用于打分 / 判别；LLM 常用于对话、生成、[[Agent]]。
 
 ### 2.11 NLP是什么
 
 NLP（自然语言处理）不是单一模型，而是一组“让机器处理文本”的能力集合，核心包括：
 - 文本理解：分词、实体识别、意图识别、语义匹配、情感 / 分类；
 - 文本生成：标题生成、摘要改写、问答对话；
-- 文本检索与排序：query-文档相关性打分、重排（rerank）；
+- 文本检索与排序：query-文档相关性打分、重排（[[Reranking|rerank]]）；
 - 文本质量与安全：去重、错别字、违禁 / 低质内容识别。
 
 ### 2.13 模型训练用的TFRecord是什么

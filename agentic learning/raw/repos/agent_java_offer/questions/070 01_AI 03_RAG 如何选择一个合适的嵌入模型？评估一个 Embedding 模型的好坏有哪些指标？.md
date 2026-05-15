@@ -38,7 +38,7 @@ related:
   - "[[RAG 主题]]"
 ---
 
-# 如何选择一个合适的嵌入模型？评估一个 Embedding 模型的好坏有哪些指标？
+# 如何选择一个合适的[[Embedding|嵌入模型]]？[[Evaluation|评估]]一个 Embedding 模型的好坏有哪些指标？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/03_RAG/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/03_RAG/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -67,12 +67,12 @@ related:
 答：
 选 Embedding 先看场景匹配：语言、领域、时延预算和部署方式，再看公开基准如 MTEB/C-MTEB。评估时重点看检索相关指标：Recall@K、MRR、nDCG，同时结合线上延迟和成本。离线分数高不等于线上最优，必须做业务数据集验证，尤其是长尾 query 与专业术语场景。
 
-选择合适的嵌入模型（Embedding Model）是决定RAG系统检索效果的基石。一个好的嵌入模型应该能够将语义相近的文本映射到向量空间中相近的位置。
+选择合适的嵌入模型（Embedding Model）是决定[[RAG]]系统检索效果的基石。一个好的嵌入模型应该能够将语义相近的文本映射到向量空间中相近的位置。
 
 **如何选择合适的嵌入模型？**
 
 1. **参考公开排行榜（Leaderboards）：**
-  - **MTEB (Massive Text Embedding Benchmark)** 是目前最权威、最全面的嵌入模型评测基准。它涵盖了多种任务和语言，是选择模型的首要参考。可以直接查看MTEB排行榜，选择在 **检索（Retrieval）** 任务上得分高的模型。
+  - **MTEB (Massive Text Embedding [[Benchmark]])** 是目前最权威、最全面的嵌入模型评测基准。它涵盖了多种任务和语言，是选择模型的首要参考。可以直接查看MTEB排行榜，选择在 **检索（Retrieval）** 任务上得分高的模型。
   - C-MTEB是专门针对中文的排行榜。
 2. **考虑具体应用场景：**
   - **领域特异性：** 如果你的知识库是某个专业领域（如医疗、法律、金融），可以考虑使用在该领域数据上预训练或微调过的嵌入模型，它们通常比通用模型表现更好。

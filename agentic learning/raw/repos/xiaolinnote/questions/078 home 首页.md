@@ -35,9 +35,9 @@ related:
 
 ## [📚必看系列](#📚必看系列)
 
-- 👉[《Agent面试题》](/ai/agent/agent_info.html)：涵盖 Agent 概念与架构、Workflow 与 Agent、设计范式、任务拆分、记忆机制、Multi-Agent 协作等知识
-- 👉[《RAG面试题》](/ai/rag/rag_info.html)：涵盖 RAG 原理、文档切割、Embedding、向量数据库、检索优化、Query 改写、多路召回、幻觉规避等知识
-- 👉[《LLM工具调用面试题》](/ai/tools/tools_info.html)：涵盖 Function Calling 、Tools、MCP、A2A、Skills、SSE/WebSocket/WebRTC协议、LLM 网关等知识
+- 👉[《Agent面试题》](/ai/agent/agent_info.html)：涵盖 [[Agent]] 概念与架构、Workflow 与 Agent、设计范式、任务拆分、记忆机制、Multi-Agent 协作等知识
+- 👉[《RAG面试题》](/ai/rag/rag_info.html)：涵盖 [[RAG]] 原理、文档切割、Embedding、向量数据库、检索优化、Query 改写、多路召回、幻觉规避等知识
+- 👉[《LLM工具调用面试题》](/ai/tools/tools_info.html)：涵盖 Function Calling 、Tools、MCP、A2A、Skills、SSE/WebSocket/WebRTC协议、[[LLM]] 网关等知识
 - 👉[《大模型工程面试题》](/ai/llm/llm_info.html)：未完待续，更新中。。。。。
 - 👉[《LangChain框架面试题》](/ai/langchain/langchain_info.html)：未完待续，更新中。。。。。
 

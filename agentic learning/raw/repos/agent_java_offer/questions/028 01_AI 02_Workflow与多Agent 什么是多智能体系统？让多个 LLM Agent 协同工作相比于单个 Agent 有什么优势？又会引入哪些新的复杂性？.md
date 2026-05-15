@@ -39,7 +39,7 @@ related:
   - "[[LLM]]"
 ---
 
-# 什么是多智能体系统？让多个 LLM Agent 协同工作相比于单个 Agent 有什么优势？又会引入哪些新的复杂性？
+# 什么是多[[Agent|智能体]]系统？让多个 [[LLM]] Agent 协同工作相比于单个 Agent 有什么优势？又会引入哪些新的复杂性？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/02_Workflow与多Agent/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/02_Workflow%E4%B8%8E%E5%A4%9AAgent/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -68,7 +68,7 @@ related:
 ### 3. 子问题：什么是多智能体系统？让多个 LLM Agent 协同工作相比于单个 Agent 有什么优势？又会引入哪些新的复杂性？
 
 答：
-多智能体系统就是把一个复杂目标拆成多个角色协同完成，例如规划、执行、审校分工。从而提高复杂任务成功率.
+多智能体系统就是把一个复杂目标拆成多个角色协同完成，例如[[Planning|规划]]、执行、审校分工。从而提高复杂[[Task Success Rate|任务成功率]].
 
 优势是:
 

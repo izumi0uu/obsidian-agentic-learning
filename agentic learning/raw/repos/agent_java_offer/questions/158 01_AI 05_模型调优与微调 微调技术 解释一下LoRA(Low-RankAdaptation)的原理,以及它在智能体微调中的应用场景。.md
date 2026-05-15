@@ -35,7 +35,7 @@ related:
   - "[[LLM 主题]]"
 ---
 
-# 微调技术:解释一下LoRA(Low-RankAdaptation)的原理,以及它在智能体微调中的应用场景。
+# 微调技术:解释一下LoRA(Low-RankAdaptation)的原理,以及它在[[Agent|智能体]]微调中的应用场景。
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/05_模型调优与微调/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/05_%E6%A8%A1%E5%9E%8B%E8%B0%83%E4%BC%98%E4%B8%8E%E5%BE%AE%E8%B0%83/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -58,16 +58,16 @@ related:
 
 ### 32.微调技术:解释一下LoRA(Low-RankAdaptation)的原理,以及它在智能体微调中的应用场景。
 
-LoRA 的核心是：不改大模型原参数，只学一个“低秩增量”。
+LoRA 的核心是：不改[[LLM|大模型]]原参数，只学一个“低秩增量”。
 LoRA适合“行为和表达对齐”，不适合“实时知识更新”；
 
 在智能体微调里的常见应用场景：
-工具调用格式稳定化：让模型更稳定地产生 JSON / function call。
+[[Tool Calling|工具调用]]格式稳定化：让模型更稳定地产生 JSON / function call。
 角色风格一致化：如客服、投研、写作助手的语气和输出结构。
 领域术语适配：金融、法律、医疗等垂类表达更专业。
 多租户个性化：每个客户挂不同 LoRA adapter，而不是训多套大模型。
 
-## 4. 补充原问：前沿论文与 RAG/Agent 工程启发
+## 4. 补充原问：前沿论文与 [[RAG]]/Agent 工程启发
 
 ## 边界提醒
 

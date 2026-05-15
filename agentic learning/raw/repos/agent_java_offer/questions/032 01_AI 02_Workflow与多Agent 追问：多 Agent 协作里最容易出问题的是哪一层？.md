@@ -30,7 +30,7 @@ related:
   - "[[Agent 主题]]"
 ---
 
-# 追问：多 Agent 协作里最容易出问题的是哪一层？
+# 追问：[[Multi-agent Orchestration|多 Agent 协作]]里最容易出问题的是哪一层？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/02_Workflow与多Agent/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/02_Workflow%E4%B8%8E%E5%A4%9AAgent/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  

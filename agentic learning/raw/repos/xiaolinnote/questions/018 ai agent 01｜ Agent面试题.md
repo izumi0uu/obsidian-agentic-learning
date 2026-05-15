@@ -21,7 +21,7 @@ related:
   - "[[Agent]]"
   - "[[Agent 主题]]"
 ---
-# 01｜ Agent面试题
+# 01｜ [[Agent]]面试题
 
 原始链接：https://xiaolinnote.com/ai/agent/
 

@@ -31,7 +31,7 @@ related:
   - "[[Agent 主题]]"
 ---
 
-# Claude Code 的源码——51万行代码里，真正调用 LLM API 的部分不到 5%。剩下那 95% 是什么？是安全检查、权限管理、上下文压缩、错误恢复、多 Agent 协调。
+# Claude Code 的源码——51万行代码里，真正调用 LLM API 的部分不到 5%。剩下那 95% 是什么？是安全检查、权限管理、上下文压缩、错误恢复、多 [[Agent]] 协调。
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/09_追加补充/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/09_%E8%BF%BD%E5%8A%A0%E8%A1%A5%E5%85%85/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -52,7 +52,7 @@ related:
 
 追问题目：Claude Code 的源码——51万行代码里，真正调用 [[LLM]] API 的部分不到 5%。剩下那 95% 是什么？是安全检查、权限管理、上下文压缩、错误恢复、[[Multi-agent Orchestration|多 Agent]] 协调。
 
-出现位置：第一课：[[Agent|agent]]的工程特别重要，不不光光全是模型的能力，工程设计也很重要。
+出现位置：第一课：agent的工程特别重要，不不光光全是模型的能力，工程设计也很重要。
 
 ## 边界提醒
 

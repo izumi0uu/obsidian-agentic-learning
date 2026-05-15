@@ -36,7 +36,7 @@ related:
   - "[[Agent 主题]]"
 ---
 
-# 请详细解释 ReAct 框架。它是如何将思维链和行动结合起来，以完成复杂任务的？
+# 请详细解释 [[ReAct]] 框架。它是如何将思维链和行动结合起来，以完成复杂任务的？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/01_Agent基础/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/01_Agent%E5%9F%BA%E7%A1%80/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -62,7 +62,7 @@ related:
 ### 2. 子问题：请详细解释 ReAct 框架。它是如何将思维链和行动结合起来，以完成复杂任务的？
 
 答：
-ReAct 的本质是把“推理”和“行动”交替执行，形成 Thought-Action-Observation 的循环。模型先思考下一步，再调用工具，再根据返回结果调整策略，直到任务完成。它相比静态 CoT 的优势是可交互、可纠错、可解释，适合信息不完整或环境会变化的任务；代价是链路更长，线上要控制步数、超时和成本。
+ReAct 的本质是把“推理”和“行动”交替执行，形成 Thought-Action-Observation 的循环。模型先思考下一步，再[[Tool Calling|调用工具]]，再根据返回结果调整策略，直到任务完成。它相比静态 CoT 的优势是可交互、可纠错、可解释，适合信息不完整或环境会变化的任务；代价是链路更长，线上要控制步数、超时和成本。
 
 ## 边界提醒
 

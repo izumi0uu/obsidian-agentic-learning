@@ -30,7 +30,7 @@ related:
   - "[[Agent 主题]]"
 ---
 
-# **权限管理困难：** 如何精确控制Agent的权限，防止它执行危险操作（如删除文件、发送恶意邮件）？
+# **权限管理困难：** 如何精确控制[[Agent]]的权限，防止它执行危险操作（如删除文件、发送恶意邮件）？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/02_Workflow与多Agent/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/02_Workflow%E4%B8%8E%E5%A4%9AAgent/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  

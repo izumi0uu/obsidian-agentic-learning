@@ -24,7 +24,7 @@ related:
   - "[[Tool Registry]]"
   - "[[Agent Framework]]"
 ---
-# 3. Workflow，Agent，Tools 这三个的概念和区别介绍一下？
+# 3. Workflow，[[Agent]]，Tools 这三个的概念和区别介绍一下？
 
 原始链接：https://xiaolinnote.com/ai/agent/3_workflow_tools.html
 

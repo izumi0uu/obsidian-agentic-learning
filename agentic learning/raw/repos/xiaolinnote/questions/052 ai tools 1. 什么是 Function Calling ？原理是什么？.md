@@ -20,7 +20,7 @@ related:
   - "[[Tool Calling]]"
   - "[[Tool Registry]]"
 ---
-# 1. 什么是 Function Calling ？原理是什么？
+# 1. 什么是 [[Tool Calling|Function Calling]] ？原理是什么？
 
 原始链接：https://xiaolinnote.com/ai/tools/1_function_calling.html
 

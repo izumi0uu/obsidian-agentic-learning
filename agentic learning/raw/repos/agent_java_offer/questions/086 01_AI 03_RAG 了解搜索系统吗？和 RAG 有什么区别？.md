@@ -32,7 +32,7 @@ related:
   - "[[RAG 主题]]"
 ---
 
-# 了解搜索系统吗？和 RAG 有什么区别？
+# 了解搜索系统吗？和 [[RAG]] 有什么区别？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/03_RAG/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/03_RAG/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -58,7 +58,7 @@ related:
 
 RAG 的目标是“给答案”，输出是基于证据融合后的自然语言结果。
 
-两者不是替代关系，RAG 本质上是在搜索之上叠加了LLM的生成层。
+两者不是替代关系，RAG 本质上是在搜索之上叠加了[[LLM]]的生成层。
 
 工程上常见组合是先检索再生成，并保留引用来源，让用户既能快速拿答案，也能回查证据。
 

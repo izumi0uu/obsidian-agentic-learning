@@ -32,7 +32,7 @@ related:
   - "[[Agent 主题]]"
 ---
 
-# 通信协议: Agent之间如何有效沟通？需要设计一套标准化的通信协议和消息格式，确保它们能够相互理解意图、状态和知识
+# 通信协议: [[Agent]]之间如何有效沟通？需要设计一套标准化的通信协议和消息格式，确保它们能够相互理解意图、状态和知识
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/02_Workflow与多Agent/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/02_Workflow%E4%B8%8E%E5%A4%9AAgent/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  

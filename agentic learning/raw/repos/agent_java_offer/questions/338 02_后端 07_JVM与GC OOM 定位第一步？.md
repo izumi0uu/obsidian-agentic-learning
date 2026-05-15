@@ -26,7 +26,6 @@ related:
   - "[[agent_java_offer Repo]]"
   - "[[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Memory]]"
 ---
 
 # OOM 定位第一步？
@@ -40,7 +39,6 @@ related:
 
 ## 相关知识 wiki
 
-- [[Memory]]
 
 ## 题目正文
 

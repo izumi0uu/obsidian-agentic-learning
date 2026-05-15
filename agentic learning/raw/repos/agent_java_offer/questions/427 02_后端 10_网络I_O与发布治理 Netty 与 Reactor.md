@@ -25,7 +25,6 @@ related:
   - "[[agent_java_offer Repo]]"
   - "[[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[ReAct]]"
 ---
 
 # Netty 与 Reactor
@@ -39,7 +38,6 @@ related:
 
 ## 相关知识 wiki
 
-- [[ReAct]]
 
 ## 题目正文
 

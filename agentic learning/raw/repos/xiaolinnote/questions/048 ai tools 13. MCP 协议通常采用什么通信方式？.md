@@ -19,7 +19,7 @@ related:
   - "[[资料收集索引]]"
   - "[[MCP]]"
 ---
-# 13. MCP 协议通常采用什么通信方式？
+# 13. [[MCP]] 协议通常采用什么通信方式？
 
 原始链接：https://xiaolinnote.com/ai/tools/13_mcp_transport.html
 

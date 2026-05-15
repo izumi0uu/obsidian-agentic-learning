@@ -20,7 +20,7 @@ related:
   - "[[Tool Calling]]"
   - "[[LLM Training Pipeline]]"
 ---
-sparse retrieval# 3. 大模型的 Function Call 能力是怎么训练出来的？
+sparse retrieval# 3. 大模型的 [[Tool Calling|Function Call]] 能力是怎么训练出来的？
 
 原始链接：https://xiaolinnote.com/ai/tools/3_fc_training.html
 

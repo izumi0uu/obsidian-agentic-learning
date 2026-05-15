@@ -20,7 +20,7 @@ related:
   - "[[MCP]]"
   - "[[Tool Calling]]"
 ---
-# 6. MCP 和 Function Calling 有什么区别？有没有实际跑过 MCP？
+# 6. [[MCP]] 和 [[Tool Calling|Function Calling]] 有什么区别？有没有实际跑过 MCP？
 
 原始链接：https://xiaolinnote.com/ai/tools/6_mcp_vs_fc.html
 

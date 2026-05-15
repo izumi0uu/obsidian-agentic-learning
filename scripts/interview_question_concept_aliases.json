@@ -65,7 +65,7 @@
   "Sandbox Workspace": ["Sandbox Workspace", "沙箱工作区", "隔离工作区"],
   "Self-RAG": ["Self-RAG", "自反思 RAG"],
   "Semantic Memory": ["Semantic Memory", "语义记忆"],
-  "Task Success Rate": ["Task Success Rate", "任务成功率", "成功率"],
+  "Task Success Rate": ["Task Success Rate", "任务成功率"],
   "Token": ["Token", "token", "令牌"],
   "Tool Calling": ["Tool Calling", "Function Calling", "Function Call", "工具调用", "函数调用", "调用工具", "调工具", "Tools"],
   "Tool Permissioning": ["Tool Permissioning", "工具权限", "工具授权"],

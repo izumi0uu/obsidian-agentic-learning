@@ -35,7 +35,7 @@ related:
   - "[[RAG 主题]]"
 ---
 
-# 主问题：如何持续提升 RAG 的召回质量与问答效果？
+# 主问题：如何持续提升 [[RAG]] 的召回质量与问答效果？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/03_RAG/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/03_RAG/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  

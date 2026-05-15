@@ -21,7 +21,7 @@ related:
   - "[[Tool Use]]"
   - "[[MCP]]"
 ---
-# 03｜ LLM工具调用面试题
+# 03｜ LLM[[Tool Calling|工具调用]]面试题
 
 原始链接：https://xiaolinnote.com/ai/tools/
 

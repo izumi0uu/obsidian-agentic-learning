@@ -21,7 +21,7 @@ related:
   - "[[RAG]]"
   - "[[RAG 主题]]"
 ---
-# 02｜ RAG面试题
+# 02｜ [[RAG]]面试题
 
 原始链接：https://xiaolinnote.com/ai/rag/
 

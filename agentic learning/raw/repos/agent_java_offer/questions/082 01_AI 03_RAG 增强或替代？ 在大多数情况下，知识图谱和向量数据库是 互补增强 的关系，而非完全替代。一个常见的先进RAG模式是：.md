@@ -35,7 +35,7 @@ related:
   - "[[RAG 主题]]"
 ---
 
-# **增强或替代？** 在大多数情况下，知识图谱和向量数据库是**互补增强**的关系，而非完全替代。一个常见的先进RAG模式是：
+# **增强或替代？** 在大多数情况下，[[Knowledge Graph|知识图谱]]和[[Vector Database|向量数据库]]是**互补增强**的关系，而非完全替代。一个常见的先进[[RAG]]模式是：
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/03_RAG/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/03_RAG/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  

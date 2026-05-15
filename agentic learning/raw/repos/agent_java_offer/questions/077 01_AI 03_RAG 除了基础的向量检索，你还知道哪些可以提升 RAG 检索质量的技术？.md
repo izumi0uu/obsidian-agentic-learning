@@ -44,7 +44,7 @@ related:
   - "[[Vector Database]]"
 ---
 
-# 除了基础的向量检索，你还知道哪些可以提升 RAG 检索质量的技术？
+# 除了基础的[[Retriever|向量检索]]，你还知道哪些可以提升 [[RAG]] 检索质量的技术？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/03_RAG/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/03_RAG/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -82,12 +82,12 @@ related:
 
 **一、 增强检索器（Improving the Retriever）**
 
-1. **混合搜索（Hybrid Search）：**
-  - **技术：** 将 **稀疏检索（Sparse Retrieval）** 和 **密集检索（Dense Retrieval）** 相结合。
-    - **稀疏检索（如BM25 ）：** 基于关键词匹配，对于包含特定术语、缩写、ID的查询非常有效。BM25 是基于词频、逆文档频率和长度归一化的打分函数，本质是更工程化的 TF-IDF，特别适合关键词和实体词检索场景
+1. **混合搜索（[[Hybrid Search]]）：**
+  - **技术：** 将 **稀疏检索（[[Sparse Retrieval]]）** 和 **密集检索（Dense Retrieval）** 相结合。
+    - **稀疏检索（如[[BM25]] ）：** 基于关键词匹配，对于包含特定术语、缩写、ID的查询非常有效。BM25 是基于词频、逆文档频率和长度归一化的打分函数，本质是更工程化的 [[TF-IDF]]，特别适合关键词和实体词检索场景
     - **密集检索（向量搜索）：** 基于语义相似度，擅长理解长尾、口语化的查询。
   - **优势：** 兼顾了关键词精确匹配和语义模糊匹配的能力，效果通常远超单一检索方法。
-2. **重排序（Re-ranking）：**
+2. **[[Reranking|重排序]]（Re-ranking）：**
   - **技术：** 采用一个 **两阶段（two-stage）** 的检索流程。
   1. **召回（Recall）：** 先用一个快速但相对粗糙的方法（如向量搜索或混合搜索）从海量文档中召回一个较大的候选集（例如Top 50）。
   2. **重排（Re-rank）：** 再使用一个更强大、更复杂的模型（通常是**Cross-Encoder**）对这个小候选集进行精细化的重排序，选出最终的Top-N（例如Top 5）作为上下文。
@@ -96,20 +96,20 @@ related:
 **二、 优化查询（Improving the Query）**
 
 1. **query扩展与转换（Query Expansion & Transformation）：**
-  - **技术：** 不直接使用用户的原始查询进行检索，而是先用LLM对查询进行“加工”。
+  - **技术：** 不直接使用用户的原始查询进行检索，而是先用[[LLM]]对查询进行“加工”。
   - **方法：**
     - **多查询检索（Multi-Query Retrieval）：** 让LLM针对原始问题，从不同角度生成多个不同的查询，然后对所有查询的检索结果进行合并。
-    - **HyDE（Hypothetical Document Embeddings）：** 让LLM先针对问题生成一个“假设性”的答案，然后用这个假设性答案的嵌入去检索，因为答案的文本和目标文档的文本在形式上更相似。
+    - **HyDE（Hypothetical Document [[Embedding|Embeddings]]）：** 让LLM先针对问题生成一个“假设性”的答案，然后用这个假设性答案的嵌入去检索，因为答案的文本和目标文档的文本在形式上更相似。
     - **子问题查询（Sub-Querying）：** 对于复杂问题，先将其分解成多个简单的子问题，分别检索，再汇总结果。
 
 **三、 优化索引结构（Improving the Index）**
 
-1. **小块引用大块（Small-to-Large Chunking）：**
+1. **小块引用大块（Small-to-Large [[Chunking]]）：**
   - **技术：** 在索引时，将文档切成小的、用于检索的“摘要块”（Summary Chunks），但每个小块都保留对它所属的、更大的“父块”（Parent Chunk）的引用。
   - **流程：** 检索时，用查询匹配小块以获得高精度，但最终送给LLM的是包含更丰富上下文的父块。
   - **优势：** 兼顾了小块检索的精确性和大块上下文的完整性。
 2. **图索引（Graph Indexing）：**
-  - **技术：** 除了向量索引，还用LLM提取文档中的实体和关系，构建一个知识图谱。
+  - **技术：** 除了向量索引，还用LLM提取文档中的实体和关系，构建一个[[Knowledge Graph|知识图谱]]。
   - **流程：** 检索时，可以先在图谱中进行结构化查询，找到相关的实体和子图，再结合向量检索进行补充。
   - **优势：** 对于需要进行多跳推理、理解实体关系的查询非常有效。
 

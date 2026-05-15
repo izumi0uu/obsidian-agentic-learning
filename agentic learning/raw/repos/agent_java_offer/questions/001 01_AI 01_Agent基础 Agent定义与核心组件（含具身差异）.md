@@ -38,7 +38,7 @@ related:
   - "[[Agent 主题]]"
 ---
 
-# Agent定义与核心组件（含具身差异）
+# [[Agent]]定义与核心组件（含具身差异）
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/01_Agent基础/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/01_Agent%E5%9F%BA%E7%A1%80/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -65,15 +65,15 @@ related:
 
 ### 1. 子问题：Agent定义与核心组件（含具身差异）
 
-主问题：你如何定义基于 LLM 的 Agent？核心组件有哪些？软件 Agent 与具身 Agent 有何不同？
+主问题：你如何定义基于 [[LLM]] 的 Agent？核心组件有哪些？软件 Agent 与具身 Agent 有何不同？
 
 口述答案：
-我会把 Agent 定义为“以 LLM 为决策中枢、可在环境中闭环执行任务的系统”。它通常由四层构成：规划层、记忆层、工具层和执行控制层。和普通对话模型相比，关键差异是它能持续感知、决策、行动并根据反馈修正。若从软件 Agent 走向具身或仿真 Agent，难点会从“文本理解”升级到“高噪声感知 + 连续动作控制 + 安全约束”，系统设计重点也会从回答质量转为“安全、稳定、可恢复”。
+我会把 Agent 定义为“以 LLM 为决策中枢、可在环境中闭环执行任务的系统”。它通常由四层构成：[[Planning|规划]]层、[[Memory|记忆]]层、工具层和执行控制层。和普通对话模型相比，关键差异是它能持续感知、决策、行动并根据反馈修正。若从软件 Agent 走向具身或仿真 Agent，难点会从“文本理解”升级到“高噪声感知 + 连续动作控制 + 安全约束”，系统设计重点也会从回答质量转为“安全、稳定、可恢复”。
 
 常见追问：
 
-1. Agent 与 Workflow 最大差别是什么？
-2. 为什么说“可观测性”比“会答题”更重要？
+1. Agent 与 [[Agent Workflow|Workflow]] 最大差别是什么？
+2. 为什么说“[[Observability|可观测性]]”比“会答题”更重要？
 3. 具身场景为什么更强调实时性与安全兜底？
 
 ## 边界提醒

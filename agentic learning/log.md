@@ -850,3 +850,10 @@ related:
 - Created backlog page: [[08 面试题概念卡待补充]] from the approved template; current audit found no unresolved related-link targets, so it remains a candidate intake page rather than a concept explanation page.
 - Verification: script self-test PASS; full dry-run and post-apply audit both scanned 757 question pages（120 xiaolinnote + 637 agent_java_offer）, found 757 related sections, 0 missing targets, 0 protected-region violations, and 0 request-meta hits; `git diff --check` PASS.
 - Boundary: this pass adds the missing reproducible audit/control surface for the team run. It does not create weak concept cards, does not rewrite interview answers, and leaves skipped/no-match backend/Git/Linux/SQL pages as conservative non-links unless future concept scope is explicitly expanded.
+
+## [2026-05-16] team | 面试题概念内联链接最终验证修正
+
+- Re-ran the interview-question inline-link helper after team execution and tightened alias boundaries for `工作流程` and generic `成功率`.
+- Cleaned obvious false-friend `related` entries in both frontmatter and `## 相关知识 wiki` where backend terms had been mapped to Agent concepts, including Netty Reactor vs [[ReAct]], JVM/off-heap memory vs [[Memory]], and `volatile`/AQS backend state vs RAG/Agent links.
+- Verification target: post-apply dry-run remains 757 scanned pages, 757 related sections, 0 would-modify pages, 0 missing concept candidates, and 0 protected-region violations.
+- Boundary: this is a narrow semantic cleanup for the interview-question linking exception; it does not create backend concept cards or broaden raw-page synthesis rules.

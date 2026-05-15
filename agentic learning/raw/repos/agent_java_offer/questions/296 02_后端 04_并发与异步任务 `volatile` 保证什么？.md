@@ -25,9 +25,6 @@ related:
   - "[[agent_java_offer Repo]]"
   - "[[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]"
   - "[[资料收集索引]]"
-  - "[[Reranking]]"
-  - "[[Retriever]]"
-  - "[[Agent State]]"
 ---
 
 # `volatile` 保证什么？
@@ -41,9 +38,6 @@ related:
 
 ## 相关知识 wiki
 
-- [[Reranking]]
-- [[Retriever]]
-- [[Agent State]]
 
 ## 题目正文
 

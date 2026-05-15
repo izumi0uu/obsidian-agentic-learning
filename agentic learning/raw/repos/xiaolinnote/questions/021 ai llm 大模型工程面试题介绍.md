@@ -21,7 +21,7 @@ related:
   - "[[LLM 主题]]"
   - "[[LLM Training Pipeline]]"
 ---
-# 大模型工程面试题介绍
+# [[LLM|大模型]]工程面试题介绍
 
 原始链接：https://xiaolinnote.com/ai/llm/llm_info.html
 

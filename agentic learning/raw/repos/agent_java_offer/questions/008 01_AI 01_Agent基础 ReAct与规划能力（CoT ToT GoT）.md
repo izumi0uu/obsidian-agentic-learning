@@ -38,7 +38,7 @@ related:
   - "[[Agent 主题]]"
 ---
 
-# ReAct与规划能力（CoT/ToT/GoT）
+# [[ReAct]]与[[Planning|规划]]能力（CoT/ToT/GoT）
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/01_Agent基础/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/01_Agent%E5%9F%BA%E7%A1%80/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -65,10 +65,10 @@ related:
 
 ### 1. 子问题：ReAct与规划能力（CoT/ToT/GoT）
 
-主问题：ReAct 是什么？如何给 Agent 规划能力？
+主问题：ReAct 是什么？如何给 [[Agent]] 规划能力？
 
 口述答案：
-ReAct 是 Thought-Action-Observation 循环：先思考、再调用工具、再根据观察结果迭代。它比单次 CoT 更适合信息不完整任务，因为它能边查边改。规划方法上，CoT 是单路径分解，成本低但容错弱；ToT 用树状分支提高成功率但更贵；GoT 进一步支持图结构合并与回溯，适合复杂依赖。工程上建议把“规划”和“执行”解耦：Planner 负责拆解，Executor 负责落地，减少模型一步到位失败。
+ReAct 是 Thought-Action-Observation 循环：先思考、再[[Tool Calling|调用工具]]、再根据观察结果迭代。它比单次 CoT 更适合信息不完整任务，因为它能边查边改。规划方法上，CoT 是单路径分解，成本低但容错弱；ToT 用树状分支提高[[Task Success Rate|成功率]]但更贵；GoT 进一步支持图结构合并与回溯，适合复杂依赖。工程上建议把“规划”和“执行”解耦：Planner 负责拆解，Executor 负责落地，减少模型一步到位失败。
 
 常见追问：
 

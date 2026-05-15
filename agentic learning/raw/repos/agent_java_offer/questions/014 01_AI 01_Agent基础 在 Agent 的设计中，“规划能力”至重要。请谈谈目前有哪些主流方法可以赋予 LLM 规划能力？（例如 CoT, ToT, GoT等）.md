@@ -35,7 +35,7 @@ related:
   - "[[Agent 主题]]"
 ---
 
-# 在 Agent 的设计中，“规划能力”至重要。请谈谈目前有哪些主流方法可以赋予 LLM 规划能力？（例如 CoT, ToT, GoT等）
+# 在 [[Agent]] 的设计中，“[[Planning|规划]]能力”至重要。请谈谈目前有哪些主流方法可以赋予 [[LLM]] 规划能力？（例如 CoT, ToT, GoT等）
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/01_Agent基础/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/01_Agent%E5%9F%BA%E7%A1%80/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -61,7 +61,7 @@ related:
 
 答：
 
-可按“线性到搜索”来讲：CoT 是单路径分步推理，成本低但容错弱；ToT 树状思考链路引入多分支探索和回溯，成功率更高但算力开销大；GoT 图结构进一步允许分支合并和循环优化，适合复杂依赖问题。
+可按“线性到搜索”来讲：CoT 是单路径分步推理，成本低但容错弱；ToT 树状思考链路引入多分支探索和回溯，[[Task Success Rate|成功率]]更高但算力开销大；GoT 图结构进一步允许分支合并和循环优化，适合复杂依赖问题。
 
 以及工程里常见多角色agent划分, 如: Planner-Executor 拆分，让规划与执行解耦成两个agent。总结可背：规划能力本质是用更多搜索换更高成功率。
 

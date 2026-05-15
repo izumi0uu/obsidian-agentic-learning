@@ -32,7 +32,7 @@ related:
   - "[[RAG 主题]]"
 ---
 
-# 项目为什么选择用 PGVector 而不是 ES 来做向量数据库？ES 可以吗？
+# 项目为什么选择用 PGVector 而不是 ES 来做[[Vector Database|向量数据库]]？ES 可以吗？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/03_RAG/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/03_RAG/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  

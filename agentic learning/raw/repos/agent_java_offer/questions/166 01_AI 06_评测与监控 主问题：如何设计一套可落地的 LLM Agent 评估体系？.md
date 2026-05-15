@@ -59,7 +59,7 @@ related:
 
 追问题目：主问题：如何设计一套可落地的 [[LLM]]/[[Agent]] [[Evaluation|评估体系]]？
 
-出现位置：评估体系与[[Observability|线上监控]]（LLM/Agent）
+出现位置：评估体系与线上监控（LLM/Agent）
 
 ## 边界提醒
 

@@ -31,7 +31,7 @@ related:
   - "[[LLM 主题]]"
 ---
 
-# 你的 tool schema 怎么设计，如何约束模型少乱调工具？
+# 你的 tool schema 怎么设计，如何约束模型少乱[[Tool Calling|调工具]]？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/05_项目表达/02_交易Agent与风控平台/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/05_%E9%A1%B9%E7%9B%AE%E8%A1%A8%E8%BE%BE/02_%E4%BA%A4%E6%98%93Agent%E4%B8%8E%E9%A3%8E%E6%8E%A7%E5%B9%B3%E5%8F%B0/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  

@@ -40,7 +40,7 @@ related:
   - "[[Agent 主题]]"
 ---
 
-# Prompt Engineering 和微调策略如何协同？
+# [[Prompt]] Engineering 和微调策略如何协同？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/04_上下文工程与记忆/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/04_%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B7%A5%E7%A8%8B%E4%B8%8E%E8%AE%B0%E5%BF%86/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -78,7 +78,7 @@ related:
 - **数据层**：标注噪声、分布漂移、重复/污染、样本冲突。
 - **训练层**：学习率过大、epoch 过多、过拟合、LoRA rank/alpha 不合理。
 - **评测层**：离线集不代表线上，评测泄漏或口径错误。
-- **系统层**：其实是 RAG/工具链路变了，不是微调本身问题。
+- **系统层**：其实是 [[RAG]]/工具链路变了，不是微调本身问题。
 
 ## 边界提醒
 

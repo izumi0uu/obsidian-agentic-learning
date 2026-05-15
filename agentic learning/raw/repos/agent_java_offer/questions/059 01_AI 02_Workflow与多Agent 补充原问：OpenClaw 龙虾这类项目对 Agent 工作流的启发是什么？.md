@@ -34,7 +34,7 @@ related:
   - "[[Agent 主题]]"
 ---
 
-# 补充原问：OpenClaw/龙虾这类项目对 Agent 工作流的启发是什么？
+# 补充原问：OpenClaw/龙虾这类项目对 [[Agent]] [[Agent Workflow|工作流]]的启发是什么？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/02_Workflow与多Agent/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/02_Workflow%E4%B8%8E%E5%A4%9AAgent/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -61,7 +61,7 @@ related:
 
 第一，Gateway统一网关入口，跨渠道消息先标准化，再路由，避免每个渠道各写一套逻辑。
 第二，会话隔离不串台：sessionKey、dmScope、每会话串行执行和队列并发上限，核心是防串台、防并发写冲突。
-第三，三层记忆系统: “文件化+可检索”的，MEMORY.md 做长期记忆，memory/*.md 做日记忆，配 memory_search，可追溯、可审计。
+第三，三层[[Memory|记忆系统]]: “文件化+可检索”的，MEMORY.md 做[[Long-term Memory|长期记忆]]，memory/*.md 做日记忆，配 memory_search，可追溯、可审计。
 第四，可托管运行：有心跳机制，保证龙虾会主动的思考工作。以及有定时任务块机制，确保周期任务统一调度。
 
 ## 边界提醒

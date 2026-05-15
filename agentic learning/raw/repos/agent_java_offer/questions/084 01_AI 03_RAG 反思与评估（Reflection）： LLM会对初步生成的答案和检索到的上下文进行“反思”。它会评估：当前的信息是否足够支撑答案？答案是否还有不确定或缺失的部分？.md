@@ -35,7 +35,7 @@ related:
   - "[[RAG 主题]]"
 ---
 
-# **反思与评估（Reflection）：** LLM会对初步生成的答案和检索到的上下文进行“反思”。它会评估：当前的信息是否足够支撑答案？答案是否还有不确定或缺失的部分？
+# **反思与[[Evaluation|评估]]（Reflection）：** [[LLM]]会对初步生成的答案和检索到的上下文进行“反思”。它会评估：当前的信息是否足够支撑答案？答案是否还有不确定或缺失的部分？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/03_RAG/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/03_RAG/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
