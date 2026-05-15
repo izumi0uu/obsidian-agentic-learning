@@ -56,7 +56,7 @@ related:
 - 本地 PDF：`assets/RS-Claw - Progressive Active Tool Exploration via Hierarchical Skill Trees for Remote Sensing Agents.pdf`
 - extracted：`extracted/RS-Claw - Progressive Active Tool Exploration via Hierarchical Skill Trees for Remote Sensing Agents.extracted.md`
 
-边界：这一页是 raw source note，只回答“论文原文摘要目前支持什么、精读时先看哪里”。不要在这里替代 `wiki/concepts/` 的稳定理解，也不要把摘要级判断写成论文全文结论。
+边界：这一页是 raw source note，只回答“论文原文摘要目前支持什么、精读时先看哪里”。不要在这里替代 `wiki/concepts/` 的稳定理解，也不要把Page 1 / Abstract 级判断写成论文全文结论。
 
 ## 为什么收
 
@@ -81,66 +81,64 @@ RS-Claw 用 hierarchical skill trees 支持 Agent 在巨大遥感工具空间中
 
 ### 必读
 
-> 使用规则：当前只录入摘要级短证据；精读后再补 PDF 页码、section、figure 或 table。
-
+> 使用规则：本节已用本地 extracted 文本补足短摘；这些仍是 source 级 evidence，精读 claim 需要回 PDF 的 section / table / figure 校验。
 
 #### 必读块 1：Abstract / flat tool registration
 
-      - 位置：arXiv abstract / 正文待精读定位
-      - 为什么必读：确认全量注册工具为什么导致 context load 问题。
-      - 原文短摘：
-        > full tool registration
-      - 中文概括：
-        - 第一轮只基于 arXiv 摘要录入；精读时要回到 PDF / HTML 核对 section、figure、table。
-        - 这部分主要支撑本页的“为什么值得读”和概念拆分，不替代稳定概念卡。
-      - 我需要理解的机制：
-        1. 它把 Agent 问题切到哪一层。
-        2. 它的输入、输出或评价信号是什么。
-        3. 它不能外推到什么。
-      - 支撑概念：
-        - [[Tool Use]]
-- [[Tool Registry]]
-- [[MCP Registry]]
-      - 证据边界：
-        - 支撑 [[Tool Registry]]；具体结论受遥感工具生态影响。
+- 位置：extracted Page 1 / Abstract（必要时连同 Page 1 Introduction 交叉核对）
+- 为什么必读：定位论文的核心证据。
+- 原文短摘：
+  > To mitigate the context bottleneck induced by Flat paradigm, existing research has primarily explored tool registration paradigms based on external retrieval augmentation (RAG) [17].
+- 中文概括：
+  - 这段原文直接支撑本块阅读目标：定位论文的核心证据。
+  - 当前摘录只证明作者在摘要或第一页如何界定问题、机制或结果；后续写稳定概念卡时仍要回正文核对方法、实验设置和限制。
+- 我需要理解的机制：
+  1. 原文里的对象、动作、约束和评价层级分别是什么。
+  2. 这条证据属于问题定义、方法机制、数据/benchmark，还是结果 claim。
+  3. 它能否外推到其他 Agent 场景，取决于正文实验设置、artifact 和 limitations。
+- 支撑概念:
+  - [[Agent]]
+- 证据边界：
+  - 这条短摘只证明作者在论文第一页/摘要中提出该 claim；不能证明方法已经被独立复现或成为稳定工程标准。
+  - 如果短摘包含数字、排名、benchmark、攻击成功率、性能提升或用户研究，必须再读 Evaluation / Table / Limitations 后才能写入概念卡。
+
 #### 必读块 2：Abstract / passive RAG selection
 
-      - 位置：arXiv abstract / 正文待精读定位
-      - 为什么必读：看 RAG 检索在工具发现中为什么可能漏关键工具。
-      - 原文短摘：
-        > RAG retrieval
-      - 中文概括：
-        - 第一轮只基于 arXiv 摘要录入；精读时要回到 PDF / HTML 核对 section、figure、table。
-        - 这部分主要支撑本页的“为什么值得读”和概念拆分，不替代稳定概念卡。
-      - 我需要理解的机制：
-        1. 它把 Agent 问题切到哪一层。
-        2. 它的输入、输出或评价信号是什么。
-        3. 它不能外推到什么。
-      - 支撑概念：
-        - [[Tool Use]]
-- [[Tool Registry]]
-- [[MCP Registry]]
-      - 证据边界：
-        - 支撑 [[MCP Registry]]；不能推出 RAG 工具发现无效。
+- 位置：extracted Page 1 / Abstract（必要时连同 Page 1 Introduction 交叉核对）
+- 为什么必读：定位论文的核心证据。
+- 原文短摘：
+  > Comparison of agent tool selection paradigms. (a) Passive paradigm: Existing methods define the agent as a passive tool recipient.
+- 中文概括：
+  - 这段原文直接支撑本块阅读目标：定位论文的核心证据。
+  - 当前摘录只证明作者在摘要或第一页如何界定问题、机制或结果；后续写稳定概念卡时仍要回正文核对方法、实验设置和限制。
+- 我需要理解的机制：
+  1. 原文里的对象、动作、约束和评价层级分别是什么。
+  2. 这条证据属于问题定义、方法机制、数据/benchmark，还是结果 claim。
+  3. 它能否外推到其他 Agent 场景，取决于正文实验设置、artifact 和 limitations。
+- 支撑概念:
+  - [[Agent]]
+- 证据边界：
+  - 这条短摘只证明作者在论文第一页/摘要中提出该 claim；不能证明方法已经被独立复现或成为稳定工程标准。
+  - 如果短摘包含数字、排名、benchmark、攻击成功率、性能提升或用户研究，必须再读 Evaluation / Table / Limitations 后才能写入概念卡。
+
 #### 必读块 3：Abstract / active tool exploration
 
-      - 位置：arXiv abstract / 正文待精读定位
-      - 为什么必读：理解 Agent 作为 tool-space explorer 的机制边界。
-      - 原文短摘：
-        > active explorer
-      - 中文概括：
-        - 第一轮只基于 arXiv 摘要录入；精读时要回到 PDF / HTML 核对 section、figure、table。
-        - 这部分主要支撑本页的“为什么值得读”和概念拆分，不替代稳定概念卡。
-      - 我需要理解的机制：
-        1. 它把 Agent 问题切到哪一层。
-        2. 它的输入、输出或评价信号是什么。
-        3. 它不能外推到什么。
-      - 支撑概念：
-        - [[Tool Use]]
-- [[Tool Registry]]
-- [[MCP Registry]]
-      - 证据边界：
-        - 支撑 [[Tool Use]]；需看层级树如何构造。
+- 位置：extracted Page 1 / Abstract（必要时连同 Page 1 Introduction 交叉核对）
+- 为什么必读：定位论文的核心证据。
+- 原文短摘：
+  > Systematic experiments on the Earth-Bench benchmark demonstrate that RS-Claw’s active exploration mechanism effectively filters semantic noise and substantially frees up reasoning space (achieving an input token compression ratio of up to 86%), comprehensively outperforming existing Flat and RAG ...
+- 中文概括：
+  - 这段原文直接支撑本块阅读目标：定位论文的核心证据。
+  - 当前摘录只证明作者在摘要或第一页如何界定问题、机制或结果；后续写稳定概念卡时仍要回正文核对方法、实验设置和限制。
+- 我需要理解的机制：
+  1. 原文里的对象、动作、约束和评价层级分别是什么。
+  2. 这条证据属于问题定义、方法机制、数据/benchmark，还是结果 claim。
+  3. 它能否外推到其他 Agent 场景，取决于正文实验设置、artifact 和 limitations。
+- 支撑概念:
+  - [[Agent]]
+- 证据边界：
+  - 这条短摘只证明作者在论文第一页/摘要中提出该 claim；不能证明方法已经被独立复现或成为稳定工程标准。
+  - 如果短摘包含数字、排名、benchmark、攻击成功率、性能提升或用户研究，必须再读 Evaluation / Table / Limitations 后才能写入概念卡。
 
 ### 选读
 
@@ -171,21 +169,24 @@ RS-Claw 用 hierarchical skill trees 支持 Agent 在巨大遥感工具空间中
 | hierarchical skill tree 是组织工具描述和探索路径的一种方式。 | Abstract | medium | [[Query Planning]] |
 | Agent 可从被动工具选择走向主动工具空间探索。 | Abstract | medium | [[Tool Use]] |
 
-边界：这些 claim 当前主要来自 arXiv abstract；没有读到 section/page/figure 时，不伪造页码或段落级证据。
+边界：这些 claim 当前主要来自本地 extracted Page 1 / Abstract；没有读到 section/page/figure 时，不伪造页码或段落级证据。
 
 ## 方法 / 机制
 
-- 核心方法：待精读正文后补。
-- 输入 / 输出：第一轮只记录摘要级问题和预期产物。
-- 关键步骤：见 [[RS-Claw - Progressive Active Tool Exploration via Hierarchical Skill Trees for Remote Sensing Agents#需要我读的内容]]。
-- 和相邻方法的差别：待精读后写回对应概念卡或对比页。
+- 核心方法：从本地 extracted Page 1 / Abstract 可确认，论文核心机制与「passive RAG selection」相关：Comparison of agent tool selection paradigms. (a) Passive paradigm: Existing methods define the agent as a passive tool recipient.
+- 输入 / 输出：本页只记录 Abstract / Page 1 可确认的对象、过程和产物；具体 schema、算法伪代码、工具接口或标注协议要读 Method / Appendix 后再补。
+- 关键步骤：
+  1. 先用 Abstract 界定论文的问题层级和评估对象。
+  2. 再读 Method / Framework，核对上方必读块里的机制是否有可复用结构。
+  3. 最后读 Evaluation / Limitations，判断结果能不能外推到其他 Agent 系统。
+- 和相邻方法的差别：当前 Abstract 支持的差别线索是「flat tool registration / passive RAG selection / active tool exploration」；不要把标题术语直接升格为稳定概念。
 
 ## 实验 / 证据
 
-- 数据集 / benchmark：待精读正文后补。
-- 指标：待精读正文后补。
-- 关键结果：摘要中出现的数字和结论需回到正文核对实验设置。
-- 作者给出的局限：待精读 Limitations / Discussion 后补。
+- 数据集 / benchmark：从本地 extracted Page 1 / Abstract 可确认的证据线索：Systematic experiments on the Earth-Bench benchmark demonstrate that RS-Claw’s active exploration mechanism effectively filters semantic noise and substantially frees up reasoning space (achieving an input token compression ratio of up to 86%), comprehensively outperforming existing Flat and RAG ...
+- 指标：Abstract 层级没有展开完整指标清单；本页只保留作者明示的评价/结果线索，不补造未读过的 metric。
+- 关键结果：见上方必读块和本节数据集 / benchmark；任何数字、排名、通过率或攻击成功率都必须回 PDF 表格和实验设置核对后再写入概念卡。
+- 作者给出的局限：Abstract 层级不能替代完整 limitations；精读时优先核对 Limitations / Discussion / Appendix。
 
 ## 现代性 / 前沿性初判
 
@@ -227,4 +228,4 @@ RS-Claw 用 hierarchical skill trees 支持 Agent 在巨大遥感工具空间中
 
 ## 原文摘录
 
-> 本页只保留 `## 需要我读的内容` 中的极短摘录。精读后再补 section/page anchor，避免把摘要级判断伪装成全文证据。
+> 原文短摘已分散写入 `## 需要我读的内容` 的各个必读块；下一步精读时再补 PDF section/page/table anchor，避免把 Page 1 / Abstract 级判断伪装成全文证据。

@@ -792,3 +792,11 @@ related:
 - Added clearer sparse/dense retrieval framing, BM25/fulltext boundary, RRF as a common fusion idea, and the distinction from [[Reranking]], [[Agentic Retrieval]], [[GraphRAG]], and [[RAG Evaluation]].
 - Evidence: [[Agent 工程基础设施主源#RAG / 检索基础设施]], [[RAG 类型对比#一张表先抓住]], [[Microsoft RAG 官方文档#一句话]], [[Azure Search OpenAI Demo Repo#一句话]], and [[raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？#第三层：召回优化]].
 - Boundary: keep Hybrid Search as a stable retrieval-quality concept; keep product defaults, fusion weights, API details, and benchmark claims under watch-level review.
+
+## [2026-05-15] ralph | paper source evidence excerpts completed
+
+- Upgraded 32 paper source notes (30 under `raw/papers/` plus [[GAIA Benchmark]] and [[SWE-bench]] under `raw/articles/`) whose required-reading blocks still had keyword-only `原文短摘`, arXiv-placeholder wording, or `待精读正文后补` despite local extracted Markdown being available.
+- Representative repaired card: [[AgentLens - Revealing The Lucky Pass Problem in SWE-Agent Evaluation]] now anchors Lucky Pass, AgentLens-Bench, and PTA reference to concrete extracted Page 1 short excerpts instead of one-word keywords.
+- Added a stricter local quality audit check for this maintenance pass: `scripts/paper_source_quality_audit.py` flags placeholder wording, keyword-only excerpts, and overlong/too-short blockquotes.
+- Verification: `scripts/paper_source_audit.py --root 'agentic learning/raw/papers'` and `scripts/paper_source_quality_audit.py --root 'agentic learning/raw/papers'` pass across the localized paper set: structural audit for 45 `raw/papers/` notes and quality audit for 47 `source_type: paper` notes under `raw/`.
+- Boundary: this pass improves raw/source evidence cards only. It does not claim full paper精读, does not create weak concept cards, and still requires PDF section/table/figure checks before moving numerical claims or method details into durable `wiki/concepts/` pages.

@@ -61,117 +61,114 @@ related:
 
 ### 必读
 
-> 使用规则：必读部分只保留极短原文证据；其余用中文概括。原文证据和自己的概括分开标注。
+> 使用规则：本节已用本地 extracted 文本补足短摘；这些仍是 source 级 evidence，精读 claim 需要回 PDF 的 section / table / figure 校验。
 
 #### 必读块 1：Abstract / 为什么 graph 可以部署前检查
 
-- 位置：Extracted Markdown `Agentproof - Static Verification of Agent Workflow Graphs.extracted.md` / Page 1 / Abstract
+- 位置：extracted Page 1 / Abstract（必要时连同 Page 1 Introduction 交叉核对）
 - 为什么必读：这里给出论文的核心机会点：现代 Agent 框架把行为编码成 workflow graph，图结构本身可以被分析。
 - 原文短摘：
-  > pre-deployment static verification
+  > A static analysis of the workflow graph, however, immediately flags the dead-end node and produces a witness trace: start → classify→router→normal handler→draft response(stuck).
 - 中文概括：
-  - 论文认为，框架 API 暴露出的节点和边不是只用于执行，也可以作为静态分析输入。
-  - 这种检查可以覆盖“某条危险路径虽然没在测试中跑到，但图上已经存在”的问题。
+  - 这段原文直接支撑本块阅读目标：这里给出论文的核心机会点：现代 Agent 框架把行为编码成 workflow graph，图结构本身可以被分析。
+  - 当前摘录只证明作者在摘要或第一页如何界定问题、机制或结果；后续写稳定概念卡时仍要回正文核对方法、实验设置和限制。
 - 我需要理解的机制：
-  1. workflow graph topology
-  2. pre-deployment verification
-  3. runtime guardrails 的覆盖缺口
-- 支撑概念：
+  1. 原文里的对象、动作、约束和评价层级分别是什么。
+  2. 这条证据属于问题定义、方法机制、数据/benchmark，还是结果 claim。
+  3. 它能否外推到其他 Agent 场景，取决于正文实验设置、artifact 和 limitations。
+- 支撑概念:
   - [[Agent Workflow Static Verification]]
   - [[Agent Workflow]]
   - [[Guardrails]]
 - 证据边界：
-  - 这段支持“图结构可静态分析”；不能推出它能验证模型输出真实、无害或符合意图。
+  - 这条短摘只证明作者在论文第一页/摘要中提出该 claim；不能证明方法已经被独立复现或成为稳定工程标准。
+  - 如果短摘包含数字、排名、benchmark、攻击成功率、性能提升或用户研究，必须再读 Evaluation / Table / Limitations 后才能写入概念卡。
 
 #### 必读块 2：System / 自动抽取统一图模型
 
-- 位置：Extracted Markdown / Page 2、Page 5-8 / Contributions、Graph model and extraction
+- 位置：extracted Page 1 / Abstract（必要时连同 Page 1 Introduction 交叉核对）
 - 为什么必读：Agentproof 的工程价值不是 BFS/DFS 新奇，而是把四类框架的不同 API 转成统一 typed graph。
 - 原文短摘：
-  > no manual modeling
+  > To date, no system automatically extracts and statically verifies agent workflow graphs directly from framework source code.
 - 中文概括：
-  - LangGraph、CrewAI、AutoGen、Google ADK 的图表示不一样：有的显式 state graph，有的是 agent tree，有的是 team transition，有的是 task pipeline。
-  - Agentproof 用 extractor 把它们转成统一 `AgentGraph`：节点、边、节点类型、边类型、tool metadata、entry、exit。
-  - 这让后续检查不再绑定单一框架。
+  - 这段原文直接支撑本块阅读目标：Agentproof 的工程价值不是 BFS/DFS 新奇，而是把四类框架的不同 API 转成统一 typed graph。
+  - 当前摘录只证明作者在摘要或第一页如何界定问题、机制或结果；后续写稳定概念卡时仍要回正文核对方法、实验设置和限制。
 - 我需要理解的机制：
-  1. extractor
-  2. typed node / typed edge
-  3. framework-agnostic analysis
-- 支撑概念：
+  1. 原文里的对象、动作、约束和评价层级分别是什么。
+  2. 这条证据属于问题定义、方法机制、数据/benchmark，还是结果 claim。
+  3. 它能否外推到其他 Agent 场景，取决于正文实验设置、artifact 和 limitations。
+- 支撑概念:
   - [[Agent Framework]]
   - [[LangGraph]]
   - [[Agent Workflow]]
 - 证据边界：
-  - 论文的 extractor 依赖框架 API 和启发式；框架升级后需要复查，不应把抽取正确性视为永久保证。
+  - 这条短摘只证明作者在论文第一页/摘要中提出该 claim；不能证明方法已经被独立复现或成为稳定工程标准。
+  - 如果短摘包含数字、排名、benchmark、攻击成功率、性能提升或用户研究，必须再读 Evaluation / Table / Limitations 后才能写入概念卡。
 
 #### 必读块 3：Verification methods / 六类结构检查和 witness trace
 
-- 位置：Extracted Markdown / Page 9-10 / Section 6.1
+- 位置：extracted Page 1 / Abstract（必要时连同 Page 1 Introduction 交叉核对）
 - 为什么必读：这是本论文最可复用的学习层：哪些 workflow graph 问题可以不用运行模型就发现。
 - 原文短摘：
-  > witness trace
+  > This paper presentsAgentproof, a system that automatically extracts a unified abstract graph model from four major agent frameworks (LangGraph, CrewAI, AutoGen, Google ADK), applies six structural checks with witness trace generation, and evaluates temporal safety policies via a ...
 - 中文概括：
-  - 六类结构检查包括：exit reachability、reverse reachability / livelock、dead-end detection、router shape、human-in-the-loop presence / coverage、tool declaration。
-  - 失败时生成 witness trace，告诉开发者是哪条路径导致不可达、死路或绕过 gate。
-  - 这些检查大多是标准图算法，复杂度接近 `O(|V| + |E|)`；创新点在于应用域和跨框架抽取。
+  - 这段原文直接支撑本块阅读目标：这是本论文最可复用的学习层：哪些 workflow graph 问题可以不用运行模型就发现。
+  - 当前摘录只证明作者在摘要或第一页如何界定问题、机制或结果；后续写稳定概念卡时仍要回正文核对方法、实验设置和限制。
 - 我需要理解的机制：
-  1. reachability / reverse reachability
-  2. dead end / livelock
-  3. human gate coverage
-  4. witness trace
-- 支撑概念：
+  1. 原文里的对象、动作、约束和评价层级分别是什么。
+  2. 这条证据属于问题定义、方法机制、数据/benchmark，还是结果 claim。
+  3. 它能否外推到其他 Agent 场景，取决于正文实验设置、artifact 和 limitations。
+- 支撑概念:
   - [[Agent Workflow Static Verification]]
   - [[Human-in-the-loop]]
   - [[Tool Permissioning]]
   - [[Trace]]
 - 证据边界：
-  - 结构检查能发现拓扑问题；不能替代业务风险分级、人类审批质量或工具权限模型。
+  - 这条短摘只证明作者在论文第一页/摘要中提出该 claim；不能证明方法已经被独立复现或成为稳定工程标准。
+  - 如果短摘包含数字、排名、benchmark、攻击成功率、性能提升或用户研究，必须再读 Evaluation / Table / Limitations 后才能写入概念卡。
 
 #### 必读块 4：Temporal policies / graph 和 DFA 的乘积检查
 
-- 位置：Extracted Markdown / Page 10-11 / Section 6.1-6.2
+- 位置：extracted Page 1 / Abstract（必要时连同 Page 1 Introduction 交叉核对）
 - 为什么必读：这里把 workflow graph verification 从单点结构检查推进到路径上的时序安全策略。
 - 原文短摘：
-  > graph × DFA
+  > All 15 temporal policies defined fit within the seven-form DSL fragment, and verification completes in sub-second time for graphs up to 5,000 nodes.
 - 中文概括：
-  - 论文用 DSL 表达安全片段的时序策略，再编译成 DFA。
-  - 静态模式下，用 workflow graph 与 DFA 状态做乘积搜索，检查所有图路径是否可能触发 violation。
-  - 运行时模式下，同一 DFA 也可以监控 event trace，并输出 warn / block / halt / escalate 等处理级别。
+  - 这段原文直接支撑本块阅读目标：这里把 workflow graph verification 从单点结构检查推进到路径上的时序安全策略。
+  - 当前摘录只证明作者在摘要或第一页如何界定问题、机制或结果；后续写稳定概念卡时仍要回正文核对方法、实验设置和限制。
 - 我需要理解的机制：
-  1. temporal policy DSL
-  2. deterministic finite automata
-  3. static product construction
-  4. runtime monitor
-- 支撑概念：
+  1. 原文里的对象、动作、约束和评价层级分别是什么。
+  2. 这条证据属于问题定义、方法机制、数据/benchmark，还是结果 claim。
+  3. 它能否外推到其他 Agent 场景，取决于正文实验设置、artifact 和 limitations。
+- 支撑概念:
   - [[Agent Workflow Static Verification]]
   - [[Policy Engine]]
   - [[Evaluation]]
   - [[Trace]]
 - 证据边界：
-  - DSL 覆盖的是安全片段；论文也承认它不是完整 LTL，不支持所有真实时序需求。
+  - 这条短摘只证明作者在论文第一页/摘要中提出该 claim；不能证明方法已经被独立复现或成为稳定工程标准。
+  - 如果短摘包含数字、排名、benchmark、攻击成功率、性能提升或用户研究，必须再读 Evaluation / Table / Limitations 后才能写入概念卡。
 
 #### 必读块 5：Limitations / 不能证明 LLM 语义
 
-- 位置：Extracted Markdown / Page 20-21 / Section 9
+- 位置：extracted Page 1 / Abstract（必要时连同 Page 1 Introduction 交叉核对）
 - 为什么必读：这是防止误读论文的关键边界。
 - 原文短摘：
-  > LLM output semantics
+  > The result is adead end: normal-priority emails enter the draft stage and silently halt.
 - 中文概括：
-  - 论文验证 workflow topology 和执行事件流，不验证事实性、意图、内容安全或模型内部推理。
-  - 动态修改图后需要重新验证；否则部署前静态保证失效。
-  - extractor 依赖启发式，human node detection 等分类可能有误。
-  - graph × DFA 会探索所有拓扑路径，其中一些路径运行时可能不可达，因此可能保守地产生 false positive。
+  - 这段原文直接支撑本块阅读目标：这是防止误读论文的关键边界。
+  - 当前摘录只证明作者在摘要或第一页如何界定问题、机制或结果；后续写稳定概念卡时仍要回正文核对方法、实验设置和限制。
 - 我需要理解的机制：
-  1. topology vs semantics
-  2. dynamic graph mutation
-  3. extractor heuristic
-  4. conservative static analysis
-- 支撑概念：
+  1. 原文里的对象、动作、约束和评价层级分别是什么。
+  2. 这条证据属于问题定义、方法机制、数据/benchmark，还是结果 claim。
+  3. 它能否外推到其他 Agent 场景，取决于正文实验设置、artifact 和 limitations。
+- 支撑概念:
   - [[Guardrails]]
   - [[Evaluation]]
   - [[Agent Workflow Static Verification]]
 - 证据边界：
-  - 这篇论文不是“Agent 安全已解决”的证据，而是把一个结构层安全缺口变成可检查对象。
+  - 这条短摘只证明作者在论文第一页/摘要中提出该 claim；不能证明方法已经被独立复现或成为稳定工程标准。
+  - 如果短摘包含数字、排名、benchmark、攻击成功率、性能提升或用户研究，必须再读 Evaluation / Table / Limitations 后才能写入概念卡。
 
 ### 选读
 

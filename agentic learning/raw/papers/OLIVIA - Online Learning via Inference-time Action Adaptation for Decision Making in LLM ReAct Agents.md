@@ -53,10 +53,10 @@ related:
 - 学科：Artificial Intelligence (cs.AI)
 - URL：<https://arxiv.org/abs/2605.11169>
 - PDF：<https://arxiv.org/pdf/2605.11169>
-- 本地 PDF：`assets/OLIVIA - Online Learning via Inference-time Action Adaptation for Decision Making in LLM ReAct Agents.pdf`（本轮未保存 PDF，仅用远程 PDF 生成 extracted 文本）
+- 本地 PDF：`assets/OLIVIA - Online Learning via Inference-time Action Adaptation for Decision Making in LLM ReAct Agents.pdf`（已本地保存；extracted 由 PDF 自动抽取）
 - extracted：`extracted/OLIVIA - Online Learning via Inference-time Action Adaptation for Decision Making in LLM ReAct Agents.extracted.md`
 
-边界：这一页是 raw source note，只回答“论文原文摘要目前支持什么、精读时先看哪里”。不要在这里替代 `wiki/concepts/` 的稳定理解，也不要把摘要级判断写成论文全文结论。
+边界：这一页是 raw source note，只回答“论文原文摘要目前支持什么、精读时先看哪里”。不要在这里替代 `wiki/concepts/` 的稳定理解，也不要把Page 1 / Abstract 级判断写成论文全文结论。
 
 ## 为什么收
 
@@ -80,67 +80,70 @@ OLIVIA 在 ReAct-style Agent 的推理时动作选择层做在线适应，让候
 
 ### 必读
 
-> 使用规则：当前只录入摘要级短证据；精读后再补 PDF 页码、section、figure 或 table。
+> 使用规则：本节已用本地 extracted 文本补足短摘；这些仍是 source 级 evidence，精读 claim 需要回 PDF 的 section / table / figure 校验。
 
 #### 必读块 1：Abstract / ReAct action errors
 
-- 位置：arXiv abstract / 正文待精读定位
+- 位置：extracted Page 1 / Abstract（必要时连同 Page 1 Introduction 交叉核对）
 - 为什么必读：确认小 action-selection 错误如何累积成工具浪费、延迟和可靠性下降。
 - 原文短摘：
-  > action-selection errors
+  > In deployed settings where agents repeatedly handle related multi-step tasks, small actionselection errors can accumulate into wasted tool calls, latency, and reduced reliability.
 - 中文概括：
-  - 第一轮只基于 arXiv 摘要录入；精读时要回到 PDF / HTML 核对 section、figure、table。
-  - 这部分主要支撑本页的“为什么值得读”和概念拆分，不替代稳定概念卡。
+  - 这段原文直接支撑本块阅读目标：确认小 action-selection 错误如何累积成工具浪费、延迟和可靠性下降。
+  - 当前摘录只证明作者在摘要或第一页如何界定问题、机制或结果；后续写稳定概念卡时仍要回正文核对方法、实验设置和限制。
 - 我需要理解的机制：
-  1. 它把 Agent 问题切到哪一层。
-  2. 它的输入、输出或评价信号是什么。
-  3. 它不能外推到什么。
-- 支撑概念：
+  1. 原文里的对象、动作、约束和评价层级分别是什么。
+  2. 这条证据属于问题定义、方法机制、数据/benchmark，还是结果 claim。
+  3. 它能否外推到其他 Agent 场景，取决于正文实验设置、artifact 和 limitations。
+- 支撑概念:
   - [[ReAct]]
   - [[Agent Loop]]
   - [[Tool Use]]
 - 证据边界：
-  - 支撑 [[ReAct]]；不能推出 ReAct 必须加 OLIVIA。
+  - 这条短摘只证明作者在论文第一页/摘要中提出该 claim；不能证明方法已经被独立复现或成为稳定工程标准。
+  - 如果短摘包含数字、排名、benchmark、攻击成功率、性能提升或用户研究，必须再读 Evaluation / Table / Limitations 后才能写入概念卡。
 
 #### 必读块 2：Explicit decision layer
 
-- 位置：arXiv abstract / 正文待精读定位
+- 位置：extracted Page 1 / Abstract（必要时连同 Page 1 Introduction 交叉核对）
 - 为什么必读：理解为什么 prompting / retrieval 只是间接影响行为。
 - 原文短摘：
-  > explicit decision layer
+  > Compared with policy-gradient or purely episodic updates, this yields a more direct and lower-variance learning signal, while unlike retrieval-augmented memory, it adapts behavior through an explicit decision layer rather than indirect context modification.
 - 中文概括：
-  - 第一轮只基于 arXiv 摘要录入；精读时要回到 PDF / HTML 核对 section、figure、table。
-  - 这部分主要支撑本页的“为什么值得读”和概念拆分，不替代稳定概念卡。
+  - 这段原文直接支撑本块阅读目标：理解为什么 prompting / retrieval 只是间接影响行为。
+  - 当前摘录只证明作者在摘要或第一页如何界定问题、机制或结果；后续写稳定概念卡时仍要回正文核对方法、实验设置和限制。
 - 我需要理解的机制：
-  1. 它把 Agent 问题切到哪一层。
-  2. 它的输入、输出或评价信号是什么。
-  3. 它不能外推到什么。
-- 支撑概念：
+  1. 原文里的对象、动作、约束和评价层级分别是什么。
+  2. 这条证据属于问题定义、方法机制、数据/benchmark，还是结果 claim。
+  3. 它能否外推到其他 Agent 场景，取决于正文实验设置、artifact 和 limitations。
+- 支撑概念:
   - [[ReAct]]
   - [[Agent Loop]]
   - [[Tool Use]]
 - 证据边界：
-  - 支撑 [[Agent Loop]]、[[Tool Use]]；需正文看 contextual linear bandit / adaptation 细节。
+  - 这条短摘只证明作者在论文第一页/摘要中提出该 claim；不能证明方法已经被独立复现或成为稳定工程标准。
+  - 如果短摘包含数字、排名、benchmark、攻击成功率、性能提升或用户研究，必须再读 Evaluation / Table / Limitations 后才能写入概念卡。
 
 #### 必读块 3：Online feedback
 
-- 位置：arXiv abstract / 正文待精读定位
+- 位置：extracted Page 1 / Abstract（必要时连同 Page 1 Introduction 交叉核对）
 - 为什么必读：看 action-level feedback 如何在部署时更新。
 - 原文短摘：
-  > updated online from action-level feedback
+  > This design is well matched to our setting: the agent repeatedly chooses from a discrete action set and observes feedback only for the selected action, making contextual bandits a natural model of partial-feedback online adaptation (Wu et al. ...
 - 中文概括：
-  - 第一轮只基于 arXiv 摘要录入；精读时要回到 PDF / HTML 核对 section、figure、table。
-  - 这部分主要支撑本页的“为什么值得读”和概念拆分，不替代稳定概念卡。
+  - 这段原文直接支撑本块阅读目标：看 action-level feedback 如何在部署时更新。
+  - 当前摘录只证明作者在摘要或第一页如何界定问题、机制或结果；后续写稳定概念卡时仍要回正文核对方法、实验设置和限制。
 - 我需要理解的机制：
-  1. 它把 Agent 问题切到哪一层。
-  2. 它的输入、输出或评价信号是什么。
-  3. 它不能外推到什么。
-- 支撑概念：
+  1. 原文里的对象、动作、约束和评价层级分别是什么。
+  2. 这条证据属于问题定义、方法机制、数据/benchmark，还是结果 claim。
+  3. 它能否外推到其他 Agent 场景，取决于正文实验设置、artifact 和 limitations。
+- 支撑概念:
   - [[ReAct]]
   - [[Agent Loop]]
   - [[Tool Use]]
 - 证据边界：
-  - 支撑 [[Evaluation]]；需警惕在线学习安全边界。
+  - 这条短摘只证明作者在论文第一页/摘要中提出该 claim；不能证明方法已经被独立复现或成为稳定工程标准。
+  - 如果短摘包含数字、排名、benchmark、攻击成功率、性能提升或用户研究，必须再读 Evaluation / Table / Limitations 后才能写入概念卡。
 
 ### 选读
 
@@ -171,21 +174,24 @@ OLIVIA 在 ReAct-style Agent 的推理时动作选择层做在线适应，让候
 | 现有 inference-time adaptation 多通过 prompt / retrieval 间接影响行为。 | Abstract | medium | [[Agent Loop]] |
 | OLIVIA 将 final action-selection layer 建模为可在线更新的决策层。 | Abstract | medium | [[Tool Use]] |
 
-边界：这些 claim 当前主要来自 arXiv abstract；没有读到 section/page/figure 时，不伪造页码或段落级证据。
+边界：这些 claim 当前主要来自本地 extracted Page 1 / Abstract；没有读到 section/page/figure 时，不伪造页码或段落级证据。
 
 ## 方法 / 机制
 
-- 核心方法：待精读正文后补。
-- 输入 / 输出：第一轮只记录摘要级问题和预期产物。
-- 关键步骤：见 [[OLIVIA - Online Learning via Inference-time Action Adaptation for Decision Making in LLM ReAct Agents#需要我读的内容]]。
-- 和相邻方法的差别：待精读后写回对应概念卡或对比页。
+- 核心方法：从本地 extracted Page 1 / Abstract 可确认，论文核心机制与「Explicit decision layer」相关：Compared with policy-gradient or purely episodic updates, this yields a more direct and lower-variance learning signal, while unlike retrieval-augmented memory, it adapts behavior through an explicit decision layer rather than indirect context modification.
+- 输入 / 输出：本页只记录 Abstract / Page 1 可确认的对象、过程和产物；具体 schema、算法伪代码、工具接口或标注协议要读 Method / Appendix 后再补。
+- 关键步骤：
+  1. 先用 Abstract 界定论文的问题层级和评估对象。
+  2. 再读 Method / Framework，核对上方必读块里的机制是否有可复用结构。
+  3. 最后读 Evaluation / Limitations，判断结果能不能外推到其他 Agent 系统。
+- 和相邻方法的差别：当前 Abstract 支持的差别线索是「ReAct action errors / Explicit decision layer / Online feedback」；不要把标题术语直接升格为稳定概念。
 
 ## 实验 / 证据
 
-- 数据集 / benchmark：待精读正文后补。
-- 指标：待精读正文后补。
-- 关键结果：摘要中出现的数字和结论需回到正文核对实验设置。
-- 作者给出的局限：待精读 Limitations / Discussion 后补。
+- 数据集 / benchmark：从本地 extracted Page 1 / Abstract 可确认的证据线索：This design is well matched to our setting: the agent repeatedly chooses from a discrete action set and observes feedback only for the selected action, making contextual bandits a natural model of partial-feedback online adaptation (Wu et al. ...
+- 指标：Abstract 层级没有展开完整指标清单；本页只保留作者明示的评价/结果线索，不补造未读过的 metric。
+- 关键结果：见上方必读块和本节数据集 / benchmark；任何数字、排名、通过率或攻击成功率都必须回 PDF 表格和实验设置核对后再写入概念卡。
+- 作者给出的局限：Abstract 层级不能替代完整 limitations；精读时优先核对 Limitations / Discussion / Appendix。
 
 ## 现代性 / 前沿性初判
 
@@ -228,4 +234,4 @@ OLIVIA 在 ReAct-style Agent 的推理时动作选择层做在线适应，让候
 
 ## 原文摘录
 
-> 本页只保留 `## 需要我读的内容` 中的极短摘录。精读后再补 section/page anchor，避免把摘要级判断伪装成全文证据。
+> 原文短摘已分散写入 `## 需要我读的内容` 的各个必读块；下一步精读时再补 PDF section/page/table anchor，避免把 Page 1 / Abstract 级判断伪装成全文证据。
