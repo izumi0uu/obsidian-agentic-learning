@@ -7,7 +7,7 @@ topic:
   - machine-learning
 status: growing
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-16
 last_checked: 2026-05-15
 freshness: stable
 conflicts: []
@@ -25,6 +25,13 @@ evidence:
   - "[[Embedding#概念详解]]"
   - "[[Sparse Retrieval#边界细节]]"
   - "[[BM25#边界细节]]"
+relations:
+  - type: foundational_for
+    target: "[[Sparse Retrieval]]"
+    note: "TF-IDF 提供稀疏词项权重的基础直觉；Sparse Retrieval 是更大的检索家族。"
+  - type: related_to
+    target: "[[Multi-Route Retrieval]]"
+    note: "多路召回可能通过 sparse retrieval / BM25 路线间接受益于 TF-IDF-style 词项权重；TF-IDF 本身不是召回路线或多路召回策略。"
 related:
   - "[[Embedding]]"
   - "[[Hybrid Search]]"

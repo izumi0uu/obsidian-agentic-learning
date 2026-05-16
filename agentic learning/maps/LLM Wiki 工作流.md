@@ -207,9 +207,11 @@ python3 scripts/interview_question_concept_links.py --dry-run
 1. **临时图全量生成**：先生成全库关系图，记录现有 `up`、`relations`、`related`、正文 wikilink 和候选边。
 2. **候选关系台账**：每条 candidate 必须有明确 decision：`accept_taxonomy`、`reject_taxonomy`、`defer_taxonomy`、`adjacency_only` 或 `duplicate_signal`。
 3. **dry-run 写回**：只把 `accept_taxonomy` 且目标字段为 `up` 的边放入 dry-run；dry-run 不改概念卡。
-4. **小批量 apply**：写回必须带 limit，例如 `writeback.py --apply --limit 12`；禁止无界全量 apply。
-5. **插件兼容验证**：验证只新增子卡顶层 `up`；不手写 `down`、不常规化 `children`、不新增 Juggl 或 Breadcrumbs 非 taxonomy 镜像字段。
-6. **日志与控制面同步**：若规则或脚本行为改变，更新本页、字段规范/计划文档和 `log.md`。
+4. **剩余 accepted 复核**：每轮 apply 前，必须复核 dry-run 中剩余 accepted rows；若发现“标准/运行时/能力/机制支撑某父概念但不是其子类”，要降级为 `reject_taxonomy` 或 `defer_taxonomy`，不能因为上一轮已 accepted 就继续写入。
+5. **小批量 apply**：写回必须带 limit，例如 `writeback.py --apply --limit 12`；禁止无界全量 apply。
+6. **非层级边界守卫**：对“表示/特征 → 方法族 → 召回路线 → 编排策略”这类高混淆链条，台账和验证必须显式阻止写入 `up`。
+7. **插件兼容验证**：验证只新增子卡顶层 `up`；不手写 `down`、不常规化 `children`、不新增 Juggl 或 Breadcrumbs 非 taxonomy 镜像字段。
+8. **日志与控制面同步**：若规则或脚本行为改变，更新本页、字段规范/计划文档和 `log.md`。
 
 ### 判定边界
 
@@ -219,12 +221,17 @@ python3 scripts/interview_question_concept_links.py --dry-run
 - 正文 wikilink 是提及证据，不证明父子。
 - `topic_family_review` 只能用于分组复核，永远不能直接写入 `up`。
 - 标题规则只能提出候选；除非卡片正文/一句话/边界支持“X 是 Y 的一种”，否则不能落地。
+- “支撑/标准化/承载/执行”不是 taxonomy：例如 OpenTelemetry GenAI 支撑 Observability 的语义记录，State Graph Runtime 执行 Agent Workflow，但它们不是对应父概念的子类。
+- 检索链条要区分语义层：[[TF-IDF]] 是 sparse lexical weighting / 基础表示直觉；[[Sparse Retrieval]] / [[BM25]] 可以成为召回路线或路线代表；[[Multi-Route Retrieval]] 是组织多条路线的策略。TF-IDF 不是 Multi-Route Retrieval 的一种；Sparse Retrieval 进入多路召回应写 `relations`（如 `composed_into`），不能写成 `up`。
+- `foundational_for`、`based_on_intuition`、`composes_with`、`composed_into` 这类关系即使很重要，也必须停在 `relations`，除非另有正文证据证明它同时满足 strict taxonomy。
 
 ### 验收
 
 - 台账覆盖所有候选边，并保留 reject / defer 的理由。
+- 台账对已知高混淆检索边界保留 `boundary_guardrail_applied` 或等价说明；dry-run / apply report 不得出现这些 forbidden non-taxonomy `up` pair。
 - apply report 能列出每张被修改的概念卡、目标父概念和理由。
 - 重新生成临时图后，新增 taxonomy 边数量与 apply report 对得上。
+- 当一批 accepted edges 已全部写回后，post-apply dry-run 可以是 0 planned；前提是 ledger 的 `writeback_candidates` 同步为 0，且 apply report 中的历史写回边仍真实存在于子卡 `up`。
 - Abstract Folder / Breadcrumbs 兼容检查 0 problems。
 - `git diff --check` 通过；若存在本任务外的历史 diff，最终报告必须说明边界，不得误称全部由本次写回产生。
 

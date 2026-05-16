@@ -1018,3 +1018,37 @@ related:
 - 同步 [[LLM Wiki 工作流]]、`.omx/plans/prd-concept-hierarchy-modeling.md`、`.omx/plans/test-spec-concept-hierarchy-modeling.md`、`.omx/specs/deep-interview-concept-hierarchy-modeling.md`，把“临时图 → 台账 → dry-run → 小批量写回 → 插件验证”固化为后续关系写回门禁。
 - 验证：`python3 .omx/reports/concept-card-relation-map/writeback.py --apply` 无 `--limit` 时按预期拒绝；`python3 .omx/reports/concept-card-relation-map/validate.py` PASS；`plugin-compat-validation.md` 显示 130 张概念卡 / 23 条 `up` 检查、0 problems；`git diff --check` PASS；计划/规格/工作流 frontmatter parse PASS。
 - Boundary: 本轮没有把 `topic_family_review` 写入 `up`，没有全量盲改 130 张概念卡，没有新增 `down` / 常规 `children` / Juggl 镜像字段；当前工作树存在本轮外的历史概念卡和 topic diff，验证报告按边界记录而不归因给本次小批量写回。
+
+## [2026-05-16] ralph | 检索关系边界守卫修正
+
+- 修正概念关系流水线的非层级边界：将 TF-IDF / BM25 / Sparse Retrieval / Multi-Route Retrieval 这类“基础表示 / 代表算法 / 召回路线 / 编排策略”链条列为 forbidden-as-up 守卫，避免被候选台账或 dry-run/apply 误写入 `up`。
+- 更新 `.omx/reports/concept-card-relation-map/boundary_policy.py`、`decide.py`、`writeback.py`、`validate.py`：共享 guardrail policy，台账输出 `non_taxonomy_boundary_policy`，写回拒绝 forbidden pair，验证检查 dry-run、apply report 和现有概念卡里都没有 forbidden `up`。
+- 小范围补强 [[TF-IDF]] 与 [[Sparse Retrieval]] 的 typed `relations`：TF-IDF `foundational_for` Sparse Retrieval；Sparse Retrieval `composed_into` Multi-Route Retrieval，明确这是基础/路线/组合关系而不是 taxonomy。
+- 同步 [[LLM Wiki 工作流]]、[[字段规范]]、概念卡模板，以及 `.omx/plans/prd-concept-hierarchy-modeling.md`、`.omx/plans/test-spec-concept-hierarchy-modeling.md`、`.omx/specs/deep-interview-concept-hierarchy-modeling.md` 的边界说明。
+- 验证：`python3 -m py_compile .omx/reports/concept-card-relation-map/*.py` PASS；deslop 后 policy count 14/14；`build.py` PASS（130 cards / 23 up / 28 typed relations / 95 candidates）；`decide.py` PASS（2 active guardrail decisions + 14 policy forbidden pairs）；`writeback.py --dry-run` PASS（15 planned / 15 ready，未写卡）；`validate.py` PASS（plugin compatibility 0 problems / forbidden_up_edges 0）；`git diff --check` PASS。
+- Boundary: 本轮没有执行第二批 `--apply`，没有新增 `down` / `children` / Juggl 镜像字段，也没有全量重写概念卡；只改两张被点名的检索边界卡与系统性控制面。
+
+## [2026-05-16] ralph | 剩余 accepted 关系候选二次审查
+
+- 审查 `.omx/reports/concept-card-relation-map/writeback-dry-run.*` 中上一轮剩余 15 条 accepted candidates；本轮只审查，不执行第二批 `--apply`。
+- 保留 13 条 strict taxonomy 候选，当前 dry-run 为 13 planned / 13 ready。
+- 将 2 条从 accepted 降级为 reject taxonomy：`OpenTelemetry GenAI -> Observability`（语义约定/标准化层支撑 observability，不是 observability 子类）和 `State Graph Runtime -> Agent Workflow`（runtime 执行并持久化 workflow，不是 workflow 子类）。
+- 更新 `.omx/reports/concept-card-relation-map/decide.py` 并生成 `remaining-accepted-candidates-review.md/json`；同步 [[LLM Wiki 工作流]] 与 [[字段规范]]，把“accepted apply 前仍需二次复核”和“标准化/支撑/执行不等于 taxonomy”写成规则。
+- 验证：`python3 -m py_compile .omx/reports/concept-card-relation-map/*.py` PASS；`build.py` / `decide.py` / `writeback.py --dry-run` PASS；`validate.py` PASS（130 cards / 23 up / 13 dry-run planned / forbidden_up_edges 0）；`git diff --check` PASS。
+- Boundary: 本轮没有改任何概念卡 `up`，没有新增 `down` / `children` / Juggl 镜像字段，没有执行第二批写回；13 条剩余 ready 只作为下一批人工/LLM 复核后的候选。
+
+## [2026-05-16] ralph | 第二批概念关系小批量写回
+
+- 执行第二批 `writeback.py --apply --limit 15`；用户请求 15 条，但上一轮二次审查只剩 13 条 safe strict taxonomy，因此本轮只写回 13 条，不恢复 2 条已降级的非 taxonomy 边。
+- 新增 `up`：[[Long-term Memory]] → [[Memory]]、[[Microsoft Agent Framework]] → [[Agent Framework]]、[[Non-Parametric Memory]] → [[Memory]]、[[RAG Evaluation]] → [[Evaluation]]、[[Self-RAG]] → [[RAG]]、[[Semantic Memory]] → [[Memory]]、[[Tool Calling]] → [[Tool Use]]、[[Trajectory Evaluation]] → [[Evaluation]]、[[Computer Use]] → [[Tool Use]]、[[Data-first Agent Framework]] → [[Agent Framework]]、[[Graph Construction Evaluation]] → [[Evaluation]]、[[Multi-agent Orchestration]] → [[Agent Workflow]]、[[Parametric Memory]] → [[Memory]]。
+- 保持拒绝：`OpenTelemetry GenAI -> Observability` 与 `State Graph Runtime -> Agent Workflow` 仍为标准化/支撑/执行关系，不写 `up`。
+- 重新生成临时图与台账后：130 张概念卡、36 条 taxonomy `up`、67 条候选信号、0 条剩余 writeback candidates；post-apply dry-run 为 0 planned / 0 ready，表示本批 accepted edges 已写完。
+- 同步 `.omx/plans/prd-concept-hierarchy-modeling.md`、`.omx/plans/test-spec-concept-hierarchy-modeling.md`、`.omx/specs/deep-interview-concept-hierarchy-modeling.md` 与 [[LLM Wiki 工作流]]：明确 post-apply 空 dry-run 在 `writeback_candidates=0` 时是完成态，验证仍要追踪 apply report 历史边是否真实存在。
+- 验证：`python3 -m py_compile .omx/reports/concept-card-relation-map/*.py` PASS；`python3 .omx/reports/concept-card-relation-map/validate.py` PASS（130 cards / 1007 edges / 36 up / 13 applied / 0 plugin problems）；`git diff --check` PASS；逐张检查 13 张子卡均只有顶层 `up`，无 `down` / `children`。
+- Boundary: 本轮没有全量重写 130 张概念卡，没有新增 `relations` 镜像字段，没有恢复 Juggl，也没有把 `related`、body wikilink 或 `topic_family_review` 升格为层级关系；工作树中仍存在此前边界修正和健康维护留下的历史 diff，已按任务边界保留。
+
+## [2026-05-16] autoresearch | Sparse Retrieval 机制分层写回
+
+- 更新 [[Sparse Retrieval]]：新增“内部机制分层”，把 sparse representation、search structure、scoring 分开，明确 count vector / TF-IDF / sparse neural vector、inverted index、full-text scoring / BM25 分别处在不同层。
+- 更新 [[08 面试题概念卡待补充]]：新增 Inverted Index 与 Sparse Neural Retrieval 候选；二者只进入 backlog，建卡前分别需要搜索系统证据和 SPLADE / sparse embedding 证据。
+- Boundary: 本轮没有新建概念卡，没有修改 alias map、脚本、模板、`up` 虚拟层级或项目规则；`count vector` 与 `full-text scoring` 只作为 [[Sparse Retrieval]] 内部机制边界说明，不作为独立卡候选。
