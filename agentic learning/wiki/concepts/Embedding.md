@@ -9,6 +9,11 @@ updated: 2026-05-16
 last_checked: 2026-05-10
 freshness: stable
 conflicts: []
+aliases:
+  - Embeddings
+  - 嵌入
+  - 向量表示
+  - 嵌入模型
 source:
   - "[[Agent 工程基础设施主源]]"
   - "[[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]]"

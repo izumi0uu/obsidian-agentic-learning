@@ -63,7 +63,7 @@ related:
 
 RAG 主题的学习主线不是“向量库 + LLM”，而是：**外部资料如何进入知识库、如何被检索、如何被排序和装配进上下文、答案如何被证据约束和评估**。
 
-最小边界：[[RAG]] 是检索增强生成的架构模式；[[Retriever]]、[[Embedding]]、[[Dense Retrieval]]、[[TF-IDF]]、[[Sparse Retrieval]]、[[BM25]]、[[Vector Database]]、[[Top-K]]、[[Multi-Route Retrieval]]、[[Multi-Query Retrieval]]、[[Reciprocal Rank Fusion]]、[[Hybrid Search]]、[[Reranking]]、[[Cross-Encoder]] 是 retrieval 组件 / 参数；[[GraphRAG]]、[[Agentic RAG]]、[[Corrective RAG]]、[[Self-RAG]] 是在不同位置改造 RAG 链路的类型；[[RAG Evaluation]] 负责检查检索、上下文、引用和答案质量。
+最小边界：[[RAG]] 是检索增强生成的架构模式；[[Retriever]]、[[Embedding]]、[[Dense Retrieval]]、[[TF-IDF]]、[[Sparse Retrieval]]、[[BM25]]、[[Vector Database]]、[[Top-K]]、[[Multi-Route Retrieval]]、[[Multi-Query Retrieval]]、[[Reciprocal Rank Fusion]]、[[Hybrid Search]]、[[Reranking]]、[[Cross-Encoder]] 是 retrieval 组件 / 参数；[[GraphRAG]]、[[Agentic RAG]]、[[Corrective RAG]]、[[Self-RAG]] 是在不同位置改造 RAG 链路的类型；[[RAG Evaluation]] 负责检查检索排序指标（Hit@K / Recall@K / MRR / nDCG）、上下文、引用和答案质量。
 
 ## 先看这个
 
@@ -124,7 +124,7 @@ source -> ingest/clean -> chunk + metadata -> embed/index
 | [[Hybrid Search]] | 纯向量是否漏掉精确匹配？ | 向量 + 关键词/全文互补，尤其适合实体名、错误码、产品编号 |
 | [[Reciprocal Rank Fusion]] | 多路结果怎么粗融合？ | 用排名倒数融合不同分数体系；通常在 rerank 前 |
 | [[Reranking]] | 找到的候选谁更该进上下文？ | rerank 只能重排已召回候选，不能凭空找回漏掉的证据 |
-| [[RAG Evaluation]] | 怎么知道 RAG 错在哪里？ | retrieval、context、generation、citation 分层评估；进一步读 [[RAG Citation Faithfulness]] |
+| [[RAG Evaluation]] | 怎么知道 RAG 错在哪里？ | retrieval ranking metrics（Hit@K / Recall@K / MRR / nDCG）、context、generation、citation 分层评估；进一步读 [[RAG Citation Faithfulness]] |
 
 向量库选型小边界：学习和快速原型可先用 Chroma / FAISS；已有 PostgreSQL 的 MVP 可优先评估 pgvector；规模、QPS、过滤、多租户或服务化要求上来后，再比较 Qdrant / Milvus / Weaviate / Pinecone；已有 Elasticsearch / OpenSearch 时，优先评估同栈 vector + keyword / full-text / hybrid search；关系密集或 GraphRAG 场景再考虑 Neo4j 的图遍历 + 向量 / 全文索引组合。这个判断属于工程综合，不是某个 vendor 的永久排名。 详见 [[常用向量数据库对比]]。
 

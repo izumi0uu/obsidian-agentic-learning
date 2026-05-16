@@ -12,11 +12,16 @@ source:
   - "[[Retriever]]"
   - "[[Azure AI Search Agentic Retrieval]]"
   - "[[RAG 类型对比]]"
+  - "[[raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？]]"
+  - "[[raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？]]"
 evidence:
   - "[[Retriever#概念详解]]"
   - "[[Azure AI Search Agentic Retrieval#一句话]]"
   - "[[Azure AI Search Agentic Retrieval#边界提醒]]"
   - "[[RAG 类型对比#核心区别表]]"
+  - "[[raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？#方法二：HyDE（Hypothetical Document Embeddings）]]"
+  - "[[raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？#方法三：Step-back Prompting（后退提问）]]"
+  - "[[raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？#第二层：查询优化]]"
 related:
   - "[[Retriever]]"
   - "[[Query Planning]]"
@@ -41,7 +46,9 @@ Query Rewrite 是把用户原始问题改写成更适合检索系统的查询表
 
 最简单的 rewrite 是补全省略词、替换同义词、展开缩写、提取关键词或生成多种检索 query（[[Multi-Query Retrieval]]）。例如用户问“那个框架支持可恢复执行吗？”系统可能结合上下文改写成“LangGraph durable execution checkpoint human-in-the-loop”。复杂一点的 rewrite 会保留原问题，同时生成多个候选查询并合并结果。
 
-证据边界：[[Retriever]] 卡已经把 query rewrite 放在现代 retriever 的组成部分；[[Azure AI Search Agentic Retrieval]] 支持复杂检索中 query planning、多查询和 knowledge source 的现代方向。本卡只沉淀 rewrite 这个最小动作，不把它等同于完整 agentic retrieval。
+常见子策略里，HyDE（Hypothetical Document Embeddings）先让模型生成一个“像文档的假设答案”，再用这个假设答案去检索；Step-back Prompting 则把具体问题往上抽象一层，先查背景知识再回答具体问题。HyDE 更适合“问题和文档文体差异大”的场景，Step-back 更适合“问题太具体、需要背景原理”的场景。它们都属于 rewrite family，而不是 [[Query Planning]]：rewrite 主要改“怎么问”，planning 主要改“先问什么、再问什么”。
+
+证据边界：[[Retriever]] 卡已经把 query rewrite 放在现代 retriever 的组成部分；[[Azure AI Search Agentic Retrieval]] 支持复杂检索中 query planning、多查询和 knowledge source 的现代方向；xiaolinnote source note 支持 HyDE、Step-back 和多 Query 作为 query rewrite 子策略。本卡只沉淀 rewrite 这个最小动作，不把它等同于完整 agentic retrieval。
 
 ## 它解决什么问题
 

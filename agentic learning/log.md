@@ -916,3 +916,56 @@ related:
 - 配置 Abstract Folder：`propertyName` / `parentPropertyNames` 使用 `up`，`childrenPropertyName` / `childrenPropertyNames` 保持 `children`。
 - 更新 [[插件配置]]：记录三款插件的当前安装版本、启用状态和本 vault 的使用边界。
 - Boundary: 本阶段只配置插件显示层；不运行物理文件夹转换，不批量修改概念卡，不把 `relations` 强行镜像成 Breadcrumbs edge fields。
+
+## [2026-05-16] wiki | 概念层级插件阶段 3 样板卡落地
+
+- 在代表性检索概念卡上写入机器可读层级字段：[[BM25]] 增加 `up: [[Sparse Retrieval]]` 与 `representative_of` / `based_on_intuition` / `related_to`，[[Sparse Retrieval]] 增加 `up: [[Retriever]]` 与 `related_to` / `composed_into`，[[Hybrid Search]] 增加 `up: [[Retriever]]` 与 `composes_with` / `related_to`。
+- 保持 [[TF-IDF]] 作为基础词项表示卡，不把它错误挂成严格 taxonomy；它仍通过正文和既有 related 边界为 BM25 / sparse retrieval 提供学习直觉。
+- 验证：frontmatter YAML 解析 PASS；`git diff --check` PASS；三张卡都只新增了预期的 `up` / `relations` 字段，没有把 `TF-IDF` 强行改成子概念。
+- Boundary: 本阶段只做代表性样板卡，不把全库检索概念一次性批量重写。
+
+## [2026-05-16] wiki | Abstract Folder 非概念文件排除
+
+- 更新 Abstract Folder 本地配置：`excludedPaths` 排除 `raw/`、`maps/`、`reviews/`、`templates/`、`Excalidraw/`、`assets/`、`wiki/topics/`、`wiki/projects/`、`.obsidian/`、`.trash/`、`index.md`、`log.md`。
+- 更新 [[插件配置]]：记录排除策略、路径前缀匹配语义，以及“只影响虚拟树显示，不移动或删除文件”的边界。
+- Boundary: 第一版虚拟文件夹只作为 `wiki/concepts/` 概念 taxonomy 浏览器；面试题、raw 来源、map 控制面、review、topic、project、入口页和日志不进入 Abstract Folder 概念树。
+
+## [2026-05-16] wiki | Abstract Folder 配置回写覆盖修复
+
+- 发现外部直接编辑 `.obsidian/plugins/abstract-folder/data.json` 时，运行中的 Obsidian 会把插件内存中的旧设置回写成空数组，导致 `excludedPaths` 看起来“没生效”。
+- 处理方式：先退出 Obsidian，再把 `excludedPaths` 写回 `data.json`，然后重新打开 vault，确认配置稳定保留。
+- 更新 [[插件配置]]：补充“本地插件配置外部改写的回写覆盖风险”以及推荐的生效方式。
+- Boundary: 这是插件运行时状态与磁盘文件之间的覆盖问题，不是 `excludedPaths` 语法本身的问题。
+
+## [2026-05-16] wiki | Juggl 大库局部视图边界补强
+
+- 更新 [[插件配置]]：明确 Juggl 在卡片很多的库里只用于局部子树和短时探索，不承担全库主视图。
+- 同步保留前一版边界：Abstract Folder / Breadcrumbs 负责主层级，`up` / `relations` 负责语义；Juggl 只是看图工具。
+- Boundary: 这次只补强文档边界，不改 Juggl 插件本身，也不新增全库图谱设置。
+
+## [2026-05-16] wiki | RAG 检索家族边界同步
+
+- 同步更新相关检索概念卡与主题页：[[Dense Retrieval]]、[[Sparse Retrieval]]、[[BM25]]、[[Hybrid Search]]、[[Query Rewrite]]、[[RAG Evaluation]]、[[RAG 主题]]、[[Retrieval 组件对比]]，以及一条 RAG 面试题 raw 关联。
+- 增补边界与别名：`Bi-encoder / 双塔` 归入 [[Dense Retrieval]] 的常见实现说明；`HyDE` / `Step-back Prompting` 归入 [[Query Rewrite]] 的子策略；[[RAG Evaluation]] 细化为检索排序指标、上下文、生成、引用与答案质量的分层评估。
+- Boundary: 这些同步是为了让 retrieval / evaluation / rewrite 关系更可读，不把它们误压成单一父子树；仍由 `up` + `relations` 承担严格层级与关系解释。
+
+## [2026-05-16] wiki | Juggl 从日常启用中移除
+
+- 将 `agentic learning/.obsidian/community-plugins.json` 中的 `juggl` 移除，改为按需临时启用，而不是日常工作流组件。
+- 更新 [[插件配置]]：明确 Juggl 在卡片很多的库里即使临时启用也只适合极小局部，不承担全库主视图；当前默认停用。
+- Boundary: 这是性能与工作流边界收缩，不影响 Abstract Folder / Breadcrumbs 作为主层级方案。
+
+## [2026-05-16] wiki | bilingual terminology audit second pass
+
+- 完成 vault-wide 中英术语二轮扫描：概念卡 130 张、alias map 87 项、面试题 bilingual pattern 942 次 / 697 个唯一噪声候选，审计报告写入 `.omx/reports/bilingual-terminology-audit.md`。
+- 安全补充同义 alias：[[Agent]]、[[RAG]]、[[Embedding]]、[[Tool Calling]]、[[MCP]]；同步 `scripts/interview_question_concept_aliases.json` 中的 `Query Rewriting`、`Rerank`、`精排`、`Rerank 精排`，并把 `Tools` 从 [[Tool Calling]] 操作匹配改到 [[Tool Use]]。
+- 修正 alias 边界：把 Bi-encoder、HyDE、Step-back、Hit@K、MRR、nDCG、Faithfulness、Groundedness、Answer Relevancy 从 frontmatter aliases 中排除，保留在 [[Dense Retrieval]]、[[Query Rewrite]]、[[RAG Evaluation]] 的正文边界 / 指标家族说明里。
+- 更新 [[08 面试题概念卡待补充]]：将 Bi-encoder、RAG ranking metrics、generation metrics、HyDE / Step-back 标为 folded，并新增 Chunking 子策略候选家族。
+- 自动链接验证：脚本新增/修正 `[[Reranking|Rerank]]`、`[[Tool Use|Tools]]`、`[[Tool Calling|调工具]]`、`[[Tool Calling|Function Calling]]`；后续 dry-run 回到 0 would-modify、0 missing candidates、0 protected-region violations。
+- Boundary: 本轮没有把所有 alias map 词条批量写入概念卡 frontmatter；generic/broad/false-friend 风险项先保留在审计报告和 backlog，避免把“相关”误写成“同义”。
+
+## [2026-05-16] wiki | Abstract Folder 英文显示优先
+
+- 将 `.obsidian/plugins/abstract-folder/data.json` 的 `displayNameOrder` 改为 `title -> basename`，并把 `showAliases` 关掉，让 Abstract Folder 不再把 `aliases` 当默认显示名来源。
+- 更新 [[插件配置]]：补充显示名策略说明，强调 `aliases` 只保留给搜索和术语对齐；少数旧卡如果需要英文显示名，可以再补 `title`。
+- Boundary: 这次只改虚拟树的显示优先级，不改概念卡语义，不批量重命名文件。

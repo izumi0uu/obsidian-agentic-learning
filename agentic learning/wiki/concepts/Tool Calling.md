@@ -6,10 +6,15 @@ topic:
   - tools
 status: growing
 created: 2026-05-05
-updated: 2026-05-10
+updated: 2026-05-16
 last_checked: 2026-05-10
 freshness: watch
 conflicts: []
+aliases:
+  - Function Calling
+  - Function Call
+  - 工具调用
+  - 函数调用
 source:
   - "[[Toolformer]]"
   - "[[OpenAI Function Calling 文档]]"

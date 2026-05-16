@@ -5,10 +5,14 @@ topic:
   - knowledge-base
 status: mature
 created: 2026-05-05
-updated: 2026-05-10
+updated: 2026-05-16
 last_checked: 2026-05-10
 freshness: stable
 conflicts: []
+aliases:
+  - Retrieval-Augmented Generation
+  - 检索增强生成
+  - 检索增强
 source:
   - "[[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]]"
   - "[[Microsoft RAG 官方文档]]"

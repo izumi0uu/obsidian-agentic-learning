@@ -27,6 +27,18 @@ evidence:
   - "[[TF-IDF#概念详解]]"
   - "[[Sparse Retrieval#证据锚点]]"
   - "[[BM25#证据锚点]]"
+up:
+  - "[[Retriever]]"
+relations:
+  - type: composes_with
+    target: "[[Sparse Retrieval]]"
+    note: "Hybrid Search 通常把 sparse retrieval / BM25 作为一路候选。"
+  - type: composes_with
+    target: "[[Dense Retrieval]]"
+    note: "Hybrid Search 通常把 dense retrieval 作为另一条语义召回。"
+  - type: related_to
+    target: "[[Multi-Route Retrieval]]"
+    note: "Hybrid Search 是多路召回最常见的双路形态，但多路召回更宽。"
 related:
   - "[[RAG]]"
   - "[[Vector Database]]"

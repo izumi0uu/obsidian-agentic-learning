@@ -32,6 +32,7 @@ related:
   - "[[Retriever]]"
   - "[[Embedding]]"
   - "[[RAG]]"
+  - "[[RAG Evaluation]]"
   - "[[LLM Training Pipeline]]"
   - "[[LLM]]"
   - "[[Observability]]"
@@ -55,6 +56,7 @@ related:
 - [[Retriever]]
 - [[Embedding]]
 - [[RAG]]
+- [[RAG Evaluation]]
 - [[LLM Training Pipeline]]
 - [[LLM]]
 - [[Observability]]

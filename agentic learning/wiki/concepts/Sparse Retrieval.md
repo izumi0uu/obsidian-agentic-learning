@@ -20,6 +20,18 @@ evidence:
   - "[[raw/repos/xiaolinnote/questions/024 ai rag 11. 请你介绍一下向量检索和关键词检索的区别？#关键词检索：字面匹配，靠统计]]"
   - "[[scikit-learn TF-IDF 文档#为什么收]]"
   - "[[Hybrid Search#概念详解]]"
+up:
+  - "[[Retriever]]"
+relations:
+  - type: related_to
+    target: "[[BM25]]"
+    note: "BM25 是 sparse retrieval 的常见代表；这张卡覆盖更宽的词法检索家族。"
+  - type: related_to
+    target: "[[Dense Retrieval]]"
+    note: "Sparse Retrieval 关注词项、倒排和精确匹配；Dense Retrieval 关注语义相似。"
+  - type: composed_into
+    target: "[[Hybrid Search]]"
+    note: "Sparse Retrieval 常被组合进 Hybrid Search 作为词面检索一路。"
 related:
   - "[[BM25]]"
   - "[[TF-IDF]]"

@@ -46,9 +46,9 @@ related:
 ---
 
 
-👔面试官：[[Agent Workflow|Workflow]]、Agent、[[Tool Calling|Tools]] 这三个概念说一下，区别是什么？
+👔面试官：[[Agent Workflow|Workflow]]、Agent、[[Tool Use|Tools]] 这三个概念说一下，区别是什么？
 
-🙋‍♂️我：Tools 是工具函数，Agent 是能调工具的智能体，Workflow 是把多个 Agent 串起来的流程，三者是从小到大的关系。
+🙋‍♂️我：Tools 是工具函数，Agent 是能[[Tool Calling|调工具]]的智能体，Workflow 是把多个 Agent 串起来的流程，三者是从小到大的关系。
 
 👔面试官：Workflow 是「多个 Agent 串联」？Workflow 里的节点必须是 Agent 吗？LLM 能不能直接当节点？
 

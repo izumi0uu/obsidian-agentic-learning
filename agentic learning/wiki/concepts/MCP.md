@@ -7,10 +7,13 @@ topic:
   - frontier
 status: growing
 created: 2026-05-06
-updated: 2026-05-10
+updated: 2026-05-16
 last_checked: 2026-05-10
 freshness: watch
 conflicts: []
+aliases:
+  - Model Context Protocol
+  - 模型上下文协议
 source:
   - "[[Model Context Protocol 官方文档]]"
   - "[[Model Context Protocol Python SDK Repo]]"
