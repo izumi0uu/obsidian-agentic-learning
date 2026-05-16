@@ -211,7 +211,8 @@ python3 scripts/interview_question_concept_links.py --dry-run
 5. **小批量 apply**：写回必须带 limit，例如 `writeback.py --apply --limit 12`；禁止无界全量 apply。
 6. **非层级边界守卫**：对“表示/特征 → 方法族 → 召回路线 → 编排策略”这类高混淆链条，台账和验证必须显式阻止写入 `up`。
 7. **插件兼容验证**：验证只新增子卡顶层 `up`；不手写 `down`、不常规化 `children`、不新增 Juggl 或 Breadcrumbs 非 taxonomy 镜像字段。
-8. **日志与控制面同步**：若规则或脚本行为改变，更新本页、字段规范/计划文档和 `log.md`。
+8. **尾巴闭环**：`defer_taxonomy` / `needs_review` 是开放尾巴，必须回到概念卡证据或 backlog 后再终止；`reject_taxonomy` / `adjacency_only` 若有明确理由、`resolution_status=terminal_non_writeback` 且不写 `up`，就是已闭环终态，不应再算待办。
+9. **日志与控制面同步**：若规则或脚本行为改变，更新本页、字段规范/计划文档和 `log.md`。
 
 ### 判定边界
 
@@ -232,6 +233,7 @@ python3 scripts/interview_question_concept_links.py --dry-run
 - apply report 能列出每张被修改的概念卡、目标父概念和理由。
 - 重新生成临时图后，新增 taxonomy 边数量与 apply report 对得上。
 - 当一批 accepted edges 已全部写回后，post-apply dry-run 可以是 0 planned；前提是 ledger 的 `writeback_candidates` 同步为 0，且 apply report 中的历史写回边仍真实存在于子卡 `up`。
+- 最终闭环状态下，`open_review_items` 必须为 0；若 `reject_taxonomy` / `adjacency_only` 仍有数量，它们必须带有终态理由和 `terminal_non_writeback` 状态，而不是未完成尾巴。
 - Abstract Folder / Breadcrumbs 兼容检查 0 problems。
 - `git diff --check` 通过；若存在本任务外的历史 diff，最终报告必须说明边界，不得误称全部由本次写回产生。
 

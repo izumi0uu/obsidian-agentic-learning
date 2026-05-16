@@ -1052,3 +1052,13 @@ related:
 - 更新 [[Sparse Retrieval]]：新增“内部机制分层”，把 sparse representation、search structure、scoring 分开，明确 count vector / TF-IDF / sparse neural vector、inverted index、full-text scoring / BM25 分别处在不同层。
 - 更新 [[08 面试题概念卡待补充]]：新增 Inverted Index 与 Sparse Neural Retrieval 候选；二者只进入 backlog，建卡前分别需要搜索系统证据和 SPLADE / sparse embedding 证据。
 - Boundary: 本轮没有新建概念卡，没有修改 alias map、脚本、模板、`up` 虚拟层级或项目规则；`count vector` 与 `full-text scoring` 只作为 [[Sparse Retrieval]] 内部机制边界说明，不作为独立卡候选。
+
+## [2026-05-16] ralph | 概念关系尾巴闭环
+
+- 关闭上一轮关系流水线剩余的 1/2/3 三类尾巴：`defer_taxonomy` 从 1 降为 0，`reject_taxonomy` 与 `adjacency_only` 改为明确的 terminal non-writeback 决策，不再当作待办数量。
+- 重新判定 `RAGGraph -> RAG`：[[RAGGraph]] 是 workflow graph / [[GraphRAG]] 混淆提醒卡，保留 related/relations，不写 `up: [[RAG]]`；因此改为 `reject_taxonomy` + `terminal_non_writeback`。
+- 更新 [[RAGGraph]]：补 `relations` 到 [[RAG]]、[[GraphRAG]]、[[Agentic RAG]]，并在边界细节写明当前关系写回结论；更新 [[02 问题池]] 中两个 RAGGraph 边界问题为已闭环。
+- 更新 `.omx/reports/concept-card-relation-map/decide.py` 与 `validate.py`：台账新增 `resolution_status`、`open_writeback_items`、`open_review_items`、`relation_tail_open_items`、`relation_tail_status`、`terminal_non_writeback_decisions`；验证会拒绝新的 `needs_review` / `defer_taxonomy` 开放尾巴。
+- 重新生成报告后：130 张概念卡、36 条 taxonomy `up`、31 条 typed relations、67 条候选信号；ledger 为 `reject_taxonomy: 11`、`adjacency_only: 56`、`open_review_items: 0`、`open_writeback_items: 0`、`relation_tail_status: closed`；dry-run 为 0 planned / 0 ready。
+- 验证：`python3 -m py_compile .omx/reports/concept-card-relation-map/*.py` PASS；`build.py` PASS；`decide.py` PASS；`writeback.py --dry-run` PASS；`validate.py` PASS（open_review_items 0 / open_writeback_items 0 / relation_tail_status closed）；`git diff --check` PASS；RAGGraph 断言检查 PASS（无 `up: [[RAG]]`，有 safe `relations`）。
+- Boundary: 本轮没有新增任何 `up`，没有把 56 条 adjacency 信号强行写回，也没有新增 `down` / `children` / Juggl 字段；`reject_taxonomy` 是审查终态，不是“失败”。

@@ -7,8 +7,8 @@ topic:
   - frontier
 status: review
 created: 2026-05-06
-updated: 2026-05-10
-last_checked: 2026-05-10
+updated: 2026-05-16
+last_checked: 2026-05-16
 freshness: watch
 conflicts:
   - "RAGGraph 不是稳定统一术语，可能被误当作 GraphRAG。"
@@ -18,6 +18,16 @@ source:
 evidence:
   - "[[前沿主源清单#RAG 进化]]"
   - "[[RAG 类型对比#最容易混淆的边界]]"
+relations:
+  - type: related_to
+    target: "[[RAG]]"
+    note: "RAGGraph 讨论的是 RAG pipeline 可能被图式编排，但这个命名不稳定；当前不把它写成 RAG 的 strict taxonomy 子类。"
+  - type: contrasts_with
+    target: "[[GraphRAG]]"
+    note: "GraphRAG 是图结构参与检索和上下文构造；RAGGraph 更可能指 RAG 执行流程图或项目名，二者不能互当别名。"
+  - type: related_to
+    target: "[[Agentic RAG]]"
+    note: "若 RAGGraph 指带分支和循环的检索工作流，它更接近 Agentic RAG / workflow graph 的实现语境，而不是独立稳定方法族。"
 related:
   - "[[RAG]]"
   - "[[GraphRAG]]"
@@ -96,13 +106,15 @@ RAGGraph 不是一个稳定统一的学术概念。
 
 和 [[Agentic RAG]] 的边界：Agentic RAG 强调 Agent 决定检索行为；RAGGraph 强调这些行为可能被实现成图节点和边。
 
+本轮关系写回结论：RAGGraph 只保留 `related` / `relations`，不写 `up: [[RAG]]`。如果以后遇到具体项目或论文把 RAGGraph 稳定定义为某个 RAG 方法族，再重新进入候选台账；在当前证据下，它是混淆提醒卡，不是 taxonomy child。
+
 ## 现代性状态
 
 - 判定：frontier / volatile terminology。
 - 稳定部分：RAG workflow 可以被实现成图、状态机或有条件循环。
 - 易变部分：RAGGraph 这个词的含义、项目指向和社区用法不稳定。
 - freshness: watch。
-- last_checked: 2026-05-10。
+- last_checked: 2026-05-16。
 - 复查点：遇到具体 RAGGraph 项目时，先确认它是 workflow graph、GraphRAG 变体，还是项目名。
 
 ## 现代系统怎么吸收 RAGGraph 的价值
