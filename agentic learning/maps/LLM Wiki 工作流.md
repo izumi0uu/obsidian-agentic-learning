@@ -13,6 +13,8 @@ related:
   - "[[04 页面目录]]"
   - "[[05 Query 写回队列]]"
   - "[[06 Wiki 健康检查]]"
+  - "[[08 面试题概念卡待补充]]"
+  - "[[08 面试题概念链接待办]]"
   - "[[字段规范]]"
   - "[[资料收集索引]]"
 ---
@@ -392,6 +394,19 @@ python3 scripts/interview_question_concept_links.py --dry-run
 5. 处理 [[05 Query 写回队列]] 中的 pending 条目。
 6. 更新 [[06 Wiki 健康检查]]。
 7. 追加 `log.md`。
+
+固定审计命令：
+
+```bash
+python3 scripts/concept_card_audit.py --format markdown
+python3 scripts/comparison_topic_audit.py --format markdown
+python3 scripts/paper_source_audit.py
+python3 scripts/interview_question_concept_links.py --self-test
+python3 scripts/interview_question_concept_links.py --dry-run
+git diff --check
+```
+
+写回规则：每次 weekly / systemic maintenance 都要把最新统计写回 [[06 Wiki 健康检查]] 的“当前状态”或新增 dated 小节，包括概念卡 needs-action、对比 topic needs-action、paper source audit、面试题链接 dry-run 和 `git diff --check` 结果。旧数字保留为历史记录，但不得继续放在“当前状态”里冒充现状。
 
 ## 操作 5：Freshness / Contradiction Check
 

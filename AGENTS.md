@@ -91,6 +91,8 @@ Always check these before doing wiki maintenance:
 - `agentic learning/maps/04 页面目录.md`
 - `agentic learning/maps/05 Query 写回队列.md`
 - `agentic learning/maps/06 Wiki 健康检查.md`
+- `agentic learning/maps/08 面试题概念卡待补充.md`
+- `agentic learning/maps/08 面试题概念链接待办.md`
 - `agentic learning/reviews/复习记录索引.md`
 - `agentic learning/log.md`
 
@@ -193,6 +195,19 @@ Look for:
 - stale `freshness: watch/volatile/stale` sources
 - unresolved items in `maps/05 Query 写回队列.md`
 - pages missing required frontmatter
+
+For weekly or systemic maintenance, run the reproducible audit bundle before updating status pages:
+
+```bash
+python3 scripts/concept_card_audit.py --format markdown
+python3 scripts/comparison_topic_audit.py --format markdown
+python3 scripts/paper_source_audit.py
+python3 scripts/interview_question_concept_links.py --self-test
+python3 scripts/interview_question_concept_links.py --dry-run
+git diff --check
+```
+
+Write the current counts, passes, and remaining action queues back to `agentic learning/maps/06 Wiki 健康检查.md`. Treat older counts in that page as historical snapshots once a newer audit run is recorded.
 
 Prefer small, explicit fixes over broad rewrites.
 

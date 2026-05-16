@@ -976,3 +976,21 @@ related:
 - 为两张遗留中文概念卡补充英文 `title`：[[OMX $ 指令]] → `OMX $ Commands`，[[双链]] → `Bidirectional Links`，从而让 Abstract Folder 概念树显示全量落到英文。
 - 更新 [[插件配置]]：补充显示名策略说明，强调 `aliases` 只保留给搜索和术语对齐；少数旧卡如果需要英文显示名，可以再补 `title`。
 - Boundary: 这次只改虚拟树的显示优先级，不改概念卡语义，不批量重命名文件。
+
+## [2026-05-16] maintenance | 项目规则控制面同步
+
+- Updated: `AGENTS.md`, [[LLM Wiki 工作流]], [[06 Wiki 健康检查]], [[04 页面目录]], [[index]], [[08 面试题概念卡待补充]], [[08 面试题概念链接待办]], `agentic learning/templates/`。
+- Evidence: concept card audit 当前为 130 张概念卡 / 27 needs action；comparison topic audit 当前为 23 张对比 topic / 6 needs action；paper source audit PASS；面试题链接 self-test PASS；dry-run would modify 0。
+- Boundary: 本轮只同步规则控制面、导航入口、审计命令和模板日期，不批量修复 27 张概念卡或 6 张对比页；`scripts/README.md` 已包含 audit bundle 说明但本轮没有产生 tracked diff；旧健康检查数字保留为历史快照，不再作为当前状态。
+
+## [2026-05-16] wiki | Juggl 退役后计划同步
+
+- 更新 `.omx/plans/prd-concept-hierarchy-modeling.md`、`.omx/plans/test-spec-concept-hierarchy-modeling.md`、`.omx/specs/deep-interview-concept-hierarchy-modeling.md`：后续概念层级开发只以 Abstract Folder + Breadcrumbs 为目标，不再把 Juggl 作为安装、配置、可视化或验收依赖。
+- 更新 [[字段规范]] 与 [[插件配置]]：明确 Juggl 因性能问题退出后续方案，`relations` 的镜像字段只在未来 Breadcrumbs 侧确有稳定可视化需求时再评估。
+- Boundary: 这是计划和控制面同步，不重启插件安装，不移动物理文件夹，不批量改概念卡，也不删除可能残留的本地 Juggl 插件目录。
+
+## [2026-05-16] autoresearch | 临时概念关系图评估
+
+- 通过 `$autoresearch-goal` 评估 `agentic learning/wiki/concepts/` 下 130 张 `type: concept` 概念卡，并生成临时关系文件：`.omx/reports/concept-card-relation-map/concept-relations-temp.md` 与 `.omx/reports/concept-card-relation-map/concept-relations-temp.json`。
+- 统计：现有 `up` taxonomy 边 11 条，`relations` typed relation 边 25 条，frontmatter `related` 边 702 条，body wikilink 边 241 条；119 张卡暂未写 `up`；core orphan 0；weakly connected 1；dangling core targets 23；候选 review signal 123 条，其中 taxonomy_candidate 36 条、topic_family_review 87 条。
+- Boundary: 这是临时评估图，不自动写回概念卡；`topic_family_review` 只用于分组复核，不是 parent；每条候选 `up` 都需要单独审查后才能落入 `relations` / `up`。

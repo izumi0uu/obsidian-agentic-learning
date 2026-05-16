@@ -5,11 +5,13 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-07
-updated: 2026-05-12
+updated: 2026-05-16
 related:
   - "[[LLM Wiki 工作流]]"
   - "[[04 页面目录]]"
   - "[[05 Query 写回队列]]"
+  - "[[08 面试题概念卡待补充]]"
+  - "[[08 面试题概念链接待办]]"
   - "[[字段规范]]"
 ---
 
@@ -19,21 +21,29 @@ related:
 
 ## 当前状态
 
-- Last lint: 2026-05-12
+- Last lint: 2026-05-16
 - Missing links: none
-- Concept cards: 91
-- Raw source notes: 813（包含按题拆分的 imported question source pages；主源清单仍看 [[资料收集索引]]）
-- Query write-back pending: 2（概念对比候选队列中 P3 两项暂不强行成页）
-- Concept cards missing `## 边界细节`: 51（P0 样例 + P1 小范围修复后；P1 修复前为 57）
-- Concept cards missing `## 现代性状态`: 73（P0 样例 + P1 小范围修复后；P1 修复前为 79）
-- Concept cards missing `## 复习触发`: 78（P0 样例 + P1 小范围修复后；P1 修复前为 86）
+- Concept cards: 130；`scripts/concept_card_audit.py --format markdown` 显示 Needs action = 27。
+- Comparison topic pages: 23；`scripts/comparison_topic_audit.py --format markdown` 显示 Needs action = 6。
+- Raw markdown pages: 908；其中 frontmatter `type: source` 859。主源清单仍看 [[资料收集索引]]。
+- Paper source audit: `scripts/paper_source_audit.py` 检查 `raw/papers/` 45 个文件，PASS。
+- Interview concept link audit: `scripts/interview_question_concept_links.py --self-test` PASS；`--dry-run` 扫描 757 个题页，would modify 0，missing concept candidates 0，protected region violations 0。
+- Query write-back pending: 2（概念对比候选队列中 P3 两项暂不强行成页）。
+- Current action queues: 27 张概念卡需要小修 evidence / detail；6 张对比 topic 需要补模板 section / evidence boundary。不要一次性批量重写，按主题小批量修。
 
-边界：这些数字用于排队和抽样修复，不代表要一次性批量重写旧卡。批量修复旧卡前需要用户确认。
+边界：本节是“当前状态”，会覆盖上方读者对最新健康状态的理解；旧的 2026-05-10 / 2026-05-11 数字保留下方历史小节，不能再被当成现状。Needs action 代表排队修复，不代表要一次性批量重写旧卡；批量修复旧卡前需要用户确认。
 
 ## 每周检查清单
 
 - [ ] 更新 [[04 页面目录]]。
 - [ ] 跑 missing-link scan。
+- [ ] 跑固定审计命令：
+  - `python3 scripts/concept_card_audit.py --format markdown`
+  - `python3 scripts/comparison_topic_audit.py --format markdown`
+  - `python3 scripts/paper_source_audit.py`
+  - `python3 scripts/interview_question_concept_links.py --self-test`
+  - `python3 scripts/interview_question_concept_links.py --dry-run`
+  - `git diff --check`
 - [ ] 检查概念卡是否有“它不是什么”。
 - [ ] 检查概念卡是否有 `## 边界细节`。
 - [ ] 检查 Agent / prompting / framework / evaluation / RAG / memory / tooling / safety / protocol / product-ecosystem 概念卡是否有 `## 现代性状态`。
@@ -42,7 +52,29 @@ related:
 - [ ] 检查概念卡是否有“证据锚点”。
 - [ ] 检查 raw source 是否有 `last_checked` 和 `freshness`。
 - [ ] 处理 [[05 Query 写回队列]]。
-- [ ] 把发现的问题追加到本页。
+- [ ] 处理 [[08 面试题概念卡待补充]] 和 [[08 面试题概念链接待办]] 中的可确认项；不确定项继续留 backlog。
+- [ ] 把发现的问题和最新统计追加到本页；如果更新了“当前状态”，明确旧数字只是历史快照。
+
+## 2026-05-16 规则控制面同步审计
+
+本轮目标是把“项目规则评估”发现的状态漂移写回控制面，而不是直接修 27 张概念卡或 6 张对比页。
+
+### 审计结果
+
+| 检查项 | 当前结果 | 处理 |
+|---|---:|---|
+| Concept Card Audit | 130 张概念卡；Needs action = 27 | 进入小批量修复队列，不批量重写 |
+| Comparison Topic Audit | 23 张对比 topic；Needs action = 6 | 进入小批量修复队列，不批量重写 |
+| Paper Source Audit | `raw/papers/` 45 个文件 PASS | 维持现状 |
+| Interview concept links self-test | PASS | 维持现状 |
+| Interview concept links dry-run | 757 个题页；would modify 0；missing concept candidates 0；protected region violations 0 | 维持现状 |
+| `git diff --check` | PASS | 维持现状 |
+
+### 当前修复边界
+
+- 本轮只同步规则控制面、导航入口、模板日期和审计命令，不修 concept / comparison 正文。
+- [[08 面试题概念卡待补充]] 和 [[08 面试题概念链接待办]] 已纳入入口 / 页面目录，后续 weekly maintenance 必须检查。
+- 旧健康检查数字保留为历史，不能覆盖“当前状态”。
 
 ## 2026-05-10 概念卡标准化 lint
 
