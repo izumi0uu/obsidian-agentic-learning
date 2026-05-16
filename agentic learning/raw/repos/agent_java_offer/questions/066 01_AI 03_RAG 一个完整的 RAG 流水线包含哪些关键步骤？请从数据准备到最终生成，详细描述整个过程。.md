@@ -10,7 +10,7 @@ topic:
   - "rag"
 status: inbox
 created: 2026-05-09
-updated: 2026-05-15
+updated: 2026-05-16
 url: "https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/03_RAG/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md"
 source: "https://github.com/guoguo-tju/agent_java_offer"
 source_path: "docs/interview_prep/01_AI/03_RAG/01_核心问答.md"
@@ -41,6 +41,7 @@ related:
   - "[[LLM Training Pipeline]]"
   - "[[Transformer]]"
   - "[[RAG 主题]]"
+  - "[[Dense Retrieval]]"
 ---
 
 # 一个完整的 [[RAG]] 流水线包含哪些关键步骤？请从数据准备到最终生成，详细描述整个过程。
@@ -69,13 +70,13 @@ related:
 - [[LLM Training Pipeline]]
 - [[Transformer]]
 - [[RAG 主题]]
-
+- [[Dense Retrieval]]
 ## 题目正文
 
 ### 3. 子问题：一个完整的 RAG 流水线包含哪些关键步骤？请从数据准备到最终生成，详细描述整个过程。
 
 答：
-完整链路分离线和在线两段。离线阶段做数据加载、清洗切块、向量化、建索引；在线阶段做[[Query Rewrite|查询改写]]、[[Retriever|向量检索]]、重排、上下文组装、生成回答。面试建议强调“检索前处理”和“检索后重排”这两个提升点，线上还要有[[Evaluation|评估]]回流和索引更新机制，否则质量会逐步衰减。
+完整链路分离线和在线两段。离线阶段做数据加载、清洗切块、向量化、建索引；在线阶段做[[Query Rewrite|查询改写]]、[[Dense Retrieval|向量检索]]、重排、上下文组装、生成回答。面试建议强调“检索前处理”和“检索后重排”这两个提升点，线上还要有[[Evaluation|评估]]回流和索引更新机制，否则质量会逐步衰减。
 
 - 一个完整的RAG流水线可以分为两个主要阶段：**离线的数据准备（索引）阶段** 和 **在线的查询（推理）阶段**。
 **阶段一：数据准备 / 索引流水线 (Offline / Indexing Pipeline)** 这个阶段的目标是构建一个可供检索的知识库，它通常是一次性或周期性执行的。

@@ -901,3 +901,18 @@ related:
 - Updated `AGENTS.md`, [[LLM Wiki 工作流]], and the local `obsidian-llm-wiki` skill with a truncated-read rule for hybrid search MCP usage.
 - Rule: for synthesis, concept comparison, wiki edits, or evidence claims, if `obsidian_read` returns truncated content, re-read the core note individually with a larger `snippet_length` or without truncation before making claims.
 - Boundary: this is a usage rule for MCP reads, not a runtime configuration or model/cache setting.
+
+## [2026-05-16] wiki | bilingual terminology audit implemented
+
+- Promoted high-confidence bilingual RAG terms from [[08 面试题概念卡待补充]] into concept cards: [[Dense Retrieval]], [[Reciprocal Rank Fusion]], [[Multi-Query Retrieval]], [[Cross-Encoder]], [[Context Recall]], [[Context Precision]], and [[Parent-Child Chunking]].
+- Fixed canonical mapping: `向量检索` now maps to [[Dense Retrieval]] rather than the broader [[Retriever]] component; `多路召回` remains [[Multi-Route Retrieval]] rather than [[Hybrid Search]].
+- Updated `scripts/interview_question_concept_aliases.json`, related raw-question pages, and RAG navigation surfaces so Chinese terms link to stable English canonical cards while ambiguous metrics/strategies remain in backlog.
+- Backlog boundary: Bi-encoder, Hit@K, MRR, Faithfulness/Groundedness, and HyDE remain pending candidates; they were not promoted because this pass lacked enough scope to define separate durable cards without over-splitting.
+- Verification: `python3 scripts/interview_question_concept_links.py --self-test` PASS; dry-run scanned 757 question pages with 0 would-modify pages, 0 missing candidates, and 0 protected-region violations; false-mapping grep for the Retriever-as-向量检索 and HybridSearch-as-多路召回 patterns returned no matches; added-link target audit PASS; changed-file frontmatter YAML parse PASS; `git diff --check` PASS.
+
+## [2026-05-16] wiki | 概念层级插件阶段 2 配置
+
+- 安装并启用本地 Obsidian 插件：Abstract Folder `1.14.0`、Breadcrumbs `4.9.5`、Juggl `1.5.0`，并写入 `agentic learning/.obsidian/community-plugins.json`。
+- 配置 Abstract Folder：`propertyName` / `parentPropertyNames` 使用 `up`，`childrenPropertyName` / `childrenPropertyNames` 保持 `children`。
+- 更新 [[插件配置]]：记录三款插件的当前安装版本、启用状态和本 vault 的使用边界。
+- Boundary: 本阶段只配置插件显示层；不运行物理文件夹转换，不批量修改概念卡，不把 `relations` 强行镜像成 Breadcrumbs edge fields。

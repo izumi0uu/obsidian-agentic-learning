@@ -6,7 +6,7 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-15
+updated: 2026-05-16
 source:
   - "[[Retriever]]"
   - "[[Hybrid Search]]"
@@ -22,6 +22,11 @@ source:
   - "[[Microsoft RAG 官方文档]]"
   - "[[Agent 工程基础设施主源]]"
   - "[[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]]"
+  - "[[Dense Retrieval]]"
+  - "[[Multi-Query Retrieval]]"
+  - "[[Reciprocal Rank Fusion]]"
+  - "[[Cross-Encoder]]"
+  - "[[Parent-Child Chunking]]"
 evidence:
   - "[[Retriever#证据锚点]]"
   - "[[Hybrid Search#证据锚点]]"
@@ -34,6 +39,11 @@ evidence:
   - "[[Multi-Route Retrieval#证据锚点]]"
   - "[[Document Ingestion#证据锚点]]"
   - "[[RAG#证据锚点]]"
+  - "[[Dense Retrieval#证据锚点]]"
+  - "[[Multi-Query Retrieval#证据锚点]]"
+  - "[[Reciprocal Rank Fusion#证据锚点]]"
+  - "[[Cross-Encoder#证据锚点]]"
+  - "[[Parent-Child Chunking#证据锚点]]"
 related:
   - "[[RAG 主题]]"
   - "[[RAG 类型对比]]"
@@ -44,15 +54,20 @@ related:
   - "[[Sparse Retrieval]]"
   - "[[BM25]]"
   - "[[Multi-Route Retrieval]]"
+  - "[[Dense Retrieval]]"
+  - "[[Multi-Query Retrieval]]"
+  - "[[Reciprocal Rank Fusion]]"
+  - "[[Cross-Encoder]]"
+  - "[[Parent-Child Chunking]]"
 ---
 
 # Retrieval 组件对比
 
 ## 一句话总览
 
-这页回答：Retrieval 链路里的 Document Ingestion、Chunking/Embedding、TF-IDF、Sparse Retrieval、BM25、Vector Database、Retriever、Multi-Route Retrieval、Hybrid Search、Reranking 分别负责什么。
+这页回答：Retrieval 链路里的 Document Ingestion、Chunking/Parent-Child Chunking、Embedding/Dense Retrieval、TF-IDF、Sparse Retrieval、BM25、Vector Database、Retriever、Multi-Route Retrieval、Hybrid Search、Reranking 分别负责什么。
 
-最小边界：[[Document Ingestion]] 决定资料怎样进库；[[Embedding]] 把内容变成语义向量；[[TF-IDF]] 帮你理解稀疏词项权重；[[Sparse Retrieval]] 是词法/稀疏检索家族；[[BM25]] 是常见关键词检索打分代表；[[Vector Database]] 存和搜向量；[[Retriever]] 从索引里找候选；[[Multi-Route Retrieval]] 组织多条召回路线并融合候选；[[Hybrid Search]] 把向量和关键词/全文信号结合；[[Reranking]] 在候选集上重新排序。它们共同服务 [[RAG]]，但没有一个单独等于 RAG 本身。
+最小边界：[[Document Ingestion]] 决定资料怎样进库；[[Embedding]] 把内容变成语义向量；[[Dense Retrieval]] 用向量相似度召回；[[TF-IDF]] 帮你理解稀疏词项权重；[[Sparse Retrieval]] 是词法/稀疏检索家族；[[BM25]] 是常见关键词检索打分代表；[[Vector Database]] 存和搜向量；[[Retriever]] 从索引里找候选；[[Multi-Route Retrieval]] 组织多条召回路线并融合候选；[[Multi-Query Retrieval]] 扩展 query 视角；[[Reciprocal Rank Fusion]] 融合多路排序；[[Hybrid Search]] 把向量和关键词/全文信号结合；[[Reranking]] 在候选集上重新排序，[[Cross-Encoder]] 是常见精排结构。它们共同服务 [[RAG]]，但没有一个单独等于 RAG 本身。
 
 ## 为什么这组值得对比
 
@@ -88,14 +103,18 @@ raw docs
 |---|---|---|---|---|---|
 | [[Document Ingestion]] | 原始资料进入知识库的入口流程 | 离线或增量更新时 | PDF、网页、表格、代码、图片说明、权限信息 | 清洗后的文本、结构、metadata、待切分资料 | [[Document Ingestion#证据锚点]] |
 | [[Embedding]] | 语义表示 | 入库时给 chunk 向量；查询时给 query 向量 | chunk、query、文本/图片对象 | 向量，用于相似度搜索 | [[Embedding#证据锚点]] |
+| [[Dense Retrieval]] | 稠密向量召回路线 | 查询时用 query embedding 搜索近邻 chunk | query embedding、chunk embeddings、向量索引 | 语义相似候选 | [[Dense Retrieval#证据锚点]] |
 | [[TF-IDF]] | 稀疏词项权重表示 | 入库/索引时建立词表和权重；查询时按词面匹配打分 | 文档、query、词表、语料统计 | sparse vector / TF-IDF feature matrix | [[TF-IDF#证据锚点]] |
 | [[Sparse Retrieval]] | 稀疏/词法检索家族 | 建倒排或稀疏索引；查询时按词项命中召回 | query 词项、文档词项、索引、分词规则 | 精确词面匹配候选 | [[Sparse Retrieval#证据锚点]] |
 | [[BM25]] | 关键词检索打分代表 | 查询时对词面命中的文档或 chunk 排序 | query 词项、文档词频、文档频率、长度信息 | BM25 排序候选 | [[BM25#证据锚点]] |
 | [[Vector Database]] | 向量存储与近似搜索基础设施 | 入库后保存，查询时 top-k 搜索 | embedding、metadata、过滤条件 | 相似向量候选、metadata | [[Vector Database#证据锚点]] |
 | [[Retriever]] | 找候选证据的组件或流程 | 生成前，可在 agentic loop 中多次调用 | query、索引、权限/filter、retrieval strategy | candidate passages / chunks / records | [[Retriever#证据锚点]] |
 | [[Multi-Route Retrieval]] | 多路线候选召回与粗融合 | retrieve 阶段并行多路执行，rerank 前合并 | query、多 query 变体、dense/sparse/graph/filter route、多个索引 | 合并去重后的候选集合 | [[Multi-Route Retrieval#证据锚点]] |
+| [[Multi-Query Retrieval]] | 多查询扩展召回 | 检索前生成多个 query，分别检索后合并 | 原始问题、query 变体、检索器 | 多组候选结果 | [[Multi-Query Retrieval#证据锚点]] |
+| [[Reciprocal Rank Fusion]] | 多路排名融合 | 多路候选出来后、rerank 前 | 多个排序列表 | 统一粗排序候选 | [[Reciprocal Rank Fusion#证据锚点]] |
 | [[Hybrid Search]] | 向量语义检索 + 关键词/全文检索融合 | retrieve 阶段并行或融合 | query、embedding、关键词、metadata filter | 语义与精确匹配互补的候选集合 | [[Hybrid Search#证据锚点]] |
 | [[Reranking]] | 初检候选的精排 | retrieve 后、上下文生成前 | query、候选 chunks、业务权重或 reranker 模型 | 更适合放入上下文的排序结果 | [[Reranking#证据锚点]] |
+| [[Cross-Encoder]] | 常见 reranker 结构 | rerank 小候选集时 | query + chunk pair | 相关性分数 | [[Cross-Encoder#证据锚点]] |
 
 ## 最容易混淆的边界
 
@@ -159,14 +178,18 @@ Failure diagnosis:
 |---|---|---|
 | [[Document Ingestion]] | 把新书拆封、登记、去重、贴标签、放进馆藏系统 | 整理错了，后面很难找对 |
 | [[Embedding]] | 给每段内容生成“语义坐标” | 坐标相近不等于答案正确 |
+| [[Dense Retrieval]] | 按语义坐标找近邻片段 | 不是整个 retriever，也不保精确词 |
 | [[TF-IDF]] | 给每段内容做关键词权重索引 | 词面命中强，不等于理解同义表达 |
 | [[Sparse Retrieval]] | 按词面、编号、代码符号和倒排索引找资料 | 不是语义理解，也不是只等于 TF-IDF |
 | [[BM25]] | 给关键词命中的资料做更稳的相关性排序 | 是 sparse retrieval 的代表，不是整个检索系统 |
 | [[Vector Database]] | 存这些语义坐标并快速找近邻的柜子 | 柜子不是整座图书馆服务 |
 | [[Retriever]] | 按问题找一批可能有用的资料 | 找到候选不等于最终答案 |
 | [[Multi-Route Retrieval]] | 同时走多条查找路线再合并候选 | 路线越多，越需要去重、融合、trace 和评估 |
+| [[Multi-Query Retrieval]] | 同一个问题换多个问法去查 | 原始 query 要保留，避免改写偏题 |
+| [[Reciprocal Rank Fusion]] | 把多路排名合成粗排序 | 不能创造未召回的证据 |
 | [[Hybrid Search]] | 既按意思找，也按书名、编号、关键词找 | 融合策略需要调试 |
 | [[Reranking]] | 从候选资料中重新排最该先读的 | 只能排已找到的资料 |
+| [[Cross-Encoder]] | 把 query 和 chunk 放一起深度打分 | 精度高但慢，适合小候选集 |
 
 ## 现代系统如何吸收或限制
 
@@ -207,7 +230,7 @@ Failure diagnosis:
 
 ## 证据锚点
 
-- Concept anchors: [[Document Ingestion#证据锚点]], [[Embedding#证据锚点]], [[TF-IDF#证据锚点]], [[Sparse Retrieval#证据锚点]], [[BM25#证据锚点]], [[Vector Database#证据锚点]], [[Retriever#证据锚点]], [[Multi-Route Retrieval#证据锚点]], [[Hybrid Search#证据锚点]], [[Reranking#证据锚点]], [[RAG#证据锚点]]
+- Concept anchors: [[Document Ingestion#证据锚点]], [[Embedding#证据锚点]], [[Dense Retrieval#证据锚点]], [[TF-IDF#证据锚点]], [[Sparse Retrieval#证据锚点]], [[BM25#证据锚点]], [[Vector Database#证据锚点]], [[Retriever#证据锚点]], [[Multi-Route Retrieval#证据锚点]], [[Multi-Query Retrieval#证据锚点]], [[Reciprocal Rank Fusion#证据锚点]], [[Hybrid Search#证据锚点]], [[Reranking#证据锚点]], [[Cross-Encoder#证据锚点]], [[RAG#证据锚点]]
 - Topic anchor: [[RAG 类型对比#最容易混淆的边界]] / [[RAG 类型对比#证据锚点]]
 - Source examples: [[Agent 工程基础设施主源]], [[Microsoft RAG 官方文档]], [[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]]
 - Evidence type: concept-card synthesis + existing comparison topic + docs/paper/source-note evidence + engineering synthesis + learning analogy.

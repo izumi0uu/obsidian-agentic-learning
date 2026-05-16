@@ -5,7 +5,7 @@ topic:
   - retrieval
 status: growing
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-16
 last_checked: 2026-05-12
 freshness: watch
 source:
@@ -22,6 +22,11 @@ related:
   - "[[Query Planning]]"
   - "[[Agentic Retrieval]]"
   - "[[Hybrid Search]]"
+  - "[[Multi-Query Retrieval]]"
+aliases:
+  - "Query Rewriting"
+  - "查询改写"
+  - "问题改写"
 ---
 
 # Query Rewrite
@@ -34,7 +39,7 @@ Query Rewrite 是把用户原始问题改写成更适合检索系统的查询表
 
 用户提问通常是面向人类的自然语言，而检索系统需要更明确的关键词、实体、同义词、过滤条件或子表达。Query Rewrite 介于用户问题和 [[Retriever]] 之间：它不改变用户真正想问的任务，而是把问题变成更容易被向量检索、关键词检索、hybrid search 或结构化过滤命中的形式。
 
-最简单的 rewrite 是补全省略词、替换同义词、展开缩写、提取关键词或生成多种检索 query。例如用户问“那个框架支持可恢复执行吗？”系统可能结合上下文改写成“LangGraph durable execution checkpoint human-in-the-loop”。复杂一点的 rewrite 会保留原问题，同时生成多个候选查询并合并结果。
+最简单的 rewrite 是补全省略词、替换同义词、展开缩写、提取关键词或生成多种检索 query（[[Multi-Query Retrieval]]）。例如用户问“那个框架支持可恢复执行吗？”系统可能结合上下文改写成“LangGraph durable execution checkpoint human-in-the-loop”。复杂一点的 rewrite 会保留原问题，同时生成多个候选查询并合并结果。
 
 证据边界：[[Retriever]] 卡已经把 query rewrite 放在现代 retriever 的组成部分；[[Azure AI Search Agentic Retrieval]] 支持复杂检索中 query planning、多查询和 knowledge source 的现代方向。本卡只沉淀 rewrite 这个最小动作，不把它等同于完整 agentic retrieval。
 

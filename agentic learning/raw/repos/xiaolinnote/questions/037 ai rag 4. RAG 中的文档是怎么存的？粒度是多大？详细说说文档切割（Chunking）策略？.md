@@ -9,7 +9,7 @@ topic:
   - "rag"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-16
 url: "https://xiaolinnote.com/ai/rag/4_chunking.html"
 source: "https://xiaolinnote.com/ai/rag/4_chunking.html"
 last_checked: 2026-05-07
@@ -21,6 +21,9 @@ related:
   - "[[Chunking]]"
   - "[[Document Ingestion]]"
   - "[[Vector Database]]"
+  - "[[Parent-Child Chunking]]"
+  - "[[Dense Retrieval]]"
+  - "[[Retriever]]"
 ---
 # 4. RAG 中的文档是怎么存的？粒度是多大？详细说说文档切割（Chunking）策略？
 
@@ -33,7 +36,9 @@ related:
 - [[Chunking]]
 - [[Document Ingestion]]
 - [[Vector Database]]
-
+- [[Parent-Child Chunking]]
+- [[Dense Retrieval]]
+- [[Retriever]]
 ## 页面正文
 
 
@@ -54,7 +59,7 @@ related:
 
 🙋‍♂️我：呃……那就切成 500 token，用固定大小加重叠就行了吧？
 
-👔面试官：固定大小加重叠只是最基础的策略。语义边界切割呢？父子切割呢？代码按函数切呢？你一个都说不出来，只会一种最简单的方案，面试怎么过的？
+👔面试官：固定大小加重叠只是最基础的策略。语义边界切割呢？[[Parent-Child Chunking|父子切割]]呢？代码按函数切呢？你一个都说不出来，只会一种最简单的方案，面试怎么过的？
 
 好吧，被问住了。Chunking 这块看起来简单，但里面的学问不少，下面我来详细讲。
 
@@ -152,7 +157,7 @@ related:
 
 理解了前面几种策略各自的局限——固定大小可能切断语义，语义边界切割质量好但粒度不好控制，你自然会问：有没有一种策略能同时兼顾检索精度和上下文完整？父子切割就是在回答这个问题。这是在实际工程里效果提升最显著的策略之一，核心思路可以用一句话概括：**检索时用放大镜（小块，精准定位），返回时用全景图（大块，上下文完整）**。
 
-存储时，同一段内容存两份。一份是细粒度的小 chunk（比如 200 token），专门用于向量检索，因为小 chunk 语义聚焦，围绕一个小话题，检索精度高。另一份是包含这个小 chunk 前后上下文的大 chunk（比如 1000 token），通过 ID 与对应的小 chunk 关联。检索时用小 chunk 找到精准的命中点，然后根据关联 ID 取出对应的大 chunk，把完整的上下文交给 LLM 阅读，生成质量更好。
+存储时，同一段内容存两份。一份是细粒度的小 chunk（比如 200 token），专门用于[[Dense Retrieval|向量检索]]，因为小 chunk 语义聚焦，围绕一个小话题，检索精度高。另一份是包含这个小 chunk 前后上下文的大 chunk（比如 1000 token），通过 ID 与对应的小 chunk 关联。检索时用小 chunk 找到精准的命中点，然后根据关联 ID 取出对应的大 chunk，把完整的上下文交给 LLM 阅读，生成质量更好。
 
 好比图书馆找书：你用目录卡（小 chunk）快速定位到某章某节，但拿出来读的是完整的那一章（大 chunk），不是只读目录卡上的那句简介。
 

@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-15
+updated: 2026-05-16
 related:
   - "[[Agent]]"
   - "[[前沿主源清单]]"
@@ -166,15 +166,21 @@ SORT file.name ASC
 - [x] [[Embedding]]
 - [x] [[TF-IDF]]
 - [x] [[Sparse Retrieval]]
+- [x] [[Dense Retrieval]]
 - [x] [[BM25]]
 - [x] [[Vector Database]]
 - [x] [[Top-K]]
 - [x] [[Chunking]]
+- [x] [[Parent-Child Chunking]]
 - [x] [[Reranking]]
+- [x] [[Cross-Encoder]]
 - [x] [[Multi-Route Retrieval]]
+- [x] [[Multi-Query Retrieval]]
+- [x] [[Reciprocal Rank Fusion]]
 - [x] [[Hybrid Search]]
 - [x] [[Document Ingestion]]
 - [x] [[RAG Evaluation]]
+- [x] [[Context Recall]] / [[Context Precision]]
 - [x] [[Context Engineering]]
 - [x] [[Neo4j]]
 - [x] [[Guardrails]]

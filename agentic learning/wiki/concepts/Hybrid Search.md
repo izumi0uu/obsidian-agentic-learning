@@ -5,7 +5,7 @@ topic:
   - retrieval
 status: growing
 created: 2026-05-06
-updated: 2026-05-15
+updated: 2026-05-16
 last_checked: 2026-05-15
 freshness: watch
 conflicts: []
@@ -33,11 +33,17 @@ related:
   - "[[Retriever]]"
   - "[[Reranking]]"
   - "[[Agentic Retrieval]]"
-- "[[RAG Evaluation]]"
-- "[[TF-IDF]]"
-- "[[Sparse Retrieval]]"
-- "[[BM25]]"
-- "[[Multi-Route Retrieval]]"
+  - "[[RAG Evaluation]]"
+  - "[[TF-IDF]]"
+  - "[[Sparse Retrieval]]"
+  - "[[BM25]]"
+  - "[[Multi-Route Retrieval]]"
+  - "[[Dense Retrieval]]"
+  - "[[Reciprocal Rank Fusion]]"
+aliases:
+  - "混合检索"
+  - "hybrid search"
+  - "hybrid retrieval"
 ---
 
 # Hybrid Search
@@ -52,7 +58,7 @@ Hybrid Search 出现的原因是：单一检索信号通常不够。向量检索
 
 在 RAG pipeline 中，hybrid search 常用于初召回：同一个 query 同时进入 vector search 和 [[BM25]] / fulltext search，两边各取一批候选，再合并、去重、过滤、融合排序，必要时交给 [[Reranking]] 重新排序。它不是简单把两个列表拼在一起，因为不同检索器的分数尺度不同，向量相似度和 BM25 分数不能直接相加；重复文档需要合并，metadata filter 和权限过滤要在正确阶段生效，排序策略也会影响最终上下文。
 
-常见融合方式包括加权归一化和 RRF（Reciprocal Rank Fusion，倒数排名融合）。RRF 的学习价值在于：它主要看各路结果里的排名，而不是直接比较原始分数，因此适合把分数量纲不同的检索器结果合在一起。具体用哪种融合策略不是 Hybrid Search 的定义本身，而是工程实现和评估问题。
+常见融合方式包括加权归一化和 [[Reciprocal Rank Fusion|RRF]]（Reciprocal Rank Fusion，倒数排名融合）。RRF 的学习价值在于：它主要看各路结果里的排名，而不是直接比较原始分数，因此适合把分数量纲不同的检索器结果合在一起。具体用哪种融合策略不是 Hybrid Search 的定义本身，而是工程实现和评估问题。
 
 Hybrid Search 的边界是检索召回与初排。它能提高“找得到相关资料”的概率，但不能保证答案忠实，也不能替代 citation check、RAG evaluation 或人工审核。如果向量和关键词召回都没有找到正确证据，reranker 和 generator 也只能在错误候选里工作。
 

@@ -5,7 +5,7 @@ topic:
   - llm
 status: growing
 created: 2026-05-06
-updated: 2026-05-15
+updated: 2026-05-16
 last_checked: 2026-05-10
 freshness: stable
 conflicts: []
@@ -23,6 +23,7 @@ related:
   - "[[Retriever]]"
   - "[[Chunking]]"
   - "[[TF-IDF]]"
+  - "[[Dense Retrieval]]"
 ---
 
 # Embedding

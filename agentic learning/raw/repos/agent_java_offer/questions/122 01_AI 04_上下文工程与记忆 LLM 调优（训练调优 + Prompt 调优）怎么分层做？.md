@@ -10,7 +10,7 @@ topic:
   - "memory"
 status: inbox
 created: 2026-05-09
-updated: 2026-05-15
+updated: 2026-05-16
 url: "https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/04_%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B7%A5%E7%A8%8B%E4%B8%8E%E8%AE%B0%E5%BF%86/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md"
 source: "https://github.com/guoguo-tju/agent_java_offer"
 source_path: "docs/interview_prep/01_AI/04_上下文工程与记忆/01_核心问答.md"
@@ -47,6 +47,7 @@ related:
   - "[[Hallucination]]"
   - "[[LLM Training Pipeline]]"
   - "[[LLM]]"
+  - "[[Dense Retrieval]]"
 ---
 
 # [[LLM]] 调优（训练调优 + [[Prompt]] 调优）怎么分层做？
@@ -81,7 +82,7 @@ related:
 - [[Hallucination]]
 - [[LLM Training Pipeline]]
 - [[LLM]]
-
+- [[Dense Retrieval]]
 ## 题目正文
 
 ### 2. 子问题：LLM 调优（训练调优 + Prompt 调优）怎么分层做？
@@ -101,7 +102,7 @@ related:
 **L2 检索与工具链路调优（第二层）**
 
 1. RAG 数据治理：清洗、去重、切块策略、元数据标签。
-2. 检索策略优化：[[Retriever|向量检索]] + 关键词检索 + 重排（hybrid + [[Reranking|rerank]]）。
+2. 检索策略优化：[[Dense Retrieval|向量检索]] + 关键词检索 + 重排（hybrid + [[Reranking|rerank]]）。
 3. [[Query Rewrite|查询改写]]：multi-query、HyDE、同义词扩展，提升召回。
 4. 工具编排：路由器决定“直接答/检索/调工具”，设置信心阈值和兜底。
 5. 结果校验：工具返回做 schema 校验、规则校验，失败自动重试或降级。

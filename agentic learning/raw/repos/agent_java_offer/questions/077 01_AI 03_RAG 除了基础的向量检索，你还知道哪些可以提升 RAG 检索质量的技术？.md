@@ -10,7 +10,7 @@ topic:
   - "rag"
 status: inbox
 created: 2026-05-09
-updated: 2026-05-15
+updated: 2026-05-16
 url: "https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/03_RAG/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md"
 source: "https://github.com/guoguo-tju/agent_java_offer"
 source_path: "docs/interview_prep/01_AI/03_RAG/01_核心问答.md"
@@ -42,9 +42,13 @@ related:
   - "[[Sparse Retrieval]]"
   - "[[TF-IDF]]"
   - "[[Vector Database]]"
+  - "[[Dense Retrieval]]"
+  - "[[Multi-Route Retrieval]]"
+  - "[[Multi-Query Retrieval]]"
+  - "[[Cross-Encoder]]"
 ---
 
-# 除了基础的[[Retriever|向量检索]]，你还知道哪些可以提升 [[RAG]] 检索质量的技术？
+# 除了基础的[[Dense Retrieval|向量检索]]，你还知道哪些可以提升 [[RAG]] 检索质量的技术？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/03_RAG/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/03_RAG/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -71,14 +75,17 @@ related:
 - [[Sparse Retrieval]]
 - [[TF-IDF]]
 - [[Vector Database]]
-
+- [[Dense Retrieval]]
+- [[Multi-Route Retrieval]]
+- [[Multi-Query Retrieval]]
+- [[Cross-Encoder]]
 ## 题目正文
 
 ### 2. 子问题：除了基础的向量检索，你还知道哪些可以提升 RAG 检索质量的技术？
 
 答：
 
-主要可以分为**增强检索器**和**优化查询**, 优化索引结构三块。
+主要可以分为**增强[[Retriever|检索器]]**和**优化查询**, 优化索引结构三块。
 
 **一、 增强检索器（Improving the Retriever）**
 
@@ -90,7 +97,7 @@ related:
 2. **[[Reranking|重排序]]（Re-ranking）：**
   - **技术：** 采用一个 **两阶段（two-stage）** 的检索流程。
   1. **召回（Recall）：** 先用一个快速但相对粗糙的方法（如向量搜索或混合搜索）从海量文档中召回一个较大的候选集（例如Top 50）。
-  2. **重排（Re-rank）：** 再使用一个更强大、更复杂的模型（通常是**Cross-Encoder**）对这个小候选集进行精细化的重排序，选出最终的Top-N（例如Top 5）作为上下文。
+  2. **重排（Re-rank）：** 再使用一个更强大、更复杂的模型（通常是**[[Cross-Encoder]]**）对这个小候选集进行精细化的重排序，选出最终的Top-N（例如Top 5）作为上下文。
     优势：** Cross-Encoder可以直接比较查询和文档的文本，捕捉更细粒度的相关性，精度远高于单纯的向量相似度，极大地提升了最终上下文的质量。
 
 **二、 优化查询（Improving the Query）**
@@ -98,7 +105,7 @@ related:
 1. **query扩展与转换（Query Expansion & Transformation）：**
   - **技术：** 不直接使用用户的原始查询进行检索，而是先用[[LLM]]对查询进行“加工”。
   - **方法：**
-    - **多查询检索（Multi-Query Retrieval）：** 让LLM针对原始问题，从不同角度生成多个不同的查询，然后对所有查询的检索结果进行合并。
+    - **[[Multi-Query Retrieval|多查询检索]]（Multi-Query Retrieval）：** 让LLM针对原始问题，从不同角度生成多个不同的查询，然后对所有查询的检索结果进行合并。
     - **HyDE（Hypothetical Document [[Embedding|Embeddings]]）：** 让LLM先针对问题生成一个“假设性”的答案，然后用这个假设性答案的嵌入去检索，因为答案的文本和目标文档的文本在形式上更相似。
     - **子问题查询（Sub-Querying）：** 对于复杂问题，先将其分解成多个简单的子问题，分别检索，再汇总结果。
 

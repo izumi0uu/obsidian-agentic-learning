@@ -6,7 +6,7 @@ topic:
   - search
 status: growing
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-16
 last_checked: 2026-05-15
 freshness: stable
 conflicts: []
@@ -27,6 +27,8 @@ related:
   - "[[Embedding]]"
   - "[[Retriever]]"
   - "[[Reranking]]"
+  - "[[Dense Retrieval]]"
+  - "[[Reciprocal Rank Fusion]]"
 ---
 
 # Sparse Retrieval

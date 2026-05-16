@@ -43,6 +43,10 @@ related:
   - "[[BM25]]"
   - "[[Query Rewrite]]"
   - "[[Reranking]]"
+  - "[[Dense Retrieval]]"
+  - "[[Multi-Query Retrieval]]"
+  - "[[Reciprocal Rank Fusion]]"
+  - "[[Cross-Encoder]]"
 ---
 
 # Multi-Route Retrieval

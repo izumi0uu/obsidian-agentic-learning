@@ -62,7 +62,7 @@
   "ReAct": ["ReAct", "Reasoning and Acting"],
   "Reasoning Trace": ["Reasoning Trace", "推理轨迹", "推理链路"],
   "Reranking": ["Reranking", "重排序", "rerank", "重排"],
-  "Retriever": ["Retriever", "检索器", "向量检索", "召回器"],
+  "Retriever": ["Retriever", "检索器", "召回器"],
   "Sandbox Workspace": ["Sandbox Workspace", "沙箱工作区", "隔离工作区"],
   "Self-RAG": ["Self-RAG", "自反思 RAG"],
   "Semantic Memory": ["Semantic Memory", "语义记忆"],
@@ -78,5 +78,12 @@
   "Vector Database": ["Vector Database", "向量数据库", "向量库"],
   "RAG 主题": ["RAG 主题"],
   "Agent 主题": ["Agent 主题"],
-  "LLM 主题": ["LLM 主题"]
+  "LLM 主题": ["LLM 主题"],
+  "Context Precision": ["Context Precision", "上下文精确率"],
+  "Context Recall": ["Context Recall", "上下文召回率"],
+  "Cross-Encoder": ["Cross-Encoder", "Cross-encoder", "cross-encoder", "交叉编码器"],
+  "Dense Retrieval": ["Dense Retrieval", "dense retrieval", "向量检索", "密集检索", "vector retrieval", "dense vector retrieval"],
+  "Multi-Query Retrieval": ["Multi-Query Retrieval", "Multi-Query", "Multi Query Retrieval", "多 Query 扩展", "多 Query 扩展召回", "多查询检索", "多查询召回"],
+  "Parent-Child Chunking": ["Parent-Child Chunking", "Parent Child Chunking", "父子切割", "父子 Chunking", "Parent-Child 索引", "父子索引"],
+  "Reciprocal Rank Fusion": ["Reciprocal Rank Fusion", "RRF", "RRF 算法", "倒数排名融合", "互倒排名融合"]
 }
