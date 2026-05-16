@@ -964,8 +964,15 @@ related:
 - 自动链接验证：脚本新增/修正 `[[Reranking|Rerank]]`、`[[Tool Use|Tools]]`、`[[Tool Calling|调工具]]`、`[[Tool Calling|Function Calling]]`；后续 dry-run 回到 0 would-modify、0 missing candidates、0 protected-region violations。
 - Boundary: 本轮没有把所有 alias map 词条批量写入概念卡 frontmatter；generic/broad/false-friend 风险项先保留在审计报告和 backlog，避免把“相关”误写成“同义”。
 
+## [2026-05-16] maintenance | bilingual rules kept abstract
+
+- 收紧项目规则的表达层级：在 `AGENTS.md`、[[LLM Wiki 工作流]]、[[字段规范]] 中，把术语对齐规则保留为方法论与边界判断，不把细分 agent / RAG 术语写成规则词表。
+- 具体词例、子策略、指标和代表算法继续留在概念卡正文、`relations`、[[08 面试题概念卡待补充]]、审计报告和 raw 证据页中；规则只负责说明“如何判定、如何落地、如何验证”。
+- Boundary: 这是控制面抽象瘦身，不是放弃术语边界；同义词、子策略、指标和 false friend 仍然要在知识层单独判断。
+
 ## [2026-05-16] wiki | Abstract Folder 英文显示优先
 
 - 将 `.obsidian/plugins/abstract-folder/data.json` 的 `displayNameOrder` 改为 `title -> basename`，并把 `showAliases` 关掉，让 Abstract Folder 不再把 `aliases` 当默认显示名来源。
+- 为两张遗留中文概念卡补充英文 `title`：[[OMX $ 指令]] → `OMX $ Commands`，[[双链]] → `Bidirectional Links`，从而让 Abstract Folder 概念树显示全量落到英文。
 - 更新 [[插件配置]]：补充显示名策略说明，强调 `aliases` 只保留给搜索和术语对齐；少数旧卡如果需要英文显示名，可以再补 `title`。
 - Boundary: 这次只改虚拟树的显示优先级，不改概念卡语义，不批量重命名文件。

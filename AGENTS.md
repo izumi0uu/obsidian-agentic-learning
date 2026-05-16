@@ -39,12 +39,13 @@ Hard requirements:
    - merge into an existing broader card
    - backlog candidate because the English canonical name or boundary is uncertain
    - forbidden mapping / false friend
-4. Do not map a Chinese term to the nearest English card just because it is related. Example: `多路召回` may overlap with `[[Hybrid Search]]`, but it is broader than vector+BM25 hybrid search and must not be silently equated.
+4. Do not map a Chinese term to the nearest English card just because it is related. Overlap is not equivalence; a broader, narrower, or adjacent concept must stay out of `aliases`.
 5. If the term is not stable enough for a card, write it to `[[08 面试题概念卡待补充]]` or `[[05 Query 写回队列]]`; do not create weak concept cards.
 6. When a new canonical concept is accepted, synchronize all affected surfaces: concept card frontmatter `aliases`, `related` / `up` / `relations`, relevant raw-question `related` and `## 相关知识 wiki`, `scripts/interview_question_concept_aliases.json` when interview auto-linking should know it, maps/indexes when navigation changes, and `log.md`.
 7. Validate with the relevant audit path, at minimum `git diff --check`; for interview links also run `python3 scripts/interview_question_concept_links.py --self-test` and a dry-run.
 
 Boundary: this gate is mandatory for terminology alignment. It does not mean every bilingual term deserves a card; it means every durable mapping must have an explicit boundary decision.
+Rule shape: keep this rule at the method level. Do not turn project rules into a fixed vocabulary list; concrete term pairs, edge cases, and representative false-friend examples belong in concept cards, audit reports, backlog pages, or topic pages.
 
 ## Top Hard Rule: New Concept Mention Backlink Sweep
 

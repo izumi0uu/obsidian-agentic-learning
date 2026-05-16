@@ -86,11 +86,11 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 
 ## 中英文术语对齐 / Bilingual Terminology Audit
 
-当任务涉及新增概念卡、更新概念卡、给面试题/raw 正文加概念链接、维护 alias map、或整理一批中文面试题术语时，必须先做中英文术语对齐。目标不是把所有中文词都建卡，而是避免“中文词被错误映射到相邻英文概念”。
+当任务涉及新增概念卡、更新概念卡、给面试题/raw 正文加概念链接、维护 alias map、或整理一批中文面试题术语时，必须先做中英文术语对齐。目标不是把所有中文词都建卡，也不是把规则写成词表；目标是避免“中文词被错误映射到相邻英文概念”，并把可复用的边界沉淀到合适的知识层。
 
 ### 触发条件
 
-- 中文术语和英文术语同时出现，例如 `多路召回 / Multi-Route Retrieval`、`上下文召回率 / Context Recall`。
+- 中文术语和英文术语同时出现，且可能对应不同边界（例如 route、metric、sub-strategy、component）。
 - 中文资料使用了工程俗称，但 `wiki/concepts/` 里只有英文概念卡。
 - 一个中文词可能对应多个英文边界，例如“召回”可能是 retrieval、recall metric、candidate generation。
 - 批量脚本、team、alias map 或 raw-question 内联链接会影响很多页面。
@@ -105,6 +105,7 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
    - 并入已有卡：术语只是已有卡的别名、子策略或指标，不单独建卡。
    - 候选 backlog：英文 canonical name、证据或边界不稳。
    - 禁止映射：属于 false friend，后续 alias map 不得自动链接。
+   - 术语判断表是工作表，不是规则词表；细分案例写进审计报告、概念卡或 backlog，不回灌成项目规则。
 4. canonical name 选择优先级：
    - 论文、官方文档或事实标准中的稳定英文名优先。
    - 社区工程常用英文名其次。
@@ -126,10 +127,14 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 
 ### 反例边界
 
-- `多路召回` 不能默认等于 [[Hybrid Search]]。Hybrid Search 常指 sparse + dense / vector + BM25 的混合；多路召回可以更宽，包括多 Query、图检索、metadata filter、不同索引粒度或多 retriever。
-- `Memory` 不能默认链接 JVM memory、off-heap memory 或数据库缓存。
-- `ReAct` 不能默认链接 Netty Reactor。
-- `Context Recall` 是 RAG evaluation 指标，不是普通“召回层”的同义词。
+- 不要把宽泛中文工程俗称直接等同为某个狭义英文卡名。
+- 不要把通用词直接挂到别的技术领域的同名概念上。
+- 不要把评估指标、子策略、代表算法当成同义词。
+- 不要把行为层、接口层和能力集合混成一个 alias 族。
+- 例如：`多路召回` 不能默认等于 [[Hybrid Search]]；Hybrid Search 常指 sparse + dense / vector + BM25 的混合；多路召回可以更宽，包括多 Query、图检索、metadata filter、不同索引粒度或多 retriever。
+- 例如：`Memory` 不能默认链接 JVM memory、off-heap memory 或数据库缓存。
+- 例如：`ReAct` 不能默认链接 Netty Reactor。
+- 例如：`Context Recall` 是 RAG evaluation 指标，不是普通“召回层”的同义词。
 
 ### 验收
 
