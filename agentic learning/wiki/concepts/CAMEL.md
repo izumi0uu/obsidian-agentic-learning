@@ -7,7 +7,11 @@ topic:
   - prompting
 status: growing
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-16
+
+up:
+  - "[[Agent Framework]]"
+
 last_checked: 2026-05-12
 freshness: volatile
 conflicts: []

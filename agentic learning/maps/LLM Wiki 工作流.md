@@ -192,6 +192,42 @@ python3 scripts/interview_question_concept_links.py --self-test
 python3 scripts/interview_question_concept_links.py --dry-run
 ```
 
+## 概念关系批量写回门禁 / Relation Writeback Gate
+
+当任务涉及全库概念关系评估、脚本生成候选边、或把 `up` / `relations` 写回多张概念卡时，必须把它当系统性变更处理。临时关系图只是证据雷达，不是最终 taxonomy。
+
+### 触发条件
+
+- 从 `.omx/reports/concept-card-relation-map/`、审计脚本或其它批量工具生成候选关系。
+- 准备给多张 `wiki/concepts/*.md` 新增或修改 `up`。
+- 准备把普通 `related`、正文 wikilink、topic family 或标题启发式升格为层级关系。
+
+### 强制流水线
+
+1. **临时图全量生成**：先生成全库关系图，记录现有 `up`、`relations`、`related`、正文 wikilink 和候选边。
+2. **候选关系台账**：每条 candidate 必须有明确 decision：`accept_taxonomy`、`reject_taxonomy`、`defer_taxonomy`、`adjacency_only` 或 `duplicate_signal`。
+3. **dry-run 写回**：只把 `accept_taxonomy` 且目标字段为 `up` 的边放入 dry-run；dry-run 不改概念卡。
+4. **小批量 apply**：写回必须带 limit，例如 `writeback.py --apply --limit 12`；禁止无界全量 apply。
+5. **插件兼容验证**：验证只新增子卡顶层 `up`；不手写 `down`、不常规化 `children`、不新增 Juggl 或 Breadcrumbs 非 taxonomy 镜像字段。
+6. **日志与控制面同步**：若规则或脚本行为改变，更新本页、字段规范/计划文档和 `log.md`。
+
+### 判定边界
+
+- `up` 只表示严格上位 / belongs-to。
+- `relations` 表示非 taxonomy 的 typed relation，需要 `type + target + note`。
+- `related` 是普通邻接，不证明父子。
+- 正文 wikilink 是提及证据，不证明父子。
+- `topic_family_review` 只能用于分组复核，永远不能直接写入 `up`。
+- 标题规则只能提出候选；除非卡片正文/一句话/边界支持“X 是 Y 的一种”，否则不能落地。
+
+### 验收
+
+- 台账覆盖所有候选边，并保留 reject / defer 的理由。
+- apply report 能列出每张被修改的概念卡、目标父概念和理由。
+- 重新生成临时图后，新增 taxonomy 边数量与 apply report 对得上。
+- Abstract Folder / Breadcrumbs 兼容检查 0 problems。
+- `git diff --check` 通过；若存在本任务外的历史 diff，最终报告必须说明边界，不得误称全部由本次写回产生。
+
 ## 角色分工
 
 ### 用户负责

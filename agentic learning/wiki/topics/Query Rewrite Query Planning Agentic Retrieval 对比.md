@@ -7,7 +7,7 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-15
+updated: 2026-05-16
 source:
   - "[[Retriever]]"
   - "[[Query Rewrite]]"
@@ -106,6 +106,12 @@ question -> plan -> retrieve -> inspect evidence -> refine/retrieve again -> pac
 
 边界细节：越往 agentic retrieval 走，越需要 [[Trace]]、预算限制、失败样本和 [[RAG Evaluation]]，否则“聪明检索”会变成不可复现的高延迟黑箱。
 
+## 学习类比（非证据）
+
+可以把检索决策类比成问图书馆：Query Rewrite 是把问题说清楚，Query Planning 是决定要查哪些书架和顺序，Agentic Retrieval 是边查边看结果、必要时改路线。
+
+类比边界：这只是学习类比（非证据），不代表论文、官方文档或具体产品内部真的按这个类比实现。
+
 ## 现代系统如何吸收或限制
 
 现代企业搜索和 RAG 平台正在把 query rewrite、query decomposition、source selection、multi-query retrieval 和 result grounding 做成检索层能力。现代性状态是 **current-practice + frontier/watch**：简单 rewrite 和 hybrid search 已是常见工程实践；自动 query planning、跨源 agentic retrieval 和动态证据评价仍然依赖具体平台、数据源质量和 observability。
@@ -135,6 +141,9 @@ question -> plan -> retrieve -> inspect evidence -> refine/retrieve again -> pac
 - 主题锚点：[[Retrieval 组件对比#证据锚点]], [[RAG 类型对比#证据锚点]], [[RAG 主题#证据锚点]], [[Parallel Search and Explicit Merging 检索模式#证据锚点]]。
 - 证据边界：本页的“什么时候用哪个”是工程综合 / inference；具体平台对 agentic retrieval 的 API、限制和可观测字段需要复查官方文档。
 
+- Evidence type: retrieval concept cards + Azure/Microsoft/source notes + engineering synthesis.
+- Confidence: high for conceptual boundaries; medium for platform-specific agentic retrieval APIs.
+- Boundary: 本页的使用建议是工程综合 / inference，不替代 Azure AI Search 或其他产品的具体能力边界。
 ## 复习触发
 
 1. “把用户问题改得更清楚”和“把问题拆成多个检索步骤”有什么最小区别？

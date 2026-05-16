@@ -994,3 +994,27 @@ related:
 - 通过 `$autoresearch-goal` 评估 `agentic learning/wiki/concepts/` 下 130 张 `type: concept` 概念卡，并生成临时关系文件：`.omx/reports/concept-card-relation-map/concept-relations-temp.md` 与 `.omx/reports/concept-card-relation-map/concept-relations-temp.json`。
 - 统计：现有 `up` taxonomy 边 11 条，`relations` typed relation 边 25 条，frontmatter `related` 边 702 条，body wikilink 边 241 条；119 张卡暂未写 `up`；core orphan 0；weakly connected 1；dangling core targets 23；候选 review signal 123 条，其中 taxonomy_candidate 36 条、topic_family_review 87 条。
 - Boundary: 这是临时评估图，不自动写回概念卡；`topic_family_review` 只用于分组复核，不是 parent；每条候选 `up` 都需要单独审查后才能落入 `relations` / `up`。
+
+## [2026-05-16] wiki | sqlite-vec 选型边界写回
+
+- 更新 [[Vector Database]]：把 sqlite-vec 归入 “SQLite 嵌入式扩展 / 本地单文件向量检索” 边界，而不是单独建弱概念卡或把它当作独立向量数据库服务。
+- 补充区别：sqlite-vec 负责 SQLite 内的向量存储与 KNN 查询；embedding 生成、权限、多用户隔离、hybrid search、rerank 和评测仍需外部设计；sqlite-vec、sqlite-vss、SQLite 官方 Vec1 不应混成同一个项目。
+- Boundary: 本轮是单卡边界补强，不更新 alias map、面试题链接脚本、模板或项目规则控制面。
+
+## [2026-05-16] maintenance | 审计队列 27+6 一次性批量维护
+
+- 用户明确授权后，一次性处理健康检查剩余队列：27 张概念卡与 6 张 comparison topic。
+- 概念卡修复：补强 `## 概念详解` 的学习解释密度，并为缺口卡补 `Evidence type:` / `Boundary:`，不改 canonical name、aliases、alias map，也不新增概念卡。
+- 对比页修复：补必备 comparison section、学习类比（非证据）、现代系统吸收边界、证据类型 / 置信度 / 边界标记，以及核心区别表中的可比较双链锚点。
+- 控制面：更新 [[06 Wiki 健康检查]] 当前状态和本轮维护记录；未新增 27+6 相关规则，`AGENTS.md`、[[字段规范]] 和模板未改。[[LLM Wiki 工作流]] 若有概念关系门禁 diff，属于独立关系建模维护，不计入本轮验收。
+- Boundary: 这是一次用户授权的系统性批量维护，不代表后续可以默认批量重写旧卡；本轮没有触碰 raw source，也没有处理独立 Juggl 退役分支。
+
+## [2026-05-16] ralph | 概念关系台账与小批量写回流水线
+
+- 实现 `.omx/reports/concept-card-relation-map/` 受控流水线：`build.py` 全量生成临时图，`decide.py` 生成逐条候选关系台账，`writeback.py` 提供 dry-run 与带 limit 的小批量 apply，并拒绝无界 apply；`validate.py` 验证台账、写回报告和 Abstract Folder / Breadcrumbs 兼容性。
+- 生成 pre-writeback 临时图快照：130 张概念卡、11 条现有 `up`、123 条候选 review signal；台账判定为 27 条 accepted taxonomy、8 条 rejected taxonomy、1 条 deferred taxonomy、64 条 adjacency only、23 条 duplicate signal。
+- 执行 `writeback.py --apply --limit 12`，只给首批高置信子卡新增顶层 `up`：[[AgentScope]]、[[Agentic RAG]]、[[Agentic Retrieval]]、[[Audit Log]]、[[AutoGen]]、[[CAMEL]]、[[Corrective RAG]]、[[Crew Orchestration]]、[[Episodic Memory]]、[[GraphRAG]]、[[LangChain DeepAgents]]、[[LangGraph]]。
+- 重新生成 post-writeback 临时图：现有 taxonomy `up` 从 11 增至 23，未写 `up` 的概念从 119 降至 107；剩余 15 条 accepted taxonomy 保留在 dry-run 中等待下一批复核。
+- 同步 [[LLM Wiki 工作流]]、`.omx/plans/prd-concept-hierarchy-modeling.md`、`.omx/plans/test-spec-concept-hierarchy-modeling.md`、`.omx/specs/deep-interview-concept-hierarchy-modeling.md`，把“临时图 → 台账 → dry-run → 小批量写回 → 插件验证”固化为后续关系写回门禁。
+- 验证：`python3 .omx/reports/concept-card-relation-map/writeback.py --apply` 无 `--limit` 时按预期拒绝；`python3 .omx/reports/concept-card-relation-map/validate.py` PASS；`plugin-compat-validation.md` 显示 130 张概念卡 / 23 条 `up` 检查、0 problems；`git diff --check` PASS；计划/规格/工作流 frontmatter parse PASS。
+- Boundary: 本轮没有把 `topic_family_review` 写入 `up`，没有全量盲改 130 张概念卡，没有新增 `down` / 常规 `children` / Juggl 镜像字段；当前工作树存在本轮外的历史概念卡和 topic diff，验证报告按边界记录而不归因给本次小批量写回。

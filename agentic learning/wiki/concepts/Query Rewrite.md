@@ -104,6 +104,7 @@ rewrite：LangGraph human-in-the-loop approval interrupt checkpoint
 - Topic anchor: [[RAG 类型对比#核心区别表]]
 - Evidence type: existing retriever concept + official source note + engineering synthesis.
 
+- Boundary: Query Rewrite 改善检索输入表达，不改变用户真实意图；它不同于 Query Planning 的子任务规划，也不同于 Reranking 的候选排序。
 ## 复习触发
 
 1. Query Rewrite 和 Query Planning 的最小区别是什么？

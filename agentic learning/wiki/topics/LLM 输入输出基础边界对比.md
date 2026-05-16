@@ -8,7 +8,7 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-16
 source:
   - "[[LLM]]"
   - "[[Token]]"
@@ -88,6 +88,12 @@ text / tool results / memory / retrieved docs
 
 小边界：输入进了 context window 只表示模型可见，不表示模型理解、优先使用或正确引用。输出看起来有逻辑，也不表示它被证据支持。
 
+## 学习类比（非证据）
+
+可以把一次 LLM 调用类比成“有限桌面上的写作”：Token 是纸面单位，Context Window 是桌面大小，Prompt 是任务说明和材料摆放，Hallucination 是写出的内容没有被材料支持。
+
+类比边界：这只是学习类比（非证据），不代表论文、官方文档或具体产品内部真的按这个类比实现。
+
 ## 现代系统如何吸收或限制
 
 现代 Agent / RAG 系统把这些基础边界工程化：token 用于预算、延迟和截断控制；context window 用于决定摘要、检索和 memory 投影策略；prompt 被拆成 system/developer/user/tool/result 等消息边界；hallucination 用 RAG、tool calling、citation check、eval harness 和 human review 降低风险。现代性状态是 **foundation + current-practice**：概念本身是地基，围绕长上下文、自动上下文压缩和 faithfulness judge 的产品能力仍是 watch。
@@ -116,6 +122,9 @@ text / tool results / memory / retrieved docs
 - 主题锚点：[[LLM 基础结构对比#证据锚点]], [[RAG 可靠性与治理对比#证据锚点]]。
 - 证据边界：本页是学习边界页；tokenization、context size 和消息角色的具体 API 细节会随模型/供应商变化，需要看官方文档。
 
+- Evidence type: LLM concept cards + Transformer/RAG/agent source notes + learning synthesis.
+- Confidence: high for vault-local boundaries; medium for provider-specific API details.
+- Boundary: tokenizer、context size、message role 和输出限制会随模型/供应商变化，本页只沉淀基础学习边界。
 ## 复习触发
 
 1. 为什么“token 多”和“上下文窗口大”都不等于模型会正确使用证据？

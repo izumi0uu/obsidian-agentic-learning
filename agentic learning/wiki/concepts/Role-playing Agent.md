@@ -7,7 +7,7 @@ topic:
   - framework
 status: growing
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-16
 last_checked: 2026-05-12
 freshness: watch
 source:
@@ -38,6 +38,7 @@ Role-playing Agent 的背景来自多 Agent 对话：如果只让两个模型“
 
 工程综合：Role-playing Agent 是多 Agent 协作的“身份和目标约束层”，不是完整运行时。它需要和工具权限、状态、trace、termination 和 evaluation 一起使用。
 
+Role-playing Agent 的学习价值在于看清“角色约束”如何影响多 Agent 协作。角色提示可以限制讨论范围、分配任务、形成互补视角，但如果没有共享状态、终止条件、质量评估和工具权限，角色只会变成语言层装饰。现代框架常把 role-playing 作为 multi-agent pattern 的一部分，并用 workflow、memory、critic、human review 或 benchmark 来限制对话漂移。
 ## 它解决什么问题
 
 - 多 Agent 对话没有清晰分工，容易互相重复。
@@ -86,6 +87,8 @@ Role-playing Agent 和 [[Crew Orchestration]] 的区别：role-playing 是角色
 - [[CAMEL-AI 官方文档#必读块 2：现代 CAMEL-AI 框架模块]]：现代 CAMEL-AI 模块扩展边界。
 - [[Agent Framework 编排范式对比#AutoGen vs CAMEL]]：AutoGen group chat 与 CAMEL role-playing 的边界。
 
+- Evidence type: official CAMEL docs + framework comparison map + engineering synthesis.
+- Boundary: Role-playing Agent 是角色化协作模式，不等于所有 multi-agent orchestration，也不保证任务分解、工具调用或质量审查。
 ## 复习触发
 
 1. 为什么“你是专家”不是 Role-playing Agent 的全部？

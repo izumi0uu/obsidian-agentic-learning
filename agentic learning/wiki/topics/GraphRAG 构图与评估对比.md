@@ -7,7 +7,7 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-16
 source:
   - "[[GraphRAG]]"
   - "[[Knowledge Graph]]"
@@ -89,6 +89,12 @@ source documents -> entity/relation extraction -> entity resolution -> graph sto
 
 关键边界：GraphRAG 的 evaluation 不能只在最终答案层做。若构图错误进入图数据库，后续检索会稳定地把错误结构当成事实来源。
 
+## 学习类比（非证据）
+
+可以把 GraphRAG 生产线类比成“先建城市地图，再规划路线，再检查地图有没有画错”：Knowledge Graph 是地图，Entity Resolution 是把同一个地点合并，Graph Construction Evaluation 是查地图质量，GraphRAG 是用地图辅助回答。
+
+类比边界：这只是学习类比（非证据），不代表论文、官方文档或具体产品内部真的按这个类比实现。
+
 ## 现代系统如何吸收或限制
 
 现代 GraphRAG 系统通常把图与向量/全文检索结合：向量负责语义召回，图负责关系、路径、社区和实体约束，全文负责精确名称匹配。现代性状态是 **current-practice + frontier/watch**：知识图谱和实体消歧是成熟数据工程概念；LLM 自动构图、社区摘要、图增强 RAG 的最佳评估方法仍在快速演化。
@@ -118,6 +124,9 @@ source documents -> entity/relation extraction -> entity resolution -> graph sto
 - 主题锚点：[[RAG 类型对比#证据锚点]], [[RAG 主题#证据锚点]]。
 - 证据边界：本页的构图流程和判断表是工程综合 / inference；不同 GraphRAG 实现对 community、path、schema 和索引的命名可能不同，需要看具体官方文档。
 
+- Evidence type: concept cards + Neo4j/Microsoft source notes + engineering synthesis.
+- Confidence: high for local concept boundaries; medium for implementation-specific GraphRAG practices.
+- Boundary: 不同 GraphRAG 实现对 community、path、schema、index 的命名不同，本页不替代具体官方文档。
 ## 复习触发
 
 1. 为什么 “GraphRAG 答错” 不能只看最终答案，而要先检查实体抽取、关系抽取和 entity resolution？

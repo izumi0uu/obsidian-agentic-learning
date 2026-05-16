@@ -6,7 +6,7 @@ topic:
   - rag
 status: growing
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-16
 last_checked: 2026-05-12
 freshness: stable
 source:
@@ -38,6 +38,7 @@ Hallucination 的边界要分层看：有些是知识缺失，有些是检索失
 
 证据边界：本卡用现有 [[LLM]]、[[RAG]]、[[RAG Evaluation]] 概念沉淀学习边界，不引入新的论文定义。不同研究和产品会对 hallucination、faithfulness、groundedness、factuality 有不同指标，本卡只保留学习用的稳定判断。
 
+在 Agent 和 RAG 系统里，Hallucination 的边界要比“模型瞎说”更细：可能是模型没有证据却断言，也可能是证据进入上下文但被误读，或者 citation 指向了不支持结论的片段。排查时要把事实来源、上下文、prompt、工具返回、最终回答分层看。现代系统通常用 retrieval grounding、citation checking、LLM-as-judge、人工抽样和 trace 共同定位，而不是期望一个 prompt 完全消除幻觉。
 ## 它解决什么问题
 
 它帮助学习者把“模型说得像真的”与“有证据支持”分开。没有这个概念，容易把流畅性、置信语气或引用格式误认为事实正确。
@@ -93,6 +94,7 @@ Hallucination 不是模型有意识欺骗。
 - Concept anchor: [[RAG Evaluation#概念详解]]
 - Evidence type: existing concept synthesis + engineering inference.
 
+- Boundary: Hallucination 是输出与事实/证据/上下文不一致的失败形态，不等于所有错误、风格不佳或模型不确定。
 ## 复习触发
 
 1. 为什么 hallucination 不是“模型故意撒谎”？

@@ -8,7 +8,7 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-16
 source:
   - "[[RAG Evaluation]]"
   - "[[RAG Citation Faithfulness]]"
@@ -100,6 +100,12 @@ runtime evidence  -> trace/audit/eval sample -> regression monitoring
 
 关键边界：权限和敏感信息过滤越靠前越安全；faithfulness 和 answer quality 越靠近输出越容易检查语义，但不能补救前面已经泄漏的上下文。
 
+## 学习类比（非证据）
+
+可以把 RAG 治理类比成“写报告时的资料室制度”：RAG Evaluation 检查报告质量，Citation Faithfulness 检查脚注是否真支持句子，Access Control 检查作者是否有权看这些资料，Trace/Audit Log 记录过程。
+
+类比边界：这只是学习类比（非证据），不代表论文、官方文档或具体产品内部真的按这个类比实现。
+
 ## 现代系统如何吸收或限制
 
 现代 RAG 平台通常把可靠性拆成评估集、trace、feedback、LLM-as-judge、人工抽样和回归测试；把治理拆成 metadata/ACL filter、tenant isolation、policy engine、audit log、PII/secret scanning 和 least privilege。这里的现代性状态是 **current-practice + frontier/watch**：评估和权限过滤是当前生产实践；自动 faithfulness judge、跨工具数据外泄检测和多租户 Agentic RAG 治理仍在快速演化。
@@ -128,6 +134,9 @@ runtime evidence  -> trace/audit/eval sample -> regression monitoring
 - source notes：[[Microsoft RAG 官方文档]], [[OWASP LLM Top 10 2025]], [[OWASP Agentic Applications Top 10]], [[LangSmith Evaluation and Observability]], [[Langfuse Observability and Evaluation]]。
 - 证据边界：本页的层次表和时序图是基于上述卡片的工程综合 / inference；具体产品能力、API 字段和安全清单需要按 source note 的 `last_checked` 复查。
 
+- Evidence type: RAG evaluation/security concept cards + Microsoft/OWASP/product source notes + engineering synthesis.
+- Confidence: high for layered failure taxonomy; medium for product-specific controls.
+- Boundary: 本页不是合规清单或安全认证；具体权限、审计字段和风险等级必须回到组织策略与官方文档。
 ## 复习触发
 
 1. 一个 RAG 答案带了引用但仍然错，你如何区分 retrieval failure、citation unfaithfulness 和 hallucination？

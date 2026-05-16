@@ -23,15 +23,15 @@ related:
 
 - Last lint: 2026-05-16
 - Missing links: none
-- Concept cards: 130；`scripts/concept_card_audit.py --format markdown` 显示 Needs action = 27。
-- Comparison topic pages: 23；`scripts/comparison_topic_audit.py --format markdown` 显示 Needs action = 6。
+- Concept cards: 130；`scripts/concept_card_audit.py --format markdown` 显示 Needs action = 0。
+- Comparison topic pages: 23；`scripts/comparison_topic_audit.py --format markdown` 显示 Needs action = 0。
 - Raw markdown pages: 908；其中 frontmatter `type: source` 859。主源清单仍看 [[资料收集索引]]。
 - Paper source audit: `scripts/paper_source_audit.py` 检查 `raw/papers/` 45 个文件，PASS。
 - Interview concept link audit: `scripts/interview_question_concept_links.py --self-test` PASS；`--dry-run` 扫描 757 个题页，would modify 0，missing concept candidates 0，protected region violations 0。
 - Query write-back pending: 2（概念对比候选队列中 P3 两项暂不强行成页）。
-- Current action queues: 27 张概念卡需要小修 evidence / detail；6 张对比 topic 需要补模板 section / evidence boundary。不要一次性批量重写，按主题小批量修。
+- Current action queues: concept-card audit 与 comparison-topic audit 的本轮 needs-action 队列已清空；后续新缺口继续由每周审计重新进入队列。
 
-边界：本节是“当前状态”，会覆盖上方读者对最新健康状态的理解；旧的 2026-05-10 / 2026-05-11 数字保留下方历史小节，不能再被当成现状。Needs action 代表排队修复，不代表要一次性批量重写旧卡；批量修复旧卡前需要用户确认。
+边界：本节是“当前状态”，会覆盖上方读者对最新健康状态的理解；旧的 2026-05-10 / 2026-05-11 数字和“27+6”队列保留下方历史小节，不能再被当成现状。本次 27+6 全量修复是用户明确授权的一次性系统性批量维护；以后仍不要在未确认时批量重写旧卡。Needs action = 0 只表示固定审计脚本当前通过，不表示所有概念卡已经达到百科式深度。
 
 ## 每周检查清单
 
@@ -75,6 +75,23 @@ related:
 - 本轮只同步规则控制面、导航入口、模板日期和审计命令，不修 concept / comparison 正文。
 - [[08 面试题概念卡待补充]] 和 [[08 面试题概念链接待办]] 已纳入入口 / 页面目录，后续 weekly maintenance 必须检查。
 - 旧健康检查数字保留为历史，不能覆盖“当前状态”。
+
+## 2026-05-16 审计队列一次性批量维护
+
+用户明确授权一次性处理上一轮健康检查留下的 27 张概念卡和 6 张对比 topic。本轮属于系统性批量维护，但没有改变字段语义、alias 规则、概念卡标准或对比页模板规则；因此控制面同步范围限定为本页当前状态与 `log.md`。
+
+### 修复结果
+
+| 检查项 | 修复前 | 修复后 | 处理 |
+|---|---:|---:|---|
+| Concept Card Audit | 130 张概念卡；Needs action = 27 | 130 张概念卡；Needs action = 0 | 补 `## 概念详解` 深度、`Evidence type:`、`Boundary:` |
+| Comparison Topic Audit | 23 张对比 topic；Needs action = 6 | 23 张对比 topic；Needs action = 0 | 补必备 section、证据类型 / 置信度 / 边界标记、核心表链接锚点 |
+
+### 维护边界
+
+- 没有新增概念卡、没有改 canonical name、没有改 `aliases` 或面试题 alias map，因此没有触发新的中英术语映射落库或新概念 backlink sweep。
+- 没有改 raw source；概念卡和对比页只补学习解释、证据类型和边界说明。
+- 本轮没有新增 27+6 修复规则；`AGENTS.md`、[[字段规范]] 和模板未改，[[LLM Wiki 工作流]] 无 27+6 相关规则变更。若工作树中存在概念关系写回门禁 diff，它属于独立关系建模维护，不计入本轮验收。
 
 ## 2026-05-10 概念卡标准化 lint
 

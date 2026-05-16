@@ -7,7 +7,7 @@ topic:
   - frontier
 status: active
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-16
 last_checked: 2026-05-12
 freshness: volatile
 source:
@@ -113,6 +113,16 @@ LLM call
 | message-centered multi-agent platform / 分布式实验与应用 | AgentScope | message、agent、tool、memory、observability、deployment、distributed 是平台线索 | 官方能力广，不等于所有部署都低成本可扩展 |
 | [[Role-playing Agent|role-playing]] / agent society / communicative agents 研究与框架 | CAMEL | 原始地基是 role-playing + inception prompting，现代扩展到 agents/societies/memory/RAG | paper 范式不等于生产成熟度；与 AutoGen group chat 要切开 |
 
+## 核心区别表
+
+| 框架 / 路线 | 主要抽象 | 最适合判断的问题 | 容易误用的边界 | 证据锚点 |
+|---|---|---|---|---|
+| [[State Graph Runtime]] / [[LangGraph]] | state、node、edge、durable execution | 复杂流程是否需要可恢复状态图？ | 不等于所有 Agent SDK；简单脚本可能过重 | [[LangGraph 官方文档#一句话]] |
+| [[Provider-first Agent SDK]] / OpenAI Agents SDK | agent、tool、handoff、guardrail、trace | 是否优先绑定模型供应商生态？ | 不等于通用 workflow runtime | [[OpenAI Agents SDK 文档#一句话]] |
+| [[Type-safe Agent SDK]] / Pydantic AI | 类型、schema、依赖注入、结构化输出 | 是否要用类型边界压住工具和输出漂移？ | 类型安全不保证模型推理正确 | [[Pydantic AI 官方文档#必读块 1：type-safe agent framework 定位]] |
+| [[Data-first Agent Framework]] / LlamaIndex | 数据、索引、query engine、agent workflow | 任务是否以知识检索和数据连接为中心？ | 不自动解决复杂 runtime 和治理 | [[LlamaIndex Agents 官方文档#必读块 1：agent loop 与 tool 选择]] |
+| [[Crew Orchestration]] / CrewAI | role、task、crew、flow | 是否需要角色分工和业务协作结构？ | 角色名不等于可靠多 Agent 系统 | [[CrewAI 官方文档#必读块 1：Agents / crews / flows 三层]] |
+
 ## 全量对比表
 
 | 框架 | 首要抽象 | 语言 / 生态 | 状态与流程 | 多 Agent | 数据 / 记忆 / RAG | 观测 / 评测 / 部署 | 现代性判断 |
@@ -199,6 +209,30 @@ Pydantic AI 的关键是 Python 类型、Pydantic 验证、依赖注入和结构
 - 还没有评测集、权限模型、工具幂等和 trace 需求，先上框架会让失败难以定位。
 - 你的团队主要问题是数据质量、需求定义或业务流程不清，而不是 agent runtime 缺失。
 
+## 执行时序 / 机制差异
+
+Agent framework 的差异通常发生在运行时序：provider-first SDK 先把一次模型调用、tool loop 和 handoff 接进供应商平台；state graph runtime 先建模状态和节点，再让模型/工具作为节点执行；data-first framework 先组织索引、query engine 和知识工具；crew orchestration 先定义角色、任务和交接。这个时序差异会决定 debug、恢复、评估和权限控制落在哪一层。
+
+## 学习类比（非证据）
+
+可以把这些框架类比成不同类型的“施工组织方式”：provider-first 像使用某个厂商的一站式工具箱，state graph 像先画施工流程图，data-first 像先搭资料库和查询台，crew 像先安排岗位分工。
+
+类比边界：这只是学习类比（非证据），不代表任何官方文档把框架定义成施工组织，也不替代具体 API / runtime 证据。
+
+## 现代系统如何吸收或限制
+
+来源支持的是各框架已经把 tool calling、state、trace、eval、deployment、权限或数据连接变成显式对象；工程综合 / inference 是：生产系统通常不会只选一个标签，而会把 provider SDK、state runtime、data layer、observability 和 governance 组合起来。限制在于框架生态变化快，2026-05 的选型判断需要按 `last_checked` 定期复查。
+
+## 什么时候用哪个判断
+
+- 先问任务主瓶颈：状态恢复、数据连接、类型边界、角色协作、供应商集成还是生产治理。
+- 再问组织约束：团队语言栈、部署环境、合规权限、已有数据系统和 observability 栈。
+- 最后问迁移成本：是否接受绑定某个 provider / framework runtime，还是更需要框架中立。
+
+## 它们共同不是什么
+
+它们共同不是“让模型自动可靠”的魔法层，也不是 eval、权限、数据治理和人工审批的替代品。框架只能提供抽象和运行面；具体任务边界、工具权限、失败回放、质量评估仍需要工程设计。
+
 ## 证据锚点
 
 ### Source notes
@@ -235,6 +269,7 @@ Pydantic AI 的关键是 Python 类型、Pydantic 验证、依赖注入和结构
 
 Evidence type: 官方文档 / 官方 source note + 工程综合。Confidence: medium-high for abstraction centers; medium for roadmap、preview、版本和平台能力。
 
+- Boundary: 本页记录 2026-05 的框架选型边界；产品 API、托管能力和生态定位会变化，需要按 source notes 复查。
 ## 复习触发
 
 1. 如果你要做一个“能恢复、能审批、能回放”的长任务 Agent，为什么先看 state/workflow/[[State Graph Runtime|runtime]]，而不是先看哪个框架 demo 最酷？

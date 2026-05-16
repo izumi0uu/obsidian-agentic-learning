@@ -5,7 +5,7 @@ topic:
   - evaluation
 status: growing
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-16
 last_checked: 2026-05-12
 freshness: watch
 source:
@@ -41,6 +41,7 @@ RAG 系统常把“带来源”当成可信标志，但 citation 可能只是把
 
 证据边界：[[RAG Evaluation]] 已把 retrieval、context、generation、citation 和 system dimensions 拆开；[[Microsoft RAG 官方文档]] 支持企业 RAG 需要评估和治理；LangSmith / Langfuse source notes 支持 trace、dataset、evaluator、score 和 monitoring 这类现代评估工作流。本卡把“引用支持关系”单独沉淀成可复习概念，属于工程综合 / inference，不伪装成某个单一产品的定义。
 
+工程评估时，faithfulness 需要把答案拆到 claim 级别：每个 claim 是否能由引用 chunk 直接支持、是否需要多个 chunk 合并、是否存在反证或缺证。它比“有 citation”更严格，因为 citation 可能只是主题相关。现代系统会结合自动判别、人工抽样、trace 和失败样例回放来检查 citation 是否支撑答案，而不是只把来源链接展示给用户。
 ## 它解决什么问题
 
 它解决“答案看起来有引用，但引用并不支持答案”的问题。没有这个概念，学习者很容易把 citation 当作 correctness proof，而忽略证据是否覆盖主张、是否过期、是否被模型误读。
@@ -97,6 +98,7 @@ RAG Citation Faithfulness 不是检查引用格式是否好看，也不是只检
 - Source anchor: [[Langfuse Observability and Evaluation#一句话]]
 - Evidence type: RAG evaluation concept synthesis + official/product source notes + engineering inference.
 
+- Boundary: Citation Faithfulness 检查答案与引用证据的支持关系，不等于 Context Recall、Context Precision、普通链接展示或完整安全治理。
 ## 复习触发
 
 1. “有引用”和“引用支持结论”的区别是什么？
