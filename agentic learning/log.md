@@ -1075,3 +1075,15 @@ related:
 - 生成更新后的 `.omx/reports/concept-card-relation-map/taxonomy-placement-review.json/md`：`classification_stage: step2_initial_triage`，`reviewed_concepts: 130`，`taxonomy_placement_unreviewed: 0`，`open_unclassified: 0`，`open_writeback: 0`。
 - 初分流结果：36 张 `already_has_up_reviewed`，19 张 `root_or_anchor_no_up`，48 张 `relation_only_terminal`，4 张 `weak_or_backlog_terminal`，23 张 `defer_boundary_review`。
 - Boundary: 本轮只做 Step 2 routing，不写回任何概念卡 `up`，不新增 `down` / `children` / Juggl 字段；23 张 `defer_boundary_review` 是下一阶段开放尾巴，不应为了降低 `concepts_without_up` 直接补父类。
+
+## [2026-05-17] maintenance | Query 写回队列剩余候选分流
+
+- 更新 [[05 Query 写回队列]]：把剩余 2 个 P3 pending 概念对比候选分成“证据补齐后再评估”和“查新后再写”，并明确当前没有可直接成页的新高证据候选。
+- 更新 [[06 Wiki 健康检查]] 当前状态：Query write-back pending 仍为 2，但不再是未分类尾巴；它们分别是 LLM 能力来源证据补齐 backlog 与 runtime / 产品 / framework 生态 freshness-check。
+- Boundary: 本轮不新建概念卡或 topic，不改 canonical name、aliases、alias map、字段规范、模板或项目规则；只是 backlog 分类与健康状态同步。
+
+## [2026-05-17] maintenance | Taxonomy placement Step 3 stable parent whitelist
+
+- 更新 `.omx/reports/concept-card-relation-map/taxonomy_placement_review.py`：新增 `--review-step3`，把稳定父类白名单、非自动批准锚点、缺失 phantom parent、root/foundation anchor、23 张 deferred 卡的 parent-route precheck 写入审计台账。
+- 重新生成 `.omx/reports/concept-card-relation-map/taxonomy-placement-review.json/md`：`classification_stage: step3_parent_whitelist_review`，approved stable parents 14，proposed anchors not auto-approved 3，missing proposed anchors 2，deferred rows parent-prechecked 23。
+- Boundary: 本轮只固定 Step 3 candidate-generation 边界，不写任何概念卡 `up`；`Approval Gate` / `Memory Reflection` / `ReAct` 只是 Step 5 候选复核入口，不是 accepted taxonomy。

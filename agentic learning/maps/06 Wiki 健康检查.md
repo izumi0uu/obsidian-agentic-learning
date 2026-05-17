@@ -5,7 +5,7 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-07
-updated: 2026-05-16
+updated: 2026-05-17
 related:
   - "[[LLM Wiki 工作流]]"
   - "[[04 页面目录]]"
@@ -28,7 +28,7 @@ related:
 - Raw markdown pages: 908；其中 frontmatter `type: source` 859。主源清单仍看 [[资料收集索引]]。
 - Paper source audit: `scripts/paper_source_audit.py` 检查 `raw/papers/` 45 个文件，PASS。
 - Interview concept link audit: `scripts/interview_question_concept_links.py --self-test` PASS；`--dry-run` 扫描 757 个题页，would modify 0，missing concept candidates 0，protected region violations 0。
-- Query write-back pending: 2（概念对比候选队列中 P3 两项暂不强行成页）。
+- Query write-back pending: 2（概念对比候选队列中 P3 两项已在 [[05 Query 写回队列#2026-05-17 剩余候选分流]] 分流：1 项证据补齐后再评估，1 项查新后再写；当前均不强行成页）。
 - Current action queues: concept-card audit 与 comparison-topic audit 的本轮 needs-action 队列已清空；后续新缺口继续由每周审计重新进入队列。
 
 边界：本节是“当前状态”，会覆盖上方读者对最新健康状态的理解；旧的 2026-05-10 / 2026-05-11 数字和“27+6”队列保留下方历史小节，不能再被当成现状。本次 27+6 全量修复是用户明确授权的一次性系统性批量维护；以后仍不要在未确认时批量重写旧卡。Needs action = 0 只表示固定审计脚本当前通过，不表示所有概念卡已经达到百科式深度。

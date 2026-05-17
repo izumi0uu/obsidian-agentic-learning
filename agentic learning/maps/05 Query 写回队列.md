@@ -5,7 +5,7 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-07
-updated: 2026-05-15
+updated: 2026-05-17
 related:
   - "[[LLM Wiki 工作流]]"
   - "[[02 问题池]]"
@@ -70,6 +70,17 @@ related:
 | P2 | existing | [[Trajectory]] / [[Trace]] / [[Reasoning Trace]] / [[Trajectory Evaluation]] / [[Replay]] | 已有高价值边界页，说明 trajectory、trace 和 reasoning trace 的层级差异 | 见 [[Trajectory Trace 类型对比]]；后续只做维护 |
 | P2 | existing | [[RAG]] / [[Agentic RAG]] / [[Corrective RAG]] / [[Self-RAG]] | 已有 RAG 类型比较入口，适合继续补 evidence / modernity | 见 [[RAG 类型对比]]；后续只做维护 |
 | P3 | done | [[Transformer]] / [[Self-Attention]] / [[Multi-Head Attention]] / [[Positional Encoding]] | 都是 LLM 架构地基，容易把架构、机制和位置编码混成同一层 | 已写入 [[LLM 基础结构对比]] |
-| P3 | pending | [[LLM]] / [[LLM Training Pipeline]] / [[Zero-shot CoT]] / [[Plan-and-Solve Prompting]] | 都和 LLM 能力来源有关，但训练流程、模型能力、prompt-time reasoning pattern 证据层级不同 | 暂不强行成页；需补齐训练主源和 prompting paper 边界后再写 |
-| P3 | pending | [[Oh My Codex (OMX)]] / [[Hermes Agent]] / [[LangChain DeepAgents]] / [[Agent Framework]] | 都是具体 runtime / 产品 / framework 生态，变化快且容易把产品能力误当通用 Agent 定义 | 暂不强行成页；需查新版本和产品边界后再写 |
+| P3 | pending | [[LLM]] / [[LLM Training Pipeline]] / [[Zero-shot CoT]] / [[Plan-and-Solve Prompting]] | 都和 LLM 能力来源有关，但训练流程、模型能力、prompt-time reasoning pattern 证据层级不同 | **分流：只留 backlog / 证据补齐后再评估**。先补训练主源、Zero-shot CoT 与 Plan-and-Solve paper 证据边界；证据不足前不强行创建“能力来源对比页”。 |
+| P3 | pending | [[Oh My Codex (OMX)]] / [[Hermes Agent]] / [[LangChain DeepAgents]] / [[Agent Framework]] | 都是具体 runtime / 产品 / framework 生态，变化快且容易把产品能力误当通用 Agent 定义 | **分流：需查新后再写**。只在官方文档 / repo / release 边界更新后再决定是维护已有页，还是新建 runtime 产品生态对比；不得把单一产品能力升格为通用 [[Agent Framework]] 定义。 |
 | P3 | done | [[LangGraph]] / OpenAI Agents SDK / [[Microsoft Agent Framework]] / [[AutoGen]] / CrewAI / LlamaIndex / Pydantic AI / Agno / Mastra / Vercel AI SDK / Google ADK / [[AgentScope]] / [[CAMEL]] | 都是热门 Agent framework / SDK / toolkit，但分别位于 state graph、provider SDK、enterprise workflow、conversation team、crew/flow、data/RAG、typed Python、platform stack、TS workflow、frontend toolkit、Google Cloud ADK、message platform、role-playing society 等不同层 | 旧范式页见 [[Agent Framework 编排范式对比]]；全量选型已写入 [[Agent Framework 全量选型对比 2026-05]] |
+
+## 2026-05-17 剩余候选分流
+
+这次分流只处理“当前仍是 pending 的概念对比候选”，不新建概念卡、不改 canonical name / alias，也不改面试题 alias map。
+
+| 分流 | 项目 | 结论 | 边界 |
+|---|---|---|---|
+| 现在就能成页 | 无 | 当前没有新的高证据对比页可直接创建。 | P1 / P2 的高价值候选已经是 `done` 或 `existing`；为了减少弱页，不用“填空式”新建 topic。 |
+| 证据补齐后再评估 | [[LLM]] / [[LLM Training Pipeline]] / [[Zero-shot CoT]] / [[Plan-and-Solve Prompting]] | 保留为 P3 backlog。 | 这组混淆点真实存在，但“训练流程如何形成能力”和“prompt-time reasoning pattern 如何调用能力”证据层不同；补训练主源和 prompting paper 证据前不强行成页。 |
+| 查新后再写 | [[Oh My Codex (OMX)]] / [[Hermes Agent]] / [[LangChain DeepAgents]] / [[Agent Framework]] | 保留为 P3 freshness-check。 | 它们是具体 runtime / 产品 / framework 生态，变化快；下一步应先查官方文档、repo 或 release，再决定维护已有页还是创建产品生态对比。 |
+| 只留 backlog，不成页 | 当前无永久搁置项 | 两个 pending 项都仍有学习价值，只是未达到直接成页条件。 | 若后续查新或精读后仍证据不足，再降级到 [[02 问题池]] 或继续留本页，不创建弱 topic。 |
