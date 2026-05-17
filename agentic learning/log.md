@@ -1109,3 +1109,12 @@ related:
 - 生成 `.omx/reports/concept-card-relation-map/taxonomy-placement-step5-adjudication.json/md`，并更新 `taxonomy-placement-review.json/md`：`classification_stage: step5_llm_adjudication`，3 条候选全部完成判定。
 - 判定结果：`Memory Reflection -> Memory` 为 `accept_taxonomy` + `add_up`，可进入 Step 6 dry-run；`Approval Gate -> Agent Workflow` 与 `ReAct -> Agent Workflow` 均为 `reject_taxonomy`，因为它们分别是 workflow 控制点和 Agent Loop 模式，不是 Agent Workflow 子类。
 - Boundary: 本轮不修改任何概念卡 `up`，不执行 dry-run / apply，不新增 `down` / `children` / Juggl 字段；Step 5 只证明 dry-run eligibility，当前可进入下一步的只有 1 条。
+
+## [2026-05-17] ralph | taxonomy placement Step 6 dry-run
+
+- Implemented Phase 4 Step 6 in `.omx/reports/concept-card-relation-map/taxonomy_placement_review.py` with `--dry-run-step6`.
+- Generated `.omx/reports/concept-card-relation-map/taxonomy-placement-writeback-dry-run.json/md` and advanced `taxonomy-placement-review.json/md` to `classification_stage: step6_dry_run`.
+- Dry-run planned exactly one ready taxonomy write: `[[Memory Reflection]] -> [[Memory]]`, proposed `up: ["[[Memory]]"]`.
+- Excluded rejected non-taxonomy candidates from dry-run: `[[Approval Gate]] -> [[Agent Workflow]]` and `[[ReAct]] -> [[Agent Workflow]]`.
+- Verification: py_compile PASS; taxonomy placement `--dry-run-step6 --check` PASS; relation pipeline `validate.py` PASS; interview-link self-test PASS; Step 6 invariant assertions PASS; scoped deslop scan found no fallback/TODO cleanup in changed files; `git diff --check` PASS.
+- Boundary: Step 6 is dry-run evidence only; no concept cards were edited, no `down` / `children` / Juggl / Breadcrumbs mirror fields were added, and later apply must remain limited to the dry-run accepted row unless a new adjudication changes the evidence.
