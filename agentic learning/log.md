@@ -1062,3 +1062,16 @@ related:
 - 重新生成报告后：130 张概念卡、36 条 taxonomy `up`、31 条 typed relations、67 条候选信号；ledger 为 `reject_taxonomy: 11`、`adjacency_only: 56`、`open_review_items: 0`、`open_writeback_items: 0`、`relation_tail_status: closed`；dry-run 为 0 planned / 0 ready。
 - 验证：`python3 -m py_compile .omx/reports/concept-card-relation-map/*.py` PASS；`build.py` PASS；`decide.py` PASS；`writeback.py --dry-run` PASS；`validate.py` PASS（open_review_items 0 / open_writeback_items 0 / relation_tail_status closed）；`git diff --check` PASS；RAGGraph 断言检查 PASS（无 `up: [[RAG]]`，有 safe `relations`）。
 - Boundary: 本轮没有新增任何 `up`，没有把 56 条 adjacency 信号强行写回，也没有新增 `down` / `children` / Juggl 字段；`reject_taxonomy` 是审查终态，不是“失败”。
+
+## [2026-05-16] ralph | 层级归属待审计台账 Step 1
+
+- 实现 `.omx/reports/concept-card-relation-map/taxonomy_placement_review.py`，把当前临时关系图转换为全量“层级归属待审计概念卡”台账，而不是继续使用抽象的 `no-up` 命名。
+- 生成 `.omx/reports/concept-card-relation-map/taxonomy-placement-review.json` 与 `.omx/reports/concept-card-relation-map/taxonomy-placement-review.md`：130 张概念卡全部入队；36 张已有 `up` 仍标记为待复核；94 张无 `up` 进入 review queue；55 张有候选证据；67 条 candidate basis；2 条 forbidden-as-up candidate pair 带 drift guard。
+- Boundary: 本轮只实现第四阶段 Step 1 的审计基线，不执行 Step 2 分类判定，不写回任何概念卡 `up`，不新增 `down` / `children` / Juggl 字段；`concepts_without_up` 继续只是审计信号，不是失败指标。
+
+## [2026-05-17] ralph | 层级归属待审计台账 Step 2 初分流
+
+- 扩展 `.omx/reports/concept-card-relation-map/taxonomy_placement_review.py`：新增 `--classify-step2`，在全量审计台账上给 130 张概念卡写入初始 routing decision。
+- 生成更新后的 `.omx/reports/concept-card-relation-map/taxonomy-placement-review.json/md`：`classification_stage: step2_initial_triage`，`reviewed_concepts: 130`，`taxonomy_placement_unreviewed: 0`，`open_unclassified: 0`，`open_writeback: 0`。
+- 初分流结果：36 张 `already_has_up_reviewed`，19 张 `root_or_anchor_no_up`，48 张 `relation_only_terminal`，4 张 `weak_or_backlog_terminal`，23 张 `defer_boundary_review`。
+- Boundary: 本轮只做 Step 2 routing，不写回任何概念卡 `up`，不新增 `down` / `children` / Juggl 字段；23 张 `defer_boundary_review` 是下一阶段开放尾巴，不应为了降低 `concepts_without_up` 直接补父类。
