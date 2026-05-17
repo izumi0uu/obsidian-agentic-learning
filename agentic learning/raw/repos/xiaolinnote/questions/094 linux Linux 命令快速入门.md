@@ -3,13 +3,13 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "linux"
+  - interview
+  - linux
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/linux/"
-source: "https://xiaolinnote.com/linux/"
+url: https://xiaolinnote.com/linux/
+source: https://xiaolinnote.com/linux/
 last_checked: 2026-05-17
 freshness: watch
 sha256: 286e416b7f6d2471ebaa2fda5352ee5d44dd76e15af2b012cb12dd71dc516c98

@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Neo4j GraphRAG Developer Guide"
-url: "https://neo4j.com/developer/genai-ecosystem/"
+title: Neo4j GraphRAG Developer Guide
+url: https://neo4j.com/developer/genai-ecosystem/
 author: Neo4j
 site: neo4j.com
 topic:

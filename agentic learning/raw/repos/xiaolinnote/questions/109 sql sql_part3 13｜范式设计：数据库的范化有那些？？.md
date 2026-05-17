@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "database"
-  - "sql"
+  - interview
+  - database
+  - sql
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/sql/sql_part3/13-normalization.html"
-source: "https://xiaolinnote.com/sql/sql_part3/13-normalization.html"
+url: https://xiaolinnote.com/sql/sql_part3/13-normalization.html
+source: https://xiaolinnote.com/sql/sql_part3/13-normalization.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: d1be894ad768b1cb202b34edc4e284d405a84ae7326216a70080a4650fe3e579

@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "CrewAI Documentation"
-url: "https://docs.crewai.com/"
+title: CrewAI Documentation
+url: https://docs.crewai.com/
 author: CrewAI
 site: docs.crewai.com
 topic:

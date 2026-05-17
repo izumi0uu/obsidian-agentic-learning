@@ -2,11 +2,11 @@
 type: source
 source_type: paper
 title: "Position: Assistive Agents Need Accessibility Alignment"
-url: "https://arxiv.org/abs/2605.13579"
-pdf: "assets/Position - Assistive Agents Need Accessibility Alignment.pdf"
-extracted: "extracted/Position - Assistive Agents Need Accessibility Alignment.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.13579"
-doi: "10.48550/arXiv.2605.13579"
+url: https://arxiv.org/abs/2605.13579
+pdf: assets/Position - Assistive Agents Need Accessibility Alignment.pdf
+extracted: extracted/Position - Assistive Agents Need Accessibility Alignment.extracted.md
+arxiv: https://arxiv.org/abs/2605.13579
+doi: 10.48550/arXiv.2605.13579
 author:
   - Jie Hu
   - Changyuan Yan
@@ -14,7 +14,7 @@ author:
   - Ziqian Wang
   - Jiaming Zhang
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -29,7 +29,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.13579"
+source: https://arxiv.org/abs/2605.13579
 related:
   - "[[Agent]]"
   - "[[Evaluation]]"

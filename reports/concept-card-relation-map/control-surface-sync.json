@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "artifact_type": "taxonomy_tooling_control_surface_sync",
+  "generated_at": "2026-05-17T10:17:11Z",
+  "input_artifacts": {
+    "plugin_contract_verification": "reports/concept-card-relation-map/plugin-contract-verification.json",
+    "taxonomy_review": "reports/concept-card-relation-map/concept-hierarchy-placement-review.json",
+    "plugin_validation": "reports/concept-card-relation-map/plugin-compat-validation.json"
+  },
+  "summary": {
+    "required_surfaces_total": 7,
+    "required_surfaces_synced": 7,
+    "taxonomy_open_review_remaining": 0,
+    "taxonomy_defer_boundary_review_remaining": 20,
+    "taxonomy_open_writeback": 0,
+    "plugin_contract_problems": 0,
+    "plugin_problems": 0,
+    "forbidden_up_edges": 0,
+    "concept_card_writebacks_this_check": 0,
+    "problems": 0
+  },
+  "required_surfaces": [
+    {
+      "surface": "script_readme",
+      "path": "scripts/concept_taxonomy/README.md",
+      "checks": {
+        "mentions_project-owned_tooling": true,
+        "mentions_project_reports": true,
+        "mentions_no_direct_writeback": true,
+        "mentions_alternate_report_dir": true
+      },
+      "synced": true
+    },
+    {
+      "surface": "report_readme",
+      "path": "reports/concept-card-relation-map/README.md",
+      "checks": {
+        "mentions_project-owned_tooling": true,
+        "mentions_project_reports": true,
+        "mentions_no_direct_writeback": true,
+        "mentions_alternate_report_dir": true
+      },
+      "synced": true
+    },
+    {
+      "surface": "script_index",
+      "path": "scripts/README.md",
+      "checks": {
+        "mentions_project-owned_tooling": true,
+        "mentions_project_reports": true,
+        "mentions_no_direct_writeback": true,
+        "mentions_alternate_report_dir": true
+      },
+      "synced": true
+    },
+    {
+      "surface": "workflow",
+      "path": "agentic learning/maps/LLM Wiki 工作流.md",
+      "checks": {
+        "mentions_project-owned_tooling": true,
+        "mentions_project_reports": true,
+        "mentions_no_direct_writeback": true,
+        "mentions_intentionally_unchanged_schema_template": true,
+        "mentions_project_ownership": true
+      },
+      "synced": true
+    },
+    {
+      "surface": "health_check",
+      "path": "agentic learning/maps/06 Wiki 健康检查.md",
+      "checks": {
+        "mentions_project-owned_tooling": true,
+        "mentions_project_reports": true,
+        "mentions_no_direct_writeback": true,
+        "mentions_remaining_open_review_count": true,
+        "mentions_open_writeback_zero": true,
+        "mentions_project_ownership": true
+      },
+      "synced": true
+    },
+    {
+      "surface": "baseline_map",
+      "path": "agentic learning/maps/09 概念层级审计基线.md",
+      "checks": {
+        "mentions_project-owned_tooling": true,
+        "mentions_project_reports": true,
+        "mentions_no_direct_writeback": true,
+        "mentions_alternate_report_dir": true
+      },
+      "synced": true
+    },
+    {
+      "surface": "log",
+      "path": "agentic learning/log.md",
+      "checks": {
+        "mentions_project-owned_tooling": true,
+        "mentions_project_reports": true,
+        "mentions_no_direct_writeback": true
+      },
+      "synced": true
+    }
+  ],
+  "intentionally_not_changed": {
+    "agentic learning/maps/字段规范.md": "Tooling and baseline evidence moved into project-owned paths; no `up` / `relations` field semantics changed.",
+    "agentic learning/templates/": "No reusable page shape or concept-card template contract changed.",
+    "AGENTS.md": "Project hard rules already cover systemic script-driven changes; workflow-specific commands live in LLM Wiki 工作流 and scripts README."
+  },
+  "boundary": [
+    "Project tooling verification checks project-owned control surfaces after the audit baseline is closed; it does not adjudicate or write new concept-card relationships.",
+    "Remaining defer_boundary_review rows are closed only when review_status=deferred_with_backlog and a backlog home is recorded.",
+    "Field spec and templates stay unchanged because The tooling migration moved tooling/evidence locations without changing field or page-shape semantics."
+  ],
+  "problems": []
+}

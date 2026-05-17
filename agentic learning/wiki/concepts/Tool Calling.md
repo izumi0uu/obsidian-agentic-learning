@@ -7,10 +7,8 @@ topic:
 status: growing
 created: 2026-05-05
 updated: 2026-05-16
-
 up:
   - "[[Tool Use]]"
-
 last_checked: 2026-05-10
 freshness: watch
 conflicts: []

@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Agent2Agent Protocol"
-url: "https://github.com/a2aproject/A2A"
+title: Agent2Agent Protocol
+url: https://github.com/a2aproject/A2A
 author: Google / Linux Foundation
 site: github.com
 topic:

@@ -8,14 +8,12 @@ topic:
 status: growing
 created: 2026-05-12
 updated: 2026-05-16
-
 up:
   - "[[Agent Framework]]"
-
 last_checked: 2026-05-12
 freshness: volatile
 conflicts:
-  - "Microsoft Agent Framework 已被官方描述为 AutoGen 与 Semantic Kernel 的继任/整合路线；AutoGen 的长期生产定位需要继续复查。"
+  - Microsoft Agent Framework 已被官方描述为 AutoGen 与 Semantic Kernel 的继任/整合路线；AutoGen 的长期生产定位需要继续复查。
 source:
   - "[[AutoGen 官方文档]]"
   - "[[Microsoft Agent Framework 官方文档]]"

@@ -2,11 +2,11 @@
 type: source
 source_type: paper
 title: "PIVOT: Bridging Planning and Execution in LLM Agents via Trajectory Refinement"
-url: "https://arxiv.org/abs/2605.11225"
-pdf: "assets/PIVOT - Bridging Planning and Execution in LLM Agents via Trajectory Refinement.pdf"
-extracted: "extracted/PIVOT - Bridging Planning and Execution in LLM Agents via Trajectory Refinement.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.11225"
-doi: "10.48550/arXiv.2605.11225"
+url: https://arxiv.org/abs/2605.11225
+pdf: assets/PIVOT - Bridging Planning and Execution in LLM Agents via Trajectory Refinement.pdf
+extracted: extracted/PIVOT - Bridging Planning and Execution in LLM Agents via Trajectory Refinement.extracted.md
+arxiv: https://arxiv.org/abs/2605.11225
+doi: 10.48550/arXiv.2605.11225
 author:
   - Tuo Zhang
   - Alin-Ionut Popa
@@ -14,7 +14,7 @@ author:
   - Rui Song
   - Dimitrios Dimitriadis
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -29,7 +29,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.11225"
+source: https://arxiv.org/abs/2605.11225
 related:
   - "[[Planning]]"
   - "[[Agent Workflow]]"

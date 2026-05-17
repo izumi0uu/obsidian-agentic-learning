@@ -3,16 +3,16 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
-  - "tools"
-  - "mcp"
+  - interview
+  - ai
+  - llm
+  - tools
+  - mcp
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/tools/5_mcp_components.html"
-source: "https://xiaolinnote.com/ai/tools/5_mcp_components.html"
+url: https://xiaolinnote.com/ai/tools/5_mcp_components.html
+source: https://xiaolinnote.com/ai/tools/5_mcp_components.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 2668df8ca6c0958cf1d3f0e085bc6b95d30aac42cf6d452f1c24a1bff0e1ccf3

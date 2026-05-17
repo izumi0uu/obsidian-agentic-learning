@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Claude Code Hooks Reference"
-url: "https://code.claude.com/docs/en/hooks"
+title: Claude Code Hooks Reference
+url: https://code.claude.com/docs/en/hooks
 author: Anthropic
 site: code.claude.com
 topic:

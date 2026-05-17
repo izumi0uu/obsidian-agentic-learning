@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Anthropic Computer Use Tool"
-url: "https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool"
+title: Anthropic Computer Use Tool
+url: https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool
 author: Anthropic
 site: docs.claude.com
 topic:

@@ -12,6 +12,7 @@ related:
   - "[[05 Query 写回队列]]"
   - "[[08 面试题概念卡待补充]]"
   - "[[08 面试题概念链接待办]]"
+  - "[[09 概念层级审计基线]]"
   - "[[字段规范]]"
 ---
 
@@ -29,9 +30,51 @@ related:
 - Paper source audit: `scripts/paper_source_audit.py` 检查 `raw/papers/` 45 个文件，PASS。
 - Interview concept link audit: `scripts/interview_question_concept_links.py --self-test` PASS；`--dry-run` 扫描 779 个题页，would modify 0，missing concept candidates 0，protected region violations 0。
 - Query write-back pending: 2（概念对比候选队列中 P3 两项已在 [[05 Query 写回队列#2026-05-17 剩余候选分流]] 分流：1 项证据补齐后再评估，1 项查新后再写；当前均不强行成页）。
-- Current action queues: concept-card audit 与 comparison-topic audit 的本轮 needs-action 队列已清空；后续新缺口继续由每周审计重新进入队列。
+- 概念层级归属审计：130 张概念卡已纳入审计；37 条顶层 `up`；审计闭环通过；逐卡稳定镜像见 [[09 概念层级审计基线]]；机器基线保存在 `reports/concept-card-relation-map/`，长期复跑入口是 `scripts/concept_taxonomy/`；`open_review: 0`，`open_writeback: 0`，`dry_run_planned: 0`；20 张 `defer_boundary_review` 已全部标记为 `deferred_with_backlog`，不得为了清零强行补父类。
+- Current action queues: concept-card audit、comparison-topic audit 与概念层级归属审计的本轮 open tail 均已清空；20 张 deferred-with-backlog 卡是未来可重开的边界队列，不是当前可直接写 `up` 的任务。
 
 边界：本节是“当前状态”，会覆盖上方读者对最新健康状态的理解；旧的 2026-05-10 / 2026-05-11 数字和“27+6”队列保留下方历史小节，不能再被当成现状。本次 27+6 全量修复是用户明确授权的一次性系统性批量维护；以后仍不要在未确认时批量重写旧卡。Needs action = 0 只表示固定审计脚本当前通过，不表示所有概念卡已经达到百科式深度。
+
+## 2026-05-17 概念层级审计项目化入口
+
+本节记录概念关系审计能力的项目内稳定入口。
+
+| Surface | Role | Boundary |
+|---|---|---|
+| `scripts/concept_taxonomy/` | 项目级可复跑脚本 | 真实写回仍必须 `--apply --limit N` |
+| `reports/concept-card-relation-map/` | 机器可读 baseline / report store | 保存 JSON/MD 证明；报告不自动授权写 `up` |
+| [[09 概念层级审计基线]] | 人类 / agent 可读镜像 | 用于新增卡嵌合判断；不是直接写回清单 |
+
+当前验收点：项目脚本、项目 reports、workflow、健康检查、baseline map 和日志都必须提到 `scripts/concept_taxonomy/` 与 `reports/concept-card-relation-map/`；`字段规范.md` 和模板不改，因为 `up` / `relations` 语义没有变化。
+
+## 2026-05-17 概念层级审计边界队列
+
+本节是概念层级归属审计的 backlog home：这些卡已经被审计过，但当前证据下没有安全的 strict taxonomy parent。它们不是“漏写 `up`”，而是“未来如果有更窄父类或新证据，可以显式重开”的边界队列。
+
+| Concept | Suppressed target | Why not `up` now | Reopen trigger |
+|---|---|---|---|
+| [[A2A]] | [[Agent]] | 协议 / 生态卡；`Agent` 太宽，当前没有 approved protocol parent。 | 新建并审计 protocol / agent protocol 父类，或卡片证据证明 strict kind-of。 |
+| [[ACP]] | [[Agent]] | 协议 / 生态卡；`Agent` 太宽，当前没有 approved protocol parent。 | 新建并审计 protocol / agent protocol 父类，或卡片证据证明 strict kind-of。 |
+| [[Browser Agent]] | [[Agent]] | 看似 Agent 子类，但 `Agent` 不是自动父类，缺更窄 reviewed parent。 | 若建立 Computer-use Agent / Browser Automation Agent 等稳定父类再重开。 |
+| [[Code Execution Sandbox]] | [[Tool Use]] | sandbox 是安全运行边界，不是 tool-use 行为本身。 | 若建立 Sandbox / Execution Isolation / Security Boundary 父类再重开。 |
+| [[Data Exfiltration]] | [[Prompt]] | 数据外泄是风险 / attack class，不是 Prompt 的一种。 | 若建立 Security Risk / Prompt Attack / Data Security 风险类父卡再重开。 |
+| [[Entity Resolution]] | [[Knowledge Graph]] | 它可支撑 Knowledge Graph / retrieval，但 support/use 不是 taxonomy。 | 若卡片边界改为某个 approved entity-matching 方法族成员再重开。 |
+| [[GUI Grounding]] | [[Agent]] | GUI grounding 是能力 / 对齐方式，不是宽泛 Agent 子类。 | 若建立 Computer-use / Grounding Capability 父类再重开。 |
+| [[Least Privilege Tools]] | [[Tool Use]] | 最小权限约束 Tool Use，但 policy principle 不是 Tool Use 子类。 | 若建立 Tool Safety Policy / Permissioning 父类再重开。 |
+| [[MCP]] | [[Tool Use]] | MCP 是协议 / 生态根，不是 tool-use 行为。 | 若建立 Agent Protocol / Tool Protocol 父类并审计通过再重开。 |
+| [[MCP Registry]] | [[MCP]] | Registry 很靠近 MCP，但 MCP 还不是 approved parent。 | 若 MCP 被审计为 protocol parent 或建立 Registry/Discovery 父类再重开。 |
+| [[Multi-Head Attention]] | [[Transformer]] | Transformer component-of，不是 kind-of Transformer。 | 若建立 Attention Mechanism / Transformer Component 父类再重开。 |
+| [[Observation]] | [[Agent Workflow]] | Observation 是 loop/runtime signal，不是 workflow 本身。 | 若建立 Agent Loop Signal / Trace Event 父类再重开。 |
+| [[Obsidian + LLM Wiki]] | [[RAG]] | 本地 wiki/workflow 可能借用检索思想，但不是 RAG 子类。 | 若卡片改为某类 LLM Wiki / Knowledge Workflow 系统父类再重开。 |
+| [[Oh My Codex (OMX)]] | [[Agent Framework]] | OMX 是具体 runtime / workflow ecosystem；不能无审查归入 Agent Framework。 | 若产品边界证明它是某类 Codex orchestration framework，再走新判定。 |
+| [[Policy Engine]] | [[Tool Use]] | policy engine 约束工具/动作，不是 tool-use 行为子类。 | 若建立 Policy / Guardrail Runtime 父类再重开。 |
+| [[Positional Encoding]] | [[Transformer]] | Transformer component-of，不是 kind-of Transformer。 | 若建立 Transformer Component / Representation Mechanism 父类再重开。 |
+| [[Prompt Injection]] | [[Prompt]] | Prompt Injection 操纵 prompt，但它是 attack class，不是 Prompt 子类。 | 若建立 Prompt Attack / LLM Security Risk 父类再重开。 |
+| [[Sandbox Workspace]] | [[Tool Use]] | sandbox workspace 承载工具/动作，但 hosting infra 不是 Tool Use 子类。 | 若建立 Workspace / Sandbox / Execution Environment 父类再重开。 |
+| [[Self-Attention]] | [[Transformer]] | Transformer component-of，不是 kind-of Transformer。 | 若建立 Attention Mechanism / Transformer Component 父类再重开。 |
+| [[Trajectory]] | [[Evaluation]] | Trajectory 是被观察/评估的对象，不是 evaluation 方法。 | 若建立 Trace Object / Agent Run Artifact 父类再重开。 |
+
+审计闭环证明：`defer_boundary_review` 仍可作为语义状态保留，但只要它同时有 `review_status: deferred_with_backlog` 和本节 backlog home，就不再算当前 open tail。未来新增卡片若落入上述边界，必须重开候选生成 / LLM 判定 / dry-run / limited apply，不得直接把 suppressed target 写入 `up`。
 
 ## 每周检查清单
 
@@ -43,6 +86,8 @@ related:
   - `python3 scripts/paper_source_audit.py`
   - `python3 scripts/interview_question_concept_links.py --self-test`
   - `python3 scripts/interview_question_concept_links.py --dry-run`
+  - `python3 scripts/concept_taxonomy/validate.py`
+  - `python3 scripts/concept_taxonomy/validate_taxonomy_baseline_map.py`
   - `git diff --check`
 - [ ] 检查概念卡是否有“它不是什么”。
 - [ ] 检查概念卡是否有 `## 边界细节`。

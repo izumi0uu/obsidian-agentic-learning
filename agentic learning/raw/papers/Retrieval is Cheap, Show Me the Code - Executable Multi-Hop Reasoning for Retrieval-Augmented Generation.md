@@ -2,11 +2,11 @@
 type: source
 source_type: paper
 title: "Retrieval is Cheap, Show Me the Code: Executable Multi-Hop Reasoning for Retrieval-Augmented Generation"
-url: "https://arxiv.org/abs/2605.12975"
-pdf: "assets/Retrieval is Cheap, Show Me the Code - Executable Multi-Hop Reasoning for Retrieval-Augmented Generation.pdf"
-extracted: "extracted/Retrieval is Cheap, Show Me the Code - Executable Multi-Hop Reasoning for Retrieval-Augmented Generation.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.12975"
-doi: "10.48550/arXiv.2605.12975"
+url: https://arxiv.org/abs/2605.12975
+pdf: assets/Retrieval is Cheap, Show Me the Code - Executable Multi-Hop Reasoning for Retrieval-Augmented Generation.pdf
+extracted: extracted/Retrieval is Cheap, Show Me the Code - Executable Multi-Hop Reasoning for Retrieval-Augmented Generation.extracted.md
+arxiv: https://arxiv.org/abs/2605.12975
+doi: 10.48550/arXiv.2605.12975
 author:
   - Jiashuo Sun
   - Jimeng Shi
@@ -22,7 +22,7 @@ author:
   - Ge Liu
   - Jiawei Han
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - rag
@@ -37,7 +37,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.12975"
+source: https://arxiv.org/abs/2605.12975
 related:
   - "[[RAG]]"
   - "[[Agentic RAG]]"

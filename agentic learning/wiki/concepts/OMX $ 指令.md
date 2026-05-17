@@ -11,7 +11,7 @@ updated: 2026-05-10
 last_checked: 2026-05-10
 freshness: watch
 conflicts: []
-title: "OMX $ Commands"
+title: OMX $ Commands
 source:
   - "[[Oh My Codex Repo]]"
   - "[[oh-my-codex 使用教程]]"

@@ -3,15 +3,15 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
-  - "langchain"
+  - interview
+  - ai
+  - llm
+  - langchain
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/langchian/"
-source: "https://xiaolinnote.com/ai/langchian/"
+url: https://xiaolinnote.com/ai/langchian/
+source: https://xiaolinnote.com/ai/langchian/
 last_checked: 2026-05-17
 freshness: watch
 sha256: fad53774feddb49b8c009134651e6cd81ec61832f080ad6e2eed2bab17ac8547

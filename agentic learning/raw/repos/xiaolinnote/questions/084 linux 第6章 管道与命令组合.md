@@ -3,13 +3,13 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "linux"
+  - interview
+  - linux
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/linux/06-pipes-and-composition.html"
-source: "https://xiaolinnote.com/linux/06-pipes-and-composition.html"
+url: https://xiaolinnote.com/linux/06-pipes-and-composition.html
+source: https://xiaolinnote.com/linux/06-pipes-and-composition.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: cdc1d17344381bdddecb7d5c46eb72210845686ce844f259eeecca63262777db

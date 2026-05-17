@@ -3,13 +3,13 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "linux"
+  - interview
+  - linux
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/linux/09-system-monitoring.html"
-source: "https://xiaolinnote.com/linux/09-system-monitoring.html"
+url: https://xiaolinnote.com/linux/09-system-monitoring.html
+source: https://xiaolinnote.com/linux/09-system-monitoring.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 2a4b1824e0887afde892332d1ca95f4b2e37062d85496f23954e53a98d82e637

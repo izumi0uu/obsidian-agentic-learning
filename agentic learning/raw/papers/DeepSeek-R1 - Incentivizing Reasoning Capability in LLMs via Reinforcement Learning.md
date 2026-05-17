@@ -2,9 +2,9 @@
 type: source
 source_type: paper
 title: "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"
-url: "https://arxiv.org/abs/2501.12948"
-pdf: "assets/DeepSeek-R1 - Incentivizing Reasoning Capability in LLMs via Reinforcement Learning.pdf"
-extracted: "extracted/DeepSeek-R1 - Incentivizing Reasoning Capability in LLMs via Reinforcement Learning.extracted.md"
+url: https://arxiv.org/abs/2501.12948
+pdf: assets/DeepSeek-R1 - Incentivizing Reasoning Capability in LLMs via Reinforcement Learning.pdf
+extracted: extracted/DeepSeek-R1 - Incentivizing Reasoning Capability in LLMs via Reinforcement Learning.extracted.md
 author:
   - DeepSeek-AI
 site: arXiv
@@ -18,7 +18,7 @@ last_checked: 2026-05-11
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2501.12948"
+source: https://arxiv.org/abs/2501.12948
 related:
   - "[[LLM Training Pipeline]]"
   - "[[Reasoning Trace]]"

@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "database"
-  - "sql"
+  - interview
+  - database
+  - sql
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/sql/sql_part2/08-aggregation-grouping.html"
-source: "https://xiaolinnote.com/sql/sql_part2/08-aggregation-grouping.html"
+url: https://xiaolinnote.com/sql/sql_part2/08-aggregation-grouping.html
+source: https://xiaolinnote.com/sql/sql_part2/08-aggregation-grouping.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: fbb3f1d235c4b359e6431dee1ccbe13d0d1490856b8945853876007411e46d2c

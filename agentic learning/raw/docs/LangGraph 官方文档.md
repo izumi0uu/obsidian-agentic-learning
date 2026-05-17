@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "LangGraph Official Documentation"
-url: "https://docs.langchain.com/oss/python/langgraph/overview"
+title: LangGraph Official Documentation
+url: https://docs.langchain.com/oss/python/langgraph/overview
 author: LangChain
 site: docs.langchain.com
 topic:

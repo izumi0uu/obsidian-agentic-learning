@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "LangChain Deep Agents Documentation"
-url: "https://docs.langchain.com/oss/python/deepagents/overview"
+title: LangChain Deep Agents Documentation
+url: https://docs.langchain.com/oss/python/deepagents/overview
 author: LangChain
 site: docs.langchain.com
 topic:
@@ -15,7 +15,7 @@ updated: 2026-05-11
 last_checked: 2026-05-11
 freshness: volatile
 conflicts:
-  - "Deep Agent 也可指 RUC-NLPIR 的 DeepAgent 论文/项目名；本 note 只记录 LangChain deepagents SDK / Deep Agents SDK。"
+  - Deep Agent 也可指 RUC-NLPIR 的 DeepAgent 论文/项目名；本 note 只记录 LangChain deepagents SDK / Deep Agents SDK。
 status: seed
 source:
 related:

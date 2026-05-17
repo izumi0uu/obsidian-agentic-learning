@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "database"
-  - "sql"
+  - interview
+  - database
+  - sql
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/sql/sql_part2/09-subqueries.html"
-source: "https://xiaolinnote.com/sql/sql_part2/09-subqueries.html"
+url: https://xiaolinnote.com/sql/sql_part2/09-subqueries.html
+source: https://xiaolinnote.com/sql/sql_part2/09-subqueries.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 777799679ba8287ca70709e74f32de5b986a79c9b9f8092c718cdc48b58f0d32

@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
+  - interview
+  - ai
+  - llm
 status: inbox
 created: 2026-05-17
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/llm/transformer_architecture.html"
-source: "https://xiaolinnote.com/ai/llm/transformer_architecture.html"
+url: https://xiaolinnote.com/ai/llm/transformer_architecture.html
+source: https://xiaolinnote.com/ai/llm/transformer_architecture.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: ed89145e758a8baa8040098a2dbf9f0ee0b501b497641bdeeddeda763f7c8412

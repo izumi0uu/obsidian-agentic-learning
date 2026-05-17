@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "AGENTS.md and Codex Agent Loop"
-url: "https://developers.openai.com/codex/guides/agents-md"
+title: AGENTS.md and Codex Agent Loop
+url: https://developers.openai.com/codex/guides/agents-md
 author: OpenAI
 site: openai.com
 topic:

@@ -1,10 +1,10 @@
 ---
 type: source
 source_type: paper
-title: "Corrective Retrieval Augmented Generation"
-url: "https://arxiv.org/abs/2401.15884"
-pdf: "assets/Corrective Retrieval Augmented Generation.pdf"
-extracted: "extracted/Corrective Retrieval Augmented Generation.extracted.md"
+title: Corrective Retrieval Augmented Generation
+url: https://arxiv.org/abs/2401.15884
+pdf: assets/Corrective Retrieval Augmented Generation.pdf
+extracted: extracted/Corrective Retrieval Augmented Generation.extracted.md
 author: Shi-Qi Yan, Jia-Chen Gu, Yun Zhu, Zhen-Hua Ling
 site: arxiv.org
 topic:
@@ -17,7 +17,7 @@ last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2401.15884"
+source: https://arxiv.org/abs/2401.15884
 related:
   - "[[Corrective RAG]]"
   - "[[RAG]]"

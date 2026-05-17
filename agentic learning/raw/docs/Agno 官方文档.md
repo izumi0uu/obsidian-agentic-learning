@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Agno Documentation"
-url: "https://docs.agno.com/"
+title: Agno Documentation
+url: https://docs.agno.com/
 author: Agno
 site: docs.agno.com
 topic:

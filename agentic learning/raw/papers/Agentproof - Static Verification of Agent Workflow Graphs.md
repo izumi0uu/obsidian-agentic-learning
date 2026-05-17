@@ -2,12 +2,12 @@
 type: source
 source_type: paper
 title: "Agentproof: Static Verification of Agent Workflow Graphs"
-url: "https://arxiv.org/abs/2603.20356"
-arxiv: "https://arxiv.org/abs/2603.20356"
-pdf: "assets/Agentproof - Static Verification of Agent Workflow Graphs.pdf"
-doi: "10.48550/arXiv.2603.20356"
-venue: "arXiv 2026"
-extracted: "extracted/Agentproof - Static Verification of Agent Workflow Graphs.extracted.md"
+url: https://arxiv.org/abs/2603.20356
+arxiv: https://arxiv.org/abs/2603.20356
+pdf: assets/Agentproof - Static Verification of Agent Workflow Graphs.pdf
+doi: 10.48550/arXiv.2603.20356
+venue: arXiv 2026
+extracted: extracted/Agentproof - Static Verification of Agent Workflow Graphs.extracted.md
 author:
   - Melwin Xavier
   - Vaisakh M A
@@ -27,7 +27,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: growing
-source: "https://arxiv.org/abs/2603.20356"
+source: https://arxiv.org/abs/2603.20356
 related:
   - "[[Agent Workflow Static Verification]]"
   - "[[Agent Workflow]]"

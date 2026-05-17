@@ -1,0 +1,78 @@
+# Concept Hierarchy Placement Candidate adjudication Adjudication — LLM 逐条判定
+
+Generated: `2026-05-17T09:45:34Z`
+
+> Candidate adjudication only adjudicates candidate semantics. It does not edit concept cards; accepted rows must still pass Writeback dry-run before any limited apply.
+
+## Summary
+
+- input_candidates: 2
+- adjudicated_candidates: 2
+- accept_taxonomy: 0
+- reject_taxonomy: 2
+- defer_boundary_review: 0
+- ready_for_dry_run: 0
+- terminal_non_writeback: 2
+- writeback_actions: `{"none": 2}`
+- concept_card_writes: 0
+- dry_run_planned: 0
+
+## Policy
+
+- batch_scope: Adjudicate the Conservative candidate generation conservative candidates only; do not reopen all parentless cards.
+- strict_taxonomy_rule: `up` means kind-of / belongs-to only; component, control-point-in, supports, standardizes, executes, protects, or adjacency remains non-taxonomy.
+- write_policy: No concept cards are edited in Candidate adjudication. Accepted rows become dry-run eligible for Writeback dry-run only.
+- dry_run_gate: Only decision=accept_taxonomy and writeback_action=add_up may enter Writeback dry-run.
+
+## Decisions
+
+| Source | Candidate parent | Decision | Writeback action | Dry-run eligible | Strict taxonomy test |
+|---|---|---|---|---:|---|
+| [[Approval Gate]] | [[Agent Workflow]] | reject_taxonomy | none | false | fails: Approval Gate is a workflow control point / approval node used inside a workflow, not a workflow structure or workflow pattern itself. |
+| [[ReAct]] | [[Agent Workflow]] | reject_taxonomy | none | false | fails: ReAct is a reasoning/action/observation Agent Loop pattern; workflows may absorb or wrap parts of it, but it is not a workflow subtype. |
+
+## Decision details
+
+### [[Approval Gate]] → [[Agent Workflow]]
+
+- decision: `reject_taxonomy`
+- review_status: `terminal_non_writeback`
+- writeback_action: `none`
+- reason: Reject `up: [[Agent Workflow]]`: the child card defines Approval Gate as an execution-before-control point for high-risk actions. The parent card allows workflows to contain approval gates, but containment/composition is not strict taxonomy.
+
+Evidence:
+- `agentic learning/wiki/concepts/Approval Gate.md` / `控制点`: …proval Gate ## 一句话 Approval Gate 是在高风险动作执行前要求人类确认的控制点。 ## 概念详解 Approval Gate 的问题背景是 Agent 能把语言输出转成真实动作：发邮件、提交表单、删文件、付费、调用外部系统。只要动作会产生不可逆影响，安全边界…
+- `agentic learning/wiki/concepts/Approval Gate.md` / `执行前的准入点`: …uman-in-the-loop 可以参与澄清、标注、评审或接管；approval gate 特指“执行前的准入点”。它和 [[Policy Engine]] 也不同：policy engine 负责判断规则，approval gate 是把判断结果暴露成执行阻断或确认流程。好的 gate 要…
+- `agentic learning/wiki/concepts/Approval Gate.md` / `Approval Gate 应放在不可逆`: …t injection 可能诱导 Agent 隐瞒风险，所以审批信息应由系统生成。 ## 边界细节 Approval Gate 应放在不可逆、高影响、跨权限或外部提交动作之前。低风险读取可以自动通过，高风险写入应展示动作、参数、来源和风险。只弹一个“确认吗”但不给可判断信息，不是好的 gate。 ## 现代性状态 cu…
+- `agentic learning/wiki/concepts/Agent Workflow.md` / `步骤、分支、循环、审批和交接`: …t Workflow ## 一句话 Agent Workflow 是把 Agent 任务组织成可控制步骤、分支、循环、审批和交接的流程结构，让模型自主性只出现在合适节点。 ## 概念详解 Agent Workflow 之所以重要，是因为不是每个 agentic task 都应该让模型从头到尾自由决定。很多步…
+- `agentic learning/wiki/concepts/Agent Workflow.md` / `workflow 会把任务拆成节点、边、条件、循环、并行分支、handoff 和 approval gate`: …选择工具的任务，workflow 里才需要嵌入更强的 loop 或 agent 节点。 从机制上看，workflow 会把任务拆成节点、边、条件、循环、并行分支、handoff 和 approval gate。[[LangGraph 官方文档]] 的 source note 把图结构、状态、节点、边和循环视为显式工程对象，正好说明 workflow 如何从“流程图”变成可运行结构。[[…
+
+Drift guards:
+- Do not classify Approval Gate under Agent Workflow merely because workflow definitions can contain approval nodes; node/control-point-in is not kind-of.
+- If this relationship is written later, prefer a typed relation such as `control_point_in` / `composes_with`, not `up`.
+
+### [[ReAct]] → [[Agent Workflow]]
+
+- decision: `reject_taxonomy`
+- review_status: `terminal_non_writeback`
+- writeback_action: `none`
+- reason: Reject `up: [[Agent Workflow]]`: the ReAct card explicitly frames ReAct as an Agent Loop / reasoning-action-observation pattern and warns it is not a production workflow template. The card says modern systems often put stable paths into workflows and keep dynamic parts in an agent loop, so the relation is boundary/adjacency rather than strict taxonomy.
+
+Evidence:
+- `agentic learning/wiki/concepts/ReAct.md` / `理解 Agent Loop 的地基卡`: …ph、trace、guardrails、approval 和 eval 包住。 所以 ReAct 是理解 Agent Loop 的地基卡，而不是生产系统模板。它保留下来的价值是“行动要被观察校正，观察要回到下一轮决策”；被现代系统吸收的局限是“Action 格式、工具执行、状态保存、权限、停止条件不能只靠 prom…
+- `agentic learning/wiki/concepts/ReAct.md` / `不是完整的生产级 Agent 平台`: …ReAct 把“想”和“做”交替起来，让工具或环境反馈修正后续推理。 ## 它不是什么 ReAct 不是完整的生产级 Agent 平台。 它也不是所有 Agent 都必须采用的固定格式。真实系统可能隐藏推理、改用结构化 planner，或把行动循环封装在框架里。 更细一点：ReAct 不是“Agent 的同义词”…
+- `agentic learning/wiki/concepts/ReAct.md` / `很多生产系统会把稳定路径写成 [[Agent Workflow]]`: …的是外部框架或 [[Agent Harness]]。 也不要把 ReAct 等同于所有 Agent。很多生产系统会把稳定路径写成 [[Agent Workflow]]，只在需要动态决策、环境反馈或工具探索的部分使用 agent loop。 ## 边界细节 ReAct 的价值在于揭示 [[Agent Loop]] 的核心：行动不是一次性输出，而是…
+- `agentic learning/wiki/concepts/Agent Workflow.md` / `Agent Workflow 不是 [[Agent Loop]] 的同义词`: …复杂自主 Agent 应该在任务确实需要动态判断、多步反馈和不确定环境时再引入。 ## 它不是什么 Agent Workflow 不是 [[Agent Loop]] 的同义词。Loop 描述观察、决策、行动、反馈的基本循环；workflow 描述系统如何把这些循环、工具、人类确认和角色交接组织成任务路径。 Agent Workflow 也不等于 [[A…
+- `agentic learning/wiki/concepts/Agent Workflow.md` / `真实系统常混合`: …flow；如果下一步主要由模型根据 observation 动态选择，它更像 Agent loop。真实系统常混合：稳定路径用 workflow 固定，不确定节点进入 loop。 ## 现代性状态 - 判定：current-practice - 为什么：workflow 没有过时；它从“单独卖…
+
+Drift guards:
+- Do not classify ReAct under Agent Workflow from a mere workflow mention; ReAct is primarily an Agent Loop pattern.
+- If [[Agent Loop]] becomes an approved parent later, review ReAct against that narrower parent instead of using Agent Workflow as a proxy.
+
+## Next command
+
+```bash
+# Writeback dry-run should consume only accept_taxonomy + writeback_action=add_up rows from this adjudication artifact.
+python3 scripts/concept_taxonomy/taxonomy_placement_review.py --dry-run-reviewed --check
+```
+

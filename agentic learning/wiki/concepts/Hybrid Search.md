@@ -32,13 +32,13 @@ up:
 relations:
   - type: composes_with
     target: "[[Sparse Retrieval]]"
-    note: "Hybrid Search 通常把 sparse retrieval / BM25 作为一路候选。"
+    note: Hybrid Search 通常把 sparse retrieval / BM25 作为一路候选。
   - type: composes_with
     target: "[[Dense Retrieval]]"
-    note: "Hybrid Search 通常把 dense retrieval 作为另一条语义召回。"
+    note: Hybrid Search 通常把 dense retrieval 作为另一条语义召回。
   - type: related_to
     target: "[[Multi-Route Retrieval]]"
-    note: "Hybrid Search 是多路召回最常见的双路形态，但多路召回更宽。"
+    note: Hybrid Search 是多路召回最常见的双路形态，但多路召回更宽。
 related:
   - "[[RAG]]"
   - "[[Vector Database]]"
@@ -53,9 +53,9 @@ related:
   - "[[Dense Retrieval]]"
   - "[[Reciprocal Rank Fusion]]"
 aliases:
-  - "混合检索"
-  - "hybrid search"
-  - "hybrid retrieval"
+  - 混合检索
+  - hybrid search
+  - hybrid retrieval
 ---
 
 # Hybrid Search

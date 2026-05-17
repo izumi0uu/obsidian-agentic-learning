@@ -3,15 +3,15 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
-  - "rag"
+  - interview
+  - ai
+  - llm
+  - rag
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/rag/7_embedding_algos.html"
-source: "https://xiaolinnote.com/ai/rag/7_embedding_algos.html"
+url: https://xiaolinnote.com/ai/rag/7_embedding_algos.html
+source: https://xiaolinnote.com/ai/rag/7_embedding_algos.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 714bfc9ebbca5b42dd7fb00c6a1e20155b1d6ce82441d517faf16859a978303b

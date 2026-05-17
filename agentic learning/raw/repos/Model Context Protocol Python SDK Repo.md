@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: repo
-title: "modelcontextprotocol/python-sdk"
-url: "https://github.com/modelcontextprotocol/python-sdk"
+title: modelcontextprotocol/python-sdk
+url: https://github.com/modelcontextprotocol/python-sdk
 author: Model Context Protocol
 site: GitHub
 topic:

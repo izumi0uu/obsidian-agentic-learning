@@ -1,10 +1,10 @@
 ---
 type: source
 source_type: paper
-title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
-url: "https://arxiv.org/abs/2005.11401"
-pdf: "assets/Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf"
-extracted: "extracted/Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.extracted.md"
+title: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+url: https://arxiv.org/abs/2005.11401
+pdf: assets/Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf
+extracted: extracted/Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.extracted.md
 author:
   - Lewis et al.
 site: arXiv
@@ -17,7 +17,7 @@ last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: growing
-source: "https://arxiv.org/abs/2005.11401"
+source: https://arxiv.org/abs/2005.11401
 related:
   - "[[RAG]]"
   - "[[LLM]]"

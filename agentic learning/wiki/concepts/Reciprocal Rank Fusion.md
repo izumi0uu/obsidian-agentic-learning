@@ -28,10 +28,10 @@ up:
 relations:
   - type: used_by
     target: "[[Hybrid Search]]"
-    note: "Hybrid Search 常用 RRF 把 dense/vector 与 sparse/BM25 两路排序融合。"
+    note: Hybrid Search 常用 RRF 把 dense/vector 与 sparse/BM25 两路排序融合。
   - type: precedes
     target: "[[Reranking]]"
-    note: "RRF 是候选融合/粗排；reranking 是融合后对较小候选集做精排。"
+    note: RRF 是候选融合/粗排；reranking 是融合后对较小候选集做精排。
 related:
   - "[[Multi-Route Retrieval]]"
   - "[[Hybrid Search]]"

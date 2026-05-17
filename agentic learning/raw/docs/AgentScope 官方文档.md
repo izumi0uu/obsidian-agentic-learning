@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "AgentScope Documentation"
-url: "https://doc.agentscope.io/"
+title: AgentScope Documentation
+url: https://doc.agentscope.io/
 author: AgentScope / Alibaba
 site: doc.agentscope.io
 topic:
@@ -17,7 +17,7 @@ freshness: volatile
 conflicts: []
 status: seed
 source:
-  - "https://arxiv.org/abs/2402.14034"
+  - https://arxiv.org/abs/2402.14034
 related:
   - "[[AgentScope]]"
   - "[[Agent Framework]]"

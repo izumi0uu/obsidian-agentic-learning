@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "database"
-  - "sql"
+  - interview
+  - database
+  - sql
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/sql/sql_part4/16-comprehensive-practice.html"
-source: "https://xiaolinnote.com/sql/sql_part4/16-comprehensive-practice.html"
+url: https://xiaolinnote.com/sql/sql_part4/16-comprehensive-practice.html
+source: https://xiaolinnote.com/sql/sql_part4/16-comprehensive-practice.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 3cf2ee05d5f0cf624f07bba44ff93bd170534a2f111b9568607f4255b62cd2c3

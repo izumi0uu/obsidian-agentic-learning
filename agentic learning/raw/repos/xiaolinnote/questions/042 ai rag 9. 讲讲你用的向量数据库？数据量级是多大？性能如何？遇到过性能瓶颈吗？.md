@@ -3,15 +3,15 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
-  - "rag"
+  - interview
+  - ai
+  - llm
+  - rag
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/rag/9_vectordb_practice.html"
-source: "https://xiaolinnote.com/ai/rag/9_vectordb_practice.html"
+url: https://xiaolinnote.com/ai/rag/9_vectordb_practice.html
+source: https://xiaolinnote.com/ai/rag/9_vectordb_practice.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: d241dd2df1b179ac93195c50914406071477e5c4a5c9a5e756cbdf6f90e579be

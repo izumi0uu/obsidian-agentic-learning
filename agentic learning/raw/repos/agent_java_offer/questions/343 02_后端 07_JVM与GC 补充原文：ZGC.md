@@ -2,26 +2,26 @@
 type: source
 source_type: repo
 site: github.com
-repo: "guoguo-tju/agent_java_offer"
+repo: guoguo-tju/agent_java_offer
 topic:
-  - "interview"
-  - "java"
-  - "backend"
-  - "jvm"
+  - interview
+  - java
+  - backend
+  - jvm
 status: inbox
 created: 2026-05-09
 updated: 2026-05-09
-url: "https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/02_%E5%90%8E%E7%AB%AF/07_JVM%E4%B8%8EGC/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md"
-source: "https://github.com/guoguo-tju/agent_java_offer"
-source_path: "docs/interview_prep/02_后端/07_JVM与GC/01_核心问答.md"
-commit: "12bf4c915cca01f513e040935e1917d3687f8b35"
-entry_type: "supplement-section"
-direction: "02_后端"
-category: "07_JVM与GC"
+url: https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/02_%E5%90%8E%E7%AB%AF/07_JVM%E4%B8%8EGC/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md
+source: https://github.com/guoguo-tju/agent_java_offer
+source_path: docs/interview_prep/02_后端/07_JVM与GC/01_核心问答.md
+commit: 12bf4c915cca01f513e040935e1917d3687f8b35
+entry_type: supplement-section
+direction: 02_后端
+category: 07_JVM与GC
 last_checked: 2026-05-09
 freshness: watch
 sha256: e00caf5d031f3859b3e76322b25cd09e624e41463d771ce38e4ae7bcf4e15538
-license: "CC BY-NC 4.0"
+license: CC BY-NC 4.0
 related:
   - "[[agent_java_offer Repo]]"
   - "[[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]"

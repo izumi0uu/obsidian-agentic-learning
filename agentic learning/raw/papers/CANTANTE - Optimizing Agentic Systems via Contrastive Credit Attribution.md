@@ -2,15 +2,15 @@
 type: source
 source_type: paper
 title: "CANTANTE: Optimizing Agentic Systems via Contrastive Credit Attribution"
-url: "https://arxiv.org/abs/2605.13295"
-pdf: "assets/CANTANTE - Optimizing Agentic Systems via Contrastive Credit Attribution.pdf"
-extracted: "extracted/CANTANTE - Optimizing Agentic Systems via Contrastive Credit Attribution.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.13295"
-doi: "10.48550/arXiv.2605.13295"
+url: https://arxiv.org/abs/2605.13295
+pdf: assets/CANTANTE - Optimizing Agentic Systems via Contrastive Credit Attribution.pdf
+extracted: extracted/CANTANTE - Optimizing Agentic Systems via Contrastive Credit Attribution.extracted.md
+arxiv: https://arxiv.org/abs/2605.13295
+doi: 10.48550/arXiv.2605.13295
 author:
   - Tom Zehle
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -25,7 +25,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.13295"
+source: https://arxiv.org/abs/2605.13295
 related:
   - "[[Multi-agent Orchestration]]"
   - "[[Evaluation]]"

@@ -2,11 +2,11 @@
 type: source
 source_type: paper
 title: "ToolCUA: Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents"
-url: "https://arxiv.org/abs/2605.12481"
-pdf: "assets/ToolCUA - Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents.pdf"
-extracted: "extracted/ToolCUA - Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.12481"
-doi: "10.48550/arXiv.2605.12481"
+url: https://arxiv.org/abs/2605.12481
+pdf: assets/ToolCUA - Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents.pdf
+extracted: extracted/ToolCUA - Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents.extracted.md
+arxiv: https://arxiv.org/abs/2605.12481
+doi: 10.48550/arXiv.2605.12481
 author:
   - Xuhao Hu
   - Xi Zhang
@@ -18,7 +18,7 @@ author:
   - Ming Yan
   - Jieping Ye
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -33,7 +33,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.12481"
+source: https://arxiv.org/abs/2605.12481
 related:
   - "[[Computer Use]]"
   - "[[Browser Agent]]"

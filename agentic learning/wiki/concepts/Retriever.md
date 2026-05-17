@@ -26,8 +26,8 @@ related:
   - "[[Multi-Route Retrieval]]"
   - "[[Reranking]]"
 aliases:
-  - "检索器"
-  - "召回器"
+  - 检索器
+  - 召回器
 ---
 
 # Retriever

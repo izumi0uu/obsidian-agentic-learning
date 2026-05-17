@@ -72,7 +72,7 @@ related:
 ```bash
 python3 scripts/concept_card_audit.py --format markdown
 python3 scripts/concept_card_audit.py --team-plan --format markdown
-python3 scripts/concept_card_audit.py --format json --output .omx/reports/concept-card-audit.json
+python3 scripts/concept_card_audit.py --format json --output reports/concept-card-audit.json
 ```
 
 脚本会输出：

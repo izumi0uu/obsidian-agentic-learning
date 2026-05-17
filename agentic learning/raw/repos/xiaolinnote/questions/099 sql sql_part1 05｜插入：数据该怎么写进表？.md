@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "database"
-  - "sql"
+  - interview
+  - database
+  - sql
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/sql/sql_part1/05-insert-data.html"
-source: "https://xiaolinnote.com/sql/sql_part1/05-insert-data.html"
+url: https://xiaolinnote.com/sql/sql_part1/05-insert-data.html
+source: https://xiaolinnote.com/sql/sql_part1/05-insert-data.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 5f44a894a7a636f55896b8544bfe92b2299449af44fe31a1bc0c234324fbbde7

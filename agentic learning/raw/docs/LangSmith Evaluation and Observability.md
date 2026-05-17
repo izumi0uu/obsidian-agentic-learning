@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "LangSmith Evaluation and Observability"
-url: "https://docs.langchain.com/langsmith/evaluation"
+title: LangSmith Evaluation and Observability
+url: https://docs.langchain.com/langsmith/evaluation
 author: LangChain
 site: docs.langchain.com
 topic:

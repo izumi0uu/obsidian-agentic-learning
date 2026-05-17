@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Zep Memory"
-url: "https://help.getzep.com/v2/memory"
+title: Zep Memory
+url: https://help.getzep.com/v2/memory
 author: Zep
 site: help.getzep.com
 topic:

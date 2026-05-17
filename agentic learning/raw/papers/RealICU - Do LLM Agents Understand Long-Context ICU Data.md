@@ -2,11 +2,11 @@
 type: source
 source_type: paper
 title: "RealICU: Do LLM Agents Understand Long-Context ICU Data? A Benchmark Beyond Behavior Imitation"
-url: "https://arxiv.org/abs/2605.13542"
-pdf: "assets/RealICU - Do LLM Agents Understand Long-Context ICU Data.pdf"
-extracted: "extracted/RealICU - Do LLM Agents Understand Long-Context ICU Data.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.13542"
-doi: "10.48550/arXiv.2605.13542"
+url: https://arxiv.org/abs/2605.13542
+pdf: assets/RealICU - Do LLM Agents Understand Long-Context ICU Data.pdf
+extracted: extracted/RealICU - Do LLM Agents Understand Long-Context ICU Data.extracted.md
+arxiv: https://arxiv.org/abs/2605.13542
+doi: 10.48550/arXiv.2605.13542
 author:
   - Chengzhi Shen
   - Weixiang Shen
@@ -19,7 +19,7 @@ author:
   - Daniel Rueckert
   - Jiazhen Pan
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -35,7 +35,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.13542"
+source: https://arxiv.org/abs/2605.13542
 related:
   - "[[Benchmark]]"
   - "[[Evaluation]]"

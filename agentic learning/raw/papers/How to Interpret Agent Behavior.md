@@ -1,12 +1,12 @@
 ---
 type: source
 source_type: paper
-title: "How to Interpret Agent Behavior"
-url: "https://arxiv.org/abs/2605.13625"
-pdf: "assets/How to Interpret Agent Behavior.pdf"
-extracted: "extracted/How to Interpret Agent Behavior.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.13625"
-doi: "10.48550/arXiv.2605.13625"
+title: How to Interpret Agent Behavior
+url: https://arxiv.org/abs/2605.13625
+pdf: assets/How to Interpret Agent Behavior.pdf
+extracted: extracted/How to Interpret Agent Behavior.extracted.md
+arxiv: https://arxiv.org/abs/2605.13625
+doi: 10.48550/arXiv.2605.13625
 author:
   - Jie Gao
   - Kaiser Sun
@@ -20,7 +20,7 @@ author:
   - Daniel Khashabi
   - Mark Dredze
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -35,7 +35,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.13625"
+source: https://arxiv.org/abs/2605.13625
 related:
   - "[[Trace]]"
   - "[[Trajectory]]"

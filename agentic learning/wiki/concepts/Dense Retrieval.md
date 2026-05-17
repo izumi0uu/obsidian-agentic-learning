@@ -29,16 +29,16 @@ up:
 relations:
   - type: contrasts_with
     target: "[[Sparse Retrieval]]"
-    note: "Dense Retrieval 用稠密语义向量找相似内容；Sparse Retrieval / BM25 用词项、倒排和词面信号找精确匹配。"
+    note: Dense Retrieval 用稠密语义向量找相似内容；Sparse Retrieval / BM25 用词项、倒排和词面信号找精确匹配。
   - type: composes_with
     target: "[[Hybrid Search]]"
-    note: "Hybrid Search 常把 dense retrieval 和 sparse/BM25 route 组合起来互补。"
+    note: Hybrid Search 常把 dense retrieval 和 sparse/BM25 route 组合起来互补。
   - type: uses
     target: "[[Embedding]]"
-    note: "Dense Retrieval 依赖文档和 query 的 embedding 表示。"
+    note: Dense Retrieval 依赖文档和 query 的 embedding 表示。
   - type: contrasts_with
     target: "[[Cross-Encoder]]"
-    note: "Bi-encoder / Dense Retrieval 把 query 和 chunk 分开编码，适合快速召回；Cross-Encoder 把二者放在一起判断，适合小候选集精排。"
+    note: Bi-encoder / Dense Retrieval 把 query 和 chunk 分开编码，适合快速召回；Cross-Encoder 把二者放在一起判断，适合小候选集精排。
 related:
   - "[[Retriever]]"
   - "[[Embedding]]"

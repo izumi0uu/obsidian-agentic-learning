@@ -3,16 +3,16 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
-  - "tools"
-  - "mcp"
+  - interview
+  - ai
+  - llm
+  - tools
+  - mcp
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/tools/14_sse_vs_websocket.html"
-source: "https://xiaolinnote.com/ai/tools/14_sse_vs_websocket.html"
+url: https://xiaolinnote.com/ai/tools/14_sse_vs_websocket.html
+source: https://xiaolinnote.com/ai/tools/14_sse_vs_websocket.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 5f82221c2b969bffe2044738119491570f3bbfebd033c2fd83bae7375b2d9cf1

@@ -1,10 +1,10 @@
 ---
 type: source
 source_type: paper
-title: "Attention Is All You Need"
-url: "https://arxiv.org/abs/1706.03762"
-pdf: "assets/Attention Is All You Need.pdf"
-extracted: "extracted/Attention Is All You Need.extracted.md"
+title: Attention Is All You Need
+url: https://arxiv.org/abs/1706.03762
+pdf: assets/Attention Is All You Need.pdf
+extracted: extracted/Attention Is All You Need.extracted.md
 author:
   - Vaswani et al.
 site: arXiv
@@ -17,7 +17,7 @@ last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: growing
-source: "https://arxiv.org/abs/1706.03762"
+source: https://arxiv.org/abs/1706.03762
 related:
   - "[[LLM]]"
   - "[[Transformer]]"

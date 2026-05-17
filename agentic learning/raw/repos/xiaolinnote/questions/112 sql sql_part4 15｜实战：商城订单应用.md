@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "database"
-  - "sql"
+  - interview
+  - database
+  - sql
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/sql/sql_part4/15-ecommerce-practice.html"
-source: "https://xiaolinnote.com/sql/sql_part4/15-ecommerce-practice.html"
+url: https://xiaolinnote.com/sql/sql_part4/15-ecommerce-practice.html
+source: https://xiaolinnote.com/sql/sql_part4/15-ecommerce-practice.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 17e54175c60a455b7c8c50f09dd0619e86f8ff97b0e46c6166b954e961b3257e

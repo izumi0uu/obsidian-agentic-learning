@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
+  - interview
+  - ai
+  - llm
 status: inbox
 created: 2026-05-17
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/llm/scaling_law_emergence.html"
-source: "https://xiaolinnote.com/ai/llm/scaling_law_emergence.html"
+url: https://xiaolinnote.com/ai/llm/scaling_law_emergence.html
+source: https://xiaolinnote.com/ai/llm/scaling_law_emergence.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 496d2c210842c0322e52bf7d5542dc871a500fd6ff9192d8266e9481fb76612f

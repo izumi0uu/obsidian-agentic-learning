@@ -3,13 +3,13 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "git"
+  - interview
+  - git
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/git/"
-source: "https://xiaolinnote.com/git/"
+url: https://xiaolinnote.com/git/
+source: https://xiaolinnote.com/git/
 last_checked: 2026-05-17
 freshness: watch
 sha256: f4e18aa4d50f1c26f15b2180be38a19a4ee038a6b6dd21ca18a856e8bf980526

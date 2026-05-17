@@ -2,11 +2,11 @@
 type: source
 source_type: paper
 title: "Cognifold: Always-On Proactive Memory via Cognitive Folding"
-url: "https://arxiv.org/abs/2605.13438"
-pdf: "assets/Cognifold - Always-On Proactive Memory via Cognitive Folding.pdf"
-extracted: "extracted/Cognifold - Always-On Proactive Memory via Cognitive Folding.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.13438"
-doi: "10.48550/arXiv.2605.13438"
+url: https://arxiv.org/abs/2605.13438
+pdf: assets/Cognifold - Always-On Proactive Memory via Cognitive Folding.pdf
+extracted: extracted/Cognifold - Always-On Proactive Memory via Cognitive Folding.extracted.md
+arxiv: https://arxiv.org/abs/2605.13438
+doi: 10.48550/arXiv.2605.13438
 author:
   - Suli Wang
   - Yiqun Duan
@@ -15,7 +15,7 @@ author:
   - Dai Shi
   - Xinliang Zhou
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -29,7 +29,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.13438"
+source: https://arxiv.org/abs/2605.13438
 related:
   - "[[Memory]]"
   - "[[Long-term Memory]]"

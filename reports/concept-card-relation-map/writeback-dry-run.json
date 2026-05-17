@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "artifact_type": "concept_relation_writeback_dry_run",
+  "generated_at": "2026-05-17T09:59:15Z",
+  "ledger": "reports/concept-card-relation-map/relation-decision-ledger.json",
+  "summary": {
+    "planned": 0,
+    "ready": 0,
+    "applied": 0,
+    "skipped": 0,
+    "write_policy": "small batch only; no topic_family_review and no down/children mirror fields"
+  },
+  "planned": [],
+  "applied": []
+}

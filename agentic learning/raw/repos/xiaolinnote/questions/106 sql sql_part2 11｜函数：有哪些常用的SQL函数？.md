@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "database"
-  - "sql"
+  - interview
+  - database
+  - sql
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/sql/sql_part2/11-functions.html"
-source: "https://xiaolinnote.com/sql/sql_part2/11-functions.html"
+url: https://xiaolinnote.com/sql/sql_part2/11-functions.html
+source: https://xiaolinnote.com/sql/sql_part2/11-functions.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: bf11f5ba1ddfc499061e95dc0ea9481bf3ae04522c41377506c758958dd3cfdd

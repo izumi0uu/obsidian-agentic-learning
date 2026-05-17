@@ -2,25 +2,25 @@
 type: source
 source_type: repo
 site: github.com
-repo: "guoguo-tju/agent_java_offer"
+repo: guoguo-tju/agent_java_offer
 topic:
-  - "interview"
-  - "java"
-  - "backend"
+  - interview
+  - java
+  - backend
 status: inbox
 created: 2026-05-09
 updated: 2026-05-09
-url: "https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/02_%E5%90%8E%E7%AB%AF/10_%E7%BD%91%E7%BB%9CI_O%E4%B8%8E%E5%8F%91%E5%B8%83%E6%B2%BB%E7%90%86/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md"
-source: "https://github.com/guoguo-tju/agent_java_offer"
-source_path: "docs/interview_prep/02_后端/10_网络I_O与发布治理/01_核心问答.md"
-commit: "12bf4c915cca01f513e040935e1917d3687f8b35"
-entry_type: "question"
-direction: "02_后端"
-category: "10_网络I_O与发布治理"
+url: https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/02_%E5%90%8E%E7%AB%AF/10_%E7%BD%91%E7%BB%9CI_O%E4%B8%8E%E5%8F%91%E5%B8%83%E6%B2%BB%E7%90%86/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md
+source: https://github.com/guoguo-tju/agent_java_offer
+source_path: docs/interview_prep/02_后端/10_网络I_O与发布治理/01_核心问答.md
+commit: 12bf4c915cca01f513e040935e1917d3687f8b35
+entry_type: question
+direction: 02_后端
+category: 10_网络I_O与发布治理
 last_checked: 2026-05-09
 freshness: watch
 sha256: 86b80910ccac2162cc14a4306d8937908bba4afd0f11dbb7354917b28385dded
-license: "CC BY-NC 4.0"
+license: CC BY-NC 4.0
 related:
   - "[[agent_java_offer Repo]]"
   - "[[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]"

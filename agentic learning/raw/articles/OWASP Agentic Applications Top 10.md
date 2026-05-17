@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: article
-title: "OWASP Top 10 for Agentic Applications"
-url: "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/"
+title: OWASP Top 10 for Agentic Applications
+url: https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/
 author: OWASP GenAI Security Project
 site: genai.owasp.org
 topic:

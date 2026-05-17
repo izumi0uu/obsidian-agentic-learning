@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Model Context Protocol Documentation"
-url: "https://modelcontextprotocol.io/docs/getting-started/intro"
+title: Model Context Protocol Documentation
+url: https://modelcontextprotocol.io/docs/getting-started/intro
 author: Model Context Protocol
 site: modelcontextprotocol.io
 topic:

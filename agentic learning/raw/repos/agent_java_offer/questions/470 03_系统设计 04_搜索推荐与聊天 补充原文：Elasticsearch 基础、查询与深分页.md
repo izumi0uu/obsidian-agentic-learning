@@ -2,24 +2,24 @@
 type: source
 source_type: repo
 site: github.com
-repo: "guoguo-tju/agent_java_offer"
+repo: guoguo-tju/agent_java_offer
 topic:
-  - "interview"
-  - "system-design"
+  - interview
+  - system-design
 status: inbox
 created: 2026-05-09
 updated: 2026-05-09
-url: "https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/03_%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/04_%E6%90%9C%E7%B4%A2%E6%8E%A8%E8%8D%90%E4%B8%8E%E8%81%8A%E5%A4%A9/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md"
-source: "https://github.com/guoguo-tju/agent_java_offer"
-source_path: "docs/interview_prep/03_系统设计/04_搜索推荐与聊天/01_核心问答.md"
-commit: "12bf4c915cca01f513e040935e1917d3687f8b35"
-entry_type: "supplement-section"
-direction: "03_系统设计"
-category: "04_搜索推荐与聊天"
+url: https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/03_%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/04_%E6%90%9C%E7%B4%A2%E6%8E%A8%E8%8D%90%E4%B8%8E%E8%81%8A%E5%A4%A9/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md
+source: https://github.com/guoguo-tju/agent_java_offer
+source_path: docs/interview_prep/03_系统设计/04_搜索推荐与聊天/01_核心问答.md
+commit: 12bf4c915cca01f513e040935e1917d3687f8b35
+entry_type: supplement-section
+direction: 03_系统设计
+category: 04_搜索推荐与聊天
 last_checked: 2026-05-09
 freshness: watch
 sha256: aa11d558c1f50ace2756da2a253231799abcd28fa256e51d7ef5fe585080a58c
-license: "CC BY-NC 4.0"
+license: CC BY-NC 4.0
 related:
   - "[[agent_java_offer Repo]]"
   - "[[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]"

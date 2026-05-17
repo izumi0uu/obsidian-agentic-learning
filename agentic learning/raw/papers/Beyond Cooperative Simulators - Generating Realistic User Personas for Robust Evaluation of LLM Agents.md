@@ -2,11 +2,11 @@
 type: source
 source_type: paper
 title: "Beyond Cooperative Simulators: Generating Realistic User Personas for Robust Evaluation of LLM Agents"
-url: "https://arxiv.org/abs/2605.12894"
-pdf: "assets/Beyond Cooperative Simulators - Generating Realistic User Personas for Robust Evaluation of LLM Agents.pdf"
-extracted: "extracted/Beyond Cooperative Simulators - Generating Realistic User Personas for Robust Evaluation of LLM Agents.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.12894"
-doi: "10.48550/arXiv.2605.12894"
+url: https://arxiv.org/abs/2605.12894
+pdf: assets/Beyond Cooperative Simulators - Generating Realistic User Personas for Robust Evaluation of LLM Agents.pdf
+extracted: extracted/Beyond Cooperative Simulators - Generating Realistic User Personas for Robust Evaluation of LLM Agents.extracted.md
+arxiv: https://arxiv.org/abs/2605.12894
+doi: 10.48550/arXiv.2605.12894
 author:
   - Harshita Chopra
   - Kshitish Ghate
@@ -15,7 +15,7 @@ author:
   - Chirag Shah
   - Natasha Jaques
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -29,7 +29,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.12894"
+source: https://arxiv.org/abs/2605.12894
 related:
   - "[[Evaluation]]"
   - "[[Benchmark]]"

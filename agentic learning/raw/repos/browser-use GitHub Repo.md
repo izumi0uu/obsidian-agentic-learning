@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: repo
-title: "browser-use/browser-use"
-url: "https://github.com/browser-use/browser-use"
+title: browser-use/browser-use
+url: https://github.com/browser-use/browser-use
 author: browser-use
 site: github.com
 topic:

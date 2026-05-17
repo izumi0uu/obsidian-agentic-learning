@@ -3,15 +3,15 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
-  - "agent"
+  - interview
+  - ai
+  - llm
+  - agent
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/agent/12_memcompress.html"
-source: "https://xiaolinnote.com/ai/agent/12_memcompress.html"
+url: https://xiaolinnote.com/ai/agent/12_memcompress.html
+source: https://xiaolinnote.com/ai/agent/12_memcompress.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 997afb54bd390d19a626a39cfe50546d24c9e450252c456f3566ce30f64013e3

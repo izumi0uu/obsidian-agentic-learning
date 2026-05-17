@@ -11,12 +11,12 @@ topic:
 status: inbox
 created: 2026-05-09
 updated: 2026-05-09
-url: "https://github.com/guoguo-tju/agent_java_offer"
-source: "https://github.com/guoguo-tju/agent_java_offer"
-commit: "12bf4c915cca01f513e040935e1917d3687f8b35"
+url: https://github.com/guoguo-tju/agent_java_offer
+source: https://github.com/guoguo-tju/agent_java_offer
+commit: 12bf4c915cca01f513e040935e1917d3687f8b35
 last_checked: 2026-05-09
 freshness: watch
-license: "CC BY-NC 4.0"
+license: CC BY-NC 4.0
 related:
   - "[[agent_java_offer Repo]]"
   - "[[资料收集索引]]"

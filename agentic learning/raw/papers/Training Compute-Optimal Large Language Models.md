@@ -1,10 +1,10 @@
 ---
 type: source
 source_type: paper
-title: "Training Compute-Optimal Large Language Models"
-url: "https://arxiv.org/abs/2203.15556"
-pdf: "assets/Training Compute-Optimal Large Language Models.pdf"
-extracted: "extracted/Training Compute-Optimal Large Language Models.extracted.md"
+title: Training Compute-Optimal Large Language Models
+url: https://arxiv.org/abs/2203.15556
+pdf: assets/Training Compute-Optimal Large Language Models.pdf
+extracted: extracted/Training Compute-Optimal Large Language Models.extracted.md
 author:
   - Hoffmann et al.
 site: arXiv
@@ -17,7 +17,7 @@ last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2203.15556"
+source: https://arxiv.org/abs/2203.15556
 related:
   - "[[LLM Training Pipeline]]"
   - "[[LLM]]"

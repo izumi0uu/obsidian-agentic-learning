@@ -1,10 +1,10 @@
 ---
 type: source
 source_type: paper
-title: "The Llama 3 Herd of Models"
-url: "https://arxiv.org/abs/2407.21783"
-pdf: "assets/The Llama 3 Herd of Models.pdf"
-extracted: "extracted/The Llama 3 Herd of Models.extracted.md"
+title: The Llama 3 Herd of Models
+url: https://arxiv.org/abs/2407.21783
+pdf: assets/The Llama 3 Herd of Models.pdf
+extracted: extracted/The Llama 3 Herd of Models.extracted.md
 author:
   - Dubey et al.
 site: arXiv
@@ -17,7 +17,7 @@ last_checked: 2026-05-11
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2407.21783"
+source: https://arxiv.org/abs/2407.21783
 related:
   - "[[LLM Training Pipeline]]"
   - "[[LLM]]"

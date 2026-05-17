@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Mastra Agent Documentation"
-url: "https://mastra.ai/docs/agents/overview"
+title: Mastra Agent Documentation
+url: https://mastra.ai/docs/agents/overview
 author: Mastra
 site: mastra.ai
 topic:

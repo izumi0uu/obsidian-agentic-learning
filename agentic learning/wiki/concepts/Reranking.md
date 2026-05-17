@@ -25,11 +25,11 @@ related:
   - "[[Reciprocal Rank Fusion]]"
   - "[[Cross-Encoder]]"
 aliases:
-  - "Rerank"
-  - "rerank"
-  - "重排序"
-  - "精排"
-  - "Rerank 精排"
+  - Rerank
+  - rerank
+  - 重排序
+  - 精排
+  - Rerank 精排
 ---
 
 # Reranking

@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "OpenAI Function Calling Documentation"
-url: "https://platform.openai.com/docs/guides/function-calling?api-mode=chat"
+title: OpenAI Function Calling Documentation
+url: https://platform.openai.com/docs/guides/function-calling?api-mode=chat
 author: OpenAI
 site: platform.openai.com
 topic:

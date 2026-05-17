@@ -26,10 +26,10 @@ up:
 relations:
   - type: uses
     target: "[[Retriever]]"
-    note: "检索时用子 chunk 精准定位，命中后回取父 chunk 给 LLM 阅读。"
+    note: 检索时用子 chunk 精准定位，命中后回取父 chunk 给 LLM 阅读。
   - type: mitigates
     target: "[[Context Precision]]"
-    note: "子 chunk 帮助精确检索，父 chunk 帮助保留上下文；但是否改善 precision/recall 仍需评估。"
+    note: 子 chunk 帮助精确检索，父 chunk 帮助保留上下文；但是否改善 precision/recall 仍需评估。
 related:
   - "[[Chunking]]"
   - "[[Document Ingestion]]"

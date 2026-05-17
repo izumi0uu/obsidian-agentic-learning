@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Pydantic AI Documentation"
-url: "https://pydantic.dev/docs/ai/overview/"
+title: Pydantic AI Documentation
+url: https://pydantic.dev/docs/ai/overview/
 author: Pydantic
 site: pydantic.dev
 topic:

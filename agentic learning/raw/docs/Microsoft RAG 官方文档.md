@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Microsoft Retrieval-Augmented Generation Documentation"
-url: "https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/retrieval-augmented-generation"
+title: Microsoft Retrieval-Augmented Generation Documentation
+url: https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/retrieval-augmented-generation
 author: Microsoft
 site: learn.microsoft.com
 topic:

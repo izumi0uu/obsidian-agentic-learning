@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Vercel AI SDK Agents Documentation"
-url: "https://ai-sdk.dev/docs/agents/overview"
+title: Vercel AI SDK Agents Documentation
+url: https://ai-sdk.dev/docs/agents/overview
 author: Vercel
 site: ai-sdk.dev
 topic:
@@ -17,7 +17,7 @@ freshness: volatile
 conflicts: []
 status: seed
 source:
-  - "https://ai-sdk.dev/docs/introduction"
+  - https://ai-sdk.dev/docs/introduction
 related:
   - "[[Agent Framework]]"
   - "[[Tool Calling]]"

@@ -2,7 +2,7 @@
 type: source
 source_type: repo
 title: "Hello-Agents: 从零开始构建智能体"
-url: "https://github.com/datawhalechina/hello-agents"
+url: https://github.com/datawhalechina/hello-agents
 author: Datawhale China
 site: github.com
 topic:

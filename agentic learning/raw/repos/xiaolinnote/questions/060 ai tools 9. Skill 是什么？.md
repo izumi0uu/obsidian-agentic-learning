@@ -3,16 +3,16 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
-  - "tools"
-  - "mcp"
+  - interview
+  - ai
+  - llm
+  - tools
+  - mcp
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/tools/9_skill.html"
-source: "https://xiaolinnote.com/ai/tools/9_skill.html"
+url: https://xiaolinnote.com/ai/tools/9_skill.html
+source: https://xiaolinnote.com/ai/tools/9_skill.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 89c2242b92a839debb9dd34886f79554088106197b3f568ef93afd1f0a81552d

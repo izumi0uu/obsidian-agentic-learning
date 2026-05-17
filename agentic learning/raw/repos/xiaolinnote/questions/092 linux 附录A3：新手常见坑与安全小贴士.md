@@ -3,13 +3,13 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "linux"
+  - interview
+  - linux
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/linux/appendix-a3-common-pitfalls-safety-tips.html"
-source: "https://xiaolinnote.com/linux/appendix-a3-common-pitfalls-safety-tips.html"
+url: https://xiaolinnote.com/linux/appendix-a3-common-pitfalls-safety-tips.html
+source: https://xiaolinnote.com/linux/appendix-a3-common-pitfalls-safety-tips.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 158326e3ae51bf84a89ce9ccb8a2394578535b350211f8d142336c899d96ef17

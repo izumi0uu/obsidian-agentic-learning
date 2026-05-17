@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "OpenTelemetry Semantic Conventions for Generative AI"
-url: "https://opentelemetry.io/docs/specs/semconv/gen-ai/"
+title: OpenTelemetry Semantic Conventions for Generative AI
+url: https://opentelemetry.io/docs/specs/semconv/gen-ai/
 author: OpenTelemetry
 site: opentelemetry.io
 topic:

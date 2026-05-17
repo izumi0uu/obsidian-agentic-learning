@@ -2,16 +2,16 @@
 type: source
 source_type: paper
 title: "AI Harness Engineering: A Runtime Substrate for Foundation-Model Software Agents"
-url: "https://arxiv.org/abs/2605.13357"
-pdf: "assets/AI Harness Engineering - A Runtime Substrate for Foundation-Model Software Agents.pdf"
-extracted: "extracted/AI Harness Engineering - A Runtime Substrate for Foundation-Model Software Agents.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.13357"
-doi: "10.48550/arXiv.2605.13357"
+url: https://arxiv.org/abs/2605.13357
+pdf: assets/AI Harness Engineering - A Runtime Substrate for Foundation-Model Software Agents.pdf
+extracted: extracted/AI Harness Engineering - A Runtime Substrate for Foundation-Model Software Agents.extracted.md
+arxiv: https://arxiv.org/abs/2605.13357
+doi: 10.48550/arXiv.2605.13357
 author:
   - Hailin Zhong
   - Shengxin Zhu
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -26,7 +26,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.13357"
+source: https://arxiv.org/abs/2605.13357
 related:
   - "[[Agent Harness]]"
   - "[[Coding Agent]]"

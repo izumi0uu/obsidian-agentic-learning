@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "AutoGen AgentChat Teams Documentation"
-url: "https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/tutorial/teams.html"
+title: AutoGen AgentChat Teams Documentation
+url: https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/tutorial/teams.html
 author: Microsoft / AutoGen
 site: microsoft.github.io
 topic:
@@ -15,7 +15,7 @@ updated: 2026-05-12
 last_checked: 2026-05-12
 freshness: volatile
 conflicts:
-  - "Microsoft Agent Framework 已被官方描述为 AutoGen 与 Semantic Kernel 的下一代/继任框架；AutoGen 本身仍有 stable docs，但生产选型需要同时看 Microsoft Agent Framework 迁移路线。"
+  - Microsoft Agent Framework 已被官方描述为 AutoGen 与 Semantic Kernel 的下一代/继任框架；AutoGen 本身仍有 stable docs，但生产选型需要同时看 Microsoft Agent Framework 迁移路线。
 status: seed
 source:
 related:

@@ -3,13 +3,13 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "git"
+  - interview
+  - git
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/git/07-remote-repository-basics.html"
-source: "https://xiaolinnote.com/git/07-remote-repository-basics.html"
+url: https://xiaolinnote.com/git/07-remote-repository-basics.html
+source: https://xiaolinnote.com/git/07-remote-repository-basics.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 81555a1073c4254097a5b8e1e7f9f25ec79e5e0d68ac8ef8c73cfff9a40164f9

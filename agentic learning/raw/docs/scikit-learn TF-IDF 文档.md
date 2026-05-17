@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "scikit-learn TF-IDF documentation"
-url: "https://scikit-learn.org/stable/modules/feature_extraction.html#tfidf-term-weighting"
+title: scikit-learn TF-IDF documentation
+url: https://scikit-learn.org/stable/modules/feature_extraction.html#tfidf-term-weighting
 author: scikit-learn developers
 site: scikit-learn.org
 topic:
@@ -17,8 +17,8 @@ freshness: stable
 conflicts: []
 status: seed
 source:
-  - "https://scikit-learn.org/stable/modules/feature_extraction.html#tfidf-term-weighting"
-  - "https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html"
+  - https://scikit-learn.org/stable/modules/feature_extraction.html#tfidf-term-weighting
+  - https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html
 related:
   - "[[TF-IDF]]"
   - "[[Embedding]]"

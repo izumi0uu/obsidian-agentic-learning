@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
+  - interview
+  - ai
+  - llm
 status: inbox
 created: 2026-05-17
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/llm/position_encoding.html"
-source: "https://xiaolinnote.com/ai/llm/position_encoding.html"
+url: https://xiaolinnote.com/ai/llm/position_encoding.html
+source: https://xiaolinnote.com/ai/llm/position_encoding.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 1340847a57b43d3853da8b55b61fa06a5f050451a9a38715b572f7111d11c353

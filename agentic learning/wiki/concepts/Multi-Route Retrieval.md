@@ -29,13 +29,13 @@ up:
 relations:
   - type: composes_with
     target: "[[Hybrid Search]]"
-    note: "Hybrid Search 通常是多路召回的一种常见两路形态，但多路召回还可以包括多 Query、图检索、metadata filter、不同索引粒度或多 retriever。"
+    note: Hybrid Search 通常是多路召回的一种常见两路形态，但多路召回还可以包括多 Query、图检索、metadata filter、不同索引粒度或多 retriever。
   - type: composes_with
     target: "[[Sparse Retrieval]]"
-    note: "多路召回常把 sparse retrieval / BM25 作为精确词面一路。"
+    note: 多路召回常把 sparse retrieval / BM25 作为精确词面一路。
   - type: composes_with
     target: "[[Reranking]]"
-    note: "多路结果通常先融合成候选集合，再交给 reranker 精排；reranking 不是召回路线本身。"
+    note: 多路结果通常先融合成候选集合，再交给 reranker 精排；reranking 不是召回路线本身。
 related:
   - "[[Retriever]]"
   - "[[Hybrid Search]]"

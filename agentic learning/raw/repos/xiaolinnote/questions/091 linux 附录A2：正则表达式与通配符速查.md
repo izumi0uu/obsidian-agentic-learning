@@ -3,13 +3,13 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "linux"
+  - interview
+  - linux
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/linux/appendix-a2-regex-wildcards.html"
-source: "https://xiaolinnote.com/linux/appendix-a2-regex-wildcards.html"
+url: https://xiaolinnote.com/linux/appendix-a2-regex-wildcards.html
+source: https://xiaolinnote.com/linux/appendix-a2-regex-wildcards.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: ba8faee465a88454198ddcb8b1648c0313943ec900703c516e232c4c9b487735

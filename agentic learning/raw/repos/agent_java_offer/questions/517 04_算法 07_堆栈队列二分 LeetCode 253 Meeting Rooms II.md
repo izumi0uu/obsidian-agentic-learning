@@ -2,24 +2,24 @@
 type: source
 source_type: repo
 site: github.com
-repo: "guoguo-tju/agent_java_offer"
+repo: guoguo-tju/agent_java_offer
 topic:
-  - "interview"
-  - "algorithm"
+  - interview
+  - algorithm
 status: inbox
 created: 2026-05-09
 updated: 2026-05-09
-url: "https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/04_%E7%AE%97%E6%B3%95/07_%E5%A0%86%E6%A0%88%E9%98%9F%E5%88%97%E4%BA%8C%E5%88%86/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md"
-source: "https://github.com/guoguo-tju/agent_java_offer"
-source_path: "docs/interview_prep/04_算法/07_堆栈队列二分/01_核心问答.md"
-commit: "12bf4c915cca01f513e040935e1917d3687f8b35"
-entry_type: "algorithm-problem"
-direction: "04_算法"
-category: "07_堆栈队列二分"
+url: https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/04_%E7%AE%97%E6%B3%95/07_%E5%A0%86%E6%A0%88%E9%98%9F%E5%88%97%E4%BA%8C%E5%88%86/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md
+source: https://github.com/guoguo-tju/agent_java_offer
+source_path: docs/interview_prep/04_算法/07_堆栈队列二分/01_核心问答.md
+commit: 12bf4c915cca01f513e040935e1917d3687f8b35
+entry_type: algorithm-problem
+direction: 04_算法
+category: 07_堆栈队列二分
 last_checked: 2026-05-09
 freshness: watch
 sha256: 0ff93d34e26c6bab085ca31a5093d729fa8284127fcd738e50d2f200a13decb3
-license: "CC BY-NC 4.0"
+license: CC BY-NC 4.0
 related:
   - "[[agent_java_offer Repo]]"
   - "[[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]"

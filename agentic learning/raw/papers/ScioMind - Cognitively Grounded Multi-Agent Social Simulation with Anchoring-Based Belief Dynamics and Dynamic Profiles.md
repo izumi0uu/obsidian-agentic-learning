@@ -2,11 +2,11 @@
 type: source
 source_type: paper
 title: "ScioMind: Cognitively Grounded Multi-Agent Social Simulation with Anchoring-Based Belief Dynamics and Dynamic Profiles"
-url: "https://arxiv.org/abs/2605.13725"
-pdf: "assets/ScioMind - Cognitively Grounded Multi-Agent Social Simulation with Anchoring-Based Belief Dynamics and Dynamic Profiles.pdf"
-extracted: "extracted/ScioMind - Cognitively Grounded Multi-Agent Social Simulation with Anchoring-Based Belief Dynamics and Dynamic Profiles.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.13725"
-doi: "10.48550/arXiv.2605.13725"
+url: https://arxiv.org/abs/2605.13725
+pdf: assets/ScioMind - Cognitively Grounded Multi-Agent Social Simulation with Anchoring-Based Belief Dynamics and Dynamic Profiles.pdf
+extracted: extracted/ScioMind - Cognitively Grounded Multi-Agent Social Simulation with Anchoring-Based Belief Dynamics and Dynamic Profiles.extracted.md
+arxiv: https://arxiv.org/abs/2605.13725
+doi: 10.48550/arXiv.2605.13725
 author:
   - Yitian Yang
   - Yiqun Duan
@@ -16,7 +16,7 @@ author:
   - Chunmeizi Su
   - Huaming Chen
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -30,7 +30,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.13725"
+source: https://arxiv.org/abs/2605.13725
 related:
   - "[[Multi-agent Orchestration]]"
   - "[[Memory]]"

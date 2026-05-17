@@ -1,12 +1,12 @@
 ---
 type: source
 source_type: paper
-title: "Useful Memories Become Faulty When Continuously Updated by LLMs"
-url: "https://arxiv.org/abs/2605.12978"
-pdf: "assets/Useful Memories Become Faulty When Continuously Updated by LLMs.pdf"
-extracted: "extracted/Useful Memories Become Faulty When Continuously Updated by LLMs.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.12978"
-doi: "10.48550/arXiv.2605.12978"
+title: Useful Memories Become Faulty When Continuously Updated by LLMs
+url: https://arxiv.org/abs/2605.12978
+pdf: assets/Useful Memories Become Faulty When Continuously Updated by LLMs.pdf
+extracted: extracted/Useful Memories Become Faulty When Continuously Updated by LLMs.extracted.md
+arxiv: https://arxiv.org/abs/2605.12978
+doi: 10.48550/arXiv.2605.12978
 author:
   - Dylan Zhang
   - Yanshan Lin
@@ -16,7 +16,7 @@ author:
   - Dianqi Li
   - Hao Peng
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -30,7 +30,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.12978"
+source: https://arxiv.org/abs/2605.12978
 related:
   - "[[Memory]]"
   - "[[Long-term Memory]]"

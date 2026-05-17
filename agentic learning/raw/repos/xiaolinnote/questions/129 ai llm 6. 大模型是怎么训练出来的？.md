@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
+  - interview
+  - ai
+  - llm
 status: inbox
 created: 2026-05-17
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/llm/llm_training.html"
-source: "https://xiaolinnote.com/ai/llm/llm_training.html"
+url: https://xiaolinnote.com/ai/llm/llm_training.html
+source: https://xiaolinnote.com/ai/llm/llm_training.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: c26bd6979ee29ef4906bdcc2809820dbc3e7372b8218e40202e9ffce375b83c6

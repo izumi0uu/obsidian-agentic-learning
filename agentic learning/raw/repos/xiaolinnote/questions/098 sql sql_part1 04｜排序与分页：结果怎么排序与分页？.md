@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "database"
-  - "sql"
+  - interview
+  - database
+  - sql
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/sql/sql_part1/04-order-by-pagination.html"
-source: "https://xiaolinnote.com/sql/sql_part1/04-order-by-pagination.html"
+url: https://xiaolinnote.com/sql/sql_part1/04-order-by-pagination.html
+source: https://xiaolinnote.com/sql/sql_part1/04-order-by-pagination.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: dab1e1c0e43539c6b5f7f7c5b0f917a71e2f2ee9f076e143cbee775bebe26664

@@ -204,6 +204,8 @@ python3 scripts/comparison_topic_audit.py --format markdown
 python3 scripts/paper_source_audit.py
 python3 scripts/interview_question_concept_links.py --self-test
 python3 scripts/interview_question_concept_links.py --dry-run
+python3 scripts/concept_taxonomy/validate.py
+python3 scripts/concept_taxonomy/validate_taxonomy_baseline_map.py
 git diff --check
 ```
 

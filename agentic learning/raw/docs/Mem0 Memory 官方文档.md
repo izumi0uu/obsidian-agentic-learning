@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Mem0 Documentation"
-url: "https://docs.mem0.ai/"
+title: Mem0 Documentation
+url: https://docs.mem0.ai/
 author: Mem0
 site: docs.mem0.ai
 topic:

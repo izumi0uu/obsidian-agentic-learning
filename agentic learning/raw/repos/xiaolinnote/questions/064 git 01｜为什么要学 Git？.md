@@ -3,13 +3,13 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "git"
+  - interview
+  - git
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/git/01-why-learn-git.html"
-source: "https://xiaolinnote.com/git/01-why-learn-git.html"
+url: https://xiaolinnote.com/git/01-why-learn-git.html
+source: https://xiaolinnote.com/git/01-why-learn-git.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 7de5dbde9c1f3dbcf066a00f98bc9dfd839827d85631ea90e8965f27738d280b

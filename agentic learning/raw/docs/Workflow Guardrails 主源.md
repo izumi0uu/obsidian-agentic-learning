@@ -1,7 +1,7 @@
 ---
 type: source
 source_type: web
-title: "Workflow Guardrails Primary Sources"
+title: Workflow Guardrails Primary Sources
 url:
 author: multiple
 site: multiple

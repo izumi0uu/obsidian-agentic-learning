@@ -2,11 +2,11 @@
 type: source
 source_type: paper
 title: "MMSkills: Towards Multimodal Skills for General Visual Agents"
-url: "https://arxiv.org/abs/2605.13527"
-pdf: "assets/MMSkills - Towards Multimodal Skills for General Visual Agents.pdf"
-extracted: "extracted/MMSkills - Towards Multimodal Skills for General Visual Agents.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.13527"
-doi: "10.48550/arXiv.2605.13527"
+url: https://arxiv.org/abs/2605.13527
+pdf: assets/MMSkills - Towards Multimodal Skills for General Visual Agents.pdf
+extracted: extracted/MMSkills - Towards Multimodal Skills for General Visual Agents.extracted.md
+arxiv: https://arxiv.org/abs/2605.13527
+doi: 10.48550/arXiv.2605.13527
 author:
   - Kangning Zhang
   - Shuai Shao
@@ -20,7 +20,7 @@ author:
   - Weinan Zhang
   - Yong Yu
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -35,7 +35,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.13527"
+source: https://arxiv.org/abs/2605.13527
 related:
   - "[[Computer Use]]"
   - "[[GUI Grounding]]"

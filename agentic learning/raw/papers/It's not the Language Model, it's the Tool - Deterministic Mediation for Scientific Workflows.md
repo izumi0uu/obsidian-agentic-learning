@@ -2,18 +2,18 @@
 type: source
 source_type: paper
 title: "It's not the Language Model, it's the Tool: Deterministic Mediation for Scientific Workflows"
-url: "https://arxiv.org/abs/2605.13245"
-pdf: "assets/It's not the Language Model, it's the Tool - Deterministic Mediation for Scientific Workflows.pdf"
-extracted: "extracted/It's not the Language Model, it's the Tool - Deterministic Mediation for Scientific Workflows.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.13245"
-doi: "10.48550/arXiv.2605.13245"
+url: https://arxiv.org/abs/2605.13245
+pdf: assets/It's not the Language Model, it's the Tool - Deterministic Mediation for Scientific Workflows.pdf
+extracted: extracted/It's not the Language Model, it's the Tool - Deterministic Mediation for Scientific Workflows.extracted.md
+arxiv: https://arxiv.org/abs/2605.13245
+doi: 10.48550/arXiv.2605.13245
 author:
   - Marios Adamidis
   - Danae Katrisioti
   - Yannis Tzitzikas
   - Emmanuel Stratakis
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -28,7 +28,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.13245"
+source: https://arxiv.org/abs/2605.13245
 related:
   - "[[Tool Use]]"
   - "[[Tool Calling]]"

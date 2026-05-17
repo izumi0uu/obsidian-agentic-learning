@@ -3,12 +3,12 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
+  - interview
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/"
-source: "https://xiaolinnote.com/"
+url: https://xiaolinnote.com/
+source: https://xiaolinnote.com/
 last_checked: 2026-05-17
 freshness: watch
 sha256: 4cf4aabdc0ca2f1dec724608c37eff6db1cbf3415d25af8c3161cd6f55456aa7

@@ -2,11 +2,11 @@
 type: source
 source_type: paper
 title: "Position: Agentic AI System Is a Foreseeable Pathway to AGI"
-url: "https://arxiv.org/abs/2605.12966"
-pdf: "assets/Position - Agentic AI System Is a Foreseeable Pathway to AGI.pdf"
-extracted: "extracted/Position - Agentic AI System Is a Foreseeable Pathway to AGI.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.12966"
-doi: "10.48550/arXiv.2605.12966"
+url: https://arxiv.org/abs/2605.12966
+pdf: assets/Position - Agentic AI System Is a Foreseeable Pathway to AGI.pdf
+extracted: extracted/Position - Agentic AI System Is a Foreseeable Pathway to AGI.extracted.md
+arxiv: https://arxiv.org/abs/2605.12966
+doi: 10.48550/arXiv.2605.12966
 author:
   - Junwei Liao
   - Shuai Li
@@ -14,7 +14,7 @@ author:
   - Jun Wang
   - Weinan Zhang
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -28,7 +28,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.12966"
+source: https://arxiv.org/abs/2605.12966
 related:
   - "[[Agent]]"
   - "[[Agent Workflow]]"

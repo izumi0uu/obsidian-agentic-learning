@@ -3,16 +3,16 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
-  - "tools"
-  - "mcp"
+  - interview
+  - ai
+  - llm
+  - tools
+  - mcp
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/tools/15_webrtc_vs_ws.html"
-source: "https://xiaolinnote.com/ai/tools/15_webrtc_vs_ws.html"
+url: https://xiaolinnote.com/ai/tools/15_webrtc_vs_ws.html
+source: https://xiaolinnote.com/ai/tools/15_webrtc_vs_ws.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 6546f6f44da13f938ed52884d74f4f67ef68884817abd7a9a7117606f3e21e12

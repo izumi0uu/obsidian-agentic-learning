@@ -1,7 +1,7 @@
 ---
 type: source
 source_type: docs
-title: "Agent Engineering Infrastructure Primary Sources"
+title: Agent Engineering Infrastructure Primary Sources
 url:
 author: multiple
 site: multiple

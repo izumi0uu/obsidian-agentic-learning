@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: repo
-title: "oh-my-codex (OMX)"
-url: "https://github.com/Yeachan-Heo/oh-my-codex"
+title: oh-my-codex (OMX)
+url: https://github.com/Yeachan-Heo/oh-my-codex
 author: Yeachan-Heo
 site: github.com
 topic:

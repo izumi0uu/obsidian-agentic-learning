@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "OpenAI Computer Use"
-url: "https://developers.openai.com/api/docs/guides/tools-computer-use"
+title: OpenAI Computer Use
+url: https://developers.openai.com/api/docs/guides/tools-computer-use
 author: OpenAI
 site: developers.openai.com
 topic:

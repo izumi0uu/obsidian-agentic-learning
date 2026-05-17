@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Anthropic Tool Use Documentation"
-url: "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/implement-tool-use"
+title: Anthropic Tool Use Documentation
+url: https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/implement-tool-use
 author: Anthropic
 site: docs.anthropic.com
 topic:

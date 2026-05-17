@@ -1,12 +1,12 @@
 ---
 type: source
 source_type: paper
-title: "Do Androids Dream of Breaking the Game? Systematically Auditing AI Agent Benchmarks with BenchJack"
-url: "https://arxiv.org/abs/2605.12673"
-pdf: "assets/Do Androids Dream of Breaking the Game - BenchJack.pdf"
-extracted: "extracted/Do Androids Dream of Breaking the Game - BenchJack.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.12673"
-doi: "10.48550/arXiv.2605.12673"
+title: Do Androids Dream of Breaking the Game? Systematically Auditing AI Agent Benchmarks with BenchJack
+url: https://arxiv.org/abs/2605.12673
+pdf: assets/Do Androids Dream of Breaking the Game - BenchJack.pdf
+extracted: extracted/Do Androids Dream of Breaking the Game - BenchJack.extracted.md
+arxiv: https://arxiv.org/abs/2605.12673
+doi: 10.48550/arXiv.2605.12673
 author:
   - Hao Wang
   - Hanchen Li
@@ -15,7 +15,7 @@ author:
   - Koushik Sen
   - Dawn Song
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -30,7 +30,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.12673"
+source: https://arxiv.org/abs/2605.12673
 related:
   - "[[Benchmark]]"
   - "[[Eval Harness]]"

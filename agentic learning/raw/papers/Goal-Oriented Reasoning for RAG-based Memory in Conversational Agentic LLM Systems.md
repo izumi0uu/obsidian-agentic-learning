@@ -1,12 +1,12 @@
 ---
 type: source
 source_type: paper
-title: "Goal-Oriented Reasoning for RAG-based Memory in Conversational Agentic LLM Systems"
-url: "https://arxiv.org/abs/2605.12213"
-pdf: "assets/Goal-Oriented Reasoning for RAG-based Memory in Conversational Agentic LLM Systems.pdf"
-extracted: "extracted/Goal-Oriented Reasoning for RAG-based Memory in Conversational Agentic LLM Systems.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.12213"
-doi: "10.48550/arXiv.2605.12213"
+title: Goal-Oriented Reasoning for RAG-based Memory in Conversational Agentic LLM Systems
+url: https://arxiv.org/abs/2605.12213
+pdf: assets/Goal-Oriented Reasoning for RAG-based Memory in Conversational Agentic LLM Systems.pdf
+extracted: extracted/Goal-Oriented Reasoning for RAG-based Memory in Conversational Agentic LLM Systems.extracted.md
+arxiv: https://arxiv.org/abs/2605.12213
+doi: 10.48550/arXiv.2605.12213
 author:
   - Jiazhou Liang
   - Armin Toroghi
@@ -15,7 +15,7 @@ author:
   - Liam Gallagher
   - Scott Sanner
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -30,7 +30,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.12213"
+source: https://arxiv.org/abs/2605.12213
 related:
   - "[[Memory]]"
   - "[[Long-term Memory]]"

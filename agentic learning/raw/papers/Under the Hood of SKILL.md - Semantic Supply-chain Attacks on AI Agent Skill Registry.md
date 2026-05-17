@@ -2,17 +2,17 @@
 type: source
 source_type: paper
 title: "Under the Hood of SKILL.md: Semantic Supply-chain Attacks on AI Agent Skill Registry"
-url: "https://arxiv.org/abs/2605.11418"
-pdf: "assets/Under the Hood of SKILL.md - Semantic Supply-chain Attacks on AI Agent Skill Registry.pdf"
-extracted: "extracted/Under the Hood of SKILL.md - Semantic Supply-chain Attacks on AI Agent Skill Registry.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.11418"
-doi: "10.48550/arXiv.2605.11418"
+url: https://arxiv.org/abs/2605.11418
+pdf: assets/Under the Hood of SKILL.md - Semantic Supply-chain Attacks on AI Agent Skill Registry.pdf
+extracted: extracted/Under the Hood of SKILL.md - Semantic Supply-chain Attacks on AI Agent Skill Registry.extracted.md
+arxiv: https://arxiv.org/abs/2605.11418
+doi: 10.48550/arXiv.2605.11418
 author:
   - Shoumik Saha
   - Kazem Faghih
   - Soheil Feizi
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -27,7 +27,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.11418"
+source: https://arxiv.org/abs/2605.11418
 related:
   - "[[AGENTS.md]]"
   - "[[Tool Registry]]"

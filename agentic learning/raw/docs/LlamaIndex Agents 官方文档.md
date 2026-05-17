@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "LlamaIndex Agent Documentation"
-url: "https://developers.llamaindex.ai/python/framework/understanding/agent/"
+title: LlamaIndex Agent Documentation
+url: https://developers.llamaindex.ai/python/framework/understanding/agent/
 author: LlamaIndex
 site: developers.llamaindex.ai
 topic:
@@ -16,7 +16,7 @@ freshness: volatile
 conflicts: []
 status: seed
 source:
-  - "https://developers.llamaindex.ai/python/framework/understanding/agent/multi_agent/"
+  - https://developers.llamaindex.ai/python/framework/understanding/agent/multi_agent/
 related:
   - "[[Agent Framework]]"
   - "[[RAG]]"

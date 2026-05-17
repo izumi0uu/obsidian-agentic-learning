@@ -3,15 +3,15 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
-  - "rag"
+  - interview
+  - ai
+  - llm
+  - rag
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/rag/5_semantic_cuts.html"
-source: "https://xiaolinnote.com/ai/rag/5_semantic_cuts.html"
+url: https://xiaolinnote.com/ai/rag/5_semantic_cuts.html
+source: https://xiaolinnote.com/ai/rag/5_semantic_cuts.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 65f120cb66a28894c3c40db4e4825b0509627c99375b0e7df5e1687f3830b996

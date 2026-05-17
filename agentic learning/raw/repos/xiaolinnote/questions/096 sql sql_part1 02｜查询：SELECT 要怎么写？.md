@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "database"
-  - "sql"
+  - interview
+  - database
+  - sql
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/sql/sql_part1/02-select-query-basics.html"
-source: "https://xiaolinnote.com/sql/sql_part1/02-select-query-basics.html"
+url: https://xiaolinnote.com/sql/sql_part1/02-select-query-basics.html
+source: https://xiaolinnote.com/sql/sql_part1/02-select-query-basics.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 262344fea7de31b4b3df41271a70cf98c12555935e9a9470267035440f08d87f

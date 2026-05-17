@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Prefect Workflow Control Points"
-url: "https://docs.prefect.io/"
+title: Prefect Workflow Control Points
+url: https://docs.prefect.io/
 author: Prefect
 site: docs.prefect.io
 topic:

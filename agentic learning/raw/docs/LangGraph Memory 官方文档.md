@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "LangGraph Memory"
-url: "https://docs.langchain.com/oss/python/concepts/memory"
+title: LangGraph Memory
+url: https://docs.langchain.com/oss/python/concepts/memory
 author: LangChain
 site: docs.langchain.com
 topic:

@@ -3,16 +3,16 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
-  - "tools"
-  - "mcp"
+  - interview
+  - ai
+  - llm
+  - tools
+  - mcp
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/tools/8_reasoning_no_mcp.html"
-source: "https://xiaolinnote.com/ai/tools/8_reasoning_no_mcp.html"
+url: https://xiaolinnote.com/ai/tools/8_reasoning_no_mcp.html
+source: https://xiaolinnote.com/ai/tools/8_reasoning_no_mcp.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: f74911914ff55316f1d2f9246c550883bb60dc1c2b8ead319cd75d0099d1344d

@@ -26,7 +26,7 @@ up:
 relations:
   - type: contrasts_with
     target: "[[Dense Retrieval]]"
-    note: "Dense Retrieval 常用双塔/bi-encoder 思路快速召回；Cross-Encoder 把 query 和 chunk 放在一起深度判断，适合小候选集精排。"
+    note: Dense Retrieval 常用双塔/bi-encoder 思路快速召回；Cross-Encoder 把 query 和 chunk 放在一起深度判断，适合小候选集精排。
 related:
   - "[[Reranking]]"
   - "[[Dense Retrieval]]"

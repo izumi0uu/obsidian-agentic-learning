@@ -3,15 +3,15 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
-  - "agent"
+  - interview
+  - ai
+  - llm
+  - agent
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/agent/9_memory_storage.html"
-source: "https://xiaolinnote.com/ai/agent/9_memory_storage.html"
+url: https://xiaolinnote.com/ai/agent/9_memory_storage.html
+source: https://xiaolinnote.com/ai/agent/9_memory_storage.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 9241a14d4589640d70e35fe4128c39f1e671c75f0e749b309133d32cbfc48d38

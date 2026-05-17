@@ -1,10 +1,10 @@
 ---
 type: source
 source_type: paper
-title: "Scaling Laws for Neural Language Models"
-url: "https://arxiv.org/abs/2001.08361"
-pdf: "assets/Scaling Laws for Neural Language Models.pdf"
-extracted: "extracted/Scaling Laws for Neural Language Models.extracted.md"
+title: Scaling Laws for Neural Language Models
+url: https://arxiv.org/abs/2001.08361
+pdf: assets/Scaling Laws for Neural Language Models.pdf
+extracted: extracted/Scaling Laws for Neural Language Models.extracted.md
 author:
   - Kaplan et al.
 site: arXiv
@@ -17,7 +17,7 @@ last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2001.08361"
+source: https://arxiv.org/abs/2001.08361
 related:
   - "[[LLM Training Pipeline]]"
   - "[[LLM]]"

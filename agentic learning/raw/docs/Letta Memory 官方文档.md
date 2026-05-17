@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Letta Memory"
-url: "https://docs.letta.com/guides/core-concepts/stateful-agents"
+title: Letta Memory
+url: https://docs.letta.com/guides/core-concepts/stateful-agents
 author: Letta
 site: docs.letta.com
 topic:

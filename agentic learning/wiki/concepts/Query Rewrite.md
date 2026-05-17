@@ -29,9 +29,9 @@ related:
   - "[[Hybrid Search]]"
   - "[[Multi-Query Retrieval]]"
 aliases:
-  - "Query Rewriting"
-  - "查询改写"
-  - "问题改写"
+  - Query Rewriting
+  - 查询改写
+  - 问题改写
 ---
 
 # Query Rewrite

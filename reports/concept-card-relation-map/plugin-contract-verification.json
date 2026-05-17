@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "artifact_type": "plugin_contract_verification",
+  "generated_at": "2026-05-17T10:17:11Z",
+  "input_artifacts": {
+    "temp_map": "reports/concept-card-relation-map/concept-relations-temp.json",
+    "relation_ledger": "reports/concept-card-relation-map/relation-decision-ledger.json",
+    "relation_dry_run": "reports/concept-card-relation-map/writeback-dry-run.json",
+    "relation_apply_report": "reports/concept-card-relation-map/writeback-apply-report.json",
+    "taxonomy_review": "reports/concept-card-relation-map/concept-hierarchy-placement-review.json",
+    "taxonomy_apply_report": "reports/concept-card-relation-map/concept-hierarchy-placement-apply-report.json",
+    "taxonomy_dry_run": "reports/concept-card-relation-map/concept-hierarchy-placement-writeback-dry-run.json",
+    "taxonomy_audit_closure": "reports/concept-card-relation-map/concept-hierarchy-placement-closure.json",
+    "plugin_validation": "reports/concept-card-relation-map/plugin-compat-validation.json"
+  },
+  "summary": {
+    "concept_cards_checked": 130,
+    "top_level_up_edges": 37,
+    "temp_map_taxonomy_edges": 37,
+    "relation_writeback_dry_run_planned": 0,
+    "taxonomy_post_apply_dry_run_planned": 0,
+    "taxonomy_post_apply_dry_run_ready": 0,
+    "taxonomy_limited_apply_rows": 1,
+    "taxonomy_placement_open_review": 0,
+    "taxonomy_placement_defer_boundary_review": 20,
+    "taxonomy_placement_deferred_with_backlog": 20,
+    "taxonomy_placement_open_writeback": 0,
+    "relation_apply_rows_checked": 13,
+    "taxonomy_apply_rows_checked": 1,
+    "plugin_problems": 0,
+    "forbidden_up_edges": 0,
+    "forbidden_top_level_fields": 0,
+    "nested_relation_records_with_mirror-like_types": 17,
+    "obsidian_plugin_config_present": false,
+    "problems": 0
+  },
+  "plugin_contract": {
+    "abstract_folder": "Contract-only verification: parent property remains `up`; no physical folder conversion or `children` writeback is required.",
+    "breadcrumbs": "Contract-only verification: top-level `up` is the only hierarchy edge field; `down` is implied; nested `relations` is not promoted to edge fields.",
+    "juggl": "Retired; no Juggl plugin state, field, or mirror edge is required or validated.",
+    "live_obsidian_config": "absent"
+  },
+  "doc_checks": {
+    "abstract_folder_up_contract": true,
+    "breadcrumbs_top_level_up_contract": true,
+    "relations_not_breadcrumbs_edge_field": true,
+    "juggl_retired_documented": true,
+    "plugin_contract_gate_documented": true
+  },
+  "forbidden_top_level_field_hits": {},
+  "missing_up_targets": [],
+  "missing_applied_up": [],
+  "nested_relations_note": "Nested relations with types such as representative_of/composes_with are allowed because they are not top-level Breadcrumbs edge fields.",
+  "problems": []
+}

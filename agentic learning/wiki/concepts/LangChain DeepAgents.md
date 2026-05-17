@@ -8,14 +8,12 @@ topic:
 status: seed
 created: 2026-05-11
 updated: 2026-05-16
-
 up:
   - "[[Agent Framework]]"
-
 last_checked: 2026-05-11
 freshness: volatile
 conflicts:
-  - "Deep Agent 不是统一标准名；本卡只讨论 LangChain / LangGraph 生态里的 deepagents / Deep Agents SDK。"
+  - Deep Agent 不是统一标准名；本卡只讨论 LangChain / LangGraph 生态里的 deepagents / Deep Agents SDK。
 source:
   - "[[LangChain Deep Agents 官方文档]]"
   - "[[LangGraph 官方文档]]"

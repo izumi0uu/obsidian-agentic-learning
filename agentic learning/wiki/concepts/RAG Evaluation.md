@@ -6,10 +6,8 @@ topic:
 status: growing
 created: 2026-05-06
 updated: 2026-05-16
-
 up:
   - "[[Evaluation]]"
-
 last_checked: 2026-05-10
 freshness: stable
 conflicts: []
@@ -48,8 +46,8 @@ related:
   - "[[Context Precision]]"
   - "[[RAG Citation Faithfulness]]"
 aliases:
-  - "RAG 评估"
-  - "RAG 测评"
+  - RAG 评估
+  - RAG 测评
 ---
 
 # RAG Evaluation

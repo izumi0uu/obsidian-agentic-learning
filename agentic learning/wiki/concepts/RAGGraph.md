@@ -11,7 +11,7 @@ updated: 2026-05-16
 last_checked: 2026-05-16
 freshness: watch
 conflicts:
-  - "RAGGraph 不是稳定统一术语，可能被误当作 GraphRAG。"
+  - RAGGraph 不是稳定统一术语，可能被误当作 GraphRAG。
 source:
   - "[[前沿主源清单]]"
   - "[[RAG 类型对比]]"
@@ -21,13 +21,13 @@ evidence:
 relations:
   - type: related_to
     target: "[[RAG]]"
-    note: "RAGGraph 讨论的是 RAG pipeline 可能被图式编排，但这个命名不稳定；当前不把它写成 RAG 的 strict taxonomy 子类。"
+    note: RAGGraph 讨论的是 RAG pipeline 可能被图式编排，但这个命名不稳定；当前不把它写成 RAG 的 strict taxonomy 子类。
   - type: contrasts_with
     target: "[[GraphRAG]]"
-    note: "GraphRAG 是图结构参与检索和上下文构造；RAGGraph 更可能指 RAG 执行流程图或项目名，二者不能互当别名。"
+    note: GraphRAG 是图结构参与检索和上下文构造；RAGGraph 更可能指 RAG 执行流程图或项目名，二者不能互当别名。
   - type: related_to
     target: "[[Agentic RAG]]"
-    note: "若 RAGGraph 指带分支和循环的检索工作流，它更接近 Agentic RAG / workflow graph 的实现语境，而不是独立稳定方法族。"
+    note: 若 RAGGraph 指带分支和循环的检索工作流，它更接近 Agentic RAG / workflow graph 的实现语境，而不是独立稳定方法族。
 related:
   - "[[RAG]]"
   - "[[GraphRAG]]"

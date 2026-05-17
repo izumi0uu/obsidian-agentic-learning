@@ -22,10 +22,10 @@ related:
   - "[[Retriever]]"
   - "[[Parent-Child Chunking]]"
 aliases:
-  - "文档切分"
-  - "切分策略"
-  - "分块"
-  - "chunk"
+  - 文档切分
+  - 切分策略
+  - 分块
+  - chunk
 ---
 
 # Chunking

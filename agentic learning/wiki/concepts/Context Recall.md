@@ -23,7 +23,7 @@ up:
 relations:
   - type: paired_with
     target: "[[Context Precision]]"
-    note: "Context Recall 看该找的信息有没有覆盖；Context Precision 看找回内容里相关信息是否靠前、噪音是否过多。"
+    note: Context Recall 看该找的信息有没有覆盖；Context Precision 看找回内容里相关信息是否靠前、噪音是否过多。
 related:
   - "[[RAG Evaluation]]"
   - "[[Context Precision]]"

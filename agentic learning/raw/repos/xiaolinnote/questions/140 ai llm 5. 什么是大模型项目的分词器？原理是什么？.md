@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
+  - interview
+  - ai
+  - llm
 status: inbox
 created: 2026-05-17
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/llm/tokenizer.html"
-source: "https://xiaolinnote.com/ai/llm/tokenizer.html"
+url: https://xiaolinnote.com/ai/llm/tokenizer.html
+source: https://xiaolinnote.com/ai/llm/tokenizer.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 8c20553aa9fa305b6fafa9b70b57c4ad9f60e035e44d3905cf20cc53808644bf

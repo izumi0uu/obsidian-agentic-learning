@@ -2,9 +2,9 @@
 type: source
 source_type: paper
 title: "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection"
-url: "https://arxiv.org/abs/2310.11511"
-pdf: "assets/Self-RAG - Learning to Retrieve Generate and Critique.pdf"
-extracted: "extracted/Self-RAG - Learning to Retrieve Generate and Critique.extracted.md"
+url: https://arxiv.org/abs/2310.11511
+pdf: assets/Self-RAG - Learning to Retrieve Generate and Critique.pdf
+extracted: extracted/Self-RAG - Learning to Retrieve Generate and Critique.extracted.md
 author: Akari Asai, Zeqiu Wu, Yizhong Wang, Avirup Sil, Hannaneh Hajishirzi
 site: arxiv.org
 topic:
@@ -17,7 +17,7 @@ last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2310.11511"
+source: https://arxiv.org/abs/2310.11511
 related:
   - "[[Self-RAG]]"
   - "[[RAG]]"

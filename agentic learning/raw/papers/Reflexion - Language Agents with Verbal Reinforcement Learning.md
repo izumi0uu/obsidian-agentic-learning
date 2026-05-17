@@ -2,9 +2,9 @@
 type: source
 source_type: paper
 title: "Reflexion: Language Agents with Verbal Reinforcement Learning"
-url: "https://arxiv.org/abs/2303.11366"
-pdf: "assets/Reflexion - Language Agents with Verbal Reinforcement Learning.pdf"
-extracted: "extracted/Reflexion - Language Agents with Verbal Reinforcement Learning.extracted.md"
+url: https://arxiv.org/abs/2303.11366
+pdf: assets/Reflexion - Language Agents with Verbal Reinforcement Learning.pdf
+extracted: extracted/Reflexion - Language Agents with Verbal Reinforcement Learning.extracted.md
 author:
   - Shinn et al.
 site: arXiv
@@ -20,7 +20,7 @@ last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2303.11366"
+source: https://arxiv.org/abs/2303.11366
 related:
   - "[[Reflexion]]"
   - "[[Agent Loop]]"

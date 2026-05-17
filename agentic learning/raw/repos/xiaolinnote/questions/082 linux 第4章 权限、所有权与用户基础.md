@@ -3,13 +3,13 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "linux"
+  - interview
+  - linux
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/linux/04-permissions-and-ownership.html"
-source: "https://xiaolinnote.com/linux/04-permissions-and-ownership.html"
+url: https://xiaolinnote.com/linux/04-permissions-and-ownership.html
+source: https://xiaolinnote.com/linux/04-permissions-and-ownership.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: a4f5c2481e38582c62e3fccb724199fae9b84de4dd0ff126a1bc742c66f9bb88

@@ -2,11 +2,11 @@
 type: source
 source_type: paper
 title: "OLIVIA: Online Learning via Inference-time Action Adaptation for Decision Making in LLM ReAct Agents"
-url: "https://arxiv.org/abs/2605.11169"
-pdf: "assets/OLIVIA - Online Learning via Inference-time Action Adaptation for Decision Making in LLM ReAct Agents.pdf"
-extracted: "extracted/OLIVIA - Online Learning via Inference-time Action Adaptation for Decision Making in LLM ReAct Agents.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.11169"
-doi: "10.48550/arXiv.2605.11169"
+url: https://arxiv.org/abs/2605.11169
+pdf: assets/OLIVIA - Online Learning via Inference-time Action Adaptation for Decision Making in LLM ReAct Agents.pdf
+extracted: extracted/OLIVIA - Online Learning via Inference-time Action Adaptation for Decision Making in LLM ReAct Agents.extracted.md
+arxiv: https://arxiv.org/abs/2605.11169
+doi: 10.48550/arXiv.2605.11169
 author:
   - Sheldon Yu
   - Junda Wu
@@ -18,7 +18,7 @@ author:
   - Jingbo Shang
   - Julian McAuley
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -33,7 +33,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.11169"
+source: https://arxiv.org/abs/2605.11169
 related:
   - "[[ReAct]]"
   - "[[Agent Loop]]"

@@ -3,16 +3,16 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
-  - "tools"
-  - "mcp"
+  - interview
+  - ai
+  - llm
+  - tools
+  - mcp
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/tools/13_mcp_transport.html"
-source: "https://xiaolinnote.com/ai/tools/13_mcp_transport.html"
+url: https://xiaolinnote.com/ai/tools/13_mcp_transport.html
+source: https://xiaolinnote.com/ai/tools/13_mcp_transport.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 0fba73822a8ffc1627ae7ca2e2727f01d62a776f29e1daf85d5e5be768836a1f

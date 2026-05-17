@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Google Agent Development Kit Documentation"
-url: "https://adk.dev/"
+title: Google Agent Development Kit Documentation
+url: https://adk.dev/
 author: Google
 site: adk.dev
 topic:
@@ -15,7 +15,7 @@ updated: 2026-05-12
 last_checked: 2026-05-12
 freshness: volatile
 conflicts:
-  - "ADK 首页显示 Python 2.0 beta / TypeScript 1.0 等快速演进信号；版本和语言支持需持续复查。"
+  - ADK 首页显示 Python 2.0 beta / TypeScript 1.0 等快速演进信号；版本和语言支持需持续复查。
 status: seed
 source:
 related:

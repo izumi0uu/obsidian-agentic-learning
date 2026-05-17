@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: repo
-title: "Azure-Samples/azure-search-openai-demo"
-url: "https://github.com/Azure-Samples/azure-search-openai-demo"
+title: Azure-Samples/azure-search-openai-demo
+url: https://github.com/Azure-Samples/azure-search-openai-demo
 author: Microsoft
 site: GitHub
 topic:

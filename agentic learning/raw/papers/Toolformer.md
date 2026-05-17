@@ -2,9 +2,9 @@
 type: source
 source_type: paper
 title: "Toolformer: Language Models Can Teach Themselves to Use Tools"
-url: "https://arxiv.org/abs/2302.04761"
-pdf: "assets/Toolformer.pdf"
-extracted: "extracted/Toolformer.extracted.md"
+url: https://arxiv.org/abs/2302.04761
+pdf: assets/Toolformer.pdf
+extracted: extracted/Toolformer.extracted.md
 author:
   - Schick et al.
 site: arXiv
@@ -17,7 +17,7 @@ last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: growing
-source: "https://arxiv.org/abs/2302.04761"
+source: https://arxiv.org/abs/2302.04761
 related:
   - "[[Tool Calling]]"
   - "[[LLM]]"

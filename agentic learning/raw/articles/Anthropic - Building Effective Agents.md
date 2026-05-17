@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: article
-title: "Building Effective Agents"
-url: "https://www.anthropic.com/engineering/building-effective-agents"
+title: Building Effective Agents
+url: https://www.anthropic.com/engineering/building-effective-agents
 author: Anthropic
 site: anthropic.com
 topic:

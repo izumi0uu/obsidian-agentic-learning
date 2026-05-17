@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Microsoft Agent Framework Overview"
-url: "https://learn.microsoft.com/en-us/agent-framework/overview/"
+title: Microsoft Agent Framework Overview
+url: https://learn.microsoft.com/en-us/agent-framework/overview/
 author: Microsoft
 site: learn.microsoft.com
 topic:
@@ -15,10 +15,10 @@ updated: 2026-05-12
 last_checked: 2026-05-12
 freshness: volatile
 conflicts:
-  - "Microsoft Learn 当前把 Agent Framework 标为 public preview；同时官方 blog 将其描述为 Semantic Kernel / AutoGen 的 successor。生产判断需持续复查 GA 状态。"
+  - Microsoft Learn 当前把 Agent Framework 标为 public preview；同时官方 blog 将其描述为 Semantic Kernel / AutoGen 的 successor。生产判断需持续复查 GA 状态。
 status: seed
 source:
-  - "https://devblogs.microsoft.com/agent-framework/semantic-kernel-and-microsoft-agent-framework/"
+  - https://devblogs.microsoft.com/agent-framework/semantic-kernel-and-microsoft-agent-framework/
 related:
   - "[[Microsoft Agent Framework]]"
   - "[[AutoGen]]"

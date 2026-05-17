@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: repo
-title: "NousResearch/hermes-agent"
-url: "https://github.com/NousResearch/hermes-agent"
+title: NousResearch/hermes-agent
+url: https://github.com/NousResearch/hermes-agent
 author: Nous Research
 site: github.com
 topic:

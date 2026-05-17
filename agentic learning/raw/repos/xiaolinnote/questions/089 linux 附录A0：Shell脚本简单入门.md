@@ -3,13 +3,13 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "linux"
+  - interview
+  - linux
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/linux/appendix-a0-shell-scripting-basics.html"
-source: "https://xiaolinnote.com/linux/appendix-a0-shell-scripting-basics.html"
+url: https://xiaolinnote.com/linux/appendix-a0-shell-scripting-basics.html
+source: https://xiaolinnote.com/linux/appendix-a0-shell-scripting-basics.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 37e98775ccc4b2e5bef9a25999b903edd5d1f6a255d1a54fb69de48af745ef2f

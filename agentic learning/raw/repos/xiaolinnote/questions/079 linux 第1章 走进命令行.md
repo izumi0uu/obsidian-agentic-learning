@@ -3,13 +3,13 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "linux"
+  - interview
+  - linux
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/linux/01-terminal-shell-and-help.html"
-source: "https://xiaolinnote.com/linux/01-terminal-shell-and-help.html"
+url: https://xiaolinnote.com/linux/01-terminal-shell-and-help.html
+source: https://xiaolinnote.com/linux/01-terminal-shell-and-help.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: fd74daf5bce26afa7e3682fc82ebda23d6822a99d8abc22c9302e0b358f65a4d

@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
+  - interview
+  - ai
+  - llm
 status: inbox
 created: 2026-05-17
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/llm/finetuning.html"
-source: "https://xiaolinnote.com/ai/llm/finetuning.html"
+url: https://xiaolinnote.com/ai/llm/finetuning.html
+source: https://xiaolinnote.com/ai/llm/finetuning.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 2e9401e8b103ed98fe67bf4b64bf29af2fe942108b5529b641b5e17f0a237367

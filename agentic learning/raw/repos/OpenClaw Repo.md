@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: repo
-title: "openclaw/openclaw"
-url: "https://github.com/openclaw/openclaw"
+title: openclaw/openclaw
+url: https://github.com/openclaw/openclaw
 author: OpenClaw
 site: github.com
 topic:

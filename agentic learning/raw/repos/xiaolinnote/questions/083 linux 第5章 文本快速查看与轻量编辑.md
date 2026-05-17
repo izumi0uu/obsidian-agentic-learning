@@ -3,13 +3,13 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "linux"
+  - interview
+  - linux
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/linux/05-text-viewing-and-editing.html"
-source: "https://xiaolinnote.com/linux/05-text-viewing-and-editing.html"
+url: https://xiaolinnote.com/linux/05-text-viewing-and-editing.html
+source: https://xiaolinnote.com/linux/05-text-viewing-and-editing.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: dd95b8598984fad2fdfb6389f4ee6e3a33288bc1caa534424eb6a270969d9409

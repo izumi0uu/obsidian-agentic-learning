@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "artifact_type": "taxonomy_placement_apply_report",
+  "generated_at": "2026-05-17T05:31:24Z",
+  "classification_stage": "limited_apply",
+  "input_dry_run": "reports/concept-card-relation-map/concept-hierarchy-placement-writeback-dry-run.json",
+  "policy": {
+    "limited_apply_only": true,
+    "limit": 1,
+    "allowed_input": "Only writeback dry-run rows with status=ready and candidate-adjudication accept_taxonomy/add_up may be applied.",
+    "field_policy": "Write only child-card top-level `up`; do not write `down`, `children`, Juggl fields, or Breadcrumbs mirror fields.",
+    "post_apply_policy": "Rebuild the relation map and regenerate the concept hierarchy review after apply; post-apply dry-run may be 0 planned when all accepted rows landed."
+  },
+  "summary": {
+    "input_dry_run_planned": 1,
+    "input_dry_run_ready": 1,
+    "selected": 1,
+    "unselected_due_to_limit": 0,
+    "applied": 1,
+    "already_present": 0,
+    "skipped": 0,
+    "concept_card_writes": 1,
+    "limit": 1,
+    "post_apply_dry_run_planned": 0,
+    "post_apply_dry_run_ready": 0
+  },
+  "planned": [
+    {
+      "source": "Memory Reflection",
+      "target": "Memory",
+      "source_file": "agentic learning/wiki/concepts/Memory Reflection.md",
+      "target_file": "agentic learning/wiki/concepts/Memory.md",
+      "decision": "accept_taxonomy",
+      "writeback_action": "add_up",
+      "proposed_field": "up",
+      "status": "ready",
+      "current_up": [],
+      "proposed_write": {
+        "up": [
+          "[[Memory]]"
+        ]
+      },
+      "decision_reason": "Accept `up: [[Memory]]`: the child card repeatedly defines Memory Reflection as a process for summarizing, filtering, updating, and governing long-term memory. The parent Memory card defines memory as mechanisms for saving, retrieving, updating, and using information across time, so this is a strict subtype/mechanism relation.",
+      "strict_taxonomy_test": "passes: Memory Reflection is a memory-maintenance mechanism that saves, filters, updates, and governs long-term memory.",
+      "evidence": [
+        {
+          "path": "agentic learning/wiki/concepts/Memory Reflection.md",
+          "needle": "记忆维护流程",
+          "excerpt": "…Reflection 不是“让模型想一想”。它应该是有输入、触发条件、写入位置、审查机制和冲突处理的记忆维护流程。 它也不等于 [[Reflexion]]。Reflexion 偏任务执行后的反馈-反思-再尝试循环；Memory Reflection 偏把历史对话、任务轨迹或事件记忆总结成更稳…"
+        },
+        {
+          "path": "agentic learning/wiki/concepts/Memory Reflection.md",
+          "needle": "长期记忆",
+          "excerpt": "…## 一句话 Memory Reflection 是从历史对话、任务轨迹或事件记忆中总结、筛选并更新长期记忆的过程。 ## 概念详解 Memory Reflection 解决的是“历史太多，哪些应该变成可长期使用的记忆”。Agent 每轮对话和每次工具调用都会产生大量信息，但只有少部分值…"
+        },
+        {
+          "path": "agentic learning/wiki/concepts/Memory Reflection.md",
+          "needle": "Reflection 通常以",
+          "excerpt": "…部分值得进入长期记忆：稳定偏好、反复出现的失败模式、项目事实、用户确认过的规则、可复用的任务经验。 Reflection 通常以 [[Episodic Memory]]、trace、conversation 或 task summary 为输入，然后产出候选 [[Semantic Memory]]、更新已有…"
+        },
+        {
+          "path": "agentic learning/wiki/concepts/Memory.md",
+          "needle": "保存、检索、更新并使用信息",
+          "excerpt": "# Memory ## 一句话 Memory 是 Agent 在当前任务和未来任务中保存、检索、更新并使用信息的机制；它让系统不只依赖一次 prompt 的上下文窗口。 ## 概念详解 Agent 的 memory 不是“把所有聊天记录塞回 prompt”。它是一组围绕信息生命周期的工程能…"
+        },
+        {
+          "path": "agentic learning/wiki/concepts/Memory.md",
+          "needle": "写入、存储、检索、冲突解决、过期和权限",
+          "excerpt": "…不是什么 Memory 不是上下文窗口。上下文窗口只是模型当下能看到的输入空间；memory 还包括写入、存储、检索、冲突解决、过期和权限。 Memory 也不等于 [[RAG]]。RAG 更偏向从外部知识库检索资料来回答问题；Memory 还包括用户偏好、任务过程、系统状态和过去交互经验。一个系统可以有 RAG 但…"
+        }
+      ],
+      "drift_guard": [
+        "Do not merge Memory Reflection with Reflexion: Reflexion may provide candidate experience, but Memory Reflection is the governed memory-maintenance process.",
+        "Only keep `up: [[Memory]]` while the card remains about memory write/update/governance; task reflection or generic self-critique belongs elsewhere."
+      ]
+    }
+  ],
+  "applied": [
+    {
+      "source": "Memory Reflection",
+      "target": "Memory",
+      "source_file": "agentic learning/wiki/concepts/Memory Reflection.md",
+      "target_file": "agentic learning/wiki/concepts/Memory.md",
+      "decision": "accept_taxonomy",
+      "writeback_action": "add_up",
+      "proposed_field": "up",
+      "status": "ready",
+      "current_up": [],
+      "proposed_write": {
+        "up": [
+          "[[Memory]]"
+        ]
+      },
+      "decision_reason": "Accept `up: [[Memory]]`: the child card repeatedly defines Memory Reflection as a process for summarizing, filtering, updating, and governing long-term memory. The parent Memory card defines memory as mechanisms for saving, retrieving, updating, and using information across time, so this is a strict subtype/mechanism relation.",
+      "strict_taxonomy_test": "passes: Memory Reflection is a memory-maintenance mechanism that saves, filters, updates, and governs long-term memory.",
+      "evidence": [
+        {
+          "path": "agentic learning/wiki/concepts/Memory Reflection.md",
+          "needle": "记忆维护流程",
+          "excerpt": "…Reflection 不是“让模型想一想”。它应该是有输入、触发条件、写入位置、审查机制和冲突处理的记忆维护流程。 它也不等于 [[Reflexion]]。Reflexion 偏任务执行后的反馈-反思-再尝试循环；Memory Reflection 偏把历史对话、任务轨迹或事件记忆总结成更稳…"
+        },
+        {
+          "path": "agentic learning/wiki/concepts/Memory Reflection.md",
+          "needle": "长期记忆",
+          "excerpt": "…## 一句话 Memory Reflection 是从历史对话、任务轨迹或事件记忆中总结、筛选并更新长期记忆的过程。 ## 概念详解 Memory Reflection 解决的是“历史太多，哪些应该变成可长期使用的记忆”。Agent 每轮对话和每次工具调用都会产生大量信息，但只有少部分值…"
+        },
+        {
+          "path": "agentic learning/wiki/concepts/Memory Reflection.md",
+          "needle": "Reflection 通常以",
+          "excerpt": "…部分值得进入长期记忆：稳定偏好、反复出现的失败模式、项目事实、用户确认过的规则、可复用的任务经验。 Reflection 通常以 [[Episodic Memory]]、trace、conversation 或 task summary 为输入，然后产出候选 [[Semantic Memory]]、更新已有…"
+        },
+        {
+          "path": "agentic learning/wiki/concepts/Memory.md",
+          "needle": "保存、检索、更新并使用信息",
+          "excerpt": "# Memory ## 一句话 Memory 是 Agent 在当前任务和未来任务中保存、检索、更新并使用信息的机制；它让系统不只依赖一次 prompt 的上下文窗口。 ## 概念详解 Agent 的 memory 不是“把所有聊天记录塞回 prompt”。它是一组围绕信息生命周期的工程能…"
+        },
+        {
+          "path": "agentic learning/wiki/concepts/Memory.md",
+          "needle": "写入、存储、检索、冲突解决、过期和权限",
+          "excerpt": "…不是什么 Memory 不是上下文窗口。上下文窗口只是模型当下能看到的输入空间；memory 还包括写入、存储、检索、冲突解决、过期和权限。 Memory 也不等于 [[RAG]]。RAG 更偏向从外部知识库检索资料来回答问题；Memory 还包括用户偏好、任务过程、系统状态和过去交互经验。一个系统可以有 RAG 但…"
+        }
+      ],
+      "drift_guard": [
+        "Do not merge Memory Reflection with Reflexion: Reflexion may provide candidate experience, but Memory Reflection is the governed memory-maintenance process.",
+        "Only keep `up: [[Memory]]` while the card remains about memory write/update/governance; task reflection or generic self-critique belongs elsewhere."
+      ],
+      "result": "applied",
+      "current_up_before_apply": [],
+      "current_up_after_apply": [
+        "Memory"
+      ],
+      "applied_at": "2026-05-17T05:31:24Z"
+    }
+  ],
+  "skipped": [],
+  "unselected_due_to_limit": [],
+  "excluded_from_input_dry_run": [
+    {
+      "source": "Approval Gate",
+      "target": "Agent Workflow",
+      "decision": "reject_taxonomy",
+      "writeback_action": "none",
+      "review_status": "terminal_non_writeback",
+      "reason": "Excluded from writeback dry-run because it is not accept_taxonomy + add_up + proposed_field=up."
+    },
+    {
+      "source": "ReAct",
+      "target": "Agent Workflow",
+      "decision": "reject_taxonomy",
+      "writeback_action": "none",
+      "review_status": "terminal_non_writeback",
+      "reason": "Excluded from writeback dry-run because it is not accept_taxonomy + add_up + proposed_field=up."
+    }
+  ],
+  "post_apply_review": {
+    "review_artifact_json": "reports/concept-card-relation-map/concept-hierarchy-placement-review.json",
+    "review_artifact_md": "reports/concept-card-relation-map/concept-hierarchy-placement-review.md",
+    "classification_stage": "limited_apply",
+    "concepts_with_up": 37,
+    "concepts_without_up": 93,
+    "post_apply_dry_run_planned": 0,
+    "post_apply_dry_run_ready": 0
+  },
+  "idempotent_recheck_at": "2026-05-17T05:38:53Z",
+  "notes": [
+    "limited apply was re-run after the accepted row was already written; the existing apply report was preserved and post-apply artifacts were rebuilt."
+  ]
+}

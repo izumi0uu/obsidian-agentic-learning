@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Agent Communication Protocol"
-url: "https://agentcommunicationprotocol.dev/introduction/welcome"
+title: Agent Communication Protocol
+url: https://agentcommunicationprotocol.dev/introduction/welcome
 author: BeeAI / Linux Foundation
 site: agentcommunicationprotocol.dev
 topic:

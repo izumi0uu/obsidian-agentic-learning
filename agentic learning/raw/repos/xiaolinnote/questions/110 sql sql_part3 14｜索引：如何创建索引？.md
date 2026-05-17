@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "database"
-  - "sql"
+  - interview
+  - database
+  - sql
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/sql/sql_part3/14-indexing.html"
-source: "https://xiaolinnote.com/sql/sql_part3/14-indexing.html"
+url: https://xiaolinnote.com/sql/sql_part3/14-indexing.html
+source: https://xiaolinnote.com/sql/sql_part3/14-indexing.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: faf1e9c0387c809cb0af6138f51dddf2f65b03e483bf98875c48997b59231a09

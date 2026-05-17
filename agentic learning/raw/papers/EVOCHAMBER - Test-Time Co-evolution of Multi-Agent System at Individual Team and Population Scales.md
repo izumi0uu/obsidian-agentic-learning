@@ -2,11 +2,11 @@
 type: source
 source_type: paper
 title: "EVOCHAMBER: Test-Time Co-evolution of Multi-Agent System at Individual, Team, and Population Scales"
-url: "https://arxiv.org/abs/2605.11136"
-pdf: "assets/EVOCHAMBER - Test-Time Co-evolution of Multi-Agent System at Individual Team and Population Scales.pdf"
-extracted: "extracted/EVOCHAMBER - Test-Time Co-evolution of Multi-Agent System at Individual Team and Population Scales.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.11136"
-doi: "10.48550/arXiv.2605.11136"
+url: https://arxiv.org/abs/2605.11136
+pdf: assets/EVOCHAMBER - Test-Time Co-evolution of Multi-Agent System at Individual Team and Population Scales.pdf
+extracted: extracted/EVOCHAMBER - Test-Time Co-evolution of Multi-Agent System at Individual Team and Population Scales.extracted.md
+arxiv: https://arxiv.org/abs/2605.11136
+doi: 10.48550/arXiv.2605.11136
 author:
   - Yaolun Zhang
   - Tianyi Xu
@@ -15,7 +15,7 @@ author:
   - Qingyun Wu
   - Huazheng Wang
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -30,7 +30,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.11136"
+source: https://arxiv.org/abs/2605.11136
 related:
   - "[[Multi-agent Orchestration]]"
   - "[[Memory]]"

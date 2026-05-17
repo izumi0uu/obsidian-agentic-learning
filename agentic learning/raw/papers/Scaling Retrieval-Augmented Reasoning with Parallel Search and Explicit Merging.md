@@ -1,12 +1,12 @@
 ---
 type: source
 source_type: paper
-title: "Scaling Retrieval-Augmented Reasoning with Parallel Search and Explicit Merging"
-url: "https://arxiv.org/abs/2605.13534"
-pdf: "assets/Scaling Retrieval-Augmented Reasoning with Parallel Search and Explicit Merging.pdf"
-extracted: "extracted/Scaling Retrieval-Augmented Reasoning with Parallel Search and Explicit Merging.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.13534"
-doi: "10.48550/arXiv.2605.13534"
+title: Scaling Retrieval-Augmented Reasoning with Parallel Search and Explicit Merging
+url: https://arxiv.org/abs/2605.13534
+pdf: assets/Scaling Retrieval-Augmented Reasoning with Parallel Search and Explicit Merging.pdf
+extracted: extracted/Scaling Retrieval-Augmented Reasoning with Parallel Search and Explicit Merging.extracted.md
+arxiv: https://arxiv.org/abs/2605.13534
+doi: 10.48550/arXiv.2605.13534
 author:
   - Jiabei Liu
   - Wenyu Mao
@@ -16,7 +16,7 @@ author:
   - Jiancan Wu
   - Xiang Wang
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - rag
@@ -31,7 +31,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.13534"
+source: https://arxiv.org/abs/2605.13534
 related:
   - "[[RAG]]"
   - "[[Agentic RAG]]"

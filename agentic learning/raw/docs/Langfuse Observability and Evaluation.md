@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Langfuse Overview"
-url: "https://langfuse.com/docs"
+title: Langfuse Overview
+url: https://langfuse.com/docs
 author: Langfuse
 site: langfuse.com
 topic:

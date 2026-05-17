@@ -3,13 +3,13 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "linux"
+  - interview
+  - linux
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/linux/03-file-operations.html"
-source: "https://xiaolinnote.com/linux/03-file-operations.html"
+url: https://xiaolinnote.com/linux/03-file-operations.html
+source: https://xiaolinnote.com/linux/03-file-operations.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 3f873a7e9517fe9f433b356de34dfeca7dbbbe71133ba8ef269a6757e163244c

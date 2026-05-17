@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Arize Phoenix Tracing"
-url: "https://arize.com/docs/phoenix/tracing/llm-traces"
+title: Arize Phoenix Tracing
+url: https://arize.com/docs/phoenix/tracing/llm-traces
 author: Arize AI
 site: arize.com
 topic:

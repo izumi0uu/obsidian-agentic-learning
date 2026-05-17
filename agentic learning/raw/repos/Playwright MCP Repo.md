@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: repo
-title: "microsoft/playwright-mcp"
-url: "https://github.com/microsoft/playwright-mcp"
+title: microsoft/playwright-mcp
+url: https://github.com/microsoft/playwright-mcp
 author: Microsoft
 site: github.com
 topic:

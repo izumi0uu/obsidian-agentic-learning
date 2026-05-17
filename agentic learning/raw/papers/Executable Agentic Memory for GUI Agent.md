@@ -1,12 +1,12 @@
 ---
 type: source
 source_type: paper
-title: "Executable Agentic Memory for GUI Agent"
-url: "https://arxiv.org/abs/2605.12294"
-pdf: "assets/Executable Agentic Memory for GUI Agent.pdf"
-extracted: "extracted/Executable Agentic Memory for GUI Agent.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.12294"
-doi: "10.48550/arXiv.2605.12294"
+title: Executable Agentic Memory for GUI Agent
+url: https://arxiv.org/abs/2605.12294
+pdf: assets/Executable Agentic Memory for GUI Agent.pdf
+extracted: extracted/Executable Agentic Memory for GUI Agent.extracted.md
+arxiv: https://arxiv.org/abs/2605.12294
+doi: 10.48550/arXiv.2605.12294
 author:
   - Zerui Qin
   - Sheng Yue
@@ -14,7 +14,7 @@ author:
   - Yongjian Fu
   - Ju Ren
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -29,7 +29,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.12294"
+source: https://arxiv.org/abs/2605.12294
 related:
   - "[[Memory]]"
   - "[[Long-term Memory]]"

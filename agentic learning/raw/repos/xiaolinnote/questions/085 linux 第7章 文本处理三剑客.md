@@ -3,13 +3,13 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "linux"
+  - interview
+  - linux
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/linux/07-grep-awk-sed-essentials.html"
-source: "https://xiaolinnote.com/linux/07-grep-awk-sed-essentials.html"
+url: https://xiaolinnote.com/linux/07-grep-awk-sed-essentials.html
+source: https://xiaolinnote.com/linux/07-grep-awk-sed-essentials.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: a32bffdf2da88e6fc1e9eae045914988dbdb50b16b312568b869d1260d3da82b

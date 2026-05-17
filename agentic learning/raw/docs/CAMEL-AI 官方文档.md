@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "CAMEL-AI Documentation and Role-Playing Paper"
-url: "https://docs.camel-ai.org/index"
+title: CAMEL-AI Documentation and Role-Playing Paper
+url: https://docs.camel-ai.org/index
 author: CAMEL-AI
 site: docs.camel-ai.org
 topic:
@@ -17,7 +17,7 @@ freshness: volatile
 conflicts: []
 status: seed
 source:
-  - "https://arxiv.org/abs/2303.17760"
+  - https://arxiv.org/abs/2303.17760
 related:
   - "[[CAMEL]]"
   - "[[Agent Framework]]"

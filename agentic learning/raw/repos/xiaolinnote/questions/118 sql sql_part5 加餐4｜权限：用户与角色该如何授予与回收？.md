@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "database"
-  - "sql"
+  - interview
+  - database
+  - sql
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/sql/sql_part5/supplement4-permissions.html"
-source: "https://xiaolinnote.com/sql/sql_part5/supplement4-permissions.html"
+url: https://xiaolinnote.com/sql/sql_part5/supplement4-permissions.html
+source: https://xiaolinnote.com/sql/sql_part5/supplement4-permissions.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 431f726059de176db28e5de03604c8258b6a7d905e09e04b9f27c638b18efb60

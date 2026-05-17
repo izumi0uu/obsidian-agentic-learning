@@ -41,6 +41,7 @@ related:
 | 2026-05-13 | done | “Claw Bot / OpenClaw 与 Hermes 的边界是什么？” | [[OpenClaw Repo]], [[OpenClaw Repo vs Hermes Agent]], [[03 前沿追踪]], [[Agent Harness]], [[Coding Agent 执行边界对比]] | 已创建 OpenClaw official repo source note 和 OpenClaw / Hermes 对比 topic；边界：按 OpenClaw / Clawbot legacy alias 处理为 volatile 具体 Agent gateway / personal assistant harness source，不建 “Claw Bot” 稳定概念卡 |
 | 2026-05-15 | done | “向量数据库 Qdrant / pgvector / Chroma / FAISS / Milvus / Weaviate / Pinecone 等 Agent 开发选型边界是什么？” | [[Vector Database]], [[Retrieval 组件对比]], [[RAG 主题]], [[Context RAG Memory 对比]] | 已写回 [[Vector Database#Agent / RAG 选型边界]]、[[Retrieval 组件对比#什么时候用哪个判断]]、[[RAG 主题#组件入口]]、[[Context RAG Memory 对比#什么时候用哪个判断]]；结论：记录为类别级选型边界，不为每个 vendor 直接建稳定概念卡。 |
 | 2026-05-15 | done | “Top-K 是什么 / 补概念卡” | [[Top-K]], [[01 术语表]], [[RAG 主题]], [[Agent 知识地图]] | 已创建 [[Top-K]] 轻量概念卡，补 retrieval Top-K / decoding top-k 边界，并接入术语表、RAG 主题和 Agent 知识地图。 |
+| 2026-05-17 | done | “错误 Skill 能否靠 Agent 反思发现？” | [[Tool Poisoning]], [[Tool Registry]], [[Agent Harness]], [[Evaluation]], [[Agent 安全控制点对比]] | 已写回 skill selection / skill trust 边界：`SKILL.md` / skill metadata 是会影响发现、选择和信任的 operational text；reflection 只能辅助怀疑，不等于 verification；本轮不创建弱 Agent Skill 概念卡、不改 alias map。 |
 
 ## 写回模板
 

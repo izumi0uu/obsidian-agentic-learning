@@ -3,16 +3,16 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
-  - "tools"
-  - "mcp"
+  - interview
+  - ai
+  - llm
+  - tools
+  - mcp
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/tools/12_a2a_protocol.html"
-source: "https://xiaolinnote.com/ai/tools/12_a2a_protocol.html"
+url: https://xiaolinnote.com/ai/tools/12_a2a_protocol.html
+source: https://xiaolinnote.com/ai/tools/12_a2a_protocol.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 8474e3c422758ff4d558c628f0a800b5bc8148236d8e09cdc0b6cdab05404c5b

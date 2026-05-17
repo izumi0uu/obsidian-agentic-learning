@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "database"
-  - "sql"
+  - interview
+  - database
+  - sql
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/sql/sql_part1/03-where-filtering.html"
-source: "https://xiaolinnote.com/sql/sql_part1/03-where-filtering.html"
+url: https://xiaolinnote.com/sql/sql_part1/03-where-filtering.html
+source: https://xiaolinnote.com/sql/sql_part1/03-where-filtering.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: d5db55f172153a1598e35bed4d71da2fafcb91e922082cb780d0f939df42bd88

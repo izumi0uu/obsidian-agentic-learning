@@ -2,11 +2,11 @@
 type: source
 source_type: paper
 title: "AgentLens: Revealing The Lucky Pass Problem in SWE-Agent Evaluation"
-url: "https://arxiv.org/abs/2605.12925"
-pdf: "assets/AgentLens - Revealing The Lucky Pass Problem in SWE-Agent Evaluation.pdf"
-extracted: "extracted/AgentLens - Revealing The Lucky Pass Problem in SWE-Agent Evaluation.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.12925"
-doi: "10.48550/arXiv.2605.12925"
+url: https://arxiv.org/abs/2605.12925
+pdf: assets/AgentLens - Revealing The Lucky Pass Problem in SWE-Agent Evaluation.pdf
+extracted: extracted/AgentLens - Revealing The Lucky Pass Problem in SWE-Agent Evaluation.extracted.md
+arxiv: https://arxiv.org/abs/2605.12925
+doi: 10.48550/arXiv.2605.12925
 author:
   - Priyam Sahoo
   - Gaurav Mittal
@@ -16,7 +16,7 @@ author:
   - Pingping Lin
   - Yu Hu
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -31,7 +31,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.12925"
+source: https://arxiv.org/abs/2605.12925
 related:
   - "[[Coding Agent]]"
   - "[[Patch Validation]]"

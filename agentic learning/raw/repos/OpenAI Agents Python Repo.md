@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: repo
-title: "openai/openai-agents-python"
-url: "https://github.com/openai/openai-agents-python"
+title: openai/openai-agents-python
+url: https://github.com/openai/openai-agents-python
 author: OpenAI
 site: GitHub
 topic:

@@ -11,7 +11,7 @@ aliases:
   - AI Agent
   - 智能体
 conflicts:
-  - "OpenAI、Anthropic、LangGraph 对 Agent/workflow 边界表述不同：OpenAI 更偏实践构建，Anthropic 强调 workflow vs agent 取舍，LangGraph 强调有状态图执行。"
+  - OpenAI、Anthropic、LangGraph 对 Agent/workflow 边界表述不同：OpenAI 更偏实践构建，Anthropic 强调 workflow vs agent 取舍，LangGraph 强调有状态图执行。
 source:
   - "[[OpenAI - A Practical Guide to Building Agents]]"
   - "[[Anthropic - Building Effective Agents]]"

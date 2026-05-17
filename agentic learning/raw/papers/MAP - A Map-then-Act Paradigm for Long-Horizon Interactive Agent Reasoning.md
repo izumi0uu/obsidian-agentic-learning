@@ -2,11 +2,11 @@
 type: source
 source_type: paper
 title: "MAP: A Map-then-Act Paradigm for Long-Horizon Interactive Agent Reasoning"
-url: "https://arxiv.org/abs/2605.13037"
-pdf: "assets/MAP - A Map-then-Act Paradigm for Long-Horizon Interactive Agent Reasoning.pdf"
-extracted: "extracted/MAP - A Map-then-Act Paradigm for Long-Horizon Interactive Agent Reasoning.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.13037"
-doi: "10.48550/arXiv.2605.13037"
+url: https://arxiv.org/abs/2605.13037
+pdf: assets/MAP - A Map-then-Act Paradigm for Long-Horizon Interactive Agent Reasoning.pdf
+extracted: extracted/MAP - A Map-then-Act Paradigm for Long-Horizon Interactive Agent Reasoning.extracted.md
+arxiv: https://arxiv.org/abs/2605.13037
+doi: 10.48550/arXiv.2605.13037
 author:
   - Yuxin Liu
   - Ziang Ye
@@ -18,7 +18,7 @@ author:
   - Xunliang Cai
   - Lei Zhang
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -33,7 +33,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.13037"
+source: https://arxiv.org/abs/2605.13037
 related:
   - "[[Planning]]"
   - "[[Agent Loop]]"

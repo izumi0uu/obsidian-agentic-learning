@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: article
-title: "A Practical Guide to Building Agents"
-url: "https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf"
+title: A Practical Guide to Building Agents
+url: https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf
 author: OpenAI
 site: openai.com
 topic:

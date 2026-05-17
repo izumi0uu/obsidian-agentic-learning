@@ -3,13 +3,13 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "linux"
+  - interview
+  - linux
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/linux/02-path-and-filesystem-navigation.html"
-source: "https://xiaolinnote.com/linux/02-path-and-filesystem-navigation.html"
+url: https://xiaolinnote.com/linux/02-path-and-filesystem-navigation.html
+source: https://xiaolinnote.com/linux/02-path-and-filesystem-navigation.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: e1840f4467968e0eb1117381dca403840a4948723ce86eba629b6bc043c0a8d7

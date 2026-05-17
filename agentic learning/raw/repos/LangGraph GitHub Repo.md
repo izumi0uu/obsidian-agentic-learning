@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: repo
-title: "langchain-ai/langgraph"
-url: "https://github.com/langchain-ai/langgraph"
+title: langchain-ai/langgraph
+url: https://github.com/langchain-ai/langgraph
 author: LangChain
 site: GitHub
 topic:

@@ -3,15 +3,15 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
-  - "rag"
+  - interview
+  - ai
+  - llm
+  - rag
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/rag/4_chunking.html"
-source: "https://xiaolinnote.com/ai/rag/4_chunking.html"
+url: https://xiaolinnote.com/ai/rag/4_chunking.html
+source: https://xiaolinnote.com/ai/rag/4_chunking.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 677abcc4879c025827e520bf1e509b4765e76644f725bb32381fb3eb25e630eb

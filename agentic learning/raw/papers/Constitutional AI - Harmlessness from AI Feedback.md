@@ -2,9 +2,9 @@
 type: source
 source_type: paper
 title: "Constitutional AI: Harmlessness from AI Feedback"
-url: "https://arxiv.org/abs/2212.08073"
-pdf: "assets/Constitutional AI - Harmlessness from AI Feedback.pdf"
-extracted: "extracted/Constitutional AI - Harmlessness from AI Feedback.extracted.md"
+url: https://arxiv.org/abs/2212.08073
+pdf: assets/Constitutional AI - Harmlessness from AI Feedback.pdf
+extracted: extracted/Constitutional AI - Harmlessness from AI Feedback.extracted.md
 author:
   - Bai et al.
 site: arXiv
@@ -18,7 +18,7 @@ last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2212.08073"
+source: https://arxiv.org/abs/2212.08073
 related:
   - "[[LLM Training Pipeline]]"
   - "[[LLM]]"

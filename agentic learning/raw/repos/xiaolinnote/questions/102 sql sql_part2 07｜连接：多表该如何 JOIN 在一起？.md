@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "database"
-  - "sql"
+  - interview
+  - database
+  - sql
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/sql/sql_part2/07-join-tables.html"
-source: "https://xiaolinnote.com/sql/sql_part2/07-join-tables.html"
+url: https://xiaolinnote.com/sql/sql_part2/07-join-tables.html
+source: https://xiaolinnote.com/sql/sql_part2/07-join-tables.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 56ff19ff545283b2fece337eba2dc88226d5fe6220a3f63af572aaafdf1de064

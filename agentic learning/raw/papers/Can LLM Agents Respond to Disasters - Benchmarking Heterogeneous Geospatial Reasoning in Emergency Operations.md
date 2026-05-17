@@ -1,12 +1,12 @@
 ---
 type: source
 source_type: paper
-title: "Can LLM Agents Respond to Disasters? Benchmarking Heterogeneous Geospatial Reasoning in Emergency Operations"
-url: "https://arxiv.org/abs/2605.11633"
-pdf: "assets/Can LLM Agents Respond to Disasters - Benchmarking Heterogeneous Geospatial Reasoning in Emergency Operations.pdf"
-extracted: "extracted/Can LLM Agents Respond to Disasters - Benchmarking Heterogeneous Geospatial Reasoning in Emergency Operations.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.11633"
-doi: "10.48550/arXiv.2605.11633"
+title: Can LLM Agents Respond to Disasters? Benchmarking Heterogeneous Geospatial Reasoning in Emergency Operations
+url: https://arxiv.org/abs/2605.11633
+pdf: assets/Can LLM Agents Respond to Disasters - Benchmarking Heterogeneous Geospatial Reasoning in Emergency Operations.pdf
+extracted: extracted/Can LLM Agents Respond to Disasters - Benchmarking Heterogeneous Geospatial Reasoning in Emergency Operations.extracted.md
+arxiv: https://arxiv.org/abs/2605.11633
+doi: 10.48550/arXiv.2605.11633
 author:
   - Junjue Wang
   - Weihao Xuan
@@ -19,7 +19,7 @@ author:
   - Stefano Ermon
   - Naoto Yokoya
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -35,7 +35,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.11633"
+source: https://arxiv.org/abs/2605.11633
 related:
   - "[[Benchmark]]"
   - "[[Tool Use]]"

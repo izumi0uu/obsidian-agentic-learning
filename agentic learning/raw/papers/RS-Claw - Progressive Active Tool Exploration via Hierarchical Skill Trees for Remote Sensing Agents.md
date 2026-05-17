@@ -2,11 +2,11 @@
 type: source
 source_type: paper
 title: "RS-Claw: Progressive Active Tool Exploration via Hierarchical Skill Trees for Remote Sensing Agents"
-url: "https://arxiv.org/abs/2605.13391"
-pdf: "assets/RS-Claw - Progressive Active Tool Exploration via Hierarchical Skill Trees for Remote Sensing Agents.pdf"
-extracted: "extracted/RS-Claw - Progressive Active Tool Exploration via Hierarchical Skill Trees for Remote Sensing Agents.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.13391"
-doi: "10.48550/arXiv.2605.13391"
+url: https://arxiv.org/abs/2605.13391
+pdf: assets/RS-Claw - Progressive Active Tool Exploration via Hierarchical Skill Trees for Remote Sensing Agents.pdf
+extracted: extracted/RS-Claw - Progressive Active Tool Exploration via Hierarchical Skill Trees for Remote Sensing Agents.extracted.md
+arxiv: https://arxiv.org/abs/2605.13391
+doi: 10.48550/arXiv.2605.13391
 author:
   - Liangtian Liu
   - Zeyuan Wang
@@ -20,7 +20,7 @@ author:
   - Cheng Yang
   - Dongyang Hou
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -34,7 +34,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.13391"
+source: https://arxiv.org/abs/2605.13391
 related:
   - "[[Tool Use]]"
   - "[[Tool Registry]]"

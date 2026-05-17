@@ -2,17 +2,17 @@
 type: source
 source_type: paper
 title: "Rollout Cards: A Reproducibility Standard for Agent Research"
-url: "https://arxiv.org/abs/2605.12131"
-pdf: "assets/Rollout Cards - A Reproducibility Standard for Agent Research.pdf"
-extracted: "extracted/Rollout Cards - A Reproducibility Standard for Agent Research.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.12131"
-doi: "10.48550/arXiv.2605.12131"
+url: https://arxiv.org/abs/2605.12131
+pdf: assets/Rollout Cards - A Reproducibility Standard for Agent Research.pdf
+extracted: extracted/Rollout Cards - A Reproducibility Standard for Agent Research.extracted.md
+arxiv: https://arxiv.org/abs/2605.12131
+doi: 10.48550/arXiv.2605.12131
 author:
   - Charlie Masters
   - Ziyuan Liu
   - Stefano V. Albrecht
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -27,7 +27,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.12131"
+source: https://arxiv.org/abs/2605.12131
 related:
   - "[[Evaluation]]"
   - "[[Benchmark]]"

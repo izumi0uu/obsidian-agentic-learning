@@ -3,15 +3,15 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
-  - "agent"
+  - interview
+  - ai
+  - llm
+  - agent
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/agent/13_handcode.html"
-source: "https://xiaolinnote.com/ai/agent/13_handcode.html"
+url: https://xiaolinnote.com/ai/agent/13_handcode.html
+source: https://xiaolinnote.com/ai/agent/13_handcode.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 82180e57ce0daf05c46eefbc28e1386be18741e36901b4cff13c1104e38fa1d7

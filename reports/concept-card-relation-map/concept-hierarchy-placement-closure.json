@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "artifact_type": "taxonomy_placement_audit_closure",
+  "generated_at": "2026-05-17T09:45:34Z",
+  "input_review": "reports/concept-card-relation-map/concept-hierarchy-placement-review.json",
+  "classification_stage": "audit_closure",
+  "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+  "policy": {
+    "completion_target": "Close open review tails without forcing parents.",
+    "strict_taxonomy_rule": "`up` remains strict kind-of / belongs-to only.",
+    "deferred_status_rule": "A remaining defer_boundary_review row is closed only when review_status=deferred_with_backlog and a backlog home is recorded.",
+    "write_policy": "No concept cards are edited in Audit closure."
+  },
+  "summary": {
+    "total_concepts": 130,
+    "reviewed_concepts": 130,
+    "taxonomy_placement_unreviewed": 0,
+    "open_unclassified": 0,
+    "open_review_after_closure": 0,
+    "open_writeback": 0,
+    "dry_run_planned": 0,
+    "defer_boundary_review": 20,
+    "deferred_with_backlog": 20,
+    "concept_card_writes": 0,
+    "plugin_problems": 0,
+    "forbidden_up_edges": 0,
+    "completion_definition_met": true
+  },
+  "completion_definition": {
+    "checks": {
+      "all_concepts_reviewed": true,
+      "taxonomy_placement_unreviewed_zero": true,
+      "open_unclassified_zero": true,
+      "open_review_zero": true,
+      "open_writeback_zero": true,
+      "deferred_rows_have_backlog": true,
+      "dry_run_planned_zero": true,
+      "plugin_problems_zero": true,
+      "forbidden_up_edges_zero": true
+    },
+    "met": true
+  },
+  "deferred_with_backlog": [
+    {
+      "concept": "A2A",
+      "path": "agentic learning/wiki/concepts/A2A.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Protocol/ecosystem card; no approved protocol parent exists and Agent is intentionally not auto-approved.",
+      "suppressed_target": "Agent",
+      "suppressed_signal_type": "broad_anchor_not_approved",
+      "suppressed_reason": "A2A is a protocol/ecosystem card. `Agent` is intentionally not an auto-approved parent, and no approved protocol parent exists.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "ACP",
+      "path": "agentic learning/wiki/concepts/ACP.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Protocol/ecosystem card; no approved protocol parent exists and Agent is intentionally not auto-approved.",
+      "suppressed_target": "Agent",
+      "suppressed_signal_type": "broad_anchor_not_approved",
+      "suppressed_reason": "ACP is a protocol/ecosystem card. `Agent` is intentionally not an auto-approved parent, and no approved protocol parent exists.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "Browser Agent",
+      "path": "agentic learning/wiki/concepts/Browser Agent.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Could be a kind of Agent, but Agent is not auto-approved and no narrower reviewed parent exists.",
+      "suppressed_target": "Agent",
+      "suppressed_signal_type": "broad_anchor_not_approved",
+      "suppressed_reason": "The title suggests a kind of Agent, but `Agent` is too broad for automatic parent generation.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "Code Execution Sandbox",
+      "path": "agentic learning/wiki/concepts/Code Execution Sandbox.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Sandbox/security runtime boundary; no approved sandbox/security parent exists.",
+      "suppressed_target": "Tool Use",
+      "suppressed_signal_type": "security_runtime_not_tool_behavior",
+      "suppressed_reason": "A sandbox supports safe tool/code execution, but support/infrastructure is not a kind of Tool Use.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "Data Exfiltration",
+      "path": "agentic learning/wiki/concepts/Data Exfiltration.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Security risk card; no approved security-risk parent exists and Prompt is not a safe parent.",
+      "suppressed_target": "Prompt",
+      "suppressed_signal_type": "security_risk_not_prompt",
+      "suppressed_reason": "Data exfiltration can occur through prompts/tools/retrieval, but it is a risk class, not a kind of Prompt.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "Entity Resolution",
+      "path": "agentic learning/wiki/concepts/Entity Resolution.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "May support Knowledge Graph or retrieval, but support/use is not strict taxonomy.",
+      "suppressed_target": "Knowledge Graph",
+      "suppressed_signal_type": "supports_graph_not_graph",
+      "suppressed_reason": "Entity resolution can support knowledge graphs, but support/use is not strict taxonomy; Knowledge Graph is also not auto-approved.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "GUI Grounding",
+      "path": "agentic learning/wiki/concepts/GUI Grounding.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Computer-use/grounding capability; no approved grounding or computer-use parent exists.",
+      "suppressed_target": "Agent",
+      "suppressed_signal_type": "capability_not_broad_agent_parent",
+      "suppressed_reason": "GUI grounding is a capability used by computer-use agents, not automatically a kind of Agent.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "Least Privilege Tools",
+      "path": "agentic learning/wiki/concepts/Least Privilege Tools.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Tool safety/policy principle; related to Tool Use but not automatically a kind of Tool Use.",
+      "suppressed_target": "Tool Use",
+      "suppressed_signal_type": "policy_principle_not_tool_behavior",
+      "suppressed_reason": "Least-privilege tooling constrains Tool Use, but the policy principle itself is not automatically a Tool Use subtype.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "MCP",
+      "path": "agentic learning/wiki/concepts/MCP.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Protocol/root ecosystem card; no approved protocol parent exists.",
+      "suppressed_target": "Tool Use",
+      "suppressed_signal_type": "protocol_not_tool_behavior",
+      "suppressed_reason": "MCP standardizes tool/context connection; protocol/support is not a kind of Tool Use.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "MCP Registry",
+      "path": "agentic learning/wiki/concepts/MCP Registry.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Registry/ecosystem component likely belongs near MCP, but MCP is not yet an approved parent.",
+      "suppressed_target": "MCP",
+      "suppressed_signal_type": "unapproved_parent",
+      "suppressed_reason": "MCP Registry likely belongs near MCP, but MCP is not an approved parent in Conservative candidate generation.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "Multi-Head Attention",
+      "path": "agentic learning/wiki/concepts/Multi-Head Attention.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of.",
+      "suppressed_target": "Transformer",
+      "suppressed_signal_type": "component_of_not_kind_of",
+      "suppressed_reason": "Multi-Head Attention is a Transformer mechanism/component, not a kind of Transformer.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "Observation",
+      "path": "agentic learning/wiki/concepts/Observation.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Agent loop/runtime signal; no approved Agent Loop parent exists.",
+      "suppressed_target": "Agent Workflow",
+      "suppressed_signal_type": "loop_signal_not_workflow",
+      "suppressed_reason": "Observation is an agent-loop feedback signal; being used inside workflows is not strict taxonomy.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "Obsidian + LLM Wiki",
+      "path": "agentic learning/wiki/concepts/Obsidian + LLM Wiki.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Project/workflow artifact card; no approved parent should absorb local wiki tooling by similarity.",
+      "suppressed_target": "RAG",
+      "suppressed_signal_type": "local_system_not_rag_subtype",
+      "suppressed_reason": "The local wiki may use retrieval-like ideas, but the project/workflow artifact is not a kind of RAG.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "Oh My Codex (OMX)",
+      "path": "agentic learning/wiki/concepts/Oh My Codex (OMX).md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Concrete runtime/product/workflow ecosystem; do not classify as Agent Framework without product-boundary review.",
+      "suppressed_target": "Agent Framework",
+      "suppressed_signal_type": "product_runtime_not_framework_subtype_without_review",
+      "suppressed_reason": "OMX is a concrete Codex orchestration/runtime ecosystem; candidate generation must not classify it as Agent Framework without product-boundary review.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "Policy Engine",
+      "path": "agentic learning/wiki/concepts/Policy Engine.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Policy/safety runtime component; no approved policy/guardrail parent exists.",
+      "suppressed_target": "Tool Use",
+      "suppressed_signal_type": "policy_layer_not_tool_behavior",
+      "suppressed_reason": "A policy engine constrains tools/actions; constraint layer is not a kind of Tool Use.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "Positional Encoding",
+      "path": "agentic learning/wiki/concepts/Positional Encoding.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of.",
+      "suppressed_target": "Transformer",
+      "suppressed_signal_type": "component_of_not_kind_of",
+      "suppressed_reason": "Positional Encoding is a Transformer mechanism/component, not a kind of Transformer.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "Prompt Injection",
+      "path": "agentic learning/wiki/concepts/Prompt Injection.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Security risk/attack class; Prompt is related context but not a strict parent.",
+      "suppressed_target": "Prompt",
+      "suppressed_signal_type": "attack_class_not_prompt",
+      "suppressed_reason": "Prompt Injection manipulates prompts but is an attack class, not a kind of Prompt.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "Sandbox Workspace",
+      "path": "agentic learning/wiki/concepts/Sandbox Workspace.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Workspace/sandbox runtime boundary; no approved sandbox/workspace parent exists.",
+      "suppressed_target": "Tool Use",
+      "suppressed_signal_type": "workspace_runtime_not_tool_behavior",
+      "suppressed_reason": "A sandbox workspace hosts actions/tools; hosting infrastructure is not a Tool Use subtype.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "Self-Attention",
+      "path": "agentic learning/wiki/concepts/Self-Attention.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of.",
+      "suppressed_target": "Transformer",
+      "suppressed_signal_type": "component_of_not_kind_of",
+      "suppressed_reason": "Self-Attention is a Transformer mechanism/component, not a kind of Transformer.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "Trajectory",
+      "path": "agentic learning/wiki/concepts/Trajectory.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "Trace/evaluation object; may be evaluated or observed, but it is not automatically Evaluation or Observability.",
+      "suppressed_target": "Evaluation",
+      "suppressed_signal_type": "evaluated_object_not_evaluation_method",
+      "suppressed_reason": "Trajectory can be evaluated or observed, but the path/object being evaluated is not itself Evaluation.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    }
+  ]
+}

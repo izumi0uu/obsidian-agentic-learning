@@ -12,8 +12,8 @@ conflicts: []
 source:
   - "[[Agent 工程基础设施主源]]"
   - "[[Microsoft RAG 官方文档]]"
-  - "https://alexgarcia.xyz/sqlite-vec/"
-  - "https://github.com/asg017/sqlite-vec"
+  - https://alexgarcia.xyz/sqlite-vec/
+  - https://github.com/asg017/sqlite-vec
 evidence:
   - "[[Agent 工程基础设施主源#RAG / 检索基础设施]]"
   - "[[Microsoft RAG 官方文档#一句话]]"

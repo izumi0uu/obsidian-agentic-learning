@@ -24,10 +24,10 @@ QUESTION_ROOTS = {
     "agent_java_offer": Path("agentic learning/raw/repos/agent_java_offer/questions"),
 }
 DEFAULT_ALIAS_PATH = Path("scripts/interview_question_concept_aliases.json")
-DEFAULT_REPORT_JSON = Path(".omx/reports/interview-question-concept-card-links-report.json")
-DEFAULT_REPORT_MD = Path(".omx/reports/interview-question-concept-card-links-report.md")
+DEFAULT_REPORT_JSON = Path("reports/interview-question-concept-card-links-report.json")
+DEFAULT_REPORT_MD = Path("reports/interview-question-concept-card-links-report.md")
 DEFAULT_BACKLOG_PATH = Path("agentic learning/maps/08 面试题概念卡待补充.md")
-BACKLOG_TEMPLATE_PATH = Path(".omx/specs/interview-question-concept-card-links-missing-concept-backlog-template.md")
+BACKLOG_TEMPLATE_PATH = Path("agentic learning/templates/面试题概念卡待补充.md")
 
 WIKI_LINK_RE = re.compile(r"\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]*)?\]\]")
 RELATED_HEADING_RE = re.compile(r"^## 相关知识 wiki\s*$", re.MULTILINE)

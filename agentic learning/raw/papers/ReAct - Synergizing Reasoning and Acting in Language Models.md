@@ -2,9 +2,9 @@
 type: source
 source_type: paper
 title: "ReAct: Synergizing Reasoning and Acting in Language Models"
-url: "https://arxiv.org/abs/2210.03629"
-pdf: "assets/ReAct - Synergizing Reasoning and Acting in Language Models.pdf"
-extracted: "extracted/ReAct - Synergizing Reasoning and Acting in Language Models.extracted.md"
+url: https://arxiv.org/abs/2210.03629
+pdf: assets/ReAct - Synergizing Reasoning and Acting in Language Models.pdf
+extracted: extracted/ReAct - Synergizing Reasoning and Acting in Language Models.extracted.md
 author:
   - Yao et al.
 site: arXiv
@@ -18,7 +18,7 @@ last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: growing
-source: "https://arxiv.org/abs/2210.03629"
+source: https://arxiv.org/abs/2210.03629
 related:
   - "[[Agent]]"
   - "[[Agent Loop]]"

@@ -10,8 +10,8 @@ topic:
 status: inbox
 created: 2026-05-17
 updated: 2026-05-17
-url: "https://xiaolinnote.com/"
-source: "https://xiaolinnote.com/sitemap.xml"
+url: https://xiaolinnote.com/
+source: https://xiaolinnote.com/sitemap.xml
 last_checked: 2026-05-17
 freshness: watch
 sha256: d9afe178c09079896ca010fe52c7bc89558a72c8cd9170fb79143b8654a62a4c

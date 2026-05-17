@@ -2,25 +2,25 @@
 type: source
 source_type: repo
 site: github.com
-repo: "guoguo-tju/agent_java_offer"
+repo: guoguo-tju/agent_java_offer
 topic:
-  - "interview"
-  - "ai"
-  - "agent"
+  - interview
+  - ai
+  - agent
 status: inbox
 created: 2026-05-09
 updated: 2026-05-09
-url: "https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/02_Workflow%E4%B8%8E%E5%A4%9AAgent/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md"
-source: "https://github.com/guoguo-tju/agent_java_offer"
-source_path: "docs/interview_prep/01_AI/02_Workflow与多Agent/01_核心问答.md"
-commit: "12bf4c915cca01f513e040935e1917d3687f8b35"
-entry_type: "followup-question"
-direction: "01_AI"
-category: "02_Workflow与多Agent"
+url: https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/02_Workflow%E4%B8%8E%E5%A4%9AAgent/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md
+source: https://github.com/guoguo-tju/agent_java_offer
+source_path: docs/interview_prep/01_AI/02_Workflow与多Agent/01_核心问答.md
+commit: 12bf4c915cca01f513e040935e1917d3687f8b35
+entry_type: followup-question
+direction: 01_AI
+category: 02_Workflow与多Agent
 last_checked: 2026-05-09
 freshness: watch
 sha256: 10ca3a60d3c9cc3a0238dd0eb7095eea7b29de2c8f3571df1397beee6c893537
-license: "CC BY-NC 4.0"
+license: CC BY-NC 4.0
 related:
   - "[[agent_java_offer Repo]]"
   - "[[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]"

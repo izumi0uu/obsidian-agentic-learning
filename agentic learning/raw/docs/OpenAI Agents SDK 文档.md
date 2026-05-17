@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "OpenAI Agents SDK Documentation"
-url: "https://openai.github.io/openai-agents-python/"
+title: OpenAI Agents SDK Documentation
+url: https://openai.github.io/openai-agents-python/
 author: OpenAI
 site: openai.github.io
 topic:

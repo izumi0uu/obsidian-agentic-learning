@@ -31,10 +31,10 @@ up:
 relations:
   - type: composes_with
     target: "[[Multi-Route Retrieval]]"
-    note: "Multi-Query Retrieval 可以作为多路召回中的 query route，用多个问题变体扩大覆盖。"
+    note: Multi-Query Retrieval 可以作为多路召回中的 query route，用多个问题变体扩大覆盖。
   - type: contrasts_with
     target: "[[Query Planning]]"
-    note: "Multi-query 是生成多个检索 query；query planning 更强调任务/子问题/知识源的规划。"
+    note: Multi-query 是生成多个检索 query；query planning 更强调任务/子问题/知识源的规划。
 related:
   - "[[Query Rewrite]]"
   - "[[Retriever]]"

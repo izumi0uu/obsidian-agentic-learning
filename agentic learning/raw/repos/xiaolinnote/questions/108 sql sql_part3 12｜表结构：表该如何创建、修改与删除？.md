@@ -3,14 +3,14 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "database"
-  - "sql"
+  - interview
+  - database
+  - sql
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/sql/sql_part3/12-table-structure.html"
-source: "https://xiaolinnote.com/sql/sql_part3/12-table-structure.html"
+url: https://xiaolinnote.com/sql/sql_part3/12-table-structure.html
+source: https://xiaolinnote.com/sql/sql_part3/12-table-structure.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: cbfaba3860bff8f54bef0a2d315cb22d9c5a58a8a1ace5b3348bd1412fea9c63

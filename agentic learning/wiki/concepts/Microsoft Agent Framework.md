@@ -8,14 +8,12 @@ topic:
 status: growing
 created: 2026-05-12
 updated: 2026-05-16
-
 up:
   - "[[Agent Framework]]"
-
 last_checked: 2026-05-12
 freshness: volatile
 conflicts:
-  - "Microsoft Learn 当前页面仍标注 public preview；官方 blog 同时将其描述为 Semantic Kernel 与 AutoGen 的 direct successor。"
+  - Microsoft Learn 当前页面仍标注 public preview；官方 blog 同时将其描述为 Semantic Kernel 与 AutoGen 的 direct successor。
 source:
   - "[[Microsoft Agent Framework 官方文档]]"
   - "[[AutoGen 官方文档]]"

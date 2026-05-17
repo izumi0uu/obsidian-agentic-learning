@@ -3,13 +3,13 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "linux"
+  - interview
+  - linux
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/linux/08-process-and-job-control.html"
-source: "https://xiaolinnote.com/linux/08-process-and-job-control.html"
+url: https://xiaolinnote.com/linux/08-process-and-job-control.html
+source: https://xiaolinnote.com/linux/08-process-and-job-control.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 38388e08d9d642deddc8894ae8a35263d8a397028fa8cf41ca670dda83b5b91e

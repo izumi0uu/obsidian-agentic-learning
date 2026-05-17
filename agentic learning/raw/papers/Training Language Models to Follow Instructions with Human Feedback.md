@@ -1,10 +1,10 @@
 ---
 type: source
 source_type: paper
-title: "Training Language Models to Follow Instructions with Human Feedback"
-url: "https://arxiv.org/abs/2203.02155"
-pdf: "assets/Training Language Models to Follow Instructions with Human Feedback.pdf"
-extracted: "extracted/Training Language Models to Follow Instructions with Human Feedback.extracted.md"
+title: Training Language Models to Follow Instructions with Human Feedback
+url: https://arxiv.org/abs/2203.02155
+pdf: assets/Training Language Models to Follow Instructions with Human Feedback.pdf
+extracted: extracted/Training Language Models to Follow Instructions with Human Feedback.extracted.md
 author:
   - Ouyang et al.
 site: arXiv
@@ -18,7 +18,7 @@ last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2203.02155"
+source: https://arxiv.org/abs/2203.02155
 related:
   - "[[LLM Training Pipeline]]"
   - "[[LLM]]"

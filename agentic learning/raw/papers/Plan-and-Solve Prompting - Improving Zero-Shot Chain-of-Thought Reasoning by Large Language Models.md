@@ -2,16 +2,16 @@
 type: source
 source_type: paper
 title: "Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models"
-url: "https://aclanthology.org/2023.acl-long.147/"
-pdf: "assets/Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models.pdf"
-extracted: "extracted/Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models.extracted.md"
-arxiv: "https://arxiv.org/abs/2305.04091"
-doi: "10.18653/v1/2023.acl-long.147"
+url: https://aclanthology.org/2023.acl-long.147/
+pdf: assets/Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models.pdf
+extracted: extracted/Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models.extracted.md
+arxiv: https://arxiv.org/abs/2305.04091
+doi: 10.18653/v1/2023.acl-long.147
 author:
   - Wang et al.
 site: ACL Anthology
 venue: ACL 2023
-pages: "2609-2634"
+pages: 2609-2634
 topic:
   - llm
   - reasoning
@@ -22,7 +22,7 @@ last_checked: 2026-05-11
 freshness: stable
 conflicts: []
 status: seed
-source: "https://aclanthology.org/2023.acl-long.147/"
+source: https://aclanthology.org/2023.acl-long.147/
 related:
   - "[[Plan-and-Solve Prompting]]"
   - "[[Planning]]"

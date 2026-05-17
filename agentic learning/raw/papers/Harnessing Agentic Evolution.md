@@ -1,12 +1,12 @@
 ---
 type: source
 source_type: paper
-title: "Harnessing Agentic Evolution"
-url: "https://arxiv.org/abs/2605.13821"
-pdf: "assets/Harnessing Agentic Evolution.pdf"
-extracted: "extracted/Harnessing Agentic Evolution.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.13821"
-doi: "10.48550/arXiv.2605.13821"
+title: Harnessing Agentic Evolution
+url: https://arxiv.org/abs/2605.13821
+pdf: assets/Harnessing Agentic Evolution.pdf
+extracted: extracted/Harnessing Agentic Evolution.extracted.md
+arxiv: https://arxiv.org/abs/2605.13821
+doi: 10.48550/arXiv.2605.13821
 author:
   - Jiayi Zhang
   - Yongfeng Gu
@@ -22,7 +22,7 @@ author:
   - Chenglin Wu
   - Yuyu Luo
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -36,7 +36,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.13821"
+source: https://arxiv.org/abs/2605.13821
 related:
   - "[[Agent Harness]]"
   - "[[Agent Workflow]]"

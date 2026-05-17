@@ -2,9 +2,9 @@
 type: source
 source_type: paper
 title: "GAIA: a benchmark for General AI Assistants"
-url: "https://arxiv.org/abs/2311.12983"
-pdf: "../papers/assets/GAIA Benchmark.pdf"
-extracted: "../papers/extracted/GAIA Benchmark.extracted.md"
+url: https://arxiv.org/abs/2311.12983
+pdf: ../papers/assets/GAIA Benchmark.pdf
+extracted: ../papers/extracted/GAIA Benchmark.extracted.md
 author:
   - Mialon et al.
 site: arXiv
@@ -18,7 +18,7 @@ last_checked: 2026-05-07
 freshness: stable
 conflicts: []
 status: growing
-source: "https://arxiv.org/abs/2311.12983"
+source: https://arxiv.org/abs/2311.12983
 related:
   - "[[Evaluation]]"
   - "[[Agent]]"

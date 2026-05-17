@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: repo
-title: "agent_java_offer"
-url: "https://github.com/guoguo-tju/agent_java_offer"
+title: agent_java_offer
+url: https://github.com/guoguo-tju/agent_java_offer
 author: guoguo-tju
 site: github.com
 topic:

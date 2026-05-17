@@ -2,24 +2,24 @@
 type: source
 source_type: repo
 site: github.com
-repo: "guoguo-tju/agent_java_offer"
+repo: guoguo-tju/agent_java_offer
 topic:
-  - "interview"
-  - "algorithm"
+  - interview
+  - algorithm
 status: inbox
 created: 2026-05-09
 updated: 2026-05-09
-url: "https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/04_%E7%AE%97%E6%B3%95/02_%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md"
-source: "https://github.com/guoguo-tju/agent_java_offer"
-source_path: "docs/interview_prep/04_算法/02_滑动窗口/01_核心问答.md"
-commit: "12bf4c915cca01f513e040935e1917d3687f8b35"
-entry_type: "algorithm-problem"
-direction: "04_算法"
-category: "02_滑动窗口"
+url: https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/04_%E7%AE%97%E6%B3%95/02_%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md
+source: https://github.com/guoguo-tju/agent_java_offer
+source_path: docs/interview_prep/04_算法/02_滑动窗口/01_核心问答.md
+commit: 12bf4c915cca01f513e040935e1917d3687f8b35
+entry_type: algorithm-problem
+direction: 04_算法
+category: 02_滑动窗口
 last_checked: 2026-05-09
 freshness: watch
 sha256: 733224c6a45e86ef0a8fdb3953c5aad8aaa133d1f52ffcbb6a11d8aaf9d1681d
-license: "CC BY-NC 4.0"
+license: CC BY-NC 4.0
 related:
   - "[[agent_java_offer Repo]]"
   - "[[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]"

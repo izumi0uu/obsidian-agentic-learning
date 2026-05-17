@@ -3,13 +3,13 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "linux"
+  - interview
+  - linux
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/linux/appendix-a1-command-cheat-sheet.html"
-source: "https://xiaolinnote.com/linux/appendix-a1-command-cheat-sheet.html"
+url: https://xiaolinnote.com/linux/appendix-a1-command-cheat-sheet.html
+source: https://xiaolinnote.com/linux/appendix-a1-command-cheat-sheet.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: 98215e96b7792dc39accfda4dc2fee40e4d333f03750e3bba6be5765a195e290

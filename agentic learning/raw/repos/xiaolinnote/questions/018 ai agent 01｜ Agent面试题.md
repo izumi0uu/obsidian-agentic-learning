@@ -3,15 +3,15 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
-  - "agent"
+  - interview
+  - ai
+  - llm
+  - agent
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/agent/"
-source: "https://xiaolinnote.com/ai/agent/"
+url: https://xiaolinnote.com/ai/agent/
+source: https://xiaolinnote.com/ai/agent/
 last_checked: 2026-05-17
 freshness: watch
 sha256: 503ab4ce60e0a2b6b278ef6a9f31f4ed38df2245349d19fe6f8dc3050f2481a1

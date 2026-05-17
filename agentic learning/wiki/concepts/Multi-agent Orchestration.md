@@ -7,10 +7,8 @@ topic:
 status: seed
 created: 2026-05-06
 updated: 2026-05-16
-
 up:
   - "[[Agent Workflow]]"
-
 last_checked: 2026-05-10
 freshness: watch
 conflicts: []

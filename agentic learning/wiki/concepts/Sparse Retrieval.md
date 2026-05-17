@@ -25,16 +25,16 @@ up:
 relations:
   - type: related_to
     target: "[[BM25]]"
-    note: "BM25 是 sparse retrieval 的常见代表；这张卡覆盖更宽的词法检索家族。"
+    note: BM25 是 sparse retrieval 的常见代表；这张卡覆盖更宽的词法检索家族。
   - type: related_to
     target: "[[Dense Retrieval]]"
-    note: "Sparse Retrieval 关注词项、倒排和精确匹配；Dense Retrieval 关注语义相似。"
+    note: Sparse Retrieval 关注词项、倒排和精确匹配；Dense Retrieval 关注语义相似。
   - type: composed_into
     target: "[[Hybrid Search]]"
-    note: "Sparse Retrieval 常被组合进 Hybrid Search 作为词面检索一路。"
+    note: Sparse Retrieval 常被组合进 Hybrid Search 作为词面检索一路。
   - type: composed_into
     target: "[[Multi-Route Retrieval]]"
-    note: "Sparse Retrieval 可以作为多路召回中的词面检索一路；这是 route/strategy 组合关系，不是 `up`。"
+    note: Sparse Retrieval 可以作为多路召回中的词面检索一路；这是 route/strategy 组合关系，不是 `up`。
 related:
   - "[[BM25]]"
   - "[[TF-IDF]]"

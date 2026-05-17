@@ -2,9 +2,9 @@
 type: source
 source_type: paper
 title: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
-url: "https://arxiv.org/abs/2310.06770"
-pdf: "../papers/assets/SWE-bench.pdf"
-extracted: "../papers/extracted/SWE-bench.extracted.md"
+url: https://arxiv.org/abs/2310.06770
+pdf: ../papers/assets/SWE-bench.pdf
+extracted: ../papers/extracted/SWE-bench.extracted.md
 author:
   - Jimenez et al.
 site: arXiv
@@ -18,7 +18,7 @@ last_checked: 2026-05-07
 freshness: stable
 conflicts: []
 status: growing
-source: "https://arxiv.org/abs/2310.06770"
+source: https://arxiv.org/abs/2310.06770
 related:
   - "[[Evaluation]]"
   - "[[Agent]]"

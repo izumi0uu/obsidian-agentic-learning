@@ -3,16 +3,16 @@ type: source
 source_type: web
 site: xiaolinnote.com
 topic:
-  - "interview"
-  - "ai"
-  - "llm"
-  - "tools"
-  - "mcp"
+  - interview
+  - ai
+  - llm
+  - tools
+  - mcp
 status: inbox
 created: 2026-05-07
 updated: 2026-05-17
-url: "https://xiaolinnote.com/ai/tools/3_fc_training.html"
-source: "https://xiaolinnote.com/ai/tools/3_fc_training.html"
+url: https://xiaolinnote.com/ai/tools/3_fc_training.html
+source: https://xiaolinnote.com/ai/tools/3_fc_training.html
 last_checked: 2026-05-17
 freshness: watch
 sha256: d2246a7e10e98e03190338372f4d60d8e0ac6b79d7685ccb51e5d328894de474

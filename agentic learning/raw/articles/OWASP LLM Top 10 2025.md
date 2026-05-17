@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: article
-title: "OWASP Top 10 for LLM Applications 2025"
-url: "https://owasp.org/www-project-top-10-for-large-language-model-applications"
+title: OWASP Top 10 for LLM Applications 2025
+url: https://owasp.org/www-project-top-10-for-large-language-model-applications
 author: OWASP
 site: owasp.org
 topic:

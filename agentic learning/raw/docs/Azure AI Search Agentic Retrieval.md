@@ -1,8 +1,8 @@
 ---
 type: source
 source_type: docs
-title: "Agentic retrieval in Azure AI Search"
-url: "https://learn.microsoft.com/en-us/azure/search/agentic-retrieval-overview"
+title: Agentic retrieval in Azure AI Search
+url: https://learn.microsoft.com/en-us/azure/search/agentic-retrieval-overview
 author: Microsoft
 site: learn.microsoft.com
 topic:

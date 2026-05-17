@@ -6,8 +6,8 @@ topic:
   - workflow
 status: active
 created: 2026-05-05
-updated: 2026-05-16
-source: "/Users/idah/Downloads/llm-wiki.md"
+updated: 2026-05-17
+source: /Users/idah/Downloads/llm-wiki.md
 related:
   - "[[Agent 知识地图]]"
   - "[[04 页面目录]]"
@@ -15,6 +15,7 @@ related:
   - "[[06 Wiki 健康检查]]"
   - "[[08 面试题概念卡待补充]]"
   - "[[08 面试题概念链接待办]]"
+  - "[[09 概念层级审计基线]]"
   - "[[字段规范]]"
   - "[[资料收集索引]]"
 ---
@@ -148,6 +149,8 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 ```bash
 python3 scripts/interview_question_concept_links.py --self-test
 python3 scripts/interview_question_concept_links.py --dry-run
+python3 scripts/concept_taxonomy/validate.py
+python3 scripts/concept_taxonomy/validate_taxonomy_baseline_map.py
 ```
 
 ## 新概念反向提及扫描 / New Concept Mention Backlink Sweep
@@ -198,7 +201,7 @@ python3 scripts/interview_question_concept_links.py --dry-run
 
 ### 触发条件
 
-- 从 `.omx/reports/concept-card-relation-map/`、审计脚本或其它批量工具生成候选关系。
+- 从 `scripts/concept_taxonomy/`、`reports/concept-card-relation-map/`、审计脚本或其它批量工具生成候选关系。
 - 准备给多张 `wiki/concepts/*.md` 新增或修改 `up`。
 - 准备把普通 `related`、正文 wikilink、topic family 或标题启发式升格为层级关系。
 
@@ -208,11 +211,15 @@ python3 scripts/interview_question_concept_links.py --dry-run
 2. **候选关系台账**：每条 candidate 必须有明确 decision：`accept_taxonomy`、`reject_taxonomy`、`defer_taxonomy`、`adjacency_only` 或 `duplicate_signal`。
 3. **dry-run 写回**：只把 `accept_taxonomy` 且目标字段为 `up` 的边放入 dry-run；dry-run 不改概念卡。
 4. **剩余 accepted 复核**：每轮 apply 前，必须复核 dry-run 中剩余 accepted rows；若发现“标准/运行时/能力/机制支撑某父概念但不是其子类”，要降级为 `reject_taxonomy` 或 `defer_taxonomy`，不能因为上一轮已 accepted 就继续写入。
-5. **小批量 apply**：写回必须带 limit，例如 `writeback.py --apply --limit 12`；禁止无界全量 apply。
+5. **小批量 apply**：写回必须带 limit，例如 `writeback.py --apply --limit 12`；禁止无界全量 apply。若使用逐卡层级归属台账，则必须走 `taxonomy_placement_review.py --apply-reviewed --limit N`，且输入只能来自已判定、已 dry-run 的 ready set。
 6. **非层级边界守卫**：对“表示/特征 → 方法族 → 召回路线 → 编排策略”这类高混淆链条，台账和验证必须显式阻止写入 `up`。
 7. **插件兼容验证**：验证只新增子卡顶层 `up`；不手写 `down`、不常规化 `children`、不新增 Juggl 或 Breadcrumbs 非 taxonomy 镜像字段。
-8. **尾巴闭环**：`defer_taxonomy` / `needs_review` 是开放尾巴，必须回到概念卡证据或 backlog 后再终止；`reject_taxonomy` / `adjacency_only` 若有明确理由、`resolution_status=terminal_non_writeback` 且不写 `up`，就是已闭环终态，不应再算待办。
-9. **日志与控制面同步**：若规则或脚本行为改变，更新本页、字段规范/计划文档和 `log.md`。
+8. **重建与验证门禁**：每次有限写回后必须重新生成临时图、台账、dry-run 和插件验证报告；插件契约报告必须证明 post-apply dry-run 为 0、apply report 中的历史写回边仍真实存在于子卡 `up`，且没有 `down` / `children` / Juggl / Breadcrumbs mirror 字段。
+9. **尾巴闭环**：`defer_taxonomy` / `needs_review` 是开放尾巴，必须回到概念卡证据或 backlog 后再终止；`reject_taxonomy` / `adjacency_only` 若有明确理由、`resolution_status=terminal_non_writeback` 且不写 `up`，就是已闭环终态，不应再算待办。
+10. **审计完成闭环**：可以把剩余 `defer_boundary_review` 关闭为 `review_status: deferred_with_backlog`，前提是每条都有明确 backlog home、suppressed-target 理由和 reopen trigger；这不是写 `up` 的许可。
+11. **日志与控制面同步**：若规则或脚本行为改变，更新本页、字段规范/计划文档和 `log.md`；控制面/完成闭环报告要明确哪些表面已更新、哪些因字段语义未变而故意不改，并记录 `open_writeback: 0` 时不允许直接写回。
+12. **稳定基线镜像**：审计闭环后，应把逐卡审计摘要导出到 [[09 概念层级审计基线]]；未来新增概念卡先对照这张基线判断是否进入已审计父类、terminal no-up、或 deferred-with-backlog。
+13. **项目内工具入口**：概念关系治理的长期工具入口是 `scripts/concept_taxonomy/`，机器基线保存在 `reports/concept-card-relation-map/`。新增概念卡或复跑审计时，优先运行项目脚本；字段规范与模板不改，除非 `up` / `relations` 语义或页面形状发生变化。
 
 ### 判定边界
 
@@ -233,6 +240,10 @@ python3 scripts/interview_question_concept_links.py --dry-run
 - apply report 能列出每张被修改的概念卡、目标父概念和理由。
 - 重新生成临时图后，新增 taxonomy 边数量与 apply report 对得上。
 - 当一批 accepted edges 已全部写回后，post-apply dry-run 可以是 0 planned；前提是 ledger 的 `writeback_candidates` 同步为 0，且 apply report 中的历史写回边仍真实存在于子卡 `up`。
+- 对“层级归属待审计概念卡”流程，limited apply 后必须重新生成临时图和 `concept-hierarchy-placement-review`；`concept-hierarchy-placement-apply-report` 要记录输入 dry-run、selected/applied 数、post-apply dry-run，并证明 rejected rows 未进入 planned/applied。
+- 插件契约验证报告必须由 `python3 scripts/concept_taxonomy/plugin_contract_verification.py` 生成并保持 0 problems；若 `.obsidian/` 不在仓库中，验证的是 durable contract，不是 live plugin setting。
+- 控制面同步报告必须记录项目脚本、项目报告、健康检查、基线页和日志状态；若 `字段规范.md` / 模板未改，应说明原因是字段语义和页面形状未变化。
+- 完成闭环报告必须证明 `open_review: 0`、`open_writeback: 0`、`dry_run_planned: 0`，且剩余 `defer_boundary_review` 全部为 `deferred_with_backlog`；不得为了让 `defer_boundary_review` 归零而强行写父类。
 - 最终闭环状态下，`open_review_items` 必须为 0；若 `reject_taxonomy` / `adjacency_only` 仍有数量，它们必须带有终态理由和 `terminal_non_writeback` 状态，而不是未完成尾巴。
 - Abstract Folder / Breadcrumbs 兼容检查 0 problems。
 - `git diff --check` 通过；若存在本任务外的历史 diff，最终报告必须说明边界，不得误称全部由本次写回产生。

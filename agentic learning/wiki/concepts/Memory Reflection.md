@@ -6,7 +6,9 @@ topic:
   - frontier
 status: growing
 created: 2026-05-06
-updated: 2026-05-12
+updated: 2026-05-17
+up:
+  - "[[Memory]]"
 last_checked: 2026-05-10
 freshness: watch
 conflicts: []

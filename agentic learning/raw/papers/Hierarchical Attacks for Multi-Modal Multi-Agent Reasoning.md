@@ -1,12 +1,12 @@
 ---
 type: source
 source_type: paper
-title: "Hierarchical Attacks for Multi-Modal Multi-Agent Reasoning"
-url: "https://arxiv.org/abs/2605.13213"
-pdf: "assets/Hierarchical Attacks for Multi-Modal Multi-Agent Reasoning.pdf"
-extracted: "extracted/Hierarchical Attacks for Multi-Modal Multi-Agent Reasoning.extracted.md"
-arxiv: "https://arxiv.org/abs/2605.13213"
-doi: "10.48550/arXiv.2605.13213"
+title: Hierarchical Attacks for Multi-Modal Multi-Agent Reasoning
+url: https://arxiv.org/abs/2605.13213
+pdf: assets/Hierarchical Attacks for Multi-Modal Multi-Agent Reasoning.pdf
+extracted: extracted/Hierarchical Attacks for Multi-Modal Multi-Agent Reasoning.extracted.md
+arxiv: https://arxiv.org/abs/2605.13213
+doi: 10.48550/arXiv.2605.13213
 author:
   - Hao Zhou
   - Tiru Wu
@@ -15,7 +15,7 @@ author:
   - Junxing Hu
   - Ai Han
 site: arXiv
-venue: "arXiv 2026"
+venue: arXiv 2026
 pages:
 topic:
   - agent
@@ -30,7 +30,7 @@ last_checked: 2026-05-14
 freshness: watch
 conflicts: []
 status: seed
-source: "https://arxiv.org/abs/2605.13213"
+source: https://arxiv.org/abs/2605.13213
 related:
   - "[[Multi-agent Orchestration]]"
   - "[[Tool Poisoning]]"
