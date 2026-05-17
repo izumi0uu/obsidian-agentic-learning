@@ -1,13 +1,13 @@
 # Concept card relation map reports
 
-这个目录保存项目内机器可读的概念关系审计基线，供不依赖外部会话状态的后续维护使用。
+这个目录保存项目内机器可读的概念关系审计基线，作为后续维护的长期事实来源。
 
 ## 角色分工
 
 - `scripts/concept_taxonomy/`：生成、判定、写回 dry-run、验证这些报告的程序。
 - `reports/concept-card-relation-map/`：机器可读 JSON / Markdown 报告和最近一次审计基线。
 - `agentic learning/maps/09 概念层级审计基线.md`：人类可读镜像。
-- 旧运行报告目录：兼容副本；不是长期唯一来源。
+- 备用报告目录：可通过 `CONCEPT_TAXONOMY_OUT_DIR` 指定，只用于一次性复核；不是长期唯一事实来源。
 
 ## Baseline 文件
 

@@ -34,7 +34,7 @@ REQUIRED_SURFACES = {
 
 INTENTIONALLY_NOT_CHANGED = {
     "agentic learning/maps/字段规范.md": "Tooling and baseline evidence moved into project-owned paths; no `up` / `relations` field semantics changed.",
-    "agentic learning/templates/": "No reusable page shape or concept-card template contract changed.",
+    "agentic learning/templates/概念卡.md": "No concept-card page shape or `up` / `relations` writeback contract changed.",
     "AGENTS.md": "Project hard rules already cover systemic script-driven changes; workflow-specific commands live in LLM Wiki 工作流 and scripts README.",
 }
 
@@ -111,13 +111,13 @@ def main() -> None:
         boundary = [
             "Project tooling verification checks project-owned control surfaces after the audit baseline is closed; it does not adjudicate or write new concept-card relationships.",
             "Remaining defer_boundary_review rows are closed only when review_status=deferred_with_backlog and a backlog home is recorded.",
-            "Field spec and templates stay unchanged because The tooling migration moved tooling/evidence locations without changing field or page-shape semantics.",
+            "Field spec and concept-card template stay unchanged because the tooling migration moved tooling/evidence locations without changing `up` / `relations` field semantics or concept-card page shape.",
         ]
     else:
         boundary = [
             "Project tooling verification syncs project-owned control surfaces; it does not adjudicate the remaining taxonomy open_review rows.",
             "Remaining defer_boundary_review rows require a future candidate/adjudication/dry-run/limited-apply cycle.",
-            "Field spec and templates stay unchanged because The tooling migration introduced no schema or page-shape semantics.",
+            "Field spec and concept-card template stay unchanged because the tooling migration introduced no schema or concept-card page-shape semantics.",
         ]
 
     payload: dict[str, Any] = {

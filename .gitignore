@@ -65,6 +65,8 @@ agentic learning/assets/
 secrets/
 
 # Temporary and generated files
+__pycache__/
+*.py[cod]
 *.log
 *.tmp
 *.bak
@@ -75,11 +77,4 @@ dist/
 build/
 coverage/
 
-# One-off local crawls / mirrored sites
-scripts/*
-!scripts/README.md
-!scripts/interview_question_concept_aliases.json
-!scripts/interview_question_concept_links.py
-!scripts/concept_taxonomy/
-!scripts/concept_taxonomy/**
 agentic learning/raw/articles/xiaolinnote/

@@ -1133,3 +1133,18 @@ related:
 - Source: [[Under the Hood of SKILL.md - Semantic Supply-chain Attacks on AI Agent Skill Registry]]
 - Boundary: `SKILL.md` / skill metadata is treated as operational text that can affect discovery, selection, trust, and loading; Agent reflection can help detect obvious mismatch but does not replace registry review, least privilege, trace, evaluation, or human approval.
 - Terminology: no weak Agent Skill concept card was created and `scripts/interview_question_concept_aliases.json` was not changed; the term remains a source-backed boundary under [[Tool Poisoning]] / [[Tool Registry]] until more stable evidence is consolidated.
+
+## [2026-05-17] maintenance | 概念层级审计项目化完成
+
+- 将概念关系与层级审计的长期入口固化为 `scripts/concept_taxonomy/`，机器基线固化为 `reports/concept-card-relation-map/`，vault 内可读镜像为 [[09 概念层级审计基线]]。
+- 补齐项目脚本入口说明：`scripts/README.md` 记录概念关系审计命令、面试题概念链接报告默认路径和候选 backlog 模板；`reports/concept-card-relation-map/README.md` 只把项目内报告目录作为长期事实来源。
+- 新增 [[templates/面试题概念卡待补充]]，用于生成候选 backlog 页面形状；模板只记录待判定候选，不授权新建弱概念卡，也不改写 raw/source 正文。
+- 同步 [[04 页面目录]] 与 [[06 Wiki 健康检查]]：把概念层级审计基线、项目脚本入口、报告目录、面试题链接报告和候选模板纳入长期维护视图。
+- Boundary: 本轮不改 `up` / `relations` 字段语义，不改概念卡页面形状，不新增任何概念卡层级关系，不新增 `down` / `children` / Juggl 字段；本地工具状态目录仍只作为执行记录，不作为知识事实来源。
+
+## [2026-05-17] maintenance | 请求元信息泄漏审计项目化
+
+- 新增 `scripts/request_meta_audit.py`，作为聊天包装、运行态片段、请求路由话术和 intake provenance 脚手架的 durable vault 审计入口。
+- 同步项目规则：`AGENTS.md`、[[LLM Wiki 工作流]]、[[06 Wiki 健康检查]] 和 `scripts/README.md` 都把 request meta audit 纳入 weekly / systemic maintenance。
+- 验证：`python3 -m py_compile scripts/request_meta_audit.py` PASS；`python3 scripts/request_meta_audit.py --format markdown` 扫描 1113 个 Markdown 文件，PASS，命中 0。
+- Boundary: 脚本只读检查 `wiki/`、`raw/`、`maps/`、`reviews/` 与 `log.md`；误报先收窄规则或写明边界，不把真实技术短语当作泄漏删除。

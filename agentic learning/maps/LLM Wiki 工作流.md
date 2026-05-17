@@ -87,6 +87,8 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 
 验收规则：`wiki/`、`raw/` 的 synthesis 段落、`maps/05 Query 写回队列.md` 的问题栏，都不应出现用户侧收录决策关键词；历史 log 可以记录操作，但也应优先写成中性边界语言。
 
+项目脚本：`python3 scripts/request_meta_audit.py --format markdown` 是请求 / 会话元信息隔离的固定审计入口。它扫描 `wiki/`、`raw/`、`maps/`、`reviews/` 和 `log.md`，用于发现聊天包装、hook 文本、goal reconciliation 片段和请求路由话术是否被误写入 durable vault 页面。误报要先收窄规则或加明确边界，不要为了通过审计删除真实技术概念内容。
+
 ## 中英文术语对齐 / Bilingual Terminology Audit
 
 当任务涉及新增概念卡、更新概念卡、给面试题/raw 正文加概念链接、维护 alias map、或整理一批中文面试题术语时，必须先做中英文术语对齐。目标不是把所有中文词都建卡，也不是把规则写成词表；目标是避免“中文词被错误映射到相邻英文概念”，并把可复用的边界沉淀到合适的知识层。
@@ -459,10 +461,11 @@ python3 scripts/comparison_topic_audit.py --format markdown
 python3 scripts/paper_source_audit.py
 python3 scripts/interview_question_concept_links.py --self-test
 python3 scripts/interview_question_concept_links.py --dry-run
+python3 scripts/request_meta_audit.py --format markdown
 git diff --check
 ```
 
-写回规则：每次 weekly / systemic maintenance 都要把最新统计写回 [[06 Wiki 健康检查]] 的“当前状态”或新增 dated 小节，包括概念卡 needs-action、对比 topic needs-action、paper source audit、面试题链接 dry-run 和 `git diff --check` 结果。旧数字保留为历史记录，但不得继续放在“当前状态”里冒充现状。
+写回规则：每次 weekly / systemic maintenance 都要把最新统计写回 [[06 Wiki 健康检查]] 的“当前状态”或新增 dated 小节，包括概念卡 needs-action、对比 topic needs-action、paper source audit、面试题链接 dry-run、请求元信息审计和 `git diff --check` 结果。旧数字保留为历史记录，但不得继续放在“当前状态”里冒充现状。
 
 ## 操作 5：Freshness / Contradiction Check
 

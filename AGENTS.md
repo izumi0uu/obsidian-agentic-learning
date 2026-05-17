@@ -153,6 +153,7 @@ Request-meta boundary:
 - Do not write intake-decision wording into durable concept cards, topic pages, or source-note synthesis. Convert it into neutral knowledge language such as "学习价值", "应沉淀为某类边界", "证据支持的概念", or omit it.
 - Hard rule: any paragraph whose main job is to say who supplied it, which batch it came from, where to index it, or which frontier judgment to follow must be deleted from source-note/topic/concept正文 instead of rewritten in place; keep only neutral evidence, learning value, or write-back metadata.
 - If the user's side context matters only for the current request, keep it in the reply or log at most; do not promote it into `wiki/` unless it is itself the subject being documented.
+- For weekly or systemic maintenance, run `python3 scripts/request_meta_audit.py --format markdown` to catch leaked chat wrappers, hook text, or request-routing wording in durable vault pages.
 
 Map boundary:
 
@@ -206,6 +207,7 @@ python3 scripts/interview_question_concept_links.py --self-test
 python3 scripts/interview_question_concept_links.py --dry-run
 python3 scripts/concept_taxonomy/validate.py
 python3 scripts/concept_taxonomy/validate_taxonomy_baseline_map.py
+python3 scripts/request_meta_audit.py --format markdown
 git diff --check
 ```
 

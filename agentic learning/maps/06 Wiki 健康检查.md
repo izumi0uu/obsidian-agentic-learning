@@ -28,12 +28,25 @@ related:
 - Comparison topic pages: 23；`scripts/comparison_topic_audit.py --format markdown` 显示 Needs action = 0。
 - Raw markdown pages: 930；其中 frontmatter `type: source` 881。主源清单仍看 [[资料收集索引]]。
 - Paper source audit: `scripts/paper_source_audit.py` 检查 `raw/papers/` 45 个文件，PASS。
-- Interview concept link audit: `scripts/interview_question_concept_links.py --self-test` PASS；`--dry-run` 扫描 779 个题页，would modify 0，missing concept candidates 0，protected region violations 0。
+- Interview concept link audit: `scripts/interview_question_concept_links.py --self-test` PASS；`--dry-run` 扫描 779 个题页，would modify 0，missing concept candidates 0，protected region violations 0；默认报告写入 `reports/interview-question-concept-card-links-report.*`，候选 backlog 页面形状由 [[templates/面试题概念卡待补充]] 提供。
+- Request meta audit: `scripts/request_meta_audit.py --format markdown` 扫描 1113 个 durable vault Markdown 文件，PASS；聊天包装、运行态片段和请求路由话术命中 0。
 - Query write-back pending: 2（概念对比候选队列中 P3 两项已在 [[05 Query 写回队列#2026-05-17 剩余候选分流]] 分流：1 项证据补齐后再评估，1 项查新后再写；当前均不强行成页）。
 - 概念层级归属审计：130 张概念卡已纳入审计；37 条顶层 `up`；审计闭环通过；逐卡稳定镜像见 [[09 概念层级审计基线]]；机器基线保存在 `reports/concept-card-relation-map/`，长期复跑入口是 `scripts/concept_taxonomy/`；`open_review: 0`，`open_writeback: 0`，`dry_run_planned: 0`；20 张 `defer_boundary_review` 已全部标记为 `deferred_with_backlog`，不得为了清零强行补父类。
 - Current action queues: concept-card audit、comparison-topic audit 与概念层级归属审计的本轮 open tail 均已清空；20 张 deferred-with-backlog 卡是未来可重开的边界队列，不是当前可直接写 `up` 的任务。
 
 边界：本节是“当前状态”，会覆盖上方读者对最新健康状态的理解；旧的 2026-05-10 / 2026-05-11 数字和“27+6”队列保留下方历史小节，不能再被当成现状。本次 27+6 全量修复是用户明确授权的一次性系统性批量维护；以后仍不要在未确认时批量重写旧卡。Needs action = 0 只表示固定审计脚本当前通过，不表示所有概念卡已经达到百科式深度。
+
+## 2026-05-17 请求元信息泄漏审计项目化入口
+
+本节记录“不要把当前对话、IDE 上下文、hook 片段和执行请求写进知识正文”的项目脚本入口。
+
+| Surface | Role | Boundary |
+|---|---|---|
+| `scripts/request_meta_audit.py` | 项目级可复跑审计脚本 | 只扫描 durable vault Markdown；误报先收窄规则，不删除真实概念内容 |
+| [[LLM Wiki 工作流#用户请求元信息隔离]] | 工作流规则 | 定义哪些请求侧话术应被中性化 |
+| `AGENTS.md` | 项目级规则 | 把 request meta audit 纳入 weekly / systemic maintenance bundle |
+
+当前验收点：weekly maintenance 和系统性维护都应运行 `python3 scripts/request_meta_audit.py --format markdown`；若发现命中，先判断是泄漏、历史日志摘要、还是真实技术短语，再选择中性化正文、收窄规则或记录边界。
 
 ## 2026-05-17 概念层级审计项目化入口
 
@@ -87,7 +100,10 @@ related:
   - `python3 scripts/interview_question_concept_links.py --self-test`
   - `python3 scripts/interview_question_concept_links.py --dry-run`
   - `python3 scripts/concept_taxonomy/validate.py`
+  - `python3 scripts/concept_taxonomy/plugin_contract_verification.py`
+  - `python3 scripts/concept_taxonomy/control_surface_sync.py`
   - `python3 scripts/concept_taxonomy/validate_taxonomy_baseline_map.py`
+  - `python3 scripts/request_meta_audit.py --format markdown`
   - `git diff --check`
 - [ ] 检查概念卡是否有“它不是什么”。
 - [ ] 检查概念卡是否有 `## 边界细节`。

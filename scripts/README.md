@@ -103,7 +103,8 @@ python3 scripts/interview_question_concept_links.py --dry-run
 
 - 检查 `scripts/interview_question_concept_aliases.json` 的 alias / canonical mapping 是否能安全匹配。
 - 扫描面试题页的 `## 相关知识 wiki` 区域，避免改写 raw/source 原文。
-- dry-run 输出 would modify、missing concept candidates 和 protected region violations。
+- dry-run 默认输出到 `reports/interview-question-concept-card-links-report.json` 和 `reports/interview-question-concept-card-links-report.md`，记录 would modify、missing concept candidates 和 protected region violations。
+- 新建候选 backlog 时使用 `agentic learning/templates/面试题概念卡待补充.md`；模板只定义候选台账形状，不代表候选已可成卡。
 
 结果写回：
 
@@ -134,6 +135,26 @@ python3 scripts/concept_taxonomy/validate_taxonomy_baseline_map.py
 
 边界：默认验证命令不会新增概念卡关系；`concepts_without_up` 允许大于 0，只要审计台账证明它们是 root/terminal/deferred-with-backlog。
 
+## 请求 / 会话元信息审计
+
+```bash
+cd /Users/idah/Projects-combined/obsidian-agentic-learning
+python3 scripts/request_meta_audit.py --format markdown
+python3 scripts/request_meta_audit.py --format json --output reports/request-meta-audit.json
+```
+
+脚本行为：
+
+- 只读扫描 durable vault Markdown：`agentic learning/wiki/`、`raw/`、`maps/`、`reviews/` 和 `log.md`。
+- 检查聊天包装、IDE 上下文标题、hook / goal reconciliation 片段、请求路由话术和 intake provenance 脚手架是否进入知识正文。
+- 默认输出 JSON；`--format markdown` 适合写回 [[06 Wiki 健康检查]]。
+- 误报要先收窄规则或记录边界；不要为了通过审计删除真实技术概念内容。
+
+结果写回：
+
+- weekly / systemic maintenance 后，把扫描文件数、PASS/FAIL 和主要命中写入 [[06 Wiki 健康检查]]。
+- 真正泄漏的内容应中性化为知识边界、证据锚点或操作日志摘要；不能保留聊天包装和本轮执行话术。
+
 ## Weekly maintenance audit bundle
 
 ```bash
@@ -146,6 +167,7 @@ python3 scripts/concept_taxonomy/validate.py
 python3 scripts/concept_taxonomy/plugin_contract_verification.py
 python3 scripts/concept_taxonomy/control_surface_sync.py
 python3 scripts/concept_taxonomy/validate_taxonomy_baseline_map.py
+python3 scripts/request_meta_audit.py --format markdown
 git diff --check
 ```
 

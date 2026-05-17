@@ -1,0 +1,126 @@
+# 面试题概念卡内联链接审计报告
+
+- 模式：`dry-run`
+- 扫描题页：779
+- 含 `## 相关知识 wiki`：779
+- 已有正文概念链接页：362
+- 本次可新增/已新增链接：0
+- would modify pages：0
+- skipped/no-match pages：417
+- unsafe-region skips：3806
+- missing concept candidates：0（unique 0）
+- protected-region violations：0
+
+## Per-root breakdown
+
+| root | total | related | already-linked pages | would-modify pages | proposed links | skipped/no-match |
+|---|---:|---:|---:|---:|---:|---:|
+| xiaolinnote | 142 | 142 | 81 | 0 | 0 | 61 |
+| agent_java_offer | 637 | 637 | 281 | 0 | 0 | 356 |
+
+## Sample files selected
+
+- agentic learning/raw/repos/xiaolinnote/questions/010 ai agent 3. Workflow，Agent，Tools 这三个的概念和区别介绍一下？.md
+- agentic learning/raw/repos/xiaolinnote/questions/045 ai tools 10. MCP 和 Agent Skill 的区别是什么？.md
+- agentic learning/raw/repos/xiaolinnote/questions/052 ai tools 1. 什么是 Function Calling ？原理是什么？.md
+- agentic learning/raw/repos/xiaolinnote/questions/078 home 首页.md
+- agentic learning/raw/repos/agent_java_offer/questions/106 01_AI 03_RAG 4 向量检索.md
+- agentic learning/raw/repos/agent_java_offer/questions/228 01_AI 08_框架协议与工程化 追问：LCEL 和手写 if else 调用代码相比，工程收益在哪？.md
+- agentic learning/raw/repos/agent_java_offer/questions/301 02_后端 04_并发与异步任务 `CompletableFuture` 常见坑？.md
+- agentic learning/raw/repos/agent_java_offer/questions/407 02_后端 10_网络I_O与发布治理 Netty 如何体现 Reactor 模型？.md
+- agentic learning/raw/repos/xiaolinnote/questions/001 ai agent 10. 什么是 Multi-Agent？.md
+- agentic learning/raw/repos/xiaolinnote/questions/002 ai agent 11. 说说 Single-Agent 和 Multi-Agent 的设计方案？.md
+- agentic learning/raw/repos/xiaolinnote/questions/003 ai agent 12. Agent 记忆压缩通常有哪些方法？.md
+- agentic learning/raw/repos/xiaolinnote/questions/004 ai agent 13. 在工程实践中，为什么有时候选择「手搓」Agent，而不是直接用成熟框架？.md
+
+## Missing targets
+
+- None: all related targets resolved to an existing vault Markdown page.
+
+## No-match pages（前 80 条）
+
+- agentic learning/raw/repos/xiaolinnote/questions/019 ai langchian LangChain框架面试题介绍.md — no safe alias match
+- agentic learning/raw/repos/xiaolinnote/questions/020 ai langchian 05｜ LangChain框架面试题.md — no safe alias match
+- agentic learning/raw/repos/xiaolinnote/questions/030 ai rag 17. 如何规避 RAG 系统中大模型的幻觉？.md — no safe alias match
+- agentic learning/raw/repos/xiaolinnote/questions/049 ai tools 14. 说说 WebSocket 和 SSE 通信的区别及局限性？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/050 ai tools 15. 为什么要用 WebRTC 协议？它和 WebSocket（WS）在 AI 对话流中的核心差异是什么？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/064 git 01｜为什么要学 Git？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/065 git 02｜准备工作：5 分钟搞定 Git 安装与配置.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/066 git 03｜从 0 创建仓库：把本地文件夹变成 Git 管理的项目.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/067 git 04｜保存文件变动：提交代码的 2 步核心流程.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/068 git 05｜查看历史记录：找到过去的版本.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/069 git 06｜撤销操作：改乱了怎么恢复.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/070 git 07｜远程仓库基础：连接 GitHub GitLab.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/071 git 08｜拉取与推送：和远程仓库同步.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/072 git 09｜分支操作：不影响主代码的 "平行世界".md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/073 git 10｜解决冲突：多人协作的必备技能.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/074 git 11｜常用命令速查：小白必备清单.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/075 git 12｜可视化工具推荐：不想记命令也能操作.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/076 git 附录：Git 进阶技巧与常见问题.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/077 git Git 命令快速入门教程.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/079 linux 第1章 走进命令行.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/080 linux 第2章 路径与文件系统导航.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/081 linux 第3章 文件与目录的日常操作.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/082 linux 第4章 权限、所有权与用户基础.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/083 linux 第5章 文本快速查看与轻量编辑.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/084 linux 第6章 管道与命令组合.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/085 linux 第7章 文本处理三剑客.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/086 linux 第8章 进程管理与作业控制.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/087 linux 第9章 系统监控与资源排查.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/088 linux 第10章 网络工具与远程协作.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/089 linux 附录A0：Shell脚本简单入门.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/090 linux 附录A1：常用命令速查表.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/091 linux 附录A2：正则表达式与通配符速查.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/092 linux 附录A3：新手常见坑与安全小贴士.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/093 linux 附录A4：练习清单 - 10个真实场景迷你任务.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/094 linux Linux 命令快速入门.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/095 sql sql_part1 01｜入门：数据库与 SQL 到底是什么？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/096 sql sql_part1 02｜查询：SELECT 要怎么写？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/097 sql sql_part1 03｜筛选：WHERE 要怎么写？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/098 sql sql_part1 04｜排序与分页：结果怎么排序与分页？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/099 sql sql_part1 05｜插入：数据该怎么写进表？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/100 sql sql_part1 06｜修改与删除：如何更新或删除数据？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/101 sql sql_part1 第一部分：SQL基础入门.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/102 sql sql_part2 07｜连接：多表该如何 JOIN 在一起？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/103 sql sql_part2 08｜聚合与分组：统计与分组该怎么做？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/104 sql sql_part2 09｜子查询：什么时候该用子查询？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/105 sql sql_part2 10｜事务：如何保证一组操作要么都成功？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/106 sql sql_part2 11｜函数：有哪些常用的SQL函数？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/107 sql sql_part2 第二部分：SQL进阶.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/108 sql sql_part3 12｜表结构：表该如何创建、修改与删除？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/109 sql sql_part3 13｜范式设计：数据库的范化有那些？？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/110 sql sql_part3 14｜索引：如何创建索引？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/111 sql sql_part3 第三部分：表结构与设计.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/112 sql sql_part4 15｜实战：商城订单应用.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/113 sql sql_part4 16｜实战：综合练习与常见陷阱.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/114 sql sql_part4 第四部分：实战应用.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/115 sql sql_part5 加餐1｜EXPLAIN：只看哪5个字段就够了？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/116 sql sql_part5 加餐2｜视图：何时该把查询做成视图？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/117 sql sql_part5 加餐3｜窗口函数：组内计算该怎么写？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/118 sql sql_part5 加餐4｜权限：用户与角色该如何授予与回收？.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/119 sql sql_part5 加餐：扩展学习.md — no body concept links found
+- agentic learning/raw/repos/xiaolinnote/questions/120 sql SQL 快速入门教程.md — no body concept links found
+- agentic learning/raw/repos/agent_java_offer/questions/005 01_AI 01_Agent基础 具身场景为什么更强调实时性与安全兜底？.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/012 01_AI 01_Agent基础 如何避免“想太多、做太少”？.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/025 01_AI 02_Workflow与多Agent 如何定义“该降级”的阈值？.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/041 01_AI 02_Workflow与多Agent 为什么复杂任务更依赖“编排能力”而非“单次模型能力”？.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/045 01_AI 02_Workflow与多Agent 网页自动化中如何处理动态页面、登录态和反爬限制？.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/048 01_AI 02_Workflow与多Agent 团队协作场景下如何做会话隔离与权限控制？.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/049 01_AI 02_Workflow与多Agent 群聊中的上下文污染如何治理？.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/050 01_AI 02_Workflow与多Agent 为什么协作平台接入后，审计与追踪要求会更高？.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/062 01_AI 03_RAG 切块大小与重叠长度怎么定？.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/064 01_AI 03_RAG 索引全量重建成本高时怎么办？.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/068 01_AI 03_RAG 如何选择合适的切块大小（Chunk Size）？.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/069 01_AI 03_RAG 如何选择合适的重叠长度（Overlap）？.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/075 01_AI 03_RAG 检索“慢和贵”怎么优化？.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/080 01_AI 03_RAG 和我正在处理的这个客户（A公司）在同一个行业、并且使用了我们产品B的成功案例有哪些？.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/081 01_AI 03_RAG 举例： “为什么将这个交易标记为高风险？” - “因为交易方A是B公司的子公司，而B公司在一个月前被列入了制裁名单。.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/091 01_AI 03_RAG 增量更新如何保证排序与质量不崩？.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/092 01_AI 03_RAG 没有索引快照时如何止损？.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/093 01_AI 03_RAG 如何做检索质量回归测试？.md — no safe alias match
+- agentic learning/raw/repos/agent_java_offer/questions/099 01_AI 03_RAG 知识库的实时更新： 如何高效地保持向量索引与源数据的同步？当源文档被修改或删除时，需要有可靠的机制来更新或废弃对应的向量，这涉及到复杂的ETL（Extract, Trans a58e85.md — no safe alias match
+- ... 其余 337 条见 JSON 报告。
+
+## Proposed/applied links（前 80 条）
+
+- None
