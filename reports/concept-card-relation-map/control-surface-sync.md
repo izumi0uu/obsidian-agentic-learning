@@ -1,11 +1,11 @@
 # Taxonomy Tooling Control-Surface Sync
 
-Generated: `2026-05-17T11:35:07Z`
+Generated: `2026-05-17T12:19:11Z`
 
 ## Summary
 
-- required_surfaces_total: `7`
-- required_surfaces_synced: `7`
+- required_surfaces_total: `8`
+- required_surfaces_synced: `8`
 - taxonomy_open_review_remaining: `0`
 - taxonomy_defer_boundary_review_remaining: `20`
 - taxonomy_open_writeback: `0`
@@ -17,6 +17,7 @@ Generated: `2026-05-17T11:35:07Z`
 
 ## Required surfaces
 
+- project_rules: `True` — `AGENTS.md`
 - script_readme: `True` — `scripts/concept_taxonomy/README.md`
 - report_readme: `True` — `reports/concept-card-relation-map/README.md`
 - script_index: `True` — `scripts/README.md`
@@ -29,7 +30,6 @@ Generated: `2026-05-17T11:35:07Z`
 
 - `agentic learning/maps/字段规范.md`: Tooling and baseline evidence moved into project-owned paths; no `up` / `relations` field semantics changed.
 - `agentic learning/templates/概念卡.md`: No concept-card page shape or `up` / `relations` writeback contract changed.
-- `AGENTS.md`: Project hard rules already cover systemic script-driven changes; workflow-specific commands live in LLM Wiki 工作流 and scripts README.
 
 ## Boundary
 

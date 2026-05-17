@@ -201,6 +201,8 @@ python3 scripts/interview_question_concept_links.py --dry-run
 
 当任务涉及全库概念关系评估、脚本生成候选边、或把 `up` / `relations` 写回多张概念卡时，必须把它当系统性变更处理。临时关系图只是证据雷达，不是最终 taxonomy。
 
+顶层门禁：项目规则已经把 [[09 概念层级审计基线]] 提升为概念关系写回前置基线。新增概念卡、重开 deferred 边界、或修改任何 `up` / `relations` 前，先读这张基线；机器侧以 `reports/concept-card-relation-map/` 为基线，以 `scripts/concept_taxonomy/` 为复跑入口。不能只凭当前回答、标题相似度、`related` 或正文链接直接写 `up`。
+
 ### 触发条件
 
 - 从 `scripts/concept_taxonomy/`、`reports/concept-card-relation-map/`、审计脚本或其它批量工具生成候选关系。

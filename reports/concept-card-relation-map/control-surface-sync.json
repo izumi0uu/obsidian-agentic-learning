@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "artifact_type": "taxonomy_tooling_control_surface_sync",
-  "generated_at": "2026-05-17T11:35:07Z",
+  "generated_at": "2026-05-17T12:19:11Z",
   "input_artifacts": {
     "plugin_contract_verification": "reports/concept-card-relation-map/plugin-contract-verification.json",
     "taxonomy_review": "reports/concept-card-relation-map/concept-hierarchy-placement-review.json",
     "plugin_validation": "reports/concept-card-relation-map/plugin-compat-validation.json"
   },
   "summary": {
-    "required_surfaces_total": 7,
-    "required_surfaces_synced": 7,
+    "required_surfaces_total": 8,
+    "required_surfaces_synced": 8,
     "taxonomy_open_review_remaining": 0,
     "taxonomy_defer_boundary_review_remaining": 20,
     "taxonomy_open_writeback": 0,
@@ -20,6 +20,19 @@
     "problems": 0
   },
   "required_surfaces": [
+    {
+      "surface": "project_rules",
+      "path": "AGENTS.md",
+      "checks": {
+        "mentions_project-owned_tooling": true,
+        "mentions_project_reports": true,
+        "mentions_no_direct_writeback": true,
+        "mentions_baseline_gate": true,
+        "mentions_validation_commands": true,
+        "mentions_limited_apply": true
+      },
+      "synced": true
+    },
     {
       "surface": "script_readme",
       "path": "scripts/concept_taxonomy/README.md",
@@ -102,8 +115,7 @@
   ],
   "intentionally_not_changed": {
     "agentic learning/maps/字段规范.md": "Tooling and baseline evidence moved into project-owned paths; no `up` / `relations` field semantics changed.",
-    "agentic learning/templates/概念卡.md": "No concept-card page shape or `up` / `relations` writeback contract changed.",
-    "AGENTS.md": "Project hard rules already cover systemic script-driven changes; workflow-specific commands live in LLM Wiki 工作流 and scripts README."
+    "agentic learning/templates/概念卡.md": "No concept-card page shape or `up` / `relations` writeback contract changed."
   },
   "boundary": [
     "Project tooling verification checks project-owned control surfaces after the audit baseline is closed; it does not adjudicate or write new concept-card relationships.",

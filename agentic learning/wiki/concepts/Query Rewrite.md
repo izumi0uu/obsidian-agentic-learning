@@ -5,7 +5,7 @@ topic:
   - retrieval
 status: growing
 created: 2026-05-12
-updated: 2026-05-16
+updated: 2026-05-17
 last_checked: 2026-05-12
 freshness: watch
 source:
@@ -50,6 +50,8 @@ Query Rewrite 是把用户原始问题改写成更适合检索系统的查询表
 
 证据边界：[[Retriever]] 卡已经把 query rewrite 放在现代 retriever 的组成部分；[[Azure AI Search Agentic Retrieval]] 支持复杂检索中 query planning、多查询和 knowledge source 的现代方向；xiaolinnote source note 支持 HyDE、Step-back 和多 Query 作为 query rewrite 子策略。本卡只沉淀 rewrite 这个最小动作，不把它等同于完整 agentic retrieval。
 
+中文资料里的“查询增强策略”“查询优化”常是更宽的 query-side strategy family：它可以包含直接改写、关键词扩展、HyDE、Step-back、[[Multi-Query Retrieval|MQE / 多查询扩展]]，有时还会延伸到 [[Query Planning]]。因此它适合写成策略群边界，不适合放进 `aliases` 当作 Query Rewrite 的同义词。Query Rewrite 是其中一个核心检索前控制点；HyDE 和 Multi-Query Retrieval 是更具体的子策略。
+
 ## 它解决什么问题
 
 它解决“用户语言和索引语言不匹配”的问题：用户说法含糊、缺实体、用了代词、用了业务昵称或跨语言表达时，直接检索可能漏掉关键文档。
@@ -82,6 +84,8 @@ rewrite：LangGraph human-in-the-loop approval interrupt checkpoint
 和 [[Reranking]] 的边界：rewrite 影响候选集合，reranking 只重排已有候选。
 
 和 [[Agentic Retrieval]] 的边界：agentic retrieval 可能包含 rewrite，但还包括 query planning、多源检索、并行子查询和 grounding data 合并。
+
+和“查询增强策略”的边界：查询增强策略是工程口径里的策略群，回答“从 query 侧怎样提高召回和对齐”；Query Rewrite 只回答“怎样改写或扩展检索表达”。当一个方法开始拆子问题、选择知识源或根据中间结果重查时，它已经靠近 [[Query Planning]] / [[Agentic Retrieval]]，不应因为同样发生在检索前就全部塞进 Query Rewrite。
 
 ## 现代性状态
 

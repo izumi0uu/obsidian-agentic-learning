@@ -1,6 +1,6 @@
 # Temporary Concept Relationship Map
 
-Generated: `2026-05-17T09:59:03Z`
+Generated: `2026-05-17T12:19:10Z`
 
 > 临时文件：用于后续概念层级开发评估。不要把候选边自动写回概念卡；每条 candidate 都需要单独人工/LLM 复核。
 

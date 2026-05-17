@@ -83,7 +83,7 @@
   "Context Recall": ["Context Recall", "上下文召回率"],
   "Cross-Encoder": ["Cross-Encoder", "Cross-encoder", "cross-encoder", "交叉编码器"],
   "Dense Retrieval": ["Dense Retrieval", "dense retrieval", "向量检索", "密集检索", "vector retrieval", "dense vector retrieval"],
-  "Multi-Query Retrieval": ["Multi-Query Retrieval", "Multi-Query", "Multi Query Retrieval", "多 Query 扩展", "多 Query 扩展召回", "多查询检索", "多查询召回"],
+  "Multi-Query Retrieval": ["Multi-Query Retrieval", "Multi-Query", "Multi Query Retrieval", "Multi-Query Expansion", "Multi Query Expansion", "MQE", "多 Query 扩展", "多查询扩展", "多 Query 扩展召回", "多查询检索", "多查询召回"],
   "Parent-Child Chunking": ["Parent-Child Chunking", "Parent Child Chunking", "父子切割", "父子 Chunking", "Parent-Child 索引", "父子索引"],
   "Reciprocal Rank Fusion": ["Reciprocal Rank Fusion", "RRF", "RRF 算法", "倒数排名融合", "互倒排名融合"]
 }

@@ -65,6 +65,22 @@ Hard requirements:
 
 Boundary: this rule requires a backlink/mention sweep, not indiscriminate auto-linking. Links are learning/navigation commitments; ambiguous mentions are better recorded as backlog than silently linked to the wrong concept.
 
+## Top Hard Rule: Concept Taxonomy Baseline Gate
+
+When adding a concept card, materially updating a concept boundary, or changing `up` / `relations` / concept relationship semantics, the agent must use the project-owned concept taxonomy baseline before writing durable relationship fields.
+
+Hard requirements:
+
+1. Read `agentic learning/maps/09 概念层级审计基线.md` before deciding a concept's parent, terminal no-parent status, or deferred boundary.
+2. Treat `reports/concept-card-relation-map/` as the machine-readable baseline and `scripts/concept_taxonomy/` as the only project-owned relationship audit/writeback toolchain.
+3. Do not write `up` directly from the current conversation, title similarity, `related`, body wikilinks, topic grouping, or a temporary graph. `up` requires candidate generation, adjudication, dry-run, and limited apply evidence.
+4. Real relationship writes must be bounded and reproducible: use `writeback.py --dry-run` before apply, and use `--apply --limit N` or `taxonomy_placement_review.py --apply-reviewed --limit N` for any actual writeback.
+5. If a concept touches the deferred boundary queue in `agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列`, reopen that boundary explicitly; do not reuse the suppressed target as a default parent.
+6. After any relationship-affecting change, rerun the taxonomy validation path at minimum: `python3 scripts/concept_taxonomy/validate.py`, `python3 scripts/concept_taxonomy/plugin_contract_verification.py`, `python3 scripts/concept_taxonomy/control_surface_sync.py`, `python3 scripts/concept_taxonomy/validate_taxonomy_baseline_map.py`, and `git diff --check`.
+7. Update `agentic learning/log.md` and the affected maps/reports when the baseline, toolchain, or relationship rules change.
+
+Boundary: this gate does not force every concept to have a parent. A reviewed terminal no-parent or deferred-with-backlog state is valid; the failure is an unreviewed or silently drifted relationship.
+
 ## Core Principle
 
 The vault has three knowledge layers:
@@ -91,6 +107,7 @@ Always check these before doing wiki maintenance:
 - `agentic learning/maps/04 页面目录.md`
 - `agentic learning/maps/05 Query 写回队列.md`
 - `agentic learning/maps/06 Wiki 健康检查.md`
+- `agentic learning/maps/09 概念层级审计基线.md`
 - `agentic learning/maps/08 面试题概念卡待补充.md`
 - `agentic learning/maps/08 面试题概念链接待办.md`
 - `agentic learning/reviews/复习记录索引.md`
@@ -206,6 +223,8 @@ python3 scripts/paper_source_audit.py
 python3 scripts/interview_question_concept_links.py --self-test
 python3 scripts/interview_question_concept_links.py --dry-run
 python3 scripts/concept_taxonomy/validate.py
+python3 scripts/concept_taxonomy/plugin_contract_verification.py
+python3 scripts/concept_taxonomy/control_surface_sync.py
 python3 scripts/concept_taxonomy/validate_taxonomy_baseline_map.py
 python3 scripts/request_meta_audit.py --format markdown
 git diff --check

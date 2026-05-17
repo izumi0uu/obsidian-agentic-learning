@@ -31,7 +31,7 @@ related:
 - Interview concept link audit: `scripts/interview_question_concept_links.py --self-test` PASS；`--dry-run` 扫描 779 个题页，would modify 0，missing concept candidates 0，protected region violations 0；默认报告写入 `reports/interview-question-concept-card-links-report.*`，候选 backlog 页面形状由 [[templates/面试题概念卡待补充]] 提供。
 - Request meta audit: `scripts/request_meta_audit.py --format markdown` 扫描 1113 个 durable vault Markdown 文件，PASS；聊天包装、运行态片段和请求路由话术命中 0。
 - Query write-back pending: 2（概念对比候选队列中 P3 两项已在 [[05 Query 写回队列#2026-05-17 剩余候选分流]] 分流：1 项证据补齐后再评估，1 项查新后再写；当前均不强行成页）。
-- 概念层级归属审计：130 张概念卡已纳入审计；37 条顶层 `up`；审计闭环通过；逐卡稳定镜像见 [[09 概念层级审计基线]]；机器基线保存在 `reports/concept-card-relation-map/`，长期复跑入口是 `scripts/concept_taxonomy/`；`open_review: 0`，`open_writeback: 0`，`dry_run_planned: 0`；20 张 `defer_boundary_review` 已全部标记为 `deferred_with_backlog`，不得为了清零强行补父类。
+- 概念层级归属审计：130 张概念卡已纳入审计；37 条顶层 `up`；审计闭环通过；项目规则已要求新增/更新概念关系前先读 [[09 概念层级审计基线]]；机器基线保存在 `reports/concept-card-relation-map/`，长期复跑入口是 `scripts/concept_taxonomy/`；`open_review: 0`，`open_writeback: 0`，`dry_run_planned: 0`；20 张 `defer_boundary_review` 已全部标记为 `deferred_with_backlog`，不得为了清零强行补父类。
 - Current action queues: concept-card audit、comparison-topic audit 与概念层级归属审计的本轮 open tail 均已清空；20 张 deferred-with-backlog 卡是未来可重开的边界队列，不是当前可直接写 `up` 的任务。
 
 边界：本节是“当前状态”，会覆盖上方读者对最新健康状态的理解；旧的 2026-05-10 / 2026-05-11 数字和“27+6”队列保留下方历史小节，不能再被当成现状。本次 27+6 全量修复是用户明确授权的一次性系统性批量维护；以后仍不要在未确认时批量重写旧卡。Needs action = 0 只表示固定审计脚本当前通过，不表示所有概念卡已经达到百科式深度。
@@ -54,11 +54,12 @@ related:
 
 | Surface | Role | Boundary |
 |---|---|---|
+| `AGENTS.md` | 项目级硬规则 | 新增/更新概念关系前必须读取基线并跑验证；不直接写 `up` |
 | `scripts/concept_taxonomy/` | 项目级可复跑脚本 | 真实写回仍必须 `--apply --limit N` |
 | `reports/concept-card-relation-map/` | 机器可读 baseline / report store | 保存 JSON/MD 证明；报告不自动授权写 `up` |
 | [[09 概念层级审计基线]] | 人类 / agent 可读镜像 | 用于新增卡嵌合判断；不是直接写回清单 |
 
-当前验收点：项目脚本、项目 reports、workflow、健康检查、baseline map 和日志都必须提到 `scripts/concept_taxonomy/` 与 `reports/concept-card-relation-map/`；`字段规范.md` 和模板不改，因为 `up` / `relations` 语义没有变化。
+当前验收点：AGENTS 顶层规则、项目脚本、项目 reports、workflow、健康检查、baseline map 和日志都必须提到 `scripts/concept_taxonomy/` 与 `reports/concept-card-relation-map/`；`字段规范.md` 和模板不改，因为 `up` / `relations` 语义没有变化。
 
 ## 2026-05-17 概念层级审计边界队列
 

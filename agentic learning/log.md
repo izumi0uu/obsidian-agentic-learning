@@ -1148,3 +1148,17 @@ related:
 - 同步项目规则：`AGENTS.md`、[[LLM Wiki 工作流]]、[[06 Wiki 健康检查]] 和 `scripts/README.md` 都把 request meta audit 纳入 weekly / systemic maintenance。
 - 验证：`python3 -m py_compile scripts/request_meta_audit.py` PASS；`python3 scripts/request_meta_audit.py --format markdown` 扫描 1113 个 Markdown 文件，PASS，命中 0。
 - Boundary: 脚本只读检查 `wiki/`、`raw/`、`maps/`、`reviews/` 与 `log.md`；误报先收窄规则或写明边界，不把真实技术短语当作泄漏删除。
+
+## [2026-05-17] maintenance | 概念层级基线门禁提升
+
+- 更新 `AGENTS.md`：新增 Concept Taxonomy Baseline Gate，要求新增/更新概念关系前读取 [[09 概念层级审计基线]]，以 `reports/concept-card-relation-map/` 为机器基线，以 `scripts/concept_taxonomy/` 为复跑入口。
+- 同步 [[LLM Wiki 工作流]]、[[09 概念层级审计基线]] 与 [[06 Wiki 健康检查]]：把基线读取、dry-run、limited apply 和验证命令写成未来 agent 的固定门禁。
+- 更新 `scripts/concept_taxonomy/control_surface_sync.py`：把 `AGENTS.md` 纳入控制面同步验证。
+- Boundary: 本轮只提升规则和复跑验证，不新增任何概念卡父类，不改 `up` / `relations` 字段语义，不修改概念卡模板。
+
+## [2026-05-17] writeback | query enhancement boundary and MQE alias
+
+- Updated: [[Query Rewrite]], [[Multi-Query Retrieval]], [[05 Query 写回队列]], `scripts/interview_question_concept_aliases.json`.
+- Terminology: `MQE`, `Multi-Query Expansion`, `Multi Query Expansion`, and `多查询扩展` are aliases of [[Multi-Query Retrieval]].
+- Boundary: “查询增强策略 / 查询优化” is a query-side strategy family, not a [[Query Rewrite]] alias; HyDE remains folded into [[Query Rewrite]] as a sub-strategy, and no weak HyDE or query-enhancement concept card was created.
+- Taxonomy: kept the existing `Multi-Query Retrieval up [[Query Rewrite]]` Abstract Folder relationship; no `children`, `down`, Breadcrumbs mirror field, or new parent node was added.

@@ -2,7 +2,7 @@
 """Concept taxonomy control-surface synchronization verification.
 
 This project-owned verifier does not mutate concept cards. It checks that the
-script README, report README, workflow, health-check, baseline map, and log
+project rules, script README, report README, workflow, health-check, baseline map, and log
 surfaces describe the project-owned taxonomy tooling without changing field
 semantics.
 """
@@ -23,6 +23,7 @@ CONTROL_SYNC_JSON = OUT_DIR / "control-surface-sync.json"
 CONTROL_SYNC_MD = OUT_DIR / "control-surface-sync.md"
 
 REQUIRED_SURFACES = {
+    "project_rules": ROOT / "AGENTS.md",
     "script_readme": ROOT / "scripts" / "concept_taxonomy" / "README.md",
     "report_readme": ROOT / "reports" / "concept-card-relation-map" / "README.md",
     "script_index": ROOT / "scripts" / "README.md",
@@ -35,7 +36,6 @@ REQUIRED_SURFACES = {
 INTENTIONALLY_NOT_CHANGED = {
     "agentic learning/maps/字段规范.md": "Tooling and baseline evidence moved into project-owned paths; no `up` / `relations` field semantics changed.",
     "agentic learning/templates/概念卡.md": "No concept-card page shape or `up` / `relations` writeback contract changed.",
-    "AGENTS.md": "Project hard rules already cover systemic script-driven changes; workflow-specific commands live in LLM Wiki 工作流 and scripts README.",
 }
 
 
@@ -53,8 +53,16 @@ def surface_check(name: str, path: Path, open_review: int, open_writeback: int) 
     checks = {
         "mentions_project-owned_tooling": "scripts/concept_taxonomy" in text or "concept_taxonomy" in lowered,
         "mentions_project_reports": "reports/concept-card-relation-map" in text or "project-owned" in lowered or "项目内" in text,
-        "mentions_no_direct_writeback": "open_writeback" in text or "不新增概念卡关系" in text or "no writeback" in lowered or "不能直接写" in text,
+        "mentions_no_direct_writeback": "open_writeback" in text or "不新增概念卡关系" in text or "no writeback" in lowered or "不能直接写" in text or "do not write `up` directly" in lowered,
     }
+    if name == "project_rules":
+        checks.update(
+            {
+                "mentions_baseline_gate": "Concept Taxonomy Baseline Gate" in text or "概念层级审计基线" in text,
+                "mentions_validation_commands": "plugin_contract_verification.py" in text and "validate_taxonomy_baseline_map.py" in text,
+                "mentions_limited_apply": "--apply --limit" in text or "--apply-reviewed --limit" in text,
+            }
+        )
     if name == "health_check":
         checks.update(
             {
