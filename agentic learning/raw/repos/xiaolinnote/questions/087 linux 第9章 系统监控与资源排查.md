@@ -4,18 +4,20 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "linux"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/linux/09-system-monitoring.html"
 source: "https://xiaolinnote.com/linux/09-system-monitoring.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 05082b7a9617370ae80f45c70183d92d2fb0545b2f556a1884e04e0787e8255f
+sha256: 2a4b1824e0887afde892332d1ca95f4b2e37062d85496f23954e53a98d82e637
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 第9章 系统监控与资源排查
 
 原始链接：https://xiaolinnote.com/linux/09-system-monitoring.html
@@ -28,6 +30,7 @@ related:
 
 ## 页面正文
 
+# 第9章 系统监控与资源排查
 
 [公众号@小林面试笔记](https://xiaolinnote.com)Linux大约 23 分钟约 6763 字2025/9/2
 

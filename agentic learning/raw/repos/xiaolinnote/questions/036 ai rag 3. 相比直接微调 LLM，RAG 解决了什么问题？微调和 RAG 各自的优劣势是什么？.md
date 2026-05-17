@@ -9,12 +9,12 @@ topic:
   - "rag"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/rag/3_rag_vs_finetune.html"
 source: "https://xiaolinnote.com/ai/rag/3_rag_vs_finetune.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 72d91b7348d886b9b1232979e6bb6bda81543f2cf1e8e1175673b780590812d7
+sha256: 4a5663197ba4a4bab289a05358ace850b0db9c4a75d4ee82c627bf46b63d5471
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
@@ -23,7 +23,8 @@ related:
   - "[[Parametric Memory]]"
   - "[[Non-Parametric Memory]]"
 ---
-# 3. 相比直接微调 LLM，RAG 解决了什么问题？微调和 RAG 各自的优劣势是什么？
+
+# 3. 相比直接微调 LLM，[[RAG]] 解决了什么问题？微调和 RAG 各自的优劣势是什么？
 
 原始链接：https://xiaolinnote.com/ai/rag/3_rag_vs_finetune.html
 
@@ -38,13 +39,15 @@ related:
 
 ## 页面正文
 
+# 3. 相比直接微调 LLM，RAG 解决了什么问题？微调和 RAG 各自的优劣势是什么？
 
-[公众号@小林面试笔记](https://xiaolinnote.com)大约 7 分钟约 2116 字
+原创[公众号@小林面试笔记](https://xiaolinnote.com)RAG大约 7 分钟约 2120 字
 
 ---
 
+# [3. 相比直接微调 LLM，RAG 解决了什么问题？微调和 RAG 各自的优劣势是什么？](#_3-相比直接微调-llm-rag-解决了什么问题-微调和-rag-各自的优劣势是什么)
 
-👔面试官：[[RAG]] 和[[LLM Training Pipeline|微调]]（Fine-tuning）有什么区别？各自适合什么场景？
+👔面试官：RAG 和微调（Fine-tuning）有什么区别？各自适合什么场景？
 
 🙋‍♂️我：微调就是拿自己的数据训练一下模型，RAG 也是拿自己的数据训练一下模型，只是方法不同。
 
@@ -135,7 +138,7 @@ related:
 
 ---
 
-对了，AI RAG的面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
+对了，大模型面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
 
 ![](https://cdn.xiaolincoding.com//picgo/扫码_搜索联合传播样式-标准色版.png)
 

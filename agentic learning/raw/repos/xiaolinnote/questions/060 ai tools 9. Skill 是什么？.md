@@ -6,20 +6,23 @@ topic:
   - "interview"
   - "ai"
   - "llm"
+  - "tools"
+  - "mcp"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/tools/9_skill.html"
 source: "https://xiaolinnote.com/ai/tools/9_skill.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: f9bfa78700048b2dc4ec2324746cba204f6b6a93c1617f16427b256ce99616e2
+sha256: 89c2242b92a839debb9dd34886f79554088106197b3f568ef93afd1f0a81552d
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[Tool Use]]"
   - "[[Tool Calling]]"
 ---
+
 # 9. Skill 是什么？
 
 原始链接：https://xiaolinnote.com/ai/tools/9_skill.html
@@ -33,11 +36,13 @@ related:
 
 ## 页面正文
 
+# 9. Skill 是什么？
 
-原创[公众号@小林面试笔记](https://xiaolinnote.com)agent大约 11 分钟约 3272 字
+原创[公众号@小林面试笔记](https://xiaolinnote.com)[[Tool Use|Tools]]大约 11 分钟约 3269 字
 
 ---
 
+# [9. Skill 是什么？](#_9-skill-是什么)
 
 👔面试官：说说 Agent Skill 是什么？
 
@@ -176,7 +181,7 @@ Agent Skills 最早是 Anthropic 在 2025 年 10 月推出的，一开始只在 
 
 ---
 
-对了，AI [[Tool Calling|工具调用]]的面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
+对了，大模型面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
 
 ![](https://cdn.xiaolincoding.com//picgo/扫码_搜索联合传播样式-标准色版.png)
 

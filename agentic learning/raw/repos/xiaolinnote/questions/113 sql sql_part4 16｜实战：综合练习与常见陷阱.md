@@ -4,18 +4,21 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "database"
+  - "sql"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/sql/sql_part4/16-comprehensive-practice.html"
 source: "https://xiaolinnote.com/sql/sql_part4/16-comprehensive-practice.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 2586d149ff7933387ea472f7a169e0b5bd1695e1d5d6bb0db8f81ef339474c63
+sha256: 3cf2ee05d5f0cf624f07bba44ff93bd170534a2f111b9568607f4255b62cd2c3
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 16｜实战：综合练习与常见陷阱
 
 原始链接：https://xiaolinnote.com/sql/sql_part4/16-comprehensive-practice.html
@@ -28,11 +31,13 @@ related:
 
 ## 页面正文
 
+# 16｜实战：综合练习与常见陷阱
 
 [公众号@小林面试笔记](https://xiaolinnote.com)SQL大约 21 分钟约 6353 字2025/8/31
 
 ---
 
+# [16｜实战：综合练习与常见陷阱](#_16-实战-综合练习与常见陷阱)
 
 大家好，我是小林。
 

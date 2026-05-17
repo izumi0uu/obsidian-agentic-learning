@@ -4,18 +4,21 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "database"
+  - "sql"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/sql/sql_part1/02-select-query-basics.html"
 source: "https://xiaolinnote.com/sql/sql_part1/02-select-query-basics.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: d90453f1431bd2911a8cf6e2945e9b585a2d869cd265c686792d630e00f666b4
+sha256: 262344fea7de31b4b3df41271a70cf98c12555935e9a9470267035440f08d87f
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 02｜查询：SELECT 要怎么写？
 
 原始链接：https://xiaolinnote.com/sql/sql_part1/02-select-query-basics.html
@@ -28,11 +31,13 @@ related:
 
 ## 页面正文
 
+# 02｜查询：SELECT 要怎么写？
 
 [公众号@小林面试笔记](https://xiaolinnote.com)SQL大约 13 分钟约 4020 字2025/8/31
 
 ---
 
+# [02｜查询：SELECT 要怎么写？](#_02-查询-select-要怎么写)
 
 大家好，我是小林。
 

@@ -6,18 +6,21 @@ topic:
   - "interview"
   - "ai"
   - "llm"
+  - "tools"
+  - "mcp"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/tools/15_webrtc_vs_ws.html"
 source: "https://xiaolinnote.com/ai/tools/15_webrtc_vs_ws.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: ce982c618b14c3c4ab92554dc91ad3da4b0dc3315d5d73c047b829e84b99cece
+sha256: 6546f6f44da13f938ed52884d74f4f67ef68884817abd7a9a7117606f3e21e12
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 15. 为什么要用 WebRTC 协议？它和 WebSocket（WS）在 AI 对话流中的核心差异是什么？
 
 原始链接：https://xiaolinnote.com/ai/tools/15_webrtc_vs_ws.html
@@ -30,11 +33,13 @@ related:
 
 ## 页面正文
 
+# 15. 为什么要用 WebRTC 协议？它和 WebSocket（WS）在 AI 对话流中的核心差异是什么？
 
-[公众号@小林面试笔记](https://xiaolinnote.com)大约 12 分钟约 3536 字
+原创[公众号@小林面试笔记](https://xiaolinnote.com)Tools大约 12 分钟约 3537 字
 
 ---
 
+# [15. 为什么要用 WebRTC 协议？它和 WebSocket（WS）在 AI 对话流中的核心差异是什么？](#_15-为什么要用-webrtc-协议-它和-websocket-ws-在-ai-对话流中的核心差异是什么)
 
 👔面试官：为什么 AI 实时语音要用 WebRTC？它和 WebSocket 在 AI 对话流中的核心差异是什么？
 
@@ -175,7 +180,7 @@ OpenAI 在 2024 年发布了 Realtime API，用于实现实时语音对话：用
 
 ---
 
-对了，AI 工具调用的面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
+对了，大模型面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
 
 ![](https://cdn.xiaolincoding.com//picgo/扫码_搜索联合传播样式-标准色版.png)
 

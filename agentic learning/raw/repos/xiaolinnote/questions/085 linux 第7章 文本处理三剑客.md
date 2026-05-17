@@ -4,18 +4,20 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "linux"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/linux/07-grep-awk-sed-essentials.html"
 source: "https://xiaolinnote.com/linux/07-grep-awk-sed-essentials.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 9929647f0ea75ac608598a0c30814051d5cd8136fc37b89f4da59f0d91e8db48
+sha256: a32bffdf2da88e6fc1e9eae045914988dbdb50b16b312568b869d1260d3da82b
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 第7章 文本处理三剑客
 
 原始链接：https://xiaolinnote.com/linux/07-grep-awk-sed-essentials.html
@@ -28,6 +30,7 @@ related:
 
 ## 页面正文
 
+# 第7章 文本处理三剑客
 
 [公众号@小林面试笔记](https://xiaolinnote.com)Linux大约 62 分钟约 18590 字2025/9/2
 

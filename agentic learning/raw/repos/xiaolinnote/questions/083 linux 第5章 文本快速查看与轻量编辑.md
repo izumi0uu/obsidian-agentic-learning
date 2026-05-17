@@ -4,18 +4,20 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "linux"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/linux/05-text-viewing-and-editing.html"
 source: "https://xiaolinnote.com/linux/05-text-viewing-and-editing.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: dc403a3a4ed5a433bfcb30045eb0048e61eb6d91a86528bcef4565ef9269a0df
+sha256: dd95b8598984fad2fdfb6389f4ee6e3a33288bc1caa534424eb6a270969d9409
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 第5章 文本快速查看与轻量编辑
 
 原始链接：https://xiaolinnote.com/linux/05-text-viewing-and-editing.html
@@ -28,6 +30,7 @@ related:
 
 ## 页面正文
 
+# 第5章 文本快速查看与轻量编辑
 
 [公众号@小林面试笔记](https://xiaolinnote.com)Linux大约 27 分钟约 8156 字2025/9/2
 

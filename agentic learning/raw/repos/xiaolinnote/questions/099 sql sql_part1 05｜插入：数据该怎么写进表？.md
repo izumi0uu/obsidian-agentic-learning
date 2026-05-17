@@ -4,18 +4,21 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "database"
+  - "sql"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/sql/sql_part1/05-insert-data.html"
 source: "https://xiaolinnote.com/sql/sql_part1/05-insert-data.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: f731405c5f0793f7b2465c86af2e528245e521ae0cb47b3e5ad1bb15a923110b
+sha256: 5f44a894a7a636f55896b8544bfe92b2299449af44fe31a1bc0c234324fbbde7
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 05｜插入：数据该怎么写进表？
 
 原始链接：https://xiaolinnote.com/sql/sql_part1/05-insert-data.html
@@ -28,11 +31,13 @@ related:
 
 ## 页面正文
 
+# 05｜插入：数据该怎么写进表？
 
 [公众号@小林面试笔记](https://xiaolinnote.com)SQL大约 14 分钟约 4145 字2025/8/31
 
 ---
 
+# [05｜插入：数据该怎么写进表？](#_05-插入-数据该怎么写进表)
 
 大家好，我是小林。
 

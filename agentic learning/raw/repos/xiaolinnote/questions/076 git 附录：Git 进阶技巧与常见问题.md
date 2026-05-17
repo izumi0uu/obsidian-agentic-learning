@@ -4,18 +4,20 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "git"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/git/git-appendix.html"
 source: "https://xiaolinnote.com/git/git-appendix.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 40349596afb029582c7a6970e63e01cea085028df6df7721fba439eb9fb10c30
+sha256: 1bbbebdd47fbc9d15c1a2fce6baeb6a7469fb9efad75e1c658b3d037dc478464
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 附录：Git 进阶技巧与常见问题
 
 原始链接：https://xiaolinnote.com/git/git-appendix.html
@@ -28,11 +30,13 @@ related:
 
 ## 页面正文
 
+# 附录：Git 进阶技巧与常见问题
 
 [公众号@小林面试笔记](https://xiaolinnote.com)Git大约 10 分钟约 3018 字
 
 ---
 
+# [附录：Git 进阶技巧与常见问题](#附录-git-进阶技巧与常见问题)
 
 大家好，我是小林。
 

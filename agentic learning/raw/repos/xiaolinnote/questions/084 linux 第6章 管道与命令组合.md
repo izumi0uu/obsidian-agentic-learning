@@ -4,18 +4,20 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "linux"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/linux/06-pipes-and-composition.html"
 source: "https://xiaolinnote.com/linux/06-pipes-and-composition.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 8a4e271a7b0fa034c75721276f8ca61fa10fc52f9f3ce4381aefe26a921772f1
+sha256: cdc1d17344381bdddecb7d5c46eb72210845686ce844f259eeecca63262777db
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 第6章 管道与命令组合
 
 原始链接：https://xiaolinnote.com/linux/06-pipes-and-composition.html
@@ -28,6 +30,7 @@ related:
 
 ## 页面正文
 
+# 第6章 管道与命令组合
 
 [公众号@小林面试笔记](https://xiaolinnote.com)Linux大约 23 分钟约 7028 字2025/9/2
 

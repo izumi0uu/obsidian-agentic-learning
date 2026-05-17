@@ -21,13 +21,13 @@ related:
 
 ## 当前状态
 
-- Last lint: 2026-05-16
+- Last lint: 2026-05-17
 - Missing links: none
 - Concept cards: 130；`scripts/concept_card_audit.py --format markdown` 显示 Needs action = 0。
 - Comparison topic pages: 23；`scripts/comparison_topic_audit.py --format markdown` 显示 Needs action = 0。
-- Raw markdown pages: 908；其中 frontmatter `type: source` 859。主源清单仍看 [[资料收集索引]]。
+- Raw markdown pages: 930；其中 frontmatter `type: source` 881。主源清单仍看 [[资料收集索引]]。
 - Paper source audit: `scripts/paper_source_audit.py` 检查 `raw/papers/` 45 个文件，PASS。
-- Interview concept link audit: `scripts/interview_question_concept_links.py --self-test` PASS；`--dry-run` 扫描 757 个题页，would modify 0，missing concept candidates 0，protected region violations 0。
+- Interview concept link audit: `scripts/interview_question_concept_links.py --self-test` PASS；`--dry-run` 扫描 779 个题页，would modify 0，missing concept candidates 0，protected region violations 0。
 - Query write-back pending: 2（概念对比候选队列中 P3 两项已在 [[05 Query 写回队列#2026-05-17 剩余候选分流]] 分流：1 项证据补齐后再评估，1 项查新后再写；当前均不强行成页）。
 - Current action queues: concept-card audit 与 comparison-topic audit 的本轮 needs-action 队列已清空；后续新缺口继续由每周审计重新进入队列。
 
@@ -54,6 +54,20 @@ related:
 - [ ] 处理 [[05 Query 写回队列]]。
 - [ ] 处理 [[08 面试题概念卡待补充]] 和 [[08 面试题概念链接待办]] 中的可确认项；不确定项继续留 backlog。
 - [ ] 把发现的问题和最新统计追加到本页；如果更新了“当前状态”，明确旧数字只是历史快照。
+
+## 2026-05-17 小林 Note source refresh
+
+本轮修复的是 source updater 与当前 raw/repos 布局不一致的问题，并刷新小林 Note sitemap 面试题页。它属于脚本驱动的系统性维护：raw source、索引、导航、健康检查和日志需要同步，但不直接把新题目提升为概念卡。
+
+| 检查项 | 结果 | 处理 |
+|---|---:|---|
+| `scripts/update_xiaolinnote.py` | 142 URLs；新增 22；变化 120；失败 0 | 写入 `raw/repos/xiaolinnote/questions/`，按 URL 复用旧页 |
+| `scripts/interview_question_concept_links.py --apply` | 修改 81 页；插入 170 个链接 | 新增/刷新题页补齐现有概念回链 |
+| `scripts/interview_question_concept_links.py --dry-run` | 扫描 779 题页；would modify 0；missing 0；protected violations 0 | 链接写回后无剩余自动修复项 |
+| `scripts/update_xiaolinnote.py --dry-run` | 142 checked；new 0；changed 0；unchanged 142；errors 0 | updater 当前幂等 |
+| 固定审计与 diff 检查 | concept audit 130 / needs 0；comparison audit 23 / needs 0；paper audit 45 PASS；`git diff --check` PASS | 本次系统性刷新未制造新的健康检查缺口 |
+
+边界：本轮只刷新小林 Note raw evidence 与题页回链；`agent_java_offer` 远端 `main` 没有新提交，因此不更新；没有新增弱概念卡，也没有改 alias map / 字段规范 / 概念卡模板。
 
 ## 2026-05-16 规则控制面同步审计
 

@@ -6,21 +6,24 @@ topic:
   - "interview"
   - "ai"
   - "llm"
+  - "tools"
+  - "mcp"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/tools/3_fc_training.html"
 source: "https://xiaolinnote.com/ai/tools/3_fc_training.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: a19e5664fed3c34d3d2de754c0e7352f0873bb6cd0bc36ed36e583b88a0ff382
+sha256: d2246a7e10e98e03190338372f4d60d8e0ac6b79d7685ccb51e5d328894de474
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[Tool Calling]]"
   - "[[LLM Training Pipeline]]"
 ---
-sparse retrieval# 3. 大模型的 [[Tool Calling|Function Call]] 能力是怎么训练出来的？
+
+# 3. 大模型的 [[Tool Calling|Function Call]] 能力是怎么训练出来的？
 
 原始链接：https://xiaolinnote.com/ai/tools/3_fc_training.html
 
@@ -33,11 +36,13 @@ sparse retrieval# 3. 大模型的 [[Tool Calling|Function Call]] 能力是怎么
 
 ## 页面正文
 
+# 3. 大模型的 Function Call 能力是怎么训练出来的？
 
-[公众号@小林面试笔记](https://xiaolinnote.com)大约 13 分钟约 3875 字
+原创[公众号@小林面试笔记](https://xiaolinnote.com)Tools大约 13 分钟约 3876 字
 
 ---
 
+# [3. 大模型的 Function Call 能力是怎么训练出来的？](#_3-大模型的-function-call-能力是怎么训练出来的)
 
 👔面试官：详细说说大模型的 Function Call 能力是怎么训练出来的？
 
@@ -170,7 +175,7 @@ RLHF 阶段通过人类对多种回答的偏好排序训练奖励模型，再用
 
 ---
 
-对了，AI 工具调用的面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
+对了，大模型面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
 
 ![](https://cdn.xiaolincoding.com//picgo/扫码_搜索联合传播样式-标准色版.png)
 

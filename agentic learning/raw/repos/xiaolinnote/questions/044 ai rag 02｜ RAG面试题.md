@@ -9,18 +9,19 @@ topic:
   - "rag"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/rag/"
 source: "https://xiaolinnote.com/ai/rag/"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: e3831ef02d874f286d802ab59035f133354eb5ac5560ff57aa3539dac3d940b1
+sha256: 9f87d4b2a9cd014d6965afe6093387ca63916bfad772931a6accadbd8b49df5a
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[RAG]]"
   - "[[RAG 主题]]"
 ---
+
 # 02｜ [[RAG]]面试题
 
 原始链接：https://xiaolinnote.com/ai/rag/
@@ -34,8 +35,9 @@ related:
 
 ## 页面正文
 
+# 02｜ RAG面试题
 
-[公众号@小林面试笔记](https://xiaolinnote.com)agent小于 1 分钟约 26 字
+[公众号@小林面试笔记](https://xiaolinnote.com)RAG小于 1 分钟约 26 字
 
 ---
 

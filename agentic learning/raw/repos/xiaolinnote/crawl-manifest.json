@@ -1,413 +1,544 @@
 {
-  "date": "2026-05-07",
+  "date": "2026-05-17",
   "scope": "all",
   "sitemap_url": "https://xiaolinnote.com/sitemap.xml",
-  "total_urls": 120,
-  "new": [],
-  "changed": [],
-  "unchanged_count": 120,
+  "total_urls": 142,
+  "new": [
+    "raw/repos/xiaolinnote/questions/121 ai llm 17. 什么是 CoT？为啥效果好？它有什么缺点或局限性？.md",
+    "raw/repos/xiaolinnote/questions/122 ai llm 12. 大模型生成文本时的解码策略有哪些？贪心、Beam Search、采样分别什么时候用？.md",
+    "raw/repos/xiaolinnote/questions/123 ai llm 20. 大模型部署有哪些主流方案？vLLM、TGI、llama.cpp、SGLang 实际项目里怎么选？.md",
+    "raw/repos/xiaolinnote/questions/124 ai llm 11. 大模型的 DPO 和 PPO 的区别是什么？.md",
+    "raw/repos/xiaolinnote/questions/125 ai llm 21. 大模型能力评测指标有哪些？.md",
+    "raw/repos/xiaolinnote/questions/126 ai llm 8. 大模型微调的方案有哪些？.md",
+    "raw/repos/xiaolinnote/questions/127 ai llm 18. 大模型为什么会出现幻觉？怎么缓解？.md",
+    "raw/repos/xiaolinnote/questions/128 ai llm 14. KV Cache 是什么？Prompt Caching 的原理是什么？.md",
+    "raw/repos/xiaolinnote/questions/129 ai llm 6. 大模型是怎么训练出来的？.md",
+    "raw/repos/xiaolinnote/questions/130 ai llm 9. 请讲一下 LoRA 技术，除了减少参数量，它还有哪些优点？.md",
+    "raw/repos/xiaolinnote/questions/131 ai llm 3. 多头注意力（MHA）有哪些局限？MQA、GQA、Flash Attention 怎么解决？.md",
+    "raw/repos/xiaolinnote/questions/132 ai llm 22. 对比使用过哪些主流大模型？你们项目中最终选用了哪个模型？为什么？.md",
+    "raw/repos/xiaolinnote/questions/133 ai llm 19. MoE 混合专家模型是什么？DeepSeek V3、Qwen 为什么用 MoE？.md",
+    "raw/repos/xiaolinnote/questions/134 ai llm 4. 大模型的位置编码是干什么用的？sin-cos、RoPE、ALiBi 有什么区别？.md",
+    "raw/repos/xiaolinnote/questions/135 ai llm 10. SFT 之后还有哪些 Post-Training？RLHF、DPO、GRPO、拒绝采样什么关系？.md",
+    "raw/repos/xiaolinnote/questions/136 ai llm 16. 如何写好 Prompt？分享下 Prompt 工程实践经验？.md",
+    "raw/repos/xiaolinnote/questions/137 ai llm 15. 大模型量化是什么？INT8-INT4-AWQ-GPTQ 怎么选？.md",
+    "raw/repos/xiaolinnote/questions/138 ai llm 7. 什么是 Scaling Law？大模型的「涌现能力」是怎么回事？.md",
+    "raw/repos/xiaolinnote/questions/139 ai llm 13. 大模型的参数：温度值、Top-P、Top-K 分别是什么？各个场景下的最佳设置是什么？.md",
+    "raw/repos/xiaolinnote/questions/140 ai llm 5. 什么是大模型项目的分词器？原理是什么？.md",
+    "raw/repos/xiaolinnote/questions/141 ai llm 2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？.md",
+    "raw/repos/xiaolinnote/questions/142 ai llm 1. 什么是大语言模型？和传统 NLP 模型有什么区别？.md"
+  ],
+  "changed": [
+    "raw/repos/xiaolinnote/questions/078 home 首页.md",
+    "raw/repos/xiaolinnote/questions/063 ai 大模型面试题.md",
+    "raw/repos/xiaolinnote/questions/064 git 01｜为什么要学 Git？.md",
+    "raw/repos/xiaolinnote/questions/065 git 02｜准备工作：5 分钟搞定 Git 安装与配置.md",
+    "raw/repos/xiaolinnote/questions/066 git 03｜从 0 创建仓库：把本地文件夹变成 Git 管理的项目.md",
+    "raw/repos/xiaolinnote/questions/067 git 04｜保存文件变动：提交代码的 2 步核心流程.md",
+    "raw/repos/xiaolinnote/questions/068 git 05｜查看历史记录：找到过去的版本.md",
+    "raw/repos/xiaolinnote/questions/069 git 06｜撤销操作：改乱了怎么恢复.md",
+    "raw/repos/xiaolinnote/questions/070 git 07｜远程仓库基础：连接 GitHub GitLab.md",
+    "raw/repos/xiaolinnote/questions/071 git 08｜拉取与推送：和远程仓库同步.md",
+    "raw/repos/xiaolinnote/questions/072 git 09｜分支操作：不影响主代码的 \"平行世界\".md",
+    "raw/repos/xiaolinnote/questions/073 git 10｜解决冲突：多人协作的必备技能.md",
+    "raw/repos/xiaolinnote/questions/074 git 11｜常用命令速查：小白必备清单.md",
+    "raw/repos/xiaolinnote/questions/075 git 12｜可视化工具推荐：不想记命令也能操作.md",
+    "raw/repos/xiaolinnote/questions/077 git Git 命令快速入门教程.md",
+    "raw/repos/xiaolinnote/questions/076 git 附录：Git 进阶技巧与常见问题.md",
+    "raw/repos/xiaolinnote/questions/079 linux 第1章 走进命令行.md",
+    "raw/repos/xiaolinnote/questions/080 linux 第2章 路径与文件系统导航.md",
+    "raw/repos/xiaolinnote/questions/081 linux 第3章 文件与目录的日常操作.md",
+    "raw/repos/xiaolinnote/questions/082 linux 第4章 权限、所有权与用户基础.md",
+    "raw/repos/xiaolinnote/questions/083 linux 第5章 文本快速查看与轻量编辑.md",
+    "raw/repos/xiaolinnote/questions/084 linux 第6章 管道与命令组合.md",
+    "raw/repos/xiaolinnote/questions/085 linux 第7章 文本处理三剑客.md",
+    "raw/repos/xiaolinnote/questions/086 linux 第8章 进程管理与作业控制.md",
+    "raw/repos/xiaolinnote/questions/087 linux 第9章 系统监控与资源排查.md",
+    "raw/repos/xiaolinnote/questions/088 linux 第10章 网络工具与远程协作.md",
+    "raw/repos/xiaolinnote/questions/094 linux Linux 命令快速入门.md",
+    "raw/repos/xiaolinnote/questions/089 linux 附录A0：Shell脚本简单入门.md",
+    "raw/repos/xiaolinnote/questions/090 linux 附录A1：常用命令速查表.md",
+    "raw/repos/xiaolinnote/questions/091 linux 附录A2：正则表达式与通配符速查.md",
+    "raw/repos/xiaolinnote/questions/092 linux 附录A3：新手常见坑与安全小贴士.md",
+    "raw/repos/xiaolinnote/questions/093 linux 附录A4：练习清单 - 10个真实场景迷你任务.md",
+    "raw/repos/xiaolinnote/questions/001 ai agent 10. 什么是 Multi-Agent？.md",
+    "raw/repos/xiaolinnote/questions/002 ai agent 11. 说说 Single-Agent 和 Multi-Agent 的设计方案？.md",
+    "raw/repos/xiaolinnote/questions/003 ai agent 12. Agent 记忆压缩通常有哪些方法？.md",
+    "raw/repos/xiaolinnote/questions/004 ai agent 13. 在工程实践中，为什么有时候选择「手搓」Agent，而不是直接用成熟框架？.md",
+    "raw/repos/xiaolinnote/questions/005 ai agent 14. 如何赋予 LLM 规划能力？.md",
+    "raw/repos/xiaolinnote/questions/006 ai agent 15. 讲讲 Agent 的反思机制？为什么要用反思？具体怎么实现？.md",
+    "raw/repos/xiaolinnote/questions/007 ai agent 16. 如何设计多 Agent 的协作与动态切换机制？.md",
+    "raw/repos/xiaolinnote/questions/008 ai agent 1. 什么是 Agent？与大模型有什么本质不同？.md",
+    "raw/repos/xiaolinnote/questions/009 ai agent 2. Agent 的基本架构由哪些核心组件构成？.md",
+    "raw/repos/xiaolinnote/questions/010 ai agent 3. Workflow，Agent，Tools 这三个的概念和区别介绍一下？.md",
+    "raw/repos/xiaolinnote/questions/011 ai agent 4. 了解哪些其他的 Agent 设计范式？Agent 和 Workflow的区别是什么？.md",
+    "raw/repos/xiaolinnote/questions/012 ai agent 5. Agent 推理模式有哪些？ReAct 是啥？具体是怎么实现的？.md",
+    "raw/repos/xiaolinnote/questions/013 ai agent 6. ReAct、Plan-and-Execute、Reflection 三种范式有什么核心区别？实际项目中该如何选型？.md",
+    "raw/repos/xiaolinnote/questions/014 ai agent 7. 复杂任务怎么做的任务拆分？为什么要拆分？效果如何提升？.md",
+    "raw/repos/xiaolinnote/questions/015 ai agent 8. 请你介绍一下 AI Agent 的记忆机制，并说明在实际开发中应该如何设计记忆模块？.md",
+    "raw/repos/xiaolinnote/questions/016 ai agent 9. Agent 的长短期记忆系统怎么做的？记忆是怎么存的？粒度是多少？怎么用的？.md",
+    "raw/repos/xiaolinnote/questions/018 ai agent 01｜ Agent面试题.md",
+    "raw/repos/xiaolinnote/questions/017 ai agent Agent 面试题介绍.md",
+    "raw/repos/xiaolinnote/questions/020 ai langchian 05｜ LangChain框架面试题.md",
+    "raw/repos/xiaolinnote/questions/019 ai langchian LangChain框架面试题介绍.md",
+    "raw/repos/xiaolinnote/questions/022 ai llm 03｜ 大模型工程面试题.md",
+    "raw/repos/xiaolinnote/questions/021 ai llm 大模型工程面试题介绍.md",
+    "raw/repos/xiaolinnote/questions/023 ai rag 10. 你使用 RAG 给大模型一个输入，系统是怎样的工作流程？.md",
+    "raw/repos/xiaolinnote/questions/024 ai rag 11. 请你介绍一下向量检索和关键词检索的区别？.md",
+    "raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md",
+    "raw/repos/xiaolinnote/questions/026 ai rag 13. 什么是多路召回？具体怎么做？.md",
+    "raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md",
+    "raw/repos/xiaolinnote/questions/028 ai rag 15. 了解哪些更复杂的 RAG 范式？.md",
+    "raw/repos/xiaolinnote/questions/029 ai rag 16. 在什么场景下，你会选择使用图数据库来增强传统的向量检索？.md",
+    "raw/repos/xiaolinnote/questions/030 ai rag 17. 如何规避 RAG 系统中大模型的幻觉？.md",
+    "raw/repos/xiaolinnote/questions/031 ai rag 18. 怎么量化你的 RAG 效果？.md",
+    "raw/repos/xiaolinnote/questions/032 ai rag 19. RAG 知识库如何实现动态与持续更新？.md",
+    "raw/repos/xiaolinnote/questions/033 ai rag 1. 什么是 RAG？详细描述一个完整 RAG 系统的详细工作流程？.md",
+    "raw/repos/xiaolinnote/questions/034 ai rag 20. 在实际落地中，你觉得 RAG 最难的地方是哪里？.md",
+    "raw/repos/xiaolinnote/questions/035 ai rag 2. 大模型的 RAG 主要用来解决什么问题？.md",
+    "raw/repos/xiaolinnote/questions/036 ai rag 3. 相比直接微调 LLM，RAG 解决了什么问题？微调和 RAG 各自的优劣势是什么？.md",
+    "raw/repos/xiaolinnote/questions/037 ai rag 4. RAG 中的文档是怎么存的？粒度是多大？详细说说文档切割（Chunking）策略？.md",
+    "raw/repos/xiaolinnote/questions/038 ai rag 5. 怎么规避语义被切割掉的问题？.md",
+    "raw/repos/xiaolinnote/questions/039 ai rag 6. 在 RAG 中 Embedding 究竟是什么？如何选择和评估一个 Embedding 模型？.md",
+    "raw/repos/xiaolinnote/questions/040 ai rag 7. Embedding 有哪几种算法你了解过吗？.md",
+    "raw/repos/xiaolinnote/questions/041 ai rag 8. 什么是向量数据库？有没有做过向量数据库的对比选型？.md",
+    "raw/repos/xiaolinnote/questions/042 ai rag 9. 讲讲你用的向量数据库？数据量级是多大？性能如何？遇到过性能瓶颈吗？.md",
+    "raw/repos/xiaolinnote/questions/044 ai rag 02｜ RAG面试题.md",
+    "raw/repos/xiaolinnote/questions/043 ai rag RAG 面试题介绍.md",
+    "raw/repos/xiaolinnote/questions/045 ai tools 10. MCP 和 Agent Skill 的区别是什么？.md",
+    "raw/repos/xiaolinnote/questions/046 ai tools 11. Function Calling、Skill、MCP 这三个有什么区别？.md",
+    "raw/repos/xiaolinnote/questions/047 ai tools 12. 什么是 A2A 协议？它和 MCP 协议的区别是什么？.md",
+    "raw/repos/xiaolinnote/questions/048 ai tools 13. MCP 协议通常采用什么通信方式？.md",
+    "raw/repos/xiaolinnote/questions/049 ai tools 14. 说说 WebSocket 和 SSE 通信的区别及局限性？.md",
+    "raw/repos/xiaolinnote/questions/050 ai tools 15. 为什么要用 WebRTC 协议？它和 WebSocket（WS）在 AI 对话流中的核心差异是什么？.md",
+    "raw/repos/xiaolinnote/questions/051 ai tools 16. 有没有用过大模型的网关框架？网关层解决了什么问题？.md",
+    "raw/repos/xiaolinnote/questions/052 ai tools 1. 什么是 Function Calling ？原理是什么？.md",
+    "raw/repos/xiaolinnote/questions/053 ai tools 2. LLM 是如何学会调用外部工具的？.md",
+    "raw/repos/xiaolinnote/questions/054 ai tools 3. 大模型的 Function Call 能力是怎么训练出来的？.md",
+    "raw/repos/xiaolinnote/questions/055 ai tools 4. 什么是 MCP（模型上下文协议）？讲讲它的核心内容？.md",
+    "raw/repos/xiaolinnote/questions/056 ai tools 5. MCP 由哪几部分组成？.md",
+    "raw/repos/xiaolinnote/questions/057 ai tools 6. MCP 和 Function Calling 有什么区别？有没有实际跑过 MCP？.md",
+    "raw/repos/xiaolinnote/questions/058 ai tools 7. Function Calling 也属于工具调用，请问什么场景下使用 Function Calling，什么场景下使用 MCP？.md",
+    "raw/repos/xiaolinnote/questions/059 ai tools 8. 为什么有些特定的推理模型不支持 MCP 协议？.md",
+    "raw/repos/xiaolinnote/questions/060 ai tools 9. Skill 是什么？.md",
+    "raw/repos/xiaolinnote/questions/062 ai tools 03｜ LLM工具调用面试题.md",
+    "raw/repos/xiaolinnote/questions/061 ai tools LLM工具调用面试题介绍.md",
+    "raw/repos/xiaolinnote/questions/120 sql SQL 快速入门教程.md",
+    "raw/repos/xiaolinnote/questions/102 sql sql_part2 07｜连接：多表该如何 JOIN 在一起？.md",
+    "raw/repos/xiaolinnote/questions/103 sql sql_part2 08｜聚合与分组：统计与分组该怎么做？.md",
+    "raw/repos/xiaolinnote/questions/104 sql sql_part2 09｜子查询：什么时候该用子查询？.md",
+    "raw/repos/xiaolinnote/questions/105 sql sql_part2 10｜事务：如何保证一组操作要么都成功？.md",
+    "raw/repos/xiaolinnote/questions/106 sql sql_part2 11｜函数：有哪些常用的SQL函数？.md",
+    "raw/repos/xiaolinnote/questions/107 sql sql_part2 第二部分：SQL进阶.md",
+    "raw/repos/xiaolinnote/questions/108 sql sql_part3 12｜表结构：表该如何创建、修改与删除？.md",
+    "raw/repos/xiaolinnote/questions/109 sql sql_part3 13｜范式设计：数据库的范化有那些？？.md",
+    "raw/repos/xiaolinnote/questions/110 sql sql_part3 14｜索引：如何创建索引？.md",
+    "raw/repos/xiaolinnote/questions/111 sql sql_part3 第三部分：表结构与设计.md",
+    "raw/repos/xiaolinnote/questions/112 sql sql_part4 15｜实战：商城订单应用.md",
+    "raw/repos/xiaolinnote/questions/113 sql sql_part4 16｜实战：综合练习与常见陷阱.md",
+    "raw/repos/xiaolinnote/questions/114 sql sql_part4 第四部分：实战应用.md",
+    "raw/repos/xiaolinnote/questions/119 sql sql_part5 加餐：扩展学习.md",
+    "raw/repos/xiaolinnote/questions/115 sql sql_part5 加餐1｜EXPLAIN：只看哪5个字段就够了？.md",
+    "raw/repos/xiaolinnote/questions/116 sql sql_part5 加餐2｜视图：何时该把查询做成视图？.md",
+    "raw/repos/xiaolinnote/questions/117 sql sql_part5 加餐3｜窗口函数：组内计算该怎么写？.md",
+    "raw/repos/xiaolinnote/questions/118 sql sql_part5 加餐4｜权限：用户与角色该如何授予与回收？.md",
+    "raw/repos/xiaolinnote/questions/095 sql sql_part1 01｜入门：数据库与 SQL 到底是什么？.md",
+    "raw/repos/xiaolinnote/questions/096 sql sql_part1 02｜查询：SELECT 要怎么写？.md",
+    "raw/repos/xiaolinnote/questions/097 sql sql_part1 03｜筛选：WHERE 要怎么写？.md",
+    "raw/repos/xiaolinnote/questions/098 sql sql_part1 04｜排序与分页：结果怎么排序与分页？.md",
+    "raw/repos/xiaolinnote/questions/099 sql sql_part1 05｜插入：数据该怎么写进表？.md",
+    "raw/repos/xiaolinnote/questions/100 sql sql_part1 06｜修改与删除：如何更新或删除数据？.md",
+    "raw/repos/xiaolinnote/questions/101 sql sql_part1 第一部分：SQL基础入门.md"
+  ],
+  "unchanged_count": 0,
   "errors": [],
   "records": [
     {
       "url": "https://xiaolinnote.com/",
-      "title": "首页 | 小林面试笔记",
+      "title": "首页",
       "topics": [
         "interview"
       ],
-      "links": 28,
-      "sha256": "f08f57966c38da93f55095d87019698f9927f6fd7a07b8c7131b495f6f96e927",
-      "file_name": "078 home 首页.md",
+      "links": 27,
+      "sha256": "4cf4aabdc0ca2f1dec724608c37eff6db1cbf3415d25af8c3161cd6f55456aa7",
+      "file_name": "index.md",
       "file": "raw/repos/xiaolinnote/questions/078 home 首页.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/",
-      "title": "大模型面试题 | 小林面试笔记",
+      "title": "大模型面试题",
       "topics": [
         "interview",
         "ai",
         "llm"
       ],
-      "links": 65,
-      "sha256": "de5f911d1dbedba90ed98715ce41d9f1583301fbe87cb6b771497021c7d225ae",
-      "file_name": "063 ai 大模型面试题.md",
+      "links": 93,
+      "sha256": "98ae82569ac9631f7831d99ba20f6b7814d8d0b2a52be316a1bb457293f16343",
+      "file_name": "ai.md",
       "file": "raw/repos/xiaolinnote/questions/063 ai 大模型面试题.md"
     },
     {
       "url": "https://xiaolinnote.com/git/01-why-learn-git.html",
-      "title": "01｜为什么要学 Git？ | 小林面试笔记",
+      "title": "01｜为什么要学 Git？",
       "topics": [
         "interview",
         "git"
       ],
       "links": 26,
-      "sha256": "27aa41f3982d103abdea0157a045dd4af494953945f2757dbc88c7626b8bbbd6",
-      "file_name": "064 git 01｜为什么要学 Git？.md",
+      "sha256": "7de5dbde9c1f3dbcf066a00f98bc9dfd839827d85631ea90e8965f27738d280b",
+      "file_name": "git - 01-why-learn-git.md",
       "file": "raw/repos/xiaolinnote/questions/064 git 01｜为什么要学 Git？.md"
     },
     {
       "url": "https://xiaolinnote.com/git/02-git-installation-setup.html",
-      "title": "02｜准备工作：5 分钟搞定 Git 安装与配置 | 小林面试笔记",
+      "title": "02｜准备工作：5 分钟搞定 Git 安装与配置",
       "topics": [
         "interview",
         "git"
       ],
       "links": 31,
-      "sha256": "018db7d85cf6900476a8afa8fdcd390ccecfa9ea59e9f41f382dd4f10058cd4b",
-      "file_name": "065 git 02｜准备工作：5 分钟搞定 Git 安装与配置.md",
+      "sha256": "8aea5ecb5ac9e304d61102d21b964273f6a1163fa01ce44a1f8aeba0b7b2907f",
+      "file_name": "git - 02-git-installation-setup.md",
       "file": "raw/repos/xiaolinnote/questions/065 git 02｜准备工作：5 分钟搞定 Git 安装与配置.md"
     },
     {
       "url": "https://xiaolinnote.com/git/03-create-git-repository.html",
-      "title": "03｜从 0 创建仓库：把本地文件夹变成 Git 管理的项目 | 小林面试笔记",
+      "title": "03｜从 0 创建仓库：把本地文件夹变成 Git 管理的项目",
       "topics": [
         "interview",
         "git"
       ],
       "links": 30,
-      "sha256": "bf9fc74a6914e8a57a23fe09cddaa786760b289b23776ddfe619c46b459d9bd7",
-      "file_name": "066 git 03｜从 0 创建仓库：把本地文件夹变成 Git 管理的项目.md",
+      "sha256": "00659f51a18bc7b76c56e25c1547c3827d112518fb64044be476406950ca9da1",
+      "file_name": "git - 03-create-git-repository.md",
       "file": "raw/repos/xiaolinnote/questions/066 git 03｜从 0 创建仓库：把本地文件夹变成 Git 管理的项目.md"
     },
     {
       "url": "https://xiaolinnote.com/git/04-save-file-changes.html",
-      "title": "04｜保存文件变动：提交代码的 2 步核心流程 | 小林面试笔记",
+      "title": "04｜保存文件变动：提交代码的 2 步核心流程",
       "topics": [
         "interview",
         "git"
       ],
       "links": 36,
-      "sha256": "781333617b228357878b882ca7fe7688b159dfeba13a0ac64119fbf8a0796b23",
-      "file_name": "067 git 04｜保存文件变动：提交代码的 2 步核心流程.md",
+      "sha256": "8636051d428105eba7e555cc8e221c372d1070c5f32c1f8ebc4ded4e64fcce3e",
+      "file_name": "git - 04-save-file-changes.md",
       "file": "raw/repos/xiaolinnote/questions/067 git 04｜保存文件变动：提交代码的 2 步核心流程.md"
     },
     {
       "url": "https://xiaolinnote.com/git/05-view-history.html",
-      "title": "05｜查看历史记录：找到过去的版本 | 小林面试笔记",
+      "title": "05｜查看历史记录：找到过去的版本",
       "topics": [
         "interview",
         "git"
       ],
       "links": 36,
-      "sha256": "b9ab7722d6d4595dcf97efa37bba2b832d96b7372f0531183514bbfe86f3289d",
-      "file_name": "068 git 05｜查看历史记录：找到过去的版本.md",
+      "sha256": "608770a536486adb0ea14ac8d2c6b46be3e4db85e9ca5d05132e63df8b314854",
+      "file_name": "git - 05-view-history.md",
       "file": "raw/repos/xiaolinnote/questions/068 git 05｜查看历史记录：找到过去的版本.md"
     },
     {
       "url": "https://xiaolinnote.com/git/06-undo-operations.html",
-      "title": "06｜撤销操作：改乱了怎么恢复 | 小林面试笔记",
+      "title": "06｜撤销操作：改乱了怎么恢复",
       "topics": [
         "interview",
         "git"
       ],
       "links": 45,
-      "sha256": "06992d14a2fceb90780e7af6471c838498cd9101f402c06e86237cd04b5db652",
-      "file_name": "069 git 06｜撤销操作：改乱了怎么恢复.md",
+      "sha256": "60733d293e9f896713cfc6f1ecd8fb41be8d05b09c91dde58228f81ecaac8616",
+      "file_name": "git - 06-undo-operations.md",
       "file": "raw/repos/xiaolinnote/questions/069 git 06｜撤销操作：改乱了怎么恢复.md"
     },
     {
       "url": "https://xiaolinnote.com/git/07-remote-repository-basics.html",
-      "title": "07｜远程仓库基础：连接 GitHub/GitLab | 小林面试笔记",
+      "title": "07｜远程仓库基础：连接 GitHub/GitLab",
       "topics": [
         "interview",
         "git"
       ],
       "links": 41,
-      "sha256": "ac4e7c3ce1a98eef1bc86422424bb6347203eb0e13d4bda5a0040fdc0fa70125",
-      "file_name": "070 git 07｜远程仓库基础：连接 GitHub GitLab.md",
+      "sha256": "81555a1073c4254097a5b8e1e7f9f25ec79e5e0d68ac8ef8c73cfff9a40164f9",
+      "file_name": "git - 07-remote-repository-basics.md",
       "file": "raw/repos/xiaolinnote/questions/070 git 07｜远程仓库基础：连接 GitHub GitLab.md"
     },
     {
       "url": "https://xiaolinnote.com/git/08-pull-and-push.html",
-      "title": "08｜拉取与推送：和远程仓库同步 | 小林面试笔记",
+      "title": "08｜拉取与推送：和远程仓库同步",
       "topics": [
         "interview",
         "git"
       ],
       "links": 48,
-      "sha256": "3ba5c9990661b6687bf62f0dcdc6eb536af564cd2eb6c64a52e387af52354d0d",
-      "file_name": "071 git 08｜拉取与推送：和远程仓库同步.md",
+      "sha256": "2b12c2e99420546d2489927e6f3b85ba05ba94bb7e69475a065a2771ec30d9bb",
+      "file_name": "git - 08-pull-and-push.md",
       "file": "raw/repos/xiaolinnote/questions/071 git 08｜拉取与推送：和远程仓库同步.md"
     },
     {
       "url": "https://xiaolinnote.com/git/09-branch-operations.html",
-      "title": "09｜分支操作：不影响主代码的 \"平行世界\" | 小林面试笔记",
+      "title": "09｜分支操作：不影响主代码的 \"平行世界\"",
       "topics": [
         "interview",
         "git"
       ],
       "links": 56,
-      "sha256": "7ea64fd85164c5c0c4243d83855b43e3619b6c4f041851ee022c3ddea3d05e9e",
-      "file_name": "072 git 09｜分支操作：不影响主代码的 \"平行世界\".md",
+      "sha256": "0a03b93055504dacd5232b1b4e84d720a16f3ae17a2dbc3c1aa948163422cf7a",
+      "file_name": "git - 09-branch-operations.md",
       "file": "raw/repos/xiaolinnote/questions/072 git 09｜分支操作：不影响主代码的 \"平行世界\".md"
     },
     {
       "url": "https://xiaolinnote.com/git/10-conflict-resolution.html",
-      "title": "10｜解决冲突：多人协作的必备技能 | 小林面试笔记",
+      "title": "10｜解决冲突：多人协作的必备技能",
       "topics": [
         "interview",
         "git"
       ],
       "links": 56,
-      "sha256": "b753abb7d87a0aab3d92500bbe6b90d70d990b68a1bb60d6f11b38d2cfcd35ec",
-      "file_name": "073 git 10｜解决冲突：多人协作的必备技能.md",
+      "sha256": "4f4052459a46f143c50ffbf35a8293d5e6ac564a75e3ee21f14a6bba15cf9e09",
+      "file_name": "git - 10-conflict-resolution.md",
       "file": "raw/repos/xiaolinnote/questions/073 git 10｜解决冲突：多人协作的必备技能.md"
     },
     {
       "url": "https://xiaolinnote.com/git/11-git-commands-cheat-sheet.html",
-      "title": "11｜常用命令速查：小白必备清单 | 小林面试笔记",
+      "title": "11｜常用命令速查：小白必备清单",
       "topics": [
         "interview",
         "git"
       ],
       "links": 48,
-      "sha256": "11b6b5f59e618b4abc30b1ccbdd58e0c0d5c80a2cabe8b5fb657d22f59f53f27",
-      "file_name": "074 git 11｜常用命令速查：小白必备清单.md",
+      "sha256": "981f7dfaa831be6e0daf05db0c0f2b60200bf2c37133fb00b95f27689d5c3210",
+      "file_name": "git - 11-git-commands-cheat-sheet.md",
       "file": "raw/repos/xiaolinnote/questions/074 git 11｜常用命令速查：小白必备清单.md"
     },
     {
       "url": "https://xiaolinnote.com/git/12-git-visualization-tools.html",
-      "title": "12｜可视化工具推荐：不想记命令也能操作 | 小林面试笔记",
+      "title": "12｜可视化工具推荐：不想记命令也能操作",
       "topics": [
         "interview",
         "git"
       ],
       "links": 56,
-      "sha256": "d7196ca473e786af36c5ba8034433af263c8ab4c742c21c62aa855ba7718246c",
-      "file_name": "075 git 12｜可视化工具推荐：不想记命令也能操作.md",
+      "sha256": "46c262064dafdf2bb3225a70c4eeb4c3aa0298008086885cf0f964dad5f4f31a",
+      "file_name": "git - 12-git-visualization-tools.md",
       "file": "raw/repos/xiaolinnote/questions/075 git 12｜可视化工具推荐：不想记命令也能操作.md"
     },
     {
       "url": "https://xiaolinnote.com/git/",
-      "title": "Git 命令快速入门教程 | 小林面试笔记",
+      "title": "Git 命令快速入门教程",
       "topics": [
         "interview",
         "git"
       ],
       "links": 31,
-      "sha256": "f39ccdb2f6c5fdcc7ebf44ee43006294c1e8485f559bc3a942a5845ae42d4040",
-      "file_name": "077 git Git 命令快速入门教程.md",
+      "sha256": "f4e18aa4d50f1c26f15b2180be38a19a4ee038a6b6dd21ca18a856e8bf980526",
+      "file_name": "git.md",
       "file": "raw/repos/xiaolinnote/questions/077 git Git 命令快速入门教程.md"
     },
     {
       "url": "https://xiaolinnote.com/git/git-appendix.html",
-      "title": "附录：Git 进阶技巧与常见问题 | 小林面试笔记",
+      "title": "附录：Git 进阶技巧与常见问题",
       "topics": [
         "interview",
         "git"
       ],
       "links": 47,
-      "sha256": "40349596afb029582c7a6970e63e01cea085028df6df7721fba439eb9fb10c30",
-      "file_name": "076 git 附录：Git 进阶技巧与常见问题.md",
+      "sha256": "1bbbebdd47fbc9d15c1a2fce6baeb6a7469fb9efad75e1c658b3d037dc478464",
+      "file_name": "git - git-appendix.md",
       "file": "raw/repos/xiaolinnote/questions/076 git 附录：Git 进阶技巧与常见问题.md"
     },
     {
       "url": "https://xiaolinnote.com/linux/01-terminal-shell-and-help.html",
-      "title": "第1章 走进命令行 | 小林面试笔记",
+      "title": "第1章 走进命令行",
       "topics": [
         "interview",
         "linux"
       ],
       "links": 27,
-      "sha256": "4a4a1017293bab8a33d40e26cc4cd4db90861a43e82624cd61e5303bbe67d35b",
-      "file_name": "079 linux 第1章 走进命令行.md",
+      "sha256": "fd74daf5bce26afa7e3682fc82ebda23d6822a99d8abc22c9302e0b358f65a4d",
+      "file_name": "linux - 01-terminal-shell-and-help.md",
       "file": "raw/repos/xiaolinnote/questions/079 linux 第1章 走进命令行.md"
     },
     {
       "url": "https://xiaolinnote.com/linux/02-path-and-filesystem-navigation.html",
-      "title": "第2章 路径与文件系统导航 | 小林面试笔记",
+      "title": "第2章 路径与文件系统导航",
       "topics": [
         "interview",
         "linux"
       ],
       "links": 37,
-      "sha256": "60dfb2b37617476e515df7dd13020baf1ac473a152379cc54319dab88142f864",
-      "file_name": "080 linux 第2章 路径与文件系统导航.md",
+      "sha256": "e1840f4467968e0eb1117381dca403840a4948723ce86eba629b6bc043c0a8d7",
+      "file_name": "linux - 02-path-and-filesystem-navigation.md",
       "file": "raw/repos/xiaolinnote/questions/080 linux 第2章 路径与文件系统导航.md"
     },
     {
       "url": "https://xiaolinnote.com/linux/03-file-operations.html",
-      "title": "第3章 文件与目录的日常操作 | 小林面试笔记",
+      "title": "第3章 文件与目录的日常操作",
       "topics": [
         "interview",
         "linux"
       ],
       "links": 39,
-      "sha256": "716e34097de17f07b88ab0d646a70421c6020e22289cd194ae1652538213df62",
-      "file_name": "081 linux 第3章 文件与目录的日常操作.md",
+      "sha256": "3f873a7e9517fe9f433b356de34dfeca7dbbbe71133ba8ef269a6757e163244c",
+      "file_name": "linux - 03-file-operations.md",
       "file": "raw/repos/xiaolinnote/questions/081 linux 第3章 文件与目录的日常操作.md"
     },
     {
       "url": "https://xiaolinnote.com/linux/04-permissions-and-ownership.html",
-      "title": "第4章 权限、所有权与用户基础 | 小林面试笔记",
+      "title": "第4章 权限、所有权与用户基础",
       "topics": [
         "interview",
         "linux"
       ],
       "links": 69,
-      "sha256": "cb91064ff4b22dc645db42a234f5a47f8b714ce93263732c97a31236b6e89ab4",
-      "file_name": "082 linux 第4章 权限、所有权与用户基础.md",
+      "sha256": "a4f5c2481e38582c62e3fccb724199fae9b84de4dd0ff126a1bc742c66f9bb88",
+      "file_name": "linux - 04-permissions-and-ownership.md",
       "file": "raw/repos/xiaolinnote/questions/082 linux 第4章 权限、所有权与用户基础.md"
     },
     {
       "url": "https://xiaolinnote.com/linux/05-text-viewing-and-editing.html",
-      "title": "第5章 文本快速查看与轻量编辑 | 小林面试笔记",
+      "title": "第5章 文本快速查看与轻量编辑",
       "topics": [
         "interview",
         "linux"
       ],
       "links": 51,
-      "sha256": "dc403a3a4ed5a433bfcb30045eb0048e61eb6d91a86528bcef4565ef9269a0df",
-      "file_name": "083 linux 第5章 文本快速查看与轻量编辑.md",
+      "sha256": "dd95b8598984fad2fdfb6389f4ee6e3a33288bc1caa534424eb6a270969d9409",
+      "file_name": "linux - 05-text-viewing-and-editing.md",
       "file": "raw/repos/xiaolinnote/questions/083 linux 第5章 文本快速查看与轻量编辑.md"
     },
     {
       "url": "https://xiaolinnote.com/linux/06-pipes-and-composition.html",
-      "title": "第6章 管道与命令组合 | 小林面试笔记",
+      "title": "第6章 管道与命令组合",
       "topics": [
         "interview",
         "linux"
       ],
       "links": 43,
-      "sha256": "8a4e271a7b0fa034c75721276f8ca61fa10fc52f9f3ce4381aefe26a921772f1",
-      "file_name": "084 linux 第6章 管道与命令组合.md",
+      "sha256": "cdc1d17344381bdddecb7d5c46eb72210845686ce844f259eeecca63262777db",
+      "file_name": "linux - 06-pipes-and-composition.md",
       "file": "raw/repos/xiaolinnote/questions/084 linux 第6章 管道与命令组合.md"
     },
     {
       "url": "https://xiaolinnote.com/linux/07-grep-awk-sed-essentials.html",
-      "title": "第7章 文本处理三剑客 | 小林面试笔记",
+      "title": "第7章 文本处理三剑客",
       "topics": [
         "interview",
         "linux"
       ],
       "links": 42,
-      "sha256": "9929647f0ea75ac608598a0c30814051d5cd8136fc37b89f4da59f0d91e8db48",
-      "file_name": "085 linux 第7章 文本处理三剑客.md",
+      "sha256": "a32bffdf2da88e6fc1e9eae045914988dbdb50b16b312568b869d1260d3da82b",
+      "file_name": "linux - 07-grep-awk-sed-essentials.md",
       "file": "raw/repos/xiaolinnote/questions/085 linux 第7章 文本处理三剑客.md"
     },
     {
       "url": "https://xiaolinnote.com/linux/08-process-and-job-control.html",
-      "title": "第8章 进程管理与作业控制 | 小林面试笔记",
+      "title": "第8章 进程管理与作业控制",
       "topics": [
         "interview",
         "linux"
       ],
       "links": 40,
-      "sha256": "629a0d9d058cb875f4ed3039d22d6f0efef7cbae644a1af4ca7ede06e507df09",
-      "file_name": "086 linux 第8章 进程管理与作业控制.md",
+      "sha256": "38388e08d9d642deddc8894ae8a35263d8a397028fa8cf41ca670dda83b5b91e",
+      "file_name": "linux - 08-process-and-job-control.md",
       "file": "raw/repos/xiaolinnote/questions/086 linux 第8章 进程管理与作业控制.md"
     },
     {
       "url": "https://xiaolinnote.com/linux/09-system-monitoring.html",
-      "title": "第9章 系统监控与资源排查 | 小林面试笔记",
+      "title": "第9章 系统监控与资源排查",
       "topics": [
         "interview",
         "linux"
       ],
       "links": 38,
-      "sha256": "05082b7a9617370ae80f45c70183d92d2fb0545b2f556a1884e04e0787e8255f",
-      "file_name": "087 linux 第9章 系统监控与资源排查.md",
+      "sha256": "2a4b1824e0887afde892332d1ca95f4b2e37062d85496f23954e53a98d82e637",
+      "file_name": "linux - 09-system-monitoring.md",
       "file": "raw/repos/xiaolinnote/questions/087 linux 第9章 系统监控与资源排查.md"
     },
     {
       "url": "https://xiaolinnote.com/linux/10-networking-and-remote.html",
-      "title": "第10章 网络工具与远程协作 | 小林面试笔记",
+      "title": "第10章 网络工具与远程协作",
       "topics": [
         "interview",
         "linux"
       ],
       "links": 50,
-      "sha256": "4a91320b55a7ebb5037fe0289b30473be5ada84b9f5866d672589ba30746b9b6",
-      "file_name": "088 linux 第10章 网络工具与远程协作.md",
+      "sha256": "6e48abb8423d542bf6ba0f04c476b0974ece713a1c1f92bbdbb83af673e2d6c1",
+      "file_name": "linux - 10-networking-and-remote.md",
       "file": "raw/repos/xiaolinnote/questions/088 linux 第10章 网络工具与远程协作.md"
     },
     {
       "url": "https://xiaolinnote.com/linux/",
-      "title": "Linux 命令快速入门 | 小林面试笔记",
+      "title": "Linux 命令快速入门",
       "topics": [
         "interview",
         "linux"
       ],
       "links": 37,
-      "sha256": "e25b505a727a32dfd718a4e7a95d814c87527ccf27273ea08e46e39d602e3386",
-      "file_name": "094 linux Linux 命令快速入门.md",
+      "sha256": "286e416b7f6d2471ebaa2fda5352ee5d44dd76e15af2b012cb12dd71dc516c98",
+      "file_name": "linux.md",
       "file": "raw/repos/xiaolinnote/questions/094 linux Linux 命令快速入门.md"
     },
     {
       "url": "https://xiaolinnote.com/linux/appendix-a0-shell-scripting-basics.html",
-      "title": "附录A0：Shell脚本简单入门 | 小林面试笔记",
+      "title": "附录A0：Shell脚本简单入门",
       "topics": [
         "interview",
         "linux"
       ],
       "links": 41,
-      "sha256": "3054ba24712a429c575902103ed5e1ad1bbe9992b0bd80cc893f4894e0d8c4b5",
-      "file_name": "089 linux 附录A0：Shell脚本简单入门.md",
+      "sha256": "37e98775ccc4b2e5bef9a25999b903edd5d1f6a255d1a54fb69de48af745ef2f",
+      "file_name": "linux - appendix-a0-shell-scripting-basics.md",
       "file": "raw/repos/xiaolinnote/questions/089 linux 附录A0：Shell脚本简单入门.md"
     },
     {
       "url": "https://xiaolinnote.com/linux/appendix-a1-command-cheat-sheet.html",
-      "title": "附录A1：常用命令速查表 | 小林面试笔记",
+      "title": "附录A1：常用命令速查表",
       "topics": [
         "interview",
         "linux"
       ],
       "links": 67,
-      "sha256": "175820e6013876236adfdc19669180c9acf9e19fb6d64425fa4a891626d1d21b",
-      "file_name": "090 linux 附录A1：常用命令速查表.md",
+      "sha256": "98215e96b7792dc39accfda4dc2fee40e4d333f03750e3bba6be5765a195e290",
+      "file_name": "linux - appendix-a1-command-cheat-sheet.md",
       "file": "raw/repos/xiaolinnote/questions/090 linux 附录A1：常用命令速查表.md"
     },
     {
       "url": "https://xiaolinnote.com/linux/appendix-a2-regex-wildcards.html",
-      "title": "附录A2：正则表达式与通配符速查 | 小林面试笔记",
+      "title": "附录A2：正则表达式与通配符速查",
       "topics": [
         "interview",
         "linux"
       ],
       "links": 48,
-      "sha256": "e8df272c0fe5a7c9241159069c010a1d78770c95e9b3de55db7db11214aa26a2",
-      "file_name": "091 linux 附录A2：正则表达式与通配符速查.md",
+      "sha256": "ba8faee465a88454198ddcb8b1648c0313943ec900703c516e232c4c9b487735",
+      "file_name": "linux - appendix-a2-regex-wildcards.md",
       "file": "raw/repos/xiaolinnote/questions/091 linux 附录A2：正则表达式与通配符速查.md"
     },
     {
       "url": "https://xiaolinnote.com/linux/appendix-a3-common-pitfalls-safety-tips.html",
-      "title": "附录A3：新手常见坑与安全小贴士 | 小林面试笔记",
+      "title": "附录A3：新手常见坑与安全小贴士",
       "topics": [
         "interview",
         "linux"
       ],
       "links": 57,
-      "sha256": "c10e6a8228f107e35eef656427858089453616c4fbee9bc2d0e2e8954183befd",
-      "file_name": "092 linux 附录A3：新手常见坑与安全小贴士.md",
+      "sha256": "158326e3ae51bf84a89ce9ccb8a2394578535b350211f8d142336c899d96ef17",
+      "file_name": "linux - appendix-a3-common-pitfalls-safety-tips.md",
       "file": "raw/repos/xiaolinnote/questions/092 linux 附录A3：新手常见坑与安全小贴士.md"
     },
     {
       "url": "https://xiaolinnote.com/linux/appendix-a4-practice-tasks.html",
-      "title": "附录A4：练习清单 - 10个真实场景迷你任务 | 小林面试笔记",
+      "title": "附录A4：练习清单 - 10个真实场景迷你任务",
       "topics": [
         "interview",
         "linux"
       ],
       "links": 26,
-      "sha256": "8133f8517838d48ef3bd0a547463e684e4f4a0491899e096e7fc6571000091dc",
-      "file_name": "093 linux 附录A4：练习清单 - 10个真实场景迷你任务.md",
+      "sha256": "6f3c4778d2195d445d6c86b92629923958aa35178dcbd7094c67084865515602",
+      "file_name": "linux - appendix-a4-practice-tasks.md",
       "file": "raw/repos/xiaolinnote/questions/093 linux 附录A4：练习清单 - 10个真实场景迷你任务.md"
     },
     {
-      "url": "https://xiaolinnote.com/sql/",
-      "title": "SQL 快速入门教程 | 小林面试笔记",
-      "topics": [
-        "interview",
-        "database",
-        "sql"
-      ],
-      "links": 24,
-      "sha256": "5aafa31d9f789f004eafd693ab812ba81cf0b005419e349a46729d3ab54d9800",
-      "file_name": "120 sql SQL 快速入门教程.md",
-      "file": "raw/repos/xiaolinnote/questions/120 sql SQL 快速入门教程.md"
-    },
-    {
       "url": "https://xiaolinnote.com/ai/agent/10_multiagent.html",
-      "title": "10. 什么是 Multi-Agent？ | 小林面试笔记",
+      "title": "10. 什么是 Multi-Agent？",
       "topics": [
         "interview",
         "ai",
@@ -415,13 +546,13 @@
         "agent"
       ],
       "links": 33,
-      "sha256": "137cedcdaf4f39380ad96ef6811aa4ba9121bae4b9c7b21fdbbecfe36c488374",
-      "file_name": "001 ai agent 10. 什么是 Multi-Agent？.md",
+      "sha256": "e03c987a1d85dccfa4b4413ebc2dc243b60fb91460b6b08474a87ba6e9a83d88",
+      "file_name": "ai - agent - 10_multiagent.md",
       "file": "raw/repos/xiaolinnote/questions/001 ai agent 10. 什么是 Multi-Agent？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/agent/11_single_multi.html",
-      "title": "11. 说说 Single-Agent 和 Multi-Agent 的设计方案？ | 小林面试笔记",
+      "title": "11. 说说 Single-Agent 和 Multi-Agent 的设计方案？",
       "topics": [
         "interview",
         "ai",
@@ -429,13 +560,13 @@
         "agent"
       ],
       "links": 36,
-      "sha256": "71ec32b3f35026fc7a7802825e9cab03c9ec0cdc5a4cf91e55da209fb1c507ec",
-      "file_name": "002 ai agent 11. 说说 Single-Agent 和 Multi-Agent 的设计方案？.md",
+      "sha256": "1a2fb42fa6026dfeeededaa2af50d41c322a09e0da1d2b40bffde43f257b85e9",
+      "file_name": "ai - agent - 11_single_multi.md",
       "file": "raw/repos/xiaolinnote/questions/002 ai agent 11. 说说 Single-Agent 和 Multi-Agent 的设计方案？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/agent/12_memcompress.html",
-      "title": "12. Agent 记忆压缩通常有哪些方法？ | 小林面试笔记",
+      "title": "12. Agent 记忆压缩通常有哪些方法？",
       "topics": [
         "interview",
         "ai",
@@ -443,13 +574,13 @@
         "agent"
       ],
       "links": 37,
-      "sha256": "c6ae1d4c4e3074773aaee6911777b6fca89617f2ee8df26b1bdb94390212d9be",
-      "file_name": "003 ai agent 12. Agent 记忆压缩通常有哪些方法？.md",
+      "sha256": "997afb54bd390d19a626a39cfe50546d24c9e450252c456f3566ce30f64013e3",
+      "file_name": "ai - agent - 12_memcompress.md",
       "file": "raw/repos/xiaolinnote/questions/003 ai agent 12. Agent 记忆压缩通常有哪些方法？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/agent/13_handcode.html",
-      "title": "13. 在工程实践中，为什么有时候选择「手搓」Agent，而不是直接用成熟框架？ | 小林面试笔记",
+      "title": "13. 在工程实践中，为什么有时候选择「手搓」Agent，而不是直接用成熟框架？",
       "topics": [
         "interview",
         "ai",
@@ -457,13 +588,13 @@
         "agent"
       ],
       "links": 36,
-      "sha256": "ad1a2b415b8fa36a9ea6afba6ff223f24e4d6777d2790215c5c03ae89943009c",
-      "file_name": "004 ai agent 13. 在工程实践中，为什么有时候选择「手搓」Agent，而不是直接用成熟框架？.md",
+      "sha256": "82180e57ce0daf05c46eefbc28e1386be18741e36901b4cff13c1104e38fa1d7",
+      "file_name": "ai - agent - 13_handcode.md",
       "file": "raw/repos/xiaolinnote/questions/004 ai agent 13. 在工程实践中，为什么有时候选择「手搓」Agent，而不是直接用成熟框架？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/agent/14_planning.html",
-      "title": "14. 如何赋予 LLM 规划能力？ | 小林面试笔记",
+      "title": "14. 如何赋予 LLM 规划能力？",
       "topics": [
         "interview",
         "ai",
@@ -471,13 +602,13 @@
         "agent"
       ],
       "links": 37,
-      "sha256": "d8eae8458f2fdaed4e120fe8bc80463a060804359db296d256263be6b92f20fd",
-      "file_name": "005 ai agent 14. 如何赋予 LLM 规划能力？.md",
+      "sha256": "5959b3d64dd2f29bd64ba2fed4524c8a0e1434580231f9072275ac14040d080a",
+      "file_name": "ai - agent - 14_planning.md",
       "file": "raw/repos/xiaolinnote/questions/005 ai agent 14. 如何赋予 LLM 规划能力？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/agent/15_reflection.html",
-      "title": "15. 讲讲 Agent 的反思机制？为什么要用反思？具体怎么实现？ | 小林面试笔记",
+      "title": "15. 讲讲 Agent 的反思机制？为什么要用反思？具体怎么实现？",
       "topics": [
         "interview",
         "ai",
@@ -485,13 +616,13 @@
         "agent"
       ],
       "links": 37,
-      "sha256": "ffaf2906e5c4fbb4b0b3e8c8e21514e84a88da985652373904b5d2aeb7d5f793",
-      "file_name": "006 ai agent 15. 讲讲 Agent 的反思机制？为什么要用反思？具体怎么实现？.md",
+      "sha256": "b6566526ef56c35e5b67cd2eae4b46534921c558da4d07797d1ae20e47caf4c5",
+      "file_name": "ai - agent - 15_reflection.md",
       "file": "raw/repos/xiaolinnote/questions/006 ai agent 15. 讲讲 Agent 的反思机制？为什么要用反思？具体怎么实现？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/agent/16_collab.html",
-      "title": "16. 如何设计多 Agent 的协作与动态切换机制？ | 小林面试笔记",
+      "title": "16. 如何设计多 Agent 的协作与动态切换机制？",
       "topics": [
         "interview",
         "ai",
@@ -499,13 +630,13 @@
         "agent"
       ],
       "links": 36,
-      "sha256": "0b8177876ad9ecddcdd6440439a0cc9f52203cc2050a0a5be842886141c1f5aa",
-      "file_name": "007 ai agent 16. 如何设计多 Agent 的协作与动态切换机制？.md",
+      "sha256": "158407b7bd6322b344aa5b62d749bef6a0a4b52b577711c7ff0e97a5f73a2d59",
+      "file_name": "ai - agent - 16_collab.md",
       "file": "raw/repos/xiaolinnote/questions/007 ai agent 16. 如何设计多 Agent 的协作与动态切换机制？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/agent/1_whatisagent.html",
-      "title": "1. 什么是 Agent？与大模型有什么本质不同？ | 小林面试笔记",
+      "title": "1. 什么是 Agent？与大模型有什么本质不同？",
       "topics": [
         "interview",
         "ai",
@@ -513,13 +644,13 @@
         "agent"
       ],
       "links": 36,
-      "sha256": "bd5a3c59a3e04fb5a1e3d612b7b0111dcf1b050ba59007d5e27275e2b2dcbb1c",
-      "file_name": "008 ai agent 1. 什么是 Agent？与大模型有什么本质不同？.md",
+      "sha256": "7ced84ca1ba79c6417f041488bf8cb773223e690a48aa6039dfa1c05878f0bb7",
+      "file_name": "ai - agent - 1_whatisagent.md",
       "file": "raw/repos/xiaolinnote/questions/008 ai agent 1. 什么是 Agent？与大模型有什么本质不同？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/agent/2_components.html",
-      "title": "2. Agent 的基本架构由哪些核心组件构成？ | 小林面试笔记",
+      "title": "2. Agent 的基本架构由哪些核心组件构成？",
       "topics": [
         "interview",
         "ai",
@@ -527,13 +658,13 @@
         "agent"
       ],
       "links": 36,
-      "sha256": "e2a73b659a81397f610509096af84894ded5fe0a889a6770cc3df5d17b225e83",
-      "file_name": "009 ai agent 2. Agent 的基本架构由哪些核心组件构成？.md",
+      "sha256": "a2eca6b093d5b1223abbbf55779ed9e0ed377a7da2a2cb59749eb5cb9241827b",
+      "file_name": "ai - agent - 2_components.md",
       "file": "raw/repos/xiaolinnote/questions/009 ai agent 2. Agent 的基本架构由哪些核心组件构成？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/agent/3_workflow_tools.html",
-      "title": "3. Workflow，Agent，Tools 这三个的概念和区别介绍一下？ | 小林面试笔记",
+      "title": "3. Workflow，Agent，Tools 这三个的概念和区别介绍一下？",
       "topics": [
         "interview",
         "ai",
@@ -541,13 +672,13 @@
         "agent"
       ],
       "links": 36,
-      "sha256": "2e9702fce7e1f3ff0e0f84b74597d53be7d8bf297463609bc9fbdf0248ea799e",
-      "file_name": "010 ai agent 3. Workflow，Agent，Tools 这三个的概念和区别介绍一下？.md",
+      "sha256": "8820fb396fc5d1e41f268871bc446ff5f7a9a29ebeb203cd3b4b2a5ccc0c1b48",
+      "file_name": "ai - agent - 3_workflow_tools.md",
       "file": "raw/repos/xiaolinnote/questions/010 ai agent 3. Workflow，Agent，Tools 这三个的概念和区别介绍一下？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/agent/4_patterns.html",
-      "title": "4. 了解哪些其他的 Agent 设计范式？Agent 和 Workflow的区别是什么？ | 小林面试笔记",
+      "title": "4. 了解哪些其他的 Agent 设计范式？Agent 和 Workflow的区别是什么？",
       "topics": [
         "interview",
         "ai",
@@ -555,13 +686,13 @@
         "agent"
       ],
       "links": 34,
-      "sha256": "9aead5477b4b3410e8e80ee08054f847a9cc919cbe06c5125cc2320aa24efcc8",
-      "file_name": "011 ai agent 4. 了解哪些其他的 Agent 设计范式？Agent 和 Workflow的区别是什么？.md",
+      "sha256": "ea2453fd1a1a84de890f10e7576463da89a35dff15a54ae8d92a6bc52d79526c",
+      "file_name": "ai - agent - 4_patterns.md",
       "file": "raw/repos/xiaolinnote/questions/011 ai agent 4. 了解哪些其他的 Agent 设计范式？Agent 和 Workflow的区别是什么？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/agent/5_react.html",
-      "title": "5. Agent 推理模式有哪些？ReAct 是啥？具体是怎么实现的？ | 小林面试笔记",
+      "title": "5. Agent 推理模式有哪些？ReAct 是啥？具体是怎么实现的？",
       "topics": [
         "interview",
         "ai",
@@ -569,13 +700,13 @@
         "agent"
       ],
       "links": 36,
-      "sha256": "97ed266bb8e7fea49fbe001e9b436725ba467d015ac0c8459ff47237fd16315a",
-      "file_name": "012 ai agent 5. Agent 推理模式有哪些？ReAct 是啥？具体是怎么实现的？.md",
+      "sha256": "46cecc10ff8e05261503343a607449b3ce7267216d54f6fdbcfd8884967ed669",
+      "file_name": "ai - agent - 5_react.md",
       "file": "raw/repos/xiaolinnote/questions/012 ai agent 5. Agent 推理模式有哪些？ReAct 是啥？具体是怎么实现的？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/agent/6_three_patterns.html",
-      "title": "6. ReAct、Plan-and-Execute、Reflection 三种范式有什么核心区别？实际项目中该如何选型？ | 小林面试笔记",
+      "title": "6. ReAct、Plan-and-Execute、Reflection 三种范式有什么核心区别？实际项目中该如何选型？",
       "topics": [
         "interview",
         "ai",
@@ -583,13 +714,13 @@
         "agent"
       ],
       "links": 38,
-      "sha256": "e72aaab7367968c81ad248c4b822741c75fdc3ae01b956aae74055f47f460539",
-      "file_name": "013 ai agent 6. ReAct、Plan-and-Execute、Reflection 三种范式有什么核心区别？实际项目中该如何选型？.md",
+      "sha256": "01caf24bcf2fcd73b3a32c45c50d435b889963600aeee3c5c83971dc9aca3941",
+      "file_name": "ai - agent - 6_three_patterns.md",
       "file": "raw/repos/xiaolinnote/questions/013 ai agent 6. ReAct、Plan-and-Execute、Reflection 三种范式有什么核心区别？实际项目中该如何选型？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/agent/7_tasksplit.html",
-      "title": "7. 复杂任务怎么做的任务拆分？为什么要拆分？效果如何提升？ | 小林面试笔记",
+      "title": "7. 复杂任务怎么做的任务拆分？为什么要拆分？效果如何提升？",
       "topics": [
         "interview",
         "ai",
@@ -597,13 +728,13 @@
         "agent"
       ],
       "links": 37,
-      "sha256": "a7466771308fbeade37f10152d9951f2bc7f74420863c9aacd457de6e077f72a",
-      "file_name": "014 ai agent 7. 复杂任务怎么做的任务拆分？为什么要拆分？效果如何提升？.md",
+      "sha256": "e3beb92dab6ae173f07e91948999fd8bde9e68e989622e82921f3a44f239800e",
+      "file_name": "ai - agent - 7_tasksplit.md",
       "file": "raw/repos/xiaolinnote/questions/014 ai agent 7. 复杂任务怎么做的任务拆分？为什么要拆分？效果如何提升？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/agent/8_memory.html",
-      "title": "8. 请你介绍一下 AI Agent 的记忆机制，并说明在实际开发中应该如何设计记忆模块？ | 小林面试笔记",
+      "title": "8. 请你介绍一下 AI Agent 的记忆机制，并说明在实际开发中应该如何设计记忆模块？",
       "topics": [
         "interview",
         "ai",
@@ -611,13 +742,13 @@
         "agent"
       ],
       "links": 39,
-      "sha256": "4bde4a1ae1d5555f389ad3398420ced5003dc06d20e9a54b27276d96b563a8b9",
-      "file_name": "015 ai agent 8. 请你介绍一下 AI Agent 的记忆机制，并说明在实际开发中应该如何设计记忆模块？.md",
+      "sha256": "590b34ab90a5b830e5c5fb7886bf543d87d034db89e514aca94d3940ed8893e0",
+      "file_name": "ai - agent - 8_memory.md",
       "file": "raw/repos/xiaolinnote/questions/015 ai agent 8. 请你介绍一下 AI Agent 的记忆机制，并说明在实际开发中应该如何设计记忆模块？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/agent/9_memory_storage.html",
-      "title": "9. Agent 的长短期记忆系统怎么做的？记忆是怎么存的？粒度是多少？怎么用的？ | 小林面试笔记",
+      "title": "9. Agent 的长短期记忆系统怎么做的？记忆是怎么存的？粒度是多少？怎么用的？",
       "topics": [
         "interview",
         "ai",
@@ -625,13 +756,13 @@
         "agent"
       ],
       "links": 34,
-      "sha256": "d10a2e387b3c918d9539244887d231d4a77838c0d2bad59f98b85af78421e502",
-      "file_name": "016 ai agent 9. Agent 的长短期记忆系统怎么做的？记忆是怎么存的？粒度是多少？怎么用的？.md",
+      "sha256": "9241a14d4589640d70e35fe4128c39f1e671c75f0e749b309133d32cbfc48d38",
+      "file_name": "ai - agent - 9_memory_storage.md",
       "file": "raw/repos/xiaolinnote/questions/016 ai agent 9. Agent 的长短期记忆系统怎么做的？记忆是怎么存的？粒度是多少？怎么用的？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/agent/",
-      "title": "01｜ Agent面试题 | 小林面试笔记",
+      "title": "01｜ Agent面试题",
       "topics": [
         "interview",
         "ai",
@@ -639,27 +770,27 @@
         "agent"
       ],
       "links": 28,
-      "sha256": "b44578fe519b635817e527053ed62e58c927431a416a14703df7b5a289446c16",
-      "file_name": "018 ai agent 01｜ Agent面试题.md",
+      "sha256": "503ab4ce60e0a2b6b278ef6a9f31f4ed38df2245349d19fe6f8dc3050f2481a1",
+      "file_name": "ai - agent.md",
       "file": "raw/repos/xiaolinnote/questions/018 ai agent 01｜ Agent面试题.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/agent/agent_info.html",
-      "title": "Agent 面试题介绍 | 小林面试笔记",
+      "title": "Agent 面试题介绍",
       "topics": [
         "interview",
         "ai",
         "llm",
         "agent"
       ],
-      "links": 30,
-      "sha256": "fd9e057b73853149bc25ed77850cdb7624eaa09f8c904cf3a55b1eb6355486b7",
-      "file_name": "017 ai agent Agent 面试题介绍.md",
+      "links": 31,
+      "sha256": "891815366f1715fe2cce6905b4c7d2afd83cf4cdda6e6b1658e99e35469cd95d",
+      "file_name": "ai - agent - agent_info.md",
       "file": "raw/repos/xiaolinnote/questions/017 ai agent Agent 面试题介绍.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/langchian/",
-      "title": "05｜ LangChain框架面试题 | 小林面试笔记",
+      "title": "05｜ LangChain框架面试题",
       "topics": [
         "interview",
         "ai",
@@ -667,13 +798,13 @@
         "langchain"
       ],
       "links": 11,
-      "sha256": "64d5dd3aa053011dfb93731e02ca398f2cbda9334f4107d36034e5403df5029d",
-      "file_name": "020 ai langchian 05｜ LangChain框架面试题.md",
+      "sha256": "fad53774feddb49b8c009134651e6cd81ec61832f080ad6e2eed2bab17ac8547",
+      "file_name": "ai - langchian.md",
       "file": "raw/repos/xiaolinnote/questions/020 ai langchian 05｜ LangChain框架面试题.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/langchian/langchain_info.html",
-      "title": "LangChain框架面试题介绍 | 小林面试笔记",
+      "title": "LangChain框架面试题介绍",
       "topics": [
         "interview",
         "ai",
@@ -681,39 +812,325 @@
         "langchain"
       ],
       "links": 11,
-      "sha256": "d4de8b050ff105e7f70b17010e0adf8f931a65f075f95207860c77109804756d",
-      "file_name": "019 ai langchian LangChain框架面试题介绍.md",
+      "sha256": "370e8e7e5b1ee92518f9b601b864bad333944a8c1f211365fe64693a4ad7412a",
+      "file_name": "ai - langchian - langchain_info.md",
       "file": "raw/repos/xiaolinnote/questions/019 ai langchian LangChain框架面试题介绍.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/llm/",
-      "title": "03｜ 大模型工程面试题 | 小林面试笔记",
+      "title": "03｜ 大模型工程面试题",
       "topics": [
         "interview",
         "ai",
         "llm"
       ],
-      "links": 12,
-      "sha256": "ed7c9ce7a8124ed90e2a30a5115e6969f24452399da172a501556b079d8b7983",
-      "file_name": "022 ai llm 03｜ 大模型工程面试题.md",
+      "links": 34,
+      "sha256": "68bcc89cb15cbcf4d9a132bad19687863ad4e219ad99332c944a7cd2cb8d4ac2",
+      "file_name": "ai - llm.md",
       "file": "raw/repos/xiaolinnote/questions/022 ai llm 03｜ 大模型工程面试题.md"
     },
     {
-      "url": "https://xiaolinnote.com/ai/llm/llm_info.html",
-      "title": "大模型工程面试题介绍 | 小林面试笔记",
+      "url": "https://xiaolinnote.com/ai/llm/cot.html",
+      "title": "17. 什么是 CoT？为啥效果好？它有什么缺点或局限性？",
       "topics": [
         "interview",
         "ai",
         "llm"
       ],
-      "links": 11,
-      "sha256": "4075e9fb506bce6a5f0456ad9c18278799047fe7670555d0b675662252c5cf96",
-      "file_name": "021 ai llm 大模型工程面试题介绍.md",
+      "links": 44,
+      "sha256": "2fc42c73aa62eec9fc386ff881a9a6718828954fc3fb4c66666b63312b65af77",
+      "file_name": "ai - llm - cot.md",
+      "file": "raw/repos/xiaolinnote/questions/121 ai llm 17. 什么是 CoT？为啥效果好？它有什么缺点或局限性？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/decoding_strategies.html",
+      "title": "12. 大模型生成文本时的解码策略有哪些？贪心、Beam Search、采样分别什么时候用？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 45,
+      "sha256": "3a9432ae627b3812d3932fd79f5ce5caf8e18aca728454febb9a228c9960bf97",
+      "file_name": "ai - llm - decoding_strategies.md",
+      "file": "raw/repos/xiaolinnote/questions/122 ai llm 12. 大模型生成文本时的解码策略有哪些？贪心、Beam Search、采样分别什么时候用？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/deployment_frameworks.html",
+      "title": "20. 大模型部署有哪些主流方案？vLLM、TGI、llama.cpp、SGLang 实际项目里怎么选？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 46,
+      "sha256": "cde2e73c243ffba028cf8e677764a3ae236a6a38901f38d6e68a9628d19a27ea",
+      "file_name": "ai - llm - deployment_frameworks.md",
+      "file": "raw/repos/xiaolinnote/questions/123 ai llm 20. 大模型部署有哪些主流方案？vLLM、TGI、llama.cpp、SGLang 实际项目里怎么选？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/dpo_vs_ppo.html",
+      "title": "11. 大模型的 DPO 和 PPO 的区别是什么？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 44,
+      "sha256": "a445fb51a55d560c3f49758e01a97afee2b74dcd47d380adea9ec79704d980b7",
+      "file_name": "ai - llm - dpo_vs_ppo.md",
+      "file": "raw/repos/xiaolinnote/questions/124 ai llm 11. 大模型的 DPO 和 PPO 的区别是什么？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/evaluation_metrics.html",
+      "title": "21. 大模型能力评测指标有哪些？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 43,
+      "sha256": "fe8b9ac359e5a82ced72c92026d777c24e084f293c1f3dcc34c532b156c0d464",
+      "file_name": "ai - llm - evaluation_metrics.md",
+      "file": "raw/repos/xiaolinnote/questions/125 ai llm 21. 大模型能力评测指标有哪些？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/finetuning.html",
+      "title": "8. 大模型微调的方案有哪些？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 43,
+      "sha256": "2e9401e8b103ed98fe67bf4b64bf29af2fe942108b5529b641b5e17f0a237367",
+      "file_name": "ai - llm - finetuning.md",
+      "file": "raw/repos/xiaolinnote/questions/126 ai llm 8. 大模型微调的方案有哪些？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/hallucination.html",
+      "title": "18. 大模型为什么会出现幻觉？怎么缓解？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 47,
+      "sha256": "d400b1d7e0a096b29053f83127d3409de1cdbe7983d6af41613bf2a69fbe6509",
+      "file_name": "ai - llm - hallucination.md",
+      "file": "raw/repos/xiaolinnote/questions/127 ai llm 18. 大模型为什么会出现幻觉？怎么缓解？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/kv_cache_prompt_caching.html",
+      "title": "14. KV Cache 是什么？Prompt Caching 的原理是什么？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 46,
+      "sha256": "785e3a3039edd3e392ba977fa24cbd03e497ad68f97e4f6bcf163933bc20f1af",
+      "file_name": "ai - llm - kv_cache_prompt_caching.md",
+      "file": "raw/repos/xiaolinnote/questions/128 ai llm 14. KV Cache 是什么？Prompt Caching 的原理是什么？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/llm_info.html",
+      "title": "大模型工程面试题介绍",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 41,
+      "sha256": "9b4b3b11dac8e7c07822ad2a3cc9daec96045ca22542185bd8b7fd60ee308b77",
+      "file_name": "ai - llm - llm_info.md",
       "file": "raw/repos/xiaolinnote/questions/021 ai llm 大模型工程面试题介绍.md"
     },
     {
+      "url": "https://xiaolinnote.com/ai/llm/llm_training.html",
+      "title": "6. 大模型是怎么训练出来的？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 43,
+      "sha256": "c26bd6979ee29ef4906bdcc2809820dbc3e7372b8218e40202e9ffce375b83c6",
+      "file_name": "ai - llm - llm_training.md",
+      "file": "raw/repos/xiaolinnote/questions/129 ai llm 6. 大模型是怎么训练出来的？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/lora.html",
+      "title": "9. 请讲一下 LoRA 技术，除了减少参数量，它还有哪些优点？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 48,
+      "sha256": "463db6456198fa4f4047d310804ba509b29db85c4a0d7b1fc0e23851a3866408",
+      "file_name": "ai - llm - lora.md",
+      "file": "raw/repos/xiaolinnote/questions/130 ai llm 9. 请讲一下 LoRA 技术，除了减少参数量，它还有哪些优点？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/mha_mqa_gqa_flash_attention.html",
+      "title": "3. 多头注意力（MHA）有哪些局限？MQA、GQA、Flash Attention 怎么解决？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 44,
+      "sha256": "3f460b25cf382e6bbcbaff502393ee75bbec12cb109bf7f4038aabed74c59553",
+      "file_name": "ai - llm - mha_mqa_gqa_flash_attention.md",
+      "file": "raw/repos/xiaolinnote/questions/131 ai llm 3. 多头注意力（MHA）有哪些局限？MQA、GQA、Flash Attention 怎么解决？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/model_selection.html",
+      "title": "22. 对比使用过哪些主流大模型？你们项目中最终选用了哪个模型？为什么？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 40,
+      "sha256": "b2d89379329e159e81d995f9f6d56ee357a5cf3350ae11c6b51ac3e56ea62a9b",
+      "file_name": "ai - llm - model_selection.md",
+      "file": "raw/repos/xiaolinnote/questions/132 ai llm 22. 对比使用过哪些主流大模型？你们项目中最终选用了哪个模型？为什么？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/moe.html",
+      "title": "19. MoE 混合专家模型是什么？DeepSeek V3、Qwen 为什么用 MoE？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 45,
+      "sha256": "c2306359b723d39c286a737668202ac29f4f5e5d21065a60c76fbe73d3c06c47",
+      "file_name": "ai - llm - moe.md",
+      "file": "raw/repos/xiaolinnote/questions/133 ai llm 19. MoE 混合专家模型是什么？DeepSeek V3、Qwen 为什么用 MoE？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/position_encoding.html",
+      "title": "4. 大模型的位置编码是干什么用的？sin/cos、RoPE、ALiBi 有什么区别？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 45,
+      "sha256": "1340847a57b43d3853da8b55b61fa06a5f050451a9a38715b572f7111d11c353",
+      "file_name": "ai - llm - position_encoding.md",
+      "file": "raw/repos/xiaolinnote/questions/134 ai llm 4. 大模型的位置编码是干什么用的？sin-cos、RoPE、ALiBi 有什么区别？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/post_training.html",
+      "title": "10. SFT 之后还有哪些 Post-Training？RLHF、DPO、GRPO、拒绝采样什么关系？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 46,
+      "sha256": "1566e26266ceb8dc83ba900ca64a7d534318b4158b24d4b614194bc0370cbb3c",
+      "file_name": "ai - llm - post_training.md",
+      "file": "raw/repos/xiaolinnote/questions/135 ai llm 10. SFT 之后还有哪些 Post-Training？RLHF、DPO、GRPO、拒绝采样什么关系？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/prompt_engineering.html",
+      "title": "16. 如何写好 Prompt？分享下 Prompt 工程实践经验？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 44,
+      "sha256": "acae64c9de694534c77e419edc196c36e477ccb1f2fec7bb0c2a1c1ca8fe2e59",
+      "file_name": "ai - llm - prompt_engineering.md",
+      "file": "raw/repos/xiaolinnote/questions/136 ai llm 16. 如何写好 Prompt？分享下 Prompt 工程实践经验？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/quantization.html",
+      "title": "15. 大模型量化是什么？INT8/INT4/AWQ/GPTQ 怎么选？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 46,
+      "sha256": "6f3be0d1abac6cf84989a3dc45dd717655b7abfcf2fa47e38d65f37808f53fd0",
+      "file_name": "ai - llm - quantization.md",
+      "file": "raw/repos/xiaolinnote/questions/137 ai llm 15. 大模型量化是什么？INT8-INT4-AWQ-GPTQ 怎么选？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/scaling_law_emergence.html",
+      "title": "7. 什么是 Scaling Law？大模型的「涌现能力」是怎么回事？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 45,
+      "sha256": "496d2c210842c0322e52bf7d5542dc871a500fd6ff9192d8266e9481fb76612f",
+      "file_name": "ai - llm - scaling_law_emergence.md",
+      "file": "raw/repos/xiaolinnote/questions/138 ai llm 7. 什么是 Scaling Law？大模型的「涌现能力」是怎么回事？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/temperature_top_p_top_k.html",
+      "title": "13. 大模型的参数：温度值、Top-P、Top-K 分别是什么？各个场景下的最佳设置是什么？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 43,
+      "sha256": "169dcc29bbe4563b1087c94711087320105b160856e8714d5019130e0cce7c52",
+      "file_name": "ai - llm - temperature_top_p_top_k.md",
+      "file": "raw/repos/xiaolinnote/questions/139 ai llm 13. 大模型的参数：温度值、Top-P、Top-K 分别是什么？各个场景下的最佳设置是什么？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/tokenizer.html",
+      "title": "5. 什么是大模型项目的分词器？原理是什么？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 44,
+      "sha256": "8c20553aa9fa305b6fafa9b70b57c4ad9f60e035e44d3905cf20cc53808644bf",
+      "file_name": "ai - llm - tokenizer.md",
+      "file": "raw/repos/xiaolinnote/questions/140 ai llm 5. 什么是大模型项目的分词器？原理是什么？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/transformer_architecture.html",
+      "title": "2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 47,
+      "sha256": "ed89145e758a8baa8040098a2dbf9f0ee0b501b497641bdeeddeda763f7c8412",
+      "file_name": "ai - llm - transformer_architecture.md",
+      "file": "raw/repos/xiaolinnote/questions/141 ai llm 2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/ai/llm/what_is_llm.html",
+      "title": "1. 什么是大语言模型？和传统 NLP 模型有什么区别？",
+      "topics": [
+        "interview",
+        "ai",
+        "llm"
+      ],
+      "links": 44,
+      "sha256": "d3d8c79f367552542ddcc4a89fa2151e862e45637dea8c899eb00ed9b64773de",
+      "file_name": "ai - llm - what_is_llm.md",
+      "file": "raw/repos/xiaolinnote/questions/142 ai llm 1. 什么是大语言模型？和传统 NLP 模型有什么区别？.md"
+    },
+    {
       "url": "https://xiaolinnote.com/ai/rag/10_online_workflow.html",
-      "title": "10. 你使用 RAG 给大模型一个输入，系统是怎样的工作流程？ | 小林面试笔记",
+      "title": "10. 你使用 RAG 给大模型一个输入，系统是怎样的工作流程？",
       "topics": [
         "interview",
         "ai",
@@ -721,13 +1138,13 @@
         "rag"
       ],
       "links": 43,
-      "sha256": "43320b2ac78dcb66617abaaea9ee2923b3b7043b63ed56b96dc0b4009c097d7a",
-      "file_name": "023 ai rag 10. 你使用 RAG 给大模型一个输入，系统是怎样的工作流程？.md",
+      "sha256": "fe79a0188a8dabceca0eac520d09d669dd201a3170f46553ff1ade6b2c63972c",
+      "file_name": "ai - rag - 10_online_workflow.md",
       "file": "raw/repos/xiaolinnote/questions/023 ai rag 10. 你使用 RAG 给大模型一个输入，系统是怎样的工作流程？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/11_retrieval_types.html",
-      "title": "11. 请你介绍一下向量检索和关键词检索的区别？ | 小林面试笔记",
+      "title": "11. 请你介绍一下向量检索和关键词检索的区别？",
       "topics": [
         "interview",
         "ai",
@@ -735,13 +1152,13 @@
         "rag"
       ],
       "links": 41,
-      "sha256": "76d03698e98409597c5427dae8f92a4c34e1bd64482a0df4a344d61595f5ab07",
-      "file_name": "024 ai rag 11. 请你介绍一下向量检索和关键词检索的区别？.md",
+      "sha256": "b349a0e7a34da465bb2c51de899fedc12e718e446291f302e37cdbb021ef9038",
+      "file_name": "ai - rag - 11_retrieval_types.md",
       "file": "raw/repos/xiaolinnote/questions/024 ai rag 11. 请你介绍一下向量检索和关键词检索的区别？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/12_query_rewrite.html",
-      "title": "12. 如何润色用户的 Query（Query Rewrite）？目的是什么？ | 小林面试笔记",
+      "title": "12. 如何润色用户的 Query（Query Rewrite）？目的是什么？",
       "topics": [
         "interview",
         "ai",
@@ -749,13 +1166,13 @@
         "rag"
       ],
       "links": 41,
-      "sha256": "1954f06f48af33b56c1b58ac601095ffa265345ee9bd5cf9d80f513051421d43",
-      "file_name": "025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md",
+      "sha256": "9904c7f006d0e2eb038d44326f3ff78e91c3231949bead8f2d3bf26295a7701a",
+      "file_name": "ai - rag - 12_query_rewrite.md",
       "file": "raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/13_multi_retrieval.html",
-      "title": "13. 什么是多路召回？具体怎么做？ | 小林面试笔记",
+      "title": "13. 什么是多路召回？具体怎么做？",
       "topics": [
         "interview",
         "ai",
@@ -763,13 +1180,13 @@
         "rag"
       ],
       "links": 43,
-      "sha256": "c17999ea5947442cb0ce48b5934f30467324ba99fddb8b9db3e069dd9c91f9ca",
-      "file_name": "026 ai rag 13. 什么是多路召回？具体怎么做？.md",
+      "sha256": "6aa9f5104f3e82883b941b73bc2bfdb6a8be78269ecb2f6151337d35333f76ea",
+      "file_name": "ai - rag - 13_multi_retrieval.md",
       "file": "raw/repos/xiaolinnote/questions/026 ai rag 13. 什么是多路召回？具体怎么做？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/14_retrieval_opt.html",
-      "title": "14. RAG 检索优化策略有哪些？ | 小林面试笔记",
+      "title": "14. RAG 检索优化策略有哪些？",
       "topics": [
         "interview",
         "ai",
@@ -777,13 +1194,13 @@
         "rag"
       ],
       "links": 43,
-      "sha256": "a483fc89497e2707e015962795035ed9d344cbd26f035406e9c7fed9f34673ed",
-      "file_name": "027 ai rag 14. RAG 检索优化策略有哪些？.md",
+      "sha256": "7494d027dcbeba555e65cb8a0077c9e68567d253336eb60d99b11180086c91dd",
+      "file_name": "ai - rag - 14_retrieval_opt.md",
       "file": "raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/15_advanced_paradigms.html",
-      "title": "15. 了解哪些更复杂的 RAG 范式？ | 小林面试笔记",
+      "title": "15. 了解哪些更复杂的 RAG 范式？",
       "topics": [
         "interview",
         "ai",
@@ -791,13 +1208,13 @@
         "rag"
       ],
       "links": 44,
-      "sha256": "d1b4f370b76787b4a7aee31ab763d3367953968f7a0f312aa709ff89341feec4",
-      "file_name": "028 ai rag 15. 了解哪些更复杂的 RAG 范式？.md",
+      "sha256": "1f0036a1c386e62a74548f4c8a23defa4a510c562a6f173e7f17e2c465d40c5b",
+      "file_name": "ai - rag - 15_advanced_paradigms.md",
       "file": "raw/repos/xiaolinnote/questions/028 ai rag 15. 了解哪些更复杂的 RAG 范式？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/16_graph_db.html",
-      "title": "16. 在什么场景下，你会选择使用图数据库来增强传统的向量检索？ | 小林面试笔记",
+      "title": "16. 在什么场景下，你会选择使用图数据库来增强传统的向量检索？",
       "topics": [
         "interview",
         "ai",
@@ -805,13 +1222,13 @@
         "rag"
       ],
       "links": 41,
-      "sha256": "c6798775cc1ffaa8ac1610962be563e007fbbeb24f82a35d024305c569b1b168",
-      "file_name": "029 ai rag 16. 在什么场景下，你会选择使用图数据库来增强传统的向量检索？.md",
+      "sha256": "3ed244fd2f7b03ef8f8c9f1966ddebd24a5a59387326db445fb21a81c3c22752",
+      "file_name": "ai - rag - 16_graph_db.md",
       "file": "raw/repos/xiaolinnote/questions/029 ai rag 16. 在什么场景下，你会选择使用图数据库来增强传统的向量检索？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/17_hallucination.html",
-      "title": "17. 如何规避 RAG 系统中大模型的幻觉？ | 小林面试笔记",
+      "title": "17. 如何规避 RAG 系统中大模型的幻觉？",
       "topics": [
         "interview",
         "ai",
@@ -819,13 +1236,13 @@
         "rag"
       ],
       "links": 42,
-      "sha256": "845663340ec5e3ab9004d3b1079c7c0113c864a617d993f6900c9c3ef2190c74",
-      "file_name": "030 ai rag 17. 如何规避 RAG 系统中大模型的幻觉？.md",
+      "sha256": "9f563b4d1808613f9bc49808d9f3e54c705f1ecfb469cb98c6ac8dda225e6279",
+      "file_name": "ai - rag - 17_hallucination.md",
       "file": "raw/repos/xiaolinnote/questions/030 ai rag 17. 如何规避 RAG 系统中大模型的幻觉？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/18_evaluation.html",
-      "title": "18. 怎么量化你的 RAG 效果？ | 小林面试笔记",
+      "title": "18. 怎么量化你的 RAG 效果？",
       "topics": [
         "interview",
         "ai",
@@ -833,13 +1250,13 @@
         "rag"
       ],
       "links": 43,
-      "sha256": "4b1d0d00d55e5ccdf6a9851da857ae230d14fe2ade1c8bd98a955c6cf3cdeebf",
-      "file_name": "031 ai rag 18. 怎么量化你的 RAG 效果？.md",
+      "sha256": "473a999f1fedc106b85213ebfd1158ba4599037f0100d1cdf0c81a6086ebc731",
+      "file_name": "ai - rag - 18_evaluation.md",
       "file": "raw/repos/xiaolinnote/questions/031 ai rag 18. 怎么量化你的 RAG 效果？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/19_dynamic_update.html",
-      "title": "19. RAG 知识库如何实现动态与持续更新？ | 小林面试笔记",
+      "title": "19. RAG 知识库如何实现动态与持续更新？",
       "topics": [
         "interview",
         "ai",
@@ -847,13 +1264,13 @@
         "rag"
       ],
       "links": 42,
-      "sha256": "9633414936017d54a5fbce1b1b591288b6eee32c697df3e6a3abb2104e222dfc",
-      "file_name": "032 ai rag 19. RAG 知识库如何实现动态与持续更新？.md",
+      "sha256": "e16904355e965d136b937af4349315e6f2587059706ae6a8304def1e50af8c17",
+      "file_name": "ai - rag - 19_dynamic_update.md",
       "file": "raw/repos/xiaolinnote/questions/032 ai rag 19. RAG 知识库如何实现动态与持续更新？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/1_whatisrag.html",
-      "title": "1. 什么是 RAG？详细描述一个完整 RAG 系统的详细工作流程？ | 小林面试笔记",
+      "title": "1. 什么是 RAG？详细描述一个完整 RAG 系统的详细工作流程？",
       "topics": [
         "interview",
         "ai",
@@ -861,13 +1278,13 @@
         "rag"
       ],
       "links": 40,
-      "sha256": "e6129a545bc236ad12cc9a9df8cf595b5ae801778189827f786a3a32e9083333",
-      "file_name": "033 ai rag 1. 什么是 RAG？详细描述一个完整 RAG 系统的详细工作流程？.md",
+      "sha256": "50b14374857b03daa3974b642e3f529cab2327ba5a47c55cef740b5d67017ec6",
+      "file_name": "ai - rag - 1_whatisrag.md",
       "file": "raw/repos/xiaolinnote/questions/033 ai rag 1. 什么是 RAG？详细描述一个完整 RAG 系统的详细工作流程？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/20_hardest_parts.html",
-      "title": "20. 在实际落地中，你觉得 RAG 最难的地方是哪里？ | 小林面试笔记",
+      "title": "20. 在实际落地中，你觉得 RAG 最难的地方是哪里？",
       "topics": [
         "interview",
         "ai",
@@ -875,13 +1292,13 @@
         "rag"
       ],
       "links": 38,
-      "sha256": "1aff942c416a7e693e369880b36d52612ac0a3616f9f1911d6f331c97ac70230",
-      "file_name": "034 ai rag 20. 在实际落地中，你觉得 RAG 最难的地方是哪里？.md",
+      "sha256": "890de2d5695af03c54c104db3d4232df1b6ac34f49ce5ecc2b120c17f732f421",
+      "file_name": "ai - rag - 20_hardest_parts.md",
       "file": "raw/repos/xiaolinnote/questions/034 ai rag 20. 在实际落地中，你觉得 RAG 最难的地方是哪里？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/2_rag_problems.html",
-      "title": "2. 大模型的 RAG 主要用来解决什么问题？ | 小林面试笔记",
+      "title": "2. 大模型的 RAG 主要用来解决什么问题？",
       "topics": [
         "interview",
         "ai",
@@ -889,13 +1306,13 @@
         "rag"
       ],
       "links": 41,
-      "sha256": "7a4db66be419fdb14618f389bbe7e0af7d242e3d4753dd5554c1c79295371c55",
-      "file_name": "035 ai rag 2. 大模型的 RAG 主要用来解决什么问题？.md",
+      "sha256": "3e4445d9ba799a188dfe952216ff67c5cd12f85f22cf50daea820c5a76954c2f",
+      "file_name": "ai - rag - 2_rag_problems.md",
       "file": "raw/repos/xiaolinnote/questions/035 ai rag 2. 大模型的 RAG 主要用来解决什么问题？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/3_rag_vs_finetune.html",
-      "title": "3. 相比直接微调 LLM，RAG 解决了什么问题？微调和 RAG 各自的优劣势是什么？ | 小林面试笔记",
+      "title": "3. 相比直接微调 LLM，RAG 解决了什么问题？微调和 RAG 各自的优劣势是什么？",
       "topics": [
         "interview",
         "ai",
@@ -903,13 +1320,13 @@
         "rag"
       ],
       "links": 39,
-      "sha256": "72d91b7348d886b9b1232979e6bb6bda81543f2cf1e8e1175673b780590812d7",
-      "file_name": "036 ai rag 3. 相比直接微调 LLM，RAG 解决了什么问题？微调和 RAG 各自的优劣势是什么？.md",
+      "sha256": "4a5663197ba4a4bab289a05358ace850b0db9c4a75d4ee82c627bf46b63d5471",
+      "file_name": "ai - rag - 3_rag_vs_finetune.md",
       "file": "raw/repos/xiaolinnote/questions/036 ai rag 3. 相比直接微调 LLM，RAG 解决了什么问题？微调和 RAG 各自的优劣势是什么？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/4_chunking.html",
-      "title": "4. RAG 中的文档是怎么存的？粒度是多大？详细说说文档切割（Chunking）策略？ | 小林面试笔记",
+      "title": "4. RAG 中的文档是怎么存的？粒度是多大？详细说说文档切割（Chunking）策略？",
       "topics": [
         "interview",
         "ai",
@@ -917,13 +1334,13 @@
         "rag"
       ],
       "links": 43,
-      "sha256": "d2472ad2e79e45e218e0148178392a5783e561f5b6d183a0ca8a0218ba8fc530",
-      "file_name": "037 ai rag 4. RAG 中的文档是怎么存的？粒度是多大？详细说说文档切割（Chunking）策略？.md",
+      "sha256": "677abcc4879c025827e520bf1e509b4765e76644f725bb32381fb3eb25e630eb",
+      "file_name": "ai - rag - 4_chunking.md",
       "file": "raw/repos/xiaolinnote/questions/037 ai rag 4. RAG 中的文档是怎么存的？粒度是多大？详细说说文档切割（Chunking）策略？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/5_semantic_cuts.html",
-      "title": "5. 怎么规避语义被切割掉的问题？ | 小林面试笔记",
+      "title": "5. 怎么规避语义被切割掉的问题？",
       "topics": [
         "interview",
         "ai",
@@ -931,13 +1348,13 @@
         "rag"
       ],
       "links": 44,
-      "sha256": "5fce57b71c012476fda1b179d804214912c2ebb6dcf3d8295eb5403c53cc04b8",
-      "file_name": "038 ai rag 5. 怎么规避语义被切割掉的问题？.md",
+      "sha256": "65f120cb66a28894c3c40db4e4825b0509627c99375b0e7df5e1687f3830b996",
+      "file_name": "ai - rag - 5_semantic_cuts.md",
       "file": "raw/repos/xiaolinnote/questions/038 ai rag 5. 怎么规避语义被切割掉的问题？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/6_embedding.html",
-      "title": "6. 在 RAG 中 Embedding 究竟是什么？如何选择和评估一个 Embedding 模型？ | 小林面试笔记",
+      "title": "6. 在 RAG 中 Embedding 究竟是什么？如何选择和评估一个 Embedding 模型？",
       "topics": [
         "interview",
         "ai",
@@ -945,13 +1362,13 @@
         "rag"
       ],
       "links": 40,
-      "sha256": "6e35eeddb2d2fe952ea2c6de4ec63ec41090011e8e1eafc0844f70562175e5ee",
-      "file_name": "039 ai rag 6. 在 RAG 中 Embedding 究竟是什么？如何选择和评估一个 Embedding 模型？.md",
+      "sha256": "381a435656e31d008f349095abdb91e50a58eaa316bc7ec96fe9c6e86a2d1e06",
+      "file_name": "ai - rag - 6_embedding.md",
       "file": "raw/repos/xiaolinnote/questions/039 ai rag 6. 在 RAG 中 Embedding 究竟是什么？如何选择和评估一个 Embedding 模型？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/7_embedding_algos.html",
-      "title": "7. Embedding 有哪几种算法你了解过吗？ | 小林面试笔记",
+      "title": "7. Embedding 有哪几种算法你了解过吗？",
       "topics": [
         "interview",
         "ai",
@@ -959,13 +1376,13 @@
         "rag"
       ],
       "links": 40,
-      "sha256": "e42ddd8f035839a5534bceb1f413141013b0b8787d6c04e3930f78cc3021d062",
-      "file_name": "040 ai rag 7. Embedding 有哪几种算法你了解过吗？.md",
+      "sha256": "714bfc9ebbca5b42dd7fb00c6a1e20155b1d6ce82441d517faf16859a978303b",
+      "file_name": "ai - rag - 7_embedding_algos.md",
       "file": "raw/repos/xiaolinnote/questions/040 ai rag 7. Embedding 有哪几种算法你了解过吗？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/8_vectordb.html",
-      "title": "8. 什么是向量数据库？有没有做过向量数据库的对比选型？ | 小林面试笔记",
+      "title": "8. 什么是向量数据库？有没有做过向量数据库的对比选型？",
       "topics": [
         "interview",
         "ai",
@@ -973,13 +1390,13 @@
         "rag"
       ],
       "links": 41,
-      "sha256": "41b0ced01eef80bcfd3e7a989b2046cee72d05acdbde2df00dfdb28f3459d13c",
-      "file_name": "041 ai rag 8. 什么是向量数据库？有没有做过向量数据库的对比选型？.md",
+      "sha256": "d62231481ffe8b1401e7f6297c460208e76a46cc8d7d7f8ea4d13a5d5a907112",
+      "file_name": "ai - rag - 8_vectordb.md",
       "file": "raw/repos/xiaolinnote/questions/041 ai rag 8. 什么是向量数据库？有没有做过向量数据库的对比选型？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/9_vectordb_practice.html",
-      "title": "9. 讲讲你用的向量数据库？数据量级是多大？性能如何？遇到过性能瓶颈吗？ | 小林面试笔记",
+      "title": "9. 讲讲你用的向量数据库？数据量级是多大？性能如何？遇到过性能瓶颈吗？",
       "topics": [
         "interview",
         "ai",
@@ -987,13 +1404,13 @@
         "rag"
       ],
       "links": 41,
-      "sha256": "e6d059b44ac3d0daae56461eb7565ec0f9e52e5c49796cf547140305f09c775a",
-      "file_name": "042 ai rag 9. 讲讲你用的向量数据库？数据量级是多大？性能如何？遇到过性能瓶颈吗？.md",
+      "sha256": "d241dd2df1b179ac93195c50914406071477e5c4a5c9a5e756cbdf6f90e579be",
+      "file_name": "ai - rag - 9_vectordb_practice.md",
       "file": "raw/repos/xiaolinnote/questions/042 ai rag 9. 讲讲你用的向量数据库？数据量级是多大？性能如何？遇到过性能瓶颈吗？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/",
-      "title": "02｜ RAG面试题 | 小林面试笔记",
+      "title": "02｜ RAG面试题",
       "topics": [
         "interview",
         "ai",
@@ -1001,27 +1418,27 @@
         "rag"
       ],
       "links": 32,
-      "sha256": "e3831ef02d874f286d802ab59035f133354eb5ac5560ff57aa3539dac3d940b1",
-      "file_name": "044 ai rag 02｜ RAG面试题.md",
+      "sha256": "9f87d4b2a9cd014d6965afe6093387ca63916bfad772931a6accadbd8b49df5a",
+      "file_name": "ai - rag.md",
       "file": "raw/repos/xiaolinnote/questions/044 ai rag 02｜ RAG面试题.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/rag/rag_info.html",
-      "title": "RAG 面试题介绍 | 小林面试笔记",
+      "title": "RAG 面试题介绍",
       "topics": [
         "interview",
         "ai",
         "llm",
         "rag"
       ],
-      "links": 33,
-      "sha256": "ea631f4f47fc8130ae3d7dc200e35c56c0f0a0664314fef61eb552d360318a0b",
-      "file_name": "043 ai rag RAG 面试题介绍.md",
+      "links": 34,
+      "sha256": "6f0f0053d015edbefa38702d4c5affccff807f708c83a14a6cabb246b3b97a2f",
+      "file_name": "ai - rag - rag_info.md",
       "file": "raw/repos/xiaolinnote/questions/043 ai rag RAG 面试题介绍.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/10_mcp_vs_skill.html",
-      "title": "10. MCP 和 Agent Skill 的区别是什么？ | 小林面试笔记",
+      "title": "10. MCP 和 Agent Skill 的区别是什么？",
       "topics": [
         "interview",
         "ai",
@@ -1030,13 +1447,13 @@
         "mcp"
       ],
       "links": 37,
-      "sha256": "b5ef94631a5877db77ff906df8db13769aaad27c2789f47430580abfa988ae10",
-      "file_name": "045 ai tools 10. MCP 和 Agent Skill 的区别是什么？.md",
+      "sha256": "5eff908a16bf35a021584a7fe726eff7faa9e755b8967f5b72d95eebc8c3ce6e",
+      "file_name": "ai - tools - 10_mcp_vs_skill.md",
       "file": "raw/repos/xiaolinnote/questions/045 ai tools 10. MCP 和 Agent Skill 的区别是什么？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/11_fc_skill_mcp.html",
-      "title": "11. Function Calling、Skill、MCP 这三个有什么区别？ | 小林面试笔记",
+      "title": "11. Function Calling、Skill、MCP 这三个有什么区别？",
       "topics": [
         "interview",
         "ai",
@@ -1045,13 +1462,13 @@
         "mcp"
       ],
       "links": 37,
-      "sha256": "bcf45bbd511d79328395d947ef1a4eef41a191a283603ac7e32c42028e097b78",
-      "file_name": "046 ai tools 11. Function Calling、Skill、MCP 这三个有什么区别？.md",
+      "sha256": "6846ff239b75581753a3c435ddc5752017c0c0f7a2f85e2cc3ee5844f4b14e8f",
+      "file_name": "ai - tools - 11_fc_skill_mcp.md",
       "file": "raw/repos/xiaolinnote/questions/046 ai tools 11. Function Calling、Skill、MCP 这三个有什么区别？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/12_a2a_protocol.html",
-      "title": "12. 什么是 A2A 协议？它和 MCP 协议的区别是什么？ | 小林面试笔记",
+      "title": "12. 什么是 A2A 协议？它和 MCP 协议的区别是什么？",
       "topics": [
         "interview",
         "ai",
@@ -1060,13 +1477,13 @@
         "mcp"
       ],
       "links": 37,
-      "sha256": "8c0ea5fcb9ce36d0288e8c1b2c469256ec9de0a9be454b108cbb8ab5da9f48a0",
-      "file_name": "047 ai tools 12. 什么是 A2A 协议？它和 MCP 协议的区别是什么？.md",
+      "sha256": "8474e3c422758ff4d558c628f0a800b5bc8148236d8e09cdc0b6cdab05404c5b",
+      "file_name": "ai - tools - 12_a2a_protocol.md",
       "file": "raw/repos/xiaolinnote/questions/047 ai tools 12. 什么是 A2A 协议？它和 MCP 协议的区别是什么？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/13_mcp_transport.html",
-      "title": "13. MCP 协议通常采用什么通信方式？ | 小林面试笔记",
+      "title": "13. MCP 协议通常采用什么通信方式？",
       "topics": [
         "interview",
         "ai",
@@ -1075,13 +1492,13 @@
         "mcp"
       ],
       "links": 36,
-      "sha256": "7f40f04e24d881962cfc3ac01a23a4513ad7d9d14bb51a29e4c352044f620f44",
-      "file_name": "048 ai tools 13. MCP 协议通常采用什么通信方式？.md",
+      "sha256": "0fba73822a8ffc1627ae7ca2e2727f01d62a776f29e1daf85d5e5be768836a1f",
+      "file_name": "ai - tools - 13_mcp_transport.md",
       "file": "raw/repos/xiaolinnote/questions/048 ai tools 13. MCP 协议通常采用什么通信方式？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/14_sse_vs_websocket.html",
-      "title": "14. 说说 WebSocket 和 SSE 通信的区别及局限性？ | 小林面试笔记",
+      "title": "14. 说说 WebSocket 和 SSE 通信的区别及局限性？",
       "topics": [
         "interview",
         "ai",
@@ -1090,13 +1507,13 @@
         "mcp"
       ],
       "links": 38,
-      "sha256": "3ae6cef7f455d25cce531c8a7dc74b4cd876764a37708118bef0c46bc5619f16",
-      "file_name": "049 ai tools 14. 说说 WebSocket 和 SSE 通信的区别及局限性？.md",
+      "sha256": "5f82221c2b969bffe2044738119491570f3bbfebd033c2fd83bae7375b2d9cf1",
+      "file_name": "ai - tools - 14_sse_vs_websocket.md",
       "file": "raw/repos/xiaolinnote/questions/049 ai tools 14. 说说 WebSocket 和 SSE 通信的区别及局限性？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/15_webrtc_vs_ws.html",
-      "title": "15. 为什么要用 WebRTC 协议？它和 WebSocket（WS）在 AI 对话流中的核心差异是什么？ | 小林面试笔记",
+      "title": "15. 为什么要用 WebRTC 协议？它和 WebSocket（WS）在 AI 对话流中的核心差异是什么？",
       "topics": [
         "interview",
         "ai",
@@ -1105,13 +1522,13 @@
         "mcp"
       ],
       "links": 39,
-      "sha256": "ce982c618b14c3c4ab92554dc91ad3da4b0dc3315d5d73c047b829e84b99cece",
-      "file_name": "050 ai tools 15. 为什么要用 WebRTC 协议？它和 WebSocket（WS）在 AI 对话流中的核心差异是什么？.md",
+      "sha256": "6546f6f44da13f938ed52884d74f4f67ef68884817abd7a9a7117606f3e21e12",
+      "file_name": "ai - tools - 15_webrtc_vs_ws.md",
       "file": "raw/repos/xiaolinnote/questions/050 ai tools 15. 为什么要用 WebRTC 协议？它和 WebSocket（WS）在 AI 对话流中的核心差异是什么？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/16_llm_gateway.html",
-      "title": "16. 有没有用过大模型的网关框架？网关层解决了什么问题？ | 小林面试笔记",
+      "title": "16. 有没有用过大模型的网关框架？网关层解决了什么问题？",
       "topics": [
         "interview",
         "ai",
@@ -1120,13 +1537,13 @@
         "mcp"
       ],
       "links": 40,
-      "sha256": "96652a57a1dd73135ec1400a849a89f9fa5a3f78958c15742ef7f891983f4986",
-      "file_name": "051 ai tools 16. 有没有用过大模型的网关框架？网关层解决了什么问题？.md",
+      "sha256": "c59d9c0ea87dcdf619e4a12724a423683475f37a5b6d706bb17d57350db92ea7",
+      "file_name": "ai - tools - 16_llm_gateway.md",
       "file": "raw/repos/xiaolinnote/questions/051 ai tools 16. 有没有用过大模型的网关框架？网关层解决了什么问题？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/1_function_calling.html",
-      "title": "1. 什么是 Function Calling ？原理是什么？ | 小林面试笔记",
+      "title": "1. 什么是 Function Calling ？原理是什么？",
       "topics": [
         "interview",
         "ai",
@@ -1135,13 +1552,13 @@
         "mcp"
       ],
       "links": 37,
-      "sha256": "18456357159414fc5cc67bfbd74ec640bc49a1aa5f606ff1820befd3b4a96b52",
-      "file_name": "052 ai tools 1. 什么是 Function Calling ？原理是什么？.md",
+      "sha256": "55efe80829647b5ba795d294a6c5b8d0df8a7577bd96030380d3705508ff77dc",
+      "file_name": "ai - tools - 1_function_calling.md",
       "file": "raw/repos/xiaolinnote/questions/052 ai tools 1. 什么是 Function Calling ？原理是什么？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/2_llm_tool_learning.html",
-      "title": "2. LLM 是如何学会调用外部工具的？ | 小林面试笔记",
+      "title": "2. LLM 是如何学会调用外部工具的？",
       "topics": [
         "interview",
         "ai",
@@ -1150,13 +1567,13 @@
         "mcp"
       ],
       "links": 38,
-      "sha256": "2d3bfaee447f5ee6a0f430c591ce01d7947d2065d1069cb305c67a7b65926f43",
-      "file_name": "053 ai tools 2. LLM 是如何学会调用外部工具的？.md",
+      "sha256": "c71895b329caa800ee473c13b00f1e14dc95dd1f571cbd885956c2a1eaf4ca3c",
+      "file_name": "ai - tools - 2_llm_tool_learning.md",
       "file": "raw/repos/xiaolinnote/questions/053 ai tools 2. LLM 是如何学会调用外部工具的？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/3_fc_training.html",
-      "title": "3. 大模型的 Function Call 能力是怎么训练出来的？ | 小林面试笔记",
+      "title": "3. 大模型的 Function Call 能力是怎么训练出来的？",
       "topics": [
         "interview",
         "ai",
@@ -1165,13 +1582,13 @@
         "mcp"
       ],
       "links": 38,
-      "sha256": "a19e5664fed3c34d3d2de754c0e7352f0873bb6cd0bc36ed36e583b88a0ff382",
-      "file_name": "054 ai tools 3. 大模型的 Function Call 能力是怎么训练出来的？.md",
+      "sha256": "d2246a7e10e98e03190338372f4d60d8e0ac6b79d7685ccb51e5d328894de474",
+      "file_name": "ai - tools - 3_fc_training.md",
       "file": "raw/repos/xiaolinnote/questions/054 ai tools 3. 大模型的 Function Call 能力是怎么训练出来的？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/4_what_is_mcp.html",
-      "title": "4. 什么是 MCP（模型上下文协议）？讲讲它的核心内容？ | 小林面试笔记",
+      "title": "4. 什么是 MCP（模型上下文协议）？讲讲它的核心内容？",
       "topics": [
         "interview",
         "ai",
@@ -1180,13 +1597,13 @@
         "mcp"
       ],
       "links": 38,
-      "sha256": "ad1480c24fdcf8be08774559674cb2e8973aaf53a3bd82818b2d4fd8f9dabcb4",
-      "file_name": "055 ai tools 4. 什么是 MCP（模型上下文协议）？讲讲它的核心内容？.md",
+      "sha256": "fc953450a44ae9c52dfbe3d795e90eac7e1ada6b68c219a17e51085be0f67cc3",
+      "file_name": "ai - tools - 4_what_is_mcp.md",
       "file": "raw/repos/xiaolinnote/questions/055 ai tools 4. 什么是 MCP（模型上下文协议）？讲讲它的核心内容？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/5_mcp_components.html",
-      "title": "5. MCP 由哪几部分组成？ | 小林面试笔记",
+      "title": "5. MCP 由哪几部分组成？",
       "topics": [
         "interview",
         "ai",
@@ -1195,13 +1612,13 @@
         "mcp"
       ],
       "links": 36,
-      "sha256": "e69faeed9c8b6eeee0d943b1600f8e1ae5ed9f80bbaceb7853b168af2bea9767",
-      "file_name": "056 ai tools 5. MCP 由哪几部分组成？.md",
+      "sha256": "2668df8ca6c0958cf1d3f0e085bc6b95d30aac42cf6d452f1c24a1bff0e1ccf3",
+      "file_name": "ai - tools - 5_mcp_components.md",
       "file": "raw/repos/xiaolinnote/questions/056 ai tools 5. MCP 由哪几部分组成？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/6_mcp_vs_fc.html",
-      "title": "6. MCP 和 Function Calling 有什么区别？有没有实际跑过 MCP？ | 小林面试笔记",
+      "title": "6. MCP 和 Function Calling 有什么区别？有没有实际跑过 MCP？",
       "topics": [
         "interview",
         "ai",
@@ -1210,13 +1627,13 @@
         "mcp"
       ],
       "links": 40,
-      "sha256": "1e78420dedbb04f524735cb89c4ebf26d2872620fff1270beafdf42b059511e2",
-      "file_name": "057 ai tools 6. MCP 和 Function Calling 有什么区别？有没有实际跑过 MCP？.md",
+      "sha256": "b04b1c49b618fa442e55e961a9fd80b1989de3d4c9b419b82e22e966692ff865",
+      "file_name": "ai - tools - 6_mcp_vs_fc.md",
       "file": "raw/repos/xiaolinnote/questions/057 ai tools 6. MCP 和 Function Calling 有什么区别？有没有实际跑过 MCP？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/7_fc_vs_mcp_usage.html",
-      "title": "7. Function Calling 也属于工具调用，请问什么场景下使用 Function Calling，什么场景下使用 MCP？ | 小林面试笔记",
+      "title": "7. Function Calling 也属于工具调用，请问什么场景下使用 Function Calling，什么场景下使用 MCP？",
       "topics": [
         "interview",
         "ai",
@@ -1225,13 +1642,13 @@
         "mcp"
       ],
       "links": 36,
-      "sha256": "7ba0be9959f24bfd89c30b5913e7756a7b77c67d58bddc6a6e9ee4ada5d94088",
-      "file_name": "058 ai tools 7. Function Calling 也属于工具调用，请问什么场景下使用 Function Calling，什么场景下使用 MCP？.md",
+      "sha256": "f873f637d1779670b2c68d69b6e66f66647a719e07f620657d5f375d83b7b80e",
+      "file_name": "ai - tools - 7_fc_vs_mcp_usage.md",
       "file": "raw/repos/xiaolinnote/questions/058 ai tools 7. Function Calling 也属于工具调用，请问什么场景下使用 Function Calling，什么场景下使用 MCP？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/8_reasoning_no_mcp.html",
-      "title": "8. 为什么有些特定的推理模型不支持 MCP 协议？ | 小林面试笔记",
+      "title": "8. 为什么有些特定的推理模型不支持 MCP 协议？",
       "topics": [
         "interview",
         "ai",
@@ -1240,13 +1657,13 @@
         "mcp"
       ],
       "links": 40,
-      "sha256": "4cdfc6f7a288150e330f73257baf4c10b40f8372acc3517e960db4cf721c5733",
-      "file_name": "059 ai tools 8. 为什么有些特定的推理模型不支持 MCP 协议？.md",
+      "sha256": "f74911914ff55316f1d2f9246c550883bb60dc1c2b8ead319cd75d0099d1344d",
+      "file_name": "ai - tools - 8_reasoning_no_mcp.md",
       "file": "raw/repos/xiaolinnote/questions/059 ai tools 8. 为什么有些特定的推理模型不支持 MCP 协议？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/9_skill.html",
-      "title": "9. Skill 是什么？ | 小林面试笔记",
+      "title": "9. Skill 是什么？",
       "topics": [
         "interview",
         "ai",
@@ -1255,13 +1672,13 @@
         "mcp"
       ],
       "links": 39,
-      "sha256": "f9bfa78700048b2dc4ec2324746cba204f6b6a93c1617f16427b256ce99616e2",
-      "file_name": "060 ai tools 9. Skill 是什么？.md",
+      "sha256": "89c2242b92a839debb9dd34886f79554088106197b3f568ef93afd1f0a81552d",
+      "file_name": "ai - tools - 9_skill.md",
       "file": "raw/repos/xiaolinnote/questions/060 ai tools 9. Skill 是什么？.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/",
-      "title": "03｜ LLM工具调用面试题 | 小林面试笔记",
+      "title": "03｜ LLM工具调用面试题",
       "topics": [
         "interview",
         "ai",
@@ -1270,13 +1687,13 @@
         "mcp"
       ],
       "links": 28,
-      "sha256": "94c613afac9b18b21c46e961b9b01f9ff013049192f2a038b096019b6c193c1b",
-      "file_name": "062 ai tools 03｜ LLM工具调用面试题.md",
+      "sha256": "a0013280733d7bd97e36bf43ec0415fb4216e2101c45959f75b1e1a63ca2d68a",
+      "file_name": "ai - tools.md",
       "file": "raw/repos/xiaolinnote/questions/062 ai tools 03｜ LLM工具调用面试题.md"
     },
     {
       "url": "https://xiaolinnote.com/ai/tools/tools_info.html",
-      "title": "LLM工具调用面试题介绍 | 小林面试笔记",
+      "title": "LLM工具调用面试题介绍",
       "topics": [
         "interview",
         "ai",
@@ -1284,335 +1701,348 @@
         "tools",
         "mcp"
       ],
-      "links": 31,
-      "sha256": "18859ea0af033ee7ed7b57403e2b0d1e659eccbfed8a3bb3d061a1d0ab5059d1",
-      "file_name": "061 ai tools LLM工具调用面试题介绍.md",
+      "links": 32,
+      "sha256": "0fe62b3f79639ed3df2bb809fba8689dc7913481b5a85d7ce88dbbfe22d99de3",
+      "file_name": "ai - tools - tools_info.md",
       "file": "raw/repos/xiaolinnote/questions/061 ai tools LLM工具调用面试题介绍.md"
     },
     {
-      "url": "https://xiaolinnote.com/sql/sql_part1/01-introduction-and-setup.html",
-      "title": "01｜入门：数据库与 SQL 到底是什么？ | 小林面试笔记",
+      "url": "https://xiaolinnote.com/sql/",
+      "title": "SQL 快速入门教程",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
-      "links": 42,
-      "sha256": "65a16e21f57387136da5bb0df02d75ae8173cf965a8ca7a66b48323406216840",
-      "file_name": "095 sql sql_part1 01｜入门：数据库与 SQL 到底是什么？.md",
-      "file": "raw/repos/xiaolinnote/questions/095 sql sql_part1 01｜入门：数据库与 SQL 到底是什么？.md"
-    },
-    {
-      "url": "https://xiaolinnote.com/sql/sql_part1/02-select-query-basics.html",
-      "title": "02｜查询：SELECT 要怎么写？ | 小林面试笔记",
-      "topics": [
-        "interview",
-        "database",
-        "sql"
-      ],
-      "links": 23,
-      "sha256": "d90453f1431bd2911a8cf6e2945e9b585a2d869cd265c686792d630e00f666b4",
-      "file_name": "096 sql sql_part1 02｜查询：SELECT 要怎么写？.md",
-      "file": "raw/repos/xiaolinnote/questions/096 sql sql_part1 02｜查询：SELECT 要怎么写？.md"
-    },
-    {
-      "url": "https://xiaolinnote.com/sql/sql_part1/03-where-filtering.html",
-      "title": "03｜筛选：WHERE 要怎么写？ | 小林面试笔记",
-      "topics": [
-        "interview",
-        "database",
-        "sql"
-      ],
-      "links": 25,
-      "sha256": "b5560574409e062e2ab5768240809823411d8a29a9529c55cc7bcc73720302af",
-      "file_name": "097 sql sql_part1 03｜筛选：WHERE 要怎么写？.md",
-      "file": "raw/repos/xiaolinnote/questions/097 sql sql_part1 03｜筛选：WHERE 要怎么写？.md"
-    },
-    {
-      "url": "https://xiaolinnote.com/sql/sql_part1/04-order-by-pagination.html",
-      "title": "04｜排序与分页：结果怎么排序与分页？ | 小林面试笔记",
-      "topics": [
-        "interview",
-        "database",
-        "sql"
-      ],
-      "links": 22,
-      "sha256": "c41e0980e124e0b9f94d4ae7c23a60d09226ab8089808f1a942dda1f587bd8aa",
-      "file_name": "098 sql sql_part1 04｜排序与分页：结果怎么排序与分页？.md",
-      "file": "raw/repos/xiaolinnote/questions/098 sql sql_part1 04｜排序与分页：结果怎么排序与分页？.md"
-    },
-    {
-      "url": "https://xiaolinnote.com/sql/sql_part1/05-insert-data.html",
-      "title": "05｜插入：数据该怎么写进表？ | 小林面试笔记",
-      "topics": [
-        "interview",
-        "database",
-        "sql"
-      ],
-      "links": 23,
-      "sha256": "f731405c5f0793f7b2465c86af2e528245e521ae0cb47b3e5ad1bb15a923110b",
-      "file_name": "099 sql sql_part1 05｜插入：数据该怎么写进表？.md",
-      "file": "raw/repos/xiaolinnote/questions/099 sql sql_part1 05｜插入：数据该怎么写进表？.md"
-    },
-    {
-      "url": "https://xiaolinnote.com/sql/sql_part1/06-update-delete.html",
-      "title": "06｜修改与删除：如何更新或删除数据？ | 小林面试笔记",
-      "topics": [
-        "interview",
-        "database",
-        "sql"
-      ],
-      "links": 23,
-      "sha256": "ef064c8e55b5854a3833c6503a6f9250851b9e60cfeb7f6dbbadcdbd12f1f24b",
-      "file_name": "100 sql sql_part1 06｜修改与删除：如何更新或删除数据？.md",
-      "file": "raw/repos/xiaolinnote/questions/100 sql sql_part1 06｜修改与删除：如何更新或删除数据？.md"
-    },
-    {
-      "url": "https://xiaolinnote.com/sql/sql_part1/",
-      "title": "第一部分：SQL基础入门 | 小林面试笔记",
-      "topics": [
-        "interview",
-        "database",
-        "sql"
-      ],
-      "links": 15,
-      "sha256": "758046af9ab03f689a42d0e2d3abaf94163540b2a9b30c72d34a5b8d7c883ef7",
-      "file_name": "101 sql sql_part1 第一部分：SQL基础入门.md",
-      "file": "raw/repos/xiaolinnote/questions/101 sql sql_part1 第一部分：SQL基础入门.md"
+      "links": 24,
+      "sha256": "4608fe54e6fc2422faa77572922d9492d51e05a0dff2d7634c603d5f4e51e69d",
+      "file_name": "sql.md",
+      "file": "raw/repos/xiaolinnote/questions/120 sql SQL 快速入门教程.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part2/07-join-tables.html",
-      "title": "07｜连接：多表该如何 JOIN 在一起？ | 小林面试笔记",
+      "title": "07｜连接：多表该如何 JOIN 在一起？",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 27,
-      "sha256": "adb94c995d9442cbb0be8483993779a485c205a61da9383e49a613f33003f43d",
-      "file_name": "102 sql sql_part2 07｜连接：多表该如何 JOIN 在一起？.md",
+      "sha256": "56ff19ff545283b2fece337eba2dc88226d5fe6220a3f63af572aaafdf1de064",
+      "file_name": "sql - sql_part2 - 07-join-tables.md",
       "file": "raw/repos/xiaolinnote/questions/102 sql sql_part2 07｜连接：多表该如何 JOIN 在一起？.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part2/08-aggregation-grouping.html",
-      "title": "08｜聚合与分组：统计与分组该怎么做？ | 小林面试笔记",
+      "title": "08｜聚合与分组：统计与分组该怎么做？",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 23,
-      "sha256": "79f7af2ff1820cbd3d343169e529b8457e01ddfac0cf81b11dc9b0990c2eec55",
-      "file_name": "103 sql sql_part2 08｜聚合与分组：统计与分组该怎么做？.md",
+      "sha256": "fbb3f1d235c4b359e6431dee1ccbe13d0d1490856b8945853876007411e46d2c",
+      "file_name": "sql - sql_part2 - 08-aggregation-grouping.md",
       "file": "raw/repos/xiaolinnote/questions/103 sql sql_part2 08｜聚合与分组：统计与分组该怎么做？.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part2/09-subqueries.html",
-      "title": "09｜子查询：什么时候该用子查询？ | 小林面试笔记",
+      "title": "09｜子查询：什么时候该用子查询？",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 23,
-      "sha256": "7db15cf0fe83df5ee935fdfff834bad6d5ff2769601d1705c20b02ab8b5fa2ed",
-      "file_name": "104 sql sql_part2 09｜子查询：什么时候该用子查询？.md",
+      "sha256": "777799679ba8287ca70709e74f32de5b986a79c9b9f8092c718cdc48b58f0d32",
+      "file_name": "sql - sql_part2 - 09-subqueries.md",
       "file": "raw/repos/xiaolinnote/questions/104 sql sql_part2 09｜子查询：什么时候该用子查询？.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part2/10-transactions.html",
-      "title": "10｜事务：如何保证一组操作要么都成功？ | 小林面试笔记",
+      "title": "10｜事务：如何保证一组操作要么都成功？",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 38,
-      "sha256": "dcd0941dc7113066d3d8b659665600b1452ec2bacfee03263749295bb036ee51",
-      "file_name": "105 sql sql_part2 10｜事务：如何保证一组操作要么都成功？.md",
+      "sha256": "a689e744d363bcc1126dabe268a5c7a8de8373246cd705c894a1a39322afe4b0",
+      "file_name": "sql - sql_part2 - 10-transactions.md",
       "file": "raw/repos/xiaolinnote/questions/105 sql sql_part2 10｜事务：如何保证一组操作要么都成功？.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part2/11-functions.html",
-      "title": "11｜函数：有哪些常用的SQL函数？ | 小林面试笔记",
+      "title": "11｜函数：有哪些常用的SQL函数？",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 45,
-      "sha256": "f0932a6a59768a6213ca86ff674a4737477b0244b85ec199f6d34a979b04bfc5",
-      "file_name": "106 sql sql_part2 11｜函数：有哪些常用的SQL函数？.md",
+      "sha256": "bf11f5ba1ddfc499061e95dc0ea9481bf3ae04522c41377506c758958dd3cfdd",
+      "file_name": "sql - sql_part2 - 11-functions.md",
       "file": "raw/repos/xiaolinnote/questions/106 sql sql_part2 11｜函数：有哪些常用的SQL函数？.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part2/",
-      "title": "第二部分：SQL进阶 | 小林面试笔记",
+      "title": "第二部分：SQL进阶",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 14,
-      "sha256": "d5487b5689812465bf614457a9cdb98c47d50b0e5e95b196397d2b6eec8a586b",
-      "file_name": "107 sql sql_part2 第二部分：SQL进阶.md",
+      "sha256": "2d7324a220522b3e695d1144f18a93aed8a04a0ae268dedbd508407f7eb9170d",
+      "file_name": "sql - sql_part2.md",
       "file": "raw/repos/xiaolinnote/questions/107 sql sql_part2 第二部分：SQL进阶.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part3/12-table-structure.html",
-      "title": "12｜表结构：表该如何创建、修改与删除？ | 小林面试笔记",
+      "title": "12｜表结构：表该如何创建、修改与删除？",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 23,
-      "sha256": "5f268a2fdb6250f6fb7eace315cab96aa14dd27f0eddde0dac77e74185710523",
-      "file_name": "108 sql sql_part3 12｜表结构：表该如何创建、修改与删除？.md",
+      "sha256": "cbfaba3860bff8f54bef0a2d315cb22d9c5a58a8a1ace5b3348bd1412fea9c63",
+      "file_name": "sql - sql_part3 - 12-table-structure.md",
       "file": "raw/repos/xiaolinnote/questions/108 sql sql_part3 12｜表结构：表该如何创建、修改与删除？.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part3/13-normalization.html",
-      "title": "13｜范式设计：数据库的范化有那些？？ | 小林面试笔记",
+      "title": "13｜范式设计：数据库的范化有那些？？",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 31,
-      "sha256": "8f67fe02bd23ec7f56839f56605024e8c50a32ccec50d70172bb9ee2bb8ccd21",
-      "file_name": "109 sql sql_part3 13｜范式设计：数据库的范化有那些？？.md",
+      "sha256": "d1be894ad768b1cb202b34edc4e284d405a84ae7326216a70080a4650fe3e579",
+      "file_name": "sql - sql_part3 - 13-normalization.md",
       "file": "raw/repos/xiaolinnote/questions/109 sql sql_part3 13｜范式设计：数据库的范化有那些？？.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part3/14-indexing.html",
-      "title": "14｜索引：如何创建索引？ | 小林面试笔记",
+      "title": "14｜索引：如何创建索引？",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 26,
-      "sha256": "c0e0b365ea65ec60d975bc5e847c25263fe9fd97a43fd7bccd28d34960786e77",
-      "file_name": "110 sql sql_part3 14｜索引：如何创建索引？.md",
+      "sha256": "faf1e9c0387c809cb0af6138f51dddf2f65b03e483bf98875c48997b59231a09",
+      "file_name": "sql - sql_part3 - 14-indexing.md",
       "file": "raw/repos/xiaolinnote/questions/110 sql sql_part3 14｜索引：如何创建索引？.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part3/",
-      "title": "第三部分：表结构与设计 | 小林面试笔记",
+      "title": "第三部分：表结构与设计",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 12,
-      "sha256": "561513b905fdec6e8678947f05321e9998c6091bcd8a2a4336fa56718e912d2f",
-      "file_name": "111 sql sql_part3 第三部分：表结构与设计.md",
+      "sha256": "76e200387091711feffa552d7a1a0fe3dfd4efc671123ad4ee2067f656f04e2a",
+      "file_name": "sql - sql_part3.md",
       "file": "raw/repos/xiaolinnote/questions/111 sql sql_part3 第三部分：表结构与设计.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part4/15-ecommerce-practice.html",
-      "title": "15｜实战：商城订单应用 | 小林面试笔记",
+      "title": "15｜实战：商城订单应用",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 23,
-      "sha256": "fc4c190f239aeb7e6bdb24d459ec1e0c2a0fb3cc53cc2014e609e586c7042a2e",
-      "file_name": "112 sql sql_part4 15｜实战：商城订单应用.md",
+      "sha256": "17e54175c60a455b7c8c50f09dd0619e86f8ff97b0e46c6166b954e961b3257e",
+      "file_name": "sql - sql_part4 - 15-ecommerce-practice.md",
       "file": "raw/repos/xiaolinnote/questions/112 sql sql_part4 15｜实战：商城订单应用.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part4/16-comprehensive-practice.html",
-      "title": "16｜实战：综合练习与常见陷阱 | 小林面试笔记",
+      "title": "16｜实战：综合练习与常见陷阱",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 28,
-      "sha256": "2586d149ff7933387ea472f7a169e0b5bd1695e1d5d6bb0db8f81ef339474c63",
-      "file_name": "113 sql sql_part4 16｜实战：综合练习与常见陷阱.md",
+      "sha256": "3cf2ee05d5f0cf624f07bba44ff93bd170534a2f111b9568607f4255b62cd2c3",
+      "file_name": "sql - sql_part4 - 16-comprehensive-practice.md",
       "file": "raw/repos/xiaolinnote/questions/113 sql sql_part4 16｜实战：综合练习与常见陷阱.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part4/",
-      "title": "第四部分：实战应用 | 小林面试笔记",
+      "title": "第四部分：实战应用",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 11,
-      "sha256": "995913878493090b170ad8be5e1c28ae1274e8219d8ea2198ff68929f097ce2e",
-      "file_name": "114 sql sql_part4 第四部分：实战应用.md",
+      "sha256": "cec2fe57c192767913f8c03fa6c794dda31d25ef5967bfd3c6f5d823378185b9",
+      "file_name": "sql - sql_part4.md",
       "file": "raw/repos/xiaolinnote/questions/114 sql sql_part4 第四部分：实战应用.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part5/",
-      "title": "加餐：扩展学习 | 小林面试笔记",
+      "title": "加餐：扩展学习",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 13,
-      "sha256": "62290a5d437538b22e04447edfefb50ba0aad84b09fa8d8b06abbd7d086bf451",
-      "file_name": "119 sql sql_part5 加餐：扩展学习.md",
+      "sha256": "638bf84ff58c7ef7d3e2632956a51da1c78f4da0f52ec24b40fe2d0e96fedc7f",
+      "file_name": "sql - sql_part5.md",
       "file": "raw/repos/xiaolinnote/questions/119 sql sql_part5 加餐：扩展学习.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part5/supplement1-explain.html",
-      "title": "加餐1｜EXPLAIN：只看哪5个字段就够了？ | 小林面试笔记",
+      "title": "加餐1｜EXPLAIN：只看哪5个字段就够了？",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 33,
-      "sha256": "47259e56a6adb32f99e36cbfca4ffabdc64e02d0cd0289fde8b12422cfe6802c",
-      "file_name": "115 sql sql_part5 加餐1｜EXPLAIN：只看哪5个字段就够了？.md",
+      "sha256": "68092e3190530cac84b73b3610c7f6c16385f455107dfff318c638f4fbf6d34a",
+      "file_name": "sql - sql_part5 - supplement1-explain.md",
       "file": "raw/repos/xiaolinnote/questions/115 sql sql_part5 加餐1｜EXPLAIN：只看哪5个字段就够了？.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part5/supplement2-views.html",
-      "title": "加餐2｜视图：何时该把查询做成视图？ | 小林面试笔记",
+      "title": "加餐2｜视图：何时该把查询做成视图？",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 36,
-      "sha256": "4562746944f37cf35f40cbf8e73670b086c90b7b88fc989b5a33688dd8bd6d51",
-      "file_name": "116 sql sql_part5 加餐2｜视图：何时该把查询做成视图？.md",
+      "sha256": "973b2a808516ac73dc414c42a2049548e3ac2f9e1f27d67d664184eeb4983651",
+      "file_name": "sql - sql_part5 - supplement2-views.md",
       "file": "raw/repos/xiaolinnote/questions/116 sql sql_part5 加餐2｜视图：何时该把查询做成视图？.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part5/supplement3-window-functions.html",
-      "title": "加餐3｜窗口函数：组内计算该怎么写？ | 小林面试笔记",
+      "title": "加餐3｜窗口函数：组内计算该怎么写？",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 38,
-      "sha256": "be9e11eb1cd144a0cf26c778ebdfeaf3458a462bbdc627e5ab41cb9674f241a0",
-      "file_name": "117 sql sql_part5 加餐3｜窗口函数：组内计算该怎么写？.md",
+      "sha256": "a2f528236826bea2466b06c9700ebe547d816a73ee8101dcc5fda35e50e75957",
+      "file_name": "sql - sql_part5 - supplement3-window-functions.md",
       "file": "raw/repos/xiaolinnote/questions/117 sql sql_part5 加餐3｜窗口函数：组内计算该怎么写？.md"
     },
     {
       "url": "https://xiaolinnote.com/sql/sql_part5/supplement4-permissions.html",
-      "title": "加餐4｜权限：用户与角色该如何授予与回收？ | 小林面试笔记",
+      "title": "加餐4｜权限：用户与角色该如何授予与回收？",
       "topics": [
         "interview",
         "database",
         "sql"
       ],
       "links": 44,
-      "sha256": "5b540e36ce653ae6a14bd7f938bdc7b3d4a8fb138a65c75926713856d2011058",
-      "file_name": "118 sql sql_part5 加餐4｜权限：用户与角色该如何授予与回收？.md",
+      "sha256": "431f726059de176db28e5de03604c8258b6a7d905e09e04b9f27c638b18efb60",
+      "file_name": "sql - sql_part5 - supplement4-permissions.md",
       "file": "raw/repos/xiaolinnote/questions/118 sql sql_part5 加餐4｜权限：用户与角色该如何授予与回收？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/sql/sql_part1/01-introduction-and-setup.html",
+      "title": "01｜入门：数据库与 SQL 到底是什么？",
+      "topics": [
+        "interview",
+        "database",
+        "sql"
+      ],
+      "links": 42,
+      "sha256": "f209956d8fa2025644b7594bc2a614b12298ed9aa2d72b0741b57974c2b220a0",
+      "file_name": "sql - sql_part1 - 01-introduction-and-setup.md",
+      "file": "raw/repos/xiaolinnote/questions/095 sql sql_part1 01｜入门：数据库与 SQL 到底是什么？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/sql/sql_part1/02-select-query-basics.html",
+      "title": "02｜查询：SELECT 要怎么写？",
+      "topics": [
+        "interview",
+        "database",
+        "sql"
+      ],
+      "links": 23,
+      "sha256": "262344fea7de31b4b3df41271a70cf98c12555935e9a9470267035440f08d87f",
+      "file_name": "sql - sql_part1 - 02-select-query-basics.md",
+      "file": "raw/repos/xiaolinnote/questions/096 sql sql_part1 02｜查询：SELECT 要怎么写？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/sql/sql_part1/03-where-filtering.html",
+      "title": "03｜筛选：WHERE 要怎么写？",
+      "topics": [
+        "interview",
+        "database",
+        "sql"
+      ],
+      "links": 25,
+      "sha256": "d5db55f172153a1598e35bed4d71da2fafcb91e922082cb780d0f939df42bd88",
+      "file_name": "sql - sql_part1 - 03-where-filtering.md",
+      "file": "raw/repos/xiaolinnote/questions/097 sql sql_part1 03｜筛选：WHERE 要怎么写？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/sql/sql_part1/04-order-by-pagination.html",
+      "title": "04｜排序与分页：结果怎么排序与分页？",
+      "topics": [
+        "interview",
+        "database",
+        "sql"
+      ],
+      "links": 22,
+      "sha256": "dab1e1c0e43539c6b5f7f7c5b0f917a71e2f2ee9f076e143cbee775bebe26664",
+      "file_name": "sql - sql_part1 - 04-order-by-pagination.md",
+      "file": "raw/repos/xiaolinnote/questions/098 sql sql_part1 04｜排序与分页：结果怎么排序与分页？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/sql/sql_part1/05-insert-data.html",
+      "title": "05｜插入：数据该怎么写进表？",
+      "topics": [
+        "interview",
+        "database",
+        "sql"
+      ],
+      "links": 23,
+      "sha256": "5f44a894a7a636f55896b8544bfe92b2299449af44fe31a1bc0c234324fbbde7",
+      "file_name": "sql - sql_part1 - 05-insert-data.md",
+      "file": "raw/repos/xiaolinnote/questions/099 sql sql_part1 05｜插入：数据该怎么写进表？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/sql/sql_part1/06-update-delete.html",
+      "title": "06｜修改与删除：如何更新或删除数据？",
+      "topics": [
+        "interview",
+        "database",
+        "sql"
+      ],
+      "links": 23,
+      "sha256": "f6fa57b4dda939da0f8b01e76f25601b3e1c8000f3237c600cd7c42f85dedfdd",
+      "file_name": "sql - sql_part1 - 06-update-delete.md",
+      "file": "raw/repos/xiaolinnote/questions/100 sql sql_part1 06｜修改与删除：如何更新或删除数据？.md"
+    },
+    {
+      "url": "https://xiaolinnote.com/sql/sql_part1/",
+      "title": "第一部分：SQL基础入门",
+      "topics": [
+        "interview",
+        "database",
+        "sql"
+      ],
+      "links": 15,
+      "sha256": "dcab538d9dfc5918703b62a079168544b404d54c62ec067df6b4088fbd8167ba",
+      "file_name": "sql - sql_part1.md",
+      "file": "raw/repos/xiaolinnote/questions/101 sql sql_part1 第一部分：SQL基础入门.md"
     }
   ]
 }

@@ -5,7 +5,7 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-05
-updated: 2026-05-12
+updated: 2026-05-17
 source:
 related:
   - "[[LLM Wiki 工作流]]"
@@ -1087,3 +1087,25 @@ related:
 - 更新 `.omx/reports/concept-card-relation-map/taxonomy_placement_review.py`：新增 `--review-step3`，把稳定父类白名单、非自动批准锚点、缺失 phantom parent、root/foundation anchor、23 张 deferred 卡的 parent-route precheck 写入审计台账。
 - 重新生成 `.omx/reports/concept-card-relation-map/taxonomy-placement-review.json/md`：`classification_stage: step3_parent_whitelist_review`，approved stable parents 14，proposed anchors not auto-approved 3，missing proposed anchors 2，deferred rows parent-prechecked 23。
 - Boundary: 本轮只固定 Step 3 candidate-generation 边界，不写任何概念卡 `up`；`Approval Gate` / `Memory Reflection` / `ReAct` 只是 Step 5 候选复核入口，不是 accepted taxonomy。
+
+## [2026-05-17] maintenance | Taxonomy placement Step 4 conservative candidates
+
+- 更新 `.omx/reports/concept-card-relation-map/taxonomy_placement_review.py`：新增 `--generate-step4`，只基于 Step 3 approved stable parents 为 23 张 deferred 卡生成保守候选。
+- 生成 `.omx/reports/concept-card-relation-map/taxonomy-placement-candidates.json/md`，并更新 `.omx/reports/concept-card-relation-map/taxonomy-placement-review.json/md`：`classification_stage: step4_conservative_candidates`，generated candidates 3，suppressed signals 20。
+- 当前进入 Step 5 的候选只有 `Approval Gate -> Agent Workflow`、`Memory Reflection -> Memory`、`ReAct -> Agent Workflow`；它们仍是 `candidate_for_step5_review`，不是 accepted taxonomy。
+- Boundary: 本轮不写任何概念卡 `up`，不调度 dry-run；component-of、broad anchor、support/protect/execute 等信号继续被挡在 `up` 之外。
+
+## [2026-05-17] source-update | 小林 Note sitemap 面试题
+
+- Source: [[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]
+- Scope: `all`; checked 142 sitemap URLs.
+- Result: new 22, changed 120, unchanged 0, errors 0.
+- Updated navigation: [[资料收集索引]], [[04 页面目录]], [[index]]
+- Boundary: this is raw evidence refresh; changed pages still need explicit wiki/concept digestion if their content matters.
+
+## [2026-05-17] maintenance | Taxonomy placement Step 5 candidate adjudication
+
+- 更新 `.omx/reports/concept-card-relation-map/taxonomy_placement_review.py`：新增 `--adjudicate-step5`，把 Step 4 的 conservative candidates 逐条判定为 accepted / rejected，并生成独立 adjudication artifact。
+- 生成 `.omx/reports/concept-card-relation-map/taxonomy-placement-step5-adjudication.json/md`，并更新 `taxonomy-placement-review.json/md`：`classification_stage: step5_llm_adjudication`，3 条候选全部完成判定。
+- 判定结果：`Memory Reflection -> Memory` 为 `accept_taxonomy` + `add_up`，可进入 Step 6 dry-run；`Approval Gate -> Agent Workflow` 与 `ReAct -> Agent Workflow` 均为 `reject_taxonomy`，因为它们分别是 workflow 控制点和 Agent Loop 模式，不是 Agent Workflow 子类。
+- Boundary: 本轮不修改任何概念卡 `up`，不执行 dry-run / apply，不新增 `down` / `children` / Juggl 字段；Step 5 只证明 dry-run eligibility，当前可进入下一步的只有 1 条。

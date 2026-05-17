@@ -9,19 +9,20 @@ topic:
   - "rag"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/rag/7_embedding_algos.html"
 source: "https://xiaolinnote.com/ai/rag/7_embedding_algos.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: e42ddd8f035839a5534bceb1f413141013b0b8787d6c04e3930f78cc3021d062
+sha256: 714bfc9ebbca5b42dd7fb00c6a1e20155b1d6ce82441d517faf16859a978303b
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[Embedding]]"
   - "[[Vector Database]]"
 ---
-# 7. Embedding 有哪几种算法你了解过吗？
+
+# 7. [[Embedding]] 有哪几种算法你了解过吗？
 
 原始链接：https://xiaolinnote.com/ai/rag/7_embedding_algos.html
 
@@ -34,13 +35,15 @@ related:
 
 ## 页面正文
 
+# 7. Embedding 有哪几种算法你了解过吗？
 
-[公众号@小林面试笔记](https://xiaolinnote.com)大约 11 分钟约 3326 字
+原创[公众号@小林面试笔记](https://xiaolinnote.com)RAG大约 11 分钟约 3330 字
 
 ---
 
+# [7. Embedding 有哪几种算法你了解过吗？](#_7-embedding-有哪几种算法你了解过吗)
 
-👔面试官：RAG 里用的 [[Embedding]] 算法有哪些？你了解过几代演进？
+👔面试官：RAG 里用的 Embedding 算法有哪些？你了解过几代演进？
 
 🙋‍♂️我：Embedding 算法我知道，Word2Vec 嘛，把词变成向量。
 
@@ -181,7 +184,7 @@ RAG 场景下基本只考虑第三代模型，中文场景 BGE 和 Qwen3-Embeddi
 
 ---
 
-对了，AI RAG的面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
+对了，大模型面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
 
 ![](https://cdn.xiaolincoding.com//picgo/扫码_搜索联合传播样式-标准色版.png)
 

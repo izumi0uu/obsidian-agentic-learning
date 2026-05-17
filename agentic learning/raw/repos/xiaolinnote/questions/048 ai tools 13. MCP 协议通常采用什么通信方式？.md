@@ -6,19 +6,22 @@ topic:
   - "interview"
   - "ai"
   - "llm"
+  - "tools"
+  - "mcp"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/tools/13_mcp_transport.html"
 source: "https://xiaolinnote.com/ai/tools/13_mcp_transport.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 7f40f04e24d881962cfc3ac01a23a4513ad7d9d14bb51a29e4c352044f620f44
+sha256: 0fba73822a8ffc1627ae7ca2e2727f01d62a776f29e1daf85d5e5be768836a1f
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[MCP]]"
 ---
+
 # 13. [[MCP]] 协议通常采用什么通信方式？
 
 原始链接：https://xiaolinnote.com/ai/tools/13_mcp_transport.html
@@ -31,11 +34,13 @@ related:
 
 ## 页面正文
 
+# 13. MCP 协议通常采用什么通信方式？
 
-[公众号@小林面试笔记](https://xiaolinnote.com)大约 8 分钟约 2359 字
+原创[公众号@小林面试笔记](https://xiaolinnote.com)Tools大约 8 分钟约 2360 字
 
 ---
 
+# [13. MCP 协议通常采用什么通信方式？](#_13-mcp-协议通常采用什么通信方式)
 
 👔面试官：MCP 协议通常采用什么通信方式？
 
@@ -172,7 +177,7 @@ Streamable HTTP 的做法是把这两条通道合并成一个端点：Client 照
 
 ---
 
-对了，AI 工具调用的面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
+对了，大模型面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
 
 ![](https://cdn.xiaolincoding.com//picgo/扫码_搜索联合传播样式-标准色版.png)
 

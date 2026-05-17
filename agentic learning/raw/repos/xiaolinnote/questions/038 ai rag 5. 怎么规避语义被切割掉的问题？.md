@@ -9,18 +9,19 @@ topic:
   - "rag"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/rag/5_semantic_cuts.html"
 source: "https://xiaolinnote.com/ai/rag/5_semantic_cuts.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 5fce57b71c012476fda1b179d804214912c2ebb6dcf3d8295eb5403c53cc04b8
+sha256: 65f120cb66a28894c3c40db4e4825b0509627c99375b0e7df5e1687f3830b996
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[Chunking]]"
   - "[[Document Ingestion]]"
 ---
+
 # 5. 怎么规避语义被切割掉的问题？
 
 原始链接：https://xiaolinnote.com/ai/rag/5_semantic_cuts.html
@@ -34,11 +35,13 @@ related:
 
 ## 页面正文
 
+# 5. 怎么规避语义被切割掉的问题？
 
-[公众号@小林面试笔记](https://xiaolinnote.com)大约 13 分钟约 3919 字
+原创[公众号@小林面试笔记](https://xiaolinnote.com)RAG大约 13 分钟约 3923 字
 
 ---
 
+# [5. 怎么规避语义被切割掉的问题？](#_5-怎么规避语义被切割掉的问题)
 
 👔面试官：[[Chunking]] 的时候语义被切断是个很常见的问题，你有没有遇到过？怎么处理的？
 
@@ -208,7 +211,7 @@ Contextual Retrieval 生成的 Context 可能是：
 
 ---
 
-对了，AI RAG的面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
+对了，大模型面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
 
 ![](https://cdn.xiaolincoding.com//picgo/扫码_搜索联合传播样式-标准色版.png)
 

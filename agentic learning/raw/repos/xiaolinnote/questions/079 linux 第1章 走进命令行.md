@@ -4,18 +4,20 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "linux"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/linux/01-terminal-shell-and-help.html"
 source: "https://xiaolinnote.com/linux/01-terminal-shell-and-help.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 4a4a1017293bab8a33d40e26cc4cd4db90861a43e82624cd61e5303bbe67d35b
+sha256: fd74daf5bce26afa7e3682fc82ebda23d6822a99d8abc22c9302e0b358f65a4d
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 第1章 走进命令行
 
 原始链接：https://xiaolinnote.com/linux/01-terminal-shell-and-help.html
@@ -28,6 +30,7 @@ related:
 
 ## 页面正文
 
+# 第1章 走进命令行
 
 [公众号@小林面试笔记](https://xiaolinnote.com)Linux大约 13 分钟约 3754 字2025/9/2
 

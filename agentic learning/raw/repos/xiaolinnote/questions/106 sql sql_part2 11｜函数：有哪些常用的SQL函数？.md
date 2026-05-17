@@ -4,18 +4,21 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "database"
+  - "sql"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/sql/sql_part2/11-functions.html"
 source: "https://xiaolinnote.com/sql/sql_part2/11-functions.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: f0932a6a59768a6213ca86ff674a4737477b0244b85ec199f6d34a979b04bfc5
+sha256: bf11f5ba1ddfc499061e95dc0ea9481bf3ae04522c41377506c758958dd3cfdd
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 11｜函数：有哪些常用的SQL函数？
 
 原始链接：https://xiaolinnote.com/sql/sql_part2/11-functions.html
@@ -28,11 +31,13 @@ related:
 
 ## 页面正文
 
+# 11｜函数：有哪些常用的SQL函数？
 
 [公众号@小林面试笔记](https://xiaolinnote.com)SQL大约 22 分钟约 6491 字2025/8/31
 
 ---
 
+# [11｜函数：有哪些常用的SQL函数？](#_11-函数-有哪些常用的sql函数)
 
 大家好，我是小林。
 

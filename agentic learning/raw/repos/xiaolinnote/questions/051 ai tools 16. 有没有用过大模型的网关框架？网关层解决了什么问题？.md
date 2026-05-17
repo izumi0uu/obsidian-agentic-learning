@@ -6,14 +6,16 @@ topic:
   - "interview"
   - "ai"
   - "llm"
+  - "tools"
+  - "mcp"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/tools/16_llm_gateway.html"
 source: "https://xiaolinnote.com/ai/tools/16_llm_gateway.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 96652a57a1dd73135ec1400a849a89f9fa5a3f78958c15742ef7f891983f4986
+sha256: c59d9c0ea87dcdf619e4a12724a423683475f37a5b6d706bb17d57350db92ea7
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
@@ -22,6 +24,7 @@ related:
   - "[[Observability]]"
   - "[[Policy Engine]]"
 ---
+
 # 16. 有没有用过大模型的网关框架？网关层解决了什么问题？
 
 原始链接：https://xiaolinnote.com/ai/tools/16_llm_gateway.html
@@ -37,17 +40,19 @@ related:
 
 ## 页面正文
 
+# 16. 有没有用过大模型的网关框架？网关层解决了什么问题？
 
-[公众号@小林面试笔记](https://xiaolinnote.com)大约 13 分钟约 3935 字
+原创[公众号@小林面试笔记](https://xiaolinnote.com)Tools大约 13 分钟约 3936 字
 
 ---
 
+# [16. 有没有用过大模型的网关框架？网关层解决了什么问题？](#_16-有没有用过大模型的网关框架-网关层解决了什么问题)
 
-👔面试官：有没有用过大模型的网关框架？[[LLM Gateway|网关层]]主要解决什么问题？
+👔面试官：有没有用过大模型的网关框架？网关层主要解决什么问题？
 
 🙋‍♂️我：网关就是一个代理层嘛，主要是做负载均衡的，把请求分发到不同的模型 API 上，避免单个 API 被打满。
 
-👔面试官：只是负载均衡？那我直接用 Nginx 做反向代理不就行了，为什么还需要专门的 LLM 网关？
+👔面试官：只是负载均衡？那我直接用 Nginx 做反向代理不就行了，为什么还需要专门的 [[LLM Gateway|LLM 网关]]？
 
 🙋‍♂️我：嗯……LLM 网关应该还有一些额外功能，比如可以统一接口格式？然后可能还有缓存？但我不太确定跟普通 API 网关有什么本质区别。
 
@@ -129,7 +134,7 @@ related:
 
 网关集中记录了每次调用的 token 用量、响应时间、错误率等数据，这让你可以回答「哪个接口最烧钱」「研发团队和产品团队各用了多少」「GPT-4o 和 Claude Sonnet 的 P95 响应时间分别是多少」这类问题。
 
-有了这些数据，成本优化才有依据，比如发现某个接口消耗了 40% 的 token，但实际上可以用便宜得多的模型替代。网关通常可以直接对接 Langfuse、Prometheus 等[[Observability|监控]]系统，不需要在业务代码里手动埋点，数据天然集中。
+有了这些数据，成本优化才有依据，比如发现某个接口消耗了 40% 的 token，但实际上可以用便宜得多的模型替代。网关通常可以直接对接 Langfuse、Prometheus 等监控系统，不需要在业务代码里手动埋点，数据天然集中。
 
 ### [Prompt 安全和内容过滤：统一的安全防线](#prompt-安全和内容过滤-统一的安全防线)
 
@@ -188,7 +193,7 @@ related:
 
 ---
 
-对了，AI 工具调用的面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
+对了，大模型面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
 
 ![](https://cdn.xiaolincoding.com//picgo/扫码_搜索联合传播样式-标准色版.png)
 

@@ -4,18 +4,21 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "database"
+  - "sql"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/sql/sql_part3/14-indexing.html"
 source: "https://xiaolinnote.com/sql/sql_part3/14-indexing.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: c0e0b365ea65ec60d975bc5e847c25263fe9fd97a43fd7bccd28d34960786e77
+sha256: faf1e9c0387c809cb0af6138f51dddf2f65b03e483bf98875c48997b59231a09
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 14｜索引：如何创建索引？
 
 原始链接：https://xiaolinnote.com/sql/sql_part3/14-indexing.html
@@ -28,11 +31,13 @@ related:
 
 ## 页面正文
 
+# 14｜索引：如何创建索引？
 
 [公众号@小林面试笔记](https://xiaolinnote.com)SQL大约 35 分钟约 10593 字2025/8/31
 
 ---
 
+# [14｜索引：如何创建索引？](#_14-索引-如何创建索引)
 
 大家好，我是小林。
 

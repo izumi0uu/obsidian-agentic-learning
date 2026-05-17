@@ -4,18 +4,20 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "linux"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/linux/appendix-a0-shell-scripting-basics.html"
 source: "https://xiaolinnote.com/linux/appendix-a0-shell-scripting-basics.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 3054ba24712a429c575902103ed5e1ad1bbe9992b0bd80cc893f4894e0d8c4b5
+sha256: 37e98775ccc4b2e5bef9a25999b903edd5d1f6a255d1a54fb69de48af745ef2f
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 附录A0：Shell脚本简单入门
 
 原始链接：https://xiaolinnote.com/linux/appendix-a0-shell-scripting-basics.html
@@ -28,6 +30,7 @@ related:
 
 ## 页面正文
 
+# 附录A0：Shell脚本简单入门
 
 [公众号@小林面试笔记](https://xiaolinnote.com)Linux大约 30 分钟约 9005 字2025/9/2
 

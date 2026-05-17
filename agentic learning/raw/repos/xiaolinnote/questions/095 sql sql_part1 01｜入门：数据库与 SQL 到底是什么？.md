@@ -4,18 +4,21 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "database"
+  - "sql"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/sql/sql_part1/01-introduction-and-setup.html"
 source: "https://xiaolinnote.com/sql/sql_part1/01-introduction-and-setup.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 65a16e21f57387136da5bb0df02d75ae8173cf965a8ca7a66b48323406216840
+sha256: f209956d8fa2025644b7594bc2a614b12298ed9aa2d72b0741b57974c2b220a0
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 01｜入门：数据库与 SQL 到底是什么？
 
 原始链接：https://xiaolinnote.com/sql/sql_part1/01-introduction-and-setup.html
@@ -28,11 +31,13 @@ related:
 
 ## 页面正文
 
+# 01｜入门：数据库与 SQL 到底是什么？
 
 [公众号@小林面试笔记](https://xiaolinnote.com)SQL大约 24 分钟约 7178 字2025/8/31
 
 ---
 
+# [01｜入门：数据库与 SQL 到底是什么？](#_01-入门-数据库与-sql-到底是什么)
 
 大家好，我是小林。
 

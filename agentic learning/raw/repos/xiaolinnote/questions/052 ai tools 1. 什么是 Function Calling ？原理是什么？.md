@@ -6,20 +6,23 @@ topic:
   - "interview"
   - "ai"
   - "llm"
+  - "tools"
+  - "mcp"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/tools/1_function_calling.html"
 source: "https://xiaolinnote.com/ai/tools/1_function_calling.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 18456357159414fc5cc67bfbd74ec640bc49a1aa5f606ff1820befd3b4a96b52
+sha256: 55efe80829647b5ba795d294a6c5b8d0df8a7577bd96030380d3705508ff77dc
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[Tool Calling]]"
   - "[[Tool Registry]]"
 ---
+
 # 1. 什么是 [[Tool Calling|Function Calling]] ？原理是什么？
 
 原始链接：https://xiaolinnote.com/ai/tools/1_function_calling.html
@@ -33,11 +36,13 @@ related:
 
 ## 页面正文
 
+# 1. 什么是 Function Calling ？原理是什么？
 
-[公众号@小林面试笔记](https://xiaolinnote.com)大约 9 分钟约 2697 字
+原创[公众号@小林面试笔记](https://xiaolinnote.com)Tools大约 9 分钟约 2698 字
 
 ---
 
+# [1. 什么是 Function Calling ？原理是什么？](#_1-什么是-function-calling-原理是什么)
 
 👔面试官：来聊聊 Function Calling 吧，说说它是什么、原理是怎样的？
 
@@ -196,7 +201,7 @@ if msg.finish_reason == "tool_calls":  # 模型要调工具，还没给最终答
 
 ---
 
-对了，AI 工具调用的面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
+对了，大模型面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
 
 ![](https://cdn.xiaolincoding.com//picgo/扫码_搜索联合传播样式-标准色版.png)
 

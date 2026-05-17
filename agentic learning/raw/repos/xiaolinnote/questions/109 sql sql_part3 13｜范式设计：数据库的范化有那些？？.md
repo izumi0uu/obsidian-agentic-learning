@@ -4,18 +4,21 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "database"
+  - "sql"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/sql/sql_part3/13-normalization.html"
 source: "https://xiaolinnote.com/sql/sql_part3/13-normalization.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 8f67fe02bd23ec7f56839f56605024e8c50a32ccec50d70172bb9ee2bb8ccd21
+sha256: d1be894ad768b1cb202b34edc4e284d405a84ae7326216a70080a4650fe3e579
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 13｜范式设计：数据库的范化有那些？？
 
 原始链接：https://xiaolinnote.com/sql/sql_part3/13-normalization.html
@@ -28,11 +31,13 @@ related:
 
 ## 页面正文
 
+# 13｜范式设计：数据库的范化有那些？？
 
 [公众号@小林面试笔记](https://xiaolinnote.com)SQL大约 28 分钟约 8362 字2025/8/31
 
 ---
 
+# [13｜范式设计：数据库的范化有那些？？](#_13-范式设计-数据库的范化有那些)
 
 大家好，我是小林。
 

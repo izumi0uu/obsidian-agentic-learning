@@ -4,18 +4,21 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "database"
+  - "sql"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/sql/sql_part1/06-update-delete.html"
 source: "https://xiaolinnote.com/sql/sql_part1/06-update-delete.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: ef064c8e55b5854a3833c6503a6f9250851b9e60cfeb7f6dbbadcdbd12f1f24b
+sha256: f6fa57b4dda939da0f8b01e76f25601b3e1c8000f3237c600cd7c42f85dedfdd
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 06｜修改与删除：如何更新或删除数据？
 
 原始链接：https://xiaolinnote.com/sql/sql_part1/06-update-delete.html
@@ -28,11 +31,13 @@ related:
 
 ## 页面正文
 
+# 06｜修改与删除：如何更新或删除数据？
 
 [公众号@小林面试笔记](https://xiaolinnote.com)SQL大约 15 分钟约 4417 字2025/8/31
 
 ---
 
+# [06｜修改与删除：如何更新或删除数据？](#_06-修改与删除-如何更新或删除数据)
 
 大家好，我是小林。
 

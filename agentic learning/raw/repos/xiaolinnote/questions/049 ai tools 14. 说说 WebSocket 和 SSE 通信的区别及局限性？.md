@@ -6,18 +6,21 @@ topic:
   - "interview"
   - "ai"
   - "llm"
+  - "tools"
+  - "mcp"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/tools/14_sse_vs_websocket.html"
 source: "https://xiaolinnote.com/ai/tools/14_sse_vs_websocket.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 3ae6cef7f455d25cce531c8a7dc74b4cd876764a37708118bef0c46bc5619f16
+sha256: 5f82221c2b969bffe2044738119491570f3bbfebd033c2fd83bae7375b2d9cf1
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 14. 说说 WebSocket 和 SSE 通信的区别及局限性？
 
 原始链接：https://xiaolinnote.com/ai/tools/14_sse_vs_websocket.html
@@ -30,11 +33,13 @@ related:
 
 ## 页面正文
 
+# 14. 说说 WebSocket 和 SSE 通信的区别及局限性？
 
-[公众号@小林面试笔记](https://xiaolinnote.com)大约 13 分钟约 4020 字
+原创[公众号@小林面试笔记](https://xiaolinnote.com)Tools大约 13 分钟约 4021 字
 
 ---
 
+# [14. 说说 WebSocket 和 SSE 通信的区别及局限性？](#_14-说说-websocket-和-sse-通信的区别及局限性)
 
 👔面试官：说说 WebSocket 和 SSE 通信的区别及局限性？
 
@@ -195,7 +200,7 @@ WebSocket 的三个坑也要说到：有状态导致横向扩展麻烦（需要 
 
 ---
 
-对了，AI 工具调用的面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
+对了，大模型面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
 
 ![](https://cdn.xiaolincoding.com//picgo/扫码_搜索联合传播样式-标准色版.png)
 

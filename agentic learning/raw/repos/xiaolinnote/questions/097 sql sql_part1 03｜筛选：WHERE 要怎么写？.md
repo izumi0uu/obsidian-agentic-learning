@@ -4,18 +4,21 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "database"
+  - "sql"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/sql/sql_part1/03-where-filtering.html"
 source: "https://xiaolinnote.com/sql/sql_part1/03-where-filtering.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: b5560574409e062e2ab5768240809823411d8a29a9529c55cc7bcc73720302af
+sha256: d5db55f172153a1598e35bed4d71da2fafcb91e922082cb780d0f939df42bd88
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 03｜筛选：WHERE 要怎么写？
 
 原始链接：https://xiaolinnote.com/sql/sql_part1/03-where-filtering.html
@@ -28,11 +31,13 @@ related:
 
 ## 页面正文
 
+# 03｜筛选：WHERE 要怎么写？
 
 [公众号@小林面试笔记](https://xiaolinnote.com)SQL大约 18 分钟约 5537 字2025/8/31
 
 ---
 
+# [03｜筛选：WHERE 要怎么写？](#_03-筛选-where-要怎么写)
 
 大家好，我是小林。
 

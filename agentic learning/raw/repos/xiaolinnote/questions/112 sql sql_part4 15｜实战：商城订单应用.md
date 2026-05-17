@@ -4,18 +4,21 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "database"
+  - "sql"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/sql/sql_part4/15-ecommerce-practice.html"
 source: "https://xiaolinnote.com/sql/sql_part4/15-ecommerce-practice.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: fc4c190f239aeb7e6bdb24d459ec1e0c2a0fb3cc53cc2014e609e586c7042a2e
+sha256: 17e54175c60a455b7c8c50f09dd0619e86f8ff97b0e46c6166b954e961b3257e
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 15｜实战：商城订单应用
 
 原始链接：https://xiaolinnote.com/sql/sql_part4/15-ecommerce-practice.html
@@ -28,11 +31,13 @@ related:
 
 ## 页面正文
 
+# 15｜实战：商城订单应用
 
 [公众号@小林面试笔记](https://xiaolinnote.com)SQL大约 19 分钟约 5736 字2025/8/31
 
 ---
 
+# [15｜实战：商城订单应用](#_15-实战-商城订单应用)
 
 大家好，我是小林。
 

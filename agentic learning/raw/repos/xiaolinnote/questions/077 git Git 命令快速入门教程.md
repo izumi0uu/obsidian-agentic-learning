@@ -4,18 +4,20 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "git"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/git/"
 source: "https://xiaolinnote.com/git/"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: f39ccdb2f6c5fdcc7ebf44ee43006294c1e8485f559bc3a942a5845ae42d4040
+sha256: f4e18aa4d50f1c26f15b2180be38a19a4ee038a6b6dd21ca18a856e8bf980526
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # Git 命令快速入门教程
 
 原始链接：https://xiaolinnote.com/git/
@@ -28,11 +30,13 @@ related:
 
 ## 页面正文
 
+# Git 命令快速入门教程
 
 [公众号@小林面试笔记](https://xiaolinnote.com)大约 5 分钟约 1409 字
 
 ---
 
+# [Git 命令快速入门教程](#git-命令快速入门教程)
 
 ![Git Logo](https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png)
 

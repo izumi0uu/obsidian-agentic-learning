@@ -4,18 +4,21 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "database"
+  - "sql"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/sql/sql_part2/07-join-tables.html"
 source: "https://xiaolinnote.com/sql/sql_part2/07-join-tables.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: adb94c995d9442cbb0be8483993779a485c205a61da9383e49a613f33003f43d
+sha256: 56ff19ff545283b2fece337eba2dc88226d5fe6220a3f63af572aaafdf1de064
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 07｜连接：多表该如何 JOIN 在一起？
 
 原始链接：https://xiaolinnote.com/sql/sql_part2/07-join-tables.html
@@ -28,11 +31,13 @@ related:
 
 ## 页面正文
 
+# 07｜连接：多表该如何 JOIN 在一起？
 
 [公众号@小林面试笔记](https://xiaolinnote.com)SQL大约 23 分钟约 6919 字2025/8/31
 
 ---
 
+# [07｜连接：多表该如何 JOIN 在一起？](#_07-连接-多表该如何-join-在一起)
 
 大家好，我是小林。
 

@@ -9,12 +9,12 @@ topic:
   - "rag"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-16
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/rag/4_chunking.html"
 source: "https://xiaolinnote.com/ai/rag/4_chunking.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: d2472ad2e79e45e218e0148178392a5783e561f5b6d183a0ca8a0218ba8fc530
+sha256: 677abcc4879c025827e520bf1e509b4765e76644f725bb32381fb3eb25e630eb
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
@@ -25,7 +25,8 @@ related:
   - "[[Dense Retrieval]]"
   - "[[Retriever]]"
 ---
-# 4. RAG 中的文档是怎么存的？粒度是多大？详细说说文档切割（Chunking）策略？
+
+# 4. RAG 中的文档是怎么存的？粒度是多大？详细说说文档切割（[[Chunking]]）策略？
 
 原始链接：https://xiaolinnote.com/ai/rag/4_chunking.html
 
@@ -39,15 +40,18 @@ related:
 - [[Parent-Child Chunking]]
 - [[Dense Retrieval]]
 - [[Retriever]]
+
 ## 页面正文
 
+# 4. RAG 中的文档是怎么存的？粒度是多大？详细说说文档切割（Chunking）策略？
 
-[公众号@小林面试笔记](https://xiaolinnote.com)大约 12 分钟约 3616 字
+原创[公众号@小林面试笔记](https://xiaolinnote.com)RAG大约 12 分钟约 3620 字
 
 ---
 
+# [4. RAG 中的文档是怎么存的？粒度是多大？详细说说文档切割（Chunking）策略？](#_4-rag-中的文档是怎么存的-粒度是多大-详细说说文档切割-chunking-策略)
 
-👔面试官：RAG 里的文档是怎么存进[[Vector Database|向量库]]的？你说说 [[Chunking]] 怎么做。
+👔面试官：RAG 里的文档是怎么存进[[Vector Database|向量库]]的？你说说 Chunking 怎么做。
 
 🙋‍♂️我：文档直接整篇存进去就好了吧？反正向量模型什么都能处理。
 
@@ -194,7 +198,7 @@ related:
 
 ---
 
-对了，AI RAG的面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
+对了，大模型面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
 
 ![](https://cdn.xiaolincoding.com//picgo/扫码_搜索联合传播样式-标准色版.png)
 

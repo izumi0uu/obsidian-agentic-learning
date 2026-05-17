@@ -4,18 +4,20 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "git"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/git/01-why-learn-git.html"
 source: "https://xiaolinnote.com/git/01-why-learn-git.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 27aa41f3982d103abdea0157a045dd4af494953945f2757dbc88c7626b8bbbd6
+sha256: 7de5dbde9c1f3dbcf066a00f98bc9dfd839827d85631ea90e8965f27738d280b
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 01｜为什么要学 Git？
 
 原始链接：https://xiaolinnote.com/git/01-why-learn-git.html
@@ -28,11 +30,13 @@ related:
 
 ## 页面正文
 
+# 01｜为什么要学 Git？
 
 [公众号@小林面试笔记](https://xiaolinnote.com)Git大约 22 分钟约 6657 字
 
 ---
 
+# [01｜为什么要学 Git？](#_01-为什么要学-git)
 
 大家好，我是小林。
 

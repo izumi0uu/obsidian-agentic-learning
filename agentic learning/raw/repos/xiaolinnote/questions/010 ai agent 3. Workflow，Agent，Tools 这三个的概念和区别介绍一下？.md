@@ -9,12 +9,12 @@ topic:
   - "agent"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/agent/3_workflow_tools.html"
 source: "https://xiaolinnote.com/ai/agent/3_workflow_tools.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 2e9702fce7e1f3ff0e0f84b74597d53be7d8bf297463609bc9fbdf0248ea799e
+sha256: 8820fb396fc5d1e41f268871bc446ff5f7a9a29ebeb203cd3b4b2a5ccc0c1b48
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
@@ -24,7 +24,8 @@ related:
   - "[[Tool Registry]]"
   - "[[Agent Framework]]"
 ---
-# 3. Workflow，[[Agent]]，Tools 这三个的概念和区别介绍一下？
+
+# 3. [[Agent Workflow|Workflow]]，[[Agent]]，Tools 这三个的概念和区别介绍一下？
 
 原始链接：https://xiaolinnote.com/ai/agent/3_workflow_tools.html
 
@@ -40,13 +41,15 @@ related:
 
 ## 页面正文
 
+# 3. Workflow，Agent，Tools 这三个的概念和区别介绍一下？
 
 原创[公众号@小林面试笔记](https://xiaolinnote.com)agent大约 18 分钟约 5439 字
 
 ---
 
+# [3. Workflow，Agent，Tools 这三个的概念和区别介绍一下？](#_3-workflow-agent-tools-这三个的概念和区别介绍一下)
 
-👔面试官：[[Agent Workflow|Workflow]]、Agent、[[Tool Use|Tools]] 这三个概念说一下，区别是什么？
+👔面试官：Workflow、Agent、Tools 这三个概念说一下，区别是什么？
 
 🙋‍♂️我：Tools 是工具函数，Agent 是能[[Tool Calling|调工具]]的智能体，Workflow 是把多个 Agent 串起来的流程，三者是从小到大的关系。
 

@@ -6,20 +6,23 @@ topic:
   - "interview"
   - "ai"
   - "llm"
+  - "tools"
+  - "mcp"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/tools/6_mcp_vs_fc.html"
 source: "https://xiaolinnote.com/ai/tools/6_mcp_vs_fc.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 1e78420dedbb04f524735cb89c4ebf26d2872620fff1270beafdf42b059511e2
+sha256: b04b1c49b618fa442e55e961a9fd80b1989de3d4c9b419b82e22e966692ff865
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[MCP]]"
   - "[[Tool Calling]]"
 ---
+
 # 6. [[MCP]] 和 [[Tool Calling|Function Calling]] 有什么区别？有没有实际跑过 MCP？
 
 原始链接：https://xiaolinnote.com/ai/tools/6_mcp_vs_fc.html
@@ -33,11 +36,13 @@ related:
 
 ## 页面正文
 
+# 6. MCP 和 Function Calling 有什么区别？有没有实际跑过 MCP？
 
-[公众号@小林面试笔记](https://xiaolinnote.com)大约 10 分钟约 3145 字
+原创[公众号@小林面试笔记](https://xiaolinnote.com)Tools大约 10 分钟约 3146 字
 
 ---
 
+# [6. MCP 和 Function Calling 有什么区别？有没有实际跑过 MCP？](#_6-mcp-和-function-calling-有什么区别-有没有实际跑过-mcp)
 
 👔面试官：来聊聊 MCP 和 Function Calling 的区别吧。
 
@@ -250,7 +255,7 @@ if __name__ == "__main__":
 
 ---
 
-对了，AI 工具调用的面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
+对了，大模型面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
 
 ![](https://cdn.xiaolincoding.com//picgo/扫码_搜索联合传播样式-标准色版.png)
 

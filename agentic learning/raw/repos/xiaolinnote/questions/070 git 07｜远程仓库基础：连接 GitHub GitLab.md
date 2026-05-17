@@ -4,19 +4,21 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "git"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/git/07-remote-repository-basics.html"
 source: "https://xiaolinnote.com/git/07-remote-repository-basics.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: ac4e7c3ce1a98eef1bc86422424bb6347203eb0e13d4bda5a0040fdc0fa70125
+sha256: 81555a1073c4254097a5b8e1e7f9f25ec79e5e0d68ac8ef8c73cfff9a40164f9
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
-# 07｜远程仓库基础：连接 GitHub GitLab
+
+# 07｜远程仓库基础：连接 GitHub/GitLab
 
 原始链接：https://xiaolinnote.com/git/07-remote-repository-basics.html
 

@@ -9,12 +9,12 @@ topic:
   - "agent"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/agent/13_handcode.html"
 source: "https://xiaolinnote.com/ai/agent/13_handcode.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: ad1a2b415b8fa36a9ea6afba6ff223f24e4d6777d2790215c5c03ae89943009c
+sha256: 82180e57ce0daf05c46eefbc28e1386be18741e36901b4cff13c1104e38fa1d7
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
@@ -23,6 +23,7 @@ related:
   - "[[Tool Calling]]"
   - "[[Agent Workflow]]"
 ---
+
 # 13. 在工程实践中，为什么有时候选择「手搓」Agent，而不是直接用成熟框架？
 
 原始链接：https://xiaolinnote.com/ai/agent/13_handcode.html
@@ -38,11 +39,13 @@ related:
 
 ## 页面正文
 
+# 13. 在工程实践中，为什么有时候选择「手搓」Agent，而不是直接用成熟框架？
 
 原创[公众号@小林面试笔记](https://xiaolinnote.com)agent大约 12 分钟约 3622 字
 
 ---
 
+# [13. 在工程实践中，为什么有时候选择「手搓」Agent，而不是直接用成熟框架？](#_13-在工程实践中-为什么有时候选择「手搓」agent-而不是直接用成熟框架)
 
 👔面试官：你平时做 Agent 开发用什么框架？
 

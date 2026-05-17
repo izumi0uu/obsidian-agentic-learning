@@ -9,12 +9,12 @@ topic:
   - "agent"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/agent/2_components.html"
 source: "https://xiaolinnote.com/ai/agent/2_components.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: e2a73b659a81397f610509096af84894ded5fe0a889a6770cc3df5d17b225e83
+sha256: a2eca6b093d5b1223abbbf55779ed9e0ed377a7da2a2cb59749eb5cb9241827b
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
@@ -25,7 +25,8 @@ related:
   - "[[Planning]]"
   - "[[Agent State]]"
 ---
-# 2. Agent 的基本架构由哪些核心组件构成？
+
+# 2. [[Agent]] 的基本架构由哪些核心组件构成？
 
 原始链接：https://xiaolinnote.com/ai/agent/2_components.html
 
@@ -42,13 +43,15 @@ related:
 
 ## 页面正文
 
+# 2. Agent 的基本架构由哪些核心组件构成？
 
 原创[公众号@小林面试笔记](https://xiaolinnote.com)agent大约 15 分钟约 4627 字
 
 ---
 
+# [2. Agent 的基本架构由哪些核心组件构成？](#_2-agent-的基本架构由哪些核心组件构成)
 
-👔面试官：[[Agent]] 架构里有哪些核心组件？
+👔面试官：Agent 架构里有哪些核心组件？
 
 🙋‍♂️我：有 LLM 和工具系统，LLM 是大脑，工具让它能联网搜索、执行代码这些。
 

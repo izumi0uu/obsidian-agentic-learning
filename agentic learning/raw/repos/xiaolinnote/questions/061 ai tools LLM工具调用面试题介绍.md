@@ -6,14 +6,16 @@ topic:
   - "interview"
   - "ai"
   - "llm"
+  - "tools"
+  - "mcp"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/tools/tools_info.html"
 source: "https://xiaolinnote.com/ai/tools/tools_info.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 18859ea0af033ee7ed7b57403e2b0d1e659eccbfed8a3bb3d061a1d0ab5059d1
+sha256: 0fe62b3f79639ed3df2bb809fba8689dc7913481b5a85d7ce88dbbfe22d99de3
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
@@ -21,6 +23,7 @@ related:
   - "[[Tool Use]]"
   - "[[MCP]]"
 ---
+
 # LLM[[Tool Calling|工具调用]]面试题介绍
 
 原始链接：https://xiaolinnote.com/ai/tools/tools_info.html
@@ -35,11 +38,15 @@ related:
 
 ## 页面正文
 
+# LLM工具调用面试题介绍
 
-原创[公众号@小林面试笔记](https://xiaolinnote.com)tools大约 4 分钟约 1330 字
+原创[公众号@小林面试笔记](https://xiaolinnote.com)[[Tool Use|Tools]]大约 4 分钟约 1343 字
 
 ---
 
+# [LLM工具调用面试题介绍](#llm工具调用面试题介绍)
+
+[![](https://cdn.xiaolincoding.com//picgo/564e5be42c5d02d7c7628c6b4c16b302.png)](https://www.xiaolincoding.com/other/sijiao_offer.html)
 
 大家好，我是小林。
 
@@ -59,7 +66,7 @@ related:
 
 第 6 到第 8 题聊的是 **FC 与 MCP 的对比和选型**，两者到底有什么区别、什么场景该用哪个、为什么有些推理模型不支持 MCP。这块是面试里最容易拉开差距的部分，因为大部分人只会单独解释每个概念，但说不清楚它们之间的关系和选型依据。
 
-第 9 到第 11 题聊的是 **Agent Skill**，Skill 是什么、Skill 和 MCP 有什么区别、Function Calling/Skill/MCP 三者到底是什么关系。Skill 是 Anthropic 在 2025 年 10 月推出、12 月开源为跨平台规范的概念，把[[Tool Use|使用工具]]完成任务的知识和流程打包成可复用模块，和 MCP 提供的工具能力形成互补。理解了这三层架构（FC 是语言、MCP 是工具箱、Skill 是操作手册），你对整个工具调用体系就有全局视角了。
+第 9 到第 11 题聊的是 **Agent Skill**，Skill 是什么、Skill 和 MCP 有什么区别、Function Calling/Skill/MCP 三者到底是什么关系。Skill 是 Anthropic 在 2025 年 10 月推出、12 月开源为跨平台规范的概念，把使用工具完成任务的知识和流程打包成可复用模块，和 MCP 提供的工具能力形成互补。理解了这三层架构（FC 是语言、MCP 是工具箱、Skill 是操作手册），你对整个工具调用体系就有全局视角了。
 
 第 12 题聊的是 **A2A 协议**，A2A 是什么、跟 MCP 有什么区别。A2A 是 Google 在 2025 年 4 月推出的 Agent 间协作协议（后来捐给 Linux 基金会维护），和 MCP 的「Agent 连工具」不同，A2A 解决的是「Agent 连 Agent」的问题，属于进阶内容。
 
@@ -86,7 +93,7 @@ related:
 
 ---
 
-对了，AI 工具调用的面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
+对了，大模型面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
 
 ![](https://cdn.xiaolincoding.com//picgo/扫码_搜索联合传播样式-标准色版.png)
 
@@ -118,6 +125,7 @@ related:
 - [16. 有没有用过大模型的网关框架？网关层解决了什么问题？](https://xiaolinnote.com/ai/tools/16_llm_gateway.html)
 - [公众号@小林面试笔记](https://xiaolinnote.com)
 - [LLM工具调用面试题介绍](https://xiaolinnote.com/ai/tools/tools_info.html#llm工具调用面试题介绍)
+- [https://www.xiaolincoding.com/other/sijiao_offer.html](https://www.xiaolincoding.com/other/sijiao_offer.html)
 - [题目目录](https://xiaolinnote.com/ai/tools/tools_info.html#题目目录)
 - [1. 什么是 Function Calling？原理是什么？](https://xiaolinnote.com/ai/tools/1_function_calling.html)
 - [15. 为什么要用 WebRTC 协议？它和 WebSocket 在 AI 对话流中的核心差异是什么？](https://xiaolinnote.com/ai/tools/15_webrtc_vs_ws.html)

@@ -4,18 +4,20 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "linux"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/linux/"
 source: "https://xiaolinnote.com/linux/"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: e25b505a727a32dfd718a4e7a95d814c87527ccf27273ea08e46e39d602e3386
+sha256: 286e416b7f6d2471ebaa2fda5352ee5d44dd76e15af2b012cb12dd71dc516c98
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # Linux 命令快速入门
 
 原始链接：https://xiaolinnote.com/linux/
@@ -28,11 +30,13 @@ related:
 
 ## 页面正文
 
+# Linux 命令快速入门
 
 [公众号@小林面试笔记](https://xiaolinnote.com)Linux大约 5 分钟约 1572 字2025/9/2
 
 ---
 
+# [Linux 命令快速入门](#linux-命令快速入门)
 
 大家好，我是小林。
 

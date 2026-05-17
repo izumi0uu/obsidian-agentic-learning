@@ -9,12 +9,12 @@ topic:
   - "agent"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/agent/7_tasksplit.html"
 source: "https://xiaolinnote.com/ai/agent/7_tasksplit.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: a7466771308fbeade37f10152d9951f2bc7f74420863c9aacd457de6e077f72a
+sha256: e3beb92dab6ae173f07e91948999fd8bde9e68e989622e82921f3a44f239800e
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
@@ -22,6 +22,7 @@ related:
   - "[[Agent Workflow]]"
   - "[[Context Engineering]]"
 ---
+
 # 7. 复杂任务怎么做的任务拆分？为什么要拆分？效果如何提升？
 
 原始链接：https://xiaolinnote.com/ai/agent/7_tasksplit.html
@@ -36,13 +37,15 @@ related:
 
 ## 页面正文
 
+# 7. 复杂任务怎么做的任务拆分？为什么要拆分？效果如何提升？
 
 原创[公众号@小林面试笔记](https://xiaolinnote.com)agent大约 17 分钟约 5024 字
 
 ---
 
+# [7. 复杂任务怎么做的任务拆分？为什么要拆分？效果如何提升？](#_7-复杂任务怎么做的任务拆分-为什么要拆分-效果如何提升)
 
-👔面试官：你说说[[Planning|任务拆分]]是怎么做的，为什么要拆分，有什么实际收益？
+👔面试官：你说说任务拆分是怎么做的，为什么要拆分，有什么实际收益？
 
 🙋‍♂️我：就是把大任务切成小步骤，每步让 LLM 只做一件事，这样准确率高一些……
 
@@ -52,7 +55,7 @@ related:
 
 👔面试官：有点方向但不够准确。核心原因是 context window 有限，任务越大中间状态越多，模型很难持续追踪子目标，容易「桌面太乱」出错。那你知道任务拆分有哪两种思路吗，各自的适用场景是什么？
 
-🙋‍♂️我：一种是提前写死步骤，一种是让 LLM 自己规划步骤？
+🙋‍♂️我：一种是提前写死步骤，一种是让 LLM 自己[[Planning|规划]]步骤？
 
 👔面试官：对，静态拆分和动态拆分。那拆完之后还有一个关键优化点，步骤之间有依赖关系，识别出哪些可以并行，端到端延迟能降很多，这你考虑过吗？
 

@@ -6,14 +6,16 @@ topic:
   - "interview"
   - "ai"
   - "llm"
+  - "tools"
+  - "mcp"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/tools/"
 source: "https://xiaolinnote.com/ai/tools/"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 94c613afac9b18b21c46e961b9b01f9ff013049192f2a038b096019b6c193c1b
+sha256: a0013280733d7bd97e36bf43ec0415fb4216e2101c45959f75b1e1a63ca2d68a
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
@@ -21,6 +23,7 @@ related:
   - "[[Tool Use]]"
   - "[[MCP]]"
 ---
+
 # 03｜ LLM[[Tool Calling|工具调用]]面试题
 
 原始链接：https://xiaolinnote.com/ai/tools/
@@ -35,8 +38,9 @@ related:
 
 ## 页面正文
 
+# 03｜ LLM工具调用面试题
 
-[公众号@小林面试笔记](https://xiaolinnote.com)agent小于 1 分钟约 32 字
+[公众号@小林面试笔记](https://xiaolinnote.com)[[Tool Use|Tools]]小于 1 分钟约 32 字
 
 ---
 

@@ -9,12 +9,12 @@ topic:
   - "agent"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/agent/6_three_patterns.html"
 source: "https://xiaolinnote.com/ai/agent/6_three_patterns.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: e72aaab7367968c81ad248c4b822741c75fdc3ae01b956aae74055f47f460539
+sha256: 01caf24bcf2fcd73b3a32c45c50d435b889963600aeee3c5c83971dc9aca3941
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
@@ -24,7 +24,8 @@ related:
   - "[[Plan-and-Solve Prompting]]"
   - "[[Agent Workflow]]"
 ---
-# 6. ReAct、Plan-and-Execute、Reflection 三种范式有什么核心区别？实际项目中该如何选型？
+
+# 6. [[ReAct]]、Plan-and-Execute、Reflection 三种范式有什么核心区别？实际项目中该如何选型？
 
 原始链接：https://xiaolinnote.com/ai/agent/6_three_patterns.html
 
@@ -40,13 +41,15 @@ related:
 
 ## 页面正文
 
+# 6. ReAct、Plan-and-Execute、Reflection 三种范式有什么核心区别？实际项目中该如何选型？
 
 原创[公众号@小林面试笔记](https://xiaolinnote.com)agent大约 16 分钟约 4893 字
 
 ---
 
+# [6. ReAct、Plan-and-Execute、Reflection 三种范式有什么核心区别？实际项目中该如何选型？](#_6-react、plan-and-execute、reflection-三种范式有什么核心区别-实际项目中该如何选型)
 
-👔面试官：你来说说 [[ReAct]]、[[Plan-and-Solve Prompting|Plan-and-Execute]]、[[Reflexion|Reflection]] 三种范式的区别？
+👔面试官：你来说说 ReAct、Plan-and-Execute、Reflection 三种范式的区别？
 
 🙋‍♂️我：ReAct 是边想边执行，Plan-and-Execute 是先[[Planning|规划]]再执行，Reflection 是……执行完之后反思？
 
@@ -150,7 +153,7 @@ Reflection 和前两者最本质的区别，是它不是一套独立的做事流
 
 这样既保留了 Plan-and-Execute「先规划再执行」的结构优势，又不会因为计划太僵硬而在意外情况下翻车。代价是每步都多了一次「重新评估计划」的 LLM 调用，token 消耗会增加。
 
-第二个是 **Reflexion**，它把 Reflection 的「自我反思」推到了更深的层次。普通的 Reflection 是「做完了检查一遍、发现问题就重做」，有点像考试做完检查一遍。
+第二个是 **[[Reflexion]]**，它把 Reflection 的「自我反思」推到了更深的层次。普通的 Reflection 是「做完了检查一遍、发现问题就重做」，有点像考试做完检查一遍。
 
 Reflexion 在这个基础上多做了一件关键的事：它不仅检查输出对不对，还会把每次失败的原因总结成一段「经验教训」，存进记忆里，下次再遇到类似任务时，这段教训会作为上下文传给 LLM，让它避免重蹈覆辙。
 

@@ -4,18 +4,21 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "database"
+  - "sql"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/sql/sql_part5/supplement2-views.html"
 source: "https://xiaolinnote.com/sql/sql_part5/supplement2-views.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 4562746944f37cf35f40cbf8e73670b086c90b7b88fc989b5a33688dd8bd6d51
+sha256: 973b2a808516ac73dc414c42a2049548e3ac2f9e1f27d67d664184eeb4983651
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 加餐2｜视图：何时该把查询做成视图？
 
 原始链接：https://xiaolinnote.com/sql/sql_part5/supplement2-views.html
@@ -28,11 +31,13 @@ related:
 
 ## 页面正文
 
+# 加餐2｜视图：何时该把查询做成视图？
 
 [公众号@小林面试笔记](https://xiaolinnote.com)SQL大约 15 分钟约 4474 字2025/8/31
 
 ---
 
+# [加餐2｜视图：何时该把查询做成视图？](#加餐2-视图-何时该把查询做成视图)
 
 大家好，我是小林。
 

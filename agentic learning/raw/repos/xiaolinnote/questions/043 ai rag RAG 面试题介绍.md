@@ -9,19 +9,20 @@ topic:
   - "rag"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/rag/rag_info.html"
 source: "https://xiaolinnote.com/ai/rag/rag_info.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: ea631f4f47fc8130ae3d7dc200e35c56c0f0a0664314fef61eb552d360318a0b
+sha256: 6f0f0053d015edbefa38702d4c5affccff807f708c83a14a6cabb246b3b97a2f
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[RAG]]"
   - "[[RAG 主题]]"
 ---
-# RAG 面试题介绍
+
+# [[RAG]] 面试题介绍
 
 原始链接：https://xiaolinnote.com/ai/rag/rag_info.html
 
@@ -34,11 +35,15 @@ related:
 
 ## 页面正文
 
+# RAG 面试题介绍
 
-原创[公众号@小林面试笔记](https://xiaolinnote.com)rag大约 4 分钟约 1294 字
+原创[公众号@小林面试笔记](https://xiaolinnote.com)RAG大约 4 分钟约 1311 字
 
 ---
 
+# [RAG 面试题介绍](#rag-面试题介绍)
+
+[![](https://cdn.xiaolincoding.com//picgo/image-20260512000644273.png)](https://www.xiaolincoding.com/project/aioncallagent.html)
 
 大家好，我是小林。
 
@@ -52,7 +57,7 @@ RAG 现在基本上是 AI 应用里的标配了，不管你做的是智能客服
 
 下面简单说一下这 20 道题大概覆盖了哪些内容，你可以挑自己不熟的先看。
 
-前三道聊的是**基础概念**，RAG 到底是什么、完整的工作流程长什么样、它主要解决了大模型的哪些问题、跟微调比各自适合什么场景，这几道是面试开场必问的，得答出层次来，不能只说一句「RAG 就是[[RAG|检索增强生成]]」就完了。
+前三道聊的是**基础概念**，RAG 到底是什么、完整的工作流程长什么样、它主要解决了大模型的哪些问题、跟微调比各自适合什么场景，这几道是面试开场必问的，得答出层次来，不能只说一句「RAG 就是检索增强生成」就完了。
 
 第 4 到第 9 题聊的是**索引构建**，也就是 RAG 系统搭起来之前你必须搞定的那些事：文档怎么切、切多大合适、语义被切断了怎么办、Embedding 是什么怎么选、有哪些 Embedding 算法、向量数据库怎么选型怎么用。这块的问题看着简单，但面试官一深挖就会发现你有没有真正动手做过，每道题背后都有坑。
 
@@ -83,7 +88,7 @@ RAG 现在基本上是 AI 应用里的标配了，不管你做的是智能客服
 
 ---
 
-对了，AI RAG的面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
+对了，大模型面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
 
 ![](https://cdn.xiaolincoding.com//picgo/扫码_搜索联合传播样式-标准色版.png)
 
@@ -119,6 +124,7 @@ RAG 现在基本上是 AI 应用里的标配了，不管你做的是智能客服
 - [20. 在实际落地中，你觉得 RAG 最难的地方是哪里？](https://xiaolinnote.com/ai/rag/20_hardest_parts.html)
 - [公众号@小林面试笔记](https://xiaolinnote.com)
 - [RAG 面试题介绍](https://xiaolinnote.com/ai/rag/rag_info.html#rag-面试题介绍)
+- [https://www.xiaolincoding.com/project/aioncallagent.html](https://www.xiaolincoding.com/project/aioncallagent.html)
 - [题目目录](https://xiaolinnote.com/ai/rag/rag_info.html#题目目录)
 - [下一页 1. 什么是 RAG？详细描述一个完整 RAG 系统的详细工作流程？](https://xiaolinnote.com/ai/rag/1_whatisrag.html)
 - [粤ICP备2025467464](https://beian.miit.gov.cn/)

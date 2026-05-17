@@ -4,18 +4,20 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "linux"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/linux/04-permissions-and-ownership.html"
 source: "https://xiaolinnote.com/linux/04-permissions-and-ownership.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: cb91064ff4b22dc645db42a234f5a47f8b714ce93263732c97a31236b6e89ab4
+sha256: a4f5c2481e38582c62e3fccb724199fae9b84de4dd0ff126a1bc742c66f9bb88
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 第4章 权限、所有权与用户基础
 
 原始链接：https://xiaolinnote.com/linux/04-permissions-and-ownership.html
@@ -28,6 +30,7 @@ related:
 
 ## 页面正文
 
+# 第4章 权限、所有权与用户基础
 
 [公众号@小林面试笔记](https://xiaolinnote.com)Linux大约 37 分钟约 11215 字2025/9/2
 

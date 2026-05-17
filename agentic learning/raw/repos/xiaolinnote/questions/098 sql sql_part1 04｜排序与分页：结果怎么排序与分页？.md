@@ -4,18 +4,21 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "database"
+  - "sql"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/sql/sql_part1/04-order-by-pagination.html"
 source: "https://xiaolinnote.com/sql/sql_part1/04-order-by-pagination.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: c41e0980e124e0b9f94d4ae7c23a60d09226ab8089808f1a942dda1f587bd8aa
+sha256: dab1e1c0e43539c6b5f7f7c5b0f917a71e2f2ee9f076e143cbee775bebe26664
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 04｜排序与分页：结果怎么排序与分页？
 
 原始链接：https://xiaolinnote.com/sql/sql_part1/04-order-by-pagination.html
@@ -28,11 +31,13 @@ related:
 
 ## 页面正文
 
+# 04｜排序与分页：结果怎么排序与分页？
 
 [公众号@小林面试笔记](https://xiaolinnote.com)SQL大约 12 分钟约 3706 字2025/8/31
 
 ---
 
+# [04｜排序与分页：结果怎么排序与分页？](#_04-排序与分页-结果怎么排序与分页)
 
 大家好，我是小林。
 

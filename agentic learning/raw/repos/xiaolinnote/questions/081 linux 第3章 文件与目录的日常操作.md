@@ -4,18 +4,20 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "linux"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/linux/03-file-operations.html"
 source: "https://xiaolinnote.com/linux/03-file-operations.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 716e34097de17f07b88ab0d646a70421c6020e22289cd194ae1652538213df62
+sha256: 3f873a7e9517fe9f433b356de34dfeca7dbbbe71133ba8ef269a6757e163244c
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 第3章 文件与目录的日常操作
 
 原始链接：https://xiaolinnote.com/linux/03-file-operations.html
@@ -28,6 +30,7 @@ related:
 
 ## 页面正文
 
+# 第3章 文件与目录的日常操作
 
 [公众号@小林面试笔记](https://xiaolinnote.com)Linux大约 17 分钟约 5061 字2025/9/2
 

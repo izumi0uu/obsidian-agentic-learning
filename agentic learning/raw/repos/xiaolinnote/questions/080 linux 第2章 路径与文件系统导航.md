@@ -4,18 +4,20 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "linux"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/linux/02-path-and-filesystem-navigation.html"
 source: "https://xiaolinnote.com/linux/02-path-and-filesystem-navigation.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 60dfb2b37617476e515df7dd13020baf1ac473a152379cc54319dab88142f864
+sha256: e1840f4467968e0eb1117381dca403840a4948723ce86eba629b6bc043c0a8d7
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 第2章 路径与文件系统导航
 
 原始链接：https://xiaolinnote.com/linux/02-path-and-filesystem-navigation.html
@@ -28,6 +30,7 @@ related:
 
 ## 页面正文
 
+# 第2章 路径与文件系统导航
 
 [公众号@小林面试笔记](https://xiaolinnote.com)Linux大约 17 分钟约 5023 字2025/9/2
 

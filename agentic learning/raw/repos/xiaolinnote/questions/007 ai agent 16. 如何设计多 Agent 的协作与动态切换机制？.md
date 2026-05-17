@@ -9,12 +9,12 @@ topic:
   - "agent"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/agent/16_collab.html"
 source: "https://xiaolinnote.com/ai/agent/16_collab.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 0b8177876ad9ecddcdd6440439a0cc9f52203cc2050a0a5be842886141c1f5aa
+sha256: 158407b7bd6322b344aa5b62d749bef6a0a4b52b577711c7ff0e97a5f73a2d59
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
@@ -23,6 +23,7 @@ related:
   - "[[Agent Workflow]]"
   - "[[A2A]]"
 ---
+
 # 16. 如何设计多 Agent 的协作与动态切换机制？
 
 原始链接：https://xiaolinnote.com/ai/agent/16_collab.html
@@ -38,13 +39,15 @@ related:
 
 ## 页面正文
 
+# 16. 如何设计多 Agent 的协作与动态切换机制？
 
 原创[公众号@小林面试笔记](https://xiaolinnote.com)agent大约 12 分钟约 3583 字
 
 ---
 
+# [16. 如何设计多 Agent 的协作与动态切换机制？](#_16-如何设计多-agent-的协作与动态切换机制)
 
-👔面试官：[[Multi-agent Orchestration|多 Agent]] 系统里，各个 Agent 之间怎么协作？
+👔面试官：多 Agent 系统里，各个 Agent 之间怎么协作？
 
 🙋‍♂️我：一个 Agent 做完之后把结果传给下一个 Agent，就像流水线一样，一步步往下走。
 
@@ -52,7 +55,7 @@ related:
 
 🙋‍♂️我：消息传递就是 Agent 之间直接发消息，共享状态就是大家都能读写同一个变量……应该都差不多吧？
 
-👔面试官：差很远。消息传递的核心优势是解耦，发送方不需要知道谁在接收；共享状态的优势是直接，前一步写进去后一步直接读。这两种选哪个，取决于 Agent 之间的依赖关系强不强。那[[Handoff|动态切换]]呢，你是怎么做的？
+👔面试官：差很远。消息传递的核心优势是解耦，发送方不需要知道谁在接收；共享状态的优势是直接，前一步写进去后一步直接读。这两种选哪个，取决于 Agent 之间的依赖关系强不强。那动态切换呢，你是怎么做的？
 
 🙋‍♂️我：动态切换就是让 LLM 判断下一步该调用哪个 Agent，每次根据当前情况动态决策，这样最灵活。
 
@@ -72,7 +75,7 @@ related:
 
 多 Agent 系统里，分工解决了「谁来做什么」的问题，但还有另一个问题没解决：各个 Agent 做完自己的事之后，怎么把结果传给下一个 Agent？下一步该叫哪个 Agent 来接棒？这就是协作机制和切换机制要解决的事。
 
-在展开细节之前，先从全局视角理解一下多 Agent 协作的几种主要模式。工程实践中常见的协作模式大致分为三类：
+在展开细节之前，先从全局视角理解一下[[Multi-agent Orchestration|多 Agent 协作]]的几种主要模式。工程实践中常见的协作模式大致分为三类：
 
 - 第一类是流水线模式，Agent 之间按固定顺序依次执行，前一个完成后交给下一个，像工厂的装配线；
 - 第二类是层级模式，有一个 Orchestrator（指挥者）负责分配任务、收集结果，其他 Agent 各自执行分配到的子任务；
@@ -157,7 +160,7 @@ def dynamic_route(task_context: str, available_agents: list[str]) -> str:
 
 ### [Handoff 模式：Agent 之间的「接力棒」](#handoff-模式-agent-之间的「接力棒」)
 
-除了由 Orchestrator 集中做路由决策，还有一种更去中心化的切换方式叫 Handoff（交接），这个模式在 OpenAI 的 Swarm 框架里被用来演示和推广。需要注意的是，Swarm 是一个教育性/实验性框架，OpenAI 官方明确说它不是生产级工具，但它对 Handoff 模式的展示非常直观，很适合理解这个概念。
+除了由 Orchestrator 集中做路由决策，还有一种更去中心化的切换方式叫 [[Handoff]]（交接），这个模式在 OpenAI 的 Swarm 框架里被用来演示和推广。需要注意的是，Swarm 是一个教育性/实验性框架，OpenAI 官方明确说它不是生产级工具，但它对 Handoff 模式的展示非常直观，很适合理解这个概念。
 
 Handoff 的思路是：不需要一个中央的 Orchestrator 来决定「下一步找谁」，而是让当前正在执行的 Agent 自己决定「我做完了，接下来应该把任务交给谁」。你可以理解成接力赛跑，每个运动员跑完自己那一棒之后，直接把接力棒递给下一个人，不需要裁判在旁边喊「下一个是谁」。
 

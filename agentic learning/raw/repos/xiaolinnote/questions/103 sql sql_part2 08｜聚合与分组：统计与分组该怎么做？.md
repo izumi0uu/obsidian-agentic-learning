@@ -4,18 +4,21 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "database"
+  - "sql"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/sql/sql_part2/08-aggregation-grouping.html"
 source: "https://xiaolinnote.com/sql/sql_part2/08-aggregation-grouping.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 79f7af2ff1820cbd3d343169e529b8457e01ddfac0cf81b11dc9b0990c2eec55
+sha256: fbb3f1d235c4b359e6431dee1ccbe13d0d1490856b8945853876007411e46d2c
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 08｜聚合与分组：统计与分组该怎么做？
 
 原始链接：https://xiaolinnote.com/sql/sql_part2/08-aggregation-grouping.html
@@ -28,11 +31,13 @@ related:
 
 ## 页面正文
 
+# 08｜聚合与分组：统计与分组该怎么做？
 
 [公众号@小林面试笔记](https://xiaolinnote.com)SQL大约 16 分钟约 4931 字2025/8/31
 
 ---
 
+# [08｜聚合与分组：统计与分组该怎么做？](#_08-聚合与分组-统计与分组该怎么做)
 
 大家好，我是小林。
 

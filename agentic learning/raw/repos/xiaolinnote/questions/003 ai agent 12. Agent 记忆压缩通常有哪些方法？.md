@@ -9,12 +9,12 @@ topic:
   - "agent"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/agent/12_memcompress.html"
 source: "https://xiaolinnote.com/ai/agent/12_memcompress.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: c6ae1d4c4e3074773aaee6911777b6fca89617f2ee8df26b1bdb94390212d9be
+sha256: 997afb54bd390d19a626a39cfe50546d24c9e450252c456f3566ce30f64013e3
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
@@ -24,7 +24,8 @@ related:
   - "[[Episodic Memory]]"
   - "[[Context Engineering]]"
 ---
-# 12. Agent 记忆压缩通常有哪些方法？
+
+# 12. Agent [[Memory|记忆]]压缩通常有哪些方法？
 
 原始链接：https://xiaolinnote.com/ai/agent/12_memcompress.html
 
@@ -40,13 +41,15 @@ related:
 
 ## 页面正文
 
+# 12. Agent 记忆压缩通常有哪些方法？
 
 原创[公众号@小林面试笔记](https://xiaolinnote.com)agent大约 14 分钟约 4182 字
 
 ---
 
+# [12. Agent 记忆压缩通常有哪些方法？](#_12-agent-记忆压缩通常有哪些方法)
 
-👔面试官：你项目里 Agent 对话历史越来越长，context 快撑满了怎么办？有没有做[[Context Engineering|记忆压缩]]？
+👔面试官：你项目里 Agent 对话历史越来越长，context 快撑满了怎么办？有没有做记忆压缩？
 
 🙋‍♂️我：有，我们做了滑动窗口，只保留最近几轮对话，太早的就丢掉。
 
@@ -60,7 +63,7 @@ related:
 
 👔面试官：摘要是一种方案，但你说「够用了」——有没有考虑过，有些场景里摘要本身也会丢失关键细节？还有没有其他角度的压缩思路？
 
-被问出这个问题说明面试官在考你方案的全貌，[[Memory|记忆]]压缩其实有四个不同维度的方法，咱来系统梳理一遍。
+被问出这个问题说明面试官在考你方案的全貌，记忆压缩其实有四个不同维度的方法，咱来系统梳理一遍。
 
 ## [💡 简要回答](#💡-简要回答)
 

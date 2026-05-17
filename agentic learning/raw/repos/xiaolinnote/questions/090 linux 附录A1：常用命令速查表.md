@@ -4,18 +4,20 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "linux"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/linux/appendix-a1-command-cheat-sheet.html"
 source: "https://xiaolinnote.com/linux/appendix-a1-command-cheat-sheet.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 175820e6013876236adfdc19669180c9acf9e19fb6d64425fa4a891626d1d21b
+sha256: 98215e96b7792dc39accfda4dc2fee40e4d333f03750e3bba6be5765a195e290
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 附录A1：常用命令速查表
 
 原始链接：https://xiaolinnote.com/linux/appendix-a1-command-cheat-sheet.html
@@ -28,6 +30,7 @@ related:
 
 ## 页面正文
 
+# 附录A1：常用命令速查表
 
 [公众号@小林面试笔记](https://xiaolinnote.com)Linux大约 16 分钟约 4678 字2025/9/2
 

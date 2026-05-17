@@ -4,18 +4,20 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "linux"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/linux/appendix-a3-common-pitfalls-safety-tips.html"
 source: "https://xiaolinnote.com/linux/appendix-a3-common-pitfalls-safety-tips.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: c10e6a8228f107e35eef656427858089453616c4fbee9bc2d0e2e8954183befd
+sha256: 158326e3ae51bf84a89ce9ccb8a2394578535b350211f8d142336c899d96ef17
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 附录A3：新手常见坑与安全小贴士
 
 原始链接：https://xiaolinnote.com/linux/appendix-a3-common-pitfalls-safety-tips.html
@@ -28,6 +30,7 @@ related:
 
 ## 页面正文
 
+# 附录A3：新手常见坑与安全小贴士
 
 [公众号@小林面试笔记](https://xiaolinnote.com)Linux大约 12 分钟约 3656 字2025/9/2
 

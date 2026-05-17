@@ -4,18 +4,21 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "database"
+  - "sql"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/sql/sql_part3/"
 source: "https://xiaolinnote.com/sql/sql_part3/"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 561513b905fdec6e8678947f05321e9998c6091bcd8a2a4336fa56718e912d2f
+sha256: 76e200387091711feffa552d7a1a0fe3dfd4efc671123ad4ee2067f656f04e2a
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 第三部分：表结构与设计
 
 原始链接：https://xiaolinnote.com/sql/sql_part3/
@@ -28,6 +31,7 @@ related:
 
 ## 页面正文
 
+# 第三部分：表结构与设计
 
 [公众号@小林面试笔记](https://xiaolinnote.com)SQL小于 1 分钟约 36 字
 

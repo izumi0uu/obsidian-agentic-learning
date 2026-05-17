@@ -9,18 +9,19 @@ topic:
   - "langchain"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/langchian/"
 source: "https://xiaolinnote.com/ai/langchian/"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 64d5dd3aa053011dfb93731e02ca398f2cbda9334f4107d36034e5403df5029d
+sha256: fad53774feddb49b8c009134651e6cd81ec61832f080ad6e2eed2bab17ac8547
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[Agent Framework]]"
   - "[[Tool Calling]]"
 ---
+
 # 05｜ LangChain框架面试题
 
 原始链接：https://xiaolinnote.com/ai/langchian/
@@ -34,6 +35,7 @@ related:
 
 ## 页面正文
 
+# 05｜ LangChain框架面试题
 
 [公众号@小林面试笔记](https://xiaolinnote.com)LangChain小于 1 分钟约 28 字
 

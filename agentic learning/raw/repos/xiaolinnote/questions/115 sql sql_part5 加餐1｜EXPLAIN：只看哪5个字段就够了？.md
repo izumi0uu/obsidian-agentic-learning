@@ -4,18 +4,21 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "database"
+  - "sql"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/sql/sql_part5/supplement1-explain.html"
 source: "https://xiaolinnote.com/sql/sql_part5/supplement1-explain.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: 47259e56a6adb32f99e36cbfca4ffabdc64e02d0cd0289fde8b12422cfe6802c
+sha256: 68092e3190530cac84b73b3610c7f6c16385f455107dfff318c638f4fbf6d34a
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 加餐1｜EXPLAIN：只看哪5个字段就够了？
 
 原始链接：https://xiaolinnote.com/sql/sql_part5/supplement1-explain.html
@@ -28,11 +31,13 @@ related:
 
 ## 页面正文
 
+# 加餐1｜EXPLAIN：只看哪5个字段就够了？
 
 [公众号@小林面试笔记](https://xiaolinnote.com)SQL大约 15 分钟约 4411 字2025/8/31
 
 ---
 
+# [加餐1｜EXPLAIN：只看哪5个字段就够了？](#加餐1-explain-只看哪5个字段就够了)
 
 大家好，我是小林。
 

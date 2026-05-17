@@ -4,18 +4,20 @@ source_type: web
 site: xiaolinnote.com
 topic:
   - "interview"
+  - "linux"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/linux/appendix-a2-regex-wildcards.html"
 source: "https://xiaolinnote.com/linux/appendix-a2-regex-wildcards.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: e8df272c0fe5a7c9241159069c010a1d78770c95e9b3de55db7db11214aa26a2
+sha256: ba8faee465a88454198ddcb8b1648c0313943ec900703c516e232c4c9b487735
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
 ---
+
 # 附录A2：正则表达式与通配符速查
 
 原始链接：https://xiaolinnote.com/linux/appendix-a2-regex-wildcards.html
@@ -28,6 +30,7 @@ related:
 
 ## 页面正文
 
+# 附录A2：正则表达式与通配符速查
 
 [公众号@小林面试笔记](https://xiaolinnote.com)Linux大约 14 分钟约 4055 字2025/9/2
 

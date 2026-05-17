@@ -6,14 +6,16 @@ topic:
   - "interview"
   - "ai"
   - "llm"
+  - "tools"
+  - "mcp"
 status: inbox
 created: 2026-05-07
-updated: 2026-05-09
+updated: 2026-05-17
 url: "https://xiaolinnote.com/ai/tools/11_fc_skill_mcp.html"
 source: "https://xiaolinnote.com/ai/tools/11_fc_skill_mcp.html"
-last_checked: 2026-05-07
+last_checked: 2026-05-17
 freshness: watch
-sha256: bcf45bbd511d79328395d947ef1a4eef41a191a283603ac7e32c42028e097b78
+sha256: 6846ff239b75581753a3c435ddc5752017c0c0f7a2f85e2cc3ee5844f4b14e8f
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
@@ -21,6 +23,7 @@ related:
   - "[[MCP]]"
   - "[[Tool Use]]"
 ---
+
 # 11. [[Tool Calling|Function Calling]]、Skill、[[MCP]] 这三个有什么区别？
 
 原始链接：https://xiaolinnote.com/ai/tools/11_fc_skill_mcp.html
@@ -35,11 +38,13 @@ related:
 
 ## 页面正文
 
+# 11. Function Calling、Skill、MCP 这三个有什么区别？
 
-[公众号@小林面试笔记](https://xiaolinnote.com)大约 9 分钟约 2750 字
+原创[公众号@小林面试笔记](https://xiaolinnote.com)[[Tool Use|Tools]]大约 9 分钟约 2751 字
 
 ---
 
+# [11. Function Calling、Skill、MCP 这三个有什么区别？](#_11-function-calling、skill、mcp-这三个有什么区别)
 
 👔面试官：Function Calling、Skill、MCP 这三个概念有什么区别？
 
@@ -49,7 +54,7 @@ related:
 
 🙋‍♂️我：也不完全是替代关系……它们应该各有侧重？比如 Function Calling 管函数调用，MCP 管工具标准化，Skill 管流程模板？但我不太确定它们之间有没有层级关系。
 
-👔面试官：你前半段说的方向沾边了，但关键问题是你没搞清楚这三者的层级依赖。它们不是并列的三个方案，而是从底到顶的三层架构：Function Calling 是最底层的调用语言，MCP 在它之上做工具标准化，Skill 在最上层把[[Tool Use|使用工具]]完成任务的知识和流程封装成可复用模块。你把每层解决什么问题搞清楚，三者的区别就一目了然了。
+👔面试官：你前半段说的方向沾边了，但关键问题是你没搞清楚这三者的层级依赖。它们不是并列的三个方案，而是从底到顶的三层架构：Function Calling 是最底层的调用语言，MCP 在它之上做工具标准化，Skill 在最上层把使用工具完成任务的知识和流程封装成可复用模块。你把每层解决什么问题搞清楚，三者的区别就一目了然了。
 
 好，这段对话踩的雷挺典型的，很多人一上来就把这三个当成平行的竞争方案。下面我把三者的层级关系和各自定位拆开讲清楚。
 
@@ -151,7 +156,7 @@ Function Calling 是你的「手」，能拿刀、能点火、能翻锅，这是
 
 ---
 
-对了，AI 工具调用的面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
+对了，大模型面试题会在「**公众号@小林面试笔记题**」持续更新，林友们赶紧关注起来，别错过最新干货哦！
 
 ![](https://cdn.xiaolincoding.com//picgo/扫码_搜索联合传播样式-标准色版.png)
 
