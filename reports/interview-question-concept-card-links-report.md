@@ -4,10 +4,10 @@
 - 扫描题页：779
 - 含 `## 相关知识 wiki`：779
 - 已有正文概念链接页：362
-- 本次可新增/已新增链接：0
-- would modify pages：0
+- 本次可新增/已新增链接：11
+- would modify pages：6
 - skipped/no-match pages：417
-- unsafe-region skips：3806
+- unsafe-region skips：3850
 - missing concept candidates：0（unique 0）
 - protected-region violations：0
 
@@ -15,8 +15,8 @@
 
 | root | total | related | already-linked pages | would-modify pages | proposed links | skipped/no-match |
 |---|---:|---:|---:|---:|---:|---:|
-| xiaolinnote | 142 | 142 | 81 | 0 | 0 | 61 |
-| agent_java_offer | 637 | 637 | 281 | 0 | 0 | 356 |
+| xiaolinnote | 142 | 142 | 81 | 2 | 3 | 61 |
+| agent_java_offer | 637 | 637 | 281 | 4 | 8 | 356 |
 
 ## Sample files selected
 
@@ -28,10 +28,10 @@
 - agentic learning/raw/repos/agent_java_offer/questions/228 01_AI 08_框架协议与工程化 追问：LCEL 和手写 if else 调用代码相比，工程收益在哪？.md
 - agentic learning/raw/repos/agent_java_offer/questions/301 02_后端 04_并发与异步任务 `CompletableFuture` 常见坑？.md
 - agentic learning/raw/repos/agent_java_offer/questions/407 02_后端 10_网络I_O与发布治理 Netty 如何体现 Reactor 模型？.md
-- agentic learning/raw/repos/xiaolinnote/questions/001 ai agent 10. 什么是 Multi-Agent？.md
-- agentic learning/raw/repos/xiaolinnote/questions/002 ai agent 11. 说说 Single-Agent 和 Multi-Agent 的设计方案？.md
-- agentic learning/raw/repos/xiaolinnote/questions/003 ai agent 12. Agent 记忆压缩通常有哪些方法？.md
-- agentic learning/raw/repos/xiaolinnote/questions/004 ai agent 13. 在工程实践中，为什么有时候选择「手搓」Agent，而不是直接用成熟框架？.md
+- agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md
+- agentic learning/raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md
+- agentic learning/raw/repos/agent_java_offer/questions/072 01_AI 03_RAG RAG检索优化与高级范式（重排 图谱 自适应检索 向量库）.md
+- agentic learning/raw/repos/agent_java_offer/questions/077 01_AI 03_RAG 除了基础的向量检索，你还知道哪些可以提升 RAG 检索质量的技术？.md
 
 ## Missing targets
 
@@ -123,4 +123,14 @@
 
 ## Proposed/applied links（前 80 条）
 
-- None
+- agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md:64 — `HyDE` -> `[[HyDE]]`
+- agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md:64 — `Step-back Prompting` -> `[[Step-back Prompting]]`
+- agentic learning/raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md:155 — `HyDE` -> `[[HyDE]]`
+- agentic learning/raw/repos/agent_java_offer/questions/072 01_AI 03_RAG RAG检索优化与高级范式（重排 图谱 自适应检索 向量库）.md:78 — `HyDE` -> `[[HyDE]]`
+- agentic learning/raw/repos/agent_java_offer/questions/077 01_AI 03_RAG 除了基础的向量检索，你还知道哪些可以提升 RAG 检索质量的技术？.md:111 — `HyDE` -> `[[HyDE]]`
+- agentic learning/raw/repos/agent_java_offer/questions/122 01_AI 04_上下文工程与记忆 LLM 调优（训练调优 + Prompt 调优）怎么分层做？.md:110 — `HyDE` -> `[[HyDE]]`
+- agentic learning/raw/repos/agent_java_offer/questions/594 05_项目表达 03_垂直写作与审阅平台 额外加分点（展示你懂企业落地）.md:204 — `BM25` -> `[[BM25]]`
+- agentic learning/raw/repos/agent_java_offer/questions/594 05_项目表达 03_垂直写作与审阅平台 额外加分点（展示你懂企业落地）.md:178 — `向量检索` -> `[[Dense Retrieval]]`
+- agentic learning/raw/repos/agent_java_offer/questions/594 05_项目表达 03_垂直写作与审阅平台 额外加分点（展示你懂企业落地）.md:178 — `rerank` -> `[[Reranking]]`
+- agentic learning/raw/repos/agent_java_offer/questions/594 05_项目表达 03_垂直写作与审阅平台 额外加分点（展示你懂企业落地）.md:204 — `Cross-Encoder` -> `[[Cross-Encoder]]`
+- agentic learning/raw/repos/agent_java_offer/questions/594 05_项目表达 03_垂直写作与审阅平台 额外加分点（展示你懂企业落地）.md:204 — `多查询检索` -> `[[Multi-Query Retrieval]]`

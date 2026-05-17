@@ -38,6 +38,7 @@ related:
   - "[[Context Engineering]]"
   - "[[Observability]]"
   - "[[Query Rewrite]]"
+  - "[[HyDE]]"
   - "[[Knowledge Graph]]"
 ---
 
@@ -64,6 +65,7 @@ related:
 - [[Context Engineering]]
 - [[Observability]]
 - [[Query Rewrite]]
+- [[HyDE]]
 - [[Knowledge Graph]]
 
 ## 题目正文

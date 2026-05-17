@@ -1,21 +1,21 @@
 # Temporary Concept Relationship Map
 
-Generated: `2026-05-17T12:19:10Z`
+Generated: `2026-05-17T13:39:51Z`
 
 > 临时文件：用于后续概念层级开发评估。不要把候选边自动写回概念卡；每条 candidate 都需要单独人工/LLM 复核。
 
 ## Summary
 
-- total_concepts: 130
-- edge_counts: {'related_link': 709, 'body_link': 241, 'taxonomy': 37, 'typed_relation': 31}
+- total_concepts: 132
+- edge_counts: {'related_link': 734, 'body_link': 242, 'taxonomy': 37, 'typed_relation': 31}
 - typed_relation_counts: {'representative_of': 1, 'based_on_intuition': 1, 'related_to': 7, 'paired_with': 2, 'contrasts_with': 5, 'composes_with': 7, 'uses': 2, 'mitigates': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
-- concepts_without_up: 93
+- concepts_without_up: 95
 - core_orphans: 0
 - weakly_connected_concepts: 1
 - dangling_core_targets: 23
-- candidate_edges: 67
+- candidate_edges: 68
 - taxonomy_candidates: 11
-- topic_family_review_signals: 56
+- topic_family_review_signals: 57
 
 ## Existing taxonomy edges (`up`)
 
@@ -129,6 +129,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[Handoff]] | [[Agent Workflow]] | taxonomy_candidate | low | title/topic heuristic | workflow/runtime title family |
 | [[Hermes Agent]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | topic family: workflow |
 | [[Human-in-the-loop]] | [[Agent Workflow]] | taxonomy_candidate | low | title/topic heuristic | workflow/runtime title family |
+| [[HyDE]] | [[Retriever]] | topic_family_review | low | frontmatter.related | topic family: retrieval/search |
 | [[Indirect Prompt Injection]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
 | [[Knowledge Graph]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
 | [[LLM Gateway]] | [[Observability]] | topic_family_review | low | frontmatter.related | topic family: observability |
@@ -207,6 +208,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Handoff]]
 - [[Hermes Agent]]
 - [[Human-in-the-loop]]
+- [[HyDE]]
 - [[Indirect Prompt Injection]]
 - [[Knowledge Graph]]
 - [[LLM]]
@@ -250,6 +252,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Sandbox Workspace]]
 - [[Self-Attention]]
 - [[State Graph Runtime]]
+- [[Step-back Prompting]]
 - [[TF-IDF]]
 - [[Task Success Rate]]
 - [[Token]]

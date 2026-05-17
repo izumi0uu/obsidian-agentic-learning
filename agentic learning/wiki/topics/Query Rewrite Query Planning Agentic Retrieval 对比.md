@@ -12,12 +12,18 @@ source:
   - "[[Retriever]]"
   - "[[Query Rewrite]]"
   - "[[Query Planning]]"
+  - "[[Multi-Query Retrieval]]"
+  - "[[HyDE]]"
+  - "[[Step-back Prompting]]"
   - "[[Agentic Retrieval]]"
   - "[[Azure AI Search Agentic Retrieval]]"
   - "[[Scaling Retrieval-Augmented Reasoning with Parallel Search and Explicit Merging]]"
 evidence:
   - "[[Retriever#证据锚点]]"
   - "[[Query Rewrite#证据锚点]]"
+  - "[[Multi-Query Retrieval#证据锚点]]"
+  - "[[HyDE#证据锚点]]"
+  - "[[Step-back Prompting#证据锚点]]"
   - "[[Query Planning#证据锚点]]"
   - "[[Agentic Retrieval#证据锚点]]"
   - "[[Parallel Search and Explicit Merging 检索模式#证据锚点]]"
@@ -25,6 +31,9 @@ related:
   - "[[RAG 主题]]"
   - "[[Retrieval 组件对比]]"
   - "[[RAG 类型对比]]"
+  - "[[Multi-Query Retrieval]]"
+  - "[[HyDE]]"
+  - "[[Step-back Prompting]]"
   - "[[Agentic RAG]]"
   - "[[Parallel Search and Explicit Merging 检索模式]]"
 ---
@@ -33,13 +42,16 @@ related:
 
 ## 一句话总览
 
-[[Query Rewrite]] 改写一个查询，[[Query Planning]] 把一个复杂问题拆成检索计划，[[Agentic Retrieval]] 让检索层具备规划、子查询、来源选择和结果整合能力；它们都改善 retrieval，但介入粒度从“改一句 query”逐步上升到“管理一次检索任务”。
+[[Query Rewrite]] 改写查询表达，[[Multi-Query Retrieval]] 从多个同层视角查，[[HyDE]] 生成假设文档查，[[Step-back Prompting]] 退到背景问题查，[[Query Planning]] 把复杂问题拆成检索计划，[[Agentic Retrieval]] 让检索层具备规划、执行、观察和结果整合能力；它们都改善 retrieval，但介入粒度从“改一次 query”逐步上升到“管理一次检索任务”。
 
 ## 为什么这组值得对比
 
 这组概念容易混，因为产品文档和工程实现常把“rewrite、decompose、plan、agentic search、多轮 retrieval”混在一起说。学习时需要先切开三个问题：
 
 - 语言表达问题：用户 query 太短、太口语、指代不清，需要 [[Query Rewrite]]。
+- 覆盖角度问题：同一意图可能有多种说法，需要 [[Multi-Query Retrieval]]。
+- 文体表示问题：问题和文档在 embedding space 中不够近，需要 [[HyDE]]。
+- 背景抽象问题：具体问题没有直接文档，但有上层原理或背景，需要 [[Step-back Prompting]]。
 - 任务结构问题：问题本身有多个子问题、条件或来源，需要 [[Query Planning]]。
 - 执行控制问题：系统需要选择数据源、重试、评价证据、合并结果，需要 [[Agentic Retrieval]]。
 
@@ -57,7 +69,10 @@ user question -> rewrite / decompose / plan -> retrieve -> rerank -> context -> 
 
 | 概念 | 介入点 | 时序 / loop | 输入 | 输出 | 主要风险 | 证据锚点 |
 |---|---|---|---|---|---|---|
-| [[Query Rewrite]] | 单次 query 表达 | 通常在 retrieve 前一次性发生 | 原始问题、会话上下文、领域词表 | 改写后的 query / 多个 query 变体 | 改写偏题、丢失约束、过度扩展 | [[Query Rewrite#证据锚点]] |
+| [[Query Rewrite]] | 单次 query 表达 | 通常在 retrieve 前一次性发生 | 原始问题、会话上下文、领域词表 | 改写后的 query / 扩展 query | 改写偏题、丢失约束、过度扩展 | [[Query Rewrite#证据锚点]] |
+| [[Multi-Query Retrieval]] | 多个同层 query 视角 | retrieve 前生成多个 query，常并行检索 | 原始问题、改写策略、查询数量预算 | 多组候选结果、去重/融合输入 | query 过多带来重复、噪声和延迟 | [[Multi-Query Retrieval#证据锚点]] |
+| [[HyDE]] | 假设文档作为检索代理 | retrieve 前生成 hypothetical document 并嵌入 | 原始问题、生成模型、embedding encoder | 假设文档向量、相似真实文档 | 假设答案跑偏、把错误细节带入召回 | [[HyDE#证据锚点]] |
+| [[Step-back Prompting]] | 抽象背景问题 | retrieve/reason 前先生成更高层问题 | 原始问题、抽象层级、背景知识需求 | step-back question、背景证据 | 抽象过头、背景正确但不贴原问题 | [[Step-back Prompting#证据锚点]] |
 | [[Query Planning]] | 子问题和检索步骤 | 可一次性规划，也可随结果调整 | 复杂问题、目标、可用索引/工具 | 检索计划、子查询、依赖顺序 | 分解错误、计划成本过高、来源选择错误 | [[Query Planning#证据锚点]] |
 | [[Parallel Search and Explicit Merging 检索模式]] | 多 query 执行与证据归并 | 同一 reasoning step 并行检索，retrieval 后 merge | 当前 reasoning state、多视角 query、候选文档 | 去噪后的中间证据包 | query 数/Top-K 过大引入噪声，merge 漏掉关键证据 | [[Parallel Search and Explicit Merging 检索模式#证据锚点]] |
 | [[Agentic Retrieval]] | 检索执行控制 | 多轮：plan -> search -> inspect -> refine | 任务、检索工具、候选结果、预算 | 多源证据包、检索 trace、综合上下文 | loop 不可控、延迟高、评估困难 | [[Agentic Retrieval#证据锚点]] |
@@ -68,6 +83,12 @@ user question -> rewrite / decompose / plan -> retrieve -> rerank -> context -> 
 ### Query Rewrite vs Query Planning
 
 [[Query Rewrite]] 主要改“怎么问”，例如把“它多少钱”改成“产品 A 2026 企业版价格”；[[Query Planning]] 改“先问什么、再问什么”，例如先查产品版本，再查价格页，再查地区限制。rewrite 可以是 planning 里的一个步骤，但 planning 不等于多写几个同义 query。
+
+### Multi-Query Retrieval vs HyDE vs Step-back Prompting
+
+[[Multi-Query Retrieval]] 生成多个同层 query，核心问题是“单一角度覆盖不全”；[[HyDE]] 生成假设文档，核心问题是“问题和文档文体 / embedding 表示不贴近”；[[Step-back Prompting]] 生成更抽象的背景问题，核心问题是“具体问题需要先找到上层原理”。三者都发生在检索前后，但输出形态不同：query variants、hypothetical document、background question。
+
+小边界：这三者都不应该替代原始 query。原始 query 保留用户的实体、限制、否定词和任务意图，是后续合并与证据检查的锚。
 
 ### Query Planning vs Agentic Retrieval
 
@@ -94,6 +115,15 @@ question -> retrieve -> rerank -> answer
 rewrite-enhanced RAG:
 question -> rewrite -> retrieve -> rerank -> answer
 
+multi-query retrieval:
+question -> generate query variants -> retrieve per query -> merge/rerank -> answer
+
+HyDE retrieval:
+question -> generate hypothetical document -> embed it -> retrieve real docs -> rerank -> answer
+
+step-back retrieval:
+question -> generate abstract/background question -> retrieve background -> answer original question with constraints
+
 planned retrieval:
 question -> plan subqueries -> retrieve per subquery -> merge/rerank -> answer
 
@@ -116,11 +146,14 @@ question -> plan -> retrieve -> inspect evidence -> refine/retrieve again -> pac
 
 现代企业搜索和 RAG 平台正在把 query rewrite、query decomposition、source selection、multi-query retrieval 和 result grounding 做成检索层能力。现代性状态是 **current-practice + frontier/watch**：简单 rewrite 和 hybrid search 已是常见工程实践；自动 query planning、跨源 agentic retrieval 和动态证据评价仍然依赖具体平台、数据源质量和 observability。
 
-工程综合 / inference：当系统面对的是短问句、同义词和指代时，优先尝试 rewrite；当问题有明显子任务和多源依赖时，再引入 planning；当系统需要基于中间证据调整路径时，才值得进入 agentic retrieval。
+工程综合 / inference：当系统面对的是短问句、同义词和指代时，优先尝试 rewrite；当单一表达覆盖不足时尝试 multi-query；当 query/document 文体差异明显时尝试 HyDE；当具体问题需要背景原理时尝试 step-back；当问题有明显子任务和多源依赖时，再引入 planning；当系统需要基于中间证据调整路径时，才值得进入 agentic retrieval。
 
 ## 什么时候用哪个判断
 
 - 用户 query 模糊但任务简单：[[Query Rewrite]]。
+- 同一个意图有多种说法、单 query 覆盖不足：[[Multi-Query Retrieval]]。
+- 问题和文档文体差异大、问题句难以直接命中文档句：[[HyDE]]。
+- 具体问题需要先查背景原理、政策或机制：[[Step-back Prompting]]。
 - 问题需要多跳、多条件、多文档对比：[[Query Planning]]。
 - 当前推理步需要覆盖多个表述、概念扩展或子问题证据：[[Parallel Search and Explicit Merging 检索模式]]。
 - 检索过程需要观察结果、重试、切换数据源：[[Agentic Retrieval]]。
@@ -136,7 +169,7 @@ question -> plan -> retrieve -> inspect evidence -> refine/retrieve again -> pac
 
 ## 证据锚点
 
-- 概念卡：[[Retriever#证据锚点]], [[Query Rewrite#证据锚点]], [[Query Planning#证据锚点]], [[Agentic Retrieval#证据锚点]], [[Agentic RAG#证据锚点]], [[Reranking#证据锚点]]。
+- 概念卡：[[Retriever#证据锚点]], [[Query Rewrite#证据锚点]], [[Multi-Query Retrieval#证据锚点]], [[HyDE#证据锚点]], [[Step-back Prompting#证据锚点]], [[Query Planning#证据锚点]], [[Agentic Retrieval#证据锚点]], [[Agentic RAG#证据锚点]], [[Reranking#证据锚点]]。
 - source notes：[[Azure AI Search Agentic Retrieval]], [[Microsoft RAG 官方文档]], [[Scaling Retrieval-Augmented Reasoning with Parallel Search and Explicit Merging]]。
 - 主题锚点：[[Retrieval 组件对比#证据锚点]], [[RAG 类型对比#证据锚点]], [[RAG 主题#证据锚点]], [[Parallel Search and Explicit Merging 检索模式#证据锚点]]。
 - 证据边界：本页的“什么时候用哪个”是工程综合 / inference；具体平台对 agentic retrieval 的 API、限制和可观测字段需要复查官方文档。
@@ -146,16 +179,20 @@ question -> plan -> retrieve -> inspect evidence -> refine/retrieve again -> pac
 - Boundary: 本页的使用建议是工程综合 / inference，不替代 Azure AI Search 或其他产品的具体能力边界。
 ## 复习触发
 
-1. “把用户问题改得更清楚”和“把问题拆成多个检索步骤”有什么最小区别？
-2. 一个 query planning 系统没有观察结果后重试的能力，为什么还不一定算 agentic retrieval？
-3. 如果正确文档已经召回但排在第 30 位，应优先补 query planning 还是 reranking？为什么？
-4. 多 query 并行检索为什么还需要 explicit merging？
+1. Multi-query、HyDE、Step-back 分别生成什么？
+2. “把用户问题改得更清楚”和“把问题拆成多个检索步骤”有什么最小区别？
+3. 一个 query planning 系统没有观察结果后重试的能力，为什么还不一定算 agentic retrieval？
+4. 如果正确文档已经召回但排在第 30 位，应优先补 query planning 还是 reranking？为什么？
+5. 多 query 并行检索为什么还需要 explicit merging？
 
 ## 相关链接
 
 - [[RAG 主题]]
 - [[Retriever]]
 - [[Query Rewrite]]
+- [[Multi-Query Retrieval]]
+- [[HyDE]]
+- [[Step-back Prompting]]
 - [[Query Planning]]
 - [[Agentic Retrieval]]
 - [[Agentic RAG]]

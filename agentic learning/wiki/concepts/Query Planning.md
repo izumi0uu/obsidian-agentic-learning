@@ -20,6 +20,8 @@ evidence:
   - "[[Agentic Retrieval#证据锚点]]"
 related:
   - "[[Query Rewrite]]"
+  - "[[Multi-Query Retrieval]]"
+  - "[[Step-back Prompting]]"
   - "[[Agentic Retrieval]]"
   - "[[Agentic RAG]]"
   - "[[Retriever]]"
@@ -75,6 +77,8 @@ plan:
 
 和 [[RAG Evaluation]] 的边界：query plan 应被 trace 和 eval 检查，否则计划看起来合理但召回失败无法定位。
 
+和 [[Multi-Query Retrieval]] / [[Step-back Prompting]] 的边界：multi-query 和 step-back 可以是 query plan 里的具体动作，但它们本身不等于 plan。planning 要决定是否需要这些动作、以什么顺序执行、结果如何合并。
+
 ## 现代性状态
 
 - 判定：current-practice / frontier-watch。
@@ -106,6 +110,8 @@ plan:
 ## 相关链接
 
 - [[Query Rewrite]]
+- [[Multi-Query Retrieval]]
+- [[Step-back Prompting]]
 - [[Agentic Retrieval]]
 - [[Agentic RAG]]
 - [[Retriever]]

@@ -24,15 +24,15 @@ related:
 
 - Last lint: 2026-05-17
 - Missing links: none
-- Concept cards: 130；`scripts/concept_card_audit.py --format markdown` 显示 Needs action = 0。
+- Concept cards: 132；`scripts/concept_card_audit.py --format markdown` 显示 Needs action = 0。
 - Comparison topic pages: 23；`scripts/comparison_topic_audit.py --format markdown` 显示 Needs action = 0。
 - Raw markdown pages: 930；其中 frontmatter `type: source` 881。主源清单仍看 [[资料收集索引]]。
 - Paper source audit: `scripts/paper_source_audit.py` 检查 `raw/papers/` 45 个文件，PASS。
-- Interview concept link audit: `scripts/interview_question_concept_links.py --self-test` PASS；`--dry-run` 扫描 779 个题页，would modify 0，missing concept candidates 0，protected region violations 0；默认报告写入 `reports/interview-question-concept-card-links-report.*`，候选 backlog 页面形状由 [[templates/面试题概念卡待补充]] 提供。
-- Request meta audit: `scripts/request_meta_audit.py --format markdown` 扫描 1113 个 durable vault Markdown 文件，PASS；聊天包装、运行态片段和请求路由话术命中 0。
+- Interview concept link audit: `scripts/interview_question_concept_links.py --self-test` PASS；`--dry-run` 扫描 779 个题页，would modify 6，proposed inline links 11，missing concept candidates 0，protected region violations 0；默认报告写入 `reports/interview-question-concept-card-links-report.*`，候选 backlog 页面形状由 [[templates/面试题概念卡待补充]] 提供。
+- Request meta audit: `scripts/request_meta_audit.py --format markdown` 扫描 1116 个 durable vault Markdown 文件，PASS；聊天包装、运行态片段和请求路由话术命中 0。
 - Query write-back pending: 2（概念对比候选队列中 P3 两项已在 [[05 Query 写回队列#2026-05-17 剩余候选分流]] 分流：1 项证据补齐后再评估，1 项查新后再写；当前均不强行成页）。
-- 概念层级归属审计：130 张概念卡已纳入审计；37 条顶层 `up`；审计闭环通过；项目规则已要求新增/更新概念关系前先读 [[09 概念层级审计基线]]；机器基线保存在 `reports/concept-card-relation-map/`，长期复跑入口是 `scripts/concept_taxonomy/`；`open_review: 0`，`open_writeback: 0`，`dry_run_planned: 0`；20 张 `defer_boundary_review` 已全部标记为 `deferred_with_backlog`，不得为了清零强行补父类。
-- Current action queues: concept-card audit、comparison-topic audit 与概念层级归属审计的本轮 open tail 均已清空；20 张 deferred-with-backlog 卡是未来可重开的边界队列，不是当前可直接写 `up` 的任务。
+- 概念层级归属审计：132 张概念卡已纳入审计；37 条顶层 `up`；审计闭环通过；项目规则已要求新增/更新概念关系前先读 [[09 概念层级审计基线]]；机器基线保存在 `reports/concept-card-relation-map/`，长期复跑入口是 `scripts/concept_taxonomy/`；`open_review: 0`，`open_writeback: 0`，`dry_run_planned: 0`；22 张 `defer_boundary_review` 已全部标记为 `deferred_with_backlog`，不得为了清零强行补父类。
+- Current action queues: concept-card audit、comparison-topic audit 与概念层级归属审计的本轮 open tail 均已清空；22 张 deferred-with-backlog 卡是未来可重开的边界队列，不是当前可直接写 `up` 的任务。
 
 边界：本节是“当前状态”，会覆盖上方读者对最新健康状态的理解；旧的 2026-05-10 / 2026-05-11 数字和“27+6”队列保留下方历史小节，不能再被当成现状。本次 27+6 全量修复是用户明确授权的一次性系统性批量维护；以后仍不要在未确认时批量重写旧卡。Needs action = 0 只表示固定审计脚本当前通过，不表示所有概念卡已经达到百科式深度。
 
@@ -74,6 +74,7 @@ related:
 | [[Data Exfiltration]] | [[Prompt]] | 数据外泄是风险 / attack class，不是 Prompt 的一种。 | 若建立 Security Risk / Prompt Attack / Data Security 风险类父卡再重开。 |
 | [[Entity Resolution]] | [[Knowledge Graph]] | 它可支撑 Knowledge Graph / retrieval，但 support/use 不是 taxonomy。 | 若卡片边界改为某个 approved entity-matching 方法族成员再重开。 |
 | [[GUI Grounding]] | [[Agent]] | GUI grounding 是能力 / 对齐方式，不是宽泛 Agent 子类。 | 若建立 Computer-use / Grounding Capability 父类再重开。 |
+| [[HyDE]] |  | 它是 query-side hypothetical document strategy；本轮没有 approved prompting/retrieval-strategy 父类，且不能因 related 到 [[Retriever]] 就写 taxonomy。 | 若建立 Query-side Retrieval Strategy / Prompting Strategy 等稳定父类，或卡片证据证明 strict kind-of，再重开。 |
 | [[Least Privilege Tools]] | [[Tool Use]] | 最小权限约束 Tool Use，但 policy principle 不是 Tool Use 子类。 | 若建立 Tool Safety Policy / Permissioning 父类再重开。 |
 | [[MCP]] | [[Tool Use]] | MCP 是协议 / 生态根，不是 tool-use 行为。 | 若建立 Agent Protocol / Tool Protocol 父类并审计通过再重开。 |
 | [[MCP Registry]] | [[MCP]] | Registry 很靠近 MCP，但 MCP 还不是 approved parent。 | 若 MCP 被审计为 protocol parent 或建立 Registry/Discovery 父类再重开。 |
@@ -86,6 +87,7 @@ related:
 | [[Prompt Injection]] | [[Prompt]] | Prompt Injection 操纵 prompt，但它是 attack class，不是 Prompt 子类。 | 若建立 Prompt Attack / LLM Security Risk 父类再重开。 |
 | [[Sandbox Workspace]] | [[Tool Use]] | sandbox workspace 承载工具/动作，但 hosting infra 不是 Tool Use 子类。 | 若建立 Workspace / Sandbox / Execution Environment 父类再重开。 |
 | [[Self-Attention]] | [[Transformer]] | Transformer component-of，不是 kind-of Transformer。 | 若建立 Attention Mechanism / Transformer Component 父类再重开。 |
+| [[Step-back Prompting]] |  | 它是抽象式 prompting / query-side strategy；当前缺 approved Prompting 或 query-strategy 父类，不直接挂到 [[Query Rewrite]] 或 [[Planning]]。 | 若建立 Prompting Strategy / Query-side Retrieval Strategy 父类，或卡片边界改为某个 approved 子类，再重开。 |
 | [[Trajectory]] | [[Evaluation]] | Trajectory 是被观察/评估的对象，不是 evaluation 方法。 | 若建立 Trace Object / Agent Run Artifact 父类再重开。 |
 
 审计闭环证明：`defer_boundary_review` 仍可作为语义状态保留，但只要它同时有 `review_status: deferred_with_backlog` 和本节 backlog home，就不再算当前 open tail。未来新增卡片若落入上述边界，必须重开候选生成 / LLM 判定 / dry-run / limited apply，不得直接把 suppressed target 写入 `up`。

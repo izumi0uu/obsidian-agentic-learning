@@ -1162,3 +1162,33 @@ related:
 - Terminology: `MQE`, `Multi-Query Expansion`, `Multi Query Expansion`, and `多查询扩展` are aliases of [[Multi-Query Retrieval]].
 - Boundary: “查询增强策略 / 查询优化” is a query-side strategy family, not a [[Query Rewrite]] alias; HyDE remains folded into [[Query Rewrite]] as a sub-strategy, and no weak HyDE or query-enhancement concept card was created.
 - Taxonomy: kept the existing `Multi-Query Retrieval up [[Query Rewrite]]` Abstract Folder relationship; no `children`, `down`, Breadcrumbs mirror field, or new parent node was added.
+
+## [2026-05-17] writeback | query-side retrieval strategy concept cluster
+
+- Created: [[HyDE]], [[Step-back Prompting]].
+- Updated: [[Query Rewrite]], [[Multi-Query Retrieval]], [[Query Planning]], [[Agentic Retrieval]], [[Query Rewrite Query Planning Agentic Retrieval 对比]], [[RAG 主题]], [[Agent 知识地图]], [[04 页面目录]], [[01 术语表]], [[08 面试题概念卡待补充]], [[05 Query 写回队列]], `scripts/interview_question_concept_aliases.json`.
+- Raw evidence backlinks: added [[HyDE]] / [[Step-back Prompting]] or [[Multi-Query Retrieval]] to high-confidence raw-question `related` / `## 相关知识 wiki` sections without rewriting source正文.
+- Terminology: HyDE / Hypothetical Document Embeddings / 假设文档嵌入 are one canonical card; Step-back Prompting / Step Back Prompting / 后退提问 are one canonical card; neither is a [[Query Rewrite]] alias.
+- Taxonomy: no direct `up` was written for the new cards; they are connected through `related`, body boundaries, alias map, and topic navigation pending concept-taxonomy validation.
+- Mention sweep: searched HyDE, Hypothetical Document Embeddings, 假设文档/假想文档, Step-back/Step Back/后退提问, Multi-Query/MQE/多查询 across wiki, raw, maps, reviews, and alias map; linked high-confidence same-concept hits and left raw source text unchanged.
+
+## [2026-05-17] validation | query-side retrieval strategy taxonomy closure
+
+- Synced [[09 概念层级审计基线]] and [[06 Wiki 健康检查]] to the regenerated taxonomy reports: 132 concept cards, 37 top-level `up`, 95 concept cards without `up`, 22 `defer_boundary_review` rows closed as `deferred_with_backlog`.
+- Added [[HyDE]] and [[Step-back Prompting]] to [[06 Wiki 健康检查#2026-05-17 概念层级审计边界队列]] and [[09 概念层级审计基线#Deferred with backlog：已审计但未来可重开]] as reviewed-but-parentless boundaries.
+- Taxonomy boundary: no direct `up` was written for [[HyDE]] or [[Step-back Prompting]]; future parent placement must reopen candidate generation, adjudication, dry-run, and limited apply.
+- Validation: taxonomy validate / plugin contract / control-surface sync / baseline-map validation PASS; concept-card audit 132 / needs 0; comparison-topic audit 23 / needs 0; request-meta audit 1116 files / 0 hits; paper source audit 45 PASS; interview link self-test PASS and dry-run reports 6 pages / 11 proposed inline links / 0 missing candidates / 0 protected violations; `git diff --check` PASS.
+
+## [2026-05-17] writeback | coding agent repo context vs traditional RAG
+
+- Added [[Coding Agent 为什么不用传统 RAG]] as a small topic boundary page.
+- Updated navigation: [[Agent 知识地图]], [[04 页面目录]], [[05 Query 写回队列]].
+- Boundary: kept [[Repo Context]] as the canonical concept; the new page answers a reusable product/architecture question about Codex CLI / Claude Code style clients and does not create a weak “coding-agent RAG” concept card.
+- Terminology: no changes to `scripts/interview_question_concept_aliases.json`; “traditional RAG” and “repo context gathering” are boundary phrases, not new aliases.
+
+## [2026-05-17] writeback | LLM context limit breakthrough topic
+
+- Added [[LLM 上下文限制与突破条件]] as a small topic boundary page.
+- Updated navigation: [[LLM 主题]], [[Agent 知识地图]], [[04 页面目录]], [[05 Query 写回队列]].
+- Boundary: kept [[Context Window]], [[Context Engineering]], [[Memory]] and [[RAG]] as the canonical concepts; the new page answers a reusable architecture/interview question about what limits LLM context and what future breakthroughs require.
+- Terminology: no new concept card, no `up` / `relations` writeback, and no changes to `scripts/interview_question_concept_aliases.json`; long-context / 上下文限制 are topic-level boundary phrases here, not new aliases.

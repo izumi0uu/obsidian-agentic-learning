@@ -1,20 +1,20 @@
 # Concept Hierarchy Placement Audit closure — Completion Closure
 
-Generated: `2026-05-17T12:19:10Z`
+Generated: `2026-05-17T13:39:51Z`
 
 > Audit closure closes remaining concept-hierarchy-placement open reviews as backlog-backed defers. It does not write concept cards or create fallback parents.
 
 ## Summary
 
-- total_concepts: 130
-- reviewed_concepts: 130
+- total_concepts: 132
+- reviewed_concepts: 132
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0
 - open_writeback: 0
 - dry_run_planned: 0
-- defer_boundary_review: 20
-- deferred_with_backlog: 20
+- defer_boundary_review: 22
+- deferred_with_backlog: 22
 - concept_card_writes: 0
 - plugin_problems: 0
 - forbidden_up_edges: 0
@@ -52,6 +52,7 @@ Backlog home: `agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念�
 | [[Data Exfiltration]] | [[Prompt]] | security_risk_not_prompt | Security risk card; no approved security-risk parent exists and Prompt is not a safe parent. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Entity Resolution]] | [[Knowledge Graph]] | supports_graph_not_graph | May support Knowledge Graph or retrieval, but support/use is not strict taxonomy. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[GUI Grounding]] | [[Agent]] | capability_not_broad_agent_parent | Computer-use/grounding capability; no approved grounding or computer-use parent exists. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
+| [[HyDE]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Least Privilege Tools]] | [[Tool Use]] | policy_principle_not_tool_behavior | Tool safety/policy principle; related to Tool Use but not automatically a kind of Tool Use. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[MCP]] | [[Tool Use]] | protocol_not_tool_behavior | Protocol/root ecosystem card; no approved protocol parent exists. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[MCP Registry]] | [[MCP]] | unapproved_parent | Registry/ecosystem component likely belongs near MCP, but MCP is not yet an approved parent. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
@@ -64,6 +65,7 @@ Backlog home: `agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念�
 | [[Prompt Injection]] | [[Prompt]] | attack_class_not_prompt | Security risk/attack class; Prompt is related context but not a strict parent. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Sandbox Workspace]] | [[Tool Use]] | workspace_runtime_not_tool_behavior | Workspace/sandbox runtime boundary; no approved sandbox/workspace parent exists. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Self-Attention]] | [[Transformer]] | component_of_not_kind_of | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
+| [[Step-back Prompting]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Trajectory]] | [[Evaluation]] | evaluated_object_not_evaluation_method | Trace/evaluation object; may be evaluated or observed, but it is not automatically Evaluation or Observability. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 
 ## Boundary

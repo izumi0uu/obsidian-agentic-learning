@@ -42,6 +42,8 @@ related:
   - "[[Observation]]"
   - "[[RAG Evaluation]]"
   - "[[Query Rewrite]]"
+  - "[[Multi-Query Retrieval]]"
+  - "[[HyDE]]"
   - "[[Context Engineering]]"
   - "[[Prompt]]"
   - "[[Hallucination]]"
@@ -77,6 +79,8 @@ related:
 - [[Observation]]
 - [[RAG Evaluation]]
 - [[Query Rewrite]]
+- [[Multi-Query Retrieval]]
+- [[HyDE]]
 - [[Context Engineering]]
 - [[Prompt]]
 - [[Hallucination]]

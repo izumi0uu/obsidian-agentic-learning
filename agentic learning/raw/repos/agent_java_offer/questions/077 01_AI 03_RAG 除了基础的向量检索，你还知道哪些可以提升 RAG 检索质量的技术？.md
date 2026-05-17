@@ -45,6 +45,7 @@ related:
   - "[[Dense Retrieval]]"
   - "[[Multi-Route Retrieval]]"
   - "[[Multi-Query Retrieval]]"
+  - "[[HyDE]]"
   - "[[Cross-Encoder]]"
 ---
 
@@ -78,6 +79,7 @@ related:
 - [[Dense Retrieval]]
 - [[Multi-Route Retrieval]]
 - [[Multi-Query Retrieval]]
+- [[HyDE]]
 - [[Cross-Encoder]]
 ## 题目正文
 

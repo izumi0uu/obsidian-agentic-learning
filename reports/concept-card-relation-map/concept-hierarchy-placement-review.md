@@ -1,41 +1,41 @@
 # Concept Hierarchy Placement Review — 层级归属待审计概念卡
 
-Generated: `2026-05-17T12:19:10Z`
+Generated: `2026-05-17T13:39:51Z`
 Classification stage: `audit_closure`
 
 > Audit closure: remaining `defer_boundary_review` rows are closed as `deferred_with_backlog`; no concept cards are edited and no fallback parents are invented.
 
 ## Summary
 
-- total_concepts: 130
-- reviewed_concepts: 130
+- total_concepts: 132
+- reviewed_concepts: 132
 - taxonomy_placement_unreviewed: 0
 - concepts_with_up: 37
-- concepts_without_up: 93
-- concepts_with_candidate_basis: 55
-- candidate_basis_rows: 67
+- concepts_without_up: 95
+- concepts_with_candidate_basis: 56
+- candidate_basis_rows: 68
 - known_forbidden_candidate_pairs: 2
 - accepted_taxonomy: 0
 - root_or_anchor_no_up: 19
 - relation_only_terminal: 48
 - weak_or_backlog_terminal: 4
-- defer_boundary_review: 20
+- defer_boundary_review: 22
 - open_unclassified: 0
 - open_review: 0
 - open_writeback: 0
 - dry_run_planned: 0
 - write_policy: Audit closure only. Remaining defer_boundary_review rows are closed as deferred_with_backlog and no concept-card fields are written.
-- decision_counts: `{"already_has_up_reviewed": 37, "defer_boundary_review": 20, "reject_taxonomy": 2, "relation_only_terminal": 48, "root_or_anchor_no_up": 19, "weak_or_backlog_terminal": 4}`
-- review_status_counts: `{"deferred_with_backlog": 20, "terminal_non_writeback": 110}`
+- decision_counts: `{"already_has_up_reviewed": 37, "defer_boundary_review": 22, "reject_taxonomy": 2, "relation_only_terminal": 48, "root_or_anchor_no_up": 19, "weak_or_backlog_terminal": 4}`
+- review_status_counts: `{"deferred_with_backlog": 22, "terminal_non_writeback": 110}`
 - parent_whitelist_reviewed: True
 - stable_parent_whitelist_approved: 14
 - proposed_parent_anchors_not_auto_approved: 3
 - missing_proposed_parent_anchors: 2
 - root_anchors_not_parent_whitelist: 5
-- deferred_rows_parent_prechecked: 22
+- deferred_rows_parent_prechecked: 24
 - candidate_adjudication_needed: 2
 - conservative_candidates_generated: 2
-- candidate_generation_suppressed_signals: 20
+- candidate_generation_suppressed_signals: 22
 - adjudication_items: 2
 - adjudicated_candidates: 2
 - adjudication_accept_taxonomy: 0
@@ -56,7 +56,7 @@ Classification stage: `audit_closure`
 - limited_apply_concept_card_writes: 1
 - limited_apply_post_apply_dry_run_planned: 0
 - limited_apply_post_apply_dry_run_ready: 0
-- deferred_with_backlog: 20
+- deferred_with_backlog: 22
 - audit_closure_concept_card_writes: 0
 - completion_definition_met: True
 
@@ -102,7 +102,7 @@ Classification stage: `audit_closure`
 - [[Tool Calling]]
 - [[Trajectory Evaluation]]
 
-### defer_boundary_review (20)
+### defer_boundary_review (22)
 
 - [[A2A]]
 - [[ACP]]
@@ -111,6 +111,7 @@ Classification stage: `audit_closure`
 - [[Data Exfiltration]]
 - [[Entity Resolution]]
 - [[GUI Grounding]]
+- [[HyDE]]
 - [[Least Privilege Tools]]
 - [[MCP]]
 - [[MCP Registry]]
@@ -123,6 +124,7 @@ Classification stage: `audit_closure`
 - [[Prompt Injection]]
 - [[Sandbox Workspace]]
 - [[Self-Attention]]
+- [[Step-back Prompting]]
 - [[Trajectory]]
 
 ### reject_taxonomy (2)
@@ -292,6 +294,7 @@ Parent-whitelist review fixes the candidate-generation boundary. An approved par
 | [[Data Exfiltration]] | remain_deferred |  | Security risk card; no approved security-risk parent exists and Prompt is not a safe parent. |
 | [[Entity Resolution]] | remain_deferred |  | May support Knowledge Graph or retrieval, but support/use is not strict taxonomy. |
 | [[GUI Grounding]] | remain_deferred |  | Computer-use/grounding capability; no approved grounding or computer-use parent exists. |
+| [[HyDE]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
 | [[Least Privilege Tools]] | remain_deferred |  | Tool safety/policy principle; related to Tool Use but not automatically a kind of Tool Use. |
 | [[MCP]] | remain_deferred |  | Protocol/root ecosystem card; no approved protocol parent exists. |
 | [[MCP Registry]] | remain_deferred |  | Registry/ecosystem component likely belongs near MCP, but MCP is not yet an approved parent. |
@@ -305,16 +308,17 @@ Parent-whitelist review fixes the candidate-generation boundary. An approved par
 | [[ReAct]] | candidate_adjudication | [[Agent Workflow]] | May be an agent workflow/pattern, but its prompting/loop boundary needs Candidate adjudication. |
 | [[Sandbox Workspace]] | remain_deferred |  | Workspace/sandbox runtime boundary; no approved sandbox/workspace parent exists. |
 | [[Self-Attention]] | likely_relation_only |  | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. |
+| [[Step-back Prompting]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
 | [[Trajectory]] | remain_deferred |  | Trace/evaluation object; may be evaluated or observed, but it is not automatically Evaluation or Observability. |
 
 ## Conservative candidate generation conservative taxonomy candidates
 
 Conservative candidate generation generates conservative candidates only from Parent-whitelist review approved parents. These candidates are **not** accepted taxonomy and cannot enter writeback until Candidate adjudication.
 
-- deferred_rows_considered: 22
+- deferred_rows_considered: 24
 - approved_parent_count: 14
 - generated_candidates: 2
-- suppressed_signals: 20
+- suppressed_signals: 22
 - candidate_targets: `{"Agent Workflow": 2}`
 - adjudication_items: 2
 - open_writeback: 0
@@ -415,15 +419,15 @@ Apply artifact:
 
 Audit closure closes the whole concept hierarchy placement audit by routing every remaining deferred row to a durable backlog home. It does not add `up`; future changes must reopen a new candidate/adjudication/dry-run/limited-apply cycle.
 
-- total_concepts: 130
-- reviewed_concepts: 130
+- total_concepts: 132
+- reviewed_concepts: 132
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0
 - open_writeback: 0
 - dry_run_planned: 0
-- defer_boundary_review: 20
-- deferred_with_backlog: 20
+- defer_boundary_review: 22
+- deferred_with_backlog: 22
 - concept_card_writes: 0
 - plugin_problems: 0
 - forbidden_up_edges: 0
@@ -444,6 +448,7 @@ Closure artifact:
 | [[Data Exfiltration]] | [[Prompt]] | security_risk_not_prompt | Security risk card; no approved security-risk parent exists and Prompt is not a safe parent. |
 | [[Entity Resolution]] | [[Knowledge Graph]] | supports_graph_not_graph | May support Knowledge Graph or retrieval, but support/use is not strict taxonomy. |
 | [[GUI Grounding]] | [[Agent]] | capability_not_broad_agent_parent | Computer-use/grounding capability; no approved grounding or computer-use parent exists. |
+| [[HyDE]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
 | [[Least Privilege Tools]] | [[Tool Use]] | policy_principle_not_tool_behavior | Tool safety/policy principle; related to Tool Use but not automatically a kind of Tool Use. |
 | [[MCP]] | [[Tool Use]] | protocol_not_tool_behavior | Protocol/root ecosystem card; no approved protocol parent exists. |
 | [[MCP Registry]] | [[MCP]] | unapproved_parent | Registry/ecosystem component likely belongs near MCP, but MCP is not yet an approved parent. |
@@ -456,6 +461,7 @@ Closure artifact:
 | [[Prompt Injection]] | [[Prompt]] | attack_class_not_prompt | Security risk/attack class; Prompt is related context but not a strict parent. |
 | [[Sandbox Workspace]] | [[Tool Use]] | workspace_runtime_not_tool_behavior | Workspace/sandbox runtime boundary; no approved sandbox/workspace parent exists. |
 | [[Self-Attention]] | [[Transformer]] | component_of_not_kind_of | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. |
+| [[Step-back Prompting]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
 | [[Trajectory]] | [[Evaluation]] | evaluated_object_not_evaluation_method | Trace/evaluation object; may be evaluated or observed, but it is not automatically Evaluation or Observability. |
 
 ## Concepts with existing `up`
@@ -538,6 +544,7 @@ Closure artifact:
 | [[Handoff]] | relation_only_terminal | [[Agent Workflow]] | 1 | 1 |
 | [[Hermes Agent]] | relation_only_terminal |  | 1 | 2 |
 | [[Human-in-the-loop]] | relation_only_terminal | [[Agent Workflow]] | 1 | 1 |
+| [[HyDE]] | defer_boundary_review |  | 1 | 3 |
 | [[Indirect Prompt Injection]] | relation_only_terminal |  | 1 | 2 |
 | [[Knowledge Graph]] | root_or_anchor_no_up |  | 1 | 1 |
 | [[LLM]] | root_or_anchor_no_up |  | 0 | 0 |
@@ -581,6 +588,7 @@ Closure artifact:
 | [[Sandbox Workspace]] | defer_boundary_review |  | 0 | 3 |
 | [[Self-Attention]] | defer_boundary_review |  | 0 | 3 |
 | [[State Graph Runtime]] | relation_only_terminal | [[Agent Workflow]] | 2 | 3 |
+| [[Step-back Prompting]] | defer_boundary_review |  | 0 | 2 |
 | [[TF-IDF]] | relation_only_terminal |  | 2 | 4 |
 | [[Task Success Rate]] | relation_only_terminal |  | 1 | 2 |
 | [[Token]] | root_or_anchor_no_up |  | 0 | 0 |
@@ -626,6 +634,7 @@ Candidate basis is evidence for later adjudication, not an accepted parent.
 | [[Handoff]] | [[Agent Workflow]] | taxonomy_candidate | low | title/topic heuristic | no |
 | [[Hermes Agent]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | no |
 | [[Human-in-the-loop]] | [[Agent Workflow]] | taxonomy_candidate | low | title/topic heuristic | no |
+| [[HyDE]] | [[Retriever]] | topic_family_review | low | frontmatter.related | no |
 | [[Indirect Prompt Injection]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |
 | [[Knowledge Graph]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |
 | [[LLM Gateway]] | [[Observability]] | topic_family_review | low | frontmatter.related | no |

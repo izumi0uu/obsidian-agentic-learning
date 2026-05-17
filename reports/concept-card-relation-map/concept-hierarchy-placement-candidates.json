@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "taxonomy_placement_candidates",
-  "generated_at": "2026-05-17T12:19:10Z",
+  "generated_at": "2026-05-17T13:39:51Z",
   "input_review": "reports/concept-card-relation-map/concept-hierarchy-placement-review.json",
   "classification_stage": "conservative_candidates",
   "policy": {
@@ -34,10 +34,10 @@
     "write_policy": "No writeback in Conservative candidate generation. Candidates feed Candidate adjudication only."
   },
   "summary": {
-    "deferred_rows_considered": 22,
+    "deferred_rows_considered": 24,
     "approved_parent_count": 14,
     "generated_candidates": 2,
-    "suppressed_signals": 20,
+    "suppressed_signals": 22,
     "candidate_targets": {
       "Agent Workflow": 2
     },
@@ -163,6 +163,15 @@
       "writeback_action": "none"
     },
     {
+      "source": "HyDE",
+      "source_path": "agentic learning/wiki/concepts/HyDE.md",
+      "target": null,
+      "signal_type": "no_conservative_approved_parent_signal",
+      "status": "suppressed_not_candidate",
+      "reason": "No conservative signal points to a Parent-whitelist review approved stable parent.",
+      "writeback_action": "none"
+    },
+    {
       "source": "Least Privilege Tools",
       "source_path": "agentic learning/wiki/concepts/Least Privilege Tools.md",
       "target": "Tool Use",
@@ -268,6 +277,15 @@
       "signal_type": "component_of_not_kind_of",
       "status": "suppressed_not_candidate",
       "reason": "Self-Attention is a Transformer mechanism/component, not a kind of Transformer.",
+      "writeback_action": "none"
+    },
+    {
+      "source": "Step-back Prompting",
+      "source_path": "agentic learning/wiki/concepts/Step-back Prompting.md",
+      "target": null,
+      "signal_type": "no_conservative_approved_parent_signal",
+      "status": "suppressed_not_candidate",
+      "reason": "No conservative signal points to a Parent-whitelist review approved stable parent.",
       "writeback_action": "none"
     },
     {

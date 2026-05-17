@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
   "artifact_type": "temporary_concept_relationship_map",
-  "generated_at": "2026-05-17T12:19:10Z",
+  "generated_at": "2026-05-17T13:39:51Z",
   "scope": {
     "concept_dir": "agentic learning/wiki/concepts",
     "temporary": true,
     "write_policy": "Do not write these candidates into concept cards without a separate review task."
   },
   "summary": {
-    "total_concepts": 130,
+    "total_concepts": 132,
     "edge_counts": {
-      "related_link": 709,
-      "body_link": 241,
+      "related_link": 734,
+      "body_link": 242,
       "taxonomy": 37,
       "typed_relation": 31
     },
@@ -29,13 +29,13 @@
       "composed_into": 2,
       "foundational_for": 1
     },
-    "concepts_without_up": 93,
+    "concepts_without_up": 95,
     "core_orphans": 0,
     "weakly_connected_concepts": 1,
     "dangling_core_targets": 23,
-    "candidate_edges": 67,
+    "candidate_edges": 68,
     "taxonomy_candidates": 11,
-    "topic_family_review_signals": 56
+    "topic_family_review_signals": 57
   },
   "nodes": [
     {
@@ -418,6 +418,11 @@
         "Agentic RAG",
         "RAG",
         "Retriever",
+        "Query Rewrite",
+        "Query Planning",
+        "Multi-Query Retrieval",
+        "HyDE",
+        "Step-back Prompting",
         "Evaluation"
       ]
     },
@@ -1321,6 +1326,36 @@
       ]
     },
     {
+      "id": "HyDE",
+      "title": "HyDE",
+      "file": "agentic learning/wiki/concepts/HyDE.md",
+      "topics": [
+        "rag",
+        "retrieval",
+        "query"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "Hypothetical Document Embeddings",
+        "Hypothetical Document Embedding",
+        "假设文档嵌入",
+        "假想文档嵌入"
+      ],
+      "source_count": 4,
+      "evidence_count": 4,
+      "up": [],
+      "related": [
+        "Query Rewrite",
+        "Dense Retrieval",
+        "Embedding",
+        "Retriever",
+        "Multi-Query Retrieval",
+        "Step-back Prompting",
+        "RAG Evaluation"
+      ]
+    },
+    {
       "id": "Hybrid Search",
       "title": "Hybrid Search",
       "file": "agentic learning/wiki/concepts/Hybrid Search.md",
@@ -1752,7 +1787,11 @@
       "freshness": "stable",
       "aliases": [
         "Multi-Query",
+        "Multi-Query Expansion",
+        "Multi Query Expansion",
+        "MQE",
         "多 Query 扩展",
+        "多查询扩展",
         "多 Query 扩展召回",
         "多查询检索",
         "多查询召回",
@@ -1765,6 +1804,8 @@
       ],
       "related": [
         "Query Rewrite",
+        "HyDE",
+        "Step-back Prompting",
         "Retriever",
         "Multi-Route Retrieval",
         "Dense Retrieval",
@@ -2272,6 +2313,8 @@
       "up": [],
       "related": [
         "Query Rewrite",
+        "Multi-Query Retrieval",
+        "Step-back Prompting",
         "Agentic Retrieval",
         "Agentic RAG",
         "Retriever"
@@ -2300,7 +2343,9 @@
         "Query Planning",
         "Agentic Retrieval",
         "Hybrid Search",
-        "Multi-Query Retrieval"
+        "Multi-Query Retrieval",
+        "HyDE",
+        "Step-back Prompting"
       ]
     },
     {
@@ -2806,6 +2851,39 @@
         "Durable Execution",
         "Human-in-the-loop",
         "LangGraph"
+      ]
+    },
+    {
+      "id": "Step-back Prompting",
+      "title": "Step-back Prompting",
+      "file": "agentic learning/wiki/concepts/Step-back Prompting.md",
+      "topics": [
+        "rag",
+        "retrieval",
+        "prompting",
+        "reasoning"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "Step Back Prompting",
+        "step-back prompting",
+        "Step-back",
+        "Step Back",
+        "后退提问",
+        "后退一步提问"
+      ],
+      "source_count": 2,
+      "evidence_count": 2,
+      "up": [],
+      "related": [
+        "Query Rewrite",
+        "HyDE",
+        "Multi-Query Retrieval",
+        "Query Planning",
+        "Prompt",
+        "Plan-and-Solve Prompting",
+        "RAG Evaluation"
       ]
     },
     {
@@ -4512,6 +4590,46 @@
     },
     {
       "source": "Agentic Retrieval",
+      "target": "HyDE",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agentic Retrieval",
+      "target": "Multi-Query Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agentic Retrieval",
+      "target": "Query Planning",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agentic Retrieval",
+      "target": "Query Rewrite",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agentic Retrieval",
       "target": "RAG",
       "kind": "related_link",
       "relation_type": "related",
@@ -4523,6 +4641,16 @@
     {
       "source": "Agentic Retrieval",
       "target": "Retriever",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agentic Retrieval",
+      "target": "Step-back Prompting",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -7181,6 +7309,86 @@
       "note": ""
     },
     {
+      "source": "HyDE",
+      "target": "Dense Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HyDE",
+      "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HyDE",
+      "target": "Multi-Query Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HyDE",
+      "target": "Query Rewrite",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HyDE",
+      "target": "RAG Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HyDE",
+      "target": "Retriever",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HyDE",
+      "target": "Step-back Prompting",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HyDE",
+      "target": "Reranking",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "Hybrid Search",
       "target": "Retriever",
       "kind": "taxonomy",
@@ -8652,6 +8860,16 @@
     },
     {
       "source": "Multi-Query Retrieval",
+      "target": "HyDE",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Multi-Query Retrieval",
       "target": "Hybrid Search",
       "kind": "related_link",
       "relation_type": "related",
@@ -8693,6 +8911,16 @@
     {
       "source": "Multi-Query Retrieval",
       "target": "Retriever",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Multi-Query Retrieval",
+      "target": "Step-back Prompting",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -10292,6 +10520,16 @@
     },
     {
       "source": "Query Planning",
+      "target": "Multi-Query Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Query Planning",
       "target": "Query Rewrite",
       "kind": "related_link",
       "relation_type": "related",
@@ -10312,6 +10550,16 @@
     },
     {
       "source": "Query Planning",
+      "target": "Step-back Prompting",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Query Planning",
       "target": "RAG Evaluation",
       "kind": "body_link",
       "relation_type": "body_wikilink",
@@ -10323,6 +10571,16 @@
     {
       "source": "Query Rewrite",
       "target": "Agentic Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Query Rewrite",
+      "target": "HyDE",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -10363,6 +10621,16 @@
     {
       "source": "Query Rewrite",
       "target": "Retriever",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Query Rewrite",
+      "target": "Step-back Prompting",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -12023,6 +12291,76 @@
     {
       "source": "State Graph Runtime",
       "target": "LangGraph",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Step-back Prompting",
+      "target": "HyDE",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Step-back Prompting",
+      "target": "Multi-Query Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Step-back Prompting",
+      "target": "Plan-and-Solve Prompting",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Step-back Prompting",
+      "target": "Prompt",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Step-back Prompting",
+      "target": "Query Planning",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Step-back Prompting",
+      "target": "Query Rewrite",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Step-back Prompting",
+      "target": "RAG Evaluation",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -13710,6 +14048,17 @@
       ]
     },
     {
+      "source": "HyDE",
+      "target": "Retriever",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: retrieval/search",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
       "source": "Indirect Prompt Injection",
       "target": "RAG",
       "candidate_type": "topic_family_review",
@@ -14198,6 +14547,7 @@
       "Handoff",
       "Hermes Agent",
       "Human-in-the-loop",
+      "HyDE",
       "Indirect Prompt Injection",
       "Knowledge Graph",
       "LLM",
@@ -14241,6 +14591,7 @@
       "Sandbox Workspace",
       "Self-Attention",
       "State Graph Runtime",
+      "Step-back Prompting",
       "TF-IDF",
       "Task Success Rate",
       "Token",

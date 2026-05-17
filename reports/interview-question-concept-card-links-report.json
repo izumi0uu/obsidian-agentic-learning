@@ -4,15 +4,15 @@
   "total_question_pages_scanned": 779,
   "total_pages_scanned": 779,
   "pages_with_related_section": 779,
-  "would_modify_pages": 0,
+  "would_modify_pages": 6,
   "modified_pages": 0,
-  "inline_links_inserted": 0,
-  "proposed_inline_links": 0,
+  "inline_links_inserted": 11,
+  "proposed_inline_links": 11,
   "applied_inline_links": 0,
   "already_linked_pages": 362,
   "already_linked_targets": 941,
   "skipped_no_match_pages": 417,
-  "unsafe_region_skips": 3806,
+  "unsafe_region_skips": 3850,
   "protected_region_violations": 0,
   "request_meta_page_hits": [],
   "missing_concept_candidates": 0,
@@ -22,9 +22,9 @@
     "xiaolinnote": {
       "total": 142,
       "with_related_section": 142,
-      "would_modify_pages": 0,
+      "would_modify_pages": 2,
       "modified_pages": 0,
-      "proposed_inline_links": 0,
+      "proposed_inline_links": 3,
       "applied_inline_links": 0,
       "already_linked_pages": 81,
       "skipped_no_match_pages": 61
@@ -32,9 +32,9 @@
     "agent_java_offer": {
       "total": 637,
       "with_related_section": 637,
-      "would_modify_pages": 0,
+      "would_modify_pages": 4,
       "modified_pages": 0,
-      "proposed_inline_links": 0,
+      "proposed_inline_links": 8,
       "applied_inline_links": 0,
       "already_linked_pages": 281,
       "skipped_no_match_pages": 356
@@ -49,10 +49,10 @@
     "agentic learning/raw/repos/agent_java_offer/questions/228 01_AI 08_框架协议与工程化 追问：LCEL 和手写 if else 调用代码相比，工程收益在哪？.md",
     "agentic learning/raw/repos/agent_java_offer/questions/301 02_后端 04_并发与异步任务 `CompletableFuture` 常见坑？.md",
     "agentic learning/raw/repos/agent_java_offer/questions/407 02_后端 10_网络I_O与发布治理 Netty 如何体现 Reactor 模型？.md",
-    "agentic learning/raw/repos/xiaolinnote/questions/001 ai agent 10. 什么是 Multi-Agent？.md",
-    "agentic learning/raw/repos/xiaolinnote/questions/002 ai agent 11. 说说 Single-Agent 和 Multi-Agent 的设计方案？.md",
-    "agentic learning/raw/repos/xiaolinnote/questions/003 ai agent 12. Agent 记忆压缩通常有哪些方法？.md",
-    "agentic learning/raw/repos/xiaolinnote/questions/004 ai agent 13. 在工程实践中，为什么有时候选择「手搓」Agent，而不是直接用成熟框架？.md"
+    "agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md",
+    "agentic learning/raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md",
+    "agentic learning/raw/repos/agent_java_offer/questions/072 01_AI 03_RAG RAG检索优化与高级范式（重排 图谱 自适应检索 向量库）.md",
+    "agentic learning/raw/repos/agent_java_offer/questions/077 01_AI 03_RAG 除了基础的向量检索，你还知道哪些可以提升 RAG 检索质量的技术？.md"
   ],
   "missing_targets": {},
   "pages": [
@@ -818,6 +818,8 @@
         "Retriever",
         "Context Engineering",
         "Multi-Query Retrieval",
+        "HyDE",
+        "Step-back Prompting",
         "Dense Retrieval"
       ],
       "existing_targets": [
@@ -825,6 +827,8 @@
         "Retriever",
         "Context Engineering",
         "Multi-Query Retrieval",
+        "HyDE",
+        "Step-back Prompting",
         "Dense Retrieval"
       ],
       "missing_targets": [],
@@ -833,9 +837,28 @@
         "Multi-Query Retrieval",
         "Dense Retrieval"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "HyDE",
+          "alias": "HyDE",
+          "start": 1435,
+          "end": 1439,
+          "replacement": "[[HyDE]]",
+          "line": 64,
+          "context": "👔面试官：蒙？你是说靠运气做检索优化？你有没有听说过 HyDE、Step-back Prompting 这些方法？它们"
+        },
+        {
+          "target": "Step-back Prompting",
+          "alias": "Step-back Prompting",
+          "start": 1440,
+          "end": 1459,
+          "replacement": "[[Step-back Prompting]]",
+          "line": 64,
+          "context": "：蒙？你是说靠运气做检索优化？你有没有听说过 HyDE、Step-back Prompting 这些方法？它们各自解决什么问题你清楚吗？  这个问题其"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 4,
+      "unsafe_region_skips": 22,
       "unmatched_existing_targets": [
         "Retriever",
         "Context Engineering"
@@ -905,6 +928,7 @@
         "Parent-Child Chunking",
         "Query Rewrite",
         "Multi-Query Retrieval",
+        "HyDE",
         "Multi-Route Retrieval",
         "Dense Retrieval",
         "Sparse Retrieval",
@@ -921,6 +945,7 @@
         "Parent-Child Chunking",
         "Query Rewrite",
         "Multi-Query Retrieval",
+        "HyDE",
         "Multi-Route Retrieval",
         "Dense Retrieval",
         "Sparse Retrieval",
@@ -940,9 +965,19 @@
         "Reciprocal Rank Fusion",
         "Cross-Encoder"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "HyDE",
+          "alias": "HyDE",
+          "start": 5598,
+          "end": 5602,
+          "replacement": "[[HyDE]]",
+          "line": 155,
+          "context": "中可能会丢失一些原始细节，原始问题反而最精准。 - **HyDE**（Hypothetical Document Emb"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 11,
+      "unsafe_region_skips": 13,
       "unmatched_existing_targets": [
         "Retriever",
         "Hybrid Search",
@@ -6464,6 +6499,7 @@
         "Context Engineering",
         "Observability",
         "Query Rewrite",
+        "HyDE",
         "Knowledge Graph"
       ],
       "existing_targets": [
@@ -6479,6 +6515,7 @@
         "Context Engineering",
         "Observability",
         "Query Rewrite",
+        "HyDE",
         "Knowledge Graph"
       ],
       "missing_targets": [],
@@ -6489,9 +6526,19 @@
         "Query Rewrite",
         "Knowledge Graph"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "HyDE",
+          "alias": "HyDE",
+          "start": 2023,
+          "end": 2027,
+          "replacement": "[[HyDE]]",
+          "line": 78,
+          "context": "排模型、多[[Query Rewrite|查询改写]]、HyDE、元数据过滤、[[Knowledge Graph|知识图"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 16,
+      "unsafe_region_skips": 18,
       "unmatched_existing_targets": [
         "Self-RAG",
         "GraphRAG",
@@ -6697,6 +6744,7 @@
         "Dense Retrieval",
         "Multi-Route Retrieval",
         "Multi-Query Retrieval",
+        "HyDE",
         "Cross-Encoder"
       ],
       "existing_targets": [
@@ -6719,6 +6767,7 @@
         "Dense Retrieval",
         "Multi-Route Retrieval",
         "Multi-Query Retrieval",
+        "HyDE",
         "Cross-Encoder"
       ],
       "missing_targets": [],
@@ -6738,9 +6787,19 @@
         "Multi-Query Retrieval",
         "Cross-Encoder"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "HyDE",
+          "alias": "HyDE",
+          "start": 3252,
+          "end": 3256,
+          "replacement": "[[HyDE]]",
+          "line": 111,
+          "context": "询，然后对所有查询的检索结果进行合并。     - **HyDE（Hypothetical Document [[Emb"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 12,
+      "unsafe_region_skips": 14,
       "unmatched_existing_targets": [
         "GraphRAG",
         "Neo4j",
@@ -8624,6 +8683,8 @@
         "Observation",
         "RAG Evaluation",
         "Query Rewrite",
+        "Multi-Query Retrieval",
+        "HyDE",
         "Context Engineering",
         "Prompt",
         "Hallucination",
@@ -8648,6 +8709,8 @@
         "Observation",
         "RAG Evaluation",
         "Query Rewrite",
+        "Multi-Query Retrieval",
+        "HyDE",
         "Context Engineering",
         "Prompt",
         "Hallucination",
@@ -8669,9 +8732,19 @@
         "LLM",
         "Dense Retrieval"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "HyDE",
+          "alias": "HyDE",
+          "start": 3151,
+          "end": 3155,
+          "replacement": "[[HyDE]]",
+          "line": 110,
+          "context": "Rewrite|查询改写]]：multi-query、HyDE、同义词扩展，提升召回。 4. 工具编排：路由器决定“直"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 22,
+      "unsafe_region_skips": 28,
       "unmatched_existing_targets": [
         "Observability",
         "Benchmark",
@@ -8683,6 +8756,7 @@
         "Durable Execution",
         "Observation",
         "RAG Evaluation",
+        "Multi-Query Retrieval",
         "LLM Training Pipeline"
       ],
       "request_meta_hits": [],
@@ -19998,7 +20072,13 @@
         "Benchmark",
         "Task Success Rate",
         "LLM-as-Judge",
-        "RAG Evaluation"
+        "RAG Evaluation",
+        "Hybrid Search",
+        "BM25",
+        "Dense Retrieval",
+        "Reranking",
+        "Cross-Encoder",
+        "Multi-Query Retrieval"
       ],
       "existing_targets": [
         "Human-in-the-loop",
@@ -20010,16 +20090,68 @@
         "Benchmark",
         "Task Success Rate",
         "LLM-as-Judge",
-        "RAG Evaluation"
+        "RAG Evaluation",
+        "Hybrid Search",
+        "BM25",
+        "Dense Retrieval",
+        "Reranking",
+        "Cross-Encoder",
+        "Multi-Query Retrieval"
       ],
       "missing_targets": [],
       "already_linked_targets": [
         "Observability",
         "Evaluation"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "BM25",
+          "alias": "BM25",
+          "start": 5311,
+          "end": 5315,
+          "replacement": "[[BM25]]",
+          "line": 204,
+          "context": "粒度的查询。  基础的向量检索之外，还可以使用混合搜索（BM25 + 向量检索）、重排序（Cross-Encoder）、"
+        },
+        {
+          "target": "Dense Retrieval",
+          "alias": "向量检索",
+          "start": 4735,
+          "end": 4739,
+          "replacement": "[[Dense Retrieval|向量检索]]",
+          "line": 178,
+          "context": "然后是 embedding 建索引，召回时可以先做向量检索，再加关键词召回，最后用 rerank 提高相关性。"
+        },
+        {
+          "target": "Reranking",
+          "alias": "rerank",
+          "start": 4752,
+          "end": 4758,
+          "replacement": "[[Reranking|rerank]]",
+          "line": 178,
+          "context": "建索引，召回时可以先做向量检索，再加关键词召回，最后用 rerank 提高相关性。   拿到检索结果后，再按时间、来源、主题"
+        },
+        {
+          "target": "Cross-Encoder",
+          "alias": "Cross-Encoder",
+          "start": 5328,
+          "end": 5341,
+          "replacement": "[[Cross-Encoder]]",
+          "line": 204,
+          "context": "，还可以使用混合搜索（BM25 + 向量检索）、重排序（Cross-Encoder）、多查询检索（Multi-Query Retrieva"
+        },
+        {
+          "target": "Multi-Query Retrieval",
+          "alias": "多查询检索",
+          "start": 5343,
+          "end": 5348,
+          "replacement": "[[Multi-Query Retrieval|多查询检索]]",
+          "line": 204,
+          "context": "+ 向量检索）、重排序（Cross-Encoder）、多查询检索（Multi-Query Retrieval）等技术来提"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 16,
+      "unsafe_region_skips": 30,
       "unmatched_existing_targets": [
         "Human-in-the-loop",
         "Approval Gate",
@@ -20028,7 +20160,8 @@
         "Benchmark",
         "Task Success Rate",
         "LLM-as-Judge",
-        "RAG Evaluation"
+        "RAG Evaluation",
+        "Hybrid Search"
       ],
       "request_meta_hits": [],
       "no_match_reason": null

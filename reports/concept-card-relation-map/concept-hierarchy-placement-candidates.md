@@ -1,15 +1,15 @@
 # Concept Hierarchy Placement Candidates — Conservative candidate generation
 
-Generated: `2026-05-17T12:19:10Z`
+Generated: `2026-05-17T13:39:51Z`
 
 > Conservative candidate taxonomy only. These rows are **not** accepted taxonomy and must go through Candidate adjudication before any dry-run/writeback.
 
 ## Summary
 
-- deferred_rows_considered: 22
+- deferred_rows_considered: 24
 - approved_parent_count: 14
 - generated_candidates: 2
-- suppressed_signals: 20
+- suppressed_signals: 22
 - candidate_targets: `{"Agent Workflow": 2}`
 - adjudication_items: 2
 - open_writeback: 0
@@ -61,6 +61,7 @@ Generated: `2026-05-17T12:19:10Z`
 | [[Data Exfiltration]] | [[Prompt]] | security_risk_not_prompt | Data exfiltration can occur through prompts/tools/retrieval, but it is a risk class, not a kind of Prompt. |
 | [[Entity Resolution]] | [[Knowledge Graph]] | supports_graph_not_graph | Entity resolution can support knowledge graphs, but support/use is not strict taxonomy; Knowledge Graph is also not auto-approved. |
 | [[GUI Grounding]] | [[Agent]] | capability_not_broad_agent_parent | GUI grounding is a capability used by computer-use agents, not automatically a kind of Agent. |
+| [[HyDE]] |  | no_conservative_approved_parent_signal | No conservative signal points to a Parent-whitelist review approved stable parent. |
 | [[Least Privilege Tools]] | [[Tool Use]] | policy_principle_not_tool_behavior | Least-privilege tooling constrains Tool Use, but the policy principle itself is not automatically a Tool Use subtype. |
 | [[MCP]] | [[Tool Use]] | protocol_not_tool_behavior | MCP standardizes tool/context connection; protocol/support is not a kind of Tool Use. |
 | [[MCP Registry]] | [[MCP]] | unapproved_parent | MCP Registry likely belongs near MCP, but MCP is not an approved parent in Conservative candidate generation. |
@@ -73,6 +74,7 @@ Generated: `2026-05-17T12:19:10Z`
 | [[Prompt Injection]] | [[Prompt]] | attack_class_not_prompt | Prompt Injection manipulates prompts but is an attack class, not a kind of Prompt. |
 | [[Sandbox Workspace]] | [[Tool Use]] | workspace_runtime_not_tool_behavior | A sandbox workspace hosts actions/tools; hosting infrastructure is not a Tool Use subtype. |
 | [[Self-Attention]] | [[Transformer]] | component_of_not_kind_of | Self-Attention is a Transformer mechanism/component, not a kind of Transformer. |
+| [[Step-back Prompting]] |  | no_conservative_approved_parent_signal | No conservative signal points to a Parent-whitelist review approved stable parent. |
 | [[Trajectory]] | [[Evaluation]] | evaluated_object_not_evaluation_method | Trajectory can be evaluated or observed, but the path/object being evaluated is not itself Evaluation. |
 
 ## Next command

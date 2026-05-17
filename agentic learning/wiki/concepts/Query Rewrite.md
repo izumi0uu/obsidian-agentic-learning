@@ -28,6 +28,8 @@ related:
   - "[[Agentic Retrieval]]"
   - "[[Hybrid Search]]"
   - "[[Multi-Query Retrieval]]"
+  - "[[HyDE]]"
+  - "[[Step-back Prompting]]"
 aliases:
   - Query Rewriting
   - 查询改写
@@ -46,11 +48,11 @@ Query Rewrite 是把用户原始问题改写成更适合检索系统的查询表
 
 最简单的 rewrite 是补全省略词、替换同义词、展开缩写、提取关键词或生成多种检索 query（[[Multi-Query Retrieval]]）。例如用户问“那个框架支持可恢复执行吗？”系统可能结合上下文改写成“LangGraph durable execution checkpoint human-in-the-loop”。复杂一点的 rewrite 会保留原问题，同时生成多个候选查询并合并结果。
 
-常见子策略里，HyDE（Hypothetical Document Embeddings）先让模型生成一个“像文档的假设答案”，再用这个假设答案去检索；Step-back Prompting 则把具体问题往上抽象一层，先查背景知识再回答具体问题。HyDE 更适合“问题和文档文体差异大”的场景，Step-back 更适合“问题太具体、需要背景原理”的场景。它们都属于 rewrite family，而不是 [[Query Planning]]：rewrite 主要改“怎么问”，planning 主要改“先问什么、再问什么”。
+常见子策略里，[[HyDE]]（Hypothetical Document Embeddings）先让模型生成一个“像文档的假设答案”，再用这个假设答案去检索；[[Step-back Prompting]] 则把具体问题往上抽象一层，先查背景知识再回答具体问题。HyDE 更适合“问题和文档文体差异大”的场景，Step-back 更适合“问题太具体、需要背景原理”的场景。它们都属于 query-side strategy / rewrite family 的相邻子策略，而不是 [[Query Planning]]：rewrite 主要改“怎么问”，planning 主要改“先问什么、再问什么”。
 
 证据边界：[[Retriever]] 卡已经把 query rewrite 放在现代 retriever 的组成部分；[[Azure AI Search Agentic Retrieval]] 支持复杂检索中 query planning、多查询和 knowledge source 的现代方向；xiaolinnote source note 支持 HyDE、Step-back 和多 Query 作为 query rewrite 子策略。本卡只沉淀 rewrite 这个最小动作，不把它等同于完整 agentic retrieval。
 
-中文资料里的“查询增强策略”“查询优化”常是更宽的 query-side strategy family：它可以包含直接改写、关键词扩展、HyDE、Step-back、[[Multi-Query Retrieval|MQE / 多查询扩展]]，有时还会延伸到 [[Query Planning]]。因此它适合写成策略群边界，不适合放进 `aliases` 当作 Query Rewrite 的同义词。Query Rewrite 是其中一个核心检索前控制点；HyDE 和 Multi-Query Retrieval 是更具体的子策略。
+中文资料里的“查询增强策略”“查询优化”常是更宽的 query-side strategy family：它可以包含直接改写、关键词扩展、[[HyDE]]、[[Step-back Prompting|Step-back]]、[[Multi-Query Retrieval|MQE / 多查询扩展]]，有时还会延伸到 [[Query Planning]]。因此它适合写成策略群边界，不适合放进 `aliases` 当作 Query Rewrite 的同义词。Query Rewrite 是其中一个核心检索前控制点；HyDE、Step-back 和 Multi-Query Retrieval 是更具体的子策略或相邻策略。
 
 ## 它解决什么问题
 
@@ -87,6 +89,8 @@ rewrite：LangGraph human-in-the-loop approval interrupt checkpoint
 
 和“查询增强策略”的边界：查询增强策略是工程口径里的策略群，回答“从 query 侧怎样提高召回和对齐”；Query Rewrite 只回答“怎样改写或扩展检索表达”。当一个方法开始拆子问题、选择知识源或根据中间结果重查时，它已经靠近 [[Query Planning]] / [[Agentic Retrieval]]，不应因为同样发生在检索前就全部塞进 Query Rewrite。
 
+和 [[HyDE]] / [[Step-back Prompting]] 的边界：HyDE 生成假设文档来改善 embedding 检索代理；Step-back 生成更抽象的背景问题来补原理证据。它们可以放在 Query Rewrite 的学习路线下，但不是 Query Rewrite 的 aliases，也不应该把“假设答案”或“背景问题”误当成最终答案。
+
 ## 现代性状态
 
 - 判定：current-practice。
@@ -103,6 +107,8 @@ rewrite：LangGraph human-in-the-loop approval interrupt checkpoint
 ## 证据锚点
 
 - Concept anchor: [[Retriever#概念详解]]
+- Concept anchor: [[HyDE#证据锚点]]
+- Concept anchor: [[Step-back Prompting#证据锚点]]
 - Source anchor: [[Azure AI Search Agentic Retrieval#一句话]]
 - Source anchor: [[Azure AI Search Agentic Retrieval#边界提醒]]
 - Topic anchor: [[RAG 类型对比#核心区别表]]
@@ -122,3 +128,6 @@ rewrite：LangGraph human-in-the-loop approval interrupt checkpoint
 - [[Agentic Retrieval]]
 - [[Query Rewrite Query Planning Agentic Retrieval 对比]]
 - [[Hybrid Search]]
+- [[Multi-Query Retrieval]]
+- [[HyDE]]
+- [[Step-back Prompting]]

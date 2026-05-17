@@ -43,6 +43,9 @@ related:
 | 2026-05-15 | done | “Top-K 是什么 / 补概念卡” | [[Top-K]], [[01 术语表]], [[RAG 主题]], [[Agent 知识地图]] | 已创建 [[Top-K]] 轻量概念卡，补 retrieval Top-K / decoding top-k 边界，并接入术语表、RAG 主题和 Agent 知识地图。 |
 | 2026-05-17 | done | “错误 Skill 能否靠 Agent 反思发现？” | [[Tool Poisoning]], [[Tool Registry]], [[Agent Harness]], [[Evaluation]], [[Agent 安全控制点对比]] | 已写回 skill selection / skill trust 边界：`SKILL.md` / skill metadata 是会影响发现、选择和信任的 operational text；reflection 只能辅助怀疑，不等于 verification；本轮不创建弱 Agent Skill 概念卡、不改 alias map。 |
 | 2026-05-17 | done | “Query enhancement / HyDE / MQE 与 Abstract Folder taxonomy 边界” | [[Query Rewrite]], [[Multi-Query Retrieval]], `scripts/interview_question_concept_aliases.json` | 已补 [[Multi-Query Retrieval]] 的 `MQE` / `Multi-Query Expansion` / `多查询扩展` aliases，并同步面试题 alias map；[[Query Rewrite]] 写明“查询增强策略 / 查询优化”是策略群边界，不是 Query Rewrite 的 alias；保留既有 `Multi-Query Retrieval up [[Query Rewrite]]`，不新建 HyDE 或查询增强策略弱卡。 |
+| 2026-05-17 | done | “检索侧 Query Rewrite / Multi-Query / HyDE / Step-back / Query Planning / Agentic Retrieval 如何成组学习？” | [[HyDE]], [[Step-back Prompting]], [[Query Rewrite Query Planning Agentic Retrieval 对比]], [[RAG 主题]], `scripts/interview_question_concept_aliases.json` | 已创建 [[HyDE]] 与 [[Step-back Prompting]]，升级对比 topic 覆盖 6 个概念，并同步 alias map、raw evidence 回链、RAG 导航、概念候选 backlog 和 log；旧 folded 决策已重开为 done。 |
+| 2026-05-17 | done | “Codex CLI / Claude Code 客户端为什么不显式用传统 RAG？” | [[Coding Agent 为什么不用传统 RAG]], [[Repo Context]], [[Context RAG Memory 对比]] | 已创建小型 topic 页：把结论写成 repo context gathering vs traditional document RAG 的边界；不新建弱概念卡，不修改 alias map。 |
+| 2026-05-17 | done | “LLM 的上下文受什么限制，未来突破需要什么因素？” | [[LLM 上下文限制与突破条件]], [[Context Window]], [[Context Engineering]] | 已创建小型 topic 页：把上下文限制拆成容量、计算、结构、有效使用和治理五层；结论是长上下文突破需要模型、推理系统和外部上下文工程共同进步。 |
 
 ## 写回模板
 

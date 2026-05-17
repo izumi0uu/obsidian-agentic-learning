@@ -79,7 +79,7 @@ LLM 地基：
 - [[Knowledge Graph]]、[[GraphRAG]] 和 [[Neo4j]]：理解关系结构、图增强检索和图数据库工程生态如何结合。
 - [[RAG Evaluation]]：理解 RAG 失败要分层评估检索、上下文、引用和最终回答。
 - [[RAG Citation Faithfulness]] 和 [[RAG Access Control]]：理解 RAG 可靠性不只看答案，还要看引用支持和权限过滤。
-- [[Query Rewrite]]、[[Query Planning]] 和 [[Agentic Retrieval]]：理解检索层如何从改写 query 走向检索计划和多轮检索控制。
+- [[Query Rewrite]]、[[Multi-Query Retrieval]]、[[HyDE]]、[[Step-back Prompting]]、[[Query Planning]] 和 [[Agentic Retrieval]]：理解检索层如何从改写 query、扩展查询视角、假设文档、背景抽象，走向检索计划和多轮检索控制。
 - [[Parallel Search and Explicit Merging 检索模式]]：理解 deep search / agentic RAG 如何在单个 reasoning step 里扩展多 query 检索，并用显式合并控制信噪比。
 - [[Entity Resolution]] 和 [[Graph Construction Evaluation]]：理解 GraphRAG 的构图质量、实体合并和评估边界。
 - [[RAG 可靠性与治理对比]]、[[Query Rewrite Query Planning Agentic Retrieval 对比]]、[[GraphRAG 构图与评估对比]]：RAG 可靠性、检索决策和构图评估的对比入口。
@@ -132,6 +132,7 @@ LLM 地基：
 - [[Multi-agent Handoff Protocol 对比]]：区分 orchestration、handoff、A2A、ACP、MCP、workflow 和 durable execution。
 - [[Browser Computer Use 执行栈对比]]：区分 browser agent、computer use、GUI grounding、observation、sandbox 和 permissioning。
 - [[Coding Agent 执行边界对比]]：区分 coding agent、repo context、patch validation、sandbox、code execution sandbox 和 AGENTS.md。
+- [[Coding Agent 为什么不用传统 RAG]]：解释 Codex CLI / Claude Code 这类客户端为什么更偏工具化 repo context gathering，而不是让用户维护可见的传统 RAG pipeline。
 - [[OpenClaw Repo vs Hermes Agent]]：区分 OpenClaw 的 Gateway-first personal assistant harness 和 Hermes 的 runtime-first self-improving agent harness。
 - [[Evaluation 层次对比]]：区分 evaluation、benchmark、eval harness、LLM-as-Judge、task success rate、RAG evaluation 和 trajectory evaluation。
 - [[Observability Audit 对比]]：区分 observability、trace、audit log、replay 和 OpenTelemetry GenAI。
@@ -143,10 +144,11 @@ LLM 地基：
 - [[Retrieval 组件对比]]：区分 retrieval pipeline 的入库、表示、召回、混合检索和重排。
 - [[常用向量数据库对比]]：区分 Chroma、FAISS、pgvector、Qdrant、Milvus、Weaviate、Pinecone、Elasticsearch/OpenSearch 和 Neo4j 的层级。
 - [[RAG 可靠性与治理对比]]：区分 RAG evaluation、citation faithfulness、access control、trace 和 audit 的治理位置。
-- [[Query Rewrite Query Planning Agentic Retrieval 对比]]：区分 query rewrite、query planning、agentic retrieval 和 agentic RAG。
+- [[Query Rewrite Query Planning Agentic Retrieval 对比]]：区分 query rewrite、multi-query、HyDE、step-back、query planning、agentic retrieval 和 agentic RAG。
 - [[Parallel Search and Explicit Merging 检索模式]]：区分 parallel multi-query search、explicit merging、Hybrid Search、Reranking 和 RAG Evaluation 的层级。
 - [[GraphRAG 构图与评估对比]]：区分 knowledge graph、entity resolution、graph construction evaluation、GraphRAG 和 Neo4j。
 - [[LLM 输入输出基础边界对比]]：区分 token、context window、prompt 和 hallucination。
+- [[LLM 上下文限制与突破条件]]：拆开 context window 的容量、计算、结构、有效使用和治理限制，避免把长上下文误当长期记忆或可靠性保证。
 
 ## 当前概念卡
 
@@ -176,6 +178,8 @@ SORT file.name ASC
 - [x] [[Cross-Encoder]]
 - [x] [[Multi-Route Retrieval]]
 - [x] [[Multi-Query Retrieval]]
+- [x] [[HyDE]]
+- [x] [[Step-back Prompting]]
 - [x] [[Reciprocal Rank Fusion]]
 - [x] [[Hybrid Search]]
 - [x] [[Document Ingestion]]
