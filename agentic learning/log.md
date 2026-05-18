@@ -5,7 +5,7 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-05
-updated: 2026-05-17
+updated: 2026-05-18
 source:
 related:
   - "[[LLM Wiki 工作流]]"
@@ -1261,3 +1261,12 @@ related:
 - Taxonomy: no direct `up` was written; [[NLP]] is treated as a foundation/domain anchor connected through `related` and body boundary notes, pending any future taxonomy candidate generation and dry-run.
 - Mention sweep: searched NLP / Natural Language Processing / 自然语言处理 across wiki, raw, maps, reviews, and alias map; linked high-confidence same-concept source and navigation hits, skipped bibliography/conference-name noise and repeated raw references.
 - Validation: JSON alias map parse PASS; interview link self-test PASS and dry-run reports 779 pages / would modify 26 / inline links 32 / missing candidates 0 / protected violations 0; concept-card audit 139 / needs 0; `git diff --check` PASS.
+
+## [2026-05-18] source-update | 小林 Note sitemap 面试题
+
+- Source: [[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]
+- Scope: `all`; checked 142 sitemap URLs.
+- Result: new 0, changed 0, unchanged 142, errors 0.
+- Updated navigation: [[资料收集索引]], [[04 页面目录]], [[index]]
+- Automation: adjusted `scripts/update_xiaolinnote.py` to preserve the collection index `created` date during refresh.
+- Boundary: this is raw evidence refresh; changed pages still need explicit wiki/concept digestion if their content matters.

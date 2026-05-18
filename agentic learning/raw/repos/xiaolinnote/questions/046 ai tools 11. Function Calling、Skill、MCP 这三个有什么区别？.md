@@ -10,7 +10,7 @@ topic:
   - mcp
 status: inbox
 created: 2026-05-07
-updated: 2026-05-17
+updated: 2026-05-18
 url: https://xiaolinnote.com/ai/tools/11_fc_skill_mcp.html
 source: https://xiaolinnote.com/ai/tools/11_fc_skill_mcp.html
 last_checked: 2026-05-17
@@ -22,6 +22,7 @@ related:
   - "[[Tool Calling]]"
   - "[[MCP]]"
   - "[[Tool Use]]"
+  - "[[Tool 接口层对比]]"
 ---
 
 # 11. [[Tool Calling|Function Calling]]、Skill、[[MCP]] 这三个有什么区别？
@@ -35,6 +36,7 @@ related:
 - [[Tool Calling]]
 - [[MCP]]
 - [[Tool Use]]
+- [[Tool 接口层对比]]
 
 ## 页面正文
 

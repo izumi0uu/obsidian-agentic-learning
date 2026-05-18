@@ -10,7 +10,7 @@ topic:
   - mcp
 status: inbox
 created: 2026-05-07
-updated: 2026-05-17
+updated: 2026-05-18
 url: https://xiaolinnote.com/ai/tools/6_mcp_vs_fc.html
 source: https://xiaolinnote.com/ai/tools/6_mcp_vs_fc.html
 last_checked: 2026-05-17
@@ -21,6 +21,7 @@ related:
   - "[[资料收集索引]]"
   - "[[MCP]]"
   - "[[Tool Calling]]"
+  - "[[Tool 接口层对比]]"
 ---
 
 # 6. [[MCP]] 和 [[Tool Calling|Function Calling]] 有什么区别？有没有实际跑过 MCP？
@@ -33,6 +34,7 @@ related:
 
 - [[MCP]]
 - [[Tool Calling]]
+- [[Tool 接口层对比]]
 
 ## 页面正文
 

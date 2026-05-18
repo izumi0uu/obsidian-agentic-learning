@@ -12,7 +12,7 @@
   "already_linked_pages": 362,
   "already_linked_targets": 941,
   "skipped_no_match_pages": 412,
-  "unsafe_region_skips": 3992,
+  "unsafe_region_skips": 3998,
   "protected_region_violations": 0,
   "request_meta_page_hits": [],
   "missing_concept_candidates": 0,
@@ -1527,12 +1527,14 @@
       "related_targets": [
         "Tool Calling",
         "MCP",
-        "Tool Use"
+        "Tool Use",
+        "Tool 接口层对比"
       ],
       "existing_targets": [
         "Tool Calling",
         "MCP",
-        "Tool Use"
+        "Tool Use",
+        "Tool 接口层对比"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -1542,8 +1544,10 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 0,
-      "unmatched_existing_targets": [],
+      "unsafe_region_skips": 2,
+      "unmatched_existing_targets": [
+        "Tool 接口层对比"
+      ],
       "request_meta_hits": [],
       "no_match_reason": null
     },
@@ -1796,11 +1800,13 @@
       "has_related_section": true,
       "related_targets": [
         "MCP",
-        "Tool Calling"
+        "Tool Calling",
+        "Tool 接口层对比"
       ],
       "existing_targets": [
         "MCP",
-        "Tool Calling"
+        "Tool Calling",
+        "Tool 接口层对比"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -1809,8 +1815,10 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 0,
-      "unmatched_existing_targets": [],
+      "unsafe_region_skips": 2,
+      "unmatched_existing_targets": [
+        "Tool 接口层对比"
+      ],
       "request_meta_hits": [],
       "no_match_reason": null
     },
@@ -1820,11 +1828,13 @@
       "has_related_section": true,
       "related_targets": [
         "Tool Calling",
-        "MCP"
+        "MCP",
+        "Tool 接口层对比"
       ],
       "existing_targets": [
         "Tool Calling",
-        "MCP"
+        "MCP",
+        "Tool 接口层对比"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -1833,8 +1843,10 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 0,
-      "unmatched_existing_targets": [],
+      "unsafe_region_skips": 2,
+      "unmatched_existing_targets": [
+        "Tool 接口层对比"
+      ],
       "request_meta_hits": [],
       "no_match_reason": null
     },

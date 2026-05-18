@@ -9,12 +9,12 @@ topic:
   - rag
 status: inbox
 created: 2026-05-17
-updated: 2026-05-17
-url: https://xiaolinnote.com/
-source: https://xiaolinnote.com/sitemap.xml
-last_checked: 2026-05-17
+updated: 2026-05-18
+url: "https://xiaolinnote.com/"
+source: "https://xiaolinnote.com/sitemap.xml"
+last_checked: 2026-05-18
 freshness: watch
-sha256: d9afe178c09079896ca010fe52c7bc89558a72c8cd9170fb79143b8654a62a4c
+sha256: 4cc8c31a57f4eb9630a032018b489887dfe5f03f5da715aa175e57d828bf55ee
 related:
   - "[[资料收集索引]]"
   - "[[04 页面目录]]"
@@ -24,7 +24,7 @@ related:
 
 来源：<https://xiaolinnote.com/>
 
-抓取日期：2026-05-17
+抓取日期：2026-05-18
 
 抓取范围：`all`。读取 <https://xiaolinnote.com/sitemap.xml> 后抓取匹配 URL，并将每页正文和页面链接保存为 raw source。
 
@@ -198,4 +198,3 @@ related:
 - [[raw/repos/xiaolinnote/questions/118 sql sql_part5 加餐4｜权限：用户与角色该如何授予与回收？|118 sql sql_part5 加餐4｜权限：用户与角色该如何授予与回收？]] — [加餐4｜权限：用户与角色该如何授予与回收？](https://xiaolinnote.com/sql/sql_part5/supplement4-permissions.html)
 - [[raw/repos/xiaolinnote/questions/119 sql sql_part5 加餐：扩展学习|119 sql sql_part5 加餐：扩展学习]] — [加餐：扩展学习](https://xiaolinnote.com/sql/sql_part5/)
 - [[raw/repos/xiaolinnote/questions/120 sql SQL 快速入门教程|120 sql SQL 快速入门教程]] — [SQL 快速入门教程](https://xiaolinnote.com/sql/)
-

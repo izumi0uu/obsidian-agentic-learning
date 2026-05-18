@@ -7,7 +7,7 @@
 - 本次可新增/已新增链接：32
 - would modify pages：26
 - skipped/no-match pages：412
-- unsafe-region skips：3992
+- unsafe-region skips：3998
 - missing concept candidates：0（unique 0）
 - protected-region violations：0
 

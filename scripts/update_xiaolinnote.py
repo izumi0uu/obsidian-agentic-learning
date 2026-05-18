@@ -377,12 +377,14 @@ def build_collection_index(records: list[dict], errors: list[dict], today: str, 
         for r in errors:
             body += f"- {r['url']}: `{r['error']}`\n"
     sha = hashlib.sha256(body.encode("utf-8")).hexdigest()
+    old_fm = split_frontmatter(COLLECTION.read_text(encoding="utf-8"))[0] if COLLECTION.exists() else ""
+    created = frontmatter_scalar(old_fm, "created") or today
     fm = (
         "---\n"
         "type: source\nsource_type: web\nsite: xiaolinnote.com\n"
         "topic:\n  - interview\n  - ai\n  - agent\n  - rag\n"
         "status: inbox\n"
-        f"created: {today}\nupdated: {today}\n"
+        f"created: {created}\nupdated: {today}\n"
         "url: \"https://xiaolinnote.com/\"\n"
         "source: \"https://xiaolinnote.com/sitemap.xml\"\n"
         f"last_checked: {today}\nfreshness: watch\nsha256: {sha}\n"
