@@ -4,10 +4,10 @@
 - 扫描题页：779
 - 含 `## 相关知识 wiki`：779
 - 已有正文概念链接页：362
-- 本次可新增/已新增链接：36
+- 本次可新增/已新增链接：37
 - would modify pages：30
 - skipped/no-match pages：412
-- unsafe-region skips：4010
+- unsafe-region skips：4014
 - missing concept candidates：0（unique 0）
 - protected-region violations：0
 
@@ -16,7 +16,7 @@
 | root | total | related | already-linked pages | would-modify pages | proposed links | skipped/no-match |
 |---|---:|---:|---:|---:|---:|---:|
 | xiaolinnote | 142 | 142 | 81 | 10 | 12 | 61 |
-| agent_java_offer | 637 | 637 | 281 | 20 | 24 | 351 |
+| agent_java_offer | 637 | 637 | 281 | 20 | 25 | 351 |
 
 ## Sample files selected
 
@@ -139,7 +139,8 @@
 - agentic learning/raw/repos/agent_java_offer/questions/072 01_AI 03_RAG RAG检索优化与高级范式（重排 图谱 自适应检索 向量库）.md:78 — `HyDE` -> `[[HyDE]]`
 - agentic learning/raw/repos/agent_java_offer/questions/077 01_AI 03_RAG 除了基础的向量检索，你还知道哪些可以提升 RAG 检索质量的技术？.md:111 — `HyDE` -> `[[HyDE]]`
 - agentic learning/raw/repos/agent_java_offer/questions/109 01_AI 04_上下文工程与记忆 记忆系统与状态设计（短期 长期 State）.md:92 — `TTL` -> `[[TTL]]`
-- agentic learning/raw/repos/agent_java_offer/questions/122 01_AI 04_上下文工程与记忆 LLM 调优（训练调优 + Prompt 调优）怎么分层做？.md:110 — `HyDE` -> `[[HyDE]]`
+- agentic learning/raw/repos/agent_java_offer/questions/122 01_AI 04_上下文工程与记忆 LLM 调优（训练调优 + Prompt 调优）怎么分层做？.md:112 — `HyDE` -> `[[HyDE]]`
+- agentic learning/raw/repos/agent_java_offer/questions/122 01_AI 04_上下文工程与记忆 LLM 调优（训练调优 + Prompt 调优）怎么分层做？.md:104 — `Gather-Select-Structure-Compress` -> `[[GSSC Pipeline]]`
 - agentic learning/raw/repos/agent_java_offer/questions/123 01_AI 04_上下文工程与记忆 Prompt Engineering 及 Prompt 优化策略有哪些？.md:43 — `Prompt` -> `[[Prompt]]`
 - agentic learning/raw/repos/agent_java_offer/questions/124 01_AI 04_上下文工程与记忆 Prompt Engineering 和微调策略如何协同？.md:74 — `Prompt` -> `[[Prompt]]`
 - agentic learning/raw/repos/agent_java_offer/questions/161 01_AI 05_模型调优与微调 11 NLP是什么.md:37 — `NLP` -> `[[NLP]]`

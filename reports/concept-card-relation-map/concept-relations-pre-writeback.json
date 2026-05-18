@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
   "artifact_type": "temporary_concept_relationship_map",
-  "generated_at": "2026-05-18T09:14:08Z",
+  "generated_at": "2026-05-18T09:31:05Z",
   "scope": {
     "concept_dir": "agentic learning/wiki/concepts",
     "temporary": true,
     "write_policy": "Do not write these candidates into concept cards without a separate review task."
   },
   "summary": {
-    "total_concepts": 140,
+    "total_concepts": 142,
     "edge_counts": {
-      "related_link": 791,
-      "body_link": 261,
-      "typed_relation": 38,
+      "related_link": 812,
+      "body_link": 263,
+      "typed_relation": 43,
       "taxonomy": 37
     },
     "typed_relation_counts": {
@@ -23,8 +23,10 @@
       "contrasts_with": 5,
       "concrete-harness-for": 1,
       "built-on": 1,
-      "composes_with": 7,
-      "uses": 2,
+      "composes_with": 8,
+      "uses": 4,
+      "pattern_for": 1,
+      "specializes": 1,
       "mitigates": 1,
       "concrete-platform-for": 1,
       "adjacent-to": 1,
@@ -33,13 +35,13 @@
       "composed_into": 2,
       "foundational_for": 1
     },
-    "concepts_without_up": 103,
+    "concepts_without_up": 105,
     "core_orphans": 0,
     "weakly_connected_concepts": 1,
     "dangling_core_targets": 24,
-    "candidate_edges": 76,
+    "candidate_edges": 77,
     "taxonomy_candidates": 11,
-    "topic_family_review_signals": 65
+    "topic_family_review_signals": 66
   },
   "nodes": [
     {
@@ -325,6 +327,7 @@
         "Agent Workflow",
         "Memory",
         "Context Engineering",
+        "Long-Horizon Context Engineering",
         "Trace",
         "Durable Execution"
       ]
@@ -740,8 +743,8 @@
       "status": "growing",
       "freshness": "stable",
       "aliases": [],
-      "source_count": 2,
-      "evidence_count": 3,
+      "source_count": 3,
+      "evidence_count": 4,
       "up": [],
       "related": [
         "LLM",
@@ -749,7 +752,9 @@
         "Memory",
         "Agent Harness",
         "Prompt Engineering",
-        "Context Window"
+        "Context Window",
+        "GSSC Pipeline",
+        "Long-Horizon Context Engineering"
       ]
     },
     {
@@ -1210,6 +1215,38 @@
         "Context Engineering",
         "Agent Workflow",
         "Agent Framework"
+      ]
+    },
+    {
+      "id": "GSSC Pipeline",
+      "title": "GSSC Pipeline",
+      "file": "agentic learning/wiki/concepts/GSSC Pipeline.md",
+      "topics": [
+        "agent",
+        "context",
+        "llm"
+      ],
+      "status": "seed",
+      "freshness": "watch",
+      "aliases": [
+        "GSSC",
+        "Gather-Select-Structure-Compress",
+        "Gather Select Structure Compress",
+        "上下文构建四阶段流水线",
+        "收集-选择-结构化-压缩",
+        "获取-选择-结构化-压缩"
+      ],
+      "source_count": 3,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Context Engineering",
+        "Context Window",
+        "Progressive Disclosure",
+        "RAG",
+        "Memory",
+        "Agent State",
+        "Prompt Engineering"
       ]
     },
     {
@@ -1712,6 +1749,46 @@
       ]
     },
     {
+      "id": "Long-Horizon Context Engineering",
+      "title": "Long-Horizon Context Engineering",
+      "file": "agentic learning/wiki/concepts/Long-Horizon Context Engineering.md",
+      "topics": [
+        "agent",
+        "context",
+        "memory",
+        "workflow"
+      ],
+      "status": "seed",
+      "freshness": "watch",
+      "aliases": [
+        "long-horizon context engineering",
+        "long context engineering for agents",
+        "长时程任务上下文工程",
+        "面向长时程任务的上下文工程",
+        "长程上下文工程",
+        "压缩整合",
+        "Compaction",
+        "Structured note-taking",
+        "结构化笔记",
+        "Sub-agent architectures",
+        "子代理架构"
+      ],
+      "source_count": 8,
+      "evidence_count": 8,
+      "up": [],
+      "related": [
+        "Context Engineering",
+        "Context Window",
+        "Agent State",
+        "Memory",
+        "Long-term Memory",
+        "Multi-agent Orchestration",
+        "Agent Harness",
+        "Trace",
+        "Evaluation"
+      ]
+    },
+    {
       "id": "Long-term Memory",
       "title": "Long-term Memory",
       "file": "agentic learning/wiki/concepts/Long-term Memory.md",
@@ -1805,7 +1882,8 @@
         "Evaluation",
         "Long-term Memory",
         "Semantic Memory",
-        "Episodic Memory"
+        "Episodic Memory",
+        "Long-Horizon Context Engineering"
       ]
     },
     {
@@ -1974,7 +2052,8 @@
         "Agent",
         "Agent Harness",
         "Handoff",
-        "Oh My Codex (OMX)"
+        "Oh My Codex (OMX)",
+        "Long-Horizon Context Engineering"
       ]
     },
     {
@@ -4513,6 +4592,16 @@
     },
     {
       "source": "Agent State",
+      "target": "Long-Horizon Context Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent State",
       "target": "Memory",
       "kind": "related_link",
       "relation_type": "related",
@@ -5883,7 +5972,27 @@
     },
     {
       "source": "Context Engineering",
+      "target": "GSSC Pipeline",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Engineering",
       "target": "LLM",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Engineering",
+      "target": "Long-Horizon Context Engineering",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -7359,6 +7468,96 @@
       "confidence": "observed",
       "status": "internal",
       "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "GSSC Pipeline",
+      "target": "Progressive Disclosure",
+      "kind": "typed_relation",
+      "relation_type": "composes_with",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "两者都服务按需控制上下文；GSSC 是构建流水线，Progressive Disclosure 是信息暴露策略。"
+    },
+    {
+      "source": "GSSC Pipeline",
+      "target": "Context Engineering",
+      "kind": "typed_relation",
+      "relation_type": "pattern_for",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "把上下文构建拆成 gather、select、structure、compress 四个工程阶段。"
+    },
+    {
+      "source": "GSSC Pipeline",
+      "target": "Agent State",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "GSSC Pipeline",
+      "target": "Context Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "GSSC Pipeline",
+      "target": "Context Window",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "GSSC Pipeline",
+      "target": "Memory",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "GSSC Pipeline",
+      "target": "Progressive Disclosure",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "GSSC Pipeline",
+      "target": "Prompt Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "GSSC Pipeline",
+      "target": "RAG",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
       "note": ""
     },
     {
@@ -8942,6 +9141,146 @@
       "note": ""
     },
     {
+      "source": "Long-Horizon Context Engineering",
+      "target": "Context Engineering",
+      "kind": "typed_relation",
+      "relation_type": "specializes",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "把上下文选择、压缩、外部化和隔离用于超出单窗口的长任务。"
+    },
+    {
+      "source": "Long-Horizon Context Engineering",
+      "target": "Agent State",
+      "kind": "typed_relation",
+      "relation_type": "uses",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "当前 run 的阶段、待办、错误和下一步依据需要结构化保存。"
+    },
+    {
+      "source": "Long-Horizon Context Engineering",
+      "target": "Memory",
+      "kind": "typed_relation",
+      "relation_type": "uses",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "结构化笔记是跨上下文窗口持久化关键事实的一种 memory 形态。"
+    },
+    {
+      "source": "Long-Horizon Context Engineering",
+      "target": "Agent Harness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Long-Horizon Context Engineering",
+      "target": "Agent State",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Long-Horizon Context Engineering",
+      "target": "Context Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Long-Horizon Context Engineering",
+      "target": "Context Window",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Long-Horizon Context Engineering",
+      "target": "Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Long-Horizon Context Engineering",
+      "target": "Long-term Memory",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Long-Horizon Context Engineering",
+      "target": "Memory",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Long-Horizon Context Engineering",
+      "target": "Multi-agent Orchestration",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Long-Horizon Context Engineering",
+      "target": "Trace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Long-Horizon Context Engineering",
+      "target": "DeerFlow",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Long-Horizon Context Engineering",
+      "target": "LangChain DeepAgents",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "Long-term Memory",
       "target": "Memory",
       "kind": "taxonomy",
@@ -9184,6 +9523,16 @@
     {
       "source": "Memory",
       "target": "Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Memory",
+      "target": "Long-Horizon Context Engineering",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -9804,6 +10153,16 @@
     {
       "source": "Multi-agent Orchestration",
       "target": "Handoff",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Multi-agent Orchestration",
+      "target": "Long-Horizon Context Engineering",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -15219,6 +15578,18 @@
       ]
     },
     {
+      "source": "Long-Horizon Context Engineering",
+      "target": "Memory",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: memory",
+      "support": [
+        "frontmatter.related",
+        "relations:uses"
+      ]
+    },
+    {
       "source": "Neo4j",
       "target": "RAG",
       "candidate_type": "topic_family_review",
@@ -15715,6 +16086,7 @@
       "Eval Harness",
       "Evaluation",
       "Frontend-first AI Toolkit",
+      "GSSC Pipeline",
       "GUI Grounding",
       "Guardrails",
       "Hallucination",
@@ -15730,6 +16102,7 @@
       "LLM Training Pipeline",
       "LLM-as-Judge",
       "Least Privilege Tools",
+      "Long-Horizon Context Engineering",
       "MCP",
       "MCP Registry",
       "Memory",

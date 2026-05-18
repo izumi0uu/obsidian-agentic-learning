@@ -2,7 +2,7 @@
   "schema_version": 1,
   "artifact_type": "breadcrumbs_abstract_folder_compat_validation",
   "summary": {
-    "concept_cards_checked": 140,
+    "concept_cards_checked": 142,
     "up_edges_checked": 37,
     "applied_rows_checked": 13,
     "problems": 0,

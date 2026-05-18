@@ -23,6 +23,7 @@ related:
   - "[[Agent Harness]]"
   - "[[Handoff]]"
   - "[[Oh My Codex (OMX)]]"
+  - "[[Long-Horizon Context Engineering]]"
 ---
 
 # Multi-agent Orchestration
@@ -40,6 +41,8 @@ Multi-agent Orchestration 关注的不是“有几个 Agent”，而是多个能
 证据边界上，Multi-agent Orchestration 是工程组织模式，不等于跨组织协议。[[A2A]] 更偏 agent-to-agent 通信协议；本卡更偏一个任务内部如何组织多个 worker/role/handoff/eval。它也不是性能保证：当任务无法清晰切分、共享文件高度重叠或 leader 不做最终验证时，多 Agent 会增加错误面。
 
 一个常见工程陷阱是把“并行”误当成“协作”。真正的 orchestration 需要定义共享事实来源：任务状态在哪里、谁拥有文件、谁能修改计划、谁能宣布完成、验证失败时由谁修。没有这些约束，每个 Agent 都可能局部合理，却在集成时产生互相覆盖、证据不一致或责任空洞。反过来，如果任务可以按文件、模块或评测维度切开，多 Agent 能让探索、实现、测试和审查并行进行，提高吞吐但仍由 leader 收敛。
+
+从 [[Long-Horizon Context Engineering]] 角度看，sub-agent 的价值不只是并行：它还能把搜索噪声留在子上下文里，让主代理只接收凝练摘要、证据路径和风险，从而减少主上下文污染。
 ## 它解决什么问题
 
 复杂任务往往包含不同工作面：需求澄清、架构判断、代码实现、测试验证、安全审查、文档更新。
@@ -128,3 +131,4 @@ leader
 - [[Handoff]]
 - [[A2A]]
 - [[Oh My Codex (OMX)]]
+- [[Long-Horizon Context Engineering]]

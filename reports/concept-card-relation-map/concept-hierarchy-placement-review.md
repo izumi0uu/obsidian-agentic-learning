@@ -1,23 +1,23 @@
 # Concept Hierarchy Placement Review — 层级归属待审计概念卡
 
-Generated: `2026-05-18T09:14:10Z`
+Generated: `2026-05-18T09:31:07Z`
 Classification stage: `audit_closure`
 
 > Audit closure: remaining `defer_boundary_review` rows are closed as `deferred_with_backlog`; no concept cards are edited and no fallback parents are invented.
 
 ## Summary
 
-- total_concepts: 140
-- reviewed_concepts: 140
+- total_concepts: 142
+- reviewed_concepts: 142
 - taxonomy_placement_unreviewed: 0
 - concepts_with_up: 37
-- concepts_without_up: 103
-- concepts_with_candidate_basis: 62
-- candidate_basis_rows: 76
+- concepts_without_up: 105
+- concepts_with_candidate_basis: 63
+- candidate_basis_rows: 77
 - known_forbidden_candidate_pairs: 2
 - accepted_taxonomy: 0
 - root_or_anchor_no_up: 19
-- relation_only_terminal: 55
+- relation_only_terminal: 57
 - weak_or_backlog_terminal: 5
 - defer_boundary_review: 22
 - open_unclassified: 0
@@ -25,8 +25,8 @@ Classification stage: `audit_closure`
 - open_writeback: 0
 - dry_run_planned: 0
 - write_policy: Audit closure only. Remaining defer_boundary_review rows are closed as deferred_with_backlog and no concept-card fields are written.
-- decision_counts: `{"already_has_up_reviewed": 37, "defer_boundary_review": 22, "reject_taxonomy": 2, "relation_only_terminal": 55, "root_or_anchor_no_up": 19, "weak_or_backlog_terminal": 5}`
-- review_status_counts: `{"deferred_with_backlog": 22, "terminal_non_writeback": 118}`
+- decision_counts: `{"already_has_up_reviewed": 37, "defer_boundary_review": 22, "reject_taxonomy": 2, "relation_only_terminal": 57, "root_or_anchor_no_up": 19, "weak_or_backlog_terminal": 5}`
+- review_status_counts: `{"deferred_with_backlog": 22, "terminal_non_writeback": 120}`
 - parent_whitelist_reviewed: True
 - stable_parent_whitelist_approved: 14
 - proposed_parent_anchors_not_auto_approved: 3
@@ -132,7 +132,7 @@ Classification stage: `audit_closure`
 - [[Approval Gate]]
 - [[ReAct]]
 
-### relation_only_terminal (55)
+### relation_only_terminal (57)
 
 - [[Agent Control Plane]]
 - [[Agent Harness]]
@@ -149,6 +149,7 @@ Classification stage: `audit_closure`
 - [[Embedding]]
 - [[Eval Harness]]
 - [[Frontend-first AI Toolkit]]
+- [[GSSC Pipeline]]
 - [[Guardrails]]
 - [[Hallucination]]
 - [[Handoff]]
@@ -159,6 +160,7 @@ Classification stage: `audit_closure`
 - [[LLM Gateway]]
 - [[LLM Training Pipeline]]
 - [[LLM-as-Judge]]
+- [[Long-Horizon Context Engineering]]
 - [[Neo4j]]
 - [[OMX $ 指令]]
 - [[OpenTelemetry GenAI]]
@@ -427,8 +429,8 @@ Apply artifact:
 
 Audit closure closes the whole concept hierarchy placement audit by routing every remaining deferred row to a durable backlog home. It does not add `up`; future changes must reopen a new candidate/adjudication/dry-run/limited-apply cycle.
 
-- total_concepts: 140
-- reviewed_concepts: 140
+- total_concepts: 142
+- reviewed_concepts: 142
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0
@@ -548,6 +550,7 @@ Closure artifact:
 | [[Eval Harness]] | relation_only_terminal |  | 1 | 2 |
 | [[Evaluation]] | root_or_anchor_no_up |  | 0 | 0 |
 | [[Frontend-first AI Toolkit]] | relation_only_terminal |  | 1 | 2 |
+| [[GSSC Pipeline]] | relation_only_terminal |  | 0 | 0 |
 | [[GUI Grounding]] | defer_boundary_review |  | 0 | 3 |
 | [[Guardrails]] | relation_only_terminal |  | 1 | 2 |
 | [[Hallucination]] | relation_only_terminal |  | 1 | 2 |
@@ -563,6 +566,7 @@ Closure artifact:
 | [[LLM Training Pipeline]] | relation_only_terminal |  | 1 | 2 |
 | [[LLM-as-Judge]] | relation_only_terminal |  | 1 | 2 |
 | [[Least Privilege Tools]] | defer_boundary_review |  | 0 | 3 |
+| [[Long-Horizon Context Engineering]] | relation_only_terminal |  | 1 | 2 |
 | [[MCP]] | defer_boundary_review |  | 0 | 3 |
 | [[MCP Registry]] | defer_boundary_review |  | 0 | 3 |
 | [[Memory]] | root_or_anchor_no_up |  | 0 | 0 |
@@ -658,6 +662,7 @@ Candidate basis is evidence for later adjudication, not an accepted parent.
 | [[LLM Gateway]] | [[Observability]] | topic_family_review | low | frontmatter.related | no |
 | [[LLM Training Pipeline]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | no |
 | [[LLM-as-Judge]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | no |
+| [[Long-Horizon Context Engineering]] | [[Memory]] | topic_family_review | low | frontmatter.related, relations:uses | no |
 | [[Neo4j]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |
 | [[OMX $ 指令]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | no |
 | [[Observability]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | no |

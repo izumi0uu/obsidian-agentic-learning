@@ -1,25 +1,25 @@
 # Concept Relation Decision Ledger
 
-Generated: `2026-05-18T09:14:09Z`
+Generated: `2026-05-18T09:31:06Z`
 
 > 逐条判定台账：把临时图候选边分成 accepted taxonomy、rejected taxonomy、adjacency only、duplicate signal 和 deferred。只有 `writeback_action=add_up` 的行可以进入后续写回；`already_present` 表示本轮小批量已落地或卡片已有该 `up`；`topic_family_review` 永远不能直接写入 `up`。
 
 ## Summary
 
-- candidate_edges: 76
-- decision_counts: {'reject_taxonomy': 11, 'adjacency_only': 65}
+- candidate_edges: 77
+- decision_counts: {'reject_taxonomy': 11, 'adjacency_only': 66}
 - writeback_candidates: 0
 - open_writeback_items: 0
 - open_review_items: 0
 - relation_tail_open_items: 0
 - relation_tail_status: closed
-- terminal_non_writeback_decisions: 76
+- terminal_non_writeback_decisions: 77
 - already_applied_or_present_taxonomy: 0
 - remaining_writeback_candidates: 0
 - accepted_taxonomy: 0
 - rejected_taxonomy: 11
 - deferred_taxonomy: 0
-- adjacency_only: 65
+- adjacency_only: 66
 - duplicate_signals: 0
 - non_taxonomy_boundary_guardrails: 2
 - write_policy: Only decisions with writeback_action=add_up may be applied, and only through dry-run/apply small batches.
@@ -85,6 +85,7 @@ Generated: `2026-05-18T09:14:09Z`
 | [[LLM Gateway]] | [[Observability]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[LLM Training Pipeline]] | [[Evaluation]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[LLM-as-Judge]] | [[Evaluation]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
+| [[Long-Horizon Context Engineering]] | [[Memory]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[Neo4j]] | [[RAG]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[OMX $ 指令]] | [[Agent Workflow]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[Observability]] | [[Evaluation]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |

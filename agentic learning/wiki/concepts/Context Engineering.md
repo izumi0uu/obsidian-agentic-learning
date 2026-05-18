@@ -6,17 +6,19 @@ topic:
   - rag
 status: growing
 created: 2026-05-06
-updated: 2026-05-17
+updated: 2026-05-18
 last_checked: 2026-05-10
 freshness: stable
 conflicts: []
 source:
   - "[[Agent 工程基础设施主源]]"
   - "[[prompt-engineering-vs-context-engineering-for-agents.svg]]"
+  - "[[Hello-Agents Repo]]"
 evidence:
   - "[[Agent 工程基础设施主源#为什么收]]"
   - "[[Agent 工程基础设施主源#RAG / 检索基础设施]]"
   - "[[prompt-engineering-vs-context-engineering-for-agents.svg]]"
+  - "[[Hello-Agents Repo#第九章上下文工程 / GSSC]]"
 related:
   - "[[LLM]]"
   - "[[RAG]]"
@@ -24,6 +26,8 @@ related:
   - "[[Agent Harness]]"
   - "[[Prompt Engineering]]"
   - "[[Context Window]]"
+  - "[[GSSC Pipeline]]"
+  - "[[Long-Horizon Context Engineering]]"
 ---
 
 # Context Engineering
@@ -42,7 +46,11 @@ Context Engineering 解决的是“模型这一轮到底看见什么”的工程
 
 图里的关键不是“右侧东西更多”，而是右侧有一个显式的 curation 步骤：候选文档、工具、memory、历史和领域知识不会天然全部进入 [[Context Window]]，而是要按任务、预算、权限、时效和风险筛选后再给模型。
 
+一个更可执行的拆法是 [[GSSC Pipeline]]：先 Gather 多源候选信息，再 Select 高价值信息，接着 Structure 成清晰上下文，最后在超预算时 Compress。它不是 Context Engineering 的全部，但能把“上下文怎么构建”从抽象原则落到工程步骤。
+
 它的边界是上下文治理，不是单纯扩大 context window。长上下文可以容纳更多内容，但不能自动解决噪声、冲突、过期资料、prompt injection 或证据优先级。Context Engineering 的成熟做法通常会配合 trace 和 evaluation：记录每次上下文里有哪些材料，检查答案是否真的基于这些材料，并用失败样本改进检索和上下文组织。
+
+长时程 Agent 任务会把这个问题放大：上下文不只要“本轮选什么”，还要处理跨窗口接力、外部笔记、任务状态和子代理隔离。这个方向单独见 [[Long-Horizon Context Engineering]]。
 
 证据边界：[[Agent 工程基础设施主源]] 支持 RAG / 检索基础设施、评测观测、Agent 框架和安全治理都是 production agent 系统必须处理的工程层；本卡把这些层综合为“上下文环境治理”。具体上下文模板、预算策略和压缩算法是工程综合，不是 source note 原文定义。
 
@@ -99,9 +107,11 @@ system rules
 ## 证据锚点
 
 - Source: [[Agent 工程基础设施主源]]
+- Source: [[Hello-Agents Repo]]
 - Asset: [[prompt-engineering-vs-context-engineering-for-agents.svg]]
 - Anchor: [[Agent 工程基础设施主源#为什么收]]
 - Anchor: [[Agent 工程基础设施主源#RAG / 检索基础设施]]
+- Anchor: [[Hello-Agents Repo#第九章上下文工程 / GSSC]]
 - Evidence type: infrastructure source note + local explanatory diagram + engineering synthesis.
 - Confidence: medium
 - Boundary: source note 支持 agent/RAG production infrastructure 的多层责任；“context engineering”作为总称和具体装配策略是本 vault 的工程综合。
@@ -119,3 +129,5 @@ system rules
 - [[Memory]]
 - [[Agent Harness]]
 - [[Prompt Engineering]]
+- [[GSSC Pipeline]]
+- [[Long-Horizon Context Engineering]]

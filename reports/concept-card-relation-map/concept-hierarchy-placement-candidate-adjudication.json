@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "taxonomy_placement_candidate_adjudication",
-  "generated_at": "2026-05-18T09:14:10Z",
+  "generated_at": "2026-05-18T09:31:07Z",
   "input_review": "reports/concept-card-relation-map/concept-hierarchy-placement-review.json",
   "input_candidates": "reports/concept-card-relation-map/concept-hierarchy-placement-candidates.json",
   "classification_stage": "candidate_adjudication",
@@ -53,7 +53,7 @@
       "review_status": "terminal_non_writeback",
       "dry_run_eligible": false,
       "concept_card_writes_in_adjudication": 0,
-      "reviewed_at": "2026-05-18T09:14:10Z",
+      "reviewed_at": "2026-05-18T09:31:07Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-candidate-adjudication",
       "evidence": [
         {
@@ -117,7 +117,7 @@
       "review_status": "terminal_non_writeback",
       "dry_run_eligible": false,
       "concept_card_writes_in_adjudication": 0,
-      "reviewed_at": "2026-05-18T09:14:10Z",
+      "reviewed_at": "2026-05-18T09:31:07Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-candidate-adjudication",
       "evidence": [
         {

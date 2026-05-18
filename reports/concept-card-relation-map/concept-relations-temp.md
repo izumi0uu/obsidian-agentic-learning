@@ -1,21 +1,21 @@
 # Temporary Concept Relationship Map
 
-Generated: `2026-05-18T09:14:08Z`
+Generated: `2026-05-18T09:31:05Z`
 
 > 临时文件：用于后续概念层级开发评估。不要把候选边自动写回概念卡；每条 candidate 都需要单独人工/LLM 复核。
 
 ## Summary
 
-- total_concepts: 140
-- edge_counts: {'related_link': 791, 'body_link': 261, 'typed_relation': 38, 'taxonomy': 37}
-- typed_relation_counts: {'related_to': 10, 'representative_of': 1, 'based_on_intuition': 1, 'paired_with': 2, 'contrasts_with': 5, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 7, 'uses': 2, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
-- concepts_without_up: 103
+- total_concepts: 142
+- edge_counts: {'related_link': 812, 'body_link': 263, 'typed_relation': 43, 'taxonomy': 37}
+- typed_relation_counts: {'related_to': 10, 'representative_of': 1, 'based_on_intuition': 1, 'paired_with': 2, 'contrasts_with': 5, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 8, 'uses': 4, 'pattern_for': 1, 'specializes': 1, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
+- concepts_without_up: 105
 - core_orphans: 0
 - weakly_connected_concepts: 1
 - dangling_core_targets: 24
-- candidate_edges: 76
+- candidate_edges: 77
 - taxonomy_candidates: 11
-- topic_family_review_signals: 65
+- topic_family_review_signals: 66
 
 ## Existing taxonomy edges (`up`)
 
@@ -78,9 +78,14 @@ Generated: `2026-05-18T09:14:08Z`
 | [[Dense Retrieval]] | contrasts_with | [[Cross-Encoder]] | frontmatter.relations | Bi-encoder / Dense Retrieval 把 query 和 chunk 分开编码，适合快速召回；Cross-Encoder 把二者放在一起判断，适合小候选集精排。 |
 | [[Dense Retrieval]] | contrasts_with | [[Sparse Retrieval]] | frontmatter.relations | Dense Retrieval 用稠密语义向量找相似内容；Sparse Retrieval / BM25 用词项、倒排和词面信号找精确匹配。 |
 | [[Dense Retrieval]] | uses | [[Embedding]] | frontmatter.relations | Dense Retrieval 依赖文档和 query 的 embedding 表示。 |
+| [[GSSC Pipeline]] | composes_with | [[Progressive Disclosure]] | frontmatter.relations | 两者都服务按需控制上下文；GSSC 是构建流水线，Progressive Disclosure 是信息暴露策略。 |
+| [[GSSC Pipeline]] | pattern_for | [[Context Engineering]] | frontmatter.relations | 把上下文构建拆成 gather、select、structure、compress 四个工程阶段。 |
 | [[Hybrid Search]] | composes_with | [[Dense Retrieval]] | frontmatter.relations | Hybrid Search 通常把 dense retrieval 作为另一条语义召回。 |
 | [[Hybrid Search]] | composes_with | [[Sparse Retrieval]] | frontmatter.relations | Hybrid Search 通常把 sparse retrieval / BM25 作为一路候选。 |
 | [[Hybrid Search]] | related_to | [[Multi-Route Retrieval]] | frontmatter.relations | Hybrid Search 是多路召回最常见的双路形态，但多路召回更宽。 |
+| [[Long-Horizon Context Engineering]] | specializes | [[Context Engineering]] | frontmatter.relations | 把上下文选择、压缩、外部化和隔离用于超出单窗口的长任务。 |
+| [[Long-Horizon Context Engineering]] | uses | [[Agent State]] | frontmatter.relations | 当前 run 的阶段、待办、错误和下一步依据需要结构化保存。 |
+| [[Long-Horizon Context Engineering]] | uses | [[Memory]] | frontmatter.relations | 结构化笔记是跨上下文窗口持久化关键事实的一种 memory 形态。 |
 | [[Multi-Query Retrieval]] | composes_with | [[Multi-Route Retrieval]] | frontmatter.relations | Multi-Query Retrieval 可以作为多路召回中的 query route，用多个问题变体扩大覆盖。 |
 | [[Multi-Query Retrieval]] | contrasts_with | [[Query Planning]] | frontmatter.relations | Multi-query 是生成多个检索 query；query planning 更强调任务/子问题/知识源的规划。 |
 | [[Multi-Route Retrieval]] | composes_with | [[Hybrid Search]] | frontmatter.relations | Hybrid Search 通常是多路召回的一种常见两路形态，但多路召回还可以包括多 Query、图检索、metadata filter、不同索引粒度或多 retriever。 |
@@ -144,6 +149,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[LLM Gateway]] | [[Observability]] | topic_family_review | low | frontmatter.related | topic family: observability |
 | [[LLM Training Pipeline]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[LLM-as-Judge]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
+| [[Long-Horizon Context Engineering]] | [[Memory]] | topic_family_review | low | frontmatter.related, relations:uses | topic family: memory |
 | [[Neo4j]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
 | [[OMX $ 指令]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | topic family: workflow |
 | [[Observability]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
@@ -219,6 +225,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Eval Harness]]
 - [[Evaluation]]
 - [[Frontend-first AI Toolkit]]
+- [[GSSC Pipeline]]
 - [[GUI Grounding]]
 - [[Guardrails]]
 - [[Hallucination]]
@@ -234,6 +241,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[LLM Training Pipeline]]
 - [[LLM-as-Judge]]
 - [[Least Privilege Tools]]
+- [[Long-Horizon Context Engineering]]
 - [[MCP]]
 - [[MCP Registry]]
 - [[Memory]]
