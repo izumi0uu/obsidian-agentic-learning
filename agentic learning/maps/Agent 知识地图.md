@@ -8,6 +8,7 @@ updated: 2026-05-18
 related:
   - "[[Agent]]"
   - "[[前沿主源清单]]"
+  - "[[NLP]]"
   - "[[LLM]]"
   - "[[Agent Loop]]"
   - "[[Observation]]"
@@ -41,6 +42,7 @@ related:
 
 LLM 地基：
 
+- [[NLP]]：先区分自然语言任务域、模型求解器、架构和工程方法。
 - [[Transformer]]
 - [[Self-Attention]]
 - [[Multi-Head Attention]]
@@ -66,6 +68,7 @@ LLM 地基：
 - [[LangGraph 生产项目蓝图]]：把 LangGraph 从概念推进到生产项目蓝图，串起多源检索、工具权限、审批、checkpoint/resume、trace/eval 和部署治理。
 - [[Microsoft Agent Framework]]：理解微软 AutoGen + Semantic Kernel 的 agent / workflow 统一路线。
 - [[LangChain DeepAgents]]：理解 LangChain 如何在 LangGraph runtime 上封装长任务 Agent harness。
+- [[DeerFlow]]：理解 ByteDance 如何把 sub-agents、skills、sandbox、filesystem、memory 和 context engineering 组合成 super agent harness。
 - [[Agent State]]：理解框架如何保存当前任务的进度、中间结果和下一步依据。
 - [[Agent Workflow]]：理解框架如何把任务组织成步骤、分支、循环和交接。
 - [[Agent Workflow Static Verification]]：理解显式 workflow graph 如何在部署前检查死路、不可达、human gate 覆盖和时序安全策略。
@@ -78,6 +81,7 @@ LLM 地基：
 ## 知识能力
 
 - [[RAG]]：如何从外部知识库检索资料再生成回答；完整学习入口见 [[RAG 主题]]。
+- [[RAGFlow]]：理解 RAG / context layer 平台如何把复杂文档解析、chunking、多路召回、重排、引用和 Agent workflow 产品化。
 - [[Document Ingestion]]、[[Chunking]] 和 [[Embedding]]：理解资料进入知识库、被切成证据单元并变成语义表示的入口质量。
 - [[Retriever]]、[[Top-K]]、[[TF-IDF]]、[[Sparse Retrieval]]、[[BM25]]、[[Vector Database]]、[[Multi-Route Retrieval]]、[[Hybrid Search]] 和 [[Reranking]]：理解生产 RAG 的召回数量、稀疏检索家族、关键词打分代表、检索基础设施、多路召回、混合检索和排序质量层；常见实现生态见 [[常用向量数据库对比]]。
 - [[Knowledge Graph]]、[[GraphRAG]] 和 [[Neo4j]]：理解关系结构、图增强检索和图数据库工程生态如何结合。
@@ -97,6 +101,7 @@ LLM 地基：
 - [[Crew Orchestration]]：区分 crew / 角色任务协作和普通 group chat。
 - [[Role-playing Agent]]：理解 CAMEL 式 role-playing / inception prompting 的稳定地基与生产边界。
 - [[Data-first Agent Framework]]：区分 data/RAG-first 框架和通用状态图框架。
+- [[RAGFlow]]：区分 RAG 平台 / context engine 和通用 Agent framework、向量数据库、普通 RAG pipeline。
 - [[Type-safe Agent SDK]]：区分类型/结构验证和事实正确性。
 - [[Frontend-first AI Toolkit]]：区分 UI streaming/tool-loop toolkit 和完整 Agent platform。
 - [[Agent Control Plane]]：区分 SDK、runtime 和平台治理控制面。
@@ -225,6 +230,7 @@ SORT file.name ASC
 - [x] [[LangChain DeepAgents]]
 - [x] [[Workflow Guardrails]]
 - [x] [[Agent Robustness]]
+- [x] [[NLP]]
 
 ## 复习入口
 

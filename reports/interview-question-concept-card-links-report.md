@@ -4,10 +4,10 @@
 - 扫描题页：779
 - 含 `## 相关知识 wiki`：779
 - 已有正文概念链接页：362
-- 本次可新增/已新增链接：25
-- would modify pages：19
-- skipped/no-match pages：413
-- unsafe-region skips：3969
+- 本次可新增/已新增链接：32
+- would modify pages：26
+- skipped/no-match pages：412
+- unsafe-region skips：3992
 - missing concept candidates：0（unique 0）
 - protected-region violations：0
 
@@ -15,8 +15,8 @@
 
 | root | total | related | already-linked pages | would-modify pages | proposed links | skipped/no-match |
 |---|---:|---:|---:|---:|---:|---:|
-| xiaolinnote | 142 | 142 | 81 | 7 | 9 | 61 |
-| agent_java_offer | 637 | 637 | 281 | 12 | 16 | 352 |
+| xiaolinnote | 142 | 142 | 81 | 8 | 10 | 61 |
+| agent_java_offer | 637 | 637 | 281 | 18 | 22 | 351 |
 
 ## Sample files selected
 
@@ -119,7 +119,7 @@
 - agentic learning/raw/repos/agent_java_offer/questions/092 01_AI 03_RAG 没有索引快照时如何止损？.md — no safe alias match
 - agentic learning/raw/repos/agent_java_offer/questions/093 01_AI 03_RAG 如何做检索质量回归测试？.md — no safe alias match
 - agentic learning/raw/repos/agent_java_offer/questions/099 01_AI 03_RAG 知识库的实时更新： 如何高效地保持向量索引与源数据的同步？当源文档被修改或删除时，需要有可靠的机制来更新或废弃对应的向量，这涉及到复杂的ETL（Extract, Trans a58e85.md — no safe alias match
-- ... 其余 333 条见 JSON 报告。
+- ... 其余 332 条见 JSON 报告。
 
 ## Proposed/applied links（前 80 条）
 
@@ -132,6 +132,7 @@
 - agentic learning/raw/repos/xiaolinnote/questions/136 ai llm 16. 如何写好 Prompt？分享下 Prompt 工程实践经验？.md:26 — `Prompt` -> `[[Prompt]]`
 - agentic learning/raw/repos/xiaolinnote/questions/136 ai llm 16. 如何写好 Prompt？分享下 Prompt 工程实践经验？.md:26 — `Prompt 工程` -> `[[Prompt Engineering]]`
 - agentic learning/raw/repos/xiaolinnote/questions/137 ai llm 15. 大模型量化是什么？INT8-INT4-AWQ-GPTQ 怎么选？.md:105 — `KV Cache` -> `[[KV Cache]]`
+- agentic learning/raw/repos/xiaolinnote/questions/142 ai llm 1. 什么是大语言模型？和传统 NLP 模型有什么区别？.md:25 — `NLP` -> `[[NLP]]`
 - agentic learning/raw/repos/agent_java_offer/questions/026 01_AI 02_Workflow与多Agent 在构建一个复杂的 Agent 时，你认为最主要的挑战是什么？.md:88 — `规划与推理的鲁棒性` -> `[[Agent Robustness]]`
 - agentic learning/raw/repos/agent_java_offer/questions/072 01_AI 03_RAG RAG检索优化与高级范式（重排 图谱 自适应检索 向量库）.md:78 — `HyDE` -> `[[HyDE]]`
 - agentic learning/raw/repos/agent_java_offer/questions/077 01_AI 03_RAG 除了基础的向量检索，你还知道哪些可以提升 RAG 检索质量的技术？.md:111 — `HyDE` -> `[[HyDE]]`
@@ -139,6 +140,12 @@
 - agentic learning/raw/repos/agent_java_offer/questions/122 01_AI 04_上下文工程与记忆 LLM 调优（训练调优 + Prompt 调优）怎么分层做？.md:110 — `HyDE` -> `[[HyDE]]`
 - agentic learning/raw/repos/agent_java_offer/questions/123 01_AI 04_上下文工程与记忆 Prompt Engineering 及 Prompt 优化策略有哪些？.md:43 — `Prompt` -> `[[Prompt]]`
 - agentic learning/raw/repos/agent_java_offer/questions/124 01_AI 04_上下文工程与记忆 Prompt Engineering 和微调策略如何协同？.md:74 — `Prompt` -> `[[Prompt]]`
+- agentic learning/raw/repos/agent_java_offer/questions/161 01_AI 05_模型调优与微调 11 NLP是什么.md:37 — `NLP` -> `[[NLP]]`
+- agentic learning/raw/repos/agent_java_offer/questions/164 01_AI 05_模型调优与微调 补充原文：BERT、NLP、TFRecord 与 TensorFlow Transformer 关系.md:39 — `NLP` -> `[[NLP]]`
+- agentic learning/raw/repos/agent_java_offer/questions/170 01_AI 06_评测与监控 为什么传统的 NLP 评估指标（如 BLEU, ROUGE）对于评估现代 LLM 的生成质量来说，存在很大的局限性？.md:34 — `NLP` -> `[[NLP]]`
+- agentic learning/raw/repos/agent_java_offer/questions/210 01_AI 08_框架协议与工程化 框架选型与架构关系（LangChain LangGraph LlamaIndex RAG框架）.md:74 — `Ragflow` -> `[[RAGFlow]]`
+- agentic learning/raw/repos/agent_java_offer/questions/212 01_AI 08_框架协议与工程化 CrewAI、AutoGen、Ragflow 适合什么阶段？.md:36 — `Ragflow` -> `[[RAGFlow]]`
+- agentic learning/raw/repos/agent_java_offer/questions/218 01_AI 08_框架协议与工程化 知道或者使用过哪些开源 RAG 框架比如 Ragflow？如何选择合适场景？.md:39 — `Ragflow` -> `[[RAGFlow]]`
 - agentic learning/raw/repos/agent_java_offer/questions/272 02_后端 02_Redis 缓存穿透如何处理？.md:58 — `TTL` -> `[[TTL]]`
 - agentic learning/raw/repos/agent_java_offer/questions/274 02_后端 02_Redis 缓存雪崩如何处理？.md:53 — `TTL` -> `[[TTL]]`
 - agentic learning/raw/repos/agent_java_offer/questions/305 02_后端 05_缓存与一致性 缓存穿透如何处理？.md:57 — `TTL` -> `[[TTL]]`

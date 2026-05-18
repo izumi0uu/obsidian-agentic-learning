@@ -31,6 +31,7 @@ related:
   - "[[Chunking]]"
   - "[[Document Ingestion]]"
   - "[[RAG]]"
+  - "[[RAGFlow]]"
   - "[[Agent Framework]]"
   - "[[Planning]]"
 ---
@@ -51,6 +52,7 @@ related:
 - [[Chunking]]
 - [[Document Ingestion]]
 - [[RAG]]
+- [[RAGFlow]]
 - [[Agent Framework]]
 - [[Planning]]
 

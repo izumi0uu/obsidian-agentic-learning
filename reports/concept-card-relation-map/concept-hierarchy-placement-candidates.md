@@ -1,6 +1,6 @@
 # Concept Hierarchy Placement Candidates — Conservative candidate generation
 
-Generated: `2026-05-18T02:30:06Z`
+Generated: `2026-05-18T04:49:02Z`
 
 > Conservative candidate taxonomy only. These rows are **not** accepted taxonomy and must go through Candidate adjudication before any dry-run/writeback.
 

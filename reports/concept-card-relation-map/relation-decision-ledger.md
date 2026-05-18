@@ -1,25 +1,25 @@
 # Concept Relation Decision Ledger
 
-Generated: `2026-05-17T14:35:00Z`
+Generated: `2026-05-18T04:48:49Z`
 
 > 逐条判定台账：把临时图候选边分成 accepted taxonomy、rejected taxonomy、adjacency only、duplicate signal 和 deferred。只有 `writeback_action=add_up` 的行可以进入后续写回；`already_present` 表示本轮小批量已落地或卡片已有该 `up`；`topic_family_review` 永远不能直接写入 `up`。
 
 ## Summary
 
-- candidate_edges: 71
-- decision_counts: {'reject_taxonomy': 11, 'adjacency_only': 60}
+- candidate_edges: 75
+- decision_counts: {'reject_taxonomy': 11, 'adjacency_only': 64}
 - writeback_candidates: 0
 - open_writeback_items: 0
 - open_review_items: 0
 - relation_tail_open_items: 0
 - relation_tail_status: closed
-- terminal_non_writeback_decisions: 71
+- terminal_non_writeback_decisions: 75
 - already_applied_or_present_taxonomy: 0
 - remaining_writeback_candidates: 0
 - accepted_taxonomy: 0
 - rejected_taxonomy: 11
 - deferred_taxonomy: 0
-- adjacency_only: 60
+- adjacency_only: 64
 - duplicate_signals: 0
 - non_taxonomy_boundary_guardrails: 2
 - write_policy: Only decisions with writeback_action=add_up may be applied, and only through dry-run/apply small batches.
@@ -63,6 +63,7 @@ Generated: `2026-05-17T14:35:00Z`
 | [[Agent Harness]] | [[Evaluation]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[Agent Lifecycle Hook]] | [[Observability]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[Agent Loop]] | [[Agent Workflow]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
+| [[Agent Robustness]] | [[Evaluation]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[Agent State]] | [[Agent Workflow]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[Agent State]] | [[Memory]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[Agent Workflow Static Verification]] | [[Agent Framework]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
@@ -70,6 +71,7 @@ Generated: `2026-05-17T14:35:00Z`
 | [[Benchmark]] | [[Evaluation]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[Chunking]] | [[RAG]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[Context Engineering]] | [[RAG]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
+| [[DeerFlow]] | [[Agent Framework]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[Document Ingestion]] | [[RAG]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[Embedding]] | [[RAG]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[Eval Harness]] | [[Evaluation]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
@@ -96,6 +98,8 @@ Generated: `2026-05-17T14:35:00Z`
 | [[Query Rewrite]] | [[Retriever]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[RAG Access Control]] | [[RAG]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[RAG Citation Faithfulness]] | [[RAG]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
+| [[RAGFlow]] | [[Agent Framework]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
+| [[RAGFlow]] | [[RAG]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[RAGGraph]] | [[RAG]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[Reflexion]] | [[Evaluation]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[Replay]] | [[Evaluation]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |

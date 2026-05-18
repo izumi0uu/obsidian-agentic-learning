@@ -1,27 +1,27 @@
 {
   "schema_version": 1,
   "artifact_type": "concept_relation_decision_ledger",
-  "generated_at": "2026-05-17T14:35:00Z",
+  "generated_at": "2026-05-18T04:48:49Z",
   "input_map": "reports/concept-card-relation-map/concept-relations-pre-writeback.json",
   "current_map_at_decision_time": "reports/concept-card-relation-map/concept-relations-temp.json",
   "summary": {
-    "candidate_edges": 71,
+    "candidate_edges": 75,
     "decision_counts": {
       "reject_taxonomy": 11,
-      "adjacency_only": 60
+      "adjacency_only": 64
     },
     "writeback_candidates": 0,
     "open_writeback_items": 0,
     "open_review_items": 0,
     "relation_tail_open_items": 0,
     "relation_tail_status": "closed",
-    "terminal_non_writeback_decisions": 71,
+    "terminal_non_writeback_decisions": 75,
     "already_applied_or_present_taxonomy": 0,
     "remaining_writeback_candidates": 0,
     "accepted_taxonomy": 0,
     "rejected_taxonomy": 11,
     "deferred_taxonomy": 0,
-    "adjacency_only": 60,
+    "adjacency_only": 64,
     "duplicate_signals": 0,
     "non_taxonomy_boundary_guardrails": 2,
     "write_policy": "Only decisions with writeback_action=add_up may be applied, and only through dry-run/apply small batches."
@@ -341,6 +341,28 @@
       "resolution_status": "terminal_non_writeback"
     },
     {
+      "source": "Agent Robustness",
+      "target": "Evaluation",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: evaluation",
+      "support": [
+        "frontmatter.related"
+      ],
+      "source_file": "agentic learning/wiki/concepts/Agent Robustness.md",
+      "source_one_line": "Agent Robustness 是 Agent 在工具失败、观察噪声、用户行为变化、检索污染、计划偏离或攻击性输入下，仍能保持可接受任务推进、恢复策略和安全边界的系统级稳健性。",
+      "existing_up": [],
+      "decision": "adjacency_only",
+      "writeback_action": "none",
+      "proposed_field": "related/body context only",
+      "judge_confidence": "medium",
+      "llm_judgment_basis": "card frontmatter + one-line/boundary snippets + relation-field rules; not source-level re-reading",
+      "decision_rationale": "Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge.",
+      "guardrail": "Never bulk-write topic_family_review into up.",
+      "resolution_status": "terminal_non_writeback"
+    },
+    {
       "source": "Agent State",
       "target": "Agent Workflow",
       "candidate_type": "topic_family_review",
@@ -484,6 +506,28 @@
       ],
       "source_file": "agentic learning/wiki/concepts/Context Engineering.md",
       "source_one_line": "Context Engineering 是设计进入模型上下文的信息结构、顺序、预算、来源和更新方式。",
+      "existing_up": [],
+      "decision": "adjacency_only",
+      "writeback_action": "none",
+      "proposed_field": "related/body context only",
+      "judge_confidence": "medium",
+      "llm_judgment_basis": "card frontmatter + one-line/boundary snippets + relation-field rules; not source-level re-reading",
+      "decision_rationale": "Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge.",
+      "guardrail": "Never bulk-write topic_family_review into up.",
+      "resolution_status": "terminal_non_writeback"
+    },
+    {
+      "source": "DeerFlow",
+      "target": "Agent Framework",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: framework",
+      "support": [
+        "frontmatter.related"
+      ],
+      "source_file": "agentic learning/wiki/concepts/DeerFlow.md",
+      "source_one_line": "DeerFlow 是 ByteDance 开源的 super agent harness：它在 LangGraph / LangChain 之上，把 lead agent、sub-agents、skills、sandbox、filesystem、memory、context compression 和 messaging gateway 组合成长任务 Agent 运行底座。",
       "existing_up": [],
       "decision": "adjacency_only",
       "writeback_action": "none",
@@ -1122,6 +1166,51 @@
       ],
       "source_file": "agentic learning/wiki/concepts/RAG Citation Faithfulness.md",
       "source_one_line": "RAG Citation Faithfulness 是检查答案中的引用是否真的支持对应结论的评估边界：有 citation 不等于有证据，有证据也不等于模型正确使用了证据。",
+      "existing_up": [],
+      "decision": "adjacency_only",
+      "writeback_action": "none",
+      "proposed_field": "related/body context only",
+      "judge_confidence": "medium",
+      "llm_judgment_basis": "card frontmatter + one-line/boundary snippets + relation-field rules; not source-level re-reading",
+      "decision_rationale": "Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge.",
+      "guardrail": "Never bulk-write topic_family_review into up.",
+      "resolution_status": "terminal_non_writeback"
+    },
+    {
+      "source": "RAGFlow",
+      "target": "Agent Framework",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: framework",
+      "support": [
+        "body wikilink"
+      ],
+      "source_file": "agentic learning/wiki/concepts/RAGFlow.md",
+      "source_one_line": "RAGFlow 是 InfiniFlow 的开源 RAG / context layer 平台：它把复杂文档解析、切分、检索、重排、引用、API、UI 和部分 Agent 能力组合成端到端知识库应用底座。",
+      "existing_up": [],
+      "decision": "adjacency_only",
+      "writeback_action": "none",
+      "proposed_field": "related/body context only",
+      "judge_confidence": "medium",
+      "llm_judgment_basis": "card frontmatter + one-line/boundary snippets + relation-field rules; not source-level re-reading",
+      "decision_rationale": "Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge.",
+      "guardrail": "Never bulk-write topic_family_review into up.",
+      "resolution_status": "terminal_non_writeback"
+    },
+    {
+      "source": "RAGFlow",
+      "target": "RAG",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: rag",
+      "support": [
+        "frontmatter.related",
+        "relations:concrete-platform-for"
+      ],
+      "source_file": "agentic learning/wiki/concepts/RAGFlow.md",
+      "source_one_line": "RAGFlow 是 InfiniFlow 的开源 RAG / context layer 平台：它把复杂文档解析、切分、检索、重排、引用、API、UI 和部分 Agent 能力组合成端到端知识库应用底座。",
       "existing_up": [],
       "decision": "adjacency_only",
       "writeback_action": "none",

@@ -8,7 +8,7 @@ topic:
   - llm
 status: inbox
 created: 2026-05-17
-updated: 2026-05-17
+updated: 2026-05-18
 url: https://xiaolinnote.com/ai/llm/what_is_llm.html
 source: https://xiaolinnote.com/ai/llm/what_is_llm.html
 last_checked: 2026-05-17
@@ -17,6 +17,7 @@ sha256: d3d8c79f367552542ddcc4a89fa2151e862e45637dea8c899eb00ed9b64773de
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
+  - "[[NLP]]"
   - "[[LLM]]"
   - "[[LLM 主题]]"
 ---
@@ -29,6 +30,7 @@ related:
 
 ## 相关知识 wiki
 
+- [[NLP]]
 - [[LLM]]
 - [[LLM 主题]]
 

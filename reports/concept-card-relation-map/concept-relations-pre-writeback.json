@@ -1,41 +1,45 @@
 {
   "schema_version": 1,
   "artifact_type": "temporary_concept_relationship_map",
-  "generated_at": "2026-05-17T14:35:00Z",
+  "generated_at": "2026-05-18T04:48:38Z",
   "scope": {
     "concept_dir": "agentic learning/wiki/concepts",
     "temporary": true,
     "write_policy": "Do not write these candidates into concept cards without a separate review task."
   },
   "summary": {
-    "total_concepts": 135,
+    "total_concepts": 138,
     "edge_counts": {
-      "related_link": 753,
-      "body_link": 250,
-      "taxonomy": 37,
-      "typed_relation": 31
+      "related_link": 778,
+      "body_link": 260,
+      "typed_relation": 38,
+      "taxonomy": 37
     },
     "typed_relation_counts": {
+      "related_to": 10,
       "representative_of": 1,
       "based_on_intuition": 1,
-      "related_to": 7,
       "paired_with": 2,
       "contrasts_with": 5,
+      "concrete-harness-for": 1,
+      "built-on": 1,
       "composes_with": 7,
       "uses": 2,
       "mitigates": 1,
+      "concrete-platform-for": 1,
+      "adjacent-to": 1,
       "used_by": 1,
       "precedes": 1,
       "composed_into": 2,
       "foundational_for": 1
     },
-    "concepts_without_up": 98,
+    "concepts_without_up": 101,
     "core_orphans": 0,
     "weakly_connected_concepts": 1,
     "dangling_core_targets": 24,
-    "candidate_edges": 71,
+    "candidate_edges": 75,
     "taxonomy_candidates": 11,
-    "topic_family_review_signals": 60
+    "topic_family_review_signals": 64
   },
   "nodes": [
     {
@@ -263,6 +267,41 @@
         "Agent Workflow",
         "Trace",
         "Evaluation"
+      ]
+    },
+    {
+      "id": "Agent Robustness",
+      "title": "Agent Robustness",
+      "file": "agentic learning/wiki/concepts/Agent Robustness.md",
+      "topics": [
+        "agent",
+        "evaluation",
+        "reliability",
+        "security"
+      ],
+      "status": "growing",
+      "freshness": "watch",
+      "aliases": [
+        "Agent 鲁棒性",
+        "Agent 稳健性",
+        "智能体鲁棒性",
+        "智能体稳健性",
+        "Agentic Robustness",
+        "Robustness of Planning and Reasoning",
+        "规划与推理的鲁棒性",
+        "Agent 鲁棒性指标",
+        "智能体鲁棒性指标"
+      ],
+      "source_count": 5,
+      "evidence_count": 6,
+      "up": [],
+      "related": [
+        "Evaluation",
+        "Task Success Rate",
+        "Trajectory Evaluation",
+        "Trace",
+        "Guardrails",
+        "Tool Calling"
       ]
     },
     {
@@ -912,6 +951,37 @@
       ]
     },
     {
+      "id": "DeerFlow",
+      "title": "DeerFlow",
+      "file": "agentic learning/wiki/concepts/DeerFlow.md",
+      "topics": [
+        "agent",
+        "harness",
+        "framework",
+        "workflow"
+      ],
+      "status": "seed",
+      "freshness": "volatile",
+      "aliases": [
+        "deer-flow",
+        "Deep Exploration and Efficient Research Flow"
+      ],
+      "source_count": 1,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Agent Harness",
+        "Agent Framework",
+        "LangChain DeepAgents",
+        "LangGraph",
+        "Multi-agent Orchestration",
+        "Sandbox Workspace",
+        "Context Engineering",
+        "Long-term Memory",
+        "Tool Permissioning"
+      ]
+    },
+    {
       "id": "Dense Retrieval",
       "title": "Dense Retrieval",
       "file": "agentic learning/wiki/concepts/Dense Retrieval.md",
@@ -1108,6 +1178,7 @@
         "RAG",
         "Memory",
         "Benchmark",
+        "Agent Robustness",
         "Task Success Rate",
         "Eval Harness",
         "LLM-as-Judge",
@@ -2521,6 +2592,36 @@
       ]
     },
     {
+      "id": "RAGFlow",
+      "title": "RAGFlow",
+      "file": "agentic learning/wiki/concepts/RAGFlow.md",
+      "topics": [
+        "rag",
+        "agent",
+        "framework",
+        "document-ingestion"
+      ],
+      "status": "seed",
+      "freshness": "volatile",
+      "aliases": [
+        "Ragflow",
+        "ragflow"
+      ],
+      "source_count": 1,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "RAG",
+        "Document Ingestion",
+        "Chunking",
+        "Hybrid Search",
+        "Reranking",
+        "Agentic RAG",
+        "Data-first Agent Framework",
+        "Vector Database"
+      ]
+    },
+    {
       "id": "RAGGraph",
       "title": "RAGGraph",
       "file": "agentic learning/wiki/concepts/RAGGraph.md",
@@ -3025,7 +3126,8 @@
       "related": [
         "Evaluation",
         "Benchmark",
-        "Agent Harness"
+        "Agent Harness",
+        "Agent Robustness"
       ]
     },
     {
@@ -4186,6 +4288,116 @@
     {
       "source": "Agent Loop",
       "target": "Guardrails",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Guardrails",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "Guardrails 可以提高部分扰动下的可控性，但安全拦截机制不等于鲁棒性指标。"
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Task Success Rate",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "Agent Robustness 常用扰动条件下的成功率下降幅度来观察；Task Success Rate 是被观察指标，不是鲁棒性本身。"
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Trajectory Evaluation",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "工具超时、异常返回、噪声输入和恢复动作都需要看 trajectory，而不只看最终输出。"
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Guardrails",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Task Success Rate",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Tool Calling",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Trace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Trajectory Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Observability",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Tool Permissioning",
       "kind": "body_link",
       "relation_type": "body_wikilink",
       "confidence": "observed",
@@ -6194,6 +6406,156 @@
       "note": ""
     },
     {
+      "source": "DeerFlow",
+      "target": "LangGraph",
+      "kind": "typed_relation",
+      "relation_type": "built-on",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": ""
+    },
+    {
+      "source": "DeerFlow",
+      "target": "Agent Harness",
+      "kind": "typed_relation",
+      "relation_type": "concrete-harness-for",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": ""
+    },
+    {
+      "source": "DeerFlow",
+      "target": "Agent Framework",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "DeerFlow",
+      "target": "Agent Harness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "DeerFlow",
+      "target": "Context Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "DeerFlow",
+      "target": "LangChain DeepAgents",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "DeerFlow",
+      "target": "LangGraph",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "DeerFlow",
+      "target": "Long-term Memory",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "DeerFlow",
+      "target": "Multi-agent Orchestration",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "DeerFlow",
+      "target": "Sandbox Workspace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "DeerFlow",
+      "target": "Tool Permissioning",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "DeerFlow",
+      "target": "Evaluation",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "DeerFlow",
+      "target": "RAG",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "DeerFlow",
+      "target": "RAGFlow",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "DeerFlow",
+      "target": "Trace",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "Dense Retrieval",
       "target": "Retriever",
       "kind": "taxonomy",
@@ -6736,6 +7098,16 @@
     {
       "source": "Evaluation",
       "target": "Agent Loop",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Evaluation",
+      "target": "Agent Robustness",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -11384,6 +11756,146 @@
       "note": ""
     },
     {
+      "source": "RAGFlow",
+      "target": "Data-first Agent Framework",
+      "kind": "typed_relation",
+      "relation_type": "adjacent-to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": ""
+    },
+    {
+      "source": "RAGFlow",
+      "target": "RAG",
+      "kind": "typed_relation",
+      "relation_type": "concrete-platform-for",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": ""
+    },
+    {
+      "source": "RAGFlow",
+      "target": "Agentic RAG",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "RAGFlow",
+      "target": "Chunking",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "RAGFlow",
+      "target": "Data-first Agent Framework",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "RAGFlow",
+      "target": "Document Ingestion",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "RAGFlow",
+      "target": "Hybrid Search",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "RAGFlow",
+      "target": "RAG",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "RAGFlow",
+      "target": "Reranking",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "RAGFlow",
+      "target": "Vector Database",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "RAGFlow",
+      "target": "Agent Framework",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "RAGFlow",
+      "target": "Agent Harness",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "RAGFlow",
+      "target": "LangGraph",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "RAGFlow",
+      "target": "RAG Evaluation",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "RAGGraph",
       "target": "GraphRAG",
       "kind": "typed_relation",
@@ -12865,6 +13377,16 @@
     },
     {
       "source": "Task Success Rate",
+      "target": "Agent Robustness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Task Success Rate",
       "target": "Benchmark",
       "kind": "related_link",
       "relation_type": "related",
@@ -14226,6 +14748,17 @@
       ]
     },
     {
+      "source": "Agent Robustness",
+      "target": "Evaluation",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: evaluation",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
       "source": "Agent State",
       "target": "Agent Workflow",
       "candidate_type": "topic_family_review",
@@ -14298,6 +14831,17 @@
       "confidence": "low",
       "status": "needs_review",
       "rationale": "topic family: rag",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
+      "source": "DeerFlow",
+      "target": "Agent Framework",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: framework",
       "support": [
         "frontmatter.related"
       ]
@@ -14622,6 +15166,29 @@
       ]
     },
     {
+      "source": "RAGFlow",
+      "target": "Agent Framework",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: framework",
+      "support": [
+        "body wikilink"
+      ]
+    },
+    {
+      "source": "RAGFlow",
+      "target": "RAG",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: rag",
+      "support": [
+        "frontmatter.related",
+        "relations:concrete-platform-for"
+      ]
+    },
+    {
       "source": "RAGGraph",
       "target": "RAG",
       "candidate_type": "topic_family_review",
@@ -14920,6 +15487,7 @@
       "Agent Harness",
       "Agent Lifecycle Hook",
       "Agent Loop",
+      "Agent Robustness",
       "Agent State",
       "Agent Workflow",
       "Agent Workflow Static Verification",
@@ -14932,6 +15500,7 @@
       "Context Engineering",
       "Context Window",
       "Data Exfiltration",
+      "DeerFlow",
       "Document Ingestion",
       "Durable Execution",
       "Embedding",
@@ -14979,6 +15548,7 @@
       "RAG",
       "RAG Access Control",
       "RAG Citation Faithfulness",
+      "RAGFlow",
       "RAGGraph",
       "ReAct",
       "Reasoning Trace",

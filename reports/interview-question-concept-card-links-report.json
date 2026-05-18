@@ -4,15 +4,15 @@
   "total_question_pages_scanned": 779,
   "total_pages_scanned": 779,
   "pages_with_related_section": 779,
-  "would_modify_pages": 19,
+  "would_modify_pages": 26,
   "modified_pages": 0,
-  "inline_links_inserted": 25,
-  "proposed_inline_links": 25,
+  "inline_links_inserted": 32,
+  "proposed_inline_links": 32,
   "applied_inline_links": 0,
   "already_linked_pages": 362,
   "already_linked_targets": 941,
-  "skipped_no_match_pages": 413,
-  "unsafe_region_skips": 3969,
+  "skipped_no_match_pages": 412,
+  "unsafe_region_skips": 3992,
   "protected_region_violations": 0,
   "request_meta_page_hits": [],
   "missing_concept_candidates": 0,
@@ -22,9 +22,9 @@
     "xiaolinnote": {
       "total": 142,
       "with_related_section": 142,
-      "would_modify_pages": 7,
+      "would_modify_pages": 8,
       "modified_pages": 0,
-      "proposed_inline_links": 9,
+      "proposed_inline_links": 10,
       "applied_inline_links": 0,
       "already_linked_pages": 81,
       "skipped_no_match_pages": 61
@@ -32,12 +32,12 @@
     "agent_java_offer": {
       "total": 637,
       "with_related_section": 637,
-      "would_modify_pages": 12,
+      "would_modify_pages": 18,
       "modified_pages": 0,
-      "proposed_inline_links": 16,
+      "proposed_inline_links": 22,
       "applied_inline_links": 0,
       "already_linked_pages": 281,
-      "skipped_no_match_pages": 352
+      "skipped_no_match_pages": 351
     }
   },
   "sample_files_selected": [
@@ -3450,10 +3450,12 @@
       "root": "xiaolinnote",
       "has_related_section": true,
       "related_targets": [
+        "NLP",
         "LLM",
         "LLM 主题"
       ],
       "existing_targets": [
+        "NLP",
         "LLM",
         "LLM 主题"
       ],
@@ -3461,9 +3463,19 @@
       "already_linked_targets": [
         "LLM"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "NLP",
+          "alias": "NLP",
+          "start": 514,
+          "end": 517,
+          "replacement": "[[NLP]]",
+          "line": 25,
+          "context": "题]]\" ---  # 1. 什么是大语言模型？和传统 NLP 模型有什么区别？  原始链接：https://xiao"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 2,
+      "unsafe_region_skips": 9,
       "unmatched_existing_targets": [
         "LLM 主题"
       ],
@@ -10432,6 +10444,7 @@
       "root": "agent_java_offer",
       "has_related_section": true,
       "related_targets": [
+        "NLP",
         "Reranking",
         "Retriever",
         "LLM Training Pipeline",
@@ -10439,6 +10452,7 @@
         "LLM 主题"
       ],
       "existing_targets": [
+        "NLP",
         "Reranking",
         "Retriever",
         "LLM Training Pipeline",
@@ -10449,9 +10463,19 @@
       "already_linked_targets": [
         "Reranking"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "NLP",
+          "alias": "NLP",
+          "start": 1035,
+          "end": 1038,
+          "replacement": "[[NLP]]",
+          "line": 37,
+          "context": "- \"[[LLM 主题]]\" ---  # 11 NLP是什么  原始仓库：<https://github.co"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 12,
+      "unsafe_region_skips": 14,
       "unmatched_existing_targets": [
         "Retriever",
         "LLM Training Pipeline",
@@ -10525,6 +10549,7 @@
       "root": "agent_java_offer",
       "has_related_section": true,
       "related_targets": [
+        "NLP",
         "Reranking",
         "Retriever",
         "Agent",
@@ -10534,6 +10559,7 @@
         "LLM 主题"
       ],
       "existing_targets": [
+        "NLP",
         "Reranking",
         "Retriever",
         "Agent",
@@ -10549,9 +10575,19 @@
         "LLM",
         "Transformer"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "NLP",
+          "alias": "NLP",
+          "start": 1090,
+          "end": 1093,
+          "replacement": "[[NLP]]",
+          "line": 39,
+          "context": "[LLM 主题]]\" ---  # 补充原文：BERT、NLP、TFRecord 与 TensorFlow / [[T"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 6,
+      "unsafe_region_skips": 8,
       "unmatched_existing_targets": [
         "Retriever",
         "LLM Training Pipeline",
@@ -10777,10 +10813,12 @@
       "root": "agent_java_offer",
       "has_related_section": true,
       "related_targets": [
+        "NLP",
         "LLM",
         "Evaluation"
       ],
       "existing_targets": [
+        "NLP",
         "LLM",
         "Evaluation"
       ],
@@ -10789,9 +10827,19 @@
         "LLM",
         "Evaluation"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "NLP",
+          "alias": "NLP",
+          "start": 947,
+          "end": 950,
+          "replacement": "[[NLP]]",
+          "line": 34,
+          "context": "Evaluation]]\" ---  # 为什么传统的 NLP 评估指标（如 BLEU, ROUGE）对于评估现代 L"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 0,
+      "unsafe_region_skips": 2,
       "unmatched_existing_targets": [],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -12236,6 +12284,7 @@
         "Benchmark",
         "Task Success Rate",
         "RAG",
+        "RAGFlow",
         "Agent State",
         "Agent Framework",
         "Agent Workflow",
@@ -12247,6 +12296,7 @@
         "Benchmark",
         "Task Success Rate",
         "RAG",
+        "RAGFlow",
         "Agent State",
         "Agent Framework",
         "Agent Workflow",
@@ -12260,9 +12310,19 @@
         "Agent Workflow",
         "Agent"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "RAGFlow",
+          "alias": "Ragflow",
+          "start": 2272,
+          "end": 2279,
+          "replacement": "[[RAGFlow|Ragflow]]",
+          "line": 74,
+          "context": "。  常见追问：  1. CrewAI、AutoGen、Ragflow 适合什么阶段？ 2. 你会如何做框架迁移与回滚？ 3."
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 10,
+      "unsafe_region_skips": 12,
       "unmatched_existing_targets": [
         "Evaluation",
         "Benchmark",
@@ -12313,21 +12373,33 @@
       "has_related_section": true,
       "related_targets": [
         "RAG",
+        "RAGFlow",
         "Agent Framework",
         "Agent Workflow",
         "Durable Execution"
       ],
       "existing_targets": [
         "RAG",
+        "RAGFlow",
         "Agent Framework",
         "Agent Workflow",
         "Durable Execution"
       ],
       "missing_targets": [],
       "already_linked_targets": [],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "RAGFlow",
+          "alias": "Ragflow",
+          "start": 1058,
+          "end": 1065,
+          "replacement": "[[RAGFlow|Ragflow]]",
+          "line": 36,
+          "context": "on]]\" ---  # CrewAI、AutoGen、Ragflow 适合什么阶段？  原始仓库：<https://gith"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 12,
+      "unsafe_region_skips": 14,
       "unmatched_existing_targets": [
         "RAG",
         "Agent Framework",
@@ -12335,7 +12407,7 @@
         "Durable Execution"
       ],
       "request_meta_hits": [],
-      "no_match_reason": "no safe alias match"
+      "no_match_reason": null
     },
     {
       "path": "agentic learning/raw/repos/agent_java_offer/questions/213 01_AI 08_框架协议与工程化 你会如何做框架迁移与回滚？.md",
@@ -12517,6 +12589,7 @@
         "Chunking",
         "Document Ingestion",
         "RAG",
+        "RAGFlow",
         "Agent Framework",
         "Planning"
       ],
@@ -12526,6 +12599,7 @@
         "Chunking",
         "Document Ingestion",
         "RAG",
+        "RAGFlow",
         "Agent Framework",
         "Planning"
       ],
@@ -12535,9 +12609,19 @@
         "Chunking",
         "RAG"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "RAGFlow",
+          "alias": "Ragflow",
+          "start": 1113,
+          "end": 1120,
+          "replacement": "[[RAGFlow|Ragflow]]",
+          "line": 39,
+          "context": "---  # 知道或者使用过哪些开源 RAG 框架比如 Ragflow？如何选择合适场景？  原始仓库：<https://gi"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 8,
+      "unsafe_region_skips": 10,
       "unmatched_existing_targets": [
         "Retriever",
         "Document Ingestion",
@@ -12553,19 +12637,22 @@
       "has_related_section": true,
       "related_targets": [
         "RAG",
+        "RAGFlow",
         "Agent Framework"
       ],
       "existing_targets": [
         "RAG",
+        "RAGFlow",
         "Agent Framework"
       ],
       "missing_targets": [],
       "already_linked_targets": [],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 6,
+      "unsafe_region_skips": 10,
       "unmatched_existing_targets": [
         "RAG",
+        "RAGFlow",
         "Agent Framework"
       ],
       "request_meta_hits": [],

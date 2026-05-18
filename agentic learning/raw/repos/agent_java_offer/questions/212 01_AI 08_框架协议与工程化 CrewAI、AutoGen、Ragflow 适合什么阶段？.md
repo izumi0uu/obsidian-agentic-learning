@@ -27,6 +27,7 @@ related:
   - "[[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[RAG]]"
+  - "[[RAGFlow]]"
   - "[[Agent Framework]]"
   - "[[Agent Workflow]]"
   - "[[Durable Execution]]"
@@ -45,6 +46,7 @@ related:
 ## 相关知识 wiki
 
 - [[RAG]]
+- [[RAGFlow]]
 - [[Agent Framework]]
 - [[Agent Workflow]]
 - [[Durable Execution]]

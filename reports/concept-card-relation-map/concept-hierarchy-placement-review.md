@@ -1,23 +1,23 @@
 # Concept Hierarchy Placement Review — 层级归属待审计概念卡
 
-Generated: `2026-05-18T02:30:06Z`
+Generated: `2026-05-18T04:49:03Z`
 Classification stage: `audit_closure`
 
 > Audit closure: remaining `defer_boundary_review` rows are closed as `deferred_with_backlog`; no concept cards are edited and no fallback parents are invented.
 
 ## Summary
 
-- total_concepts: 136
-- reviewed_concepts: 136
+- total_concepts: 138
+- reviewed_concepts: 138
 - taxonomy_placement_unreviewed: 0
 - concepts_with_up: 37
-- concepts_without_up: 99
-- concepts_with_candidate_basis: 59
-- candidate_basis_rows: 72
+- concepts_without_up: 101
+- concepts_with_candidate_basis: 61
+- candidate_basis_rows: 75
 - known_forbidden_candidate_pairs: 2
 - accepted_taxonomy: 0
 - root_or_anchor_no_up: 19
-- relation_only_terminal: 52
+- relation_only_terminal: 54
 - weak_or_backlog_terminal: 4
 - defer_boundary_review: 22
 - open_unclassified: 0
@@ -25,8 +25,8 @@ Classification stage: `audit_closure`
 - open_writeback: 0
 - dry_run_planned: 0
 - write_policy: Audit closure only. Remaining defer_boundary_review rows are closed as deferred_with_backlog and no concept-card fields are written.
-- decision_counts: `{"already_has_up_reviewed": 37, "defer_boundary_review": 22, "reject_taxonomy": 2, "relation_only_terminal": 52, "root_or_anchor_no_up": 19, "weak_or_backlog_terminal": 4}`
-- review_status_counts: `{"deferred_with_backlog": 22, "terminal_non_writeback": 114}`
+- decision_counts: `{"already_has_up_reviewed": 37, "defer_boundary_review": 22, "reject_taxonomy": 2, "relation_only_terminal": 54, "root_or_anchor_no_up": 19, "weak_or_backlog_terminal": 4}`
+- review_status_counts: `{"deferred_with_backlog": 22, "terminal_non_writeback": 116}`
 - parent_whitelist_reviewed: True
 - stable_parent_whitelist_approved: 14
 - proposed_parent_anchors_not_auto_approved: 3
@@ -132,7 +132,7 @@ Classification stage: `audit_closure`
 - [[Approval Gate]]
 - [[ReAct]]
 
-### relation_only_terminal (52)
+### relation_only_terminal (54)
 
 - [[Agent Control Plane]]
 - [[Agent Harness]]
@@ -143,6 +143,7 @@ Classification stage: `audit_closure`
 - [[Agent Workflow Static Verification]]
 - [[Benchmark]]
 - [[Context Engineering]]
+- [[DeerFlow]]
 - [[Document Ingestion]]
 - [[Durable Execution]]
 - [[Embedding]]
@@ -168,6 +169,7 @@ Classification stage: `audit_closure`
 - [[Query Planning]]
 - [[RAG Access Control]]
 - [[RAG Citation Faithfulness]]
+- [[RAGFlow]]
 - [[RAGGraph]]
 - [[Reasoning Trace]]
 - [[Reflexion]]
@@ -423,8 +425,8 @@ Apply artifact:
 
 Audit closure closes the whole concept hierarchy placement audit by routing every remaining deferred row to a durable backlog home. It does not add `up`; future changes must reopen a new candidate/adjudication/dry-run/limited-apply cycle.
 
-- total_concepts: 136
-- reviewed_concepts: 136
+- total_concepts: 138
+- reviewed_concepts: 138
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0
@@ -523,7 +525,7 @@ Closure artifact:
 | [[Agent Harness]] | relation_only_terminal |  | 1 | 2 |
 | [[Agent Lifecycle Hook]] | relation_only_terminal |  | 1 | 2 |
 | [[Agent Loop]] | relation_only_terminal |  | 1 | 2 |
-| [[Agent Robustness]] | relation_only_terminal |  | 1 | 1 |
+| [[Agent Robustness]] | relation_only_terminal |  | 1 | 2 |
 | [[Agent State]] | relation_only_terminal |  | 2 | 4 |
 | [[Agent Workflow]] | root_or_anchor_no_up |  | 0 | 0 |
 | [[Agent Workflow Static Verification]] | relation_only_terminal |  | 2 | 4 |
@@ -536,6 +538,7 @@ Closure artifact:
 | [[Context Engineering]] | relation_only_terminal |  | 1 | 2 |
 | [[Context Window]] | root_or_anchor_no_up |  | 0 | 0 |
 | [[Data Exfiltration]] | defer_boundary_review |  | 0 | 3 |
+| [[DeerFlow]] | relation_only_terminal |  | 1 | 2 |
 | [[Document Ingestion]] | relation_only_terminal |  | 1 | 2 |
 | [[Durable Execution]] | relation_only_terminal | [[Agent Workflow]] | 1 | 1 |
 | [[Embedding]] | relation_only_terminal |  | 1 | 2 |
@@ -583,6 +586,7 @@ Closure artifact:
 | [[RAG]] | root_or_anchor_no_up |  | 0 | 0 |
 | [[RAG Access Control]] | relation_only_terminal |  | 1 | 2 |
 | [[RAG Citation Faithfulness]] | relation_only_terminal |  | 1 | 2 |
+| [[RAGFlow]] | relation_only_terminal |  | 2 | 4 |
 | [[RAGGraph]] | relation_only_terminal | [[RAG]] | 2 | 3 |
 | [[ReAct]] | reject_taxonomy |  | 0 | 2 |
 | [[Reasoning Trace]] | relation_only_terminal | [[Observability]] | 1 | 1 |
@@ -633,6 +637,7 @@ Candidate basis is evidence for later adjudication, not an accepted parent.
 | [[Benchmark]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | no |
 | [[Chunking]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |
 | [[Context Engineering]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |
+| [[DeerFlow]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | no |
 | [[Document Ingestion]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |
 | [[Durable Execution]] | [[Agent Workflow]] | taxonomy_candidate | low | title/topic heuristic | no |
 | [[Embedding]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |
@@ -663,6 +668,8 @@ Candidate basis is evidence for later adjudication, not an accepted parent.
 | [[Query Rewrite]] | [[Retriever]] | topic_family_review | low | frontmatter.related | no |
 | [[RAG Access Control]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |
 | [[RAG Citation Faithfulness]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |
+| [[RAGFlow]] | [[Agent Framework]] | topic_family_review | low | body wikilink | no |
+| [[RAGFlow]] | [[RAG]] | topic_family_review | low | frontmatter.related, relations:concrete-platform-for | no |
 | [[RAGGraph]] | [[RAG]] | taxonomy_candidate | medium | frontmatter.related, relations:related_to | no |
 | [[RAGGraph]] | [[RAG]] | topic_family_review | low | frontmatter.related, relations:related_to | no |
 | [[Reasoning Trace]] | [[Observability]] | taxonomy_candidate | low | title/topic heuristic | no |

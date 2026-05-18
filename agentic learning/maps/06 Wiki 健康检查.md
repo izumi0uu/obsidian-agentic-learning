@@ -24,14 +24,14 @@ related:
 
 - Last lint: 2026-05-18
 - Missing links: none
-- Concept cards: 136；`scripts/concept_card_audit.py --format markdown` 显示 Needs action = 0。
+- Concept cards: 138；`scripts/concept_card_audit.py --format markdown` 显示 Needs action = 0。
 - Comparison topic pages: 23；`scripts/comparison_topic_audit.py --format markdown` 显示 Needs action = 0。
-- Raw markdown pages: 934；其中 frontmatter `type: source` 885。主源清单仍看 [[资料收集索引]]。
+- Raw markdown pages: 936；其中 frontmatter `type: source` 887。主源清单仍看 [[资料收集索引]]。
 - Paper source audit: `scripts/paper_source_audit.py` 检查 `raw/papers/` 49 个文件，PASS。
-- Interview concept link audit: `scripts/interview_question_concept_links.py --self-test` PASS；`--dry-run` 扫描 779 个题页，would modify 19，proposed inline links 25，missing concept candidates 0，protected region violations 0；默认报告写入 `reports/interview-question-concept-card-links-report.*`，候选 backlog 页面形状由 [[templates/面试题概念卡待补充]] 提供。
-- Request meta audit: `scripts/request_meta_audit.py --format markdown` 扫描 1125 个 durable vault Markdown 文件，PASS；聊天包装、运行态片段和请求路由话术命中 0。
+- Interview concept link audit: `scripts/interview_question_concept_links.py --self-test` PASS；`--dry-run` 扫描 779 个题页，would modify 22，proposed inline links 28，missing concept candidates 0，protected region violations 0；默认报告写入 `reports/interview-question-concept-card-links-report.*`，候选 backlog 页面形状由 [[templates/面试题概念卡待补充]] 提供。
+- Request meta audit: `scripts/request_meta_audit.py --format markdown` 扫描 1129 个 durable vault Markdown 文件，PASS；聊天包装、运行态片段和请求路由话术命中 0。
 - Query write-back pending: 2（概念对比候选队列中 P3 两项已在 [[05 Query 写回队列#2026-05-17 剩余候选分流]] 分流：1 项证据补齐后再评估，1 项查新后再写；当前均不强行成页）。
-- 概念层级归属审计：136 张概念卡已纳入审计；37 条顶层 `up`；审计闭环通过；[[Agent Robustness]] 被判为 `relation_only_terminal`，不从 topic-family 信号直接写 `up: [[Evaluation]]`；项目规则已要求新增/更新概念关系前先读 [[09 概念层级审计基线]]；机器基线保存在 `reports/concept-card-relation-map/`，长期复跑入口是 `scripts/concept_taxonomy/`；`open_review: 0`，`open_writeback: 0`，`dry_run_planned: 0`；22 张 `defer_boundary_review` 已全部标记为 `deferred_with_backlog`，不得为了清零强行补父类。
+- 概念层级归属审计：138 张概念卡已纳入审计；37 条顶层 `up`；审计闭环通过；[[Agent Robustness]]、[[RAGFlow]] 和 [[DeerFlow]] 被判为 `relation_only_terminal`，不从 topic-family 信号直接写 `up`；项目规则已要求新增/更新概念关系前先读 [[09 概念层级审计基线]]；机器基线保存在 `reports/concept-card-relation-map/`，长期复跑入口是 `scripts/concept_taxonomy/`；`open_review: 0`，`open_writeback: 0`，`dry_run_planned: 0`；22 张 `defer_boundary_review` 已全部标记为 `deferred_with_backlog`，不得为了清零强行补父类。
 - Current action queues: concept-card audit、comparison-topic audit 与概念层级归属审计的本轮 open tail 均已清空；22 张 deferred-with-backlog 卡是未来可重开的边界队列，不是当前可直接写 `up` 的任务。
 
 边界：本节是“当前状态”，会覆盖上方读者对最新健康状态的理解；旧的 2026-05-10 / 2026-05-11 数字和“27+6”队列保留下方历史小节，不能再被当成现状。本次 27+6 全量修复是用户明确授权的一次性系统性批量维护；以后仍不要在未确认时批量重写旧卡。Needs action = 0 只表示固定审计脚本当前通过，不表示所有概念卡已经达到百科式深度。

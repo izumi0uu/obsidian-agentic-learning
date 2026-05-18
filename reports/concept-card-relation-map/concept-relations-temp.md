@@ -1,21 +1,21 @@
 # Temporary Concept Relationship Map
 
-Generated: `2026-05-18T02:30:06Z`
+Generated: `2026-05-18T04:48:38Z`
 
 > 临时文件：用于后续概念层级开发评估。不要把候选边自动写回概念卡；每条 candidate 都需要单独人工/LLM 复核。
 
 ## Summary
 
-- total_concepts: 136
-- edge_counts: {'related_link': 761, 'body_link': 252, 'typed_relation': 34, 'taxonomy': 37}
-- typed_relation_counts: {'related_to': 10, 'representative_of': 1, 'based_on_intuition': 1, 'paired_with': 2, 'contrasts_with': 5, 'composes_with': 7, 'uses': 2, 'mitigates': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
-- concepts_without_up: 99
+- total_concepts: 138
+- edge_counts: {'related_link': 778, 'body_link': 260, 'typed_relation': 38, 'taxonomy': 37}
+- typed_relation_counts: {'related_to': 10, 'representative_of': 1, 'based_on_intuition': 1, 'paired_with': 2, 'contrasts_with': 5, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 7, 'uses': 2, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
+- concepts_without_up: 101
 - core_orphans: 0
 - weakly_connected_concepts: 1
 - dangling_core_targets: 24
-- candidate_edges: 72
+- candidate_edges: 75
 - taxonomy_candidates: 11
-- topic_family_review_signals: 61
+- topic_family_review_signals: 64
 
 ## Existing taxonomy edges (`up`)
 
@@ -72,6 +72,8 @@ Generated: `2026-05-18T02:30:06Z`
 | [[Context Precision]] | paired_with | [[Context Recall]] | frontmatter.relations | Context Precision 看检索上下文的相关性和排序质量；Context Recall 看必要信息是否被覆盖。 |
 | [[Context Recall]] | paired_with | [[Context Precision]] | frontmatter.relations | Context Recall 看该找的信息有没有覆盖；Context Precision 看找回内容里相关信息是否靠前、噪音是否过多。 |
 | [[Cross-Encoder]] | contrasts_with | [[Dense Retrieval]] | frontmatter.relations | Dense Retrieval 常用双塔/bi-encoder 思路快速召回；Cross-Encoder 把 query 和 chunk 放在一起深度判断，适合小候选集精排。 |
+| [[DeerFlow]] | built-on | [[LangGraph]] | frontmatter.relations |  |
+| [[DeerFlow]] | concrete-harness-for | [[Agent Harness]] | frontmatter.relations |  |
 | [[Dense Retrieval]] | composes_with | [[Hybrid Search]] | frontmatter.relations | Hybrid Search 常把 dense retrieval 和 sparse/BM25 route 组合起来互补。 |
 | [[Dense Retrieval]] | contrasts_with | [[Cross-Encoder]] | frontmatter.relations | Bi-encoder / Dense Retrieval 把 query 和 chunk 分开编码，适合快速召回；Cross-Encoder 把二者放在一起判断，适合小候选集精排。 |
 | [[Dense Retrieval]] | contrasts_with | [[Sparse Retrieval]] | frontmatter.relations | Dense Retrieval 用稠密语义向量找相似内容；Sparse Retrieval / BM25 用词项、倒排和词面信号找精确匹配。 |
@@ -86,6 +88,8 @@ Generated: `2026-05-18T02:30:06Z`
 | [[Multi-Route Retrieval]] | composes_with | [[Sparse Retrieval]] | frontmatter.relations | 多路召回常把 sparse retrieval / BM25 作为精确词面一路。 |
 | [[Parent-Child Chunking]] | mitigates | [[Context Precision]] | frontmatter.relations | 子 chunk 帮助精确检索，父 chunk 帮助保留上下文；但是否改善 precision/recall 仍需评估。 |
 | [[Parent-Child Chunking]] | uses | [[Retriever]] | frontmatter.relations | 检索时用子 chunk 精准定位，命中后回取父 chunk 给 LLM 阅读。 |
+| [[RAGFlow]] | adjacent-to | [[Data-first Agent Framework]] | frontmatter.relations |  |
+| [[RAGFlow]] | concrete-platform-for | [[RAG]] | frontmatter.relations |  |
 | [[RAGGraph]] | contrasts_with | [[GraphRAG]] | frontmatter.relations | GraphRAG 是图结构参与检索和上下文构造；RAGGraph 更可能指 RAG 执行流程图或项目名，二者不能互当别名。 |
 | [[RAGGraph]] | related_to | [[Agentic RAG]] | frontmatter.relations | 若 RAGGraph 指带分支和循环的检索工作流，它更接近 Agentic RAG / workflow graph 的实现语境，而不是独立稳定方法族。 |
 | [[RAGGraph]] | related_to | [[RAG]] | frontmatter.relations | RAGGraph 讨论的是 RAG pipeline 可能被图式编排，但这个命名不稳定；当前不把它写成 RAG 的 strict taxonomy 子类。 |
@@ -123,6 +127,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[Benchmark]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Chunking]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
 | [[Context Engineering]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
+| [[DeerFlow]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | topic family: framework |
 | [[Document Ingestion]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
 | [[Durable Execution]] | [[Agent Workflow]] | taxonomy_candidate | low | title/topic heuristic | workflow/runtime title family |
 | [[Embedding]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
@@ -152,6 +157,8 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[Query Rewrite]] | [[Retriever]] | topic_family_review | low | frontmatter.related | topic family: retrieval/search |
 | [[RAG Access Control]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
 | [[RAG Citation Faithfulness]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
+| [[RAGFlow]] | [[Agent Framework]] | topic_family_review | low | body wikilink | topic family: framework |
+| [[RAGFlow]] | [[RAG]] | topic_family_review | low | frontmatter.related, relations:concrete-platform-for | topic family: rag |
 | [[RAGGraph]] | [[RAG]] | topic_family_review | low | frontmatter.related, relations:related_to | topic family: rag |
 | [[Reasoning Trace]] | [[Observability]] | taxonomy_candidate | low | title/topic heuristic | trace/observability title family |
 | [[Reflexion]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
@@ -203,6 +210,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Context Engineering]]
 - [[Context Window]]
 - [[Data Exfiltration]]
+- [[DeerFlow]]
 - [[Document Ingestion]]
 - [[Durable Execution]]
 - [[Embedding]]
@@ -250,6 +258,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[RAG]]
 - [[RAG Access Control]]
 - [[RAG Citation Faithfulness]]
+- [[RAGFlow]]
 - [[RAGGraph]]
 - [[ReAct]]
 - [[Reasoning Trace]]

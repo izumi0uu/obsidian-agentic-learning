@@ -1,10 +1,10 @@
 # Plugin Contract Verification
 
-Generated: `2026-05-18T02:30:28Z`
+Generated: `2026-05-18T04:51:23Z`
 
 ## Summary
 
-- concept_cards_checked: `136`
+- concept_cards_checked: `138`
 - top_level_up_edges: `37`
 - temp_map_taxonomy_edges: `37`
 - relation_writeback_dry_run_planned: `0`

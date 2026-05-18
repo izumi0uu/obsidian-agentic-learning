@@ -1240,3 +1240,24 @@ related:
 - Taxonomy: no direct `up` was written; regenerated taxonomy reports classify [[Agent Robustness]] as `relation_only_terminal` with typed relations to [[Task Success Rate]], [[Trajectory Evaluation]], and [[Guardrails]]. Topic-family overlap with [[Evaluation]] is a review signal only, not a parent write.
 - Mention sweep: searched Agent Robustness / Agentic Robustness / Agent 鲁棒性 / 智能体鲁棒性 / 规划与推理的鲁棒性 / Robustness across wiki, raw, maps, reviews, and alias map; linked high-confidence Agent-system hits and skipped model/RAG/long-context robustness false friends.
 - Validation: JSON alias map parse PASS; interview link self-test PASS and dry-run reports 779 pages / would modify 19 / inline links 25 / missing candidates 0 / protected violations 0; concept-card audit 136 / needs 0; comparison-topic audit 23 / needs 0; paper source audit 49 PASS; taxonomy validate, plugin contract, control-surface sync, and baseline-map validation PASS with 136 concepts / 22 deferred-with-backlog; request-meta audit 1125 files / 0 hits; `git diff --check` PASS.
+
+## [2026-05-18] writeback | RAGFlow and DeerFlow project concept boundaries
+
+- Created source notes: [[RAGFlow 官方文档]], [[DeerFlow Repo]].
+- Created concept cards: [[RAGFlow]], [[DeerFlow]].
+- Updated navigation and synthesis: [[01 术语表]], [[Agent 知识地图]], [[RAG 主题]], [[资料收集索引]], [[前沿主源清单]], [[04 页面目录]], `scripts/interview_question_concept_aliases.json`.
+- Raw evidence backlinks: added [[RAGFlow]] to high-confidence agent_java_offer framework/RAG question notes q210/q212/q218/q219 without rewriting raw source正文.
+- Terminology: `RAGFlow`, `Ragflow`, and `ragflow` are the InfiniFlow platform; bare `RAG Flow / RAG 流程` remains excluded as a generic pipeline phrase. `DeerFlow`, `deer-flow`, and `Deep Exploration and Efficient Research Flow` are the ByteDance project; bare `Deep Research` remains excluded because DeerFlow 2.0 is a broader super agent harness.
+- Taxonomy: no direct `up` was written; both cards use `relations`, `related`, and source evidence pending taxonomy candidate generation, adjudication, dry-run, and validation.
+- Mention sweep: searched RAGFlow / Ragflow / ragflow / RAG Flow and DeerFlow / deer-flow / Deep Exploration / Deep Research across wiki, raw, maps, reviews, scripts, and reports; linked high-confidence same-project hits and kept ambiguous generic phrases unlinked.
+- Validation: JSON alias map parse PASS; interview link self-test PASS and dry-run reports 779 pages / would modify 22 / inline links 28 / missing candidates 0 / protected violations 0; concept-card audit 138 / needs 0; comparison-topic audit 23 / needs 0; paper source audit 49 PASS; request-meta audit 1129 files / 0 hits; taxonomy build, decide, writeback dry-run, close-audit, validate, plugin contract, control-surface sync, and baseline-map validation PASS with 138 concepts / 37 top-level `up` / 22 deferred-with-backlog / 0 open writeback; `git diff --check` PASS.
+
+## [2026-05-18] writeback | NLP foundation concept boundary
+
+- Created: [[NLP]].
+- Updated navigation and synthesis: [[01 术语表]], [[Agent 知识地图]], [[LLM 主题]], [[04 页面目录]], `scripts/interview_question_concept_aliases.json`.
+- Raw evidence backlinks: added [[NLP]] to high-confidence definition/comparison/evaluation source notes: [[161 01_AI 05_模型调优与微调 11 NLP是什么]], [[164 01_AI 05_模型调优与微调 补充原文：BERT、NLP、TFRecord 与 TensorFlow Transformer 关系]], [[142 ai llm 1. 什么是大语言模型？和传统 NLP 模型有什么区别？]], [[170 01_AI 06_评测与监控 为什么传统的 NLP 评估指标（如 BLEU, ROUGE）对于评估现代 LLM 的生成质量来说，存在很大的局限性？]], and [[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]].
+- Terminology: `NLP`, `Natural Language Processing`, and `自然语言处理` are aliases of the same natural-language task-domain concept. `传统 NLP` is treated as a historical/pipeline style inside the domain, not a separate alias or card.
+- Taxonomy: no direct `up` was written; [[NLP]] is treated as a foundation/domain anchor connected through `related` and body boundary notes, pending any future taxonomy candidate generation and dry-run.
+- Mention sweep: searched NLP / Natural Language Processing / 自然语言处理 across wiki, raw, maps, reviews, and alias map; linked high-confidence same-concept source and navigation hits, skipped bibliography/conference-name noise and repeated raw references.
+- Validation: JSON alias map parse PASS; interview link self-test PASS and dry-run reports 779 pages / would modify 26 / inline links 32 / missing candidates 0 / protected violations 0; concept-card audit 139 / needs 0; `git diff --check` PASS.

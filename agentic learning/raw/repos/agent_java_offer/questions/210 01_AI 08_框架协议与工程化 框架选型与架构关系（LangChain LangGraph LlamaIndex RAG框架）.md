@@ -30,6 +30,7 @@ related:
   - "[[Benchmark]]"
   - "[[Task Success Rate]]"
   - "[[RAG]]"
+  - "[[RAGFlow]]"
   - "[[Agent State]]"
   - "[[Agent Framework]]"
   - "[[Agent Workflow]]"
@@ -52,6 +53,7 @@ related:
 - [[Benchmark]]
 - [[Task Success Rate]]
 - [[RAG]]
+- [[RAGFlow]]
 - [[Agent State]]
 - [[Agent Framework]]
 - [[Agent Workflow]]
