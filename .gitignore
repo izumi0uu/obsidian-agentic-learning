@@ -44,6 +44,15 @@ agentic learning/assets/
 *.7z
 *.rar
 
+# README visuals are small, public, and reviewable.
+!docs/
+!docs/readme/
+!docs/readme/*.svg
+!docs/readme/*.png
+!docs/readme/*.jpg
+!docs/readme/*.jpeg
+!docs/readme/*.webp
+
 # Local AI / vector / generated indexes
 .qdrant/
 .chroma/

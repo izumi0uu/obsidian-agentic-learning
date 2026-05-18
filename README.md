@@ -1,8 +1,26 @@
 # Agentic Learning Obsidian Wiki
 
-这是一个用 Obsidian + LLM 维护的 Agent 学习知识库。它的目标不是收藏资料，而是把 Agent、LLM、RAG、Memory、Evaluation、Tool Use、MCP、Computer Use、GraphRAG、Agentic RAG 等概念，从零散链接变成可以持续复习、追问和实验的 wiki。
+这是一个用 Obsidian + LLM 维护的 Agent 学习知识库。它的目标不是收藏资料，而是把 Agent、LLM、RAG、Memory、Evaluation、Tool Use、MCP、Computer Use、GraphRAG、LightRAG、Agentic RAG 等概念，从零散链接变成可以持续复习、追问和实验的 wiki。
 
 一句话：Obsidian 是阅读和浏览界面，Codex/LLM 是维护者，Markdown 文件是可以被 Git 版本化的知识资产。
+
+| 层 | 负责什么 | 典型文件 |
+|---|---|---|
+| `raw/` | 来源证据，不替代理解 | 论文、官方文档、repo、面试题 raw source |
+| `wiki/` | 稳定理解和概念边界 | `wiki/concepts/`、`wiki/topics/` |
+| `maps/` | 导航、问题池、健康检查、taxonomy 基线 | `LLM Wiki 工作流.md`、`字段规范.md`、`09 概念层级审计基线.md` |
+| `reviews/` | 费曼复述和写回候选 | 概念触发式复习记录 |
+
+<p align="center">
+  <img src="docs/readme/vault-overview.svg" alt="Agentic Learning Obsidian Wiki overview" width="100%">
+</p>
+
+<p align="center">
+  <a href="agentic%20learning/index.md"><img alt="Obsidian Vault" src="https://img.shields.io/badge/Obsidian-vault-7C3AED?style=for-the-badge"></a>
+  <a href="agentic%20learning/maps/LLM%20Wiki%20%E5%B7%A5%E4%BD%9C%E6%B5%81.md"><img alt="LLM Wiki" src="https://img.shields.io/badge/LLM_Wiki-workflow-0EA5E9?style=for-the-badge"></a>
+  <a href=".github/workflows/search-index.yml"><img alt="Search Index" src="https://img.shields.io/badge/Search_Index-verified-22C55E?style=for-the-badge"></a>
+  <a href="agentic%20learning/maps/09%20%E6%A6%82%E5%BF%B5%E5%B1%82%E7%BA%A7%E5%AE%A1%E8%AE%A1%E5%9F%BA%E7%BA%BF.md"><img alt="Taxonomy Baseline" src="https://img.shields.io/badge/Taxonomy-baseline-F59E0B?style=for-the-badge"></a>
+</p>
 
 ## 这个仓库解决什么问题
 
@@ -242,11 +260,12 @@ python3 scripts/build_search_index.py --check
 - 抽取后的文本。
 - LLM 维护规则。
 - 项目脚本、审计报告和 `search-index.json`。
+- README 专用的轻量公开视觉资产，例如 `docs/readme/*.svg`。
 
 这个仓库不提交：
 
 - PDF 原文。
-- 图片、音频、视频。
+- 非 README 专用的图片、音频、视频。
 - Obsidian 插件包和主题包。
 - 本地 workspace 状态。
 - `.codex/`、`.omx/` 等本地 agent/runtime 状态。
@@ -269,10 +288,13 @@ python3 scripts/build_search_index.py --check
 - [agent_java_offer](https://github.com/guoguo-tju/agent_java_offer)：Java 后端转 AI Agent / 大模型应用工程的开源面试复习资料库，适合练习口述和追问。
 - [Hello-Agents](https://github.com/datawhalechina/hello-agents)：Datawhale 的中文 Agent 系统入门教程，适合作为从零学习 Agent 的课程骨架。
 
-### 使用的mcp和skill
+### 使用的 MCP 和 skill
 
 - [obsidian-hybrid-search](https://github.com/flowing-abyss/obsidian-hybrid-search)：给 Obsidian vault 做 hybrid search 的 CLI / MCP server，是本项目 RAG 检索层的参考工具。
+- [LightRAG](https://github.com/HKUDS/LightRAG)：README 视觉组织参考，也是 GraphRAG / lightweight RAG 工程生态的重要项目之一。
 - [excalidraw-diagram-skill](https://github.com/coleam00/excalidraw-diagram-skill)：让 coding agent 生成 Excalidraw 图的 skill，适合把流程、架构和概念边界画出来。
+- [Playwright MCP](https://github.com/microsoft/playwright-mcp)：把浏览器自动化能力接入 MCP 的参考项目，适合理解 Browser Agent 工具边界。
+- [oh-my-codex](https://github.com/Yeachan-Heo/oh-my-codex)：Codex CLI 外围的多 Agent 编排和工作流增强，适合作为 coding-agent harness 的工程参考。
 
 ## 当前边界
 
