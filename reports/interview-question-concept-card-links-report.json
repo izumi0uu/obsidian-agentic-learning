@@ -4,15 +4,15 @@
   "total_question_pages_scanned": 779,
   "total_pages_scanned": 779,
   "pages_with_related_section": 779,
-  "would_modify_pages": 6,
+  "would_modify_pages": 19,
   "modified_pages": 0,
-  "inline_links_inserted": 11,
-  "proposed_inline_links": 11,
+  "inline_links_inserted": 25,
+  "proposed_inline_links": 25,
   "applied_inline_links": 0,
   "already_linked_pages": 362,
   "already_linked_targets": 941,
-  "skipped_no_match_pages": 417,
-  "unsafe_region_skips": 3850,
+  "skipped_no_match_pages": 413,
+  "unsafe_region_skips": 3969,
   "protected_region_violations": 0,
   "request_meta_page_hits": [],
   "missing_concept_candidates": 0,
@@ -22,9 +22,9 @@
     "xiaolinnote": {
       "total": 142,
       "with_related_section": 142,
-      "would_modify_pages": 2,
+      "would_modify_pages": 7,
       "modified_pages": 0,
-      "proposed_inline_links": 3,
+      "proposed_inline_links": 9,
       "applied_inline_links": 0,
       "already_linked_pages": 81,
       "skipped_no_match_pages": 61
@@ -32,12 +32,12 @@
     "agent_java_offer": {
       "total": 637,
       "with_related_section": 637,
-      "would_modify_pages": 4,
+      "would_modify_pages": 12,
       "modified_pages": 0,
-      "proposed_inline_links": 8,
+      "proposed_inline_links": 16,
       "applied_inline_links": 0,
       "already_linked_pages": 281,
-      "skipped_no_match_pages": 356
+      "skipped_no_match_pages": 352
     }
   },
   "sample_files_selected": [
@@ -51,8 +51,8 @@
     "agentic learning/raw/repos/agent_java_offer/questions/407 02_后端 10_网络I_O与发布治理 Netty 如何体现 Reactor 模型？.md",
     "agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md",
     "agentic learning/raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md",
-    "agentic learning/raw/repos/agent_java_offer/questions/072 01_AI 03_RAG RAG检索优化与高级范式（重排 图谱 自适应检索 向量库）.md",
-    "agentic learning/raw/repos/agent_java_offer/questions/077 01_AI 03_RAG 除了基础的向量检索，你还知道哪些可以提升 RAG 检索质量的技术？.md"
+    "agentic learning/raw/repos/xiaolinnote/questions/123 ai llm 20. 大模型部署有哪些主流方案？vLLM、TGI、llama.cpp、SGLang 实际项目里怎么选？.md",
+    "agentic learning/raw/repos/xiaolinnote/questions/128 ai llm 14. KV Cache 是什么？Prompt Caching 的原理是什么？.md"
   ],
   "missing_targets": {},
   "pages": [
@@ -127,14 +127,16 @@
         "Long-term Memory",
         "Semantic Memory",
         "Episodic Memory",
-        "Context Engineering"
+        "Context Engineering",
+        "KV Cache"
       ],
       "existing_targets": [
         "Memory",
         "Long-term Memory",
         "Semantic Memory",
         "Episodic Memory",
-        "Context Engineering"
+        "Context Engineering",
+        "KV Cache"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -143,11 +145,12 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 6,
+      "unsafe_region_skips": 8,
       "unmatched_existing_targets": [
         "Semantic Memory",
         "Episodic Memory",
-        "Context Engineering"
+        "Context Engineering",
+        "KV Cache"
       ],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -2899,19 +2902,31 @@
       "has_related_section": true,
       "related_targets": [
         "LLM",
+        "KV Cache",
         "LLM 主题"
       ],
       "existing_targets": [
         "LLM",
+        "KV Cache",
         "LLM 主题"
       ],
       "missing_targets": [],
       "already_linked_targets": [
         "LLM"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "KV Cache",
+          "alias": "KV Cache",
+          "start": 1248,
+          "end": 1256,
+          "replacement": "[[KV Cache]]",
+          "line": 53,
+          "context": "叫「Paged」？  🙋‍♂️我：哦哦，应该是分页管理 KV Cache 吧，类似操作系统的虚拟内存？  👔面试官：方向对，但具"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 2,
+      "unsafe_region_skips": 5,
       "unmatched_existing_targets": [
         "LLM 主题"
       ],
@@ -3024,19 +3039,31 @@
       "has_related_section": true,
       "related_targets": [
         "LLM",
+        "KV Cache",
         "LLM 主题"
       ],
       "existing_targets": [
         "LLM",
+        "KV Cache",
         "LLM 主题"
       ],
       "missing_targets": [],
       "already_linked_targets": [
         "LLM"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "KV Cache",
+          "alias": "KV Cache",
+          "start": 531,
+          "end": 539,
+          "replacement": "[[KV Cache]]",
+          "line": 25,
+          "context": "- \"[[LLM 主题]]\" ---  # 14. KV Cache 是什么？Prompt Caching 的原理是什么？"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 2,
+      "unsafe_region_skips": 18,
       "unmatched_existing_targets": [
         "LLM 主题"
       ],
@@ -3099,20 +3126,35 @@
       "has_related_section": true,
       "related_targets": [
         "LLM",
+        "Multi-Head Attention",
+        "KV Cache",
         "LLM 主题"
       ],
       "existing_targets": [
         "LLM",
+        "Multi-Head Attention",
+        "KV Cache",
         "LLM 主题"
       ],
       "missing_targets": [],
       "already_linked_targets": [
         "LLM"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "KV Cache",
+          "alias": "KV Cache",
+          "start": 1857,
+          "end": 1865,
+          "replacement": "[[KV Cache]]",
+          "line": 69,
+          "context": "所有 token 保存自己的 K 和 V 矩阵，这就是 KV Cache。头数越多、序列越长，显存占用越夸张。一个 7B 模型跑"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 2,
+      "unsafe_region_skips": 7,
       "unmatched_existing_targets": [
+        "Multi-Head Attention",
         "LLM 主题"
       ],
       "request_meta_hits": [],
@@ -3224,19 +3266,42 @@
       "has_related_section": true,
       "related_targets": [
         "LLM",
-        "LLM 主题"
+        "LLM 主题",
+        "Prompt",
+        "Prompt Engineering"
       ],
       "existing_targets": [
         "LLM",
-        "LLM 主题"
+        "LLM 主题",
+        "Prompt",
+        "Prompt Engineering"
       ],
       "missing_targets": [],
       "already_linked_targets": [
         "LLM"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "Prompt",
+          "alias": "Prompt",
+          "start": 553,
+          "end": 559,
+          "replacement": "[[Prompt]]",
+          "line": 26,
+          "context": "ineering]]\" ---  # 16. 如何写好 Prompt？分享下 Prompt 工程实践经验？  原始链接：ht"
+        },
+        {
+          "target": "Prompt Engineering",
+          "alias": "Prompt 工程",
+          "start": 564,
+          "end": 573,
+          "replacement": "[[Prompt Engineering|Prompt 工程]]",
+          "line": 26,
+          "context": "---  # 16. 如何写好 Prompt？分享下 Prompt 工程实践经验？  原始链接：https://xiaolinn"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 2,
+      "unsafe_region_skips": 26,
       "unmatched_existing_targets": [
         "LLM 主题"
       ],
@@ -3249,19 +3314,31 @@
       "has_related_section": true,
       "related_targets": [
         "LLM",
+        "KV Cache",
         "LLM 主题"
       ],
       "existing_targets": [
         "LLM",
+        "KV Cache",
         "LLM 主题"
       ],
       "missing_targets": [],
       "already_linked_targets": [
         "LLM"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "KV Cache",
+          "alias": "KV Cache",
+          "start": 2985,
+          "end": 2993,
+          "replacement": "[[KV Cache]]",
+          "line": 105,
+          "context": "一个 70B 模型光权重就要 140GB，加上推理时的 KV Cache、激活值、优化器状态，至少需要 4 张 A100 80G"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 2,
+      "unsafe_region_skips": 6,
       "unmatched_existing_targets": [
         "LLM 主题"
       ],
@@ -4457,7 +4534,8 @@
         "Prompt",
         "Token",
         "Transformer",
-        "LLM"
+        "LLM",
+        "Agent Robustness"
       ],
       "existing_targets": [
         "Prompt Injection",
@@ -4477,7 +4555,8 @@
         "Prompt",
         "Token",
         "Transformer",
-        "LLM"
+        "LLM",
+        "Agent Robustness"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -4489,9 +4568,19 @@
         "Token",
         "LLM"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "Agent Robustness",
+          "alias": "规划与推理的鲁棒性",
+          "start": 2495,
+          "end": 2504,
+          "replacement": "[[Agent Robustness|规划与推理的鲁棒性]]",
+          "line": 88,
+          "context": "。我认为最主要的挑战可以归结为以下几点：   1. **规划与推理的鲁棒性 (Robustness of Planning and"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 27,
+      "unsafe_region_skips": 29,
       "unmatched_existing_targets": [
         "Indirect Prompt Injection",
         "Guardrails",
@@ -8130,6 +8219,7 @@
         "Evaluation",
         "RAG Citation Faithfulness",
         "Token",
+        "TTL",
         "Agent 主题"
       ],
       "existing_targets": [
@@ -8147,6 +8237,7 @@
         "Evaluation",
         "RAG Citation Faithfulness",
         "Token",
+        "TTL",
         "Agent 主题"
       ],
       "missing_targets": [],
@@ -8158,9 +8249,19 @@
         "Agent",
         "Token"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "TTL",
+          "alias": "TTL",
+          "start": 2582,
+          "end": 2585,
+          "replacement": "[[TTL]]",
+          "line": 92,
+          "context": "3. **记忆有生命周期**     来源/时间/版本/TTL，长期不命中自动降权或清理，避免旧噪声长期污染。 2."
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 18,
+      "unsafe_region_skips": 20,
       "unmatched_existing_targets": [
         "Trace",
         "Observability",
@@ -8282,6 +8383,7 @@
         "Long-term Memory",
         "Memory",
         "Agent State",
+        "TTL",
         "Agent",
         "Agent 主题"
       ],
@@ -8289,6 +8391,7 @@
         "Long-term Memory",
         "Memory",
         "Agent State",
+        "TTL",
         "Agent",
         "Agent 主题"
       ],
@@ -8298,10 +8401,11 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 19,
+      "unsafe_region_skips": 21,
       "unmatched_existing_targets": [
         "Memory",
         "Agent State",
+        "TTL",
         "Agent",
         "Agent 主题"
       ],
@@ -8772,6 +8876,7 @@
         "Task Success Rate",
         "RAG",
         "Context Engineering",
+        "Prompt Engineering",
         "Agent",
         "Observability",
         "Top-K",
@@ -8785,6 +8890,7 @@
         "Task Success Rate",
         "RAG",
         "Context Engineering",
+        "Prompt Engineering",
         "Agent",
         "Observability",
         "Top-K",
@@ -8796,13 +8902,23 @@
       "already_linked_targets": [
         "Task Success Rate",
         "RAG",
+        "Prompt Engineering",
         "Top-K",
-        "Prompt",
         "Token"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "Prompt",
+          "alias": "Prompt",
+          "start": 1195,
+          "end": 1201,
+          "replacement": "[[Prompt]]",
+          "line": 43,
+          "context": "# [[Prompt Engineering]] 及 Prompt 优化策略有哪些？  原始仓库：<https://git"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 18,
+      "unsafe_region_skips": 23,
       "unmatched_existing_targets": [
         "Evaluation",
         "Benchmark",
@@ -8824,6 +8940,7 @@
         "Task Success Rate",
         "RAG",
         "Context Engineering",
+        "Prompt Engineering",
         "LLM Training Pipeline",
         "LLM",
         "Agent",
@@ -8838,6 +8955,7 @@
         "Task Success Rate",
         "RAG",
         "Context Engineering",
+        "Prompt Engineering",
         "LLM Training Pipeline",
         "LLM",
         "Agent",
@@ -8849,11 +8967,21 @@
       "missing_targets": [],
       "already_linked_targets": [
         "RAG",
-        "Prompt"
+        "Prompt Engineering"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "Prompt",
+          "alias": "Prompt",
+          "start": 2046,
+          "end": 2052,
+          "replacement": "[[Prompt]]",
+          "line": 74,
+          "context": "ing 和微调策略如何协同？  答： 两者不是替代关系。Prompt 负责一次交互的快速约束行为和流程编排，微调负责模型长期"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 32,
+      "unsafe_region_skips": 37,
       "unmatched_existing_targets": [
         "Evaluation",
         "Benchmark",
@@ -8930,6 +9058,7 @@
         "RAG Evaluation",
         "Top-K",
         "Context Window",
+        "Prompt Engineering",
         "Prompt",
         "Hallucination",
         "Token"
@@ -8952,6 +9081,7 @@
         "RAG Evaluation",
         "Top-K",
         "Context Window",
+        "Prompt Engineering",
         "Prompt",
         "Hallucination",
         "Token"
@@ -8966,13 +9096,13 @@
         "Tool Calling",
         "Top-K",
         "Context Window",
-        "Prompt",
+        "Prompt Engineering",
         "Hallucination",
         "Token"
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 20,
+      "unsafe_region_skips": 25,
       "unmatched_existing_targets": [
         "Evaluation",
         "Benchmark",
@@ -8982,7 +9112,8 @@
         "Observation",
         "Trace",
         "Observability",
-        "RAG Evaluation"
+        "RAG Evaluation",
+        "Prompt"
       ],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -8994,25 +9125,28 @@
       "related_targets": [
         "Context Engineering",
         "Agent",
+        "Prompt Engineering",
         "Prompt",
         "Agent 主题"
       ],
       "existing_targets": [
         "Context Engineering",
         "Agent",
+        "Prompt Engineering",
         "Prompt",
         "Agent 主题"
       ],
       "missing_targets": [],
       "already_linked_targets": [
         "Context Engineering",
-        "Prompt"
+        "Prompt Engineering"
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 6,
+      "unsafe_region_skips": 11,
       "unmatched_existing_targets": [
         "Agent",
+        "Prompt",
         "Agent 主题"
       ],
       "request_meta_hits": [],
@@ -9419,6 +9553,7 @@
         "RAG Evaluation",
         "Top-K",
         "Context Window",
+        "Prompt Engineering",
         "Prompt",
         "Hallucination",
         "Token"
@@ -9441,6 +9576,7 @@
         "RAG Evaluation",
         "Top-K",
         "Context Window",
+        "Prompt Engineering",
         "Prompt",
         "Hallucination",
         "Token"
@@ -9455,13 +9591,13 @@
         "Tool Calling",
         "Top-K",
         "Context Window",
-        "Prompt",
+        "Prompt Engineering",
         "Hallucination",
         "Token"
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 20,
+      "unsafe_region_skips": 25,
       "unmatched_existing_targets": [
         "Evaluation",
         "Benchmark",
@@ -9471,7 +9607,8 @@
         "Observation",
         "Trace",
         "Observability",
-        "RAG Evaluation"
+        "RAG Evaluation",
+        "Prompt"
       ],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -10735,7 +10872,8 @@
         "Tool Calling",
         "Tool Use",
         "Agent",
-        "LLM"
+        "LLM",
+        "Agent Robustness"
       ],
       "existing_targets": [
         "Evaluation",
@@ -10745,7 +10883,8 @@
         "Tool Calling",
         "Tool Use",
         "Agent",
-        "LLM"
+        "LLM",
+        "Agent Robustness"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -10758,10 +10897,11 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 4,
+      "unsafe_region_skips": 6,
       "unmatched_existing_targets": [
         "Agent State",
-        "Tool Use"
+        "Tool Use",
+        "Agent Robustness"
       ],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -10775,6 +10915,7 @@
         "Code Execution Sandbox",
         "Evaluation",
         "Benchmark",
+        "Agent Robustness",
         "Task Success Rate",
         "GraphRAG",
         "Neo4j",
@@ -10787,6 +10928,7 @@
         "Code Execution Sandbox",
         "Evaluation",
         "Benchmark",
+        "Agent Robustness",
         "Task Success Rate",
         "GraphRAG",
         "Neo4j",
@@ -10803,9 +10945,10 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 12,
+      "unsafe_region_skips": 14,
       "unmatched_existing_targets": [
         "Code Execution Sandbox",
+        "Agent Robustness",
         "Task Success Rate",
         "GraphRAG",
         "Neo4j",
@@ -10859,7 +11002,8 @@
         "Tool Use",
         "Durable Execution",
         "Planning",
-        "Agent"
+        "Agent",
+        "Agent Robustness"
       ],
       "existing_targets": [
         "Evaluation",
@@ -10871,7 +11015,8 @@
         "Tool Use",
         "Durable Execution",
         "Planning",
-        "Agent"
+        "Agent",
+        "Agent Robustness"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -10883,13 +11028,14 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 10,
+      "unsafe_region_skips": 12,
       "unmatched_existing_targets": [
         "Benchmark",
         "Task Success Rate",
         "Retriever",
         "Tool Use",
-        "Durable Execution"
+        "Durable Execution",
+        "Agent Robustness"
       ],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -11105,14 +11251,16 @@
         "Benchmark",
         "Task Success Rate",
         "Planning",
-        "Agent"
+        "Agent",
+        "Agent Robustness"
       ],
       "existing_targets": [
         "Evaluation",
         "Benchmark",
         "Task Success Rate",
         "Planning",
-        "Agent"
+        "Agent",
+        "Agent Robustness"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -11122,10 +11270,11 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 4,
+      "unsafe_region_skips": 8,
       "unmatched_existing_targets": [
         "Benchmark",
-        "Agent"
+        "Agent",
+        "Agent Robustness"
       ],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -11138,13 +11287,15 @@
         "Evaluation",
         "Benchmark",
         "Task Success Rate",
-        "Agent"
+        "Agent",
+        "Agent Robustness"
       ],
       "existing_targets": [
         "Evaluation",
         "Benchmark",
         "Task Success Rate",
-        "Agent"
+        "Agent",
+        "Agent Robustness"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -11152,11 +11303,12 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 10,
+      "unsafe_region_skips": 14,
       "unmatched_existing_targets": [
         "Evaluation",
         "Benchmark",
-        "Agent"
+        "Agent",
+        "Agent Robustness"
       ],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -11249,14 +11401,16 @@
         "Benchmark",
         "Task Success Rate",
         "Planning",
-        "Agent"
+        "Agent",
+        "Agent Robustness"
       ],
       "existing_targets": [
         "Evaluation",
         "Benchmark",
         "Task Success Rate",
         "Planning",
-        "Agent"
+        "Agent",
+        "Agent Robustness"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -11266,10 +11420,11 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 4,
+      "unsafe_region_skips": 8,
       "unmatched_existing_targets": [
         "Benchmark",
-        "Agent"
+        "Agent",
+        "Agent Robustness"
       ],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -11501,13 +11656,15 @@
         "Agent Loop",
         "Agent",
         "LLM",
-        "Guardrails"
+        "Guardrails",
+        "Agent Robustness"
       ],
       "existing_targets": [
         "Agent Loop",
         "Agent",
         "LLM",
-        "Guardrails"
+        "Guardrails",
+        "Agent Robustness"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -11517,9 +11674,10 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 2,
+      "unsafe_region_skips": 4,
       "unmatched_existing_targets": [
-        "Agent Loop"
+        "Agent Loop",
+        "Agent Robustness"
       ],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -12293,7 +12451,8 @@
         "RAG",
         "Agent Framework",
         "Planning",
-        "Agent"
+        "Agent",
+        "Agent Robustness"
       ],
       "existing_targets": [
         "Evaluation",
@@ -12302,7 +12461,8 @@
         "RAG",
         "Agent Framework",
         "Planning",
-        "Agent"
+        "Agent",
+        "Agent Robustness"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -12315,9 +12475,10 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 2,
+      "unsafe_region_skips": 4,
       "unmatched_existing_targets": [
-        "Benchmark"
+        "Benchmark",
+        "Agent Robustness"
       ],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -13788,16 +13949,30 @@
       "path": "agentic learning/raw/repos/agent_java_offer/questions/272 02_后端 02_Redis 缓存穿透如何处理？.md",
       "root": "agent_java_offer",
       "has_related_section": true,
-      "related_targets": [],
-      "existing_targets": [],
+      "related_targets": [
+        "TTL"
+      ],
+      "existing_targets": [
+        "TTL"
+      ],
       "missing_targets": [],
       "already_linked_targets": [],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "TTL",
+          "alias": "TTL",
+          "start": 1761,
+          "end": 1764,
+          "replacement": "[[TTL]]",
+          "line": 58,
+          "context": "che）当 DB 查不到时，把空结果也写入缓存，设置短 TTL（如 30s~120s）。防止同一个不存在 key 被反"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 0,
+      "unsafe_region_skips": 2,
       "unmatched_existing_targets": [],
       "request_meta_hits": [],
-      "no_match_reason": "no body concept links found"
+      "no_match_reason": null
     },
     {
       "path": "agentic learning/raw/repos/agent_java_offer/questions/273 02_后端 02_Redis 布隆过滤器是什么.md",
@@ -13818,16 +13993,30 @@
       "path": "agentic learning/raw/repos/agent_java_offer/questions/274 02_后端 02_Redis 缓存雪崩如何处理？.md",
       "root": "agent_java_offer",
       "has_related_section": true,
-      "related_targets": [],
-      "existing_targets": [],
+      "related_targets": [
+        "TTL"
+      ],
+      "existing_targets": [
+        "TTL"
+      ],
       "missing_targets": [],
       "already_linked_targets": [],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "TTL",
+          "alias": "TTL",
+          "start": 1447,
+          "end": 1450,
+          "replacement": "[[TTL]]",
+          "line": 53,
+          "context": "预防和止血两层。  预防层（减少同一时刻失效）  1. TTL 随机抖动：  - 不要都设 30 分钟，改成 `30m"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 0,
+      "unsafe_region_skips": 2,
       "unmatched_existing_targets": [],
       "request_meta_hits": [],
-      "no_match_reason": "no body concept links found"
+      "no_match_reason": null
     },
     {
       "path": "agentic learning/raw/repos/agent_java_offer/questions/275 02_后端 02_Redis 大 key 风险？.md",
@@ -14356,16 +14545,30 @@
       "path": "agentic learning/raw/repos/agent_java_offer/questions/305 02_后端 05_缓存与一致性 缓存穿透如何处理？.md",
       "root": "agent_java_offer",
       "has_related_section": true,
-      "related_targets": [],
-      "existing_targets": [],
+      "related_targets": [
+        "TTL"
+      ],
+      "existing_targets": [
+        "TTL"
+      ],
       "missing_targets": [],
       "already_linked_targets": [],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "TTL",
+          "alias": "TTL",
+          "start": 1853,
+          "end": 1856,
+          "replacement": "[[TTL]]",
+          "line": 57,
+          "context": "che）当 DB 查不到时，把空结果也写入缓存，设置短 TTL（如 30s~120s）。防止同一个不存在 key 被反"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 0,
+      "unsafe_region_skips": 2,
       "unmatched_existing_targets": [],
       "request_meta_hits": [],
-      "no_match_reason": "no body concept links found"
+      "no_match_reason": null
     },
     {
       "path": "agentic learning/raw/repos/agent_java_offer/questions/306 02_后端 05_缓存与一致性 布隆过滤器是什么.md",
@@ -14386,16 +14589,30 @@
       "path": "agentic learning/raw/repos/agent_java_offer/questions/307 02_后端 05_缓存与一致性 缓存雪崩如何处理？.md",
       "root": "agent_java_offer",
       "has_related_section": true,
-      "related_targets": [],
-      "existing_targets": [],
+      "related_targets": [
+        "TTL"
+      ],
+      "existing_targets": [
+        "TTL"
+      ],
       "missing_targets": [],
       "already_linked_targets": [],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "TTL",
+          "alias": "TTL",
+          "start": 1539,
+          "end": 1542,
+          "replacement": "[[TTL]]",
+          "line": 52,
+          "context": "预防和止血两层。  预防层（减少同一时刻失效）  1. TTL 随机抖动：  - 不要都设 30 分钟，改成 `30m"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 0,
+      "unsafe_region_skips": 2,
       "unmatched_existing_targets": [],
       "request_meta_hits": [],
-      "no_match_reason": "no body concept links found"
+      "no_match_reason": null
     },
     {
       "path": "agentic learning/raw/repos/agent_java_offer/questions/308 02_后端 05_缓存与一致性 分布式锁如何安全释放？.md",
@@ -18083,7 +18300,8 @@
         "Human-in-the-loop",
         "Audit Log",
         "Trace",
-        "Observability"
+        "Observability",
+        "Agent Robustness"
       ],
       "existing_targets": [
         "Prompt Injection",
@@ -18095,7 +18313,8 @@
         "Human-in-the-loop",
         "Audit Log",
         "Trace",
-        "Observability"
+        "Observability",
+        "Agent Robustness"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -18107,13 +18326,14 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 13,
+      "unsafe_region_skips": 15,
       "unmatched_existing_targets": [
         "Prompt Injection",
         "Indirect Prompt Injection",
         "Guardrails",
         "Tool Permissioning",
-        "Approval Gate"
+        "Approval Gate",
+        "Agent Robustness"
       ],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -18278,11 +18498,13 @@
       "has_related_section": true,
       "related_targets": [
         "RAG",
+        "TTL",
         "LLM",
         "LLM 主题"
       ],
       "existing_targets": [
         "RAG",
+        "TTL",
         "LLM",
         "LLM 主题"
       ],
@@ -18290,9 +18512,10 @@
       "already_linked_targets": [],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 8,
+      "unsafe_region_skips": 10,
       "unmatched_existing_targets": [
         "RAG",
+        "TTL",
         "LLM",
         "LLM 主题"
       ],

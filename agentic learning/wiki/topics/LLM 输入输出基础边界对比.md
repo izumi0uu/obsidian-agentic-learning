@@ -8,12 +8,13 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-16
+updated: 2026-05-17
 source:
   - "[[LLM]]"
   - "[[Token]]"
   - "[[Context Window]]"
   - "[[Prompt]]"
+  - "[[Prompt Engineering]]"
   - "[[Hallucination]]"
   - "[[Attention Is All You Need]]"
 evidence:
@@ -21,18 +22,20 @@ evidence:
   - "[[Token#证据锚点]]"
   - "[[Context Window#证据锚点]]"
   - "[[Prompt#证据锚点]]"
+  - "[[Prompt Engineering#证据锚点]]"
   - "[[Hallucination#证据锚点]]"
 related:
   - "[[LLM 主题]]"
   - "[[LLM 基础结构对比]]"
   - "[[Context Engineering]]"
+  - "[[Prompt Engineering]]"
 ---
 
 # LLM 输入输出基础边界对比
 
 ## 一句话总览
 
-LLM 输入输出的基础边界可以用四个词切开：[[Token]] 是模型读写的离散单位，[[Context Window]] 是一次调用能容纳的 token 边界，[[Prompt]] 是给模型的任务/上下文/约束组合，[[Hallucination]] 是输出与事实或证据不一致的失败结果。
+LLM 输入输出的基础边界可以用五个词切开：[[Token]] 是模型读写的离散单位，[[Context Window]] 是一次调用能容纳的 token 边界，[[Prompt]] 是给模型的任务/上下文/约束组合，[[Prompt Engineering]] 是让 prompt 可设计、可测试、可版本化的工程实践，[[Hallucination]] 是输出与事实或证据不一致的失败结果。
 
 ## 为什么这组值得对比
 
@@ -54,8 +57,9 @@ text / tool results / memory / retrieved docs
 | [[Token]] | 输入/输出的计量和建模单位 | 模型实际读写的离散片段是什么？ | token = 单词/字符；token 多就一定懂更多 | [[Token#证据锚点]] |
 | [[Context Window]] | 单次调用的上下文容量边界 | 这轮最多能放多少输入和生成多少输出？ | 长上下文 = 长期记忆；塞进去就会被正确使用 | [[Context Window#证据锚点]] |
 | [[Prompt]] | 输入组织和任务约束层 | 我怎样告诉模型任务、角色、证据和格式？ | prompt = 魔法咒语；prompt 可替代工具/状态/评估 | [[Prompt#证据锚点]] |
+| [[Prompt Engineering]] | 输入组织的工程实践层 | 怎样设计、测试、版本化和回滚 prompt？ | 等于 prompt 本身；只靠技巧不用评测 | [[Prompt Engineering#证据锚点]] |
 | [[Hallucination]] | 输出失败形态 | 输出是否与事实、证据或上下文不一致？ | 有 RAG/引用就不会幻觉；流畅就可信 | [[Hallucination#证据锚点]] |
-| [[Context Engineering]] | 多来源上下文编排 | 哪些信息应进入 prompt，按什么顺序和边界？ | 等于 prompt engineering；只追求越多越好 | [[Context Engineering#证据锚点]] |
+| [[Context Engineering]] | 多来源上下文编排 | 哪些信息应进入 prompt，按什么顺序和边界？ | 等于 Prompt Engineering；只追求越多越好 | [[Context Engineering#证据锚点]] |
 
 ## 最容易混淆的边界
 
@@ -67,9 +71,9 @@ text / tool results / memory / retrieved docs
 
 [[Context Window]] 是本次调用的容量限制；[[Memory]] 是跨轮保存和检索信息的系统机制。把历史全塞进长上下文不是 memory strategy，也不保证模型会优先使用正确片段。
 
-### Prompt vs Context Engineering
+### Prompt vs Prompt Engineering vs Context Engineering
 
-[[Prompt]] 是输入文本/消息里的任务指令、上下文和格式约束；[[Context Engineering]] 是更大的工程问题，决定从 RAG、tools、memory、trace、policy 中选什么放入 prompt。prompt 是载体，context engineering 是装配策略。
+[[Prompt]] 是输入文本/消息里的任务指令、上下文和格式约束；[[Prompt Engineering]] 是围绕 prompt 的设计、测试、版本化和优化实践；[[Context Engineering]] 是更大的工程问题，决定从 RAG、tools、memory、trace、policy 中选什么放入 prompt。prompt 是载体，prompt engineering 是输入层工程实践，context engineering 是运行时装配策略。
 
 ### Hallucination vs Citation Faithfulness
 
@@ -96,7 +100,7 @@ text / tool results / memory / retrieved docs
 
 ## 现代系统如何吸收或限制
 
-现代 Agent / RAG 系统把这些基础边界工程化：token 用于预算、延迟和截断控制；context window 用于决定摘要、检索和 memory 投影策略；prompt 被拆成 system/developer/user/tool/result 等消息边界；hallucination 用 RAG、tool calling、citation check、eval harness 和 human review 降低风险。现代性状态是 **foundation + current-practice**：概念本身是地基，围绕长上下文、自动上下文压缩和 faithfulness judge 的产品能力仍是 watch。
+现代 Agent / RAG 系统把这些基础边界工程化：token 用于预算、延迟和截断控制；context window 用于决定摘要、检索和 memory 投影策略；prompt 被拆成 system/developer/user/tool/result 等消息边界；prompt engineering 把模板版本、测试样例、指标和回滚纳入流程；hallucination 用 RAG、tool calling、citation check、eval harness 和 human review 降低风险。现代性状态是 **foundation + current-practice**：概念本身是地基，围绕长上下文、自动上下文压缩和 faithfulness judge 的产品能力仍是 watch。
 
 工程综合 / inference：很多“模型不听话”其实不是模型能力单点问题，而是 token 预算、上下文排序、prompt 权限、证据缺失和评估缺口共同造成的系统问题。
 
@@ -117,7 +121,7 @@ text / tool results / memory / retrieved docs
 
 ## 证据锚点
 
-- 概念卡：[[LLM#证据锚点]], [[Token#证据锚点]], [[Context Window#证据锚点]], [[Prompt#证据锚点]], [[Hallucination#证据锚点]], [[Context Engineering#证据锚点]], [[RAG Citation Faithfulness#证据锚点]]。
+- 概念卡：[[LLM#证据锚点]], [[Token#证据锚点]], [[Context Window#证据锚点]], [[Prompt#证据锚点]], [[Prompt Engineering#证据锚点]], [[Hallucination#证据锚点]], [[Context Engineering#证据锚点]], [[RAG Citation Faithfulness#证据锚点]]。
 - source notes：[[Attention Is All You Need]], [[OpenAI - A Practical Guide to Building Agents]], [[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]]。
 - 主题锚点：[[LLM 基础结构对比#证据锚点]], [[RAG 可靠性与治理对比#证据锚点]]。
 - 证据边界：本页是学习边界页；tokenization、context size 和消息角色的具体 API 细节会随模型/供应商变化，需要看官方文档。
@@ -128,7 +132,7 @@ text / tool results / memory / retrieved docs
 ## 复习触发
 
 1. 为什么“token 多”和“上下文窗口大”都不等于模型会正确使用证据？
-2. Prompt 和 Context Engineering 的边界是什么？哪个负责“选什么资料放进去”？
+2. Prompt、Prompt Engineering 和 Context Engineering 的边界是什么？哪个负责“选什么资料放进去”？
 3. 一个带引用的 RAG 答案仍然可能 hallucinate 吗？如何检查？
 
 ## 相关链接
@@ -138,6 +142,7 @@ text / tool results / memory / retrieved docs
 - [[Token]]
 - [[Context Window]]
 - [[Prompt]]
+- [[Prompt Engineering]]
 - [[Hallucination]]
 - [[Context Engineering]]
 - [[RAG Citation Faithfulness]]

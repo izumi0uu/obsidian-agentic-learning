@@ -1,23 +1,23 @@
 # Concept Hierarchy Placement Review — 层级归属待审计概念卡
 
-Generated: `2026-05-17T13:39:51Z`
+Generated: `2026-05-18T02:30:06Z`
 Classification stage: `audit_closure`
 
 > Audit closure: remaining `defer_boundary_review` rows are closed as `deferred_with_backlog`; no concept cards are edited and no fallback parents are invented.
 
 ## Summary
 
-- total_concepts: 132
-- reviewed_concepts: 132
+- total_concepts: 136
+- reviewed_concepts: 136
 - taxonomy_placement_unreviewed: 0
 - concepts_with_up: 37
-- concepts_without_up: 95
-- concepts_with_candidate_basis: 56
-- candidate_basis_rows: 68
+- concepts_without_up: 99
+- concepts_with_candidate_basis: 59
+- candidate_basis_rows: 72
 - known_forbidden_candidate_pairs: 2
 - accepted_taxonomy: 0
 - root_or_anchor_no_up: 19
-- relation_only_terminal: 48
+- relation_only_terminal: 52
 - weak_or_backlog_terminal: 4
 - defer_boundary_review: 22
 - open_unclassified: 0
@@ -25,8 +25,8 @@ Classification stage: `audit_closure`
 - open_writeback: 0
 - dry_run_planned: 0
 - write_policy: Audit closure only. Remaining defer_boundary_review rows are closed as deferred_with_backlog and no concept-card fields are written.
-- decision_counts: `{"already_has_up_reviewed": 37, "defer_boundary_review": 22, "reject_taxonomy": 2, "relation_only_terminal": 48, "root_or_anchor_no_up": 19, "weak_or_backlog_terminal": 4}`
-- review_status_counts: `{"deferred_with_backlog": 22, "terminal_non_writeback": 110}`
+- decision_counts: `{"already_has_up_reviewed": 37, "defer_boundary_review": 22, "reject_taxonomy": 2, "relation_only_terminal": 52, "root_or_anchor_no_up": 19, "weak_or_backlog_terminal": 4}`
+- review_status_counts: `{"deferred_with_backlog": 22, "terminal_non_writeback": 114}`
 - parent_whitelist_reviewed: True
 - stable_parent_whitelist_approved: 14
 - proposed_parent_anchors_not_auto_approved: 3
@@ -111,7 +111,7 @@ Classification stage: `audit_closure`
 - [[Data Exfiltration]]
 - [[Entity Resolution]]
 - [[GUI Grounding]]
-- [[HyDE]]
+- [[KV Cache]]
 - [[Least Privilege Tools]]
 - [[MCP]]
 - [[MCP Registry]]
@@ -132,12 +132,13 @@ Classification stage: `audit_closure`
 - [[Approval Gate]]
 - [[ReAct]]
 
-### relation_only_terminal (48)
+### relation_only_terminal (52)
 
 - [[Agent Control Plane]]
 - [[Agent Harness]]
 - [[Agent Lifecycle Hook]]
 - [[Agent Loop]]
+- [[Agent Robustness]]
 - [[Agent State]]
 - [[Agent Workflow Static Verification]]
 - [[Benchmark]]
@@ -152,6 +153,7 @@ Classification stage: `audit_closure`
 - [[Handoff]]
 - [[Hermes Agent]]
 - [[Human-in-the-loop]]
+- [[HyDE]]
 - [[Indirect Prompt Injection]]
 - [[LLM Gateway]]
 - [[LLM Training Pipeline]]
@@ -161,6 +163,7 @@ Classification stage: `audit_closure`
 - [[OpenTelemetry GenAI]]
 - [[Patch Validation]]
 - [[Plan-and-Solve Prompting]]
+- [[Prompt Engineering]]
 - [[Provider-first Agent SDK]]
 - [[Query Planning]]
 - [[RAG Access Control]]
@@ -173,6 +176,7 @@ Classification stage: `audit_closure`
 - [[Role-playing Agent]]
 - [[State Graph Runtime]]
 - [[TF-IDF]]
+- [[TTL]]
 - [[Task Success Rate]]
 - [[Tool Permissioning]]
 - [[Tool Poisoning]]
@@ -294,7 +298,7 @@ Parent-whitelist review fixes the candidate-generation boundary. An approved par
 | [[Data Exfiltration]] | remain_deferred |  | Security risk card; no approved security-risk parent exists and Prompt is not a safe parent. |
 | [[Entity Resolution]] | remain_deferred |  | May support Knowledge Graph or retrieval, but support/use is not strict taxonomy. |
 | [[GUI Grounding]] | remain_deferred |  | Computer-use/grounding capability; no approved grounding or computer-use parent exists. |
-| [[HyDE]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
+| [[KV Cache]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
 | [[Least Privilege Tools]] | remain_deferred |  | Tool safety/policy principle; related to Tool Use but not automatically a kind of Tool Use. |
 | [[MCP]] | remain_deferred |  | Protocol/root ecosystem card; no approved protocol parent exists. |
 | [[MCP Registry]] | remain_deferred |  | Registry/ecosystem component likely belongs near MCP, but MCP is not yet an approved parent. |
@@ -419,8 +423,8 @@ Apply artifact:
 
 Audit closure closes the whole concept hierarchy placement audit by routing every remaining deferred row to a durable backlog home. It does not add `up`; future changes must reopen a new candidate/adjudication/dry-run/limited-apply cycle.
 
-- total_concepts: 132
-- reviewed_concepts: 132
+- total_concepts: 136
+- reviewed_concepts: 136
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0
@@ -448,7 +452,7 @@ Closure artifact:
 | [[Data Exfiltration]] | [[Prompt]] | security_risk_not_prompt | Security risk card; no approved security-risk parent exists and Prompt is not a safe parent. |
 | [[Entity Resolution]] | [[Knowledge Graph]] | supports_graph_not_graph | May support Knowledge Graph or retrieval, but support/use is not strict taxonomy. |
 | [[GUI Grounding]] | [[Agent]] | capability_not_broad_agent_parent | Computer-use/grounding capability; no approved grounding or computer-use parent exists. |
-| [[HyDE]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
+| [[KV Cache]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
 | [[Least Privilege Tools]] | [[Tool Use]] | policy_principle_not_tool_behavior | Tool safety/policy principle; related to Tool Use but not automatically a kind of Tool Use. |
 | [[MCP]] | [[Tool Use]] | protocol_not_tool_behavior | Protocol/root ecosystem card; no approved protocol parent exists. |
 | [[MCP Registry]] | [[MCP]] | unapproved_parent | Registry/ecosystem component likely belongs near MCP, but MCP is not yet an approved parent. |
@@ -519,6 +523,7 @@ Closure artifact:
 | [[Agent Harness]] | relation_only_terminal |  | 1 | 2 |
 | [[Agent Lifecycle Hook]] | relation_only_terminal |  | 1 | 2 |
 | [[Agent Loop]] | relation_only_terminal |  | 1 | 2 |
+| [[Agent Robustness]] | relation_only_terminal |  | 1 | 1 |
 | [[Agent State]] | relation_only_terminal |  | 2 | 4 |
 | [[Agent Workflow]] | root_or_anchor_no_up |  | 0 | 0 |
 | [[Agent Workflow Static Verification]] | relation_only_terminal |  | 2 | 4 |
@@ -544,8 +549,9 @@ Closure artifact:
 | [[Handoff]] | relation_only_terminal | [[Agent Workflow]] | 1 | 1 |
 | [[Hermes Agent]] | relation_only_terminal |  | 1 | 2 |
 | [[Human-in-the-loop]] | relation_only_terminal | [[Agent Workflow]] | 1 | 1 |
-| [[HyDE]] | defer_boundary_review |  | 1 | 3 |
+| [[HyDE]] | relation_only_terminal |  | 1 | 2 |
 | [[Indirect Prompt Injection]] | relation_only_terminal |  | 1 | 2 |
+| [[KV Cache]] | defer_boundary_review |  | 0 | 2 |
 | [[Knowledge Graph]] | root_or_anchor_no_up |  | 1 | 1 |
 | [[LLM]] | root_or_anchor_no_up |  | 0 | 0 |
 | [[LLM Gateway]] | relation_only_terminal |  | 1 | 2 |
@@ -569,6 +575,7 @@ Closure artifact:
 | [[Policy Engine]] | defer_boundary_review |  | 0 | 3 |
 | [[Positional Encoding]] | defer_boundary_review |  | 0 | 3 |
 | [[Prompt]] | root_or_anchor_no_up |  | 0 | 0 |
+| [[Prompt Engineering]] | relation_only_terminal |  | 1 | 2 |
 | [[Prompt Injection]] | defer_boundary_review |  | 0 | 3 |
 | [[Provider-first Agent SDK]] | relation_only_terminal |  | 1 | 2 |
 | [[Query Planning]] | relation_only_terminal |  | 1 | 2 |
@@ -590,6 +597,7 @@ Closure artifact:
 | [[State Graph Runtime]] | relation_only_terminal | [[Agent Workflow]] | 2 | 3 |
 | [[Step-back Prompting]] | defer_boundary_review |  | 0 | 2 |
 | [[TF-IDF]] | relation_only_terminal |  | 2 | 4 |
+| [[TTL]] | relation_only_terminal |  | 2 | 4 |
 | [[Task Success Rate]] | relation_only_terminal |  | 1 | 2 |
 | [[Token]] | root_or_anchor_no_up |  | 0 | 0 |
 | [[Tool Permissioning]] | relation_only_terminal | [[Tool Use]] | 1 | 1 |
@@ -617,6 +625,7 @@ Candidate basis is evidence for later adjudication, not an accepted parent.
 | [[Agent Harness]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | no |
 | [[Agent Lifecycle Hook]] | [[Observability]] | topic_family_review | low | frontmatter.related | no |
 | [[Agent Loop]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | no |
+| [[Agent Robustness]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | no |
 | [[Agent State]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | no |
 | [[Agent State]] | [[Memory]] | topic_family_review | low | frontmatter.related | no |
 | [[Agent Workflow Static Verification]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | no |
@@ -648,6 +657,7 @@ Candidate basis is evidence for later adjudication, not an accepted parent.
 | [[OpenTelemetry GenAI]] | [[Observability]] | topic_family_review | low | frontmatter.related | no |
 | [[Patch Validation]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | no |
 | [[Plan-and-Solve Prompting]] | [[Planning]] | topic_family_review | low | frontmatter.related | no |
+| [[Prompt Engineering]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | no |
 | [[Provider-first Agent SDK]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | no |
 | [[Query Planning]] | [[Retriever]] | topic_family_review | low | frontmatter.related | no |
 | [[Query Rewrite]] | [[Retriever]] | topic_family_review | low | frontmatter.related | no |
@@ -668,6 +678,8 @@ Candidate basis is evidence for later adjudication, not an accepted parent.
 | [[State Graph Runtime]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | no |
 | [[TF-IDF]] | [[RAG]] | topic_family_review | low | body wikilink | yes |
 | [[TF-IDF]] | [[Retriever]] | topic_family_review | low | frontmatter.related | yes |
+| [[TTL]] | [[Memory]] | topic_family_review | low | frontmatter.related | no |
+| [[TTL]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |
 | [[Task Success Rate]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | no |
 | [[Tool Permissioning]] | [[Tool Use]] | taxonomy_candidate | low | title/topic heuristic | no |
 | [[Tool Poisoning]] | [[Tool Use]] | taxonomy_candidate | low | title/topic heuristic | no |

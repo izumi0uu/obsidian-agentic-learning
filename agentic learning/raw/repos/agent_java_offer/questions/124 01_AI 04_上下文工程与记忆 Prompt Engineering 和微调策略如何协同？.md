@@ -31,6 +31,7 @@ related:
   - "[[Task Success Rate]]"
   - "[[RAG]]"
   - "[[Context Engineering]]"
+  - "[[Prompt Engineering]]"
   - "[[LLM Training Pipeline]]"
   - "[[LLM]]"
   - "[[Agent]]"
@@ -40,7 +41,7 @@ related:
   - "[[Agent 主题]]"
 ---
 
-# [[Prompt]] Engineering 和微调策略如何协同？
+# [[Prompt Engineering]] 和微调策略如何协同？
 
 原始仓库：<https://github.com/guoguo-tju/agent_java_offer>  
 原始文件：[docs/interview_prep/01_AI/04_上下文工程与记忆/01_核心问答.md](https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/04_%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B7%A5%E7%A8%8B%E4%B8%8E%E8%AE%B0%E5%BF%86/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md)  
@@ -56,6 +57,7 @@ related:
 - [[Task Success Rate]]
 - [[RAG]]
 - [[Context Engineering]]
+- [[Prompt Engineering]]
 - [[LLM Training Pipeline]]
 - [[LLM]]
 - [[Agent]]

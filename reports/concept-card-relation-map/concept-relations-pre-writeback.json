@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
   "artifact_type": "temporary_concept_relationship_map",
-  "generated_at": "2026-05-17T09:59:03Z",
+  "generated_at": "2026-05-17T14:35:00Z",
   "scope": {
     "concept_dir": "agentic learning/wiki/concepts",
     "temporary": true,
     "write_policy": "Do not write these candidates into concept cards without a separate review task."
   },
   "summary": {
-    "total_concepts": 130,
+    "total_concepts": 135,
     "edge_counts": {
-      "related_link": 709,
-      "body_link": 241,
+      "related_link": 753,
+      "body_link": 250,
       "taxonomy": 37,
       "typed_relation": 31
     },
@@ -29,13 +29,13 @@
       "composed_into": 2,
       "foundational_for": 1
     },
-    "concepts_without_up": 93,
+    "concepts_without_up": 98,
     "core_orphans": 0,
     "weakly_connected_concepts": 1,
-    "dangling_core_targets": 23,
-    "candidate_edges": 67,
+    "dangling_core_targets": 24,
+    "candidate_edges": 71,
     "taxonomy_candidates": 11,
-    "topic_family_review_signals": 56
+    "topic_family_review_signals": 60
   },
   "nodes": [
     {
@@ -418,6 +418,11 @@
         "Agentic RAG",
         "RAG",
         "Retriever",
+        "Query Rewrite",
+        "Query Planning",
+        "Multi-Query Retrieval",
+        "HyDE",
+        "Step-back Prompting",
         "Evaluation"
       ]
     },
@@ -703,7 +708,8 @@
         "LLM",
         "RAG",
         "Memory",
-        "Agent Harness"
+        "Agent Harness",
+        "Prompt Engineering"
       ]
     },
     {
@@ -1321,6 +1327,36 @@
       ]
     },
     {
+      "id": "HyDE",
+      "title": "HyDE",
+      "file": "agentic learning/wiki/concepts/HyDE.md",
+      "topics": [
+        "rag",
+        "retrieval",
+        "query"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "Hypothetical Document Embeddings",
+        "Hypothetical Document Embedding",
+        "假设文档嵌入",
+        "假想文档嵌入"
+      ],
+      "source_count": 4,
+      "evidence_count": 4,
+      "up": [],
+      "related": [
+        "Query Rewrite",
+        "Dense Retrieval",
+        "Embedding",
+        "Retriever",
+        "Multi-Query Retrieval",
+        "Step-back Prompting",
+        "RAG Evaluation"
+      ]
+    },
+    {
       "id": "Hybrid Search",
       "title": "Hybrid Search",
       "file": "agentic learning/wiki/concepts/Hybrid Search.md",
@@ -1376,6 +1412,38 @@
         "RAG",
         "Browser Agent",
         "Observation"
+      ]
+    },
+    {
+      "id": "KV Cache",
+      "title": "KV Cache",
+      "file": "agentic learning/wiki/concepts/KV Cache.md",
+      "topics": [
+        "llm",
+        "inference",
+        "context"
+      ],
+      "status": "growing",
+      "freshness": "watch",
+      "aliases": [
+        "Key-Value Cache",
+        "Key Value Cache",
+        "K/V Cache",
+        "K/V cache",
+        "KV cache",
+        "KV 缓存",
+        "键值缓存"
+      ],
+      "source_count": 5,
+      "evidence_count": 6,
+      "up": [],
+      "related": [
+        "LLM",
+        "Transformer",
+        "Self-Attention",
+        "Multi-Head Attention",
+        "Context Window",
+        "LLM 上下文限制与突破条件"
       ]
     },
     {
@@ -1752,7 +1820,11 @@
       "freshness": "stable",
       "aliases": [
         "Multi-Query",
+        "Multi-Query Expansion",
+        "Multi Query Expansion",
+        "MQE",
         "多 Query 扩展",
+        "多查询扩展",
         "多 Query 扩展召回",
         "多查询检索",
         "多查询召回",
@@ -1765,6 +1837,8 @@
       ],
       "related": [
         "Query Rewrite",
+        "HyDE",
+        "Step-back Prompting",
         "Retriever",
         "Multi-Route Retrieval",
         "Dense Retrieval",
@@ -2198,14 +2272,45 @@
       "status": "growing",
       "freshness": "stable",
       "aliases": [],
-      "source_count": 4,
-      "evidence_count": 4,
+      "source_count": 5,
+      "evidence_count": 5,
       "up": [],
       "related": [
         "LLM",
         "Token",
         "Context Window",
+        "Prompt Engineering",
         "Context Engineering",
+        "Prompt Injection"
+      ]
+    },
+    {
+      "id": "Prompt Engineering",
+      "title": "Prompt Engineering",
+      "file": "agentic learning/wiki/concepts/Prompt Engineering.md",
+      "topics": [
+        "llm",
+        "prompting",
+        "agent",
+        "evaluation"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "prompt engineering",
+        "Prompt 工程",
+        "提示词工程",
+        "提示工程"
+      ],
+      "source_count": 6,
+      "evidence_count": 6,
+      "up": [],
+      "related": [
+        "Prompt",
+        "Context Engineering",
+        "Evaluation",
+        "LLM Training Pipeline",
+        "RAG",
         "Prompt Injection"
       ]
     },
@@ -2272,6 +2377,8 @@
       "up": [],
       "related": [
         "Query Rewrite",
+        "Multi-Query Retrieval",
+        "Step-back Prompting",
         "Agentic Retrieval",
         "Agentic RAG",
         "Retriever"
@@ -2300,7 +2407,9 @@
         "Query Planning",
         "Agentic Retrieval",
         "Hybrid Search",
-        "Multi-Query Retrieval"
+        "Multi-Query Retrieval",
+        "HyDE",
+        "Step-back Prompting"
       ]
     },
     {
@@ -2809,6 +2918,39 @@
       ]
     },
     {
+      "id": "Step-back Prompting",
+      "title": "Step-back Prompting",
+      "file": "agentic learning/wiki/concepts/Step-back Prompting.md",
+      "topics": [
+        "rag",
+        "retrieval",
+        "prompting",
+        "reasoning"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "Step Back Prompting",
+        "step-back prompting",
+        "Step-back",
+        "Step Back",
+        "后退提问",
+        "后退一步提问"
+      ],
+      "source_count": 2,
+      "evidence_count": 2,
+      "up": [],
+      "related": [
+        "Query Rewrite",
+        "HyDE",
+        "Multi-Query Retrieval",
+        "Query Planning",
+        "Prompt",
+        "Plan-and-Solve Prompting",
+        "RAG Evaluation"
+      ]
+    },
+    {
       "id": "TF-IDF",
       "title": "TF-IDF",
       "file": "agentic learning/wiki/concepts/TF-IDF.md",
@@ -2833,6 +2975,37 @@
         "Top-K",
         "Reranking",
         "Vector Database"
+      ]
+    },
+    {
+      "id": "TTL",
+      "title": "TTL",
+      "file": "agentic learning/wiki/concepts/TTL.md",
+      "topics": [
+        "infrastructure",
+        "memory",
+        "rag"
+      ],
+      "status": "seed",
+      "freshness": "stable",
+      "aliases": [
+        "Time To Live",
+        "time to live",
+        "生存时间",
+        "存活时间",
+        "有效期",
+        "过期时间",
+        "缓存有效期"
+      ],
+      "source_count": 5,
+      "evidence_count": 5,
+      "up": [],
+      "related": [
+        "Memory",
+        "Long-term Memory",
+        "RAG",
+        "Document Ingestion",
+        "RAG Evaluation"
       ]
     },
     {
@@ -4512,6 +4685,46 @@
     },
     {
       "source": "Agentic Retrieval",
+      "target": "HyDE",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agentic Retrieval",
+      "target": "Multi-Query Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agentic Retrieval",
+      "target": "Query Planning",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agentic Retrieval",
+      "target": "Query Rewrite",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agentic Retrieval",
       "target": "RAG",
       "kind": "related_link",
       "relation_type": "related",
@@ -4523,6 +4736,16 @@
     {
       "source": "Agentic Retrieval",
       "target": "Retriever",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agentic Retrieval",
+      "target": "Step-back Prompting",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -5393,6 +5616,16 @@
     {
       "source": "Context Engineering",
       "target": "Memory",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Engineering",
+      "target": "Prompt Engineering",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -7181,6 +7414,86 @@
       "note": ""
     },
     {
+      "source": "HyDE",
+      "target": "Dense Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HyDE",
+      "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HyDE",
+      "target": "Multi-Query Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HyDE",
+      "target": "Query Rewrite",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HyDE",
+      "target": "RAG Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HyDE",
+      "target": "Retriever",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HyDE",
+      "target": "Step-back Prompting",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HyDE",
+      "target": "Reranking",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "Hybrid Search",
       "target": "Retriever",
       "kind": "taxonomy",
@@ -7413,6 +7726,86 @@
     {
       "source": "Indirect Prompt Injection",
       "target": "Tool Poisoning",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "KV Cache",
+      "target": "Context Window",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "KV Cache",
+      "target": "LLM",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "KV Cache",
+      "target": "LLM 上下文限制与突破条件",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "external_or_missing",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "KV Cache",
+      "target": "Multi-Head Attention",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "KV Cache",
+      "target": "Self-Attention",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "KV Cache",
+      "target": "Transformer",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "KV Cache",
+      "target": "Memory",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "KV Cache",
+      "target": "RAG",
       "kind": "body_link",
       "relation_type": "body_wikilink",
       "confidence": "observed",
@@ -8201,6 +8594,16 @@
       "note": ""
     },
     {
+      "source": "Long-term Memory",
+      "target": "TTL",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "MCP",
       "target": "A2A",
       "kind": "related_link",
@@ -8403,6 +8806,16 @@
     {
       "source": "Memory",
       "target": "Observability",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Memory",
+      "target": "TTL",
       "kind": "body_link",
       "relation_type": "body_wikilink",
       "confidence": "observed",
@@ -8652,6 +9065,16 @@
     },
     {
       "source": "Multi-Query Retrieval",
+      "target": "HyDE",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Multi-Query Retrieval",
       "target": "Hybrid Search",
       "kind": "related_link",
       "relation_type": "related",
@@ -8693,6 +9116,16 @@
     {
       "source": "Multi-Query Retrieval",
       "target": "Retriever",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Multi-Query Retrieval",
+      "target": "Step-back Prompting",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -10112,6 +10545,16 @@
     },
     {
       "source": "Prompt",
+      "target": "Prompt Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt",
       "target": "Prompt Injection",
       "kind": "related_link",
       "relation_type": "related",
@@ -10133,6 +10576,96 @@
     {
       "source": "Prompt",
       "target": "Plan-and-Solve Prompting",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Context Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "LLM Training Pipeline",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Prompt",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Prompt Injection",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "RAG",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Plan-and-Solve Prompting",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Step-back Prompting",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Zero-shot CoT",
       "kind": "body_link",
       "relation_type": "body_wikilink",
       "confidence": "observed",
@@ -10292,6 +10825,16 @@
     },
     {
       "source": "Query Planning",
+      "target": "Multi-Query Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Query Planning",
       "target": "Query Rewrite",
       "kind": "related_link",
       "relation_type": "related",
@@ -10312,6 +10855,16 @@
     },
     {
       "source": "Query Planning",
+      "target": "Step-back Prompting",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Query Planning",
       "target": "RAG Evaluation",
       "kind": "body_link",
       "relation_type": "body_wikilink",
@@ -10323,6 +10876,16 @@
     {
       "source": "Query Rewrite",
       "target": "Agentic Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Query Rewrite",
+      "target": "HyDE",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -10363,6 +10926,16 @@
     {
       "source": "Query Rewrite",
       "target": "Retriever",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Query Rewrite",
+      "target": "Step-back Prompting",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -10543,6 +11116,16 @@
     {
       "source": "RAG",
       "target": "Reranking",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "RAG",
+      "target": "TTL",
       "kind": "body_link",
       "relation_type": "body_wikilink",
       "confidence": "observed",
@@ -12031,6 +12614,76 @@
       "note": ""
     },
     {
+      "source": "Step-back Prompting",
+      "target": "HyDE",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Step-back Prompting",
+      "target": "Multi-Query Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Step-back Prompting",
+      "target": "Plan-and-Solve Prompting",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Step-back Prompting",
+      "target": "Prompt",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Step-back Prompting",
+      "target": "Query Planning",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Step-back Prompting",
+      "target": "Query Rewrite",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Step-back Prompting",
+      "target": "RAG Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "TF-IDF",
       "target": "Sparse Retrieval",
       "kind": "typed_relation",
@@ -12148,6 +12801,56 @@
       "confidence": "observed",
       "status": "internal",
       "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "TTL",
+      "target": "Document Ingestion",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "TTL",
+      "target": "Long-term Memory",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "TTL",
+      "target": "Memory",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "TTL",
+      "target": "RAG",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "TTL",
+      "target": "RAG Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
       "note": ""
     },
     {
@@ -13710,6 +14413,17 @@
       ]
     },
     {
+      "source": "HyDE",
+      "target": "Retriever",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: retrieval/search",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
       "source": "Indirect Prompt Injection",
       "target": "RAG",
       "candidate_type": "topic_family_review",
@@ -13837,6 +14551,17 @@
       "confidence": "low",
       "status": "needs_review",
       "rationale": "topic family: planning",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Evaluation",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: evaluation",
       "support": [
         "frontmatter.related"
       ]
@@ -14041,6 +14766,28 @@
       ]
     },
     {
+      "source": "TTL",
+      "target": "Memory",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: memory",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
+      "source": "TTL",
+      "target": "RAG",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: rag",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
       "source": "Task Success Rate",
       "target": "Evaluation",
       "candidate_type": "topic_family_review",
@@ -14198,7 +14945,9 @@
       "Handoff",
       "Hermes Agent",
       "Human-in-the-loop",
+      "HyDE",
       "Indirect Prompt Injection",
+      "KV Cache",
       "Knowledge Graph",
       "LLM",
       "LLM Gateway",
@@ -14222,6 +14971,7 @@
       "Policy Engine",
       "Positional Encoding",
       "Prompt",
+      "Prompt Engineering",
       "Prompt Injection",
       "Provider-first Agent SDK",
       "Query Planning",
@@ -14241,7 +14991,9 @@
       "Sandbox Workspace",
       "Self-Attention",
       "State Graph Runtime",
+      "Step-back Prompting",
       "TF-IDF",
+      "TTL",
       "Task Success Rate",
       "Token",
       "Tool Permissioning",
@@ -14374,6 +15126,16 @@
       {
         "source": "GraphRAG",
         "target": "RAG 类型对比",
+        "kind": "related_link",
+        "relation_type": "related",
+        "confidence": "existing",
+        "status": "external_or_missing",
+        "evidence": "frontmatter.related",
+        "note": ""
+      },
+      {
+        "source": "KV Cache",
+        "target": "LLM 上下文限制与突破条件",
         "kind": "related_link",
         "relation_type": "related",
         "confidence": "existing",

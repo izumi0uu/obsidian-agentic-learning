@@ -34,6 +34,7 @@ related:
   - "[[Tool Use]]"
   - "[[Agent]]"
   - "[[LLM]]"
+  - "[[Agent Robustness]]"
 ---
 
 # 评估一个 Agent 为什么比评估一个基础 LLM 更加困难和复杂？评估的维度有哪些不同？
@@ -55,6 +56,7 @@ related:
 - [[Tool Use]]
 - [[Agent]]
 - [[LLM]]
+- [[Agent Robustness]]
 
 ## 题目正文
 

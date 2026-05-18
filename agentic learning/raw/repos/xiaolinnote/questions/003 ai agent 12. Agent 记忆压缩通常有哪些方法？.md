@@ -23,6 +23,7 @@ related:
   - "[[Semantic Memory]]"
   - "[[Episodic Memory]]"
   - "[[Context Engineering]]"
+  - "[[KV Cache]]"
 ---
 
 # 12. Agent [[Memory|记忆]]压缩通常有哪些方法？
@@ -38,6 +39,7 @@ related:
 - [[Semantic Memory]]
 - [[Episodic Memory]]
 - [[Context Engineering]]
+- [[KV Cache]]
 
 ## 页面正文
 

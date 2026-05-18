@@ -1,6 +1,6 @@
 # Concept Hierarchy Placement Candidates — Conservative candidate generation
 
-Generated: `2026-05-17T13:39:51Z`
+Generated: `2026-05-18T02:30:06Z`
 
 > Conservative candidate taxonomy only. These rows are **not** accepted taxonomy and must go through Candidate adjudication before any dry-run/writeback.
 
@@ -61,7 +61,7 @@ Generated: `2026-05-17T13:39:51Z`
 | [[Data Exfiltration]] | [[Prompt]] | security_risk_not_prompt | Data exfiltration can occur through prompts/tools/retrieval, but it is a risk class, not a kind of Prompt. |
 | [[Entity Resolution]] | [[Knowledge Graph]] | supports_graph_not_graph | Entity resolution can support knowledge graphs, but support/use is not strict taxonomy; Knowledge Graph is also not auto-approved. |
 | [[GUI Grounding]] | [[Agent]] | capability_not_broad_agent_parent | GUI grounding is a capability used by computer-use agents, not automatically a kind of Agent. |
-| [[HyDE]] |  | no_conservative_approved_parent_signal | No conservative signal points to a Parent-whitelist review approved stable parent. |
+| [[KV Cache]] |  | no_conservative_approved_parent_signal | No conservative signal points to a Parent-whitelist review approved stable parent. |
 | [[Least Privilege Tools]] | [[Tool Use]] | policy_principle_not_tool_behavior | Least-privilege tooling constrains Tool Use, but the policy principle itself is not automatically a Tool Use subtype. |
 | [[MCP]] | [[Tool Use]] | protocol_not_tool_behavior | MCP standardizes tool/context connection; protocol/support is not a kind of Tool Use. |
 | [[MCP Registry]] | [[MCP]] | unapproved_parent | MCP Registry likely belongs near MCP, but MCP is not an approved parent in Conservative candidate generation. |

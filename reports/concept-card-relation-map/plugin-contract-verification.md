@@ -1,10 +1,10 @@
 # Plugin Contract Verification
 
-Generated: `2026-05-17T13:46:14Z`
+Generated: `2026-05-18T02:30:28Z`
 
 ## Summary
 
-- concept_cards_checked: `132`
+- concept_cards_checked: `136`
 - top_level_up_edges: `37`
 - temp_map_taxonomy_edges: `37`
 - relation_writeback_dry_run_planned: `0`
@@ -20,7 +20,7 @@ Generated: `2026-05-17T13:46:14Z`
 - plugin_problems: `0`
 - forbidden_up_edges: `0`
 - forbidden_top_level_fields: `0`
-- nested_relation_records_with_mirror-like_types: `17`
+- nested_relation_records_with_mirror-like_types: `20`
 - obsidian_plugin_config_present: `False`
 - problems: `0`
 

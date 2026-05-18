@@ -1,21 +1,21 @@
 # Temporary Concept Relationship Map
 
-Generated: `2026-05-17T09:59:03Z`
+Generated: `2026-05-17T14:35:00Z`
 
 > 临时文件：用于后续概念层级开发评估。不要把候选边自动写回概念卡；每条 candidate 都需要单独人工/LLM 复核。
 
 ## Summary
 
-- total_concepts: 130
-- edge_counts: {'related_link': 709, 'body_link': 241, 'taxonomy': 37, 'typed_relation': 31}
+- total_concepts: 135
+- edge_counts: {'related_link': 753, 'body_link': 250, 'taxonomy': 37, 'typed_relation': 31}
 - typed_relation_counts: {'representative_of': 1, 'based_on_intuition': 1, 'related_to': 7, 'paired_with': 2, 'contrasts_with': 5, 'composes_with': 7, 'uses': 2, 'mitigates': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
-- concepts_without_up: 93
+- concepts_without_up: 98
 - core_orphans: 0
 - weakly_connected_concepts: 1
-- dangling_core_targets: 23
-- candidate_edges: 67
+- dangling_core_targets: 24
+- candidate_edges: 71
 - taxonomy_candidates: 11
-- topic_family_review_signals: 56
+- topic_family_review_signals: 60
 
 ## Existing taxonomy edges (`up`)
 
@@ -129,6 +129,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[Handoff]] | [[Agent Workflow]] | taxonomy_candidate | low | title/topic heuristic | workflow/runtime title family |
 | [[Hermes Agent]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | topic family: workflow |
 | [[Human-in-the-loop]] | [[Agent Workflow]] | taxonomy_candidate | low | title/topic heuristic | workflow/runtime title family |
+| [[HyDE]] | [[Retriever]] | topic_family_review | low | frontmatter.related | topic family: retrieval/search |
 | [[Indirect Prompt Injection]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
 | [[Knowledge Graph]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
 | [[LLM Gateway]] | [[Observability]] | topic_family_review | low | frontmatter.related | topic family: observability |
@@ -141,6 +142,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[OpenTelemetry GenAI]] | [[Observability]] | topic_family_review | low | frontmatter.related | topic family: observability |
 | [[Patch Validation]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Plan-and-Solve Prompting]] | [[Planning]] | topic_family_review | low | frontmatter.related | topic family: planning |
+| [[Prompt Engineering]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Provider-first Agent SDK]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | topic family: framework |
 | [[Query Planning]] | [[Retriever]] | topic_family_review | low | frontmatter.related | topic family: retrieval/search |
 | [[Query Rewrite]] | [[Retriever]] | topic_family_review | low | frontmatter.related | topic family: retrieval/search |
@@ -159,6 +161,8 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[State Graph Runtime]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | topic family: workflow |
 | [[TF-IDF]] | [[RAG]] | topic_family_review | low | body wikilink | topic family: rag |
 | [[TF-IDF]] | [[Retriever]] | topic_family_review | low | frontmatter.related | topic family: retrieval/search |
+| [[TTL]] | [[Memory]] | topic_family_review | low | frontmatter.related | topic family: memory |
+| [[TTL]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
 | [[Task Success Rate]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Tool Permissioning]] | [[Tool Use]] | taxonomy_candidate | low | title/topic heuristic | tool-use title family |
 | [[Tool Poisoning]] | [[Tool Use]] | taxonomy_candidate | low | title/topic heuristic | tool-use title family |
@@ -207,7 +211,9 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Handoff]]
 - [[Hermes Agent]]
 - [[Human-in-the-loop]]
+- [[HyDE]]
 - [[Indirect Prompt Injection]]
+- [[KV Cache]]
 - [[Knowledge Graph]]
 - [[LLM]]
 - [[LLM Gateway]]
@@ -231,6 +237,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Policy Engine]]
 - [[Positional Encoding]]
 - [[Prompt]]
+- [[Prompt Engineering]]
 - [[Prompt Injection]]
 - [[Provider-first Agent SDK]]
 - [[Query Planning]]
@@ -250,7 +257,9 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Sandbox Workspace]]
 - [[Self-Attention]]
 - [[State Graph Runtime]]
+- [[Step-back Prompting]]
 - [[TF-IDF]]
+- [[TTL]]
 - [[Task Success Rate]]
 - [[Token]]
 - [[Tool Permissioning]]
@@ -281,6 +290,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[AutoGen]] | related | Agent Framework 编排范式对比 | related_link |
 | [[CAMEL]] | related | Agent Framework 编排范式对比 | related_link |
 | [[GraphRAG]] | related | RAG 类型对比 | related_link |
+| [[KV Cache]] | related | LLM 上下文限制与突破条件 | related_link |
 | [[LangGraph]] | related | Agent Framework 编排范式对比 | related_link |
 | [[Microsoft Agent Framework]] | related | Agent Framework 编排范式对比 | related_link |
 | [[Observation]] | related | Environment Observation 类型对比 | related_link |

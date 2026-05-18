@@ -18,6 +18,8 @@ related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[LLM]]"
+  - "[[Multi-Head Attention]]"
+  - "[[KV Cache]]"
   - "[[LLM 主题]]"
 ---
 
@@ -30,6 +32,8 @@ related:
 ## 相关知识 wiki
 
 - [[LLM]]
+- [[Multi-Head Attention]]
+- [[KV Cache]]
 - [[LLM 主题]]
 
 ## 页面正文

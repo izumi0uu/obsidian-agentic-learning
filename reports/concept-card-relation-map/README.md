@@ -15,7 +15,7 @@
 
 - `concept-relations-temp.json`：全库临时关系图。
 - `relation-decision-ledger.json`：候选关系逐条判定台账。
-- `concept-hierarchy-placement-review.json`：130 张概念卡概念层级归属审计。
+- `concept-hierarchy-placement-review.json`：133 张概念卡概念层级归属审计。
 - `concept-hierarchy-placement-closure.json`：审计闭环与 deferred-with-backlog 证明。
 - `plugin-compat-validation.json`：Abstract Folder / Breadcrumbs / forbidden fields 兼容验证。
 - `plugin-contract-verification.json`：重建与插件契约验证。
@@ -23,14 +23,14 @@
 
 ## 当前基线语义
 
-- `total_concepts: 130`
-- `reviewed_concepts: 130`
+- `total_concepts: 133`
+- `reviewed_concepts: 133`
 - `concepts_with_up: 37`
-- `concepts_without_up: 93`
+- `concepts_without_up: 96`
 - `open_review: 0`
 - `open_writeback: 0`
 - `dry_run_planned: 0`
-- `deferred_with_backlog: 20`
+- `deferred_with_backlog: 21`
 
 `concepts_without_up` 不是失败；失败条件是出现未审计、无理由、无 backlog home 的隐藏 open tail。
 

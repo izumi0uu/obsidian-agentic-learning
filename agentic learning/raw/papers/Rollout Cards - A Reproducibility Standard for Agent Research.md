@@ -22,7 +22,7 @@ topic:
   - benchmark
   - frontier
 created: 2026-05-14
-updated: 2026-05-15
+updated: 2026-05-18
 last_checked: 2026-05-14
 freshness: watch
 conflicts: []
@@ -30,6 +30,7 @@ status: seed
 source: https://arxiv.org/abs/2605.12131
 related:
   - "[[Evaluation]]"
+  - "[[Agent Robustness]]"
   - "[[Benchmark]]"
   - "[[Trajectory Evaluation]]"
   - "[[Trace]]"

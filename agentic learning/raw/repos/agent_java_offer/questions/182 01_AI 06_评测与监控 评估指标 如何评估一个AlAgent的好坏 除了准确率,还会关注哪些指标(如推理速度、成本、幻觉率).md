@@ -31,6 +31,7 @@ related:
   - "[[Task Success Rate]]"
   - "[[Planning]]"
   - "[[Agent]]"
+  - "[[Agent Robustness]]"
 ---
 
 # 评估指标:如何评估一个AlAgent的好坏?除了准确率,还会关注哪些指标(如推理速度、成本、幻觉率)
@@ -49,6 +50,7 @@ related:
 - [[Task Success Rate]]
 - [[Planning]]
 - [[Agent]]
+- [[Agent Robustness]]
 
 ## 题目正文
 

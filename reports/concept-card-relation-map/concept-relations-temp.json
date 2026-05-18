@@ -1,24 +1,24 @@
 {
   "schema_version": 1,
   "artifact_type": "temporary_concept_relationship_map",
-  "generated_at": "2026-05-17T13:39:51Z",
+  "generated_at": "2026-05-18T02:30:06Z",
   "scope": {
     "concept_dir": "agentic learning/wiki/concepts",
     "temporary": true,
     "write_policy": "Do not write these candidates into concept cards without a separate review task."
   },
   "summary": {
-    "total_concepts": 132,
+    "total_concepts": 136,
     "edge_counts": {
-      "related_link": 734,
-      "body_link": 242,
-      "taxonomy": 37,
-      "typed_relation": 31
+      "related_link": 761,
+      "body_link": 252,
+      "typed_relation": 34,
+      "taxonomy": 37
     },
     "typed_relation_counts": {
+      "related_to": 10,
       "representative_of": 1,
       "based_on_intuition": 1,
-      "related_to": 7,
       "paired_with": 2,
       "contrasts_with": 5,
       "composes_with": 7,
@@ -29,13 +29,13 @@
       "composed_into": 2,
       "foundational_for": 1
     },
-    "concepts_without_up": 95,
+    "concepts_without_up": 99,
     "core_orphans": 0,
     "weakly_connected_concepts": 1,
-    "dangling_core_targets": 23,
-    "candidate_edges": 68,
+    "dangling_core_targets": 24,
+    "candidate_edges": 72,
     "taxonomy_candidates": 11,
-    "topic_family_review_signals": 57
+    "topic_family_review_signals": 61
   },
   "nodes": [
     {
@@ -263,6 +263,41 @@
         "Agent Workflow",
         "Trace",
         "Evaluation"
+      ]
+    },
+    {
+      "id": "Agent Robustness",
+      "title": "Agent Robustness",
+      "file": "agentic learning/wiki/concepts/Agent Robustness.md",
+      "topics": [
+        "agent",
+        "evaluation",
+        "reliability",
+        "security"
+      ],
+      "status": "growing",
+      "freshness": "watch",
+      "aliases": [
+        "Agent 鲁棒性",
+        "Agent 稳健性",
+        "智能体鲁棒性",
+        "智能体稳健性",
+        "Agentic Robustness",
+        "Robustness of Planning and Reasoning",
+        "规划与推理的鲁棒性",
+        "Agent 鲁棒性指标",
+        "智能体鲁棒性指标"
+      ],
+      "source_count": 5,
+      "evidence_count": 6,
+      "up": [],
+      "related": [
+        "Evaluation",
+        "Task Success Rate",
+        "Trajectory Evaluation",
+        "Trace",
+        "Guardrails",
+        "Tool Calling"
       ]
     },
     {
@@ -708,7 +743,8 @@
         "LLM",
         "RAG",
         "Memory",
-        "Agent Harness"
+        "Agent Harness",
+        "Prompt Engineering"
       ]
     },
     {
@@ -1107,6 +1143,7 @@
         "RAG",
         "Memory",
         "Benchmark",
+        "Agent Robustness",
         "Task Success Rate",
         "Eval Harness",
         "LLM-as-Judge",
@@ -1411,6 +1448,38 @@
         "RAG",
         "Browser Agent",
         "Observation"
+      ]
+    },
+    {
+      "id": "KV Cache",
+      "title": "KV Cache",
+      "file": "agentic learning/wiki/concepts/KV Cache.md",
+      "topics": [
+        "llm",
+        "inference",
+        "context"
+      ],
+      "status": "growing",
+      "freshness": "watch",
+      "aliases": [
+        "Key-Value Cache",
+        "Key Value Cache",
+        "K/V Cache",
+        "K/V cache",
+        "KV cache",
+        "KV 缓存",
+        "键值缓存"
+      ],
+      "source_count": 5,
+      "evidence_count": 6,
+      "up": [],
+      "related": [
+        "LLM",
+        "Transformer",
+        "Self-Attention",
+        "Multi-Head Attention",
+        "Context Window",
+        "LLM 上下文限制与突破条件"
       ]
     },
     {
@@ -2239,14 +2308,45 @@
       "status": "growing",
       "freshness": "stable",
       "aliases": [],
-      "source_count": 4,
-      "evidence_count": 4,
+      "source_count": 5,
+      "evidence_count": 5,
       "up": [],
       "related": [
         "LLM",
         "Token",
         "Context Window",
+        "Prompt Engineering",
         "Context Engineering",
+        "Prompt Injection"
+      ]
+    },
+    {
+      "id": "Prompt Engineering",
+      "title": "Prompt Engineering",
+      "file": "agentic learning/wiki/concepts/Prompt Engineering.md",
+      "topics": [
+        "llm",
+        "prompting",
+        "agent",
+        "evaluation"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "prompt engineering",
+        "Prompt 工程",
+        "提示词工程",
+        "提示工程"
+      ],
+      "source_count": 6,
+      "evidence_count": 6,
+      "up": [],
+      "related": [
+        "Prompt",
+        "Context Engineering",
+        "Evaluation",
+        "LLM Training Pipeline",
+        "RAG",
         "Prompt Injection"
       ]
     },
@@ -2914,6 +3014,37 @@
       ]
     },
     {
+      "id": "TTL",
+      "title": "TTL",
+      "file": "agentic learning/wiki/concepts/TTL.md",
+      "topics": [
+        "infrastructure",
+        "memory",
+        "rag"
+      ],
+      "status": "seed",
+      "freshness": "stable",
+      "aliases": [
+        "Time To Live",
+        "time to live",
+        "生存时间",
+        "存活时间",
+        "有效期",
+        "过期时间",
+        "缓存有效期"
+      ],
+      "source_count": 5,
+      "evidence_count": 5,
+      "up": [],
+      "related": [
+        "Memory",
+        "Long-term Memory",
+        "RAG",
+        "Document Ingestion",
+        "RAG Evaluation"
+      ]
+    },
+    {
       "id": "Task Success Rate",
       "title": "Task Success Rate",
       "file": "agentic learning/wiki/concepts/Task Success Rate.md",
@@ -2930,7 +3061,8 @@
       "related": [
         "Evaluation",
         "Benchmark",
-        "Agent Harness"
+        "Agent Harness",
+        "Agent Robustness"
       ]
     },
     {
@@ -4091,6 +4223,116 @@
     {
       "source": "Agent Loop",
       "target": "Guardrails",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Guardrails",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "Guardrails 可以提高部分扰动下的可控性，但安全拦截机制不等于鲁棒性指标。"
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Task Success Rate",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "Agent Robustness 常用扰动条件下的成功率下降幅度来观察；Task Success Rate 是被观察指标，不是鲁棒性本身。"
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Trajectory Evaluation",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "工具超时、异常返回、噪声输入和恢复动作都需要看 trajectory，而不只看最终输出。"
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Guardrails",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Task Success Rate",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Tool Calling",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Trace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Trajectory Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Observability",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Tool Permissioning",
       "kind": "body_link",
       "relation_type": "body_wikilink",
       "confidence": "observed",
@@ -5530,6 +5772,16 @@
     },
     {
       "source": "Context Engineering",
+      "target": "Prompt Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Engineering",
       "target": "RAG",
       "kind": "related_link",
       "relation_type": "related",
@@ -6640,6 +6892,16 @@
     },
     {
       "source": "Evaluation",
+      "target": "Agent Robustness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Evaluation",
       "target": "Benchmark",
       "kind": "related_link",
       "relation_type": "related",
@@ -7629,6 +7891,86 @@
       "note": ""
     },
     {
+      "source": "KV Cache",
+      "target": "Context Window",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "KV Cache",
+      "target": "LLM",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "KV Cache",
+      "target": "LLM 上下文限制与突破条件",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "external_or_missing",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "KV Cache",
+      "target": "Multi-Head Attention",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "KV Cache",
+      "target": "Self-Attention",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "KV Cache",
+      "target": "Transformer",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "KV Cache",
+      "target": "Memory",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "KV Cache",
+      "target": "RAG",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "Knowledge Graph",
       "target": "GraphRAG",
       "kind": "related_link",
@@ -8409,6 +8751,16 @@
       "note": ""
     },
     {
+      "source": "Long-term Memory",
+      "target": "TTL",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "MCP",
       "target": "A2A",
       "kind": "related_link",
@@ -8611,6 +8963,16 @@
     {
       "source": "Memory",
       "target": "Observability",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Memory",
+      "target": "TTL",
       "kind": "body_link",
       "relation_type": "body_wikilink",
       "confidence": "observed",
@@ -10340,6 +10702,16 @@
     },
     {
       "source": "Prompt",
+      "target": "Prompt Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt",
       "target": "Prompt Injection",
       "kind": "related_link",
       "relation_type": "related",
@@ -10361,6 +10733,96 @@
     {
       "source": "Prompt",
       "target": "Plan-and-Solve Prompting",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Context Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "LLM Training Pipeline",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Prompt",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Prompt Injection",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "RAG",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Plan-and-Solve Prompting",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Step-back Prompting",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Zero-shot CoT",
       "kind": "body_link",
       "relation_type": "body_wikilink",
       "confidence": "observed",
@@ -10811,6 +11273,16 @@
     {
       "source": "RAG",
       "target": "Reranking",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "RAG",
+      "target": "TTL",
       "kind": "body_link",
       "relation_type": "body_wikilink",
       "confidence": "observed",
@@ -12489,8 +12961,68 @@
       "note": ""
     },
     {
+      "source": "TTL",
+      "target": "Document Ingestion",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "TTL",
+      "target": "Long-term Memory",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "TTL",
+      "target": "Memory",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "TTL",
+      "target": "RAG",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "TTL",
+      "target": "RAG Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "Task Success Rate",
       "target": "Agent Harness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Task Success Rate",
+      "target": "Agent Robustness",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -13861,6 +14393,17 @@
       ]
     },
     {
+      "source": "Agent Robustness",
+      "target": "Evaluation",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: evaluation",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
       "source": "Agent State",
       "target": "Agent Workflow",
       "candidate_type": "topic_family_review",
@@ -14191,6 +14734,17 @@
       ]
     },
     {
+      "source": "Prompt Engineering",
+      "target": "Evaluation",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: evaluation",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
       "source": "Provider-first Agent SDK",
       "target": "Agent Framework",
       "candidate_type": "topic_family_review",
@@ -14390,6 +14944,28 @@
       ]
     },
     {
+      "source": "TTL",
+      "target": "Memory",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: memory",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
+      "source": "TTL",
+      "target": "RAG",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: rag",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
       "source": "Task Success Rate",
       "target": "Evaluation",
       "candidate_type": "topic_family_review",
@@ -14522,6 +15098,7 @@
       "Agent Harness",
       "Agent Lifecycle Hook",
       "Agent Loop",
+      "Agent Robustness",
       "Agent State",
       "Agent Workflow",
       "Agent Workflow Static Verification",
@@ -14549,6 +15126,7 @@
       "Human-in-the-loop",
       "HyDE",
       "Indirect Prompt Injection",
+      "KV Cache",
       "Knowledge Graph",
       "LLM",
       "LLM Gateway",
@@ -14572,6 +15150,7 @@
       "Policy Engine",
       "Positional Encoding",
       "Prompt",
+      "Prompt Engineering",
       "Prompt Injection",
       "Provider-first Agent SDK",
       "Query Planning",
@@ -14593,6 +15172,7 @@
       "State Graph Runtime",
       "Step-back Prompting",
       "TF-IDF",
+      "TTL",
       "Task Success Rate",
       "Token",
       "Tool Permissioning",
@@ -14725,6 +15305,16 @@
       {
         "source": "GraphRAG",
         "target": "RAG 类型对比",
+        "kind": "related_link",
+        "relation_type": "related",
+        "confidence": "existing",
+        "status": "external_or_missing",
+        "evidence": "frontmatter.related",
+        "note": ""
+      },
+      {
+        "source": "KV Cache",
+        "target": "LLM 上下文限制与突破条件",
         "kind": "related_link",
         "relation_type": "related",
         "confidence": "existing",

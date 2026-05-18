@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-16
+updated: 2026-05-18
 related:
   - "[[Agent]]"
   - "[[前沿主源清单]]"
@@ -14,6 +14,8 @@ related:
   - "[[Tool Calling]]"
   - "[[RAG]]"
   - "[[Memory]]"
+  - "[[TTL]]"
+  - "[[Prompt Engineering]]"
   - "[[Planning]]"
   - "[[Evaluation]]"
   - "[[ReAct Plan-and-Solve Reflexion 对比]]"
@@ -43,6 +45,8 @@ LLM 地基：
 - [[Self-Attention]]
 - [[Multi-Head Attention]]
 - [[Positional Encoding]]
+- [[KV Cache]]
+- [[Prompt]] 和 [[Prompt Engineering]]：区分输入内容本身与围绕输入内容的设计、测试和版本治理。
 
 ## 行动能力
 
@@ -78,7 +82,7 @@ LLM 地基：
 - [[Retriever]]、[[Top-K]]、[[TF-IDF]]、[[Sparse Retrieval]]、[[BM25]]、[[Vector Database]]、[[Multi-Route Retrieval]]、[[Hybrid Search]] 和 [[Reranking]]：理解生产 RAG 的召回数量、稀疏检索家族、关键词打分代表、检索基础设施、多路召回、混合检索和排序质量层；常见实现生态见 [[常用向量数据库对比]]。
 - [[Knowledge Graph]]、[[GraphRAG]] 和 [[Neo4j]]：理解关系结构、图增强检索和图数据库工程生态如何结合。
 - [[RAG Evaluation]]：理解 RAG 失败要分层评估检索、上下文、引用和最终回答。
-- [[RAG Citation Faithfulness]] 和 [[RAG Access Control]]：理解 RAG 可靠性不只看答案，还要看引用支持和权限过滤。
+- [[RAG Citation Faithfulness]]、[[RAG Access Control]] 和 [[TTL]]：理解 RAG 可靠性不只看答案，还要看引用支持、权限过滤和资料 freshness 边界。
 - [[Query Rewrite]]、[[Multi-Query Retrieval]]、[[HyDE]]、[[Step-back Prompting]]、[[Query Planning]] 和 [[Agentic Retrieval]]：理解检索层如何从改写 query、扩展查询视角、假设文档、背景抽象，走向检索计划和多轮检索控制。
 - [[Parallel Search and Explicit Merging 检索模式]]：理解 deep search / agentic RAG 如何在单个 reasoning step 里扩展多 query 检索，并用显式合并控制信噪比。
 - [[Entity Resolution]] 和 [[Graph Construction Evaluation]]：理解 GraphRAG 的构图质量、实体合并和评估边界。
@@ -100,6 +104,7 @@ LLM 地基：
 ## 可靠性
 
 - [[Evaluation]]：如何检查 Agent 是否稳定有效。
+- [[Agent Robustness]]：理解 Agent 在工具失败、噪声、用户变化、攻击输入和计划偏离下是否还能稳定推进、恢复和守住边界。
 - [[RAG Evaluation]]：理解 RAG 失败要分层评估。
 - [[Observability]]：理解 Agent 系统的 trace、span、日志、成本、延迟和错误如何被实时观察。
 - [[Trace]]：理解执行过程如何被保存成可调试、可重放、可评估的记录。
@@ -149,6 +154,7 @@ LLM 地基：
 - [[GraphRAG 构图与评估对比]]：区分 knowledge graph、entity resolution、graph construction evaluation、GraphRAG 和 Neo4j。
 - [[LLM 输入输出基础边界对比]]：区分 token、context window、prompt 和 hallucination。
 - [[LLM 上下文限制与突破条件]]：拆开 context window 的容量、计算、结构、有效使用和治理限制，避免把长上下文误当长期记忆或可靠性保证。
+- [[KV Cache]]：理解自回归 LLM 推理为什么需要缓存历史 K/V，以及长上下文为什么会变成显存和带宽管理问题。
 
 ## 当前概念卡
 
@@ -163,7 +169,9 @@ SORT file.name ASC
 
 - [x] [[Token]]
 - [x] [[Context Window]]
+- [x] [[KV Cache]]
 - [x] [[Prompt]]
+- [x] [[Prompt Engineering]]
 - [x] [[Hallucination]]
 - [x] [[Embedding]]
 - [x] [[TF-IDF]]
@@ -216,6 +224,7 @@ SORT file.name ASC
 - [x] [[Agent Lifecycle Hook]]
 - [x] [[LangChain DeepAgents]]
 - [x] [[Workflow Guardrails]]
+- [x] [[Agent Robustness]]
 
 ## 复习入口
 

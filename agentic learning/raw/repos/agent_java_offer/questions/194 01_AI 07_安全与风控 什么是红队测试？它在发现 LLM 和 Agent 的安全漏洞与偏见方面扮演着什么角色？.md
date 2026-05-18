@@ -30,6 +30,7 @@ related:
   - "[[Agent]]"
   - "[[LLM]]"
   - "[[Guardrails]]"
+  - "[[Agent Robustness]]"
 ---
 
 # 什么是红队测试？它在发现 LLM 和 Agent 的安全漏洞与偏见方面扮演着什么角色？
@@ -47,6 +48,7 @@ related:
 - [[Agent]]
 - [[LLM]]
 - [[Guardrails]]
+- [[Agent Robustness]]
 
 ## 题目正文
 

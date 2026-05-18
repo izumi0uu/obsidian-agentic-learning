@@ -1192,3 +1192,51 @@ related:
 - Updated navigation: [[LLM 主题]], [[Agent 知识地图]], [[04 页面目录]], [[05 Query 写回队列]].
 - Boundary: kept [[Context Window]], [[Context Engineering]], [[Memory]] and [[RAG]] as the canonical concepts; the new page answers a reusable architecture/interview question about what limits LLM context and what future breakthroughs require.
 - Terminology: no new concept card, no `up` / `relations` writeback, and no changes to `scripts/interview_question_concept_aliases.json`; long-context / 上下文限制 are topic-level boundary phrases here, not new aliases.
+
+## [2026-05-17] writeback | TTL lifecycle boundary concept
+
+- Created: [[TTL]].
+- Updated navigation and synthesis: [[01 术语表]], [[Agent 知识地图]], [[04 页面目录]], [[RAG]], [[Memory]], [[Long-term Memory]], [[RAG 主题]], [[Agent Memory 类型对比]], `scripts/interview_question_concept_aliases.json`.
+- Raw evidence backlinks: added [[TTL]] to high-confidence cache, memory, and RAG freshness source notes: [[109 01_AI 04_上下文工程与记忆 记忆系统与状态设计（短期 长期 State）]], [[113 01_AI 04_上下文工程与记忆 长期记忆如何做过期与纠错？]], [[272 02_后端 02_Redis 缓存穿透如何处理？]], [[274 02_后端 02_Redis 缓存雪崩如何处理？]], [[305 02_后端 05_缓存与一致性 缓存穿透如何处理？]], [[307 02_后端 05_缓存与一致性 缓存雪崩如何处理？]], [[529 05_项目表达 01_AI应用平台 如果知识库内容 过期或错误 ，怎么避免误导模型？]].
+- Terminology: `TTL`, `Time To Live`, `生存时间`, `存活时间`, `有效期`, `过期时间`, and `缓存有效期` are aliases of the same lifecycle-boundary concept; network packet TTL is documented as a neighboring hop-limit usage, not as the cache/RAG freshness implementation itself.
+- Taxonomy: no direct `up` was written; [[TTL]] is treated as a cross-cutting relation-only / parentless concept pending taxonomy candidate generation and dry-run.
+- Mention sweep: searched TTL / Time To Live / 生存时间 / 存活时间 / 缓存有效期 / 有效期 / 过期时间 across wiki, raw, maps, reviews, and alias map; linked high-confidence same-concept hits and left raw source正文 unchanged.
+- Validation: interview link self-test PASS; dry-run scanned 779 question pages / would modify 11 / inline links 16 / missing candidates 0 / protected violations 0; concept-card audit 133 / needs 0; comparison-topic audit 23 / needs 0; taxonomy validate, plugin contract, control-surface sync, baseline-map validation PASS; request-meta audit 1118 files / 0 hits; `git diff --check` PASS.
+
+## [2026-05-17] writeback | KV Cache inference boundary and papers
+
+- Created: [[KV Cache]].
+- Added paper source notes: [[Fast Transformer Decoding - One Write-Head is All You Need]], [[GQA - Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints]], [[Efficient Memory Management for Large Language Model Serving with PagedAttention]], [[FlashAttention - Fast and Memory-Efficient Exact Attention with IO-Awareness]].
+- Updated navigation and synthesis: [[LLM 主题]], [[LLM 上下文限制与突破条件]], [[Agent 知识地图]], [[01 术语表]], [[04 页面目录]], [[资料收集索引]], [[05 Query 写回队列]], `scripts/interview_question_concept_aliases.json`.
+- Raw evidence backlinks: added [[KV Cache]] to high-confidence xiaolinnote source notes for KV cache / prompt caching, MHA-MQA-GQA-FlashAttention, vLLM/PagedAttention deployment, quantization, and Agent memory compression / Prompt Caching.
+- Terminology: `KV Cache`, `Key-Value Cache`, `K/V Cache`, `KV 缓存`, and `键值缓存` are aliases of the same inference-time cache concept; Prompt Caching, PagedAttention, MQA/GQA, and FlashAttention are related mechanisms, not aliases.
+- Taxonomy: no direct `up` was written; [[KV Cache]] is treated as an LLM inference/runtime mechanism connected through `related` and evidence anchors pending taxonomy candidate generation, adjudication, dry-run, and limited apply.
+- Mention sweep: searched KV Cache / KV cache / K/V Cache / Key-Value Cache / 键值缓存 / KV 缓存 / Prompt Caching / PagedAttention / FlashAttention / MQA / GQA across wiki, raw, maps, reviews, and alias map; linked high-confidence same-concept hits and left raw source正文 unchanged.
+- Validation: paper source audit 49 PASS; concept-card audit 134 / needs 0; comparison-topic audit 23 / needs 0; interview link self-test PASS and dry-run reports 779 pages / would modify 15 / inline links 20 / missing candidates 0 / protected violations 0; taxonomy validate, plugin contract, control-surface sync, and baseline-map validation PASS with 134 concepts / 22 deferred-with-backlog; request-meta audit 1123 files / 0 hits; `git diff --check` PASS.
+
+## [2026-05-17] source-localization | KV Cache paper PDFs
+
+- Downloaded local PDFs into `raw/papers/assets/` for [[Fast Transformer Decoding - One Write-Head is All You Need]], [[GQA - Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints]], [[Efficient Memory Management for Large Language Model Serving with PagedAttention]], and [[FlashAttention - Fast and Memory-Efficient Exact Attention with IO-Awareness]].
+- Updated each paper source note `pdf` field from arXiv PDF URL to the local `assets/*.pdf` path and synchronized [[资料收集索引]] paper localization counts.
+- Boundary: extracted Markdown is still pending for these 4 PDFs because no local `markitdown` command was available in this environment; paper source notes remain raw evidence and do not claim page-level extracted anchors yet.
+- Validation: `file` identifies all 4 downloaded assets as PDF; 49 / 49 paper notes now have `pdf: assets/...`; `python3 scripts/paper_source_audit.py` PASS; `python3 scripts/paper_source_quality_audit.py --root 'agentic learning/raw/papers'` PASS; `git diff --check` PASS.
+
+## [2026-05-17] writeback | Prompt Engineering concept boundary
+
+- Created: [[Prompt Engineering]].
+- Updated navigation and synthesis: [[Prompt]], [[Context Engineering]], [[LLM 主题]], [[LLM 输入输出基础边界对比]], [[Agent 知识地图]], [[01 术语表]], [[04 页面目录]], [[09 概念层级审计基线]], `scripts/interview_question_concept_aliases.json`.
+- Raw evidence backlinks: added [[Prompt Engineering]] to high-confidence prompt/context source notes: [[123 01_AI 04_上下文工程与记忆 Prompt Engineering 及 Prompt 优化策略有哪些？]], [[124 01_AI 04_上下文工程与记忆 Prompt Engineering 和微调策略如何协同？]], [[127 01_AI 04_上下文工程与记忆 你如何定义“上下文工程”？和 Prompt Engineering 的边界是什么？]], [[126 01_AI 04_上下文工程与记忆 Context Engineering for AI Agents Lessons from Building Manus]], [[137 01_AI 04_上下文工程与记忆 补充材料：Context Engineering 的系统化做法]], [[136 ai llm 16. 如何写好 Prompt？分享下 Prompt 工程实践经验？]].
+- Terminology: `Prompt Engineering`, `prompt engineering`, `Prompt 工程`, `提示词工程`, and `提示工程` are aliases of the same prompt-design engineering practice; `Prompt 优化` is treated as an activity inside Prompt Engineering rather than a canonical alias.
+- Taxonomy: no direct `up` was written; [[Prompt Engineering]] is treated as relation-only / parentless because it is not [[Prompt]] itself and no stable `Prompting` parent card exists yet.
+- Mention sweep: searched Prompt Engineering / prompt engineering / Prompt 工程 / 提示词工程 / 提示工程 / Prompt 优化 across wiki, raw, maps, reviews, and alias map; linked high-confidence same-concept hits and left raw source正文 unchanged.
+- Validation: interview link self-test PASS; dry-run scanned 779 question pages / would modify 18 / inline links 24 / missing candidates 0 / protected violations 0; concept-card audit 135 / needs 0; comparison-topic audit 23 / needs 0; taxonomy build, decide, writeback dry-run, placement close-audit, validate, plugin contract, control-surface sync, and baseline-map validation PASS; paper source audit 49 PASS.
+
+## [2026-05-18] writeback | Agent Robustness concept boundary
+
+- Created: [[Agent Robustness]].
+- Updated navigation and synthesis: [[01 术语表]], [[Agent 知识地图]], [[04 页面目录]], [[05 Query 写回队列]], [[06 Wiki 健康检查]], [[09 概念层级审计基线]], [[Evaluation]], [[Task Success Rate]], [[Evaluation 层次对比]], `scripts/interview_question_concept_aliases.json`.
+- Raw evidence backlinks: added [[Agent Robustness]] to high-confidence Agent evaluation source notes, including q174/q176/q183/q182/q186/q173/q194/q216/q523 and the paper source notes [[Beyond Cooperative Simulators - Generating Realistic User Personas for Robust Evaluation of LLM Agents]] / [[Rollout Cards - A Reproducibility Standard for Agent Research]], without rewriting raw source正文.
+- Terminology: `Agent Robustness`, `Agentic Robustness`, `Agent 鲁棒性`, `Agent 稳健性`, `智能体鲁棒性`, `智能体稳健性`, `Robustness of Planning and Reasoning`, and `规划与推理的鲁棒性` are the same Agent-system robustness concept. Bare `鲁棒性 / 稳健性 / Robustness` remains intentionally excluded from alias map because model robustness, RAG robustness, benchmark robustness, and long-context position robustness are adjacent but not equivalent.
+- Taxonomy: no direct `up` was written; regenerated taxonomy reports classify [[Agent Robustness]] as `relation_only_terminal` with typed relations to [[Task Success Rate]], [[Trajectory Evaluation]], and [[Guardrails]]. Topic-family overlap with [[Evaluation]] is a review signal only, not a parent write.
+- Mention sweep: searched Agent Robustness / Agentic Robustness / Agent 鲁棒性 / 智能体鲁棒性 / 规划与推理的鲁棒性 / Robustness across wiki, raw, maps, reviews, and alias map; linked high-confidence Agent-system hits and skipped model/RAG/long-context robustness false friends.
+- Validation: JSON alias map parse PASS; interview link self-test PASS and dry-run reports 779 pages / would modify 19 / inline links 25 / missing candidates 0 / protected violations 0; concept-card audit 136 / needs 0; comparison-topic audit 23 / needs 0; paper source audit 49 PASS; taxonomy validate, plugin contract, control-surface sync, and baseline-map validation PASS with 136 concepts / 22 deferred-with-backlog; request-meta audit 1125 files / 0 hits; `git diff --check` PASS.

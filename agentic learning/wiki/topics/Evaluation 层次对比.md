@@ -6,13 +6,14 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-18
 source:
   - "[[Evaluation]]"
   - "[[Benchmark]]"
   - "[[Eval Harness]]"
   - "[[LLM-as-Judge]]"
   - "[[Task Success Rate]]"
+  - "[[Agent Robustness]]"
   - "[[RAG Evaluation]]"
   - "[[Trajectory Evaluation]]"
 evidence:
@@ -21,11 +22,13 @@ evidence:
   - "[[Eval Harness#证据锚点]]"
   - "[[LLM-as-Judge#证据锚点]]"
   - "[[Task Success Rate#证据锚点]]"
+  - "[[Agent Robustness#证据锚点]]"
   - "[[RAG Evaluation#证据锚点]]"
   - "[[Trajectory Evaluation#证据锚点]]"
 related:
   - "[[Trace]]"
   - "[[Observability]]"
+  - "[[Agent Robustness]]"
   - "[[Replay]]"
   - "[[Patch Validation]]"
   - "[[Trajectory Trace 类型对比]]"
@@ -35,9 +38,9 @@ related:
 
 ## 一句话总览
 
-这页把 Agent 评测拆成层次：[[Evaluation]] 是总的判断过程，[[Benchmark]] 给固定任务协议，[[Eval Harness]] 把任务跑成可复现实验，[[Task Success Rate]] 是端到端结果指标，[[LLM-as-Judge]] 是一种语义评估器，[[RAG Evaluation]] 和 [[Trajectory Evaluation]] 分别把评测下沉到检索链路和行动轨迹。
+这页把 Agent 评测拆成层次：[[Evaluation]] 是总的判断过程，[[Benchmark]] 给固定任务协议，[[Eval Harness]] 把任务跑成可复现实验，[[Task Success Rate]] 是端到端结果指标，[[Agent Robustness]] 是扰动条件下的系统性质，[[LLM-as-Judge]] 是一种语义评估器，[[RAG Evaluation]] 和 [[Trajectory Evaluation]] 分别把评测下沉到检索链路和行动轨迹。
 
-最小边界：benchmark 不是 evaluation 全部；success rate 不是失败解释；judge 不是最终真理；harness 不是指标，而是把样例、运行、trace、score 和 replay 连接起来的工程外壳。
+最小边界：benchmark 不是 evaluation 全部；success rate 不是失败解释；robustness 不是单点成功率；judge 不是最终真理；harness 不是指标，而是把样例、运行、trace、score 和 replay 连接起来的工程外壳。
 
 ## 为什么这组值得对比
 
@@ -75,6 +78,7 @@ evaluation goal
 | [[Benchmark]] | 固定任务集和评分协议 | 评测前定义，运行后报告 | 标准任务、环境限制、评分规则 | 可比较分数或通过率 | [[Benchmark#证据锚点]] |
 | [[Eval Harness]] | 运行、记录、评分和报告的工程外壳 | 批量执行任务并保存证据 | dataset、runner、environment、scorer | trace、score、diff、报告、失败样本 | [[Eval Harness#证据锚点]] |
 | [[Task Success Rate]] | 端到端任务完成指标 | 任务执行后统计 | 成功判定、总任务数、通过样本 | 成功比例 | [[Task Success Rate#证据锚点]] |
+| [[Agent Robustness]] | 扰动条件下的系统级稳定性和恢复能力 | 正常集与故障/噪声/攻击集对比 | failure set、noisy observation、tool error、trace、outcome | 成功率下降、恢复质量、越权/停止/升级行为 | [[Agent Robustness#证据锚点]] |
 | [[LLM-as-Judge]] | 语义质量评估器 | 输出后或轨迹后评分 | 被评内容、rubric、judge prompt | score、label、理由 | [[LLM-as-Judge#证据锚点]] |
 | [[RAG Evaluation]] | 检索、上下文、引用和回答链路 | retrieve 前后、generate 后分层检查 | query、chunks、context、answer、citations | retrieval/context/generation/citation 分层结果 | [[RAG Evaluation#证据锚点]] |
 | [[Trajectory Evaluation]] | Agent 行动路径是否可接受 | 执行后或运行中检查 trajectory | tool calls、observations、权限、trace、结果 | 过程安全/有效/合规/经济判断 | [[Trajectory Evaluation#证据锚点]] |
@@ -93,6 +97,10 @@ evaluation goal
 
 [[Task Success Rate]] 是入口指标，说明任务完成比例；[[Evaluation]] 还要解释失败原因、过程风险、成本、延迟、用户体验和回归情况。一个 Agent 可以 success rate 上升，但同时多次越权、成本暴涨或依赖偶然网页状态。
 
+### Task Success Rate vs Agent Robustness
+
+[[Task Success Rate]] 是单个任务集上的结果比例；[[Agent Robustness]] 更像“指标在扰动条件下的退化曲线”。两个 Agent 在正常集都 80% success rate，但一个在工具超时后降到 75%，另一个降到 30%，它们的成功率入口值相同，鲁棒性完全不同。
+
 ### LLM-as-Judge vs Evaluation
 
 [[LLM-as-Judge]] 是 evaluator 家族中的一种，适合语义质量、忠实性、解释清晰度和弱监督筛查；它不替代规则、测试、人审、业务指标和安全检查。高风险任务应优先用确定性 checker，judge 作为辅助信号。
@@ -107,6 +115,7 @@ evaluation goal
 Benchmark:           define tasks + protocol -> run -> report comparable score
 Eval Harness:        dataset -> runner/environment -> trace/artifacts -> scorer -> report/replay
 Task Success Rate:   completed tasks / all tasks after checker
+Agent Robustness:    normal set vs perturbation set -> degradation/recovery/safety
 LLM-as-Judge:        output/trajectory + rubric -> judge model -> score/reason
 RAG Evaluation:      query -> retrieve/context/citation/generation checks
 Trajectory Eval:     trace/trajectory -> rules/judge/human -> process judgment
@@ -131,6 +140,7 @@ Trajectory Eval:     trace/trajectory -> rules/judge/human -> process judgment
 | [[Benchmark]] | 固定驾考路线和评分规则 | 现实路况更复杂，不能只信驾考成绩 |
 | [[Eval Harness]] | 考试组织系统：发车、记录路线、计时、保存违规证据 | harness 是运行装置，不是评分标准本身 |
 | [[Task Success Rate]] | 有多少次成功到达终点 | 不说明是否闯红灯或耗油过高 |
+| [[Agent Robustness]] | 遇到封路、坏天气、导航错误时还能不能安全到达或正确停靠 | 只在定义好的扰动分布里成立，不是无限保证 |
 | [[LLM-as-Judge]] | 教练根据录像评价驾驶习惯 | 教练会主观，仍需硬规则 |
 | [[Trajectory Evaluation]] | 检查整条行驶路线是否安全合规 | 不只看是否到达 |
 | [[RAG Evaluation]] | 检查导航资料是否准确、引用是否支持路线 | 只适合有外部证据链的任务 |
@@ -148,6 +158,7 @@ Trajectory Eval:     trace/trajectory -> rules/judge/human -> process judgment
 | 想横向比较系统在固定任务上的能力 | [[Benchmark]] | 它定义任务集、协议和分数口径 | 可能被污染、刷分或不贴近真实业务 |
 | 想稳定回归测试 prompt / model / workflow 改动 | [[Eval Harness]] | 它能批量运行、保存 trace、比较版本 | harness 配置变化会让结果不可比 |
 | 想看用户任务端到端是否完成 | [[Task Success Rate]] | 它是任务完成的第一层指标 | 不解释失败原因，也不保证过程安全 |
+| 想看工具异常、噪声、攻击或用户变化下系统是否稳定 | [[Agent Robustness]] | 它比较正常集与扰动集下的成功率、恢复动作和安全边界 | 扰动集设计过窄会虚高；不能把所有 Robustness 都归到 Agent |
 | 想批量筛查回答是否忠实、清楚、符合 rubric | [[LLM-as-Judge]] | 适合语义质量和弱监督评分 | judge 偏差、漂移、诱导和隐私风险 |
 | 想定位 RAG 是检索错还是生成错 | [[RAG Evaluation]] | 它把 retrieval/context/generation/citation 拆开 | 只看最终答案会混淆根因 |
 | 想判断 Agent 工具路径是否安全合规 | [[Trajectory Evaluation]] | 它评估整条路径，而不只看输出 | 需要足够 trace；软 judge 不能替代硬规则 |
@@ -161,7 +172,7 @@ Trajectory Eval:     trace/trajectory -> rules/judge/human -> process judgment
 
 ## 证据锚点
 
-- Concept anchors: [[Evaluation#证据锚点]], [[Benchmark#证据锚点]], [[Eval Harness#证据锚点]], [[LLM-as-Judge#证据锚点]], [[Task Success Rate#证据锚点]], [[RAG Evaluation#证据锚点]], [[Trajectory Evaluation#证据锚点]]
+- Concept anchors: [[Evaluation#证据锚点]], [[Benchmark#证据锚点]], [[Eval Harness#证据锚点]], [[LLM-as-Judge#证据锚点]], [[Task Success Rate#证据锚点]], [[Agent Robustness#证据锚点]], [[RAG Evaluation#证据锚点]], [[Trajectory Evaluation#证据锚点]]
 - Source examples: [[GAIA Benchmark#为什么收]], [[SWE-bench#为什么收]], [[LangSmith Evaluation and Observability#一句话]], [[Langfuse Observability and Evaluation#一句话]], [[OpenAI Agents SDK 文档#Tracing 补充]], [[Microsoft RAG 官方文档#一句话]]
 - Evidence type: existing concept-card synthesis + benchmark/docs/source notes + clearly labeled engineering synthesis + learning analogy.
 - Confidence: medium-high for layer boundaries; medium for modern-system workflow details because platform能力和 judge 实践会变化。
@@ -170,7 +181,7 @@ Trajectory Eval:     trace/trajectory -> rules/judge/human -> process judgment
 ## 复习触发
 
 1. 为什么 benchmark 高分不等于真实业务 evaluation 通过？
-2. 如果 Task Success Rate 上升但越权 tool call 增加，这算不算 Agent 可靠性提升？
+2. 为什么正常 Task Success Rate 相同的两个 Agent，Agent Robustness 可能完全不同？
 3. LLM-as-Judge 适合判断什么？什么时候必须让规则、测试或人审优先？
 4. RAG Evaluation 和 Trajectory Evaluation 分别会看 trace 里的哪些不同证据？
 5. 把一次线上失败转成回归样本时，Eval Harness 至少要保存什么？
@@ -182,6 +193,7 @@ Trajectory Eval:     trace/trajectory -> rules/judge/human -> process judgment
 - [[Eval Harness]]
 - [[LLM-as-Judge]]
 - [[Task Success Rate]]
+- [[Agent Robustness]]
 - [[RAG Evaluation]]
 - [[Trajectory Evaluation]]
 - [[Trace]]

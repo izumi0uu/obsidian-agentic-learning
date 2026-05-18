@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "taxonomy_placement_candidates",
-  "generated_at": "2026-05-17T13:39:51Z",
+  "generated_at": "2026-05-18T02:30:06Z",
   "input_review": "reports/concept-card-relation-map/concept-hierarchy-placement-review.json",
   "classification_stage": "conservative_candidates",
   "policy": {
@@ -163,8 +163,8 @@
       "writeback_action": "none"
     },
     {
-      "source": "HyDE",
-      "source_path": "agentic learning/wiki/concepts/HyDE.md",
+      "source": "KV Cache",
+      "source_path": "agentic learning/wiki/concepts/KV Cache.md",
       "target": null,
       "signal_type": "no_conservative_approved_parent_signal",
       "status": "suppressed_not_candidate",

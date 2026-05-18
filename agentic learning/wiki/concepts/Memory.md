@@ -30,7 +30,7 @@ Memory 是 Agent 在当前任务和未来任务中保存、检索、更新并使
 
 ## 概念详解
 
-Agent 的 memory 不是“把所有聊天记录塞回 prompt”。它是一组围绕信息生命周期的工程能力：什么信息值得写入、写到哪里、下次如何检索、是否需要合并或覆盖旧信息、是否要过期、删除、审计，以及最终怎样进入当前 agent state 或模型上下文。
+Agent 的 memory 不是“把所有聊天记录塞回 prompt”。它是一组围绕信息生命周期的工程能力：什么信息值得写入、写到哪里、下次如何检索、是否需要合并或覆盖旧信息、是否要过期、删除、审计，以及最终怎样进入当前 agent state 或模型上下文。[[TTL]] 是这条生命周期治理里的一个常见参数：它不代表记忆一定要删除，但会提醒系统旧信息不能永远无条件可信。
 
 在 runtime 里，memory 通常被拆成几层：短期上下文负责当前回合可见内容，任务 state 负责当前 workflow 的步骤和中间结果，长期存储负责跨会话的信息，检索层负责把候选记忆找回来，策略层决定哪些记忆能影响当前回答。这样拆开后，Memory 才能和 [[Agent State]]、[[RAG]]、[[Long-term Memory]]、[[Semantic Memory]]、[[Episodic Memory]] 分清边界。
 
@@ -119,5 +119,6 @@ Memory 是基础地基 + 当前工程实践。
 - [[RAG]]
 - [[Evaluation]]
 - [[Long-term Memory]]
+- [[TTL]]
 - [[Semantic Memory]]
 - [[Episodic Memory]]

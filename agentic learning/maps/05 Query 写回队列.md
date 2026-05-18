@@ -5,7 +5,7 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-07
-updated: 2026-05-17
+updated: 2026-05-18
 related:
   - "[[LLM Wiki 工作流]]"
   - "[[02 问题池]]"
@@ -46,6 +46,8 @@ related:
 | 2026-05-17 | done | “检索侧 Query Rewrite / Multi-Query / HyDE / Step-back / Query Planning / Agentic Retrieval 如何成组学习？” | [[HyDE]], [[Step-back Prompting]], [[Query Rewrite Query Planning Agentic Retrieval 对比]], [[RAG 主题]], `scripts/interview_question_concept_aliases.json` | 已创建 [[HyDE]] 与 [[Step-back Prompting]]，升级对比 topic 覆盖 6 个概念，并同步 alias map、raw evidence 回链、RAG 导航、概念候选 backlog 和 log；旧 folded 决策已重开为 done。 |
 | 2026-05-17 | done | “Codex CLI / Claude Code 客户端为什么不显式用传统 RAG？” | [[Coding Agent 为什么不用传统 RAG]], [[Repo Context]], [[Context RAG Memory 对比]] | 已创建小型 topic 页：把结论写成 repo context gathering vs traditional document RAG 的边界；不新建弱概念卡，不修改 alias map。 |
 | 2026-05-17 | done | “LLM 的上下文受什么限制，未来突破需要什么因素？” | [[LLM 上下文限制与突破条件]], [[Context Window]], [[Context Engineering]] | 已创建小型 topic 页：把上下文限制拆成容量、计算、结构、有效使用和治理五层；结论是长上下文突破需要模型、推理系统和外部上下文工程共同进步。 |
+| 2026-05-17 | done | “KV Cache 在 LLM 推理中解决什么问题，相关论文如何定位 MQA / GQA / PagedAttention / FlashAttention？” | [[KV Cache]], [[LLM 上下文限制与突破条件]], [[资料收集索引]] | 已创建 [[KV Cache]] 概念卡和 4 篇 paper source note；边界：MQA/GQA 是 attention 结构层减少 K/V 份数，PagedAttention 是 KV cache 内存管理，FlashAttention 是 attention IO 实现优化，不把它们强行建成弱概念卡。 |
+| 2026-05-18 | done | “Agent 鲁棒性 / Agent Robustness 的边界是什么？” | [[Agent Robustness]], [[Task Success Rate]], [[Evaluation]], [[Evaluation 层次对比]], `scripts/interview_question_concept_aliases.json` | 已创建 [[Agent Robustness]] 概念卡；边界写明它是扰动条件下的系统级稳定性和恢复能力，不等于通用可靠性、安全性、evaluation 或 task success rate，也不把裸 `鲁棒性 / Robustness` 自动当 alias。 |
 
 ## 写回模板
 

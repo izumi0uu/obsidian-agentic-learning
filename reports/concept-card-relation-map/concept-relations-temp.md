@@ -1,21 +1,21 @@
 # Temporary Concept Relationship Map
 
-Generated: `2026-05-17T13:39:51Z`
+Generated: `2026-05-18T02:30:06Z`
 
 > 临时文件：用于后续概念层级开发评估。不要把候选边自动写回概念卡；每条 candidate 都需要单独人工/LLM 复核。
 
 ## Summary
 
-- total_concepts: 132
-- edge_counts: {'related_link': 734, 'body_link': 242, 'taxonomy': 37, 'typed_relation': 31}
-- typed_relation_counts: {'representative_of': 1, 'based_on_intuition': 1, 'related_to': 7, 'paired_with': 2, 'contrasts_with': 5, 'composes_with': 7, 'uses': 2, 'mitigates': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
-- concepts_without_up: 95
+- total_concepts: 136
+- edge_counts: {'related_link': 761, 'body_link': 252, 'typed_relation': 34, 'taxonomy': 37}
+- typed_relation_counts: {'related_to': 10, 'representative_of': 1, 'based_on_intuition': 1, 'paired_with': 2, 'contrasts_with': 5, 'composes_with': 7, 'uses': 2, 'mitigates': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
+- concepts_without_up: 99
 - core_orphans: 0
 - weakly_connected_concepts: 1
-- dangling_core_targets: 23
-- candidate_edges: 68
+- dangling_core_targets: 24
+- candidate_edges: 72
 - taxonomy_candidates: 11
-- topic_family_review_signals: 57
+- topic_family_review_signals: 61
 
 ## Existing taxonomy edges (`up`)
 
@@ -63,6 +63,9 @@ Generated: `2026-05-17T13:39:51Z`
 
 | Source | relation | Target | Evidence | Note |
 |---|---|---|---|---|
+| [[Agent Robustness]] | related_to | [[Guardrails]] | frontmatter.relations | Guardrails 可以提高部分扰动下的可控性，但安全拦截机制不等于鲁棒性指标。 |
+| [[Agent Robustness]] | related_to | [[Task Success Rate]] | frontmatter.relations | Agent Robustness 常用扰动条件下的成功率下降幅度来观察；Task Success Rate 是被观察指标，不是鲁棒性本身。 |
+| [[Agent Robustness]] | related_to | [[Trajectory Evaluation]] | frontmatter.relations | 工具超时、异常返回、噪声输入和恢复动作都需要看 trajectory，而不只看最终输出。 |
 | [[BM25]] | based_on_intuition | [[TF-IDF]] | frontmatter.relations | BM25 延续 TF-IDF 的词项权重直觉，但加入长度归一化和饱和控制。 |
 | [[BM25]] | related_to | [[Hybrid Search]] | frontmatter.relations | Hybrid Search 常把 BM25 作为 sparse route 或关键词侧候选。 |
 | [[BM25]] | representative_of | [[Sparse Retrieval]] | frontmatter.relations | BM25 是 sparse retrieval 的常见代表算法。 |
@@ -112,6 +115,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[Agent Harness]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Agent Lifecycle Hook]] | [[Observability]] | topic_family_review | low | frontmatter.related | topic family: observability |
 | [[Agent Loop]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | topic family: workflow |
+| [[Agent Robustness]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Agent State]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | topic family: workflow |
 | [[Agent State]] | [[Memory]] | topic_family_review | low | frontmatter.related | topic family: memory |
 | [[Agent Workflow Static Verification]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | topic family: framework |
@@ -142,6 +146,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[OpenTelemetry GenAI]] | [[Observability]] | topic_family_review | low | frontmatter.related | topic family: observability |
 | [[Patch Validation]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Plan-and-Solve Prompting]] | [[Planning]] | topic_family_review | low | frontmatter.related | topic family: planning |
+| [[Prompt Engineering]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Provider-first Agent SDK]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | topic family: framework |
 | [[Query Planning]] | [[Retriever]] | topic_family_review | low | frontmatter.related | topic family: retrieval/search |
 | [[Query Rewrite]] | [[Retriever]] | topic_family_review | low | frontmatter.related | topic family: retrieval/search |
@@ -160,6 +165,8 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[State Graph Runtime]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | topic family: workflow |
 | [[TF-IDF]] | [[RAG]] | topic_family_review | low | body wikilink | topic family: rag |
 | [[TF-IDF]] | [[Retriever]] | topic_family_review | low | frontmatter.related | topic family: retrieval/search |
+| [[TTL]] | [[Memory]] | topic_family_review | low | frontmatter.related | topic family: memory |
+| [[TTL]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
 | [[Task Success Rate]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Tool Permissioning]] | [[Tool Use]] | taxonomy_candidate | low | title/topic heuristic | tool-use title family |
 | [[Tool Poisoning]] | [[Tool Use]] | taxonomy_candidate | low | title/topic heuristic | tool-use title family |
@@ -183,6 +190,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Agent Harness]]
 - [[Agent Lifecycle Hook]]
 - [[Agent Loop]]
+- [[Agent Robustness]]
 - [[Agent State]]
 - [[Agent Workflow]]
 - [[Agent Workflow Static Verification]]
@@ -210,6 +218,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Human-in-the-loop]]
 - [[HyDE]]
 - [[Indirect Prompt Injection]]
+- [[KV Cache]]
 - [[Knowledge Graph]]
 - [[LLM]]
 - [[LLM Gateway]]
@@ -233,6 +242,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Policy Engine]]
 - [[Positional Encoding]]
 - [[Prompt]]
+- [[Prompt Engineering]]
 - [[Prompt Injection]]
 - [[Provider-first Agent SDK]]
 - [[Query Planning]]
@@ -254,6 +264,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[State Graph Runtime]]
 - [[Step-back Prompting]]
 - [[TF-IDF]]
+- [[TTL]]
 - [[Task Success Rate]]
 - [[Token]]
 - [[Tool Permissioning]]
@@ -284,6 +295,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[AutoGen]] | related | Agent Framework 编排范式对比 | related_link |
 | [[CAMEL]] | related | Agent Framework 编排范式对比 | related_link |
 | [[GraphRAG]] | related | RAG 类型对比 | related_link |
+| [[KV Cache]] | related | LLM 上下文限制与突破条件 | related_link |
 | [[LangGraph]] | related | Agent Framework 编排范式对比 | related_link |
 | [[Microsoft Agent Framework]] | related | Agent Framework 编排范式对比 | related_link |
 | [[Observation]] | related | Environment Observation 类型对比 | related_link |

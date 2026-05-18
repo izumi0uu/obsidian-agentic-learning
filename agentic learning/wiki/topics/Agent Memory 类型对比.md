@@ -6,7 +6,7 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-17
 source:
   - "[[Memory]]"
   - "[[Agent State]]"
@@ -16,6 +16,7 @@ source:
   - "[[Memory Reflection]]"
   - "[[Parametric Memory]]"
   - "[[Non-Parametric Memory]]"
+  - "[[TTL]]"
   - "[[LangGraph Memory 官方文档]]"
   - "[[Letta Memory 官方文档]]"
   - "[[Zep Memory 官方文档]]"
@@ -30,6 +31,7 @@ evidence:
   - "[[Memory Reflection#证据锚点]]"
   - "[[Parametric Memory#证据锚点]]"
   - "[[Non-Parametric Memory#证据锚点]]"
+  - "[[TTL#证据锚点]]"
 related:
   - "[[Agent 主题]]"
   - "[[Context RAG Memory 对比]]"
@@ -43,7 +45,7 @@ related:
 
 这页回答：Agent 里常见的 memory、state、长期记忆、语义记忆、情景记忆、reflection，以及 RAG 论文里的 parametric / non-parametric memory 到底是不是一回事。
 
-最小边界：[[Agent State]] 让当前任务继续运行；[[Memory]] 让跨时间信息被保存、检索和治理；[[Long-term Memory]] 是跨会话能力层；[[Semantic Memory]] 保存稳定事实/偏好；[[Episodic Memory]] 保存经历和轨迹；[[Memory Reflection]] 从历史中提炼候选长期记忆；[[Parametric Memory]] 在模型权重里；[[Non-Parametric Memory]] 在模型外部可检索存储里。
+最小边界：[[Agent State]] 让当前任务继续运行；[[Memory]] 让跨时间信息被保存、检索和治理；[[Long-term Memory]] 是跨会话能力层；[[Semantic Memory]] 保存稳定事实/偏好；[[Episodic Memory]] 保存经历和轨迹；[[Memory Reflection]] 从历史中提炼候选长期记忆；[[Parametric Memory]] 在模型权重里；[[Non-Parametric Memory]] 在模型外部可检索存储里；[[TTL]] 是这些信息何时不再默认可信的生命周期参数。
 
 ## 为什么这组值得对比
 
@@ -67,7 +69,7 @@ model parameters  -> parametric knowledge
 external stores   -> non-parametric knowledge / RAG / memory store
 ```
 
-这条线说明：memory 不是一个单点数据库，而是一组围绕“写入、保存、检索、更新、过期、权限和证据边界”的工程能力。
+这条线说明：memory 不是一个单点数据库，而是一组围绕“写入、保存、检索、更新、过期、权限和证据边界”的工程能力。[[TTL]] 只覆盖其中的时间边界，不覆盖来源可信度、权限、冲突和事实校验。
 
 ## 核心区别表
 
@@ -81,6 +83,7 @@ external stores   -> non-parametric knowledge / RAG / memory store
 | [[Memory Reflection]] | 记忆维护和提炼流程 | episode / trace 之后，写入长期记忆之前 | 历史对话、episode、trace、评价反馈 | 候选 semantic memory、合并/冲突/不写入决定 | [[Memory Reflection#证据锚点]] |
 | [[Parametric Memory]] | 模型权重中的知识 | 训练后隐含存在，生成时被调用 | 训练数据压缩进参数 | 不可直接引用或编辑的内部知识 | [[Parametric Memory#证据锚点]] |
 | [[Non-Parametric Memory]] | 模型外部可检索知识 | 查询时由 retriever 取回 | 文档索引、向量库、知识库、数据库 | passages / chunks / records 进入上下文 | [[Non-Parametric Memory#证据锚点]] |
+| [[TTL]] | 生命周期参数 | 写入、读取或刷新时检查 | 缓存、记忆、索引记录、临时状态 | 删除、降权、刷新或重新确认信号 | [[TTL#证据锚点]] |
 
 ## 最容易混淆的边界
 
@@ -152,7 +155,7 @@ Model knowledge path:
 
 ### 工程综合 / inference
 
-现代系统通常把 memory 拆成至少四层：runtime state、episodic trace/history、semantic/long-term store、external retrieval store。写入长期记忆时要有触发条件、来源、作用域、过期/删除和用户确认策略；检索记忆时要通过 context engineering 决定哪些片段真的进入模型上下文。
+现代系统通常把 memory 拆成至少四层：runtime state、episodic trace/history、semantic/long-term store、external retrieval store。写入长期记忆时要有触发条件、来源、作用域、[[TTL]] / 删除和用户确认策略；检索记忆时要通过 context engineering 决定哪些片段真的进入模型上下文。
 
 ### 仍需警惕的外推
 
@@ -167,6 +170,7 @@ Model knowledge path:
 | 想复盘某次失败尝试 | [[Episodic Memory]] / [[Trace]] | 需要保存当时发生过的路径 | episode 太多会淹没真正可复用经验 |
 | 想从多次失败中提炼规则 | [[Memory Reflection]] | 需要把经历压缩成候选长期记忆 | evaluator 或总结错误会固化坏经验 |
 | 想回答外部文档事实问题 | [[Non-Parametric Memory]] / [[RAG]] | 外部资料可更新、可引用、可权限治理 | 检索失败或资料过期仍会误导回答 |
+| 想控制旧记忆或旧索引何时不再默认可信 | [[TTL]] | 需要时间边界、降权、刷新或重新确认 | TTL 只能处理 freshness，不能替代事实校验和权限治理 |
 | 模型凭常识即可回答 | [[Parametric Memory]] | 参数知识提供语言和常识先验 | 无来源、难更新，不适合作为唯一事实依据 |
 
 ## 它们共同不是什么
@@ -178,7 +182,7 @@ Model knowledge path:
 
 ## 证据锚点
 
-- Concept anchors: [[Memory#证据锚点]], [[Agent State#证据锚点]], [[Long-term Memory#证据锚点]], [[Episodic Memory#证据锚点]], [[Semantic Memory#证据锚点]], [[Memory Reflection#证据锚点]], [[Parametric Memory#证据锚点]], [[Non-Parametric Memory#证据锚点]]
+- Concept anchors: [[Memory#证据锚点]], [[Agent State#证据锚点]], [[Long-term Memory#证据锚点]], [[Episodic Memory#证据锚点]], [[Semantic Memory#证据锚点]], [[Memory Reflection#证据锚点]], [[Parametric Memory#证据锚点]], [[Non-Parametric Memory#证据锚点]], [[TTL#证据锚点]]
 - Source examples: [[LangGraph Memory 官方文档]], [[Letta Memory 官方文档]], [[Zep Memory 官方文档]], [[Mem0 Memory 官方文档]], [[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]]
 - Evidence type: concept-card synthesis + official docs source notes + RAG paper source note + engineering synthesis + learning analogy.
 - Confidence: medium-high for state / long-term / semantic / episodic / reflection boundaries; medium for product-level memory behavior because API 和自动写入策略变化较快。
@@ -202,6 +206,7 @@ Model knowledge path:
 - [[Memory Reflection]]
 - [[Parametric Memory]]
 - [[Non-Parametric Memory]]
+- [[TTL]]
 - [[RAG]]
 - [[Context Engineering]]
 - [[Trace]]
