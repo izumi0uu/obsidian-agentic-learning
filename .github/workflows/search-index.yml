@@ -8,7 +8,9 @@ on:
 
 jobs:
   verify-search-index:
-    runs-on: ubuntu-latest
+    # The vault intentionally contains a few long Chinese Markdown filenames
+    # that exceed Linux checkout filename limits on GitHub-hosted runners.
+    runs-on: macos-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
