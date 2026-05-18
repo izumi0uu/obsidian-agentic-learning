@@ -2,6 +2,29 @@
 
 这个目录放项目级可调用脚本。
 
+## GitHub 搜索索引
+
+```bash
+cd /Users/idah/Projects-combined/obsidian-agentic-learning
+python3 scripts/build_search_index.py
+python3 scripts/build_search_index.py --check
+```
+
+脚本行为：
+
+- 扫描可提交的 Markdown 文件，默认覆盖 `README.md`、`AGENTS.md` 和 `agentic learning/` 下的 durable note。
+- 排除 `.obsidian/`、`templates/` 和 Excalidraw 画布源，避免把本地 UI 状态、模板和绘图 JSON 放进公开搜索面。
+- 生成根目录 `search-index.json`，字段包括 title、path、GitHub URL、type/status/topic/aliases/related、headings、excerpt、截断正文和 sha256。
+- 使用 `git -c core.quotePath=false ls-files --cached --others --exclude-standard`，保证中文路径不会被 C-style quote 后漏索引。
+- 每篇正文最多保留 8000 字符，避免搜索索引膨胀成 raw 全量镜像。
+
+GitHub Actions:
+
+- `.github/workflows/search-index.yml` 在 push / pull request 时运行 `python3 scripts/build_search_index.py --check`。
+- 如果 Markdown 改了但 `search-index.json` 没同步，CI 会失败并提示重新生成。
+
+边界：这是公开仓库的轻量 JSON 搜索索引，不是 Obsidian 本地索引、向量库或 GitHub Code Search 的替代品。
+
 ## 更新小林 Note raw source
 
 ```bash

@@ -1290,3 +1290,10 @@ related:
 - Taxonomy: no direct `up` was written; [[GSSC Pipeline]] uses `relations: pattern_for [[Context Engineering]]` pending candidate generation, adjudication, dry-run, and validation.
 - Mention sweep: searched GSSC / Gather-Select-Structure-Compress / Gather Select Structure Compress / 上下文构建四阶段流水线 / 收集-选择-结构化-压缩 / 获取-选择-结构化-压缩 across wiki, raw, maps, and alias map; linked high-confidence same-pipeline hits and left generic gather/select/structure/compress wording unlinked.
 - Validation: JSON alias map parse PASS; interview link self-test PASS and dry-run reports 779 pages / would modify 30 / inline links 37 / missing candidates 0 / protected violations 0; concept-card audit 142 / needs 0; request-meta audit 1133 files / 0 hits; taxonomy validate, plugin contract, control-surface sync, and baseline-map validation PASS with 142 concepts / 37 top-level `up` / 22 deferred-with-backlog / 0 open writeback; `git diff --check` PASS.
+
+## [2026-05-18] automation | public GitHub search index
+
+- Added `scripts/build_search_index.py` to generate root `search-index.json` from committed Markdown for public GitHub/search-tool consumption.
+- Added `.github/workflows/search-index.yml` to verify the generated index on push and pull request.
+- Updated README and scripts documentation with the search-index boundary: public JSON search surface, not Obsidian local index, vector DB, or GitHub Code Search replacement.
+- Generated `search-index.json` with 1135 documents and type counts: concept 142, source 886, map 49, review 5, project-index 2, plus README / AGENTS / index / log / generic markdown.

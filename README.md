@@ -156,6 +156,19 @@ Obsidian 模板：
 - durable answer 要写回 wiki 或 `05 Query 写回队列.md`。
 - 不懂的问题写入 `02 问题池.md`，比制造一个模糊答案更有价值。
 
+## 公开搜索索引
+
+仓库根目录的 `search-index.json` 是给 GitHub 公开浏览、外部静态搜索或轻量检索工具使用的 Markdown 搜索索引。它由 `scripts/build_search_index.py` 从仓库内可提交的 Markdown 生成，包含标题、路径、GitHub URL、frontmatter 摘要字段、heading、excerpt 和截断正文。
+
+更新方式：
+
+```bash
+python3 scripts/build_search_index.py
+python3 scripts/build_search_index.py --check
+```
+
+GitHub Actions 会在 push / pull request 时运行 `--check`，防止 Markdown 已更新但搜索索引忘记同步。这个索引是公开消费文件，不是本地向量库；`.qdrant/`、`.chroma/`、SQLite、parquet 等本地检索缓存仍然不进入 Git。
+
 ## 推荐学习循环
 
 1. 收集：文章、论文、文档、repo 先进入 `raw/`。
