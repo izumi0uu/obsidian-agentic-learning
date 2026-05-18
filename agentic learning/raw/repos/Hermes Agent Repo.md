@@ -12,7 +12,7 @@ topic:
   - workflow
   - frontier
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-18
 last_checked: 2026-05-11
 freshness: volatile
 conflicts: []
@@ -26,6 +26,7 @@ related:
   - "[[Tool Calling]]"
   - "[[MCP]]"
   - "[[Durable Execution]]"
+  - "[[Progressive Disclosure]]"
 ---
 
 # Hermes Agent Repo
@@ -74,6 +75,7 @@ Hermes Agent 是一个以 Nous Research 生态为中心的 self-improving / tool
 - [[Agent Workflow]]
 - [[Durable Execution]]
 - [[Multi-agent Orchestration]]
+- [[Progressive Disclosure]]
 
 ## 学习时先看
 

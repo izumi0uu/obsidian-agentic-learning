@@ -4,10 +4,10 @@
 - 扫描题页：779
 - 含 `## 相关知识 wiki`：779
 - 已有正文概念链接页：362
-- 本次可新增/已新增链接：32
-- would modify pages：26
+- 本次可新增/已新增链接：36
+- would modify pages：30
 - skipped/no-match pages：412
-- unsafe-region skips：3998
+- unsafe-region skips：4010
 - missing concept candidates：0（unique 0）
 - protected-region violations：0
 
@@ -15,8 +15,8 @@
 
 | root | total | related | already-linked pages | would-modify pages | proposed links | skipped/no-match |
 |---|---:|---:|---:|---:|---:|---:|
-| xiaolinnote | 142 | 142 | 81 | 8 | 10 | 61 |
-| agent_java_offer | 637 | 637 | 281 | 18 | 22 | 351 |
+| xiaolinnote | 142 | 142 | 81 | 10 | 12 | 61 |
+| agent_java_offer | 637 | 637 | 281 | 20 | 24 | 351 |
 
 ## Sample files selected
 
@@ -30,8 +30,8 @@
 - agentic learning/raw/repos/agent_java_offer/questions/407 02_后端 10_网络I_O与发布治理 Netty 如何体现 Reactor 模型？.md
 - agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md
 - agentic learning/raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md
+- agentic learning/raw/repos/xiaolinnote/questions/060 ai tools 9. Skill 是什么？.md
 - agentic learning/raw/repos/xiaolinnote/questions/123 ai llm 20. 大模型部署有哪些主流方案？vLLM、TGI、llama.cpp、SGLang 实际项目里怎么选？.md
-- agentic learning/raw/repos/xiaolinnote/questions/128 ai llm 14. KV Cache 是什么？Prompt Caching 的原理是什么？.md
 
 ## Missing targets
 
@@ -126,6 +126,8 @@
 - agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md:64 — `HyDE` -> `[[HyDE]]`
 - agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md:64 — `Step-back Prompting` -> `[[Step-back Prompting]]`
 - agentic learning/raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md:155 — `HyDE` -> `[[HyDE]]`
+- agentic learning/raw/repos/xiaolinnote/questions/045 ai tools 10. MCP 和 Agent Skill 的区别是什么？.md:106 — `渐进式加载` -> `[[Progressive Disclosure]]`
+- agentic learning/raw/repos/xiaolinnote/questions/060 ai tools 9. Skill 是什么？.md:134 — `渐进式加载` -> `[[Progressive Disclosure]]`
 - agentic learning/raw/repos/xiaolinnote/questions/123 ai llm 20. 大模型部署有哪些主流方案？vLLM、TGI、llama.cpp、SGLang 实际项目里怎么选？.md:53 — `KV Cache` -> `[[KV Cache]]`
 - agentic learning/raw/repos/xiaolinnote/questions/128 ai llm 14. KV Cache 是什么？Prompt Caching 的原理是什么？.md:25 — `KV Cache` -> `[[KV Cache]]`
 - agentic learning/raw/repos/xiaolinnote/questions/131 ai llm 3. 多头注意力（MHA）有哪些局限？MQA、GQA、Flash Attention 怎么解决？.md:69 — `KV Cache` -> `[[KV Cache]]`
@@ -146,10 +148,12 @@
 - agentic learning/raw/repos/agent_java_offer/questions/210 01_AI 08_框架协议与工程化 框架选型与架构关系（LangChain LangGraph LlamaIndex RAG框架）.md:74 — `Ragflow` -> `[[RAGFlow]]`
 - agentic learning/raw/repos/agent_java_offer/questions/212 01_AI 08_框架协议与工程化 CrewAI、AutoGen、Ragflow 适合什么阶段？.md:36 — `Ragflow` -> `[[RAGFlow]]`
 - agentic learning/raw/repos/agent_java_offer/questions/218 01_AI 08_框架协议与工程化 知道或者使用过哪些开源 RAG 框架比如 Ragflow？如何选择合适场景？.md:39 — `Ragflow` -> `[[RAGFlow]]`
+- agentic learning/raw/repos/agent_java_offer/questions/240 01_AI 08_框架协议与工程化 如何理解mcp的，他主要解决什么问题，他这个协议的发展现状有什么问题吗，哪些地方可以优化呢.md:89 — `渐进式披露` -> `[[Progressive Disclosure]]`
 - agentic learning/raw/repos/agent_java_offer/questions/272 02_后端 02_Redis 缓存穿透如何处理？.md:58 — `TTL` -> `[[TTL]]`
 - agentic learning/raw/repos/agent_java_offer/questions/274 02_后端 02_Redis 缓存雪崩如何处理？.md:53 — `TTL` -> `[[TTL]]`
 - agentic learning/raw/repos/agent_java_offer/questions/305 02_后端 05_缓存与一致性 缓存穿透如何处理？.md:57 — `TTL` -> `[[TTL]]`
 - agentic learning/raw/repos/agent_java_offer/questions/307 02_后端 05_缓存与一致性 缓存雪崩如何处理？.md:52 — `TTL` -> `[[TTL]]`
+- agentic learning/raw/repos/agent_java_offer/questions/523 05_项目表达 01_AI应用平台 你今晚最该准备的 8 个题眼.md:158 — `渐进式披露` -> `[[Progressive Disclosure]]`
 - agentic learning/raw/repos/agent_java_offer/questions/594 05_项目表达 03_垂直写作与审阅平台 额外加分点（展示你懂企业落地）.md:204 — `BM25` -> `[[BM25]]`
 - agentic learning/raw/repos/agent_java_offer/questions/594 05_项目表达 03_垂直写作与审阅平台 额外加分点（展示你懂企业落地）.md:178 — `向量检索` -> `[[Dense Retrieval]]`
 - agentic learning/raw/repos/agent_java_offer/questions/594 05_项目表达 03_垂直写作与审阅平台 额外加分点（展示你懂企业落地）.md:178 — `rerank` -> `[[Reranking]]`

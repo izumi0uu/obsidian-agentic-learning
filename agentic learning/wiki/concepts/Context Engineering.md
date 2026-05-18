@@ -12,18 +12,23 @@ freshness: stable
 conflicts: []
 source:
   - "[[Agent 工程基础设施主源]]"
+  - "[[prompt-engineering-vs-context-engineering-for-agents.svg]]"
 evidence:
   - "[[Agent 工程基础设施主源#为什么收]]"
   - "[[Agent 工程基础设施主源#RAG / 检索基础设施]]"
+  - "[[prompt-engineering-vs-context-engineering-for-agents.svg]]"
 related:
   - "[[LLM]]"
   - "[[RAG]]"
   - "[[Memory]]"
   - "[[Agent Harness]]"
   - "[[Prompt Engineering]]"
+  - "[[Context Window]]"
 ---
 
 # Context Engineering
+
+![[prompt-engineering-vs-context-engineering-for-agents.svg]]
 
 ## 一句话
 
@@ -34,6 +39,8 @@ Context Engineering 是设计进入模型上下文的信息结构、顺序、预
 Context Engineering 解决的是“模型这一轮到底看见什么”的工程问题。[[Prompt Engineering]] 更像把指令、模板、示例和输出约束做成可测试的工程资产；Context Engineering 则把系统指令、用户目标、历史摘要、工具 schema、检索证据、memory、trace 摘要、权限约束和输出格式一起看成运行时信息环境。模型能力再强，如果上下文里混入无关资料、缺少关键证据、优先级混乱或来源不可追溯，结果仍会不稳定。
 
 在 RAG 场景里，Context Engineering 连接 [[Retriever]] 和 generator：检索到的 chunk 不应直接堆进 prompt，而要经过筛选、去重、排序、压缩、引用标注和权限检查。它决定哪些 source 进入上下文、放在什么位置、是否保留标题层级、是否显示 metadata、是否给模型明确的证据使用规则。对 Agent 来说，它还包括当前 plan、工具结果、observation、memory 和安全规则如何进入下一轮。
+
+图里的关键不是“右侧东西更多”，而是右侧有一个显式的 curation 步骤：候选文档、工具、memory、历史和领域知识不会天然全部进入 [[Context Window]]，而是要按任务、预算、权限、时效和风险筛选后再给模型。
 
 它的边界是上下文治理，不是单纯扩大 context window。长上下文可以容纳更多内容，但不能自动解决噪声、冲突、过期资料、prompt injection 或证据优先级。Context Engineering 的成熟做法通常会配合 trace 和 evaluation：记录每次上下文里有哪些材料，检查答案是否真的基于这些材料，并用失败样本改进检索和上下文组织。
 
@@ -92,9 +99,10 @@ system rules
 ## 证据锚点
 
 - Source: [[Agent 工程基础设施主源]]
+- Asset: [[prompt-engineering-vs-context-engineering-for-agents.svg]]
 - Anchor: [[Agent 工程基础设施主源#为什么收]]
 - Anchor: [[Agent 工程基础设施主源#RAG / 检索基础设施]]
-- Evidence type: infrastructure source note + engineering synthesis.
+- Evidence type: infrastructure source note + local explanatory diagram + engineering synthesis.
 - Confidence: medium
 - Boundary: source note 支持 agent/RAG production infrastructure 的多层责任；“context engineering”作为总称和具体装配策略是本 vault 的工程综合。
 

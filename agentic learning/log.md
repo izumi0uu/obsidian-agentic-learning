@@ -1270,3 +1270,13 @@ related:
 - Updated navigation: [[资料收集索引]], [[04 页面目录]], [[index]]
 - Automation: adjusted `scripts/update_xiaolinnote.py` to preserve the collection index `created` date during refresh.
 - Boundary: this is raw evidence refresh; changed pages still need explicit wiki/concept digestion if their content matters.
+
+## [2026-05-18] writeback | Progressive Disclosure concept boundary
+
+- Created: [[Progressive Disclosure]].
+- Updated navigation and synthesis: [[01 术语表]], [[Agent 知识地图]], [[04 页面目录]], `scripts/interview_question_concept_aliases.json`.
+- Raw evidence backlinks: added [[Progressive Disclosure]] to high-confidence Skill / context-loading source notes: [[060 ai tools 9. Skill 是什么？]], [[045 ai tools 10. MCP 和 Agent Skill 的区别是什么？]], [[Hermes Agent Repo]], [[Under the Hood of SKILL.md - Semantic Supply-chain Attacks on AI Agent Skill Registry]], [[RS-Claw - Progressive Active Tool Exploration via Hierarchical Skill Trees for Remote Sensing Agents]], q240, and q523 without rewriting raw source正文.
+- Terminology: `Progressive Disclosure`, `progressive disclosure`, `渐进式披露`, `渐进披露`, and `渐进式加载` are treated as the same information-disclosure / context-loading pattern. `按需加载` is intentionally excluded from the alias map because it is too generic and can describe ordinary lazy loading or runtime resource loading outside the Agent/context pattern.
+- Taxonomy: no direct `up` was written; [[Progressive Disclosure]] is treated as relation-only / parentless because it is a cross-cutting context and capability-presentation pattern, not a strict child of [[Tool Use]], [[Tool Registry]], or [[Context Engineering]].
+- Mention sweep: searched Progressive Disclosure / progressive disclosure / 渐进式披露 / 渐进披露 / 渐进式加载 / Progressive Active Tool Exploration across wiki, raw, maps, reviews, and alias map; linked high-confidence same-concept hits and kept RS-Claw's Progressive Active Tool Exploration as an adjacent mechanism rather than an alias.
+- Validation: JSON alias map parse PASS; interview link self-test PASS and dry-run reports 779 pages / would modify 30 / inline links 36 / missing candidates 0 / protected violations 0; concept-card audit 140 / needs 0; request-meta audit 1131 files / 0 hits; taxonomy build, decide, writeback dry-run, placement close-audit, validate, plugin contract, control-surface sync, and baseline-map validation PASS with 140 concepts / 37 top-level `up` / 22 deferred-with-backlog / 0 open writeback; `git diff --check` PASS.

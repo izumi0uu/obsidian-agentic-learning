@@ -10,7 +10,7 @@ topic:
   - mcp
 status: inbox
 created: 2026-05-07
-updated: 2026-05-17
+updated: 2026-05-18
 url: https://xiaolinnote.com/ai/tools/10_mcp_vs_skill.html
 source: https://xiaolinnote.com/ai/tools/10_mcp_vs_skill.html
 last_checked: 2026-05-17
@@ -22,6 +22,7 @@ related:
   - "[[MCP]]"
   - "[[Tool Use]]"
   - "[[Tool Calling]]"
+  - "[[Progressive Disclosure]]"
 ---
 
 # 10. [[MCP]] 和 Agent Skill 的区别是什么？
@@ -35,6 +36,7 @@ related:
 - [[MCP]]
 - [[Tool Use]]
 - [[Tool Calling]]
+- [[Progressive Disclosure]]
 
 ## 页面正文
 

@@ -4,15 +4,15 @@
   "total_question_pages_scanned": 779,
   "total_pages_scanned": 779,
   "pages_with_related_section": 779,
-  "would_modify_pages": 26,
+  "would_modify_pages": 30,
   "modified_pages": 0,
-  "inline_links_inserted": 32,
-  "proposed_inline_links": 32,
+  "inline_links_inserted": 36,
+  "proposed_inline_links": 36,
   "applied_inline_links": 0,
   "already_linked_pages": 362,
   "already_linked_targets": 941,
   "skipped_no_match_pages": 412,
-  "unsafe_region_skips": 3998,
+  "unsafe_region_skips": 4010,
   "protected_region_violations": 0,
   "request_meta_page_hits": [],
   "missing_concept_candidates": 0,
@@ -22,9 +22,9 @@
     "xiaolinnote": {
       "total": 142,
       "with_related_section": 142,
-      "would_modify_pages": 8,
+      "would_modify_pages": 10,
       "modified_pages": 0,
-      "proposed_inline_links": 10,
+      "proposed_inline_links": 12,
       "applied_inline_links": 0,
       "already_linked_pages": 81,
       "skipped_no_match_pages": 61
@@ -32,9 +32,9 @@
     "agent_java_offer": {
       "total": 637,
       "with_related_section": 637,
-      "would_modify_pages": 18,
+      "would_modify_pages": 20,
       "modified_pages": 0,
-      "proposed_inline_links": 22,
+      "proposed_inline_links": 24,
       "applied_inline_links": 0,
       "already_linked_pages": 281,
       "skipped_no_match_pages": 351
@@ -51,8 +51,8 @@
     "agentic learning/raw/repos/agent_java_offer/questions/407 02_后端 10_网络I_O与发布治理 Netty 如何体现 Reactor 模型？.md",
     "agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md",
     "agentic learning/raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md",
-    "agentic learning/raw/repos/xiaolinnote/questions/123 ai llm 20. 大模型部署有哪些主流方案？vLLM、TGI、llama.cpp、SGLang 实际项目里怎么选？.md",
-    "agentic learning/raw/repos/xiaolinnote/questions/128 ai llm 14. KV Cache 是什么？Prompt Caching 的原理是什么？.md"
+    "agentic learning/raw/repos/xiaolinnote/questions/060 ai tools 9. Skill 是什么？.md",
+    "agentic learning/raw/repos/xiaolinnote/questions/123 ai llm 20. 大模型部署有哪些主流方案？vLLM、TGI、llama.cpp、SGLang 实际项目里怎么选？.md"
   ],
   "missing_targets": {},
   "pages": [
@@ -1500,12 +1500,14 @@
       "related_targets": [
         "MCP",
         "Tool Use",
-        "Tool Calling"
+        "Tool Calling",
+        "Progressive Disclosure"
       ],
       "existing_targets": [
         "MCP",
         "Tool Use",
-        "Tool Calling"
+        "Tool Calling",
+        "Progressive Disclosure"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -1513,9 +1515,19 @@
         "Tool Use",
         "Tool Calling"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "Progressive Disclosure",
+          "alias": "渐进式加载",
+          "start": 3672,
+          "end": 3677,
+          "replacement": "[[Progressive Disclosure|渐进式加载]]",
+          "line": 106,
+          "context": "这个 Skill」。 - 第二，Skill 用了一套「渐进式加载」的机制来节省 context window。启动时只加"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 0,
+      "unsafe_region_skips": 2,
       "unmatched_existing_targets": [],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -1883,19 +1895,31 @@
       "has_related_section": true,
       "related_targets": [
         "Tool Use",
-        "Tool Calling"
+        "Tool Calling",
+        "Progressive Disclosure"
       ],
       "existing_targets": [
         "Tool Use",
-        "Tool Calling"
+        "Tool Calling",
+        "Progressive Disclosure"
       ],
       "missing_targets": [],
       "already_linked_targets": [
         "Tool Use"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "Progressive Disclosure",
+          "alias": "渐进式加载",
+          "start": 3846,
+          "end": 3851,
+          "replacement": "[[Progressive Disclosure|渐进式加载]]",
+          "line": 134,
+          "context": "上，加载了也是白加载。  所以 Skill 用了一套叫「渐进式加载」（Progressive Disclosure）的三层"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 10,
+      "unsafe_region_skips": 16,
       "unmatched_existing_targets": [
         "Tool Calling"
       ],
@@ -13394,7 +13418,8 @@
         "Agent State",
         "Context Engineering",
         "MCP",
-        "Tool Calling"
+        "Tool Calling",
+        "Progressive Disclosure"
       ],
       "existing_targets": [
         "Sandbox Workspace",
@@ -13406,7 +13431,8 @@
         "Agent State",
         "Context Engineering",
         "MCP",
-        "Tool Calling"
+        "Tool Calling",
+        "Progressive Disclosure"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -13416,9 +13442,19 @@
         "Context Engineering",
         "MCP"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "Progressive Disclosure",
+          "alias": "渐进式披露",
+          "start": 3037,
+          "end": 3042,
+          "replacement": "[[Progressive Disclosure|渐进式披露]]",
+          "line": 89,
+          "context": "构化文档体系和工具信息，让 AI 在需要时找到对应信息（渐进式披露）。再给 AI 配备完整的工具链和[[Observabi"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 10,
+      "unsafe_region_skips": 12,
       "unmatched_existing_targets": [
         "Sandbox Workspace",
         "Code Execution Sandbox",
@@ -18400,7 +18436,8 @@
         "Audit Log",
         "Trace",
         "Observability",
-        "Agent Robustness"
+        "Agent Robustness",
+        "Progressive Disclosure"
       ],
       "existing_targets": [
         "Prompt Injection",
@@ -18413,7 +18450,8 @@
         "Audit Log",
         "Trace",
         "Observability",
-        "Agent Robustness"
+        "Agent Robustness",
+        "Progressive Disclosure"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -18423,9 +18461,19 @@
         "Trace",
         "Observability"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "Progressive Disclosure",
+          "alias": "渐进式披露",
+          "start": 4792,
+          "end": 4797,
+          "replacement": "[[Progressive Disclosure|渐进式披露]]",
+          "line": 158,
+          "context": "问就更快。  核心思路就一句话：**先搭框架，再看细节；渐进式披露相关内容；每一步都要验证以及沉淀摘要。**   1. 为"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 15,
+      "unsafe_region_skips": 17,
       "unmatched_existing_targets": [
         "Prompt Injection",
         "Indirect Prompt Injection",

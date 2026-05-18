@@ -57,6 +57,7 @@
   "Plan-and-Solve Prompting": ["Plan-and-Solve Prompting", "Plan and Solve", "先计划再求解"],
   "Planning": ["Planning", "规划", "计划"],
   "Policy Engine": ["Policy Engine", "策略引擎"],
+  "Progressive Disclosure": ["Progressive Disclosure", "progressive disclosure", "渐进式披露", "渐进披露", "渐进式加载"],
   "Prompt": ["Prompt", "提示词", "提示"],
   "Prompt Engineering": ["Prompt Engineering", "prompt engineering", "Prompt 工程", "提示词工程", "提示工程"],
   "Prompt Injection": ["Prompt Injection", "提示注入", "Prompt 注入"],

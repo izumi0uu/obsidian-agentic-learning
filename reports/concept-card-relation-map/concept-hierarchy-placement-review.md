@@ -1,32 +1,32 @@
 # Concept Hierarchy Placement Review — 层级归属待审计概念卡
 
-Generated: `2026-05-18T04:49:03Z`
+Generated: `2026-05-18T09:14:10Z`
 Classification stage: `audit_closure`
 
 > Audit closure: remaining `defer_boundary_review` rows are closed as `deferred_with_backlog`; no concept cards are edited and no fallback parents are invented.
 
 ## Summary
 
-- total_concepts: 138
-- reviewed_concepts: 138
+- total_concepts: 140
+- reviewed_concepts: 140
 - taxonomy_placement_unreviewed: 0
 - concepts_with_up: 37
-- concepts_without_up: 101
-- concepts_with_candidate_basis: 61
-- candidate_basis_rows: 75
+- concepts_without_up: 103
+- concepts_with_candidate_basis: 62
+- candidate_basis_rows: 76
 - known_forbidden_candidate_pairs: 2
 - accepted_taxonomy: 0
 - root_or_anchor_no_up: 19
-- relation_only_terminal: 54
-- weak_or_backlog_terminal: 4
+- relation_only_terminal: 55
+- weak_or_backlog_terminal: 5
 - defer_boundary_review: 22
 - open_unclassified: 0
 - open_review: 0
 - open_writeback: 0
 - dry_run_planned: 0
 - write_policy: Audit closure only. Remaining defer_boundary_review rows are closed as deferred_with_backlog and no concept-card fields are written.
-- decision_counts: `{"already_has_up_reviewed": 37, "defer_boundary_review": 22, "reject_taxonomy": 2, "relation_only_terminal": 54, "root_or_anchor_no_up": 19, "weak_or_backlog_terminal": 4}`
-- review_status_counts: `{"deferred_with_backlog": 22, "terminal_non_writeback": 116}`
+- decision_counts: `{"already_has_up_reviewed": 37, "defer_boundary_review": 22, "reject_taxonomy": 2, "relation_only_terminal": 55, "root_or_anchor_no_up": 19, "weak_or_backlog_terminal": 5}`
+- review_status_counts: `{"deferred_with_backlog": 22, "terminal_non_writeback": 118}`
 - parent_whitelist_reviewed: True
 - stable_parent_whitelist_approved: 14
 - proposed_parent_anchors_not_auto_approved: 3
@@ -132,7 +132,7 @@ Classification stage: `audit_closure`
 - [[Approval Gate]]
 - [[ReAct]]
 
-### relation_only_terminal (54)
+### relation_only_terminal (55)
 
 - [[Agent Control Plane]]
 - [[Agent Harness]]
@@ -164,6 +164,7 @@ Classification stage: `audit_closure`
 - [[OpenTelemetry GenAI]]
 - [[Patch Validation]]
 - [[Plan-and-Solve Prompting]]
+- [[Progressive Disclosure]]
 - [[Prompt Engineering]]
 - [[Provider-first Agent SDK]]
 - [[Query Planning]]
@@ -211,10 +212,11 @@ Classification stage: `audit_closure`
 - [[Tool Use]]
 - [[Transformer]]
 
-### weak_or_backlog_terminal (4)
+### weak_or_backlog_terminal (5)
 
 - [[AGENTS.md]]
 - [[Coding Agent]]
+- [[NLP]]
 - [[Zero-shot CoT]]
 - [[双链]]
 
@@ -425,8 +427,8 @@ Apply artifact:
 
 Audit closure closes the whole concept hierarchy placement audit by routing every remaining deferred row to a durable backlog home. It does not add `up`; future changes must reopen a new candidate/adjudication/dry-run/limited-apply cycle.
 
-- total_concepts: 138
-- reviewed_concepts: 138
+- total_concepts: 140
+- reviewed_concepts: 140
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0
@@ -565,6 +567,7 @@ Closure artifact:
 | [[MCP Registry]] | defer_boundary_review |  | 0 | 3 |
 | [[Memory]] | root_or_anchor_no_up |  | 0 | 0 |
 | [[Multi-Head Attention]] | defer_boundary_review |  | 0 | 3 |
+| [[NLP]] | weak_or_backlog_terminal |  | 0 | 0 |
 | [[Neo4j]] | relation_only_terminal |  | 1 | 2 |
 | [[OMX $ 指令]] | relation_only_terminal |  | 1 | 2 |
 | [[Observability]] | root_or_anchor_no_up |  | 1 | 1 |
@@ -577,6 +580,7 @@ Closure artifact:
 | [[Planning]] | root_or_anchor_no_up |  | 0 | 0 |
 | [[Policy Engine]] | defer_boundary_review |  | 0 | 3 |
 | [[Positional Encoding]] | defer_boundary_review |  | 0 | 3 |
+| [[Progressive Disclosure]] | relation_only_terminal |  | 1 | 2 |
 | [[Prompt]] | root_or_anchor_no_up |  | 0 | 0 |
 | [[Prompt Engineering]] | relation_only_terminal |  | 1 | 2 |
 | [[Prompt Injection]] | defer_boundary_review |  | 0 | 3 |
@@ -662,6 +666,7 @@ Candidate basis is evidence for later adjudication, not an accepted parent.
 | [[OpenTelemetry GenAI]] | [[Observability]] | topic_family_review | low | frontmatter.related | no |
 | [[Patch Validation]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | no |
 | [[Plan-and-Solve Prompting]] | [[Planning]] | topic_family_review | low | frontmatter.related | no |
+| [[Progressive Disclosure]] | [[Tool Use]] | topic_family_review | low | body wikilink | no |
 | [[Prompt Engineering]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | no |
 | [[Provider-first Agent SDK]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | no |
 | [[Query Planning]] | [[Retriever]] | topic_family_review | low | frontmatter.related | no |

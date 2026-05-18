@@ -1,21 +1,21 @@
 # Temporary Concept Relationship Map
 
-Generated: `2026-05-18T04:48:38Z`
+Generated: `2026-05-18T09:14:08Z`
 
 > 临时文件：用于后续概念层级开发评估。不要把候选边自动写回概念卡；每条 candidate 都需要单独人工/LLM 复核。
 
 ## Summary
 
-- total_concepts: 138
-- edge_counts: {'related_link': 778, 'body_link': 260, 'typed_relation': 38, 'taxonomy': 37}
+- total_concepts: 140
+- edge_counts: {'related_link': 791, 'body_link': 261, 'typed_relation': 38, 'taxonomy': 37}
 - typed_relation_counts: {'related_to': 10, 'representative_of': 1, 'based_on_intuition': 1, 'paired_with': 2, 'contrasts_with': 5, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 7, 'uses': 2, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
-- concepts_without_up: 101
+- concepts_without_up: 103
 - core_orphans: 0
 - weakly_connected_concepts: 1
 - dangling_core_targets: 24
-- candidate_edges: 75
+- candidate_edges: 76
 - taxonomy_candidates: 11
-- topic_family_review_signals: 64
+- topic_family_review_signals: 65
 
 ## Existing taxonomy edges (`up`)
 
@@ -151,6 +151,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[OpenTelemetry GenAI]] | [[Observability]] | topic_family_review | low | frontmatter.related | topic family: observability |
 | [[Patch Validation]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Plan-and-Solve Prompting]] | [[Planning]] | topic_family_review | low | frontmatter.related | topic family: planning |
+| [[Progressive Disclosure]] | [[Tool Use]] | topic_family_review | low | body wikilink | topic family: tool-use/tools |
 | [[Prompt Engineering]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Provider-first Agent SDK]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | topic family: framework |
 | [[Query Planning]] | [[Retriever]] | topic_family_review | low | frontmatter.related | topic family: retrieval/search |
@@ -237,6 +238,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[MCP Registry]]
 - [[Memory]]
 - [[Multi-Head Attention]]
+- [[NLP]]
 - [[Neo4j]]
 - [[OMX $ 指令]]
 - [[Observability]]
@@ -249,6 +251,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Planning]]
 - [[Policy Engine]]
 - [[Positional Encoding]]
+- [[Progressive Disclosure]]
 - [[Prompt]]
 - [[Prompt Engineering]]
 - [[Prompt Injection]]

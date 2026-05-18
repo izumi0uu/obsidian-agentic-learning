@@ -29,7 +29,7 @@ topic:
   - skills
   - frontier
 created: 2026-05-14
-updated: 2026-05-15
+updated: 2026-05-18
 last_checked: 2026-05-14
 freshness: watch
 conflicts: []
@@ -41,6 +41,7 @@ related:
   - "[[MCP Registry]]"
   - "[[Query Planning]]"
   - "[[Computer Use]]"
+  - "[[Progressive Disclosure]]"
 ---
 
 # RS-Claw - Progressive Active Tool Exploration via Hierarchical Skill Trees for Remote Sensing Agents

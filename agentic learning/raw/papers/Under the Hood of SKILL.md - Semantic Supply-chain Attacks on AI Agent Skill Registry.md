@@ -22,7 +22,7 @@ topic:
   - tooling
   - frontier
 created: 2026-05-14
-updated: 2026-05-15
+updated: 2026-05-18
 last_checked: 2026-05-14
 freshness: watch
 conflicts: []
@@ -37,6 +37,7 @@ related:
   - "[[Least Privilege Tools]]"
   - "[[Policy Engine]]"
   - "[[Agent Harness]]"
+  - "[[Progressive Disclosure]]"
 ---
 
 # Under the Hood of SKILL.md: Semantic Supply-chain Attacks on AI Agent Skill Registry

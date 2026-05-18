@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
   "artifact_type": "temporary_concept_relationship_map",
-  "generated_at": "2026-05-18T04:48:38Z",
+  "generated_at": "2026-05-18T09:14:08Z",
   "scope": {
     "concept_dir": "agentic learning/wiki/concepts",
     "temporary": true,
     "write_policy": "Do not write these candidates into concept cards without a separate review task."
   },
   "summary": {
-    "total_concepts": 138,
+    "total_concepts": 140,
     "edge_counts": {
-      "related_link": 778,
-      "body_link": 260,
+      "related_link": 791,
+      "body_link": 261,
       "typed_relation": 38,
       "taxonomy": 37
     },
@@ -33,13 +33,13 @@
       "composed_into": 2,
       "foundational_for": 1
     },
-    "concepts_without_up": 101,
+    "concepts_without_up": 103,
     "core_orphans": 0,
     "weakly_connected_concepts": 1,
     "dangling_core_targets": 24,
-    "candidate_edges": 75,
+    "candidate_edges": 76,
     "taxonomy_candidates": 11,
-    "topic_family_review_signals": 64
+    "topic_family_review_signals": 65
   },
   "nodes": [
     {
@@ -740,15 +740,16 @@
       "status": "growing",
       "freshness": "stable",
       "aliases": [],
-      "source_count": 1,
-      "evidence_count": 2,
+      "source_count": 2,
+      "evidence_count": 3,
       "up": [],
       "related": [
         "LLM",
         "RAG",
         "Memory",
         "Agent Harness",
-        "Prompt Engineering"
+        "Prompt Engineering",
+        "Context Window"
       ]
     },
     {
@@ -1977,6 +1978,32 @@
       ]
     },
     {
+      "id": "NLP",
+      "title": "NLP",
+      "file": "agentic learning/wiki/concepts/NLP.md",
+      "topics": [
+        "llm",
+        "nlp"
+      ],
+      "status": "seed",
+      "freshness": "stable",
+      "aliases": [
+        "Natural Language Processing",
+        "自然语言处理"
+      ],
+      "source_count": 4,
+      "evidence_count": 4,
+      "up": [],
+      "related": [
+        "LLM",
+        "Transformer",
+        "Prompt Engineering",
+        "RAG",
+        "Retriever",
+        "Reranking"
+      ]
+    },
+    {
       "id": "Neo4j",
       "title": "Neo4j",
       "file": "agentic learning/wiki/concepts/Neo4j.md",
@@ -2332,6 +2359,35 @@
       ]
     },
     {
+      "id": "Progressive Disclosure",
+      "title": "Progressive Disclosure",
+      "file": "agentic learning/wiki/concepts/Progressive Disclosure.md",
+      "topics": [
+        "agent",
+        "context",
+        "tools"
+      ],
+      "status": "seed",
+      "freshness": "watch",
+      "aliases": [
+        "渐进式披露",
+        "渐进披露",
+        "渐进式加载",
+        "progressive disclosure"
+      ],
+      "source_count": 5,
+      "evidence_count": 5,
+      "up": [],
+      "related": [
+        "Context Engineering",
+        "Context Window",
+        "Tool Registry",
+        "Agent Harness",
+        "MCP",
+        "Tool Calling"
+      ]
+    },
+    {
       "id": "Prompt",
       "title": "Prompt",
       "file": "agentic learning/wiki/concepts/Prompt.md",
@@ -2374,7 +2430,7 @@
         "提示工程"
       ],
       "source_count": 6,
-      "evidence_count": 6,
+      "evidence_count": 7,
       "up": [],
       "related": [
         "Prompt",
@@ -5808,6 +5864,16 @@
     {
       "source": "Context Engineering",
       "target": "Agent Harness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Engineering",
+      "target": "Context Window",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -9766,6 +9832,66 @@
       "note": ""
     },
     {
+      "source": "NLP",
+      "target": "LLM",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "NLP",
+      "target": "Prompt Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "NLP",
+      "target": "RAG",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "NLP",
+      "target": "Reranking",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "NLP",
+      "target": "Retriever",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "NLP",
+      "target": "Transformer",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "Neo4j",
       "target": "Agentic RAG",
       "kind": "related_link",
@@ -10883,6 +11009,76 @@
       "confidence": "existing",
       "status": "internal",
       "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Progressive Disclosure",
+      "target": "Agent Harness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Progressive Disclosure",
+      "target": "Context Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Progressive Disclosure",
+      "target": "Context Window",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Progressive Disclosure",
+      "target": "MCP",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Progressive Disclosure",
+      "target": "Tool Calling",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Progressive Disclosure",
+      "target": "Tool Registry",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Progressive Disclosure",
+      "target": "Tool Use",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
       "note": ""
     },
     {
@@ -15100,6 +15296,17 @@
       ]
     },
     {
+      "source": "Progressive Disclosure",
+      "target": "Tool Use",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: tool-use/tools",
+      "support": [
+        "body wikilink"
+      ]
+    },
+    {
       "source": "Prompt Engineering",
       "target": "Evaluation",
       "candidate_type": "topic_family_review",
@@ -15527,6 +15734,7 @@
       "MCP Registry",
       "Memory",
       "Multi-Head Attention",
+      "NLP",
       "Neo4j",
       "OMX $ 指令",
       "Observability",
@@ -15539,6 +15747,7 @@
       "Planning",
       "Policy Engine",
       "Positional Encoding",
+      "Progressive Disclosure",
       "Prompt",
       "Prompt Engineering",
       "Prompt Injection",

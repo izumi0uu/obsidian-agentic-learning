@@ -71,6 +71,7 @@ LLM 地基：
 - [[DeerFlow]]：理解 ByteDance 如何把 sub-agents、skills、sandbox、filesystem、memory 和 context engineering 组合成 super agent harness。
 - [[Agent State]]：理解框架如何保存当前任务的进度、中间结果和下一步依据。
 - [[Agent Workflow]]：理解框架如何把任务组织成步骤、分支、循环和交接。
+- [[Progressive Disclosure]]：理解 skill、tool docs、repo context 和资源文件为什么要按需分层加载，而不是一开始全部塞进上下文。
 - [[Agent Workflow Static Verification]]：理解显式 workflow graph 如何在部署前检查死路、不可达、human gate 覆盖和时序安全策略。
 - [[Workflow Guardrails]]：理解 guardrails 应该放在 workflow 的输入、检索、工具、输出、状态和副作用边界，而不是只做最终回答过滤。
 - [[Durable Execution]]：理解长任务为什么需要暂停、恢复和重试。
