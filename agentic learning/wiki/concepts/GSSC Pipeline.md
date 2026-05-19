@@ -32,6 +32,7 @@ related:
   - "[[RAG]]"
   - "[[Memory]]"
   - "[[Agent State]]"
+  - "[[Context Projection]]"
   - "[[Prompt Engineering]]"
 relations:
   - type: pattern_for
@@ -126,7 +127,7 @@ Compress:
 
 ## 现代系统怎么吸收 GSSC 的价值
 
-现代系统通常不会把 GSSC 四个词硬编码成唯一 API，而是把它吸收到 context builder、retriever pipeline、memory selector、prompt packer、state projector 或 compaction hook 里。判断一个系统是否具备类似 GSSC 的能力，不看它是否用了这个缩写，而看它是否能回答：
+现代系统通常不会把 GSSC 四个词硬编码成唯一 API，而是把它吸收到 context builder、retriever pipeline、memory selector、prompt packer、[[Context Projection|state projector]] 或 compaction hook 里。判断一个系统是否具备类似 GSSC 的能力，不看它是否用了这个缩写，而看它是否能回答：
 
 - 候选上下文从哪些来源来？
 - 为什么这些信息被选中，哪些被丢弃？
@@ -157,4 +158,5 @@ Compress:
 - [[RAG]]
 - [[Memory]]
 - [[Agent State]]
+- [[Context Projection]]
 - [[Prompt Engineering]]

@@ -6,8 +6,8 @@ topic:
   - frontier
 status: growing
 created: 2026-05-06
-updated: 2026-05-10
-last_checked: 2026-05-10
+updated: 2026-05-18
+last_checked: 2026-05-18
 freshness: watch
 conflicts: []
 source:
@@ -17,6 +17,8 @@ evidence:
 related:
   - "[[A2A]]"
   - "[[MCP]]"
+  - "[[ANP]]"
+  - "[[A2A MCP ANP 对比]]"
   - "[[Agent]]"
 ---
 
@@ -83,5 +85,7 @@ frontier / volatile。ACP 处在 Agent 通信协议快速演化和迁移阶段�
 
 - [[A2A]]
 - [[MCP]]
+- [[ANP]]
+- [[A2A MCP ANP 对比]]
 - [[Agent]]
 - [[Observability]]

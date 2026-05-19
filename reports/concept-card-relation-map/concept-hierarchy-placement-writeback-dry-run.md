@@ -1,6 +1,6 @@
 # Concept Hierarchy Placement Writeback dry-run — Dry-run 写回预览
 
-Generated: `2026-05-18T09:31:07Z`
+Generated: `2026-05-18T14:41:35Z`
 
 > Writeback dry-run is dry-run only. It plans no concept-card edits and only previews later limited `up` writeback rows.
 

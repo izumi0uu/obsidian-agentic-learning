@@ -6,8 +6,8 @@ topic:
   - frontier
 status: growing
 created: 2026-05-06
-updated: 2026-05-10
-last_checked: 2026-05-10
+updated: 2026-05-18
+last_checked: 2026-05-18
 freshness: watch
 conflicts: []
 source:
@@ -17,6 +17,8 @@ evidence:
 related:
   - "[[MCP]]"
   - "[[ACP]]"
+  - "[[ANP]]"
+  - "[[A2A MCP ANP 对比]]"
   - "[[Agent]]"
   - "[[Tool Registry]]"
 ---
@@ -88,5 +90,7 @@ frontier / volatile。A2A 代表 Agent 互操作的前沿协议层，问题稳�
 
 - [[MCP]]
 - [[ACP]]
+- [[ANP]]
+- [[A2A MCP ANP 对比]]
 - [[Agent]]
 - [[Policy Engine]]

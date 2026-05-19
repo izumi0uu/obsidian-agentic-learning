@@ -69,6 +69,7 @@ related:
 |---|---|---|---|
 | [[A2A]] | [[Agent]] | 协议 / 生态卡；`Agent` 太宽，当前没有 approved protocol parent。 | 新建并审计 protocol / agent protocol 父类，或卡片证据证明 strict kind-of。 |
 | [[ACP]] | [[Agent]] | 协议 / 生态卡；`Agent` 太宽，当前没有 approved protocol parent。 | 新建并审计 protocol / agent protocol 父类，或卡片证据证明 strict kind-of。 |
+| [[ANP]] | [[Agent]] | Agentic Web / 协议卡；机器报告当前为 `relation_only_terminal`，typed relations 只说明与 [[A2A]] / [[MCP]] 的邻接边界，不授权写 `up`。 | 新建并审计 protocol / agent protocol 父类，或 ANP 卡片证据证明 strict kind-of。 |
 | [[Browser Agent]] | [[Agent]] | 看似 Agent 子类，但 `Agent` 不是自动父类，缺更窄 reviewed parent。 | 若建立 Computer-use Agent / Browser Automation Agent 等稳定父类再重开。 |
 | [[Code Execution Sandbox]] | [[Tool Use]] | sandbox 是安全运行边界，不是 tool-use 行为本身。 | 若建立 Sandbox / Execution Isolation / Security Boundary 父类再重开。 |
 | [[Data Exfiltration]] | [[Prompt]] | 数据外泄是风险 / attack class，不是 Prompt 的一种。 | 若建立 Security Risk / Prompt Attack / Data Security 风险类父卡再重开。 |
@@ -194,7 +195,7 @@ related:
 | P0 | [[RAG]] | 非 Agent 但核心知识概念；需补现代系统吸收和复习触发 | 本次作为 RAG 样例修复 |
 | P1 | [[Agent Loop]], [[Agent Framework]], [[Agent State]], [[Agent Workflow]] | Agent 工程骨架，现代性状态和复习触发不齐 | 已完成小范围修复：补齐问题背景、边界、现代性、现代系统吸收、证据锚点和复习触发 |
 | P1 | [[Evaluation]], [[Eval Harness]], [[LLM-as-Judge]], [[RAG Evaluation]] | 评估概念相互依赖，需统一 “记录 vs 判断 vs harness” 边界 | 已完成小范围修复：统一 evaluation / harness / judge / RAG eval 的责任边界和复习触发 |
-| P2 | [[A2A]], [[ACP]], [[MCP]], [[MCP Registry]] | 协议/生态变化较快，需要 freshness 与前沿追踪联动 | 需要查新后再修 |
+| P2 | [[A2A]], [[ACP]], [[ANP]], [[MCP]], [[MCP Registry]] | 协议/生态变化较快，需要 freshness 与前沿追踪联动 | 需要查新后再修 |
 
 ### 不做的事
 

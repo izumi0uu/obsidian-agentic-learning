@@ -7,7 +7,7 @@ topic:
   - runtime
 status: growing
 created: 2026-05-12
-updated: 2026-05-16
+updated: 2026-05-18
 last_checked: 2026-05-12
 freshness: watch
 source:
@@ -22,6 +22,7 @@ evidence:
 related:
   - "[[Agent Workflow]]"
   - "[[Agent State]]"
+  - "[[Context Projection]]"
   - "[[Durable Execution]]"
   - "[[Human-in-the-loop]]"
   - "[[LangGraph]]"
@@ -72,11 +73,11 @@ checkpoint after each node
 
 - 误解：用了 graph 就自动可靠。风险是节点逻辑、状态 schema、工具幂等和错误处理仍然可能很差。
 - 误解：所有业务流程都要建成复杂图。风险是简单任务被过度工程化，调试成本上升。
-- 风险：state schema 设计不清，会让上下文投影、长期记忆和运行态状态混在一起。
+- 风险：state schema 设计不清，会让 [[Context Projection|上下文投影]]、长期记忆和运行态状态混在一起。
 
 ## 边界细节
 
-State Graph Runtime 最适合需要循环、分支、恢复、审批、长任务和审计的场景。它和 [[Agent Workflow]] 的关系是：workflow 是路径/任务结构，runtime 是执行和恢复这条路径的软件层；它和 [[Agent State]] 的关系是：state 是数据，runtime 负责何时读取、更新、保存和投影这些数据。
+State Graph Runtime 最适合需要循环、分支、恢复、审批、长任务和审计的场景。它和 [[Agent Workflow]] 的关系是：workflow 是路径/任务结构，runtime 是执行和恢复这条路径的软件层；它和 [[Agent State]] 的关系是：state 是数据，runtime 负责何时读取、更新、保存和通过 [[Context Projection|上下文投影]] 暴露这些数据。
 
 与 provider SDK 的差异：OpenAI Agents SDK 等可以封装 Agent、tools 和 handoffs，但不一定要求你显式画状态图；State Graph Runtime 更强调控制流和状态恢复。
 
@@ -109,6 +110,7 @@ State Graph Runtime 最适合需要循环、分支、恢复、审批、长任务
 
 - [[Agent Workflow]]
 - [[Agent State]]
+- [[Context Projection]]
 - [[Durable Execution]]
 - [[Human-in-the-loop]]
 - [[LangGraph]]

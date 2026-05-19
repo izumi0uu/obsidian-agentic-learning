@@ -1,21 +1,21 @@
 # Temporary Concept Relationship Map
 
-Generated: `2026-05-18T09:31:05Z`
+Generated: `2026-05-18T13:55:03Z`
 
 > 临时文件：用于后续概念层级开发评估。不要把候选边自动写回概念卡；每条 candidate 都需要单独人工/LLM 复核。
 
 ## Summary
 
-- total_concepts: 142
-- edge_counts: {'related_link': 812, 'body_link': 263, 'typed_relation': 43, 'taxonomy': 37}
-- typed_relation_counts: {'related_to': 10, 'representative_of': 1, 'based_on_intuition': 1, 'paired_with': 2, 'contrasts_with': 5, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 8, 'uses': 4, 'pattern_for': 1, 'specializes': 1, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
-- concepts_without_up: 105
+- total_concepts: 144
+- edge_counts: {'related_link': 830, 'body_link': 266, 'typed_relation': 50, 'taxonomy': 37}
+- typed_relation_counts: {'related_to': 11, 'representative_of': 1, 'based_on_intuition': 1, 'paired_with': 2, 'mechanism_for': 1, 'projects_from': 1, 'draws_from': 2, 'contrasts_with': 6, 'risk_for': 1, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 8, 'uses': 4, 'pattern_for': 1, 'specializes': 1, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
+- concepts_without_up: 107
 - core_orphans: 0
 - weakly_connected_concepts: 1
-- dangling_core_targets: 24
-- candidate_edges: 77
+- dangling_core_targets: 25
+- candidate_edges: 78
 - taxonomy_candidates: 11
-- topic_family_review_signals: 66
+- topic_family_review_signals: 67
 
 ## Existing taxonomy edges (`up`)
 
@@ -70,7 +70,14 @@ Generated: `2026-05-18T09:31:05Z`
 | [[BM25]] | related_to | [[Hybrid Search]] | frontmatter.relations | Hybrid Search 常把 BM25 作为 sparse route 或关键词侧候选。 |
 | [[BM25]] | representative_of | [[Sparse Retrieval]] | frontmatter.relations | BM25 是 sparse retrieval 的常见代表算法。 |
 | [[Context Precision]] | paired_with | [[Context Recall]] | frontmatter.relations | Context Precision 看检索上下文的相关性和排序质量；Context Recall 看必要信息是否被覆盖。 |
+| [[Context Projection]] | draws_from | [[Memory]] | frontmatter.relations | 记忆只有被选中并投影进上下文时才影响本轮回答。 |
+| [[Context Projection]] | draws_from | [[Trace]] | frontmatter.relations | trace 可作为失败复盘、长任务继续或审计解释时的候选材料。 |
+| [[Context Projection]] | mechanism_for | [[Context Engineering]] | frontmatter.relations | 把系统持有的信息投影成模型本轮可见、可用、可预算的上下文。 |
+| [[Context Projection]] | projects_from | [[Agent State]] | frontmatter.relations | 从当前 run 的状态中选择、压缩、排序本轮决策需要的片段。 |
 | [[Context Recall]] | paired_with | [[Context Precision]] | frontmatter.relations | Context Recall 看该找的信息有没有覆盖；Context Precision 看找回内容里相关信息是否靠前、噪音是否过多。 |
+| [[Context Rot]] | contrasts_with | [[Context Window]] | frontmatter.relations | Context Window 是容量边界；Context Rot 是长输入中有效使用质量下降的风险。 |
+| [[Context Rot]] | related_to | [[Long-Horizon Context Engineering]] | frontmatter.relations | 长任务直接累积历史、工具结果和中间产物时，context rot 是核心风险之一。 |
+| [[Context Rot]] | risk_for | [[Context Engineering]] | frontmatter.relations | 上下文工程需要通过选择、结构化、去噪和压缩来降低 context rot。 |
 | [[Cross-Encoder]] | contrasts_with | [[Dense Retrieval]] | frontmatter.relations | Dense Retrieval 常用双塔/bi-encoder 思路快速召回；Cross-Encoder 把 query 和 chunk 放在一起深度判断，适合小候选集精排。 |
 | [[DeerFlow]] | built-on | [[LangGraph]] | frontmatter.relations |  |
 | [[DeerFlow]] | concrete-harness-for | [[Agent Harness]] | frontmatter.relations |  |
@@ -132,6 +139,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[Benchmark]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Chunking]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
 | [[Context Engineering]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
+| [[Context Projection]] | [[Memory]] | topic_family_review | low | frontmatter.related, relations:draws_from | topic family: memory |
 | [[DeerFlow]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | topic family: framework |
 | [[Document Ingestion]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
 | [[Durable Execution]] | [[Agent Workflow]] | taxonomy_candidate | low | title/topic heuristic | workflow/runtime title family |
@@ -215,6 +223,8 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Code Execution Sandbox]]
 - [[Coding Agent]]
 - [[Context Engineering]]
+- [[Context Projection]]
+- [[Context Rot]]
 - [[Context Window]]
 - [[Data Exfiltration]]
 - [[DeerFlow]]
@@ -314,6 +324,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[AgentScope]] | related | Agent Framework 编排范式对比 | related_link |
 | [[AutoGen]] | related | Agent Framework 编排范式对比 | related_link |
 | [[CAMEL]] | related | Agent Framework 编排范式对比 | related_link |
+| [[Context Rot]] | related | LLM 上下文限制与突破条件 | related_link |
 | [[GraphRAG]] | related | RAG 类型对比 | related_link |
 | [[KV Cache]] | related | LLM 上下文限制与突破条件 | related_link |
 | [[LangGraph]] | related | Agent Framework 编排范式对比 | related_link |

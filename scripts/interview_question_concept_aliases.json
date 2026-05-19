@@ -1,5 +1,6 @@
 {
   "A2A": ["A2A", "A2A 协议", "智能体间协议"],
+  "ANP": ["ANP", "Agent Network Protocol", "Agent Network Protocol (ANP)", "智能体网络协议"],
   "Agent": ["Agent", "AI Agent", "智能体"],
   "Agent Framework": ["Agent Framework", "Agent 框架", "智能体框架"],
   "Agent Harness": ["Agent Harness", "harness", "测试 harness", "执行 harness"],

@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-14
+updated: 2026-05-18
 related:
   - "[[Agent]]"
   - "[[ReAct]]"
@@ -15,6 +15,7 @@ related:
   - "[[Workflow Guardrails 与 Prefect 控制点映射]]"
   - "[[OpenClaw Repo vs Hermes Agent]]"
   - "[[Tool 接口层对比]]"
+  - "[[A2A MCP ANP 对比]]"
   - "[[Agent 安全控制点对比]]"
   - "[[ReAct Plan-and-Solve Reflexion 对比]]"
 ---
@@ -46,6 +47,7 @@ SORT created DESC
 - [[Agent 知识地图]]
 - [[Agent 工程分层对比]]
 - [[Tool 接口层对比]]
+- [[A2A MCP ANP 对比]]
 - [[Agent 安全控制点对比]]
 - [[Workflow Guardrails 与 Prefect 控制点映射]]
 - [[Agent Memory 类型对比]]

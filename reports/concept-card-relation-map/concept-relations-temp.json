@@ -1,26 +1,30 @@
 {
   "schema_version": 1,
   "artifact_type": "temporary_concept_relationship_map",
-  "generated_at": "2026-05-18T09:31:05Z",
+  "generated_at": "2026-05-18T14:41:35Z",
   "scope": {
     "concept_dir": "agentic learning/wiki/concepts",
     "temporary": true,
     "write_policy": "Do not write these candidates into concept cards without a separate review task."
   },
   "summary": {
-    "total_concepts": 142,
+    "total_concepts": 145,
     "edge_counts": {
-      "related_link": 812,
-      "body_link": 263,
-      "typed_relation": 43,
+      "related_link": 845,
+      "body_link": 268,
+      "typed_relation": 53,
       "taxonomy": 37
     },
     "typed_relation_counts": {
-      "related_to": 10,
+      "contrasts_with": 8,
+      "related_to": 12,
       "representative_of": 1,
       "based_on_intuition": 1,
       "paired_with": 2,
-      "contrasts_with": 5,
+      "mechanism_for": 1,
+      "projects_from": 1,
+      "draws_from": 2,
+      "risk_for": 1,
       "concrete-harness-for": 1,
       "built-on": 1,
       "composes_with": 8,
@@ -35,13 +39,13 @@
       "composed_into": 2,
       "foundational_for": 1
     },
-    "concepts_without_up": 105,
+    "concepts_without_up": 108,
     "core_orphans": 0,
     "weakly_connected_concepts": 1,
-    "dangling_core_targets": 24,
-    "candidate_edges": 77,
+    "dangling_core_targets": 29,
+    "candidate_edges": 78,
     "taxonomy_candidates": 11,
-    "topic_family_review_signals": 66
+    "topic_family_review_signals": 67
   },
   "nodes": [
     {
@@ -62,6 +66,8 @@
       "related": [
         "MCP",
         "ACP",
+        "ANP",
+        "A2A MCP ANP 对比",
         "Agent",
         "Tool Registry"
       ]
@@ -84,6 +90,8 @@
       "related": [
         "A2A",
         "MCP",
+        "ANP",
+        "A2A MCP ANP 对比",
         "Agent"
       ]
     },
@@ -107,6 +115,34 @@
         "Repo Context",
         "Sandbox Workspace",
         "Agent Harness"
+      ]
+    },
+    {
+      "id": "ANP",
+      "title": "ANP",
+      "file": "agentic learning/wiki/concepts/ANP.md",
+      "topics": [
+        "agent",
+        "protocol",
+        "frontier"
+      ],
+      "status": "seed",
+      "freshness": "watch",
+      "aliases": [
+        "Agent Network Protocol",
+        "Agent Network Protocol (ANP)",
+        "智能体网络协议"
+      ],
+      "source_count": 3,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "A2A",
+        "MCP",
+        "ACP",
+        "MCP Registry",
+        "Tool Registry",
+        "A2A MCP ANP 对比"
       ]
     },
     {
@@ -327,6 +363,7 @@
         "Agent Workflow",
         "Memory",
         "Context Engineering",
+        "Context Projection",
         "Long-Horizon Context Engineering",
         "Trace",
         "Durable Execution"
@@ -754,7 +791,8 @@
         "Prompt Engineering",
         "Context Window",
         "GSSC Pipeline",
-        "Long-Horizon Context Engineering"
+        "Long-Horizon Context Engineering",
+        "Context Rot"
       ]
     },
     {
@@ -785,6 +823,35 @@
       ]
     },
     {
+      "id": "Context Projection",
+      "title": "Context Projection",
+      "file": "agentic learning/wiki/concepts/Context Projection.md",
+      "topics": [
+        "agent",
+        "context",
+        "memory",
+        "workflow"
+      ],
+      "status": "seed",
+      "freshness": "watch",
+      "aliases": [
+        "上下文投影",
+        "context projection"
+      ],
+      "source_count": 6,
+      "evidence_count": 5,
+      "up": [],
+      "related": [
+        "Context Engineering",
+        "Agent State",
+        "Memory",
+        "Trace",
+        "Context Window",
+        "Long-Horizon Context Engineering",
+        "GSSC Pipeline"
+      ]
+    },
+    {
       "id": "Context Recall",
       "title": "Context Recall",
       "file": "agentic learning/wiki/concepts/Context Recall.md",
@@ -812,6 +879,40 @@
       ]
     },
     {
+      "id": "Context Rot",
+      "title": "Context Rot",
+      "file": "agentic learning/wiki/concepts/Context Rot.md",
+      "topics": [
+        "llm",
+        "context",
+        "evaluation"
+      ],
+      "status": "growing",
+      "freshness": "watch",
+      "aliases": [
+        "context rot",
+        "Context degradation",
+        "context degradation",
+        "long-context degradation",
+        "long context degradation",
+        "上下文退化",
+        "上下文腐化",
+        "长上下文退化",
+        "长上下文可靠性退化"
+      ],
+      "source_count": 3,
+      "evidence_count": 4,
+      "up": [],
+      "related": [
+        "Context Window",
+        "Context Engineering",
+        "Long-Horizon Context Engineering",
+        "GSSC Pipeline",
+        "RAG Evaluation",
+        "LLM 上下文限制与突破条件"
+      ]
+    },
+    {
       "id": "Context Window",
       "title": "Context Window",
       "file": "agentic learning/wiki/concepts/Context Window.md",
@@ -829,6 +930,8 @@
         "Token",
         "Prompt",
         "Context Engineering",
+        "Context Projection",
+        "Context Rot",
         "RAG"
       ]
     },
@@ -1246,6 +1349,7 @@
         "RAG",
         "Memory",
         "Agent State",
+        "Context Projection",
         "Prompt Engineering"
       ]
     },
@@ -1779,8 +1883,10 @@
       "related": [
         "Context Engineering",
         "Context Window",
+        "Context Rot",
         "Agent State",
         "Memory",
+        "Context Projection",
         "Long-term Memory",
         "Multi-agent Orchestration",
         "Agent Harness",
@@ -1837,6 +1943,8 @@
         "Tool Calling",
         "Tool Registry",
         "A2A",
+        "ANP",
+        "A2A MCP ANP 对比",
         "Tool Poisoning"
       ]
     },
@@ -3148,6 +3256,7 @@
       "related": [
         "Agent Workflow",
         "Agent State",
+        "Context Projection",
         "Durable Execution",
         "Human-in-the-loop",
         "LangGraph"
@@ -3652,7 +3761,27 @@
   "edges": [
     {
       "source": "A2A",
+      "target": "A2A MCP ANP 对比",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "external_or_missing",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "A2A",
       "target": "ACP",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "A2A",
+      "target": "ANP",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -3703,6 +3832,26 @@
     {
       "source": "ACP",
       "target": "A2A",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "ACP",
+      "target": "A2A MCP ANP 对比",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "external_or_missing",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "ACP",
+      "target": "ANP",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -3778,6 +3927,116 @@
       "confidence": "existing",
       "status": "internal",
       "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "ANP",
+      "target": "A2A",
+      "kind": "typed_relation",
+      "relation_type": "contrasts_with",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "A2A 更聚焦 Agent-to-Agent 任务协作和状态/消息/artifact；ANP 更强调 Agent 网络身份、发现、描述和通信协商。"
+    },
+    {
+      "source": "ANP",
+      "target": "MCP",
+      "kind": "typed_relation",
+      "relation_type": "contrasts_with",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "MCP 连接 AI 应用与工具/资源/context server；ANP 连接网络中的 Agent 身份和通信入口。"
+    },
+    {
+      "source": "ANP",
+      "target": "MCP Registry",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "两者都涉及发现与生态分发，但 MCP Registry 面向 MCP server；ANP discovery 面向 Agent identity/description。"
+    },
+    {
+      "source": "ANP",
+      "target": "A2A",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "ANP",
+      "target": "A2A MCP ANP 对比",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "external_or_missing",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "ANP",
+      "target": "ACP",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "ANP",
+      "target": "MCP",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "ANP",
+      "target": "MCP Registry",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "ANP",
+      "target": "Tool Registry",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "ANP",
+      "target": "Policy Engine",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "ANP",
+      "target": "Tool Permissioning",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
       "note": ""
     },
     {
@@ -4573,6 +4832,16 @@
     {
       "source": "Agent State",
       "target": "Context Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent State",
+      "target": "Context Projection",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -5962,6 +6231,16 @@
     },
     {
       "source": "Context Engineering",
+      "target": "Context Rot",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Engineering",
       "target": "Context Window",
       "kind": "related_link",
       "relation_type": "related",
@@ -6111,6 +6390,116 @@
       "note": ""
     },
     {
+      "source": "Context Projection",
+      "target": "Memory",
+      "kind": "typed_relation",
+      "relation_type": "draws_from",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "记忆只有被选中并投影进上下文时才影响本轮回答。"
+    },
+    {
+      "source": "Context Projection",
+      "target": "Trace",
+      "kind": "typed_relation",
+      "relation_type": "draws_from",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "trace 可作为失败复盘、长任务继续或审计解释时的候选材料。"
+    },
+    {
+      "source": "Context Projection",
+      "target": "Context Engineering",
+      "kind": "typed_relation",
+      "relation_type": "mechanism_for",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "把系统持有的信息投影成模型本轮可见、可用、可预算的上下文。"
+    },
+    {
+      "source": "Context Projection",
+      "target": "Agent State",
+      "kind": "typed_relation",
+      "relation_type": "projects_from",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "从当前 run 的状态中选择、压缩、排序本轮决策需要的片段。"
+    },
+    {
+      "source": "Context Projection",
+      "target": "Agent State",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Projection",
+      "target": "Context Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Projection",
+      "target": "Context Window",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Projection",
+      "target": "GSSC Pipeline",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Projection",
+      "target": "Long-Horizon Context Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Projection",
+      "target": "Memory",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Projection",
+      "target": "Trace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "Context Recall",
       "target": "RAG Evaluation",
       "kind": "taxonomy",
@@ -6201,8 +6590,148 @@
       "note": ""
     },
     {
+      "source": "Context Rot",
+      "target": "Context Window",
+      "kind": "typed_relation",
+      "relation_type": "contrasts_with",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "Context Window 是容量边界；Context Rot 是长输入中有效使用质量下降的风险。"
+    },
+    {
+      "source": "Context Rot",
+      "target": "Long-Horizon Context Engineering",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "长任务直接累积历史、工具结果和中间产物时，context rot 是核心风险之一。"
+    },
+    {
+      "source": "Context Rot",
+      "target": "Context Engineering",
+      "kind": "typed_relation",
+      "relation_type": "risk_for",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "上下文工程需要通过选择、结构化、去噪和压缩来降低 context rot。"
+    },
+    {
+      "source": "Context Rot",
+      "target": "Context Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Rot",
+      "target": "Context Window",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Rot",
+      "target": "GSSC Pipeline",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Rot",
+      "target": "LLM 上下文限制与突破条件",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "external_or_missing",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Rot",
+      "target": "Long-Horizon Context Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Rot",
+      "target": "RAG Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Rot",
+      "target": "Indirect Prompt Injection",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Context Rot",
+      "target": "RAG",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Context Rot",
+      "target": "Tool Poisoning",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "Context Window",
       "target": "Context Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Window",
+      "target": "Context Projection",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Context Window",
+      "target": "Context Rot",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -7503,6 +8032,16 @@
     {
       "source": "GSSC Pipeline",
       "target": "Context Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "GSSC Pipeline",
+      "target": "Context Projection",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -9202,6 +9741,26 @@
     },
     {
       "source": "Long-Horizon Context Engineering",
+      "target": "Context Projection",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Long-Horizon Context Engineering",
+      "target": "Context Rot",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Long-Horizon Context Engineering",
       "target": "Context Window",
       "kind": "related_link",
       "relation_type": "related",
@@ -9383,6 +9942,26 @@
     {
       "source": "MCP",
       "target": "A2A",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MCP",
+      "target": "A2A MCP ANP 对比",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "external_or_missing",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MCP",
+      "target": "ANP",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -13652,6 +14231,16 @@
     },
     {
       "source": "State Graph Runtime",
+      "target": "Context Projection",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "State Graph Runtime",
       "target": "Durable Execution",
       "kind": "related_link",
       "relation_type": "related",
@@ -15391,6 +15980,18 @@
       ]
     },
     {
+      "source": "Context Projection",
+      "target": "Memory",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: memory",
+      "support": [
+        "frontmatter.related",
+        "relations:draws_from"
+      ]
+    },
+    {
       "source": "DeerFlow",
       "target": "Agent Framework",
       "candidate_type": "topic_family_review",
@@ -16059,6 +16660,7 @@
       "A2A",
       "ACP",
       "AGENTS.md",
+      "ANP",
       "Agent",
       "Agent Control Plane",
       "Agent Framework",
@@ -16076,6 +16678,8 @@
       "Code Execution Sandbox",
       "Coding Agent",
       "Context Engineering",
+      "Context Projection",
+      "Context Rot",
       "Context Window",
       "Data Exfiltration",
       "DeerFlow",
@@ -16226,6 +16830,36 @@
     ],
     "dangling_core_targets": [
       {
+        "source": "A2A",
+        "target": "A2A MCP ANP 对比",
+        "kind": "related_link",
+        "relation_type": "related",
+        "confidence": "existing",
+        "status": "external_or_missing",
+        "evidence": "frontmatter.related",
+        "note": ""
+      },
+      {
+        "source": "ACP",
+        "target": "A2A MCP ANP 对比",
+        "kind": "related_link",
+        "relation_type": "related",
+        "confidence": "existing",
+        "status": "external_or_missing",
+        "evidence": "frontmatter.related",
+        "note": ""
+      },
+      {
+        "source": "ANP",
+        "target": "A2A MCP ANP 对比",
+        "kind": "related_link",
+        "relation_type": "related",
+        "confidence": "existing",
+        "status": "external_or_missing",
+        "evidence": "frontmatter.related",
+        "note": ""
+      },
+      {
         "source": "Agent Framework",
         "target": "Agent Framework 编排范式对比",
         "kind": "related_link",
@@ -16276,6 +16910,16 @@
         "note": ""
       },
       {
+        "source": "Context Rot",
+        "target": "LLM 上下文限制与突破条件",
+        "kind": "related_link",
+        "relation_type": "related",
+        "confidence": "existing",
+        "status": "external_or_missing",
+        "evidence": "frontmatter.related",
+        "note": ""
+      },
+      {
         "source": "GraphRAG",
         "target": "RAG 类型对比",
         "kind": "related_link",
@@ -16298,6 +16942,16 @@
       {
         "source": "LangGraph",
         "target": "Agent Framework 编排范式对比",
+        "kind": "related_link",
+        "relation_type": "related",
+        "confidence": "existing",
+        "status": "external_or_missing",
+        "evidence": "frontmatter.related",
+        "note": ""
+      },
+      {
+        "source": "MCP",
+        "target": "A2A MCP ANP 对比",
         "kind": "related_link",
         "relation_type": "related",
         "confidence": "existing",

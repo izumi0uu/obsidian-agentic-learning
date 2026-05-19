@@ -1,23 +1,23 @@
 # Concept Hierarchy Placement Review — 层级归属待审计概念卡
 
-Generated: `2026-05-18T09:31:07Z`
+Generated: `2026-05-18T14:41:35Z`
 Classification stage: `audit_closure`
 
 > Audit closure: remaining `defer_boundary_review` rows are closed as `deferred_with_backlog`; no concept cards are edited and no fallback parents are invented.
 
 ## Summary
 
-- total_concepts: 142
-- reviewed_concepts: 142
+- total_concepts: 145
+- reviewed_concepts: 145
 - taxonomy_placement_unreviewed: 0
 - concepts_with_up: 37
-- concepts_without_up: 105
-- concepts_with_candidate_basis: 63
-- candidate_basis_rows: 77
+- concepts_without_up: 108
+- concepts_with_candidate_basis: 64
+- candidate_basis_rows: 78
 - known_forbidden_candidate_pairs: 2
 - accepted_taxonomy: 0
 - root_or_anchor_no_up: 19
-- relation_only_terminal: 57
+- relation_only_terminal: 60
 - weak_or_backlog_terminal: 5
 - defer_boundary_review: 22
 - open_unclassified: 0
@@ -25,8 +25,8 @@ Classification stage: `audit_closure`
 - open_writeback: 0
 - dry_run_planned: 0
 - write_policy: Audit closure only. Remaining defer_boundary_review rows are closed as deferred_with_backlog and no concept-card fields are written.
-- decision_counts: `{"already_has_up_reviewed": 37, "defer_boundary_review": 22, "reject_taxonomy": 2, "relation_only_terminal": 57, "root_or_anchor_no_up": 19, "weak_or_backlog_terminal": 5}`
-- review_status_counts: `{"deferred_with_backlog": 22, "terminal_non_writeback": 120}`
+- decision_counts: `{"already_has_up_reviewed": 37, "defer_boundary_review": 22, "reject_taxonomy": 2, "relation_only_terminal": 60, "root_or_anchor_no_up": 19, "weak_or_backlog_terminal": 5}`
+- review_status_counts: `{"deferred_with_backlog": 22, "terminal_non_writeback": 123}`
 - parent_whitelist_reviewed: True
 - stable_parent_whitelist_approved: 14
 - proposed_parent_anchors_not_auto_approved: 3
@@ -132,8 +132,9 @@ Classification stage: `audit_closure`
 - [[Approval Gate]]
 - [[ReAct]]
 
-### relation_only_terminal (57)
+### relation_only_terminal (60)
 
+- [[ANP]]
 - [[Agent Control Plane]]
 - [[Agent Harness]]
 - [[Agent Lifecycle Hook]]
@@ -143,6 +144,8 @@ Classification stage: `audit_closure`
 - [[Agent Workflow Static Verification]]
 - [[Benchmark]]
 - [[Context Engineering]]
+- [[Context Projection]]
+- [[Context Rot]]
 - [[DeerFlow]]
 - [[Document Ingestion]]
 - [[Durable Execution]]
@@ -429,8 +432,8 @@ Apply artifact:
 
 Audit closure closes the whole concept hierarchy placement audit by routing every remaining deferred row to a durable backlog home. It does not add `up`; future changes must reopen a new candidate/adjudication/dry-run/limited-apply cycle.
 
-- total_concepts: 142
-- reviewed_concepts: 142
+- total_concepts: 145
+- reviewed_concepts: 145
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0
@@ -523,6 +526,7 @@ Closure artifact:
 | [[A2A]] | defer_boundary_review |  | 0 | 3 |
 | [[ACP]] | defer_boundary_review |  | 0 | 3 |
 | [[AGENTS.md]] | weak_or_backlog_terminal |  | 0 | 0 |
+| [[ANP]] | relation_only_terminal |  | 0 | 0 |
 | [[Agent]] | root_or_anchor_no_up |  | 0 | 0 |
 | [[Agent Control Plane]] | relation_only_terminal |  | 1 | 2 |
 | [[Agent Framework]] | root_or_anchor_no_up |  | 1 | 1 |
@@ -540,6 +544,8 @@ Closure artifact:
 | [[Code Execution Sandbox]] | defer_boundary_review |  | 0 | 3 |
 | [[Coding Agent]] | weak_or_backlog_terminal |  | 0 | 0 |
 | [[Context Engineering]] | relation_only_terminal |  | 1 | 2 |
+| [[Context Projection]] | relation_only_terminal |  | 1 | 2 |
+| [[Context Rot]] | relation_only_terminal |  | 0 | 0 |
 | [[Context Window]] | root_or_anchor_no_up |  | 0 | 0 |
 | [[Data Exfiltration]] | defer_boundary_review |  | 0 | 3 |
 | [[DeerFlow]] | relation_only_terminal |  | 1 | 2 |
@@ -645,6 +651,7 @@ Candidate basis is evidence for later adjudication, not an accepted parent.
 | [[Benchmark]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | no |
 | [[Chunking]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |
 | [[Context Engineering]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |
+| [[Context Projection]] | [[Memory]] | topic_family_review | low | frontmatter.related, relations:draws_from | no |
 | [[DeerFlow]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | no |
 | [[Document Ingestion]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |
 | [[Durable Execution]] | [[Agent Workflow]] | taxonomy_candidate | low | title/topic heuristic | no |

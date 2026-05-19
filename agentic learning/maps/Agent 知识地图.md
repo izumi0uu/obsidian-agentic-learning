@@ -15,6 +15,7 @@ related:
   - "[[Tool Calling]]"
   - "[[RAG]]"
   - "[[Memory]]"
+  - "[[Context Projection]]"
   - "[[TTL]]"
   - "[[Prompt Engineering]]"
   - "[[Planning]]"
@@ -25,6 +26,7 @@ related:
   - "[[LangGraph 生产项目蓝图]]"
   - "[[Workflow Guardrails 与 Prefect 控制点映射]]"
   - "[[Tool 接口层对比]]"
+  - "[[A2A MCP ANP 对比]]"
 ---
 
 # Agent 知识地图
@@ -70,6 +72,7 @@ LLM 地基：
 - [[LangChain DeepAgents]]：理解 LangChain 如何在 LangGraph runtime 上封装长任务 Agent harness。
 - [[DeerFlow]]：理解 ByteDance 如何把 sub-agents、skills、sandbox、filesystem、memory 和 context engineering 组合成 super agent harness。
 - [[Agent State]]：理解框架如何保存当前任务的进度、中间结果和下一步依据。
+- [[Context Projection]]：理解 state、memory、trace 和 notes 如何被选择性投影成本轮模型可见上下文。
 - [[Agent Workflow]]：理解框架如何把任务组织成步骤、分支、循环和交接。
 - [[GSSC Pipeline]]：把上下文构建拆成收集、选择、结构化和压缩四步，理解 Context Engineering 如何落到可调试流水线。
 - [[Progressive Disclosure]]：理解 skill、tool docs、repo context 和资源文件为什么要按需分层加载，而不是一开始全部塞进上下文。
@@ -79,6 +82,7 @@ LLM 地基：
 - [[Reflexion]]：理解 Agent 如何把失败反馈转成反思文本，并用经验改进下一轮行动。
 - [[Human-in-the-loop]]：理解人类确认、接管和修正如何进入 Agent loop。
 - [[Agent Lifecycle Hook]]：理解 runtime 如何在工具调用前后、会话开始/停止和上下文压缩等边界拦截、记录和恢复 Agent loop。
+- [[MCP]]、[[A2A]]、[[ANP]]：区分工具/context server 连接、Agent-to-Agent 任务协作、以及 Agent 网络身份/发现/描述/协议协商。
 
 ## 知识能力
 
@@ -138,6 +142,7 @@ LLM 地基：
 - [[Agent 工程分层对比]]：区分 framework、harness、workflow、state 和 loop。
 - [[Agent Framework 全量选型对比 2026-05]]：按当前官方文档横向比较 13 个热门 Agent framework / SDK / toolkit 的抽象层、状态/流程、多 Agent、RAG/memory、观测评测、部署和选型边界。
 - [[Tool 接口层对比]]：区分 tool use、tool calling、registry、permissioning、MCP 和 registry。
+- [[A2A MCP ANP 对比]]：区分 Agent-to-Agent 任务协作、工具/context server 连接、Agent 网络身份/发现/描述/协议协商。
 - [[Agent 安全控制点对比]]：区分 prompt injection、tool poisoning、data exfiltration、guardrails、policy engine、approval gate 和 least privilege tools。
 - [[Workflow Guardrails 与 Prefect 控制点映射]]：把 guardrail placement 映射到 Prefect state hook、transaction、automation 和副作用控制点。
 - [[Agent Memory 类型对比]]：区分 state、long-term、episodic、semantic、reflection、parametric / non-parametric memory。
@@ -161,6 +166,7 @@ LLM 地基：
 - [[GraphRAG 构图与评估对比]]：区分 knowledge graph、entity resolution、graph construction evaluation、GraphRAG 和 Neo4j。
 - [[LLM 输入输出基础边界对比]]：区分 token、context window、prompt 和 hallucination。
 - [[LLM 上下文限制与突破条件]]：拆开 context window 的容量、计算、结构、有效使用和治理限制，避免把长上下文误当长期记忆或可靠性保证。
+- [[Context Rot]]：理解长上下文里“信息在窗口内”仍可能因为噪声、干扰和结构问题被模型不稳定使用。
 - [[KV Cache]]：理解自回归 LLM 推理为什么需要缓存历史 K/V，以及长上下文为什么会变成显存和带宽管理问题。
 
 ## 当前概念卡
@@ -176,6 +182,7 @@ SORT file.name ASC
 
 - [x] [[Token]]
 - [x] [[Context Window]]
+- [x] [[Context Rot]]
 - [x] [[KV Cache]]
 - [x] [[Prompt]]
 - [x] [[Prompt Engineering]]

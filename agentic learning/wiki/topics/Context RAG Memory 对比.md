@@ -33,6 +33,7 @@ related:
   - "[[RAG 类型对比]]"
   - "[[Agent Memory 类型对比]]"
   - "[[Retrieval 组件对比]]"
+  - "[[Context Rot]]"
 ---
 
 # Context RAG Memory 对比
@@ -55,7 +56,7 @@ related:
 
 ## 共同问题域
 
-共同问题是：LLM 的输出强依赖本轮上下文，但上下文窗口有限、来源复杂、可信度不同、权限不同、更新频率不同。系统必须决定：哪些信息从文档库来，哪些从长期记忆来，哪些从当前任务 state 来，哪些从代码库结构来，以及怎样排序、压缩、引用和隔离。
+共同问题是：LLM 的输出强依赖本轮上下文，但上下文窗口有限、来源复杂、可信度不同、权限不同、更新频率不同。即使窗口变大，[[Context Rot]] 也提醒我们：信息进入窗口不等于模型会稳定使用。系统必须决定：哪些信息从文档库来，哪些从长期记忆来，哪些从当前任务 state 来，哪些从代码库结构来，以及怎样排序、压缩、引用和隔离。
 
 ```text
 source documents -> ingestion/chunking/embedding -> retriever -> candidate evidence

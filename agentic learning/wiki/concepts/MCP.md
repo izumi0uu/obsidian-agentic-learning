@@ -7,8 +7,8 @@ topic:
   - frontier
 status: growing
 created: 2026-05-06
-updated: 2026-05-16
-last_checked: 2026-05-10
+updated: 2026-05-18
+last_checked: 2026-05-18
 freshness: watch
 conflicts: []
 aliases:
@@ -26,6 +26,8 @@ related:
   - "[[Tool Calling]]"
   - "[[Tool Registry]]"
   - "[[A2A]]"
+  - "[[ANP]]"
+  - "[[A2A MCP ANP 对比]]"
   - "[[Tool Poisoning]]"
 ---
 
@@ -100,4 +102,6 @@ frontier / volatile。MCP 是当前工具协议生态的重要前沿，核心抽
 - [[Tool Registry]]
 - [[A2A]]
 - [[ACP]]
+- [[ANP]]
+- [[A2A MCP ANP 对比]]
 - [[Tool Poisoning]]

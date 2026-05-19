@@ -28,6 +28,7 @@ related:
   - "[[Context Window]]"
   - "[[GSSC Pipeline]]"
   - "[[Long-Horizon Context Engineering]]"
+  - "[[Context Rot]]"
 ---
 
 # Context Engineering
@@ -48,7 +49,7 @@ Context Engineering 解决的是“模型这一轮到底看见什么”的工程
 
 一个更可执行的拆法是 [[GSSC Pipeline]]：先 Gather 多源候选信息，再 Select 高价值信息，接着 Structure 成清晰上下文，最后在超预算时 Compress。它不是 Context Engineering 的全部，但能把“上下文怎么构建”从抽象原则落到工程步骤。
 
-它的边界是上下文治理，不是单纯扩大 context window。长上下文可以容纳更多内容，但不能自动解决噪声、冲突、过期资料、prompt injection 或证据优先级。Context Engineering 的成熟做法通常会配合 trace 和 evaluation：记录每次上下文里有哪些材料，检查答案是否真的基于这些材料，并用失败样本改进检索和上下文组织。
+它的边界是上下文治理，不是单纯扩大 context window。长上下文可以容纳更多内容，但不能自动解决噪声、冲突、过期资料、prompt injection 或证据优先级；这些问题累积后会表现为 [[Context Rot|上下文退化]]。Context Engineering 的成熟做法通常会配合 trace 和 evaluation：记录每次上下文里有哪些材料，检查答案是否真的基于这些材料，并用失败样本改进检索和上下文组织。
 
 长时程 Agent 任务会把这个问题放大：上下文不只要“本轮选什么”，还要处理跨窗口接力、外部笔记、任务状态和子代理隔离。这个方向单独见 [[Long-Horizon Context Engineering]]。
 
@@ -131,3 +132,4 @@ system rules
 - [[Prompt Engineering]]
 - [[GSSC Pipeline]]
 - [[Long-Horizon Context Engineering]]
+- [[Context Rot]]
