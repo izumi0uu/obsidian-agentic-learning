@@ -25,6 +25,25 @@ Hard requirements:
 
 Boundary: a single concept card, one raw source note, or a small typo/link fix does not require rewriting standards. It must still follow the existing standards. But once a change modifies how future cards/sources/maps/scripts should behave, the standards must move with it.
 
+## Top Hard Rule: Verification and Search Index Gate
+
+Before claiming any vault edit complete, the agent must build the validation checklist from the actual diff and update generated public artifacts when the diff affects them.
+
+Hard requirements:
+
+1. Always run `git diff --check` before final response after file edits.
+2. If any indexed Markdown changed, run `python3 scripts/build_search_index.py` and then `python3 scripts/build_search_index.py --check`. Indexed Markdown means `README.md`, `AGENTS.md`, or `agentic learning/**/*.md`, excluding `.obsidian`, `templates`, and Excalidraw files as defined by `scripts/build_search_index.py`. Report the resulting `document_count` when relevant.
+3. If durable vault prose changed under `agentic learning/wiki/`, `agentic learning/raw/`, `agentic learning/maps/`, `agentic learning/reviews/`, or `agentic learning/log.md`, run `python3 scripts/request_meta_audit.py --format markdown`.
+4. If concept cards changed, run `python3 scripts/concept_card_audit.py --format markdown` and the terminology / backlink / taxonomy gates that apply to the changed concept boundary.
+5. If comparison topic pages changed, run `python3 scripts/comparison_topic_audit.py --format markdown`.
+6. If paper source notes, paper assets, or extracted paper text changed, run `python3 scripts/paper_source_audit.py`.
+7. If interview-question alias maps, interview-question raw pages, or interview auto-link behavior changed, run `python3 scripts/interview_question_concept_links.py --self-test` and `python3 scripts/interview_question_concept_links.py --dry-run`.
+8. If `up`, `relations`, taxonomy reports, taxonomy scripts, taxonomy baseline, or relationship rules changed, run the full taxonomy validation path: `python3 scripts/concept_taxonomy/validate.py`, `python3 scripts/concept_taxonomy/plugin_contract_verification.py`, `python3 scripts/concept_taxonomy/control_surface_sync.py`, and `python3 scripts/concept_taxonomy/validate_taxonomy_baseline_map.py`.
+9. For weekly maintenance, systemic maintenance, or validation-rule changes, run the reproducible audit bundle in the Lint section. The bundle includes `search-index.json` regeneration/check because maintenance commonly changes indexed Markdown.
+10. Final reports must state changed surfaces, generated artifacts updated, validation commands run with pass/fail evidence, validations intentionally skipped with reasons, and remaining risks. Do not say "all validations passed" unless every required gate for the actual diff has fresh evidence.
+
+Boundary: this gate is about reproducible local validation and public index synchronization. It does not authorize destructive cleanup, broad rewrites, or changing unrelated generated reports just to make the working tree look smaller.
+
 ## Top Hard Rule: Bilingual Terminology Audit
 
 When adding or updating concepts, raw-source links, interview-question links, alias maps, or terminology-heavy topic pages, run a **Chinese/English terminology gate** before writing durable links or concept cards.
@@ -227,6 +246,8 @@ python3 scripts/concept_taxonomy/plugin_contract_verification.py
 python3 scripts/concept_taxonomy/control_surface_sync.py
 python3 scripts/concept_taxonomy/validate_taxonomy_baseline_map.py
 python3 scripts/request_meta_audit.py --format markdown
+python3 scripts/build_search_index.py
+python3 scripts/build_search_index.py --check
 git diff --check
 ```
 

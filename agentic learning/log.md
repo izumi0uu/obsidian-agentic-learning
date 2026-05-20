@@ -1379,3 +1379,25 @@ related:
 - Taxonomy: no `up` or `relations` writeback. [[NLP]] remains a foundation/domain card without a safe parent; [[LLM]] remains a foundation model card.
 - Control surfaces: updated concept cards, alias map, and log only. Did not update AGENTS.md, [[LLM Wiki 工作流]], [[字段规范]], templates, or taxonomy reports because no workflow/schema/relationship rule changed.
 - Validation: alias JSON parse PASS; interview link self-test PASS; interview dry-run scanned 779 pages and would modify 30 with 37 inline links / 0 missing candidates / 0 protected violations; concept-card audit PASS with 145 cards / needs action 0; request-meta audit PASS with 1172 files / 0 hits; `git diff --check` PASS.
+
+## [2026-05-20] source-ingest | Coding Agent host vs Agent SDK runtime repo samples
+
+- Created raw repo source notes: [[Claude Code CLI Repo]] and [[Antigravity SDK Python Repo]].
+- Updated [[资料收集索引#第三轮：看项目和示例]] with both project samples.
+- Boundary: both are source-level engineering samples, not new concept cards. `claude-code-cli` is recorded as a Coding Agent CLI host / harness source-code analysis repo with DeepWiki as Devin-generated secondary code guide; `antigravity-sdk-python` is recorded as an Agent SDK / runtime framework sample with DeepWiki as secondary code guide.
+- Terminology: `Agent Harness`, `Agent Framework`, `Coding Agent`, `Tool Calling`, `Tool Permissioning`, and `MCP` already have canonical concept cards or alias-map entries. No new aliases, no interview auto-link changes, and no taxonomy `up` / `relations` writeback.
+- Source boundary: GitHub README / source remain primary evidence; DeepWiki pages are useful for module navigation and code-reading entry points but do not replace source review.
+- Validation: full AGENTS.md audit bundle PASS after source ingest: concept-card audit 145 cards / needs action 0; comparison-topic audit 24 pages / needs action 0; paper source audit 65 files PASS; interview link self-test PASS; interview dry-run scanned 779 pages and would modify 30 with 37 inline links / 0 missing candidates / 0 protected violations; taxonomy validate PASS with 145 concepts / 0 open review / 0 open writeback; plugin contract, control-surface sync, and baseline-map validation PASS; request-meta audit PASS with 1174 files / 0 hits; `git diff --check` PASS; Obsidian search finds both new source notes and the updated source index entry.
+
+## [2026-05-20] maintenance | public search index regeneration
+
+- Regenerated root `search-index.json` after adding the repo source notes and updating [[资料收集索引]] / [[log]].
+- Script boundary: no missing script; the project already owns `scripts/build_search_index.py`, and CI verifies it through `.github/workflows/search-index.yml`.
+- Validation: initial `python3 scripts/build_search_index.py --check` reported stale; after regeneration, `--check` PASS with 1176 documents and `git diff --check` PASS.
+
+## [2026-05-20] workflow-rule | validation and search-index gate
+
+- Updated project rule `AGENTS.md` with a diff-driven verification gate: always run `git diff --check`, regenerate/check `search-index.json` when indexed Markdown changes, and run the relevant audit scripts for concept cards, comparison topics, paper sources, interview links, request-meta hygiene, and taxonomy changes.
+- Updated [[LLM Wiki 工作流#验证与公开搜索索引门禁]] with the operational version of the same rule.
+- Boundary: this is a validation workflow rule change, not a schema/template/script change. `scripts/build_search_index.py` and `.github/workflows/search-index.yml` already existed, so no new script was added.
+- Validation: full audit bundle PASS after rule update: concept-card audit 145 cards / needs action 0; comparison-topic audit 24 pages / needs action 0; paper source audit 65 files PASS; interview link self-test PASS; interview dry-run scanned 779 pages with 0 missing candidates and 0 protected violations; taxonomy validate PASS with 145 concepts / 0 open review / 0 open writeback; plugin contract, control-surface sync, and baseline-map validation PASS; request-meta audit PASS with 1174 files / 0 hits; search index regenerated and `--check` PASS with 1176 documents; `git diff --check` PASS.

@@ -6,7 +6,7 @@ topic:
   - workflow
 status: active
 created: 2026-05-05
-updated: 2026-05-17
+updated: 2026-05-20
 source: /Users/idah/Downloads/llm-wiki.md
 related:
   - "[[Agent 知识地图]]"
@@ -88,6 +88,35 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 验收规则：`wiki/`、`raw/` 的 synthesis 段落、`maps/05 Query 写回队列.md` 的问题栏，都不应出现用户侧收录决策关键词；历史 log 可以记录操作，但也应优先写成中性边界语言。
 
 项目脚本：`python3 scripts/request_meta_audit.py --format markdown` 是请求 / 会话元信息隔离的固定审计入口。它扫描 `wiki/`、`raw/`、`maps/`、`reviews/` 和 `log.md`，用于发现聊天包装、hook 文本、goal reconciliation 片段和请求路由话术是否被误写入 durable vault 页面。误报要先收窄规则或加明确边界，不要为了通过审计删除真实技术概念内容。
+
+## 验证与公开搜索索引门禁
+
+每次文件编辑结束前，先按实际 diff 判断验证范围，再声明哪些验证已经跑过。不能只说“应该没问题”，也不能把某个脚本存在当成它已经跑过。
+
+### 最小门禁
+
+- 所有文件编辑后都要跑 `git diff --check`。
+- `README.md`、`AGENTS.md` 或 `agentic learning/**/*.md` 发生变化时，要重新生成公开搜索索引：
+
+```bash
+python3 scripts/build_search_index.py
+python3 scripts/build_search_index.py --check
+```
+
+这个索引由 `scripts/build_search_index.py` 生成，CI 通过 `.github/workflows/search-index.yml` 只检查它是否同步；本地改动后需要先生成，再检查。
+
+### 按改动面追加验证
+
+- 改 `wiki/`、`raw/`、`maps/`、`reviews/` 或 `log.md` 的 durable prose：运行 `python3 scripts/request_meta_audit.py --format markdown`。
+- 改 concept card：运行 `python3 scripts/concept_card_audit.py --format markdown`，并按需执行中英文术语、反向提及和 taxonomy 门禁。
+- 改 comparison topic：运行 `python3 scripts/comparison_topic_audit.py --format markdown`。
+- 改 paper source note、PDF asset 或 extracted paper text：运行 `python3 scripts/paper_source_audit.py`。
+- 改面试题 alias map、面试题 raw 页或自动链接行为：运行 `python3 scripts/interview_question_concept_links.py --self-test` 和 `python3 scripts/interview_question_concept_links.py --dry-run`。
+- 改 `up`、`relations`、taxonomy 报告、taxonomy 脚本、层级基线或关系规则：运行 `scripts/concept_taxonomy/` 的四个验证入口：`validate.py`、`plugin_contract_verification.py`、`control_surface_sync.py`、`validate_taxonomy_baseline_map.py`。
+
+### 结束报告
+
+最终报告必须列出：改了哪些控制面、哪些生成物被同步、跑了哪些命令、每个命令的 pass/fail 证据、哪些验证因为不适用而没有跑、还有什么剩余风险。只有实际 diff 对应的门禁都有新鲜证据时，才可以说验证完整。
 
 ## 中英文术语对齐 / Bilingual Terminology Audit
 
@@ -463,7 +492,13 @@ python3 scripts/comparison_topic_audit.py --format markdown
 python3 scripts/paper_source_audit.py
 python3 scripts/interview_question_concept_links.py --self-test
 python3 scripts/interview_question_concept_links.py --dry-run
+python3 scripts/concept_taxonomy/validate.py
+python3 scripts/concept_taxonomy/plugin_contract_verification.py
+python3 scripts/concept_taxonomy/control_surface_sync.py
+python3 scripts/concept_taxonomy/validate_taxonomy_baseline_map.py
 python3 scripts/request_meta_audit.py --format markdown
+python3 scripts/build_search_index.py
+python3 scripts/build_search_index.py --check
 git diff --check
 ```
 

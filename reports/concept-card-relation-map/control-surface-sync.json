@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "taxonomy_tooling_control_surface_sync",
-  "generated_at": "2026-05-18T14:48:42Z",
+  "generated_at": "2026-05-20T12:34:43Z",
   "input_artifacts": {
     "plugin_contract_verification": "reports/concept-card-relation-map/plugin-contract-verification.json",
     "taxonomy_review": "reports/concept-card-relation-map/concept-hierarchy-placement-review.json",
