@@ -46,6 +46,7 @@
   "Long-term Memory": ["Long-term Memory", "长期记忆", "长时记忆"],
   "Long-Horizon Context Engineering": ["Long-Horizon Context Engineering", "long-horizon context engineering", "Long Horizon Context Engineering", "long context engineering for agents", "长时程任务上下文工程", "面向长时程任务的上下文工程", "长程上下文工程", "Compaction", "压缩整合", "Structured note-taking", "结构化笔记", "Sub-agent architectures", "子代理架构"],
   "MCP": ["MCP", "Model Context Protocol", "模型上下文协议"],
+  "MCP Transport": ["MCP Transport", "MCP Transports", "MCP 传输", "MCP 传输层", "MCP 通信方式", "MCP Stdio Transport", "MCP Streamable HTTP Transport", "MCP SSE Transport", "Stdio Transport", "Streamable HTTP Transport", "Streamable HTTP", "HTTP+SSE Transport", "HTTP+SSE", "标准输入输出传输", "流式 HTTP"],
   "MCP Registry": ["MCP Registry", "MCP 注册表", "MCP 市场"],
   "Memory": ["Memory", "记忆", "记忆系统"],
   "Memory Reflection": ["Memory Reflection", "记忆反思", "记忆总结"],

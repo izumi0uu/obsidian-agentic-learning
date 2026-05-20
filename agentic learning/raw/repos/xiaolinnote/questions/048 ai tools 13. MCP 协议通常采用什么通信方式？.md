@@ -10,7 +10,7 @@ topic:
   - mcp
 status: inbox
 created: 2026-05-07
-updated: 2026-05-17
+updated: 2026-05-20
 url: https://xiaolinnote.com/ai/tools/13_mcp_transport.html
 source: https://xiaolinnote.com/ai/tools/13_mcp_transport.html
 last_checked: 2026-05-17
@@ -20,6 +20,7 @@ related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[MCP]]"
+  - "[[MCP Transport]]"
 ---
 
 # 13. [[MCP]] 协议通常采用什么通信方式？
@@ -31,6 +32,7 @@ related:
 ## 相关知识 wiki
 
 - [[MCP]]
+- [[MCP Transport]]
 
 ## 页面正文
 

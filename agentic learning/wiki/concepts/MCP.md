@@ -7,8 +7,8 @@ topic:
   - frontier
 status: growing
 created: 2026-05-06
-updated: 2026-05-19
-last_checked: 2026-05-18
+updated: 2026-05-20
+last_checked: 2026-05-20
 freshness: watch
 conflicts: []
 aliases:
@@ -20,15 +20,18 @@ source:
   - "[[MCP Tool Poisoning Threat Model]]"
   - "[[055 ai tools 4. 什么是 MCP（模型上下文协议）？讲讲它的核心内容？]]"
   - "[[056 ai tools 5. MCP 由哪几部分组成？]]"
+  - "[[048 ai tools 13. MCP 协议通常采用什么通信方式？]]"
 evidence:
   - "[[Model Context Protocol 官方文档#为什么收]]"
   - "[[Model Context Protocol Python SDK Repo#为什么收]]"
   - "[[MCP Tool Poisoning Threat Model#为什么收]]"
   - "[[055 ai tools 4. 什么是 MCP（模型上下文协议）？讲讲它的核心内容？#三类核心能力，Tools、Resources、Prompts]]"
   - "[[056 ai tools 5. MCP 由哪几部分组成？#第二层：能力类型，Tools / Resources / Prompts]]"
+  - "[[048 ai tools 13. MCP 协议通常采用什么通信方式？#传输方式二：Streamable HTTP（当前标准的远程传输）]]"
 related:
   - "[[Tool Calling]]"
   - "[[Tool Registry]]"
+  - "[[MCP Transport]]"
   - "[[Prompt]]"
   - "[[A2A]]"
   - "[[ANP]]"
@@ -131,7 +134,7 @@ sequenceDiagram
     rect rgb(255, 246, 180)
     Note over C,S: 1. 建立连接
     end
-    C->>S: 连接请求（Stdio / SSE / HTTP）
+    C->>S: 连接请求（Stdio / Streamable HTTP）
     S-->>C: 连接成功
 
     rect rgb(255, 246, 180)
@@ -161,6 +164,12 @@ sequenceDiagram
 ## 它解决什么问题
 
 没有协议时，每个应用都要为每个工具写一套连接方式。MCP 把工具、资源、提示、server/client/host 等对象标准化，让 Agent 能发现和调用外部能力。
+
+## 传输层边界
+
+[[MCP Transport]] 是 MCP client/server 之间承载 JSON-RPC 消息的通道层，不等于 MCP 的全部语义。当前应该优先记住两种标准 transport：本地 server 常用 `stdio`，由 client 启动子进程并通过 stdin/stdout 传消息；远程或共享 server 常用 `Streamable HTTP`，通过单个 MCP endpoint 发送请求并按需返回 JSON 或 SSE stream。
+
+旧资料里常见的 `SSE Transport` 多数指 2024-11-05 规范里的 HTTP+SSE 双端点方案；它是 legacy / deprecated compatibility，不应和当前 `Streamable HTTP` 混为一谈。`HTTP Transport` 这个说法太宽，容易混淆普通 REST、旧 HTTP+SSE 和当前 Streamable HTTP；`Memory Transport` 更像 SDK 内部/测试/in-process 连接方式，不是生产部署主选项。
 
 ## 它不是什么
 
@@ -203,7 +212,7 @@ frontier / volatile。MCP 是当前工具协议生态的重要前沿，核心抽
 - Evidence type: source boundary — 本卡只使用现有 source note / project note 的小节级证据；未伪造段落、页码或不存在的小节。
 - Evidence type: engineering synthesis — “概念详解”“边界细节”“现代性状态”把 [[Model Context Protocol 官方文档]]；[[Model Context Protocol Python SDK Repo]]；[[MCP Tool Poisoning Threat Model]] 与本 vault 的 Agent 工程学习目标综合起来。
 - Evidence type: learning diagram — [[MCP#调用流程图（学习图）]] 是用户提供图片的 Mermaid 转写，用于学习 MCP client / server / filesystem 调用时序；它不是官方规范原图。
-- Boundary: source note 多数仍是 seed/growing 级摘要；除 frontmatter 的 `last_checked` 外，不把具体 API 字段、SDK 版本或 registry 状态写成长期稳定事实。
+- Boundary: transport 细节集中沉淀在 [[MCP Transport]]；source note 多数仍是 seed/growing 级摘要；除 frontmatter 的 `last_checked` 外，不把具体 API 字段、SDK 版本或 registry 状态写成长期稳定事实。
 - Confidence: medium
 
 ## 复习触发
@@ -216,6 +225,7 @@ frontier / volatile。MCP 是当前工具协议生态的重要前沿，核心抽
 
 - [[Tool Calling]]
 - [[Tool Registry]]
+- [[MCP Transport]]
 - [[A2A]]
 - [[ACP]]
 - [[ANP]]

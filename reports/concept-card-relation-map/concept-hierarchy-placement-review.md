@@ -1,41 +1,41 @@
 # Concept Hierarchy Placement Review — 层级归属待审计概念卡
 
-Generated: `2026-05-18T14:41:35Z`
+Generated: `2026-05-20T14:22:39Z`
 Classification stage: `audit_closure`
 
 > Audit closure: remaining `defer_boundary_review` rows are closed as `deferred_with_backlog`; no concept cards are edited and no fallback parents are invented.
 
 ## Summary
 
-- total_concepts: 145
-- reviewed_concepts: 145
+- total_concepts: 146
+- reviewed_concepts: 146
 - taxonomy_placement_unreviewed: 0
 - concepts_with_up: 37
-- concepts_without_up: 108
+- concepts_without_up: 109
 - concepts_with_candidate_basis: 64
 - candidate_basis_rows: 78
 - known_forbidden_candidate_pairs: 2
 - accepted_taxonomy: 0
 - root_or_anchor_no_up: 19
 - relation_only_terminal: 60
-- weak_or_backlog_terminal: 5
-- defer_boundary_review: 22
+- weak_or_backlog_terminal: 4
+- defer_boundary_review: 24
 - open_unclassified: 0
 - open_review: 0
 - open_writeback: 0
 - dry_run_planned: 0
 - write_policy: Audit closure only. Remaining defer_boundary_review rows are closed as deferred_with_backlog and no concept-card fields are written.
-- decision_counts: `{"already_has_up_reviewed": 37, "defer_boundary_review": 22, "reject_taxonomy": 2, "relation_only_terminal": 60, "root_or_anchor_no_up": 19, "weak_or_backlog_terminal": 5}`
-- review_status_counts: `{"deferred_with_backlog": 22, "terminal_non_writeback": 123}`
+- decision_counts: `{"already_has_up_reviewed": 37, "defer_boundary_review": 24, "reject_taxonomy": 2, "relation_only_terminal": 60, "root_or_anchor_no_up": 19, "weak_or_backlog_terminal": 4}`
+- review_status_counts: `{"deferred_with_backlog": 24, "terminal_non_writeback": 122}`
 - parent_whitelist_reviewed: True
 - stable_parent_whitelist_approved: 14
 - proposed_parent_anchors_not_auto_approved: 3
 - missing_proposed_parent_anchors: 2
 - root_anchors_not_parent_whitelist: 5
-- deferred_rows_parent_prechecked: 24
+- deferred_rows_parent_prechecked: 26
 - candidate_adjudication_needed: 2
 - conservative_candidates_generated: 2
-- candidate_generation_suppressed_signals: 22
+- candidate_generation_suppressed_signals: 24
 - adjudication_items: 2
 - adjudicated_candidates: 2
 - adjudication_accept_taxonomy: 0
@@ -56,7 +56,7 @@ Classification stage: `audit_closure`
 - limited_apply_concept_card_writes: 1
 - limited_apply_post_apply_dry_run_planned: 0
 - limited_apply_post_apply_dry_run_ready: 0
-- deferred_with_backlog: 22
+- deferred_with_backlog: 24
 - audit_closure_concept_card_writes: 0
 - completion_definition_met: True
 
@@ -102,7 +102,7 @@ Classification stage: `audit_closure`
 - [[Tool Calling]]
 - [[Trajectory Evaluation]]
 
-### defer_boundary_review (22)
+### defer_boundary_review (24)
 
 - [[A2A]]
 - [[ACP]]
@@ -115,7 +115,9 @@ Classification stage: `audit_closure`
 - [[Least Privilege Tools]]
 - [[MCP]]
 - [[MCP Registry]]
+- [[MCP Transport]]
 - [[Multi-Head Attention]]
+- [[NLP]]
 - [[Observation]]
 - [[Obsidian + LLM Wiki]]
 - [[Oh My Codex (OMX)]]
@@ -217,11 +219,10 @@ Classification stage: `audit_closure`
 - [[Tool Use]]
 - [[Transformer]]
 
-### weak_or_backlog_terminal (5)
+### weak_or_backlog_terminal (4)
 
 - [[AGENTS.md]]
 - [[Coding Agent]]
-- [[NLP]]
 - [[Zero-shot CoT]]
 - [[双链]]
 
@@ -311,7 +312,9 @@ Parent-whitelist review fixes the candidate-generation boundary. An approved par
 | [[Least Privilege Tools]] | remain_deferred |  | Tool safety/policy principle; related to Tool Use but not automatically a kind of Tool Use. |
 | [[MCP]] | remain_deferred |  | Protocol/root ecosystem card; no approved protocol parent exists. |
 | [[MCP Registry]] | remain_deferred |  | Registry/ecosystem component likely belongs near MCP, but MCP is not yet an approved parent. |
+| [[MCP Transport]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
 | [[Multi-Head Attention]] | likely_relation_only |  | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. |
+| [[NLP]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
 | [[Observation]] | remain_deferred |  | Agent loop/runtime signal; no approved Agent Loop parent exists. |
 | [[Obsidian + LLM Wiki]] | remain_deferred |  | Project/workflow artifact card; no approved parent should absorb local wiki tooling by similarity. |
 | [[Oh My Codex (OMX)]] | remain_deferred |  | Concrete runtime/product/workflow ecosystem; do not classify as Agent Framework without product-boundary review. |
@@ -328,10 +331,10 @@ Parent-whitelist review fixes the candidate-generation boundary. An approved par
 
 Conservative candidate generation generates conservative candidates only from Parent-whitelist review approved parents. These candidates are **not** accepted taxonomy and cannot enter writeback until Candidate adjudication.
 
-- deferred_rows_considered: 24
+- deferred_rows_considered: 26
 - approved_parent_count: 14
 - generated_candidates: 2
-- suppressed_signals: 22
+- suppressed_signals: 24
 - candidate_targets: `{"Agent Workflow": 2}`
 - adjudication_items: 2
 - open_writeback: 0
@@ -432,15 +435,15 @@ Apply artifact:
 
 Audit closure closes the whole concept hierarchy placement audit by routing every remaining deferred row to a durable backlog home. It does not add `up`; future changes must reopen a new candidate/adjudication/dry-run/limited-apply cycle.
 
-- total_concepts: 145
-- reviewed_concepts: 145
+- total_concepts: 146
+- reviewed_concepts: 146
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0
 - open_writeback: 0
 - dry_run_planned: 0
-- defer_boundary_review: 22
-- deferred_with_backlog: 22
+- defer_boundary_review: 24
+- deferred_with_backlog: 24
 - concept_card_writes: 0
 - plugin_problems: 0
 - forbidden_up_edges: 0
@@ -465,7 +468,9 @@ Closure artifact:
 | [[Least Privilege Tools]] | [[Tool Use]] | policy_principle_not_tool_behavior | Tool safety/policy principle; related to Tool Use but not automatically a kind of Tool Use. |
 | [[MCP]] | [[Tool Use]] | protocol_not_tool_behavior | Protocol/root ecosystem card; no approved protocol parent exists. |
 | [[MCP Registry]] | [[MCP]] | unapproved_parent | Registry/ecosystem component likely belongs near MCP, but MCP is not yet an approved parent. |
+| [[MCP Transport]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
 | [[Multi-Head Attention]] | [[Transformer]] | component_of_not_kind_of | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. |
+| [[NLP]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
 | [[Observation]] | [[Agent Workflow]] | loop_signal_not_workflow | Agent loop/runtime signal; no approved Agent Loop parent exists. |
 | [[Obsidian + LLM Wiki]] | [[RAG]] | local_system_not_rag_subtype | Project/workflow artifact card; no approved parent should absorb local wiki tooling by similarity. |
 | [[Oh My Codex (OMX)]] | [[Agent Framework]] | product_runtime_not_framework_subtype_without_review | Concrete runtime/product/workflow ecosystem; do not classify as Agent Framework without product-boundary review. |
@@ -575,9 +580,10 @@ Closure artifact:
 | [[Long-Horizon Context Engineering]] | relation_only_terminal |  | 1 | 2 |
 | [[MCP]] | defer_boundary_review |  | 0 | 3 |
 | [[MCP Registry]] | defer_boundary_review |  | 0 | 3 |
+| [[MCP Transport]] | defer_boundary_review |  | 0 | 2 |
 | [[Memory]] | root_or_anchor_no_up |  | 0 | 0 |
 | [[Multi-Head Attention]] | defer_boundary_review |  | 0 | 3 |
-| [[NLP]] | weak_or_backlog_terminal |  | 0 | 0 |
+| [[NLP]] | defer_boundary_review |  | 0 | 2 |
 | [[Neo4j]] | relation_only_terminal |  | 1 | 2 |
 | [[OMX $ 指令]] | relation_only_terminal |  | 1 | 2 |
 | [[Observability]] | root_or_anchor_no_up |  | 1 | 1 |

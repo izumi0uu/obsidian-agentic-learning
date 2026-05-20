@@ -10,7 +10,7 @@ topic:
   - mcp
 status: inbox
 created: 2026-05-07
-updated: 2026-05-17
+updated: 2026-05-20
 url: https://xiaolinnote.com/ai/tools/14_sse_vs_websocket.html
 source: https://xiaolinnote.com/ai/tools/14_sse_vs_websocket.html
 last_checked: 2026-05-17
@@ -19,6 +19,7 @@ sha256: 5f82221c2b969bffe2044738119491570f3bbfebd033c2fd83bae7375b2d9cf1
 related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
+  - "[[MCP Transport]]"
 ---
 
 # 14. 说说 WebSocket 和 SSE 通信的区别及局限性？
@@ -29,7 +30,7 @@ related:
 
 ## 相关知识 wiki
 
-- 暂无直接对应的现有概念卡；后续如果这类题目反复出现，可以考虑补一张概念卡或面试复盘页。
+- [[MCP Transport]]
 
 ## 页面正文
 

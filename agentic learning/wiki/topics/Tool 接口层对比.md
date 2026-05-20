@@ -7,13 +7,14 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-20
 source:
   - "[[Tool Use]]"
   - "[[Tool Calling]]"
   - "[[Tool Registry]]"
   - "[[Tool Permissioning]]"
   - "[[MCP]]"
+  - "[[MCP Transport]]"
   - "[[MCP Registry]]"
   - "[[Toolformer]]"
   - "[[OpenAI Function Calling 文档]]"
@@ -25,6 +26,7 @@ evidence:
   - "[[Tool Registry#证据锚点]]"
   - "[[Tool Permissioning#证据锚点]]"
   - "[[MCP#证据锚点]]"
+  - "[[MCP Transport#证据锚点]]"
   - "[[MCP Registry#证据锚点]]"
 related:
   - "[[Agent 知识地图]]"
@@ -33,6 +35,7 @@ related:
   - "[[Tool Registry]]"
   - "[[Tool Permissioning]]"
   - "[[MCP]]"
+  - "[[MCP Transport]]"
   - "[[MCP Registry]]"
   - "[[Agent 安全控制点对比]]"
 ---
@@ -41,7 +44,7 @@ related:
 
 ## 一句话总览
 
-这页回答：Agent “会用工具”到底由哪些层组成。最小边界是：[[Tool Use]] 是行为能力，[[Tool Calling]] 是模型表达调用意图的结构化接口，[[Tool Registry]] 是 host 内部可用工具目录，[[Tool Permissioning]] 是能不能看见、调用和带什么参数执行的授权机制，[[MCP]] 是连接外部 tools / resources / prompts 的协议，[[MCP Registry]] 是 MCP server 的发现和分发层。
+这页回答：Agent “会用工具”到底由哪些层组成。最小边界是：[[Tool Use]] 是行为能力，[[Tool Calling]] 是模型表达调用意图的结构化接口，[[Tool Registry]] 是 host 内部可用工具目录，[[Tool Permissioning]] 是能不能看见、调用和带什么参数执行的授权机制，[[MCP]] 是连接外部 tools / resources / prompts 的协议，[[MCP Transport]] 是 MCP client/server 传递 JSON-RPC 消息的通道层，[[MCP Registry]] 是 MCP server 的发现和分发层。
 
 最容易出错的理解是把这些都叫“function calling”。Function / tool calling 只解决“模型如何提出一个结构化调用请求”；它不自动解决工具从哪里来、是否可信、是否越权、是否需要审批、执行结果是否能作为可信 observation。
 
@@ -68,11 +71,12 @@ task/context
   -> registry exposes candidate tools
   -> permission layer filters / gates execution
   -> protocol/client connects external server
+  -> transport carries MCP messages
   -> tool execution
   -> tool result / observation
 ```
 
-这条链路的每一层失败方式不同：模型可能选错工具，schema 可能含糊，registry 可能暴露过多工具，permission 可能过宽，MCP server 可能不可信，tool result 可能被注入或污染。
+这条链路的每一层失败方式不同：模型可能选错工具，schema 可能含糊，registry 可能暴露过多工具，permission 可能过宽，MCP server 可能不可信，transport 选型可能扩大网络暴露面，tool result 可能被注入或污染。
 
 ## 核心区别表
 
@@ -83,6 +87,7 @@ task/context
 | [[Tool Registry]] | host 内部工具目录和元数据管理 | 模型选择工具前；工具上线/下线/版本变化时 | 工具名、description、schema、版本、权限标签、来源 | 当前任务可见/可调用工具集合 | [[Tool Registry#证据锚点]] |
 | [[Tool Permissioning]] | 授权与风险控制机制 | 工具展示前、调用前、参数提交前、执行前 | 用户/任务/工具/参数/数据范围/风险等级 | allow / deny / require approval / sandbox-only 等执行边界 | [[Tool Permissioning#证据锚点]] |
 | [[MCP]] | AI host 连接外部 tools / resources / prompts 的协议层 | host 与 MCP server 建连、发现能力、调用 server 工具时 | MCP server 能力、tool definitions、resources、prompts、transport | 可被 host 转成模型工具空间的外部能力 | [[MCP#证据锚点]] |
+| [[MCP Transport]] | MCP client/server 消息承载通道 | MCP client/server 已建立协议语义、需要传递 JSON-RPC 消息时 | JSON-RPC 消息、stdio 管道、Streamable HTTP endpoint、可选 SSE stream | 跨进程或跨网络传递的 MCP 请求/响应/通知 | [[MCP Transport#证据锚点]] |
 | [[MCP Registry]] | MCP server 发现、发布、分发和版本入口 | 接入工具生态前；安装/升级/审查 server 时 | server 元数据、来源、版本、安装信息 | 候选 MCP server 列表；不等于安全背书 | [[MCP Registry#证据锚点]] |
 
 ## 最容易混淆的边界

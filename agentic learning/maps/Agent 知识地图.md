@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-18
+updated: 2026-05-20
 related:
   - "[[Agent]]"
   - "[[前沿主源清单]]"
@@ -13,6 +13,7 @@ related:
   - "[[Agent Loop]]"
   - "[[Observation]]"
   - "[[Tool Calling]]"
+  - "[[MCP Transport]]"
   - "[[RAG]]"
   - "[[Memory]]"
   - "[[Context Projection]]"
@@ -82,7 +83,7 @@ LLM 地基：
 - [[Reflexion]]：理解 Agent 如何把失败反馈转成反思文本，并用经验改进下一轮行动。
 - [[Human-in-the-loop]]：理解人类确认、接管和修正如何进入 Agent loop。
 - [[Agent Lifecycle Hook]]：理解 runtime 如何在工具调用前后、会话开始/停止和上下文压缩等边界拦截、记录和恢复 Agent loop。
-- [[MCP]]、[[A2A]]、[[ANP]]：区分工具/context server 连接、Agent-to-Agent 任务协作、以及 Agent 网络身份/发现/描述/协议协商。
+- [[MCP]]、[[MCP Transport]]、[[A2A]]、[[ANP]]：区分工具/context server 连接、MCP client/server 消息承载通道、Agent-to-Agent 任务协作、以及 Agent 网络身份/发现/描述/协议协商。
 
 ## 知识能力
 

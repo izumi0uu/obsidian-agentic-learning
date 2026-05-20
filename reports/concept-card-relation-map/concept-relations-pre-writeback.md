@@ -1,18 +1,18 @@
 # Temporary Concept Relationship Map
 
-Generated: `2026-05-18T13:55:03Z`
+Generated: `2026-05-20T14:22:20Z`
 
 > 临时文件：用于后续概念层级开发评估。不要把候选边自动写回概念卡；每条 candidate 都需要单独人工/LLM 复核。
 
 ## Summary
 
-- total_concepts: 144
-- edge_counts: {'related_link': 830, 'body_link': 266, 'typed_relation': 50, 'taxonomy': 37}
-- typed_relation_counts: {'related_to': 11, 'representative_of': 1, 'based_on_intuition': 1, 'paired_with': 2, 'mechanism_for': 1, 'projects_from': 1, 'draws_from': 2, 'contrasts_with': 6, 'risk_for': 1, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 8, 'uses': 4, 'pattern_for': 1, 'specializes': 1, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
-- concepts_without_up: 107
+- total_concepts: 146
+- edge_counts: {'related_link': 852, 'body_link': 270, 'typed_relation': 53, 'taxonomy': 37}
+- typed_relation_counts: {'contrasts_with': 8, 'related_to': 12, 'representative_of': 1, 'based_on_intuition': 1, 'paired_with': 2, 'mechanism_for': 1, 'projects_from': 1, 'draws_from': 2, 'risk_for': 1, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 8, 'uses': 4, 'pattern_for': 1, 'specializes': 1, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
+- concepts_without_up: 109
 - core_orphans: 0
 - weakly_connected_concepts: 1
-- dangling_core_targets: 25
+- dangling_core_targets: 29
 - candidate_edges: 78
 - taxonomy_candidates: 11
 - topic_family_review_signals: 67
@@ -63,6 +63,9 @@ Generated: `2026-05-18T13:55:03Z`
 
 | Source | relation | Target | Evidence | Note |
 |---|---|---|---|---|
+| [[ANP]] | contrasts_with | [[A2A]] | frontmatter.relations | A2A 更聚焦 Agent-to-Agent 任务协作和状态/消息/artifact；ANP 更强调 Agent 网络身份、发现、描述和通信协商。 |
+| [[ANP]] | contrasts_with | [[MCP]] | frontmatter.relations | MCP 连接 AI 应用与工具/资源/context server；ANP 连接网络中的 Agent 身份和通信入口。 |
+| [[ANP]] | related_to | [[MCP Registry]] | frontmatter.relations | 两者都涉及发现与生态分发，但 MCP Registry 面向 MCP server；ANP discovery 面向 Agent identity/description。 |
 | [[Agent Robustness]] | related_to | [[Guardrails]] | frontmatter.relations | Guardrails 可以提高部分扰动下的可控性，但安全拦截机制不等于鲁棒性指标。 |
 | [[Agent Robustness]] | related_to | [[Task Success Rate]] | frontmatter.relations | Agent Robustness 常用扰动条件下的成功率下降幅度来观察；Task Success Rate 是被观察指标，不是鲁棒性本身。 |
 | [[Agent Robustness]] | related_to | [[Trajectory Evaluation]] | frontmatter.relations | 工具超时、异常返回、噪声输入和恢复动作都需要看 trajectory，而不只看最终输出。 |
@@ -206,6 +209,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[A2A]]
 - [[ACP]]
 - [[AGENTS.md]]
+- [[ANP]]
 - [[Agent]]
 - [[Agent Control Plane]]
 - [[Agent Framework]]
@@ -254,6 +258,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Long-Horizon Context Engineering]]
 - [[MCP]]
 - [[MCP Registry]]
+- [[MCP Transport]]
 - [[Memory]]
 - [[Multi-Head Attention]]
 - [[NLP]]
@@ -319,6 +324,9 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 
 | Source | relation | Missing/external target | Kind |
 |---|---|---|---|
+| [[A2A]] | related | A2A MCP ANP 对比 | related_link |
+| [[ACP]] | related | A2A MCP ANP 对比 | related_link |
+| [[ANP]] | related | A2A MCP ANP 对比 | related_link |
 | [[Agent Framework]] | related | Agent Framework 编排范式对比 | related_link |
 | [[Agent Framework]] | related | Agent Framework 全量选型对比 2026-05 | related_link |
 | [[AgentScope]] | related | Agent Framework 编排范式对比 | related_link |
@@ -328,6 +336,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[GraphRAG]] | related | RAG 类型对比 | related_link |
 | [[KV Cache]] | related | LLM 上下文限制与突破条件 | related_link |
 | [[LangGraph]] | related | Agent Framework 编排范式对比 | related_link |
+| [[MCP]] | related | A2A MCP ANP 对比 | related_link |
 | [[Microsoft Agent Framework]] | related | Agent Framework 编排范式对比 | related_link |
 | [[Observation]] | related | Environment Observation 类型对比 | related_link |
 | [[Obsidian + LLM Wiki]] | related | index | related_link |

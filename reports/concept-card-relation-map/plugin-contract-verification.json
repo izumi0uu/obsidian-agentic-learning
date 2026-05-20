@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "plugin_contract_verification",
-  "generated_at": "2026-05-20T12:34:45Z",
+  "generated_at": "2026-05-20T14:22:59Z",
   "input_artifacts": {
     "temp_map": "reports/concept-card-relation-map/concept-relations-temp.json",
     "relation_ledger": "reports/concept-card-relation-map/relation-decision-ledger.json",
@@ -14,7 +14,7 @@
     "plugin_validation": "reports/concept-card-relation-map/plugin-compat-validation.json"
   },
   "summary": {
-    "concept_cards_checked": 145,
+    "concept_cards_checked": 146,
     "top_level_up_edges": 37,
     "temp_map_taxonomy_edges": 37,
     "relation_writeback_dry_run_planned": 0,
@@ -22,8 +22,8 @@
     "taxonomy_post_apply_dry_run_ready": 0,
     "taxonomy_limited_apply_rows": 1,
     "taxonomy_placement_open_review": 0,
-    "taxonomy_placement_defer_boundary_review": 22,
-    "taxonomy_placement_deferred_with_backlog": 22,
+    "taxonomy_placement_defer_boundary_review": 24,
+    "taxonomy_placement_deferred_with_backlog": 24,
     "taxonomy_placement_open_writeback": 0,
     "relation_apply_rows_checked": 13,
     "taxonomy_apply_rows_checked": 1,

@@ -1,15 +1,15 @@
 # Concept Hierarchy Placement Candidates — Conservative candidate generation
 
-Generated: `2026-05-18T14:41:35Z`
+Generated: `2026-05-20T14:22:39Z`
 
 > Conservative candidate taxonomy only. These rows are **not** accepted taxonomy and must go through Candidate adjudication before any dry-run/writeback.
 
 ## Summary
 
-- deferred_rows_considered: 24
+- deferred_rows_considered: 26
 - approved_parent_count: 14
 - generated_candidates: 2
-- suppressed_signals: 22
+- suppressed_signals: 24
 - candidate_targets: `{"Agent Workflow": 2}`
 - adjudication_items: 2
 - open_writeback: 0
@@ -65,7 +65,9 @@ Generated: `2026-05-18T14:41:35Z`
 | [[Least Privilege Tools]] | [[Tool Use]] | policy_principle_not_tool_behavior | Least-privilege tooling constrains Tool Use, but the policy principle itself is not automatically a Tool Use subtype. |
 | [[MCP]] | [[Tool Use]] | protocol_not_tool_behavior | MCP standardizes tool/context connection; protocol/support is not a kind of Tool Use. |
 | [[MCP Registry]] | [[MCP]] | unapproved_parent | MCP Registry likely belongs near MCP, but MCP is not an approved parent in Conservative candidate generation. |
+| [[MCP Transport]] |  | no_conservative_approved_parent_signal | No conservative signal points to a Parent-whitelist review approved stable parent. |
 | [[Multi-Head Attention]] | [[Transformer]] | component_of_not_kind_of | Multi-Head Attention is a Transformer mechanism/component, not a kind of Transformer. |
+| [[NLP]] |  | no_conservative_approved_parent_signal | No conservative signal points to a Parent-whitelist review approved stable parent. |
 | [[Observation]] | [[Agent Workflow]] | loop_signal_not_workflow | Observation is an agent-loop feedback signal; being used inside workflows is not strict taxonomy. |
 | [[Obsidian + LLM Wiki]] | [[RAG]] | local_system_not_rag_subtype | The local wiki may use retrieval-like ideas, but the project/workflow artifact is not a kind of RAG. |
 | [[Oh My Codex (OMX)]] | [[Agent Framework]] | product_runtime_not_framework_subtype_without_review | OMX is a concrete Codex orchestration/runtime ecosystem; candidate generation must not classify it as Agent Framework without product-boundary review. |

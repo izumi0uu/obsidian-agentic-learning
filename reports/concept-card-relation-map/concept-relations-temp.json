@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
   "artifact_type": "temporary_concept_relationship_map",
-  "generated_at": "2026-05-18T14:41:35Z",
+  "generated_at": "2026-05-20T14:22:20Z",
   "scope": {
     "concept_dir": "agentic learning/wiki/concepts",
     "temporary": true,
     "write_policy": "Do not write these candidates into concept cards without a separate review task."
   },
   "summary": {
-    "total_concepts": 145,
+    "total_concepts": 146,
     "edge_counts": {
-      "related_link": 845,
-      "body_link": 268,
+      "related_link": 852,
+      "body_link": 270,
       "typed_relation": 53,
       "taxonomy": 37
     },
@@ -39,7 +39,7 @@
       "composed_into": 2,
       "foundational_for": 1
     },
-    "concepts_without_up": 108,
+    "concepts_without_up": 109,
     "core_orphans": 0,
     "weakly_connected_concepts": 1,
     "dangling_core_targets": 29,
@@ -1692,9 +1692,14 @@
       ],
       "status": "growing",
       "freshness": "stable",
-      "aliases": [],
-      "source_count": 1,
-      "evidence_count": 1,
+      "aliases": [
+        "Large Language Model",
+        "Large Language Models",
+        "大语言模型",
+        "大型语言模型"
+      ],
+      "source_count": 4,
+      "evidence_count": 4,
       "up": [],
       "related": [
         "Agent",
@@ -1936,12 +1941,14 @@
         "Model Context Protocol",
         "模型上下文协议"
       ],
-      "source_count": 3,
-      "evidence_count": 3,
+      "source_count": 6,
+      "evidence_count": 6,
       "up": [],
       "related": [
         "Tool Calling",
         "Tool Registry",
+        "MCP Transport",
+        "Prompt",
         "A2A",
         "ANP",
         "A2A MCP ANP 对比",
@@ -1968,6 +1975,41 @@
         "Tool Registry",
         "Tool Poisoning",
         "Least Privilege Tools"
+      ]
+    },
+    {
+      "id": "MCP Transport",
+      "title": "MCP Transport",
+      "file": "agentic learning/wiki/concepts/MCP Transport.md",
+      "topics": [
+        "agent",
+        "tools",
+        "protocol",
+        "infrastructure"
+      ],
+      "status": "growing",
+      "freshness": "watch",
+      "aliases": [
+        "MCP Transports",
+        "MCP 传输",
+        "MCP 传输层",
+        "MCP 通信方式",
+        "MCP Stdio Transport",
+        "MCP Streamable HTTP Transport",
+        "MCP SSE Transport",
+        "Stdio Transport",
+        "Streamable HTTP Transport",
+        "HTTP+SSE Transport"
+      ],
+      "source_count": 5,
+      "evidence_count": 6,
+      "up": [],
+      "related": [
+        "MCP",
+        "Tool Calling",
+        "Tool Registry",
+        "Tool Permissioning",
+        "MCP Registry"
       ]
     },
     {
@@ -2172,7 +2214,7 @@
         "llm",
         "nlp"
       ],
-      "status": "seed",
+      "status": "growing",
       "freshness": "stable",
       "aliases": [
         "Natural Language Processing",
@@ -9131,7 +9173,27 @@
     },
     {
       "source": "LLM",
+      "target": "NLP",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "LLM",
       "target": "Self-Attention",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "LLM",
+      "target": "Token",
       "kind": "body_link",
       "relation_type": "body_wikilink",
       "confidence": "observed",
@@ -9971,6 +10033,26 @@
     },
     {
       "source": "MCP",
+      "target": "MCP Transport",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MCP",
+      "target": "Prompt",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MCP",
       "target": "Tool Calling",
       "kind": "related_link",
       "relation_type": "related",
@@ -10071,6 +10153,56 @@
     },
     {
       "source": "MCP Registry",
+      "target": "Tool Registry",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MCP Transport",
+      "target": "MCP",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MCP Transport",
+      "target": "MCP Registry",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MCP Transport",
+      "target": "Tool Calling",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MCP Transport",
+      "target": "Tool Permissioning",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MCP Transport",
       "target": "Tool Registry",
       "kind": "related_link",
       "relation_type": "related",
@@ -16709,6 +16841,7 @@
       "Long-Horizon Context Engineering",
       "MCP",
       "MCP Registry",
+      "MCP Transport",
       "Memory",
       "Multi-Head Attention",
       "NLP",

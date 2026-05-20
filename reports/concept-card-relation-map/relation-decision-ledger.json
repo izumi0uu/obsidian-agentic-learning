@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "concept_relation_decision_ledger",
-  "generated_at": "2026-05-18T14:41:00Z",
+  "generated_at": "2026-05-20T14:22:27Z",
   "input_map": "reports/concept-card-relation-map/concept-relations-pre-writeback.json",
   "current_map_at_decision_time": "reports/concept-card-relation-map/concept-relations-temp.json",
   "summary": {

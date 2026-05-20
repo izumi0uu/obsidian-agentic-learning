@@ -8,16 +8,18 @@ topic:
   - feynman
 status: active
 created: 2026-05-19
-updated: 2026-05-19
+updated: 2026-05-20
 source:
   - "[[MCP]]"
   - "[[Tool Calling]]"
   - "[[Tool 接口层对比]]"
+  - "[[MCP Transport]]"
   - "[[Model Context Protocol 官方文档]]"
   - "[[OpenAI Function Calling 文档]]"
 related:
   - "[[reviews/复习记录索引]]"
   - "[[MCP]]"
+  - "[[MCP Transport]]"
   - "[[Tool Calling]]"
   - "[[Tool 接口层对比]]"
   - "[[Tool Registry]]"
@@ -292,7 +294,7 @@ MCP 是 AI 应用连接外部工具、数据源和提示模板的标准协议。
 
 角色分工上，host 是 AI 应用本身，承载模型、用户界面、权限策略和编排逻辑；client 是 host 里的协议连接模块，一个 client 通常对应一个 server 连接，负责能力发现和调用转发；server 是外部能力提供方，负责暴露 tools/resources/prompts，并真正执行读文件、查库、调用 API 等动作。
 
-MCP 和 [[Tool Calling|Function Calling]] 不在同一层。Function Calling / Tool Calling 描述模型如何输出结构化调用意图；MCP 描述应用如何连接外部 server、发现能力、传输请求和接收结果。现代 Agent 往往把两者接起来：host 把 MCP server 暴露的能力映射成模型可见工具，模型输出 tool call，host 经过权限判断后通过 MCP client 调 MCP server。
+MCP 和 [[Tool Calling|Function Calling]] 不在同一层。Function Calling / Tool Calling 描述模型如何输出结构化调用意图；MCP 描述应用如何连接外部 server、发现能力、通过 [[MCP Transport]] 传输请求并接收结果。现代 Agent 往往把两者接起来：host 把 MCP server 暴露的能力映射成模型可见工具，模型输出 tool call，host 经过权限判断后通过 MCP client 调 MCP server。
 
 最小对比句可以背成：Function Calling 是“模型到 runtime 的结构化请求格式”，MCP 是“host/client 到外部 server 的标准连接协议”。前者不自动解决工具从哪里来、是否可信、是否越权；后者不替代模型原生的 tool-call 能力，最终仍要把 server 能力映射成模型能理解的调用接口。
 

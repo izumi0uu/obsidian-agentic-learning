@@ -4,15 +4,15 @@
   "total_question_pages_scanned": 779,
   "total_pages_scanned": 779,
   "pages_with_related_section": 779,
-  "would_modify_pages": 30,
+  "would_modify_pages": 34,
   "modified_pages": 0,
-  "inline_links_inserted": 37,
-  "proposed_inline_links": 37,
+  "inline_links_inserted": 41,
+  "proposed_inline_links": 41,
   "applied_inline_links": 0,
   "already_linked_pages": 362,
   "already_linked_targets": 941,
-  "skipped_no_match_pages": 412,
-  "unsafe_region_skips": 4014,
+  "skipped_no_match_pages": 411,
+  "unsafe_region_skips": 4024,
   "protected_region_violations": 0,
   "request_meta_page_hits": [],
   "missing_concept_candidates": 0,
@@ -22,12 +22,12 @@
     "xiaolinnote": {
       "total": 142,
       "with_related_section": 142,
-      "would_modify_pages": 10,
+      "would_modify_pages": 14,
       "modified_pages": 0,
-      "proposed_inline_links": 12,
+      "proposed_inline_links": 16,
       "applied_inline_links": 0,
       "already_linked_pages": 81,
-      "skipped_no_match_pages": 61
+      "skipped_no_match_pages": 60
     },
     "agent_java_offer": {
       "total": 637,
@@ -51,8 +51,8 @@
     "agentic learning/raw/repos/agent_java_offer/questions/407 02_后端 10_网络I_O与发布治理 Netty 如何体现 Reactor 模型？.md",
     "agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md",
     "agentic learning/raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md",
-    "agentic learning/raw/repos/xiaolinnote/questions/060 ai tools 9. Skill 是什么？.md",
-    "agentic learning/raw/repos/xiaolinnote/questions/123 ai llm 20. 大模型部署有哪些主流方案？vLLM、TGI、llama.cpp、SGLang 实际项目里怎么选？.md"
+    "agentic learning/raw/repos/xiaolinnote/questions/048 ai tools 13. MCP 协议通常采用什么通信方式？.md",
+    "agentic learning/raw/repos/xiaolinnote/questions/049 ai tools 14. 说说 WebSocket 和 SSE 通信的区别及局限性？.md"
   ],
   "missing_targets": {},
   "pages": [
@@ -1595,18 +1595,30 @@
       "root": "xiaolinnote",
       "has_related_section": true,
       "related_targets": [
-        "MCP"
+        "MCP",
+        "MCP Transport"
       ],
       "existing_targets": [
-        "MCP"
+        "MCP",
+        "MCP Transport"
       ],
       "missing_targets": [],
       "already_linked_targets": [
         "MCP"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "MCP Transport",
+          "alias": "Streamable HTTP",
+          "start": 1478,
+          "end": 1493,
+          "replacement": "[[MCP Transport|Streamable HTTP]]",
+          "line": 65,
+          "context": "p 接本地工具走的就是这种方式。  远程场景现在推荐用 Streamable HTTP，Server 作为独立的 HTTP 服务部署，多个 C"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 0,
+      "unsafe_region_skips": 4,
       "unmatched_existing_targets": [],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -1615,16 +1627,30 @@
       "path": "agentic learning/raw/repos/xiaolinnote/questions/049 ai tools 14. 说说 WebSocket 和 SSE 通信的区别及局限性？.md",
       "root": "xiaolinnote",
       "has_related_section": true,
-      "related_targets": [],
-      "existing_targets": [],
+      "related_targets": [
+        "MCP Transport"
+      ],
+      "existing_targets": [
+        "MCP Transport"
+      ],
       "missing_targets": [],
       "already_linked_targets": [],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "MCP Transport",
+          "alias": "Streamable HTTP",
+          "start": 6468,
+          "end": 6483,
+          "replacement": "[[MCP Transport|Streamable HTTP]]",
+          "line": 163,
+          "context": "P 在 2025 年 3 月的规范更新里进一步升级到了 Streamable HTTP，本质上还是走 HTTP + SSE 流，详见 13 题"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 0,
+      "unsafe_region_skips": 2,
       "unmatched_existing_targets": [],
       "request_meta_hits": [],
-      "no_match_reason": "no body concept links found"
+      "no_match_reason": null
     },
     {
       "path": "agentic learning/raw/repos/xiaolinnote/questions/050 ai tools 15. 为什么要用 WebRTC 协议？它和 WebSocket（WS）在 AI 对话流中的核心差异是什么？.md",
@@ -1756,11 +1782,13 @@
       "has_related_section": true,
       "related_targets": [
         "MCP",
+        "MCP Transport",
         "Tool Registry",
         "MCP Registry"
       ],
       "existing_targets": [
         "MCP",
+        "MCP Transport",
         "Tool Registry",
         "MCP Registry"
       ],
@@ -1768,9 +1796,19 @@
       "already_linked_targets": [
         "MCP"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "MCP Transport",
+          "alias": "Streamable HTTP",
+          "start": 5087,
+          "end": 5102,
+          "replacement": "[[MCP Transport|Streamable HTTP]]",
+          "line": 129,
+          "context": "CP Server 用的就是这种方式。  第二种是 **Streamable HTTP**，Server 作为 HTTP 服务部署在远程，Cl"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 4,
+      "unsafe_region_skips": 6,
       "unmatched_existing_targets": [
         "Tool Registry",
         "MCP Registry"
@@ -1784,11 +1822,13 @@
       "has_related_section": true,
       "related_targets": [
         "MCP",
+        "MCP Transport",
         "MCP Registry",
         "Tool Registry"
       ],
       "existing_targets": [
         "MCP",
+        "MCP Transport",
         "MCP Registry",
         "Tool Registry"
       ],
@@ -1796,9 +1836,19 @@
       "already_linked_targets": [
         "MCP"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "MCP Transport",
+          "alias": "Streamable HTTP",
+          "start": 1801,
+          "end": 1816,
+          "replacement": "[[MCP Transport|Streamable HTTP]]",
+          "line": 71,
+          "context": "2.0，传输方式支持 stdio（本地子进程通信）和 Streamable HTTP（远程 HTTP 连接）两种，早期的 HTTP+SSE"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 4,
+      "unsafe_region_skips": 6,
       "unmatched_existing_targets": [
         "MCP Registry",
         "Tool Registry"

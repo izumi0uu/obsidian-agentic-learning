@@ -1,13 +1,13 @@
 # Taxonomy Tooling Control-Surface Sync
 
-Generated: `2026-05-20T12:34:43Z`
+Generated: `2026-05-20T14:23:19Z`
 
 ## Summary
 
 - required_surfaces_total: `8`
 - required_surfaces_synced: `8`
 - taxonomy_open_review_remaining: `0`
-- taxonomy_defer_boundary_review_remaining: `22`
+- taxonomy_defer_boundary_review_remaining: `24`
 - taxonomy_open_writeback: `0`
 - plugin_contract_problems: `0`
 - plugin_problems: `0`

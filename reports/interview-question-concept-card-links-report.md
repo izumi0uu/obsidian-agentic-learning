@@ -4,10 +4,10 @@
 - 扫描题页：779
 - 含 `## 相关知识 wiki`：779
 - 已有正文概念链接页：362
-- 本次可新增/已新增链接：37
-- would modify pages：30
-- skipped/no-match pages：412
-- unsafe-region skips：4014
+- 本次可新增/已新增链接：41
+- would modify pages：34
+- skipped/no-match pages：411
+- unsafe-region skips：4024
 - missing concept candidates：0（unique 0）
 - protected-region violations：0
 
@@ -15,7 +15,7 @@
 
 | root | total | related | already-linked pages | would-modify pages | proposed links | skipped/no-match |
 |---|---:|---:|---:|---:|---:|---:|
-| xiaolinnote | 142 | 142 | 81 | 10 | 12 | 61 |
+| xiaolinnote | 142 | 142 | 81 | 14 | 16 | 60 |
 | agent_java_offer | 637 | 637 | 281 | 20 | 25 | 351 |
 
 ## Sample files selected
@@ -30,8 +30,8 @@
 - agentic learning/raw/repos/agent_java_offer/questions/407 02_后端 10_网络I_O与发布治理 Netty 如何体现 Reactor 模型？.md
 - agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md
 - agentic learning/raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md
-- agentic learning/raw/repos/xiaolinnote/questions/060 ai tools 9. Skill 是什么？.md
-- agentic learning/raw/repos/xiaolinnote/questions/123 ai llm 20. 大模型部署有哪些主流方案？vLLM、TGI、llama.cpp、SGLang 实际项目里怎么选？.md
+- agentic learning/raw/repos/xiaolinnote/questions/048 ai tools 13. MCP 协议通常采用什么通信方式？.md
+- agentic learning/raw/repos/xiaolinnote/questions/049 ai tools 14. 说说 WebSocket 和 SSE 通信的区别及局限性？.md
 
 ## Missing targets
 
@@ -42,7 +42,6 @@
 - agentic learning/raw/repos/xiaolinnote/questions/019 ai langchian LangChain框架面试题介绍.md — no safe alias match
 - agentic learning/raw/repos/xiaolinnote/questions/020 ai langchian 05｜ LangChain框架面试题.md — no safe alias match
 - agentic learning/raw/repos/xiaolinnote/questions/030 ai rag 17. 如何规避 RAG 系统中大模型的幻觉？.md — no safe alias match
-- agentic learning/raw/repos/xiaolinnote/questions/049 ai tools 14. 说说 WebSocket 和 SSE 通信的区别及局限性？.md — no body concept links found
 - agentic learning/raw/repos/xiaolinnote/questions/050 ai tools 15. 为什么要用 WebRTC 协议？它和 WebSocket（WS）在 AI 对话流中的核心差异是什么？.md — no body concept links found
 - agentic learning/raw/repos/xiaolinnote/questions/064 git 01｜为什么要学 Git？.md — no body concept links found
 - agentic learning/raw/repos/xiaolinnote/questions/065 git 02｜准备工作：5 分钟搞定 Git 安装与配置.md — no body concept links found
@@ -119,7 +118,8 @@
 - agentic learning/raw/repos/agent_java_offer/questions/092 01_AI 03_RAG 没有索引快照时如何止损？.md — no safe alias match
 - agentic learning/raw/repos/agent_java_offer/questions/093 01_AI 03_RAG 如何做检索质量回归测试？.md — no safe alias match
 - agentic learning/raw/repos/agent_java_offer/questions/099 01_AI 03_RAG 知识库的实时更新： 如何高效地保持向量索引与源数据的同步？当源文档被修改或删除时，需要有可靠的机制来更新或废弃对应的向量，这涉及到复杂的ETL（Extract, Trans a58e85.md — no safe alias match
-- ... 其余 332 条见 JSON 报告。
+- agentic learning/raw/repos/agent_java_offer/questions/120 01_AI 04_上下文工程与记忆 什么时候必须进入微调阶段？.md — no safe alias match
+- ... 其余 331 条见 JSON 报告。
 
 ## Proposed/applied links（前 80 条）
 
@@ -127,6 +127,10 @@
 - agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md:64 — `Step-back Prompting` -> `[[Step-back Prompting]]`
 - agentic learning/raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md:155 — `HyDE` -> `[[HyDE]]`
 - agentic learning/raw/repos/xiaolinnote/questions/045 ai tools 10. MCP 和 Agent Skill 的区别是什么？.md:106 — `渐进式加载` -> `[[Progressive Disclosure]]`
+- agentic learning/raw/repos/xiaolinnote/questions/048 ai tools 13. MCP 协议通常采用什么通信方式？.md:65 — `Streamable HTTP` -> `[[MCP Transport]]`
+- agentic learning/raw/repos/xiaolinnote/questions/049 ai tools 14. 说说 WebSocket 和 SSE 通信的区别及局限性？.md:163 — `Streamable HTTP` -> `[[MCP Transport]]`
+- agentic learning/raw/repos/xiaolinnote/questions/055 ai tools 4. 什么是 MCP（模型上下文协议）？讲讲它的核心内容？.md:129 — `Streamable HTTP` -> `[[MCP Transport]]`
+- agentic learning/raw/repos/xiaolinnote/questions/056 ai tools 5. MCP 由哪几部分组成？.md:71 — `Streamable HTTP` -> `[[MCP Transport]]`
 - agentic learning/raw/repos/xiaolinnote/questions/060 ai tools 9. Skill 是什么？.md:134 — `渐进式加载` -> `[[Progressive Disclosure]]`
 - agentic learning/raw/repos/xiaolinnote/questions/123 ai llm 20. 大模型部署有哪些主流方案？vLLM、TGI、llama.cpp、SGLang 实际项目里怎么选？.md:53 — `KV Cache` -> `[[KV Cache]]`
 - agentic learning/raw/repos/xiaolinnote/questions/128 ai llm 14. KV Cache 是什么？Prompt Caching 的原理是什么？.md:25 — `KV Cache` -> `[[KV Cache]]`

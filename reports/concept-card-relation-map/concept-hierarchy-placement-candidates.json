@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "taxonomy_placement_candidates",
-  "generated_at": "2026-05-18T14:41:35Z",
+  "generated_at": "2026-05-20T14:22:39Z",
   "input_review": "reports/concept-card-relation-map/concept-hierarchy-placement-review.json",
   "classification_stage": "conservative_candidates",
   "policy": {
@@ -34,10 +34,10 @@
     "write_policy": "No writeback in Conservative candidate generation. Candidates feed Candidate adjudication only."
   },
   "summary": {
-    "deferred_rows_considered": 24,
+    "deferred_rows_considered": 26,
     "approved_parent_count": 14,
     "generated_candidates": 2,
-    "suppressed_signals": 22,
+    "suppressed_signals": 24,
     "candidate_targets": {
       "Agent Workflow": 2
     },
@@ -199,12 +199,30 @@
       "writeback_action": "none"
     },
     {
+      "source": "MCP Transport",
+      "source_path": "agentic learning/wiki/concepts/MCP Transport.md",
+      "target": null,
+      "signal_type": "no_conservative_approved_parent_signal",
+      "status": "suppressed_not_candidate",
+      "reason": "No conservative signal points to a Parent-whitelist review approved stable parent.",
+      "writeback_action": "none"
+    },
+    {
       "source": "Multi-Head Attention",
       "source_path": "agentic learning/wiki/concepts/Multi-Head Attention.md",
       "target": "Transformer",
       "signal_type": "component_of_not_kind_of",
       "status": "suppressed_not_candidate",
       "reason": "Multi-Head Attention is a Transformer mechanism/component, not a kind of Transformer.",
+      "writeback_action": "none"
+    },
+    {
+      "source": "NLP",
+      "source_path": "agentic learning/wiki/concepts/NLP.md",
+      "target": null,
+      "signal_type": "no_conservative_approved_parent_signal",
+      "status": "suppressed_not_candidate",
+      "reason": "No conservative signal points to a Parent-whitelist review approved stable parent.",
       "writeback_action": "none"
     },
     {
