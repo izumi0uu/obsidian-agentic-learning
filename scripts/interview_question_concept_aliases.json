@@ -39,7 +39,7 @@
   "Knowledge Graph": ["Knowledge Graph", "知识图谱"],
   "KV Cache": ["KV Cache", "KV cache", "Key-Value Cache", "Key Value Cache", "K/V Cache", "K/V cache", "KV 缓存", "键值缓存"],
   "Least Privilege Tools": ["Least Privilege Tools", "最小权限工具", "最小权限"],
-  "LLM": ["LLM", "大模型", "大型语言模型"],
+  "LLM": ["LLM", "Large Language Model", "Large Language Models", "大模型", "大语言模型", "大型语言模型"],
   "LLM Gateway": ["LLM Gateway", "模型网关", "LLM 网关"],
   "LLM Training Pipeline": ["LLM Training Pipeline", "训练流水线", "大模型训练流水线"],
   "LLM-as-Judge": ["LLM-as-Judge", "LLM as Judge", "模型裁判", "大模型裁判"],

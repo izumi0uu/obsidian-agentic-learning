@@ -1342,3 +1342,40 @@ related:
 - Integrated the 2026-05-15 arXiv batch into the global route: SaaS-Bench / Context, Reasoning, and Hierarchy / TopoClaw moved into P1-A; Argus / DimMem / FORGE moved into P1-B; Block Attention moved into P1-C; RAG fairness, domain benchmark, runtime compliance, multi-agent, SGR, and RLVR/system-training papers remain P2/P3 unless their topic becomes active.
 - Updated [[03 前沿追踪#2026-05-15 arXiv Agent / RAG / Evaluation 论文批次]] with the route writeback boundary.
 - Boundary: this is reading-route maintenance, not concept creation. Frontier paper titles remain source-level until 精读 establishes reusable concept boundaries and evidence anchors.
+
+## [2026-05-19] query-writeback | RAG market visibility before Agent
+
+- Added pending queue item to [[05 Query 写回队列]] for the boundary question: why RAG felt less visible in market / daily-life products before Agent-style systems.
+- Target pages: [[RAG]], [[Agentic RAG]], [[RAG 主题]].
+- Boundary: this is a durable query synthesis, not a new concept card. The key distinction is that pre-Agent RAG already existed in enterprise search, knowledge-base QA, and document retrieval, but Agent systems made it visible by connecting retrieval to goals, tools, state, workflow, evaluation, and action loops.
+
+## [2026-05-19] concept-update | MCP core capability boundary
+
+- Updated [[MCP]] with the Tools / Resources / Prompts capability split and the client-server call sequence: establish connection, discover capabilities, call tool, return result, and continue using the server.
+- Terminology: Tools are active operations, Resources are passive data exposure, and Prompts are reusable guidance templates. They are related MCP server capabilities, not aliases of one another and not all safely reducible to “tools”.
+- Evidence: linked the update to [[055 ai tools 4. 什么是 MCP（模型上下文协议）？讲讲它的核心内容？]] and [[056 ai tools 5. MCP 由哪几部分组成？]] while keeping the existing official-doc and security evidence anchors.
+- Diagram: added a Mermaid learning-diagram transcription of the user-provided MCP client / filesystem server sequence to [[MCP#调用流程图（学习图）]]; marked it as learning diagram / engineering analogy, not official source evidence.
+- Role boundary: added [[MCP#Host / Client / Server 角色分工]] to separate host as model/UI/policy holder, client as one-server protocol connector, and server as external capability provider/executor; reinforced that MCP server is not an Agent or model.
+- Tool selection: added [[MCP#工具选择流程]] to explain discovery, model-visible schema construction, LLM tool-call intent, host-side checks, MCP server execution, and result integration; clarified that tool descriptions influence model selection and are part of the tool-poisoning risk surface.
+- Boundary: simple content work; no new concept cards, no alias-map change, and no taxonomy `up` writeback.
+
+## [2026-05-19] review | MCP concept-triggered review
+
+- Created and updated [[05 MCP 概念触发式复习]] to check host / client / server role separation, MCP client as protocol connection module, Tools / Resources / Prompts boundaries, MCP vs [[Tool Calling|Function Calling]], tool selection flow, and permission / approval / audit thinking.
+- Added Tool Calling / Function Calling follow-up questions for the two-turn tool-call loop, schema field effects, and the boundary between structured call requests and runtime governance.
+- Added [[Tool 接口层对比]] follow-up questions for Tool Use / Tool Calling / Tool Registry / Tool Permissioning / MCP / MCP Registry layer separation and “Function Calling only vs introduce MCP” scenarios.
+- Added [[Tool Calling]] and [[Tool 接口层对比]] as explicit review anchors so Function Calling is studied as the model-to-runtime structured request layer, while MCP remains the host/client/server connection protocol layer.
+- Updated [[复习记录索引]] with the new review entry.
+- Boundary: review note only; no concept-card schema, alias-map, taxonomy, or source evidence changes.
+
+## [2026-05-20] concept-update | NLP and LLM algorithm boundary
+
+- Updated [[NLP]] to make the reusable boundary explicit: NLP is a natural-language task domain and method/algorithm collection, not one fixed algorithm or a synonym for LLM.
+- Updated [[LLM]] with the two-level algorithm boundary: as a black box it can be viewed as a large autoregressive probability function; internally it combines tokenization, Transformer/attention computation, normalization/activation, cache/runtime concerns, and decoding/sampling strategies.
+- Filtered out AWS-Thrive / clinical-service implementation details; only the general NLP / LLM concept boundary was written into durable wiki pages.
+- Terminology: `LLM`, `Large Language Model`, `Large Language Models`, `大语言模型`, and `大型语言模型` are treated as the same concept. `大模型` remains in the interview alias map because existing interview material uses it that way, but the concept card keeps the narrower language-model aliases in frontmatter.
+- Updated `scripts/interview_question_concept_aliases.json` so interview auto-linking can recognize `Large Language Model`, `Large Language Models`, and `大语言模型`.
+- Mention sweep: searched NLP / Natural Language Processing / 自然语言处理 / LLM / Large Language Model(s) / 大语言模型 / 大型语言模型 across wiki, raw, maps, backlog, and alias map. Existing raw/source hits already had related wiki anchors or were title/reference occurrences; no raw quotations were rewritten.
+- Taxonomy: no `up` or `relations` writeback. [[NLP]] remains a foundation/domain card without a safe parent; [[LLM]] remains a foundation model card.
+- Control surfaces: updated concept cards, alias map, and log only. Did not update AGENTS.md, [[LLM Wiki 工作流]], [[字段规范]], templates, or taxonomy reports because no workflow/schema/relationship rule changed.
+- Validation: alias JSON parse PASS; interview link self-test PASS; interview dry-run scanned 779 pages and would modify 30 with 37 inline links / 0 missing candidates / 0 protected violations; concept-card audit PASS with 145 cards / needs action 0; request-meta audit PASS with 1172 files / 0 hits; `git diff --check` PASS.

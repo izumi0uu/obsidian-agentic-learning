@@ -5,7 +5,7 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-07
-updated: 2026-05-18
+updated: 2026-05-19
 related:
   - "[[LLM Wiki 工作流]]"
   - "[[02 问题池]]"
@@ -48,6 +48,7 @@ related:
 | 2026-05-17 | done | “LLM 的上下文受什么限制，未来突破需要什么因素？” | [[LLM 上下文限制与突破条件]], [[Context Window]], [[Context Engineering]] | 已创建小型 topic 页：把上下文限制拆成容量、计算、结构、有效使用和治理五层；结论是长上下文突破需要模型、推理系统和外部上下文工程共同进步。 |
 | 2026-05-17 | done | “KV Cache 在 LLM 推理中解决什么问题，相关论文如何定位 MQA / GQA / PagedAttention / FlashAttention？” | [[KV Cache]], [[LLM 上下文限制与突破条件]], [[资料收集索引]] | 已创建 [[KV Cache]] 概念卡和 4 篇 paper source note；边界：MQA/GQA 是 attention 结构层减少 K/V 份数，PagedAttention 是 KV cache 内存管理，FlashAttention 是 attention IO 实现优化，不把它们强行建成弱概念卡。 |
 | 2026-05-18 | done | “Agent 鲁棒性 / Agent Robustness 的边界是什么？” | [[Agent Robustness]], [[Task Success Rate]], [[Evaluation]], [[Evaluation 层次对比]], `scripts/interview_question_concept_aliases.json` | 已创建 [[Agent Robustness]] 概念卡；边界写明它是扰动条件下的系统级稳定性和恢复能力，不等于通用可靠性、安全性、evaluation 或 task success rate，也不把裸 `鲁棒性 / Robustness` 自动当 alias。 |
+| 2026-05-19 | pending | “为什么在 Agent 出来之前，RAG 概念并没有明显进入市场和日常生活？” | [[RAG]], [[Agentic RAG]], [[RAG 主题]] | 待写回：校正“RAG 没应用”的前提；RAG 在 Agent 前已用于企业搜索、知识库问答和文档检索，但它更像后台信息管道。Agent 把 RAG 接到目标、工具、状态、workflow、评估和行动闭环里，才让普通用户感知为可交付的 AI 产品能力。 |
 
 ## 写回模板
 
