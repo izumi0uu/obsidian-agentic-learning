@@ -8,20 +8,20 @@ extracted: extracted/BioXArena - Benchmarking LLM Agents on Multi-Modal Biomedic
 arxiv: https://arxiv.org/abs/2605.15766
 doi: 10.48550/arXiv.2605.15766
 author:
-  - "Loka Li"
-  - "Duzhen Zhang"
-  - "Xingbo Du"
-  - "Leonard Song"
-  - "Zixiao Wang"
-  - "Assanali Aukenov"
-  - "Noel Thomas"
-  - "Shakhnazar Sailaukan"
-  - "Yonghan Yang"
-  - "Feilong Chen"
-  - "Jiahua Dong"
-  - "Kun Zhang"
-  - "Bin Zhang"
-  - "Le Song"
+  - Loka Li
+  - Duzhen Zhang
+  - Xingbo Du
+  - Leonard Song
+  - Zixiao Wang
+  - Assanali Aukenov
+  - Noel Thomas
+  - Shakhnazar Sailaukan
+  - Yonghan Yang
+  - Feilong Chen
+  - Jiahua Dong
+  - Kun Zhang
+  - Bin Zhang
+  - Le Song
 site: arXiv
 venue: arXiv 2026
 pages:

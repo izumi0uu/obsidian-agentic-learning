@@ -1,21 +1,21 @@
 ---
 type: source
 source_type: paper
-title: "Towards Generalization of Block Attention via Automatic Segmentation and Block Distillation"
+title: Towards Generalization of Block Attention via Automatic Segmentation and Block Distillation
 url: https://arxiv.org/abs/2605.15913
 pdf: assets/Towards Generalization of Block Attention via Automatic Segmentation and Block Distillation.pdf
 extracted: extracted/Towards Generalization of Block Attention via Automatic Segmentation and Block Distillation.extracted.md
 arxiv: https://arxiv.org/abs/2605.15913
 doi: 10.48550/arXiv.2605.15913
 author:
-  - "Shuaiyi Li"
-  - "Zhisong Zhang"
-  - "Yan Wang"
-  - "Lei Zhu"
-  - "Dongyang Ma"
-  - "Chenlong Deng"
-  - "Yang Deng"
-  - "Wai Lam"
+  - Shuaiyi Li
+  - Zhisong Zhang
+  - Yan Wang
+  - Lei Zhu
+  - Dongyang Ma
+  - Chenlong Deng
+  - Yang Deng
+  - Wai Lam
 site: arXiv
 venue: arXiv 2026
 pages:

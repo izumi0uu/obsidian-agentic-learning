@@ -8,12 +8,12 @@ extracted: extracted/Context, Reasoning, and Hierarchy - A Cost-Performance Stud
 arxiv: https://arxiv.org/abs/2605.16205
 doi: 10.48550/arXiv.2605.16205
 author:
-  - "Igor Bogdanov"
-  - "Chung-Horng Lung"
-  - "Thomas Kunz"
-  - "Jie Gao"
-  - "Adrian Taylor"
-  - "Marzia Zaman"
+  - Igor Bogdanov
+  - Chung-Horng Lung
+  - Thomas Kunz
+  - Jie Gao
+  - Adrian Taylor
+  - Marzia Zaman
 site: arXiv
 venue: arXiv 2026
 pages:

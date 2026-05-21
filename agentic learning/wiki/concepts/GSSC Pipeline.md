@@ -37,10 +37,10 @@ related:
 relations:
   - type: pattern_for
     target: "[[Context Engineering]]"
-    note: "把上下文构建拆成 gather、select、structure、compress 四个工程阶段。"
+    note: 把上下文构建拆成 gather、select、structure、compress 四个工程阶段。
   - type: composes_with
     target: "[[Progressive Disclosure]]"
-    note: "两者都服务按需控制上下文；GSSC 是构建流水线，Progressive Disclosure 是信息暴露策略。"
+    note: 两者都服务按需控制上下文；GSSC 是构建流水线，Progressive Disclosure 是信息暴露策略。
 ---
 
 # GSSC Pipeline

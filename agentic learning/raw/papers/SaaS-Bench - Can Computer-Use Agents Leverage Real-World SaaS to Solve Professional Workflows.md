@@ -8,22 +8,22 @@ extracted: extracted/SaaS-Bench - Can Computer-Use Agents Leverage Real-World Sa
 arxiv: https://arxiv.org/abs/2605.15777
 doi: 10.48550/arXiv.2605.15777
 author:
-  - "Kean Shi"
-  - "Zihang Li"
-  - "Tianyi Ma"
-  - "Zengji Tu"
-  - "Jialong Wu"
-  - "Xinbo Xu"
-  - "Qingyao Yang"
-  - "Ruoyu Wu"
-  - "Weichu Xie"
-  - "Ming Wu"
-  - "Jason Zeng"
-  - "Michael Heinrich"
-  - "Elvis Zhang"
-  - "Liang Chen"
-  - "Kuan Li"
-  - "Baobao Chang"
+  - Kean Shi
+  - Zihang Li
+  - Tianyi Ma
+  - Zengji Tu
+  - Jialong Wu
+  - Xinbo Xu
+  - Qingyao Yang
+  - Ruoyu Wu
+  - Weichu Xie
+  - Ming Wu
+  - Jason Zeng
+  - Michael Heinrich
+  - Elvis Zhang
+  - Liang Chen
+  - Kuan Li
+  - Baobao Chang
 site: arXiv
 venue: arXiv 2026
 pages:

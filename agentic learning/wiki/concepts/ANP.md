@@ -32,13 +32,13 @@ related:
 relations:
   - type: contrasts_with
     target: "[[A2A]]"
-    note: "A2A 更聚焦 Agent-to-Agent 任务协作和状态/消息/artifact；ANP 更强调 Agent 网络身份、发现、描述和通信协商。"
+    note: A2A 更聚焦 Agent-to-Agent 任务协作和状态/消息/artifact；ANP 更强调 Agent 网络身份、发现、描述和通信协商。
   - type: contrasts_with
     target: "[[MCP]]"
-    note: "MCP 连接 AI 应用与工具/资源/context server；ANP 连接网络中的 Agent 身份和通信入口。"
+    note: MCP 连接 AI 应用与工具/资源/context server；ANP 连接网络中的 Agent 身份和通信入口。
   - type: related_to
     target: "[[MCP Registry]]"
-    note: "两者都涉及发现与生态分发，但 MCP Registry 面向 MCP server；ANP discovery 面向 Agent identity/description。"
+    note: 两者都涉及发现与生态分发，但 MCP Registry 面向 MCP server；ANP discovery 面向 Agent identity/description。
 ---
 
 # ANP

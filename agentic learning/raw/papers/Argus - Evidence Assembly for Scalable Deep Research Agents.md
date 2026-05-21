@@ -8,16 +8,16 @@ extracted: extracted/Argus - Evidence Assembly for Scalable Deep Research Agents
 arxiv: https://arxiv.org/abs/2605.16217
 doi: 10.48550/arXiv.2605.16217
 author:
-  - "Zhen Zhang"
-  - "Liangcai Su"
-  - "Zhuo Chen"
-  - "Xiang Lin"
-  - "Haotian Xu"
-  - "Simon Shaolei Du"
-  - "Kaiyu Yang"
-  - "Bo An"
-  - "Lidong Bing"
-  - "Xinyu Wang"
+  - Zhen Zhang
+  - Liangcai Su
+  - Zhuo Chen
+  - Xiang Lin
+  - Haotian Xu
+  - Simon Shaolei Du
+  - Kaiyu Yang
+  - Bo An
+  - Lidong Bing
+  - Xinyu Wang
 site: arXiv
 venue: arXiv 2026
 pages:

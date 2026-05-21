@@ -8,12 +8,12 @@ extracted: extracted/Confirming Correct, Missing the Rest - LLM Tutoring Agents 
 arxiv: https://arxiv.org/abs/2605.16207
 doi: 10.48550/arXiv.2605.16207
 author:
-  - "Tahreem Yasir"
-  - "Wenbo Li"
-  - "Sam Gilson"
-  - "Sutapa Dey Tithi"
-  - "Xiaoyi Tian"
-  - "Tiffany Barnes"
+  - Tahreem Yasir
+  - Wenbo Li
+  - Sam Gilson
+  - Sutapa Dey Tithi
+  - Xiaoyi Tian
+  - Tiffany Barnes
 site: arXiv
 venue: arXiv 2026
 pages:

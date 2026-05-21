@@ -77,13 +77,14 @@ LLM 地基：
 - [[Agent Workflow]]：理解框架如何把任务组织成步骤、分支、循环和交接。
 - [[GSSC Pipeline]]：把上下文构建拆成收集、选择、结构化和压缩四步，理解 Context Engineering 如何落到可调试流水线。
 - [[Progressive Disclosure]]：理解 skill、tool docs、repo context 和资源文件为什么要按需分层加载，而不是一开始全部塞进上下文。
+- [[Agent Skills]]：理解流程、脚本、模板和参考资料如何被打包成按需加载的 Agent 能力包。
 - [[Agent Workflow Static Verification]]：理解显式 workflow graph 如何在部署前检查死路、不可达、human gate 覆盖和时序安全策略。
 - [[Workflow Guardrails]]：理解 guardrails 应该放在 workflow 的输入、检索、工具、输出、状态和副作用边界，而不是只做最终回答过滤。
 - [[Durable Execution]]：理解长任务为什么需要暂停、恢复和重试。
 - [[Reflexion]]：理解 Agent 如何把失败反馈转成反思文本，并用经验改进下一轮行动。
 - [[Human-in-the-loop]]：理解人类确认、接管和修正如何进入 Agent loop。
 - [[Agent Lifecycle Hook]]：理解 runtime 如何在工具调用前后、会话开始/停止和上下文压缩等边界拦截、记录和恢复 Agent loop。
-- [[MCP]]、[[MCP Transport]]、[[A2A]]、[[ANP]]：区分工具/context server 连接、MCP client/server 消息承载通道、Agent-to-Agent 任务协作、以及 Agent 网络身份/发现/描述/协议协商。
+- [[MCP]]、[[MCP Transport]]、[[MCP Elicitation]]、[[A2A]]、[[ANP]]：区分工具/context server 连接、MCP client/server 消息承载通道、MCP server 向用户请求补充输入、Agent-to-Agent 任务协作、以及 Agent 网络身份/发现/描述/协议协商。
 
 ## 知识能力
 
@@ -129,6 +130,8 @@ LLM 地基：
 - [[Code Execution Sandbox]]：理解 Agent 运行代码为什么需要隔离。
 - [[LLM Gateway]]：理解模型调用路由、fallback、限流和成本治理。
 - [[MCP Registry]]：理解工具发现和供应链治理。
+- [[Managed Agent Harness]]：理解平台托管的 agent loop、session、环境和事件流如何降低自建运行外壳成本。
+- [[Agent Payments Protocol]]：理解 Agent 支付/交易场景为什么需要可验证授权、意图绑定和审计证据链。
 - [[Guardrails]]、[[Workflow Guardrails]]、[[Tool Permissioning]]、[[Data Exfiltration]]：理解生产 Agent 的安全边界。
 - [[Agent Workflow Static Verification]]：理解部署前 graph safety check 和运行时防护的边界。
 

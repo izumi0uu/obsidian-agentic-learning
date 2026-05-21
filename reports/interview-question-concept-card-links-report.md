@@ -4,10 +4,10 @@
 - 扫描题页：779
 - 含 `## 相关知识 wiki`：779
 - 已有正文概念链接页：362
-- 本次可新增/已新增链接：41
+- 本次可新增/已新增链接：42
 - would modify pages：34
 - skipped/no-match pages：411
-- unsafe-region skips：4024
+- unsafe-region skips：4034
 - missing concept candidates：0（unique 0）
 - protected-region violations：0
 
@@ -15,7 +15,7 @@
 
 | root | total | related | already-linked pages | would-modify pages | proposed links | skipped/no-match |
 |---|---:|---:|---:|---:|---:|---:|
-| xiaolinnote | 142 | 142 | 81 | 14 | 16 | 60 |
+| xiaolinnote | 142 | 142 | 81 | 14 | 17 | 60 |
 | agent_java_offer | 637 | 637 | 281 | 20 | 25 | 351 |
 
 ## Sample files selected
@@ -126,12 +126,13 @@
 - agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md:64 — `HyDE` -> `[[HyDE]]`
 - agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md:64 — `Step-back Prompting` -> `[[Step-back Prompting]]`
 - agentic learning/raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md:155 — `HyDE` -> `[[HyDE]]`
-- agentic learning/raw/repos/xiaolinnote/questions/045 ai tools 10. MCP 和 Agent Skill 的区别是什么？.md:106 — `渐进式加载` -> `[[Progressive Disclosure]]`
+- agentic learning/raw/repos/xiaolinnote/questions/045 ai tools 10. MCP 和 Agent Skill 的区别是什么？.md:108 — `渐进式加载` -> `[[Progressive Disclosure]]`
 - agentic learning/raw/repos/xiaolinnote/questions/048 ai tools 13. MCP 协议通常采用什么通信方式？.md:65 — `Streamable HTTP` -> `[[MCP Transport]]`
 - agentic learning/raw/repos/xiaolinnote/questions/049 ai tools 14. 说说 WebSocket 和 SSE 通信的区别及局限性？.md:163 — `Streamable HTTP` -> `[[MCP Transport]]`
 - agentic learning/raw/repos/xiaolinnote/questions/055 ai tools 4. 什么是 MCP（模型上下文协议）？讲讲它的核心内容？.md:129 — `Streamable HTTP` -> `[[MCP Transport]]`
 - agentic learning/raw/repos/xiaolinnote/questions/056 ai tools 5. MCP 由哪几部分组成？.md:71 — `Streamable HTTP` -> `[[MCP Transport]]`
-- agentic learning/raw/repos/xiaolinnote/questions/060 ai tools 9. Skill 是什么？.md:134 — `渐进式加载` -> `[[Progressive Disclosure]]`
+- agentic learning/raw/repos/xiaolinnote/questions/060 ai tools 9. Skill 是什么？.md:69 — `Agent Skills` -> `[[Agent Skills]]`
+- agentic learning/raw/repos/xiaolinnote/questions/060 ai tools 9. Skill 是什么？.md:136 — `渐进式加载` -> `[[Progressive Disclosure]]`
 - agentic learning/raw/repos/xiaolinnote/questions/123 ai llm 20. 大模型部署有哪些主流方案？vLLM、TGI、llama.cpp、SGLang 实际项目里怎么选？.md:53 — `KV Cache` -> `[[KV Cache]]`
 - agentic learning/raw/repos/xiaolinnote/questions/128 ai llm 14. KV Cache 是什么？Prompt Caching 的原理是什么？.md:25 — `KV Cache` -> `[[KV Cache]]`
 - agentic learning/raw/repos/xiaolinnote/questions/131 ai llm 3. 多头注意力（MHA）有哪些局限？MQA、GQA、Flash Attention 怎么解决？.md:69 — `KV Cache` -> `[[KV Cache]]`

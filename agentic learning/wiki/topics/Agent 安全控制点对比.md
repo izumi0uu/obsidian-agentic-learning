@@ -7,8 +7,9 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-17
+updated: 2026-05-20
 source:
+  - "[[Agent Skills]]"
   - "[[Prompt Injection]]"
   - "[[Indirect Prompt Injection]]"
   - "[[Tool Poisoning]]"
@@ -26,6 +27,7 @@ source:
   - "[[Under the Hood of SKILL.md - Semantic Supply-chain Attacks on AI Agent Skill Registry]]"
   - "[[OpenAI Agents SDK 文档]]"
 evidence:
+  - "[[Agent Skills#证据锚点]]"
   - "[[Prompt Injection#证据锚点]]"
   - "[[Indirect Prompt Injection#证据锚点]]"
   - "[[Tool Poisoning#证据锚点]]"
@@ -39,6 +41,7 @@ evidence:
   - "[[Under the Hood of SKILL.md - Semantic Supply-chain Attacks on AI Agent Skill Registry#需要我读的内容]]"
 related:
   - "[[Agent 知识地图]]"
+  - "[[Agent Skills]]"
   - "[[Prompt Injection]]"
   - "[[Indirect Prompt Injection]]"
   - "[[Tool Poisoning]]"
@@ -73,7 +76,7 @@ related:
 
 共同问题是：Agent 把自然语言、外部资料和工具动作放进同一个 loop。攻击者不一定需要直接控制模型，只要能控制网页、文档、邮件、工具描述、工具返回值、registry 元数据或某个输出通道，就可能影响 Agent 的下一步行动。
 
-如果 Agent 还会按需加载 skill，那么 `SKILL.md`、skill 描述、触发条件和完成定义也属于这条链路的一部分。它们不是普通说明文，而是会影响能力发现、选择、信任和加载的运行时输入；因此错误 skill 或恶意 skill metadata 应按 tool / skill supply-chain 风险处理。
+如果 Agent 还会按需加载 [[Agent Skills]]，那么 `SKILL.md`、skill 描述、触发条件和完成定义也属于这条链路的一部分。它们不是普通说明文，而是会影响能力发现、选择、信任和加载的运行时输入；因此错误 skill 或恶意 skill metadata 应按 tool / skill supply-chain 风险处理。
 
 一个简化风险链路是：
 
@@ -95,7 +98,7 @@ untrusted input / tool metadata / external content
 | [[Prompt Injection]] | 用户输入或上下文中的恶意指令诱导 | 内容进入模型上下文时 | 用户文本、外部片段、任务说明 | 模型偏离任务、越权请求或错误工具意图 | [[Prompt Injection#证据锚点]] |
 | [[Indirect Prompt Injection]] | 第三方网页、文档、邮件、检索片段、工具结果里的隐藏指令 | Agent 读取外部内容后、执行工具前 | RAG 片段、网页、Issue、邮件、observation | 外部内容被误当成控制指令 | [[Indirect Prompt Injection#证据锚点]] |
 | [[Tool Poisoning]] | 工具描述、schema、annotations、返回值、registry 或供应链污染 | 工具发现、选择、调用或接收结果时 | tool metadata、MCP server、工具结果、供应链更新 | 错误工具选择、恶意参数、进一步注入 | [[Tool Poisoning#证据锚点]] |
-| Skill metadata risk | `SKILL.md`、skill 描述、触发条件或完成定义影响能力选择和信任 | skill 发现、选择、加载、执行前审查时 | skill registry metadata、自然语言说明、workflow step、模板 | 错误流程、越权步骤、不适用完成定义、治理规避 | [[Under the Hood of SKILL.md - Semantic Supply-chain Attacks on AI Agent Skill Registry#需要我读的内容]] |
+| [[Agent Skills]] / Skill metadata risk | `SKILL.md`、skill 描述、触发条件或完成定义影响能力选择和信任 | skill 发现、选择、加载、执行前审查时 | skill registry metadata、自然语言说明、workflow step、模板 | 错误流程、越权步骤、不适用完成定义、治理规避 | [[Agent Skills#证据锚点]] |
 | [[Data Exfiltration]] | 敏感数据跨出授权边界的结果风险 | 读取敏感数据后，通过输出或工具通道外送时 | 私密文件、数据库、cookie、邮件、tool result | 聊天回复、HTTP、邮件、日志、第三方工具参数等外泄 | [[Data Exfiltration#证据锚点]] |
 | [[Least Privilege Tools]] | 最小工具、最小数据、最小参数和最短授权原则 | 任务开始前授权；任务阶段变化时收窄 | 任务目标、用户身份、工具集合、数据范围 | 缩小后的可见工具和可执行动作边界 | [[Least Privilege Tools#证据锚点]] |
 | [[Guardrails]] | 输入、输出、工具动作的防护层组合 | 模型调用前后、工具调用前后 | 规则、分类器、schema、敏感信息检测、policy、trace | 拦截、修正、拒绝、降级、触发审批 | [[Guardrails#证据锚点]] |
@@ -107,7 +110,7 @@ untrusted input / tool metadata / external content
 
 - [[Prompt Injection]] vs [[Indirect Prompt Injection]]：前者可以来自当前用户或上下文文本；后者强调攻击者通过第三方内容间接影响 Agent，例如网页、文档、邮件、检索片段或 tool result。
 - [[Prompt Injection]] vs [[Tool Poisoning]]：prompt injection 的载体主要是被模型读取的指令文本；tool poisoning 的载体是工具生态本身，包括 description、schema、annotations、返回值、registry 和供应链。
-- Tool poisoning vs skill metadata risk：二者都在能力生态里发生。tool poisoning 更偏工具/schema/server/result；skill metadata risk 更偏能力包说明、适用条件、流程和完成定义。当前不必强行建新卡，可先作为 [[Tool Poisoning]] 与 [[Tool Registry]] 的边界扩展。
+- Tool poisoning vs skill metadata risk：二者都在能力生态里发生。tool poisoning 更偏工具/schema/server/result；skill metadata risk 更偏能力包说明、适用条件、流程和完成定义。现在这条风险边界收进 [[Agent Skills]]，并继续和 [[Tool Poisoning]] / [[Tool Registry]] 联读。
 - [[Tool Poisoning]] vs [[MCP Registry]] 风险：registry 让 server 可发现，不等于 server 可信。工具上架、可安装、可调用分别是不同信任层。
 - Agent reflection vs verification：模型反思可以发现明显冲突，但不能证明 skill 可信或适用。安全控制点需要 registry review、least privilege、policy、trace、eval 和 human approval，而不是让模型再解释一遍。
 - [[Data Exfiltration]] vs injection：injection 是诱导手段，data exfiltration 是可能结果。没有敏感数据访问或输出通道时，注入不一定造成外泄。
@@ -190,7 +193,7 @@ untrusted input / tool metadata / external content
 | 用户输入试图覆盖系统指令 | [[Prompt Injection]] | 攻击入口是当前上下文里的恶意指令 | 不要只靠“更强 system prompt” |
 | Agent 读取网页/邮件/检索片段后行为异常 | [[Indirect Prompt Injection]] | 第三方内容可能被误当成指令 | RAG/浏览器/工具结果都要标记来源 |
 | 新接入 MCP server 或工具描述很诱导 | [[Tool Poisoning]] | 工具元数据、schema 或返回值可能被污染 | registry 上架不等于可信 |
-| Agent 自动加载了一个看似匹配但不适用的 skill | [[Tool Registry]], [[Tool Poisoning]], [[Evaluation]] | 问题在能力发现/选择/完成定义，不是只在模型推理层 | reflection 只能辅助怀疑，不能替代验证和权限治理 |
+| Agent 自动加载了一个看似匹配但不适用的 skill | [[Agent Skills]], [[Tool Registry]], [[Tool Poisoning]], [[Evaluation]] | 问题在能力发现/选择/完成定义，不是只在模型推理层 | reflection 只能辅助怀疑，不能替代验证和权限治理 |
 | 担心秘密被发到聊天、HTTP、邮件、日志 | [[Data Exfiltration]] | 这是跨边界输出结果风险 | 只过滤最终回复不够，要看工具参数和日志 |
 | 任务只需读公开文档，却暴露了写文件/联网/邮件 | [[Least Privilege Tools]] | 应先收窄工具、数据和动作范围 | 权限过宽会放大所有注入风险 |
 | 需要把规则变成可执行决策 | [[Policy Engine]] | 模型外判定 allow / deny / approval | 规则不可测会变成黑箱 |
@@ -227,6 +230,7 @@ untrusted input / tool metadata / external content
 ## 相关链接
 
 - [[Agent 知识地图]]
+- [[Agent Skills]]
 - [[Prompt Injection]]
 - [[Indirect Prompt Injection]]
 - [[Tool Poisoning]]

@@ -44,13 +44,13 @@ related:
 relations:
   - type: related_to
     target: "[[Task Success Rate]]"
-    note: "Agent Robustness 常用扰动条件下的成功率下降幅度来观察；Task Success Rate 是被观察指标，不是鲁棒性本身。"
+    note: Agent Robustness 常用扰动条件下的成功率下降幅度来观察；Task Success Rate 是被观察指标，不是鲁棒性本身。
   - type: related_to
     target: "[[Trajectory Evaluation]]"
-    note: "工具超时、异常返回、噪声输入和恢复动作都需要看 trajectory，而不只看最终输出。"
+    note: 工具超时、异常返回、噪声输入和恢复动作都需要看 trajectory，而不只看最终输出。
   - type: related_to
     target: "[[Guardrails]]"
-    note: "Guardrails 可以提高部分扰动下的可控性，但安全拦截机制不等于鲁棒性指标。"
+    note: Guardrails 可以提高部分扰动下的可控性，但安全拦截机制不等于鲁棒性指标。
 ---
 
 # Agent Robustness

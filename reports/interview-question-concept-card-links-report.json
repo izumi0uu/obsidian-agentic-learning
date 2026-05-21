@@ -6,13 +6,13 @@
   "pages_with_related_section": 779,
   "would_modify_pages": 34,
   "modified_pages": 0,
-  "inline_links_inserted": 41,
-  "proposed_inline_links": 41,
+  "inline_links_inserted": 42,
+  "proposed_inline_links": 42,
   "applied_inline_links": 0,
   "already_linked_pages": 362,
   "already_linked_targets": 941,
   "skipped_no_match_pages": 411,
-  "unsafe_region_skips": 4024,
+  "unsafe_region_skips": 4034,
   "protected_region_violations": 0,
   "request_meta_page_hits": [],
   "missing_concept_candidates": 0,
@@ -24,7 +24,7 @@
       "with_related_section": 142,
       "would_modify_pages": 14,
       "modified_pages": 0,
-      "proposed_inline_links": 16,
+      "proposed_inline_links": 17,
       "applied_inline_links": 0,
       "already_linked_pages": 81,
       "skipped_no_match_pages": 60
@@ -1501,12 +1501,14 @@
         "MCP",
         "Tool Use",
         "Tool Calling",
+        "Agent Skills",
         "Progressive Disclosure"
       ],
       "existing_targets": [
         "MCP",
         "Tool Use",
         "Tool Calling",
+        "Agent Skills",
         "Progressive Disclosure"
       ],
       "missing_targets": [],
@@ -1519,16 +1521,18 @@
         {
           "target": "Progressive Disclosure",
           "alias": "渐进式加载",
-          "start": 3672,
-          "end": 3677,
+          "start": 3714,
+          "end": 3719,
           "replacement": "[[Progressive Disclosure|渐进式加载]]",
-          "line": 106,
+          "line": 108,
           "context": "这个 Skill」。 - 第二，Skill 用了一套「渐进式加载」的机制来节省 context window。启动时只加"
         }
       ],
       "applied_links": 0,
-      "unsafe_region_skips": 2,
-      "unmatched_existing_targets": [],
+      "unsafe_region_skips": 4,
+      "unmatched_existing_targets": [
+        "Agent Skills"
+      ],
       "request_meta_hits": [],
       "no_match_reason": null
     },
@@ -1540,12 +1544,14 @@
         "Tool Calling",
         "MCP",
         "Tool Use",
+        "Agent Skills",
         "Tool 接口层对比"
       ],
       "existing_targets": [
         "Tool Calling",
         "MCP",
         "Tool Use",
+        "Agent Skills",
         "Tool 接口层对比"
       ],
       "missing_targets": [],
@@ -1556,8 +1562,9 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 2,
+      "unsafe_region_skips": 4,
       "unmatched_existing_targets": [
+        "Agent Skills",
         "Tool 接口层对比"
       ],
       "request_meta_hits": [],
@@ -1946,11 +1953,13 @@
       "related_targets": [
         "Tool Use",
         "Tool Calling",
+        "Agent Skills",
         "Progressive Disclosure"
       ],
       "existing_targets": [
         "Tool Use",
         "Tool Calling",
+        "Agent Skills",
         "Progressive Disclosure"
       ],
       "missing_targets": [],
@@ -1959,17 +1968,26 @@
       ],
       "proposed_links": [
         {
+          "target": "Agent Skills",
+          "alias": "Agent Skills",
+          "start": 1754,
+          "end": 1766,
+          "replacement": "[[Agent Skills]]",
+          "line": 69,
+          "context": "Anthropic 在 2025 年 10 月推出了 Agent Skills，同年 12 月把规范作为开放标准发布出来，允许其他 A"
+        },
+        {
           "target": "Progressive Disclosure",
           "alias": "渐进式加载",
-          "start": 3846,
-          "end": 3851,
+          "start": 3888,
+          "end": 3893,
           "replacement": "[[Progressive Disclosure|渐进式加载]]",
-          "line": 134,
+          "line": 136,
           "context": "上，加载了也是白加载。  所以 Skill 用了一套叫「渐进式加载」（Progressive Disclosure）的三层"
         }
       ],
       "applied_links": 0,
-      "unsafe_region_skips": 16,
+      "unsafe_region_skips": 18,
       "unmatched_existing_targets": [
         "Tool Calling"
       ],
@@ -1983,12 +2001,14 @@
       "related_targets": [
         "Tool Calling",
         "Tool Use",
-        "MCP"
+        "MCP",
+        "Agent Skills"
       ],
       "existing_targets": [
         "Tool Calling",
         "Tool Use",
-        "MCP"
+        "MCP",
+        "Agent Skills"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -1998,8 +2018,10 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 0,
-      "unmatched_existing_targets": [],
+      "unsafe_region_skips": 2,
+      "unmatched_existing_targets": [
+        "Agent Skills"
+      ],
       "request_meta_hits": [],
       "no_match_reason": null
     },
@@ -2040,6 +2062,7 @@
         "Agent",
         "RAG",
         "Tool Calling",
+        "Agent Skills",
         "LLM 主题"
       ],
       "existing_targets": [
@@ -2047,6 +2070,7 @@
         "Agent",
         "RAG",
         "Tool Calling",
+        "Agent Skills",
         "LLM 主题"
       ],
       "missing_targets": [],
@@ -2058,8 +2082,9 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 2,
+      "unsafe_region_skips": 4,
       "unmatched_existing_targets": [
+        "Agent Skills",
         "LLM 主题"
       ],
       "request_meta_hits": [],

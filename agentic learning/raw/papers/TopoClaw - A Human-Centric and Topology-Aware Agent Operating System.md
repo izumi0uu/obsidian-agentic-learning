@@ -8,16 +8,16 @@ extracted: extracted/TopoClaw - A Human-Centric and Topology-Aware Agent Operati
 arxiv: https://arxiv.org/abs/2605.15556
 doi: 10.48550/arXiv.2605.15556
 author:
-  - "Heyuan Huang"
-  - "Yeyi Guan"
-  - "Jihong Wang"
-  - "Mingzhi Wang"
-  - "Jiamu Zhou"
-  - "Xiangmou Qu"
-  - "Jiaxin Yin"
-  - "Xin Liao"
-  - "Xingyu Lou"
-  - "Jun Wang"
+  - Heyuan Huang
+  - Yeyi Guan
+  - Jihong Wang
+  - Mingzhi Wang
+  - Jiamu Zhou
+  - Xiangmou Qu
+  - Jiaxin Yin
+  - Xin Liao
+  - Xingyu Lou
+  - Jun Wang
 site: arXiv
 venue: arXiv 2026
 pages:

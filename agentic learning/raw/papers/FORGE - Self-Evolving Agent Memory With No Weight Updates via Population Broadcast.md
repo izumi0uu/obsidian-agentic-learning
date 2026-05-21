@@ -8,12 +8,12 @@ extracted: extracted/FORGE - Self-Evolving Agent Memory With No Weight Updates v
 arxiv: https://arxiv.org/abs/2605.16233
 doi: 10.48550/arXiv.2605.16233
 author:
-  - "Igor Bogdanov"
-  - "Chung-Horng Lung"
-  - "Thomas Kunz"
-  - "Jie Gao"
-  - "Adrian Taylor"
-  - "Marzia Zaman"
+  - Igor Bogdanov
+  - Chung-Horng Lung
+  - Thomas Kunz
+  - Jie Gao
+  - Adrian Taylor
+  - Marzia Zaman
 site: arXiv
 venue: arXiv 2026
 pages:

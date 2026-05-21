@@ -55,13 +55,13 @@ related:
 relations:
   - type: specializes
     target: "[[Context Engineering]]"
-    note: "把上下文选择、压缩、外部化和隔离用于超出单窗口的长任务。"
+    note: 把上下文选择、压缩、外部化和隔离用于超出单窗口的长任务。
   - type: uses
     target: "[[Agent State]]"
-    note: "当前 run 的阶段、待办、错误和下一步依据需要结构化保存。"
+    note: 当前 run 的阶段、待办、错误和下一步依据需要结构化保存。
   - type: uses
     target: "[[Memory]]"
-    note: "结构化笔记是跨上下文窗口持久化关键事实的一种 memory 形态。"
+    note: 结构化笔记是跨上下文窗口持久化关键事实的一种 memory 形态。
 ---
 
 # Long-Horizon Context Engineering

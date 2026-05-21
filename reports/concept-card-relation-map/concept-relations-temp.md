@@ -1,15 +1,15 @@
 # Temporary Concept Relationship Map
 
-Generated: `2026-05-20T14:22:20Z`
+Generated: `2026-05-20T15:20:51Z`
 
 > 临时文件：用于后续概念层级开发评估。不要把候选边自动写回概念卡；每条 candidate 都需要单独人工/LLM 复核。
 
 ## Summary
 
-- total_concepts: 146
-- edge_counts: {'related_link': 852, 'body_link': 270, 'typed_relation': 53, 'taxonomy': 37}
+- total_concepts: 150
+- edge_counts: {'related_link': 881, 'body_link': 271, 'typed_relation': 53, 'taxonomy': 37}
 - typed_relation_counts: {'contrasts_with': 8, 'related_to': 12, 'representative_of': 1, 'based_on_intuition': 1, 'paired_with': 2, 'mechanism_for': 1, 'projects_from': 1, 'draws_from': 2, 'risk_for': 1, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 8, 'uses': 4, 'pattern_for': 1, 'specializes': 1, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
-- concepts_without_up: 109
+- concepts_without_up: 113
 - core_orphans: 0
 - weakly_connected_concepts: 1
 - dangling_core_targets: 29
@@ -216,7 +216,9 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Agent Harness]]
 - [[Agent Lifecycle Hook]]
 - [[Agent Loop]]
+- [[Agent Payments Protocol]]
 - [[Agent Robustness]]
+- [[Agent Skills]]
 - [[Agent State]]
 - [[Agent Workflow]]
 - [[Agent Workflow Static Verification]]
@@ -257,8 +259,10 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Least Privilege Tools]]
 - [[Long-Horizon Context Engineering]]
 - [[MCP]]
+- [[MCP Elicitation]]
 - [[MCP Registry]]
 - [[MCP Transport]]
+- [[Managed Agent Harness]]
 - [[Memory]]
 - [[Multi-Head Attention]]
 - [[NLP]]

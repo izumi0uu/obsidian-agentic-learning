@@ -18,12 +18,12 @@ source:
   - "[[raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？]]"
   - "[[raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？]]"
   - "[[raw/repos/agent_java_offer/questions/077 01_AI 03_RAG 除了基础的向量检索，你还知道哪些可以提升 RAG 检索质量的技术？]]"
-  - "https://arxiv.org/abs/2212.10496"
+  - https://arxiv.org/abs/2212.10496
 evidence:
   - "[[raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？#方法二：HyDE（Hypothetical Document Embeddings）]]"
   - "[[raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？#第二层：查询优化]]"
   - "[[raw/repos/agent_java_offer/questions/077 01_AI 03_RAG 除了基础的向量检索，你还知道哪些可以提升 RAG 检索质量的技术？#2. 子问题：除了基础的向量检索，你还知道哪些可以提升 RAG 检索质量的技术？]]"
-  - "https://arxiv.org/abs/2212.10496"
+  - https://arxiv.org/abs/2212.10496
 related:
   - "[[Query Rewrite]]"
   - "[[Dense Retrieval]]"

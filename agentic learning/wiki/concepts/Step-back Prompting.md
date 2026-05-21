@@ -19,10 +19,10 @@ aliases:
   - 后退一步提问
 source:
   - "[[raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？]]"
-  - "https://arxiv.org/abs/2310.06117"
+  - https://arxiv.org/abs/2310.06117
 evidence:
   - "[[raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？#方法三：Step-back Prompting（后退提问）]]"
-  - "https://arxiv.org/abs/2310.06117"
+  - https://arxiv.org/abs/2310.06117
 related:
   - "[[Query Rewrite]]"
   - "[[HyDE]]"

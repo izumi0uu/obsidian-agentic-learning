@@ -1412,3 +1412,22 @@ related:
 - Taxonomy: no `up` or `relations` writeback. [[09 概念层级审计基线]] has no stable protocol-transport parent, and [[MCP]] is relation-only rather than a safe strict parent.
 - Mention sweep: searched `MCP Transport`, `MCP 传输`, `传输层`, `stdio`, `Streamable HTTP`, `SSE Transport`, `HTTP+SSE`, and `Memory Transport` across wiki, raw, maps, reviews, and alias map; only high-confidence MCP transport mentions were linked.
 - Validation: alias JSON parse PASS; interview link self-test PASS; interview dry-run scanned 779 pages and would modify 34 with 41 inline links / 0 missing candidates / 0 protected violations; concept-card audit PASS with 146 cards / needs action 0; comparison-topic audit PASS with 24 pages / needs action 0; request-meta audit PASS with 1175 files / 0 hits; taxonomy build/decide/dry-run/closure synced reports to 146 concepts with 0 open review / 0 open writeback and 24 deferred-with-backlog; taxonomy validate, plugin contract, control-surface sync, and baseline-map validation PASS; search index regenerated and `--check` PASS with 1177 documents; `git diff --check` PASS.
+
+## [2026-05-20] source-ingest | arXiv 2605 Agent runtime / memory / skill batch
+
+- Created 10 raw paper source notes for [[A Methodology for Selecting and Composing Runtime Architecture Patterns for Production LLM Agents]], [[PEEK - Context Map as an Orientation Cache for Long-Context LLM Agents]], [[OpenComputer - Verifiable Software Worlds for Computer-Use Agents]], [[Rethinking How to Remember - Beyond Atomic Facts in Lifelong LLM Agent Memory]], [[Formal Skill - Programmable Runtime Skills for Efficient and Accurate LLM Agents]], [[Library Drift - Diagnosing and Fixing a Silent Failure Mode in Self-Evolving LLM Skill Libraries]], [[Rewarding Beliefs, Not Actions - Consistency-Guided Credit Assignment for Long-Horizon Agents]], [[Are Tools Always Beneficial - Learning to Invoke Tools Adaptively for Dual-Mode Multimodal LLM Reasoning]], [[AutoResearchClaw - Self-Reinforcing Autonomous Research with Human-AI Collaboration]], and [[ClinSeekAgent - Automating Multimodal Evidence Seeking for Agentic Clinical Reasoning]].
+- Downloaded 10 local PDF assets into `raw/papers/assets/` and generated 10 pypdf extracted Markdown files under `raw/papers/extracted/`.
+- Updated durable navigation: [[资料收集索引]], [[03 前沿追踪]], and [[04 页面目录]].
+- Reading route: A Methodology / OpenComputer / Formal Skill / Library Drift entered P1-A; PEEK / Rethinking How to Remember entered P1-B; Rewarding Beliefs / Are Tools Always Beneficial / AutoResearchClaw / ClinSeekAgent remain P2 topic-triggered reading.
+- Boundary: this is a raw evidence batch, not concept-card creation. Title terms such as PEEK, Formal Skill, Library Drift, OpenComputer, AutoResearchClaw, and ClinSeekAgent remain source-level until 精读 establishes stable concept boundaries and evidence anchors.
+
+## [2026-05-20] concept-ingest | recent Agent ability / protocol boundaries
+
+- Created concept cards: [[Agent Skills]], [[Managed Agent Harness]], [[MCP Elicitation]], and [[Agent Payments Protocol]].
+- Created official/source notes: [[Anthropic Agent Skills 文档]], [[Anthropic Managed Agents 文档]], and [[Agent Payments Protocol 官方资料]].
+- Updated [[Model Context Protocol 官方文档#Elicitation 补充]] with current MCP Elicitation `form` / `url` boundary, and linked it back into [[MCP]] / [[MCP Elicitation]].
+- Updated navigation and comparison surfaces: [[01 术语表]], [[Agent 知识地图]], [[03 前沿追踪]], [[04 页面目录]], [[05 Query 写回队列]], [[资料收集索引]], [[前沿主源清单]], [[Tool 接口层对比]], [[Agent 安全控制点对比]], and [[Agent Harness]].
+- Terminology: `Agent Skills` / `Agent Skill` / `SKILL.md` are treated as one skill-package concept; `Managed Agents` is recorded as product evidence for [[Managed Agent Harness]], not as a standalone framework; `AP2` includes Agent Payments Protocol / Agentic Payment Protocol naming because current official materials use both; MCP Elicitation remains a MCP client feature, not a synonym for approval gate or ordinary model clarification.
+- Taxonomy: no direct `up` / `relations` writeback; protocol, harness, and skill parent boundaries remain relation-only until the taxonomy baseline approves a strict parent.
+- Boundary: concept/content ingest, not a schema/template/workflow-rule change. Alias map and interview auto-link behavior were not changed.
+- Validation: pending in current run; see final response for fresh validation evidence.

@@ -8,11 +8,11 @@ extracted: extracted/SGR - A Stepwise Reasoning Framework for LLMs with External
 arxiv: https://arxiv.org/abs/2605.16117
 doi: 10.48550/arXiv.2605.16117
 author:
-  - "Xin Zhang"
-  - "Yang Cao"
-  - "Baoxing Wu"
-  - "Kai Song"
-  - "Siying Li"
+  - Xin Zhang
+  - Yang Cao
+  - Baoxing Wu
+  - Kai Song
+  - Siying Li
 site: arXiv
 venue: arXiv 2026
 pages:

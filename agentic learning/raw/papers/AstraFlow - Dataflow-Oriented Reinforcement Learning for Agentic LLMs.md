@@ -8,16 +8,16 @@ extracted: extracted/AstraFlow - Dataflow-Oriented Reinforcement Learning for Ag
 arxiv: https://arxiv.org/abs/2605.15565
 doi: 10.48550/arXiv.2605.15565
 author:
-  - "Haizhong Zheng"
-  - "Yizhuo Di"
-  - "Jiahui Wang"
-  - "Shuowei Jin"
-  - "Xueshen Liu"
-  - "Yongji Wu"
-  - "Z. Morley Mao"
-  - "Ion Stoica"
-  - "Jiawei Zhao"
-  - "Beidi Chen"
+  - Haizhong Zheng
+  - Yizhuo Di
+  - Jiahui Wang
+  - Shuowei Jin
+  - Xueshen Liu
+  - Yongji Wu
+  - Z. Morley Mao
+  - Ion Stoica
+  - Jiawei Zhao
+  - Beidi Chen
 site: arXiv
 venue: arXiv 2026
 pages:

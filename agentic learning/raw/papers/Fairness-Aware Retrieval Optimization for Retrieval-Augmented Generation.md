@@ -1,17 +1,17 @@
 ---
 type: source
 source_type: paper
-title: "Fairness-Aware Retrieval Optimization for Retrieval-Augmented Generation"
+title: Fairness-Aware Retrieval Optimization for Retrieval-Augmented Generation
 url: https://arxiv.org/abs/2605.15790
 pdf: assets/Fairness-Aware Retrieval Optimization for Retrieval-Augmented Generation.pdf
 extracted: extracted/Fairness-Aware Retrieval Optimization for Retrieval-Augmented Generation.extracted.md
 arxiv: https://arxiv.org/abs/2605.15790
 doi: 10.48550/arXiv.2605.15790
 author:
-  - "Yingqi Zhao"
-  - "Vasilis Efthymiou"
-  - "Jyrki Nummenmaa"
-  - "Kostas Stefanidis"
+  - Yingqi Zhao
+  - Vasilis Efthymiou
+  - Jyrki Nummenmaa
+  - Kostas Stefanidis
 site: arXiv
 venue: arXiv 2026
 pages:

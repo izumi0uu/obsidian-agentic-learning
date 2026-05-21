@@ -8,15 +8,15 @@ extracted: extracted/DebiasRAG - A Tuning-Free Path to Fair Generation in Large 
 arxiv: https://arxiv.org/abs/2605.16113
 doi: 10.48550/arXiv.2605.16113
 author:
-  - "Rui Chu"
-  - "Bingyin Zhao"
-  - "Thanh Quoc Hung Le"
-  - "Duy Cao Hoang"
-  - "Huawei Lin"
-  - "Ping Li"
-  - "Weijie Zhao"
-  - "Khoa D Doan"
-  - "Yingjie Lao"
+  - Rui Chu
+  - Bingyin Zhao
+  - Thanh Quoc Hung Le
+  - Duy Cao Hoang
+  - Huawei Lin
+  - Ping Li
+  - Weijie Zhao
+  - Khoa D Doan
+  - Yingjie Lao
 site: arXiv
 venue: arXiv 2026
 pages:

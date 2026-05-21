@@ -32,6 +32,7 @@ related:
   - "[[Tool Calling]]"
   - "[[Tool Registry]]"
   - "[[MCP Transport]]"
+  - "[[MCP Elicitation]]"
   - "[[Prompt]]"
   - "[[A2A]]"
   - "[[ANP]]"
@@ -171,6 +172,12 @@ sequenceDiagram
 
 旧资料里常见的 `SSE Transport` 多数指 2024-11-05 规范里的 HTTP+SSE 双端点方案；它是 legacy / deprecated compatibility，不应和当前 `Streamable HTTP` 混为一谈。`HTTP Transport` 这个说法太宽，容易混淆普通 REST、旧 HTTP+SSE 和当前 Streamable HTTP；`Memory Transport` 更像 SDK 内部/测试/in-process 连接方式，不是生产部署主选项。
 
+## Elicitation 边界
+
+[[MCP Elicitation]] 是 MCP server 在执行 workflow 时通过 client / host 请求用户补充输入或进入外部授权流程的能力。它和 Tools / Resources / Prompts 不在同一个“server 暴露能力给模型”的方向上：Elicitation 是 server 反向请求 host 帮它询问用户。
+
+最小边界是：server 发起 `elicitation/create`，client 控制 UI、隐私和策略，用户可以 `accept`、`decline` 或 `cancel`。在当前 spec 里，`form` 模式用于受限 schema 的表单输入，`url` 模式用于跳转外部授权或配置流程。它不是 [[Approval Gate]]，也不是模型随口追问；后续工具执行仍要经过 [[Tool Permissioning]] 和策略检查。
+
 ## 它不是什么
 
 MCP 不是 Agent 框架。
@@ -226,6 +233,7 @@ frontier / volatile。MCP 是当前工具协议生态的重要前沿，核心抽
 - [[Tool Calling]]
 - [[Tool Registry]]
 - [[MCP Transport]]
+- [[MCP Elicitation]]
 - [[A2A]]
 - [[ACP]]
 - [[ANP]]

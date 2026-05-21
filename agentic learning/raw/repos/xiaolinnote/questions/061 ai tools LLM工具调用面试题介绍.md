@@ -10,7 +10,7 @@ topic:
   - mcp
 status: inbox
 created: 2026-05-07
-updated: 2026-05-17
+updated: 2026-05-20
 url: https://xiaolinnote.com/ai/tools/tools_info.html
 source: https://xiaolinnote.com/ai/tools/tools_info.html
 last_checked: 2026-05-17
@@ -22,6 +22,7 @@ related:
   - "[[Tool Calling]]"
   - "[[Tool Use]]"
   - "[[MCP]]"
+  - "[[Agent Skills]]"
 ---
 
 # LLM[[Tool Calling|工具调用]]面试题介绍
@@ -35,6 +36,7 @@ related:
 - [[Tool Calling]]
 - [[Tool Use]]
 - [[MCP]]
+- [[Agent Skills]]
 
 ## 页面正文
 

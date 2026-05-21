@@ -37,16 +37,16 @@ related:
 relations:
   - type: mechanism_for
     target: "[[Context Engineering]]"
-    note: "把系统持有的信息投影成模型本轮可见、可用、可预算的上下文。"
+    note: 把系统持有的信息投影成模型本轮可见、可用、可预算的上下文。
   - type: projects_from
     target: "[[Agent State]]"
-    note: "从当前 run 的状态中选择、压缩、排序本轮决策需要的片段。"
+    note: 从当前 run 的状态中选择、压缩、排序本轮决策需要的片段。
   - type: draws_from
     target: "[[Memory]]"
-    note: "记忆只有被选中并投影进上下文时才影响本轮回答。"
+    note: 记忆只有被选中并投影进上下文时才影响本轮回答。
   - type: draws_from
     target: "[[Trace]]"
-    note: "trace 可作为失败复盘、长任务继续或审计解释时的候选材料。"
+    note: trace 可作为失败复盘、长任务继续或审计解释时的候选材料。
 ---
 
 # Context Projection

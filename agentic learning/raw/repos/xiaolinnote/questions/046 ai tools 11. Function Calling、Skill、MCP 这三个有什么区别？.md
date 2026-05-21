@@ -10,7 +10,7 @@ topic:
   - mcp
 status: inbox
 created: 2026-05-07
-updated: 2026-05-18
+updated: 2026-05-20
 url: https://xiaolinnote.com/ai/tools/11_fc_skill_mcp.html
 source: https://xiaolinnote.com/ai/tools/11_fc_skill_mcp.html
 last_checked: 2026-05-17
@@ -22,6 +22,7 @@ related:
   - "[[Tool Calling]]"
   - "[[MCP]]"
   - "[[Tool Use]]"
+  - "[[Agent Skills]]"
   - "[[Tool 接口层对比]]"
 ---
 
@@ -36,6 +37,7 @@ related:
 - [[Tool Calling]]
 - [[MCP]]
 - [[Tool Use]]
+- [[Agent Skills]]
 - [[Tool 接口层对比]]
 
 ## 页面正文

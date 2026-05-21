@@ -1,15 +1,15 @@
 # Concept Hierarchy Placement Candidates — Conservative candidate generation
 
-Generated: `2026-05-20T14:22:39Z`
+Generated: `2026-05-21T00:47:57Z`
 
 > Conservative candidate taxonomy only. These rows are **not** accepted taxonomy and must go through Candidate adjudication before any dry-run/writeback.
 
 ## Summary
 
-- deferred_rows_considered: 26
+- deferred_rows_considered: 27
 - approved_parent_count: 14
 - generated_candidates: 2
-- suppressed_signals: 24
+- suppressed_signals: 25
 - candidate_targets: `{"Agent Workflow": 2}`
 - adjudication_items: 2
 - open_writeback: 0
@@ -56,6 +56,7 @@ Generated: `2026-05-20T14:22:39Z`
 |---|---|---|---|
 | [[A2A]] | [[Agent]] | broad_anchor_not_approved | A2A is a protocol/ecosystem card. `Agent` is intentionally not an auto-approved parent, and no approved protocol parent exists. |
 | [[ACP]] | [[Agent]] | broad_anchor_not_approved | ACP is a protocol/ecosystem card. `Agent` is intentionally not an auto-approved parent, and no approved protocol parent exists. |
+| [[Agent Skills]] |  | no_conservative_approved_parent_signal | No conservative signal points to a Parent-whitelist review approved stable parent. |
 | [[Browser Agent]] | [[Agent]] | broad_anchor_not_approved | The title suggests a kind of Agent, but `Agent` is too broad for automatic parent generation. |
 | [[Code Execution Sandbox]] | [[Tool Use]] | security_runtime_not_tool_behavior | A sandbox supports safe tool/code execution, but support/infrastructure is not a kind of Tool Use. |
 | [[Data Exfiltration]] | [[Prompt]] | security_risk_not_prompt | Data exfiltration can occur through prompts/tools/retrieval, but it is a risk class, not a kind of Prompt. |

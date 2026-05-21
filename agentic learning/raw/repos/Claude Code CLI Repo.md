@@ -1,7 +1,7 @@
 ---
 type: source
 source_type: repo
-title: "Claude Code CLI - Source Code Analysis"
+title: Claude Code CLI - Source Code Analysis
 url: https://github.com/huangserva/claude-code-cli
 author: huangserva
 site: github.com
@@ -15,7 +15,7 @@ updated: 2026-05-20
 last_checked: 2026-05-20
 freshness: watch
 conflicts:
-  - "This is a learning/research source-code analysis repository, not the official Anthropic source-of-truth for Claude Code."
+  - This is a learning/research source-code analysis repository, not the official Anthropic source-of-truth for Claude Code.
 status: seed
 source:
   - https://github.com/huangserva/claude-code-cli

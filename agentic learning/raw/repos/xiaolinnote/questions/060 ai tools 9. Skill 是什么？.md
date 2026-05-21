@@ -10,7 +10,7 @@ topic:
   - mcp
 status: inbox
 created: 2026-05-07
-updated: 2026-05-18
+updated: 2026-05-20
 url: https://xiaolinnote.com/ai/tools/9_skill.html
 source: https://xiaolinnote.com/ai/tools/9_skill.html
 last_checked: 2026-05-17
@@ -21,6 +21,7 @@ related:
   - "[[资料收集索引]]"
   - "[[Tool Use]]"
   - "[[Tool Calling]]"
+  - "[[Agent Skills]]"
   - "[[Progressive Disclosure]]"
 ---
 
@@ -34,6 +35,7 @@ related:
 
 - [[Tool Use]]
 - [[Tool Calling]]
+- [[Agent Skills]]
 - [[Progressive Disclosure]]
 
 ## 页面正文

@@ -5,7 +5,7 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-07
-updated: 2026-05-19
+updated: 2026-05-20
 related:
   - "[[LLM Wiki 工作流]]"
   - "[[02 问题池]]"
@@ -41,7 +41,7 @@ related:
 | 2026-05-13 | done | “Claw Bot / OpenClaw 与 Hermes 的边界是什么？” | [[OpenClaw Repo]], [[OpenClaw Repo vs Hermes Agent]], [[03 前沿追踪]], [[Agent Harness]], [[Coding Agent 执行边界对比]] | 已创建 OpenClaw official repo source note 和 OpenClaw / Hermes 对比 topic；边界：按 OpenClaw / Clawbot legacy alias 处理为 volatile 具体 Agent gateway / personal assistant harness source，不建 “Claw Bot” 稳定概念卡 |
 | 2026-05-15 | done | “向量数据库 Qdrant / pgvector / Chroma / FAISS / Milvus / Weaviate / Pinecone 等 Agent 开发选型边界是什么？” | [[Vector Database]], [[Retrieval 组件对比]], [[RAG 主题]], [[Context RAG Memory 对比]] | 已写回 [[Vector Database#Agent / RAG 选型边界]]、[[Retrieval 组件对比#什么时候用哪个判断]]、[[RAG 主题#组件入口]]、[[Context RAG Memory 对比#什么时候用哪个判断]]；结论：记录为类别级选型边界，不为每个 vendor 直接建稳定概念卡。 |
 | 2026-05-15 | done | “Top-K 是什么 / 补概念卡” | [[Top-K]], [[01 术语表]], [[RAG 主题]], [[Agent 知识地图]] | 已创建 [[Top-K]] 轻量概念卡，补 retrieval Top-K / decoding top-k 边界，并接入术语表、RAG 主题和 Agent 知识地图。 |
-| 2026-05-17 | done | “错误 Skill 能否靠 Agent 反思发现？” | [[Tool Poisoning]], [[Tool Registry]], [[Agent Harness]], [[Evaluation]], [[Agent 安全控制点对比]] | 已写回 skill selection / skill trust 边界：`SKILL.md` / skill metadata 是会影响发现、选择和信任的 operational text；reflection 只能辅助怀疑，不等于 verification；本轮不创建弱 Agent Skill 概念卡、不改 alias map。 |
+| 2026-05-17 | done | “错误 Skill 能否靠 Agent 反思发现？” | [[Tool Poisoning]], [[Tool Registry]], [[Agent Harness]], [[Evaluation]], [[Agent 安全控制点对比]], [[Agent Skills]] | 已写回 skill selection / skill trust 边界：`SKILL.md` / skill metadata 是会影响发现、选择和信任的 operational text；reflection 只能辅助怀疑，不等于 verification。当时未建弱卡；2026-05-20 已在官方 docs + paper evidence 支撑下创建 [[Agent Skills]]。 |
 | 2026-05-17 | done | “Query enhancement / HyDE / MQE 与 Abstract Folder taxonomy 边界” | [[Query Rewrite]], [[Multi-Query Retrieval]], `scripts/interview_question_concept_aliases.json` | 已补 [[Multi-Query Retrieval]] 的 `MQE` / `Multi-Query Expansion` / `多查询扩展` aliases，并同步面试题 alias map；[[Query Rewrite]] 写明“查询增强策略 / 查询优化”是策略群边界，不是 Query Rewrite 的 alias；保留既有 `Multi-Query Retrieval up [[Query Rewrite]]`，不新建 HyDE 或查询增强策略弱卡。 |
 | 2026-05-17 | done | “检索侧 Query Rewrite / Multi-Query / HyDE / Step-back / Query Planning / Agentic Retrieval 如何成组学习？” | [[HyDE]], [[Step-back Prompting]], [[Query Rewrite Query Planning Agentic Retrieval 对比]], [[RAG 主题]], `scripts/interview_question_concept_aliases.json` | 已创建 [[HyDE]] 与 [[Step-back Prompting]]，升级对比 topic 覆盖 6 个概念，并同步 alias map、raw evidence 回链、RAG 导航、概念候选 backlog 和 log；旧 folded 决策已重开为 done。 |
 | 2026-05-17 | done | “Codex CLI / Claude Code 客户端为什么不显式用传统 RAG？” | [[Coding Agent 为什么不用传统 RAG]], [[Repo Context]], [[Context RAG Memory 对比]] | 已创建小型 topic 页：把结论写成 repo context gathering vs traditional document RAG 的边界；不新建弱概念卡，不修改 alias map。 |
@@ -49,6 +49,7 @@ related:
 | 2026-05-17 | done | “KV Cache 在 LLM 推理中解决什么问题，相关论文如何定位 MQA / GQA / PagedAttention / FlashAttention？” | [[KV Cache]], [[LLM 上下文限制与突破条件]], [[资料收集索引]] | 已创建 [[KV Cache]] 概念卡和 4 篇 paper source note；边界：MQA/GQA 是 attention 结构层减少 K/V 份数，PagedAttention 是 KV cache 内存管理，FlashAttention 是 attention IO 实现优化，不把它们强行建成弱概念卡。 |
 | 2026-05-18 | done | “Agent 鲁棒性 / Agent Robustness 的边界是什么？” | [[Agent Robustness]], [[Task Success Rate]], [[Evaluation]], [[Evaluation 层次对比]], `scripts/interview_question_concept_aliases.json` | 已创建 [[Agent Robustness]] 概念卡；边界写明它是扰动条件下的系统级稳定性和恢复能力，不等于通用可靠性、安全性、evaluation 或 task success rate，也不把裸 `鲁棒性 / Robustness` 自动当 alias。 |
 | 2026-05-19 | pending | “为什么在 Agent 出来之前，RAG 概念并没有明显进入市场和日常生活？” | [[RAG]], [[Agentic RAG]], [[RAG 主题]] | 待写回：校正“RAG 没应用”的前提；RAG 在 Agent 前已用于企业搜索、知识库问答和文档检索，但它更像后台信息管道。Agent 把 RAG 接到目标、工具、状态、workflow、评估和行动闭环里，才让普通用户感知为可交付的 AI 产品能力。 |
+| 2026-05-20 | done | “近期值得学习的 AI / Agent 概念应录入哪些边界？” | [[Agent Skills]], [[Managed Agent Harness]], [[MCP Elicitation]], [[Agent Payments Protocol]], [[03 前沿追踪]] | 已录入 4 张概念卡和 3 份 official/source note；边界：优先沉淀能力包、托管运行外壳、MCP 结构化用户输入和 Agent 支付授权协议，不把产品 API、beta header 或前沿论文标题写成稳定概念。 |
 
 ## 写回模板
 

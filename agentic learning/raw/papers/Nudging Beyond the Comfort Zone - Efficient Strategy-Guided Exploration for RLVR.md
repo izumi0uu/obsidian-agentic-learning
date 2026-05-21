@@ -8,10 +8,10 @@ extracted: extracted/Nudging Beyond the Comfort Zone - Efficient Strategy-Guided
 arxiv: https://arxiv.org/abs/2605.15726
 doi: 10.48550/arXiv.2605.15726
 author:
-  - "Chanuk Lee"
-  - "Sangwoo Park"
-  - "Minki Kang"
-  - "Sung Ju Hwang"
+  - Chanuk Lee
+  - Sangwoo Park
+  - Minki Kang
+  - Sung Ju Hwang
 site: arXiv
 venue: arXiv 2026
 pages:

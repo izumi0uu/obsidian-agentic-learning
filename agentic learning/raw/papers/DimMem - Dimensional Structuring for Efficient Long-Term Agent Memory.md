@@ -8,11 +8,11 @@ extracted: extracted/DimMem - Dimensional Structuring for Efficient Long-Term Ag
 arxiv: https://arxiv.org/abs/2605.15759
 doi: 10.48550/arXiv.2605.15759
 author:
-  - "Wentao Qiu"
-  - "Haotian Hu"
-  - "Fanyi Wang"
-  - "Jinwei Kong"
-  - "Yu Zhang"
+  - Wentao Qiu
+  - Haotian Hu
+  - Fanyi Wang
+  - Jinwei Kong
+  - Yu Zhang
 site: arXiv
 venue: arXiv 2026
 pages:

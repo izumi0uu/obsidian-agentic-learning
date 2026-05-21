@@ -1,20 +1,20 @@
 # Concept Hierarchy Placement Audit closure — Completion Closure
 
-Generated: `2026-05-20T14:22:39Z`
+Generated: `2026-05-21T00:47:57Z`
 
 > Audit closure closes remaining concept-hierarchy-placement open reviews as backlog-backed defers. It does not write concept cards or create fallback parents.
 
 ## Summary
 
-- total_concepts: 146
-- reviewed_concepts: 146
+- total_concepts: 150
+- reviewed_concepts: 150
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0
 - open_writeback: 0
 - dry_run_planned: 0
-- defer_boundary_review: 24
-- deferred_with_backlog: 24
+- defer_boundary_review: 25
+- deferred_with_backlog: 25
 - concept_card_writes: 0
 - plugin_problems: 0
 - forbidden_up_edges: 0
@@ -47,6 +47,7 @@ Backlog home: `agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念�
 |---|---|---|---|---|
 | [[A2A]] | [[Agent]] | broad_anchor_not_approved | Protocol/ecosystem card; no approved protocol parent exists and Agent is intentionally not auto-approved. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[ACP]] | [[Agent]] | broad_anchor_not_approved | Protocol/ecosystem card; no approved protocol parent exists and Agent is intentionally not auto-approved. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
+| [[Agent Skills]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Browser Agent]] | [[Agent]] | broad_anchor_not_approved | Could be a kind of Agent, but Agent is not auto-approved and no narrower reviewed parent exists. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Code Execution Sandbox]] | [[Tool Use]] | security_runtime_not_tool_behavior | Sandbox/security runtime boundary; no approved sandbox/security parent exists. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Data Exfiltration]] | [[Prompt]] | security_risk_not_prompt | Security risk card; no approved security-risk parent exists and Prompt is not a safe parent. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |

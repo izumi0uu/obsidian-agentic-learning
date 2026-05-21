@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "taxonomy_placement_candidates",
-  "generated_at": "2026-05-20T14:22:39Z",
+  "generated_at": "2026-05-21T00:47:57Z",
   "input_review": "reports/concept-card-relation-map/concept-hierarchy-placement-review.json",
   "classification_stage": "conservative_candidates",
   "policy": {
@@ -34,10 +34,10 @@
     "write_policy": "No writeback in Conservative candidate generation. Candidates feed Candidate adjudication only."
   },
   "summary": {
-    "deferred_rows_considered": 26,
+    "deferred_rows_considered": 27,
     "approved_parent_count": 14,
     "generated_candidates": 2,
-    "suppressed_signals": 24,
+    "suppressed_signals": 25,
     "candidate_targets": {
       "Agent Workflow": 2
     },
@@ -115,6 +115,15 @@
       "signal_type": "broad_anchor_not_approved",
       "status": "suppressed_not_candidate",
       "reason": "ACP is a protocol/ecosystem card. `Agent` is intentionally not an auto-approved parent, and no approved protocol parent exists.",
+      "writeback_action": "none"
+    },
+    {
+      "source": "Agent Skills",
+      "source_path": "agentic learning/wiki/concepts/Agent Skills.md",
+      "target": null,
+      "signal_type": "no_conservative_approved_parent_signal",
+      "status": "suppressed_not_candidate",
+      "reason": "No conservative signal points to a Parent-whitelist review approved stable parent.",
       "writeback_action": "none"
     },
     {

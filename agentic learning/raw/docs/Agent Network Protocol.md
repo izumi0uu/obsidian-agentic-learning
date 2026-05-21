@@ -1,7 +1,7 @@
 ---
 type: source
 source_type: docs
-title: "Agent Network Protocol"
+title: Agent Network Protocol
 url: https://www.agent-network-protocol.com/
 github: https://github.com/agent-network-protocol/AgentNetworkProtocol
 site: Agent Network Protocol

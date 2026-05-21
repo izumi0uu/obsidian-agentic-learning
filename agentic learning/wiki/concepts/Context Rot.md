@@ -39,13 +39,13 @@ related:
 relations:
   - type: contrasts_with
     target: "[[Context Window]]"
-    note: "Context Window 是容量边界；Context Rot 是长输入中有效使用质量下降的风险。"
+    note: Context Window 是容量边界；Context Rot 是长输入中有效使用质量下降的风险。
   - type: risk_for
     target: "[[Context Engineering]]"
-    note: "上下文工程需要通过选择、结构化、去噪和压缩来降低 context rot。"
+    note: 上下文工程需要通过选择、结构化、去噪和压缩来降低 context rot。
   - type: related_to
     target: "[[Long-Horizon Context Engineering]]"
-    note: "长任务直接累积历史、工具结果和中间产物时，context rot 是核心风险之一。"
+    note: 长任务直接累积历史、工具结果和中间产物时，context rot 是核心风险之一。
 ---
 
 # Context Rot

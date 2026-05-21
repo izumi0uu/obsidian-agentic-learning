@@ -1,7 +1,7 @@
 ---
 type: source
 source_type: repo
-title: "Google Antigravity SDK Python"
+title: Google Antigravity SDK Python
 url: https://github.com/google-antigravity/antigravity-sdk-python
 author: google-antigravity
 site: github.com
@@ -15,7 +15,7 @@ updated: 2026-05-20
 last_checked: 2026-05-20
 freshness: volatile
 conflicts:
-  - "GitHub HEAD and DeepWiki indexed commit differed on 2026-05-20; use GitHub source for current API details."
+  - GitHub HEAD and DeepWiki indexed commit differed on 2026-05-20; use GitHub source for current API details.
 status: seed
 source:
   - https://github.com/google-antigravity/antigravity-sdk-python

@@ -8,9 +8,9 @@ extracted: extracted/Formal Methods Meet LLMs - Auditing, Monitoring, and Interv
 arxiv: https://arxiv.org/abs/2605.16198
 doi: 10.48550/arXiv.2605.16198
 author:
-  - "Parand A. Alamdari"
-  - "Toryn Q. Klassen"
-  - "Sheila A. McIlraith"
+  - Parand A. Alamdari
+  - Toryn Q. Klassen
+  - Sheila A. McIlraith
 site: arXiv
 venue: arXiv 2026
 pages:

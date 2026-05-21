@@ -1,20 +1,20 @@
 ---
 type: source
 source_type: paper
-title: "Differentiable Mixture-of-Agents Incentivizes Swarm Intelligence of Large Language Models"
+title: Differentiable Mixture-of-Agents Incentivizes Swarm Intelligence of Large Language Models
 url: https://arxiv.org/abs/2605.15706
 pdf: assets/Differentiable Mixture-of-Agents Incentivizes Swarm Intelligence of Large Language Models.pdf
 extracted: extracted/Differentiable Mixture-of-Agents Incentivizes Swarm Intelligence of Large Language Models.extracted.md
 arxiv: https://arxiv.org/abs/2605.15706
 doi: 10.48550/arXiv.2605.15706
 author:
-  - "Xingjian Wu"
-  - "Junkai Lu"
-  - "Siyu Yan"
-  - "Xiangfei Qiu"
-  - "Jilin Hu"
-  - "Chenjuan Guo"
-  - "Bin Yang"
+  - Xingjian Wu
+  - Junkai Lu
+  - Siyu Yan
+  - Xiangfei Qiu
+  - Jilin Hu
+  - Chenjuan Guo
+  - Bin Yang
 site: arXiv
 venue: arXiv 2026
 pages:
