@@ -1,18 +1,18 @@
 # Temporary Concept Relationship Map
 
-Generated: `2026-05-20T15:20:51Z`
+Generated: `2026-05-21T04:49:18Z`
 
 > 临时文件：用于后续概念层级开发评估。不要把候选边自动写回概念卡；每条 candidate 都需要单独人工/LLM 复核。
 
 ## Summary
 
-- total_concepts: 150
-- edge_counts: {'related_link': 881, 'body_link': 271, 'typed_relation': 53, 'taxonomy': 37}
-- typed_relation_counts: {'contrasts_with': 8, 'related_to': 12, 'representative_of': 1, 'based_on_intuition': 1, 'paired_with': 2, 'mechanism_for': 1, 'projects_from': 1, 'draws_from': 2, 'risk_for': 1, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 8, 'uses': 4, 'pattern_for': 1, 'specializes': 1, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
+- total_concepts: 152
+- edge_counts: {'related_link': 898, 'body_link': 273, 'typed_relation': 54, 'taxonomy': 39}
+- typed_relation_counts: {'contrasts_with': 8, 'related_to': 12, 'representative_of': 2, 'based_on_intuition': 1, 'paired_with': 2, 'mechanism_for': 1, 'projects_from': 1, 'draws_from': 2, 'risk_for': 1, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 8, 'uses': 4, 'pattern_for': 1, 'specializes': 1, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
 - concepts_without_up: 113
 - core_orphans: 0
 - weakly_connected_concepts: 1
-- dangling_core_targets: 29
+- dangling_core_targets: 30
 - candidate_edges: 78
 - taxonomy_candidates: 11
 - topic_family_review_signals: 67
@@ -21,11 +21,13 @@ Generated: `2026-05-20T15:20:51Z`
 
 | Source | relation | Target | Evidence | Note |
 |---|---|---|---|---|
+| [[Agent Evaluation Benchmark]] | up | [[Benchmark]] | frontmatter.up |  |
 | [[AgentScope]] | up | [[Agent Framework]] | frontmatter.up |  |
 | [[Agentic RAG]] | up | [[RAG]] | frontmatter.up |  |
 | [[Agentic Retrieval]] | up | [[Retriever]] | frontmatter.up |  |
 | [[Audit Log]] | up | [[Observability]] | frontmatter.up |  |
 | [[AutoGen]] | up | [[Agent Framework]] | frontmatter.up |  |
+| [[BFCL]] | up | [[Agent Evaluation Benchmark]] | frontmatter.up |  |
 | [[BM25]] | up | [[Sparse Retrieval]] | frontmatter.up |  |
 | [[CAMEL]] | up | [[Agent Framework]] | frontmatter.up |  |
 | [[Computer Use]] | up | [[Tool Use]] | frontmatter.up |  |
@@ -69,6 +71,7 @@ Generated: `2026-05-20T15:20:51Z`
 | [[Agent Robustness]] | related_to | [[Guardrails]] | frontmatter.relations | Guardrails 可以提高部分扰动下的可控性，但安全拦截机制不等于鲁棒性指标。 |
 | [[Agent Robustness]] | related_to | [[Task Success Rate]] | frontmatter.relations | Agent Robustness 常用扰动条件下的成功率下降幅度来观察；Task Success Rate 是被观察指标，不是鲁棒性本身。 |
 | [[Agent Robustness]] | related_to | [[Trajectory Evaluation]] | frontmatter.relations | 工具超时、异常返回、噪声输入和恢复动作都需要看 trajectory，而不只看最终输出。 |
+| [[BFCL]] | representative_of | [[Agent Evaluation Benchmark]] | frontmatter.relations | BFCL 是工具/function calling 方向的代表性 Agent evaluation benchmark；代表关系不等于 AST、state check 或 harness 组件本身。 |
 | [[BM25]] | based_on_intuition | [[TF-IDF]] | frontmatter.relations | BM25 延续 TF-IDF 的词项权重直觉，但加入长度归一化和饱和控制。 |
 | [[BM25]] | related_to | [[Hybrid Search]] | frontmatter.relations | Hybrid Search 常把 BM25 作为 sparse route 或关键词侧候选。 |
 | [[BM25]] | representative_of | [[Sparse Retrieval]] | frontmatter.relations | BM25 是 sparse retrieval 的常见代表算法。 |
@@ -335,6 +338,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[Agent Framework]] | related | Agent Framework 全量选型对比 2026-05 | related_link |
 | [[AgentScope]] | related | Agent Framework 编排范式对比 | related_link |
 | [[AutoGen]] | related | Agent Framework 编排范式对比 | related_link |
+| [[BFCL]] | related | GAIA Benchmark | related_link |
 | [[CAMEL]] | related | Agent Framework 编排范式对比 | related_link |
 | [[Context Rot]] | related | LLM 上下文限制与突破条件 | related_link |
 | [[GraphRAG]] | related | RAG 类型对比 | related_link |

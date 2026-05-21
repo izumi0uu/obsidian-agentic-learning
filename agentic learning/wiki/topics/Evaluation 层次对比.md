@@ -6,10 +6,12 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-18
+updated: 2026-05-21
 source:
   - "[[Evaluation]]"
   - "[[Benchmark]]"
+  - "[[Agent Evaluation Benchmark]]"
+  - "[[BFCL]]"
   - "[[Eval Harness]]"
   - "[[LLM-as-Judge]]"
   - "[[Task Success Rate]]"
@@ -19,6 +21,8 @@ source:
 evidence:
   - "[[Evaluation#证据锚点]]"
   - "[[Benchmark#证据锚点]]"
+  - "[[Agent Evaluation Benchmark#证据锚点]]"
+  - "[[BFCL#证据锚点]]"
   - "[[Eval Harness#证据锚点]]"
   - "[[LLM-as-Judge#证据锚点]]"
   - "[[Task Success Rate#证据锚点]]"
@@ -26,8 +30,10 @@ evidence:
   - "[[RAG Evaluation#证据锚点]]"
   - "[[Trajectory Evaluation#证据锚点]]"
 related:
+  - "[[Agent Evaluation Benchmark]]"
   - "[[Trace]]"
   - "[[Observability]]"
+  - "[[BFCL]]"
   - "[[Agent Robustness]]"
   - "[[Replay]]"
   - "[[Patch Validation]]"
@@ -38,9 +44,9 @@ related:
 
 ## 一句话总览
 
-这页把 Agent 评测拆成层次：[[Evaluation]] 是总的判断过程，[[Benchmark]] 给固定任务协议，[[Eval Harness]] 把任务跑成可复现实验，[[Task Success Rate]] 是端到端结果指标，[[Agent Robustness]] 是扰动条件下的系统性质，[[LLM-as-Judge]] 是一种语义评估器，[[RAG Evaluation]] 和 [[Trajectory Evaluation]] 分别把评测下沉到检索链路和行动轨迹。
+这页把 Agent 评测拆成层次：[[Evaluation]] 是总的判断过程，[[Benchmark]] 给固定任务协议，[[Agent Evaluation Benchmark]] 是面向智能体行动能力的 benchmark 子类，[[BFCL]] / [[GAIA Benchmark]] / AIME 这类 benchmark 或数据集分别测不同能力面，[[Eval Harness]] 把任务跑成可复现实验，[[Task Success Rate]] 是端到端结果指标，[[Agent Robustness]] 是扰动条件下的系统性质，[[LLM-as-Judge]] 是一种语义评估器，[[RAG Evaluation]] 和 [[Trajectory Evaluation]] 分别把评测下沉到检索链路和行动轨迹。
 
-最小边界：benchmark 不是 evaluation 全部；success rate 不是失败解释；robustness 不是单点成功率；judge 不是最终真理；harness 不是指标，而是把样例、运行、trace、score 和 replay 连接起来的工程外壳。
+最小边界：benchmark 不是 evaluation 全部；dataset loader 不是 evaluator；success rate 不是失败解释；win rate 不是绝对正确率；robustness 不是单点成功率；judge 不是最终真理；harness 不是指标，而是把样例、运行、trace、score 和 replay 连接起来的工程外壳。
 
 ## 为什么这组值得对比
 
@@ -70,12 +76,62 @@ evaluation goal
 
 不同概念的区别，不是“谁更高级”，而是它切入这条链路的哪一层。
 
+## 智能体评估体系组件图
+
+> 这一图是用户提供图的 Mermaid 转写 / evaluation framework sketch，不是论文、官方文档或 source note 证据。它的价值是把 benchmark、评分器、harness 组件和报告输出切开；用内联 Mermaid 保留，是为了避免依赖被 `.gitignore` 排除的本地图片资产。
+
+```mermaid
+flowchart TD
+  A[智能体评估体系] --> B[工具调用能力<br/>BFCL]
+  A --> C[通用 AI 能力<br/>GAIA]
+  A --> D[数据生成质量<br/>Data Generation]
+
+  B --> B1[AST 匹配算法]
+  B --> B2[调用类别]
+  B --> B3[准确率指标]
+
+  C --> C1[Quasi-Exact Match]
+  C --> C2[难度级别]
+  C --> C3[多模态数据]
+
+  D --> D1[LLM Judge]
+  D --> D2[Win Rate]
+  D --> D3[人工验证]
+
+  B1 --> R[评估报告]
+  B2 --> R
+  B3 --> R
+  C1 --> R
+  C2 --> R
+  C3 --> R
+  D1 --> R
+  D2 --> R
+  D3 --> R
+```
+
+图中最容易混的地方，是把不同层的东西画成同一排：
+
+| 图中项 | 本 vault 落点 | 它回答什么 | 不应误解为 |
+|---|---|---|---|
+| [[BFCL]] | benchmark / tool-calling eval source + concept | 工具调用是否结构正确、参数正确、能否多轮多步执行 | 完整 Agent 产品可靠性 |
+| [[GAIA Benchmark]] | raw benchmark source；已被 [[Evaluation]] / [[Task Success Rate]] 引用 | 通用 assistant 是否能完成真实组合任务 | 工具调用专项榜或 trajectory-quality benchmark |
+| AIME | reasoning / math benchmark 数据来源 | 数学推理答案是否正确 | Agent harness 或工具调用评测 |
+| AIME 数据集加载器 | [[Eval Harness]] 的 dataset loader 组件 | 如何把题目、答案、split、metadata 装入 runner | evaluator / scorer |
+| AST / quasi-exact / accuracy | scorer / checker / metric | 如何判断某类答案是否匹配 | benchmark 本身 |
+| [[LLM-as-Judge]] | evaluator | 对开放式输出或轨迹按 rubric 评分 | 绝对真理或唯一评估 |
+| Win Rate | pairwise comparison metric | 版本 A 相对版本 B 在样本上的胜出比例 | 绝对正确率或任务完成率 |
+| 人工验证 | human review / calibration | 高风险、开放式或 judge 争议样本的人类复核 | 自动化 harness 的替代品 |
+
+小边界：`BFCL / GAIA / AIME` 属于任务或数据层；`AST / quasi-exact / LLM judge / Win Rate / 人工验证` 属于判定层；`数据集加载器 / runner / result store / report` 属于 harness 执行层。把这三层混在一起，会导致“以为换了评分器就是换了 benchmark”，或“以为加载了 AIME 数据就完成了推理评估”。
+
 ## 核心区别表
 
 | 概念 | 介入点 | 时序 / loop | 输入 | 输出 | 证据锚点 |
 |---|---|---|---|---|---|
 | [[Evaluation]] | 总体判断目标、样例和标准 | 贯穿开发、上线、复盘 | 任务目标、数据、rubric、trace、业务信号 | 是否有效/稳定/安全的判断 | [[Evaluation#证据锚点]] |
 | [[Benchmark]] | 固定任务集和评分协议 | 评测前定义，运行后报告 | 标准任务、环境限制、评分规则 | 可比较分数或通过率 | [[Benchmark#证据锚点]] |
+| [[Agent Evaluation Benchmark]] | 面向 Agent 行动能力的 benchmark 家族 | 评测前定义，运行后用 harness/报告比较 | 工具、环境、任务目标、checker、运行协议 | Agent 能力面的可比较结果 | [[Agent Evaluation Benchmark#证据锚点]] |
+| [[BFCL]] | 工具调用 benchmark | 生成 tool call 后执行 checker / scoring | 函数文档、用户请求、model tool call、工具状态 | tool-calling accuracy、分类分数、失败样本 | [[BFCL#证据锚点]] |
 | [[Eval Harness]] | 运行、记录、评分和报告的工程外壳 | 批量执行任务并保存证据 | dataset、runner、environment、scorer | trace、score、diff、报告、失败样本 | [[Eval Harness#证据锚点]] |
 | [[Task Success Rate]] | 端到端任务完成指标 | 任务执行后统计 | 成功判定、总任务数、通过样本 | 成功比例 | [[Task Success Rate#证据锚点]] |
 | [[Agent Robustness]] | 扰动条件下的系统级稳定性和恢复能力 | 正常集与故障/噪声/攻击集对比 | failure set、noisy observation、tool error、trace、outcome | 成功率下降、恢复质量、越权/停止/升级行为 | [[Agent Robustness#证据锚点]] |
@@ -93,6 +149,18 @@ evaluation goal
 
 [[Benchmark]] 提供“测什么、怎么判、怎么报告”；[[Eval Harness]] 负责“怎么稳定跑、怎么收集 trace、怎么保存 artifacts、怎么比较版本”。没有 harness，benchmark 容易变成一次性手动跑题；没有 benchmark 或业务 dataset，harness 又缺少稳定比较对象。
 
+### Benchmark vs Agent Evaluation Benchmark
+
+[[Benchmark]] 是总类，任何固定任务集和评分协议都可以属于它。[[Agent Evaluation Benchmark]] 是窄类，只有当任务协议明确评估 Agent 的工具使用、环境交互、多步任务、通用助手能力、协作或 computer-use 行为时才进入这里。
+
+边界：[[LLM-as-Judge]]、Win Rate、AST matching、quasi-exact matching、AIME 数据集加载器都可以参与 Agent evaluation report，但它们分别是 evaluator、metric、checker 或 loader，不是 Agent Evaluation Benchmark 的子类。
+
+### BFCL vs GAIA vs AIME
+
+[[BFCL]]、[[GAIA Benchmark]] 和 AIME 都可以进入评估体系，但它们测的不是同一件事。BFCL 更偏 tool/function calling：函数选择、参数、并行/多函数、多轮状态和部分 agentic 工具路径，因此适合挂到 [[Agent Evaluation Benchmark]] 的工具调用分支。GAIA 更偏 general AI assistant：真实问题、推理、多模态、网页/文件/工具组合和最终答案；当前 vault 中 GAIA 是 raw source 标题，暂不创建同名 concept 以避免标题碰撞。AIME 更偏数学推理 benchmark：题目和标准答案可以被 loader 放进 harness，但 loader 只负责供给样本，不负责评分。
+
+边界：不要因为三者都能出现在同一个 eval report，就把它们当作同类能力指标。报告可以聚合多路结果，概念边界仍然要分开。
+
 ### Task Success Rate vs Evaluation
 
 [[Task Success Rate]] 是入口指标，说明任务完成比例；[[Evaluation]] 还要解释失败原因、过程风险、成本、延迟、用户体验和回归情况。一个 Agent 可以 success rate 上升，但同时多次越权、成本暴涨或依赖偶然网页状态。
@@ -105,6 +173,12 @@ evaluation goal
 
 [[LLM-as-Judge]] 是 evaluator 家族中的一种，适合语义质量、忠实性、解释清晰度和弱监督筛查；它不替代规则、测试、人审、业务指标和安全检查。高风险任务应优先用确定性 checker，judge 作为辅助信号。
 
+### Win Rate vs Task Success Rate
+
+Win Rate 常用于 pairwise comparison：同一批样本上，让 judge、人类或规则比较 A/B 两个输出，统计 A 赢、B 赢或平局。它适合回答“新版本是否更受偏好/更符合 rubric”，但不等于 [[Task Success Rate]]。Task Success Rate 要先定义成功 checker；Win Rate 可以在两个都不完美的答案之间选更好者。
+
+边界：win rate 高不代表绝对正确。如果两个版本都经常错，但 A 的表达更顺、更讨 judge 喜欢，A 仍可能赢。因此 win rate 应和 hard checker、人工校准、失败分类一起看。
+
 ### RAG Evaluation vs Trajectory Evaluation
 
 [[RAG Evaluation]] 的核心问题是证据链：有没有检到、上下文是否完整、引用是否支持答案。[[Trajectory Evaluation]] 的核心问题是行动路径：工具顺序、权限、观察读取、失败恢复和副作用是否可接受。Agentic RAG 可能同时需要两者。
@@ -113,6 +187,7 @@ evaluation goal
 
 ```text
 Benchmark:           define tasks + protocol -> run -> report comparable score
+Dataset loader:      benchmark files -> normalized cases/splits/metadata
 Eval Harness:        dataset -> runner/environment -> trace/artifacts -> scorer -> report/replay
 Task Success Rate:   completed tasks / all tasks after checker
 Agent Robustness:    normal set vs perturbation set -> degradation/recovery/safety
@@ -138,6 +213,7 @@ Trajectory Eval:     trace/trajectory -> rules/judge/human -> process judgment
 | Agent 评测概念 | 类比 | 类比边界 |
 |---|---|---|
 | [[Benchmark]] | 固定驾考路线和评分规则 | 现实路况更复杂，不能只信驾考成绩 |
+| [[BFCL]] | 专门考换挡、转向、刹车这些操作动作是否正确 | 操作动作合格不代表完整出行任务可靠 |
 | [[Eval Harness]] | 考试组织系统：发车、记录路线、计时、保存违规证据 | harness 是运行装置，不是评分标准本身 |
 | [[Task Success Rate]] | 有多少次成功到达终点 | 不说明是否闯红灯或耗油过高 |
 | [[Agent Robustness]] | 遇到封路、坏天气、导航错误时还能不能安全到达或正确停靠 | 只在定义好的扰动分布里成立，不是无限保证 |
@@ -169,11 +245,13 @@ Trajectory Eval:     trace/trajectory -> rules/judge/human -> process judgment
 - 都不能单独保证生产可靠性；真实系统还需要监控、权限、回滚、人工升级和安全评审。
 - 都不是静态一次性动作；有价值的 evaluation 会把失败样本持续写回 regression / replay。
 - 都不是无证据的主观印象；至少应能回到任务、trace、source note、checker、rubric 或人工记录。
+- 都不是同一层对象：任务集、loader、scorer、metric 和 report 是不同组件，不能互相冒充。
 
 ## 证据锚点
 
-- Concept anchors: [[Evaluation#证据锚点]], [[Benchmark#证据锚点]], [[Eval Harness#证据锚点]], [[LLM-as-Judge#证据锚点]], [[Task Success Rate#证据锚点]], [[Agent Robustness#证据锚点]], [[RAG Evaluation#证据锚点]], [[Trajectory Evaluation#证据锚点]]
-- Source examples: [[GAIA Benchmark#为什么收]], [[SWE-bench#为什么收]], [[LangSmith Evaluation and Observability#一句话]], [[Langfuse Observability and Evaluation#一句话]], [[OpenAI Agents SDK 文档#Tracing 补充]], [[Microsoft RAG 官方文档#一句话]]
+- Concept anchors: [[Evaluation#证据锚点]], [[Benchmark#证据锚点]], [[BFCL#证据锚点]], [[Eval Harness#证据锚点]], [[LLM-as-Judge#证据锚点]], [[Task Success Rate#证据锚点]], [[Agent Robustness#证据锚点]], [[RAG Evaluation#证据锚点]], [[Trajectory Evaluation#证据锚点]]
+- Source examples: [[GAIA Benchmark#为什么收]], [[SWE-bench#为什么收]], [[BFCL - Berkeley Function Calling Leaderboard#关键事实]], [[LangSmith Evaluation and Observability#一句话]], [[Langfuse Observability and Evaluation#一句话]], [[OpenAI Agents SDK 文档#Tracing 补充]], [[Microsoft RAG 官方文档#一句话]]
+- Diagram: the user-provided evaluation-system image is preserved as inline Mermaid in this page; it is a learning sketch, not source evidence.
 - Evidence type: existing concept-card synthesis + benchmark/docs/source notes + clearly labeled engineering synthesis + learning analogy.
 - Confidence: medium-high for layer boundaries; medium for modern-system workflow details because platform能力和 judge 实践会变化。
 - Boundary: “evaluation 闭环”是本页综合框架；具体 benchmark 分数、平台字段和最新 judge 能力需要另行复查。
@@ -181,15 +259,18 @@ Trajectory Eval:     trace/trajectory -> rules/judge/human -> process judgment
 ## 复习触发
 
 1. 为什么 benchmark 高分不等于真实业务 evaluation 通过？
-2. 为什么正常 Task Success Rate 相同的两个 Agent，Agent Robustness 可能完全不同？
-3. LLM-as-Judge 适合判断什么？什么时候必须让规则、测试或人审优先？
-4. RAG Evaluation 和 Trajectory Evaluation 分别会看 trace 里的哪些不同证据？
-5. 把一次线上失败转成回归样本时，Eval Harness 至少要保存什么？
+2. BFCL、GAIA、AIME 分别更适合测 Agent / LLM 的哪一类能力？
+3. 为什么正常 Task Success Rate 相同的两个 Agent，Agent Robustness 可能完全不同？
+4. LLM-as-Judge 适合判断什么？什么时候必须让规则、测试或人审优先？
+5. RAG Evaluation 和 Trajectory Evaluation 分别会看 trace 里的哪些不同证据？
+6. 把一次线上失败转成回归样本时，Eval Harness 至少要保存什么？
 
 ## 相关链接
 
 - [[Evaluation]]
+- [[Agent Evaluation Benchmark]]
 - [[Benchmark]]
+- [[BFCL]]
 - [[Eval Harness]]
 - [[LLM-as-Judge]]
 - [[Task Success Rate]]

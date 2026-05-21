@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-20
+updated: 2026-05-21
 related:
   - "[[Agent]]"
   - "[[前沿主源清单]]"
@@ -21,6 +21,7 @@ related:
   - "[[Prompt Engineering]]"
   - "[[Planning]]"
   - "[[Evaluation]]"
+  - "[[BFCL]]"
   - "[[ReAct Plan-and-Solve Reflexion 对比]]"
   - "[[Agent 工程分层对比]]"
   - "[[Agent Framework 编排范式对比]]"
@@ -117,6 +118,8 @@ LLM 地基：
 ## 可靠性
 
 - [[Evaluation]]：如何检查 Agent 是否稳定有效。
+- [[Agent Evaluation Benchmark]]：理解面向智能体行动能力的 benchmark 家族，区分任务协议、评估器、指标和 harness 组件。
+- [[BFCL]]：理解 tool/function calling benchmark 如何评估函数选择、参数、相关性、多轮调用和部分 agentic 工具路径。
 - [[Agent Robustness]]：理解 Agent 在工具失败、噪声、用户变化、攻击输入和计划偏离下是否还能稳定推进、恢复和守住边界。
 - [[RAG Evaluation]]：理解 RAG 失败要分层评估。
 - [[Observability]]：理解 Agent 系统的 trace、span、日志、成本、延迟和错误如何被实时观察。
@@ -155,7 +158,7 @@ LLM 地基：
 - [[Coding Agent 执行边界对比]]：区分 coding agent、repo context、patch validation、sandbox、code execution sandbox 和 AGENTS.md。
 - [[Coding Agent 为什么不用传统 RAG]]：解释 Codex CLI / Claude Code 这类客户端为什么更偏工具化 repo context gathering，而不是让用户维护可见的传统 RAG pipeline。
 - [[OpenClaw Repo vs Hermes Agent]]：区分 OpenClaw 的 Gateway-first personal assistant harness 和 Hermes 的 runtime-first self-improving agent harness。
-- [[Evaluation 层次对比]]：区分 evaluation、benchmark、eval harness、LLM-as-Judge、task success rate、RAG evaluation 和 trajectory evaluation。
+- [[Evaluation 层次对比]]：区分 evaluation、benchmark、BFCL/GAIA/AIME 任务层、eval harness、LLM-as-Judge、Win Rate、task success rate、RAG evaluation 和 trajectory evaluation。
 - [[Observability Audit 对比]]：区分 observability、trace、audit log、replay 和 OpenTelemetry GenAI。
 - [[ReAct Plan-and-Solve Reflexion 对比]]：从“行动前计划 / 执行中观察校正 / 执行后反思经验”切开 ReAct、Plan-and-Solve 和 Reflexion。
 - [[Environment Observation 类型对比]]：区分 Environment、Observation、Tool Result 等反馈来源。

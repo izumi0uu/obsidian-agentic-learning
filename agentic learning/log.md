@@ -1447,3 +1447,13 @@ related:
 - Updated [[LLM 主题]], [[03 前沿追踪]], and [[04 页面目录]] so the topic is reachable from training/post-training and frontier navigation.
 - Preserved terminology boundary: `PBRFT` is recorded only as user-context shorthand for preference-style single-answer optimization, not as a stable concept card or alias.
 - Boundary: simple topic/navigation update; no concept card, alias-map, schema/template, or taxonomy relationship writeback.
+
+## [2026-05-21] concept-ingest | Agent evaluation benchmark and evaluator layer boundaries
+
+- Created raw source note [[BFCL - Berkeley Function Calling Leaderboard]] and concept card [[BFCL]] for Berkeley Function Calling Leaderboard as a tool/function calling benchmark.
+- Converted the user-provided intelligent-agent evaluation system diagram into inline Mermaid in [[Evaluation 层次对比]], explicitly marked as a learning synthesis rather than source evidence.
+- Updated [[Benchmark]], [[Eval Harness]], [[LLM-as-Judge]], and [[Task Success Rate]] to separate benchmark/task layer, dataset loader layer, scorer/evaluator layer, metric layer, and report output.
+- Boundary decisions: [[GAIA Benchmark]] remains the existing raw benchmark source rather than a duplicate concept card; `LLM Judge` is folded into [[LLM-as-Judge]] aliases; `Win Rate` is folded as a pairwise metric boundary rather than a weak concept card; `AIME 数据集加载器` is folded into [[Eval Harness]] as a dataset-loader example rather than a concept card.
+- Terminology and taxonomy: [[Agent Evaluation Benchmark]] is now the strict benchmark-family child of [[Benchmark]], and [[BFCL]] is its tool/function-calling benchmark child. `LLM Judge` is an alias of [[LLM-as-Judge]]; Win Rate and AIME 数据集加载器 are kept as metric / loader boundaries rather than weak concept cards. No alias-map or interview auto-link behavior was changed.
+- Updated navigation: [[资料收集索引]], [[04 页面目录]], and [[Agent 知识地图]].
+- Validation: request-meta audit PASS with 1207 files / 0 hits; concept-card audit PASS with 152 cards / needs action 0; comparison-topic audit PASS with 25 pages / needs action 0; taxonomy validate PASS with 152 concepts / 0 open review / 0 open writeback / 2 relation apply rows; plugin contract, control-surface sync, and baseline-map validation PASS; search index regenerated and `--check` PASS with 1209 documents; `git diff --check` PASS.

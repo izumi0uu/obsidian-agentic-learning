@@ -1,6 +1,6 @@
 # Concept Relation Decision Ledger
 
-Generated: `2026-05-20T15:20:51Z`
+Generated: `2026-05-21T04:48:23Z`
 
 > 逐条判定台账：把临时图候选边分成 accepted taxonomy、rejected taxonomy、adjacency only、duplicate signal 和 deferred。只有 `writeback_action=add_up` 的行可以进入后续写回；`already_present` 表示本轮小批量已落地或卡片已有该 `up`；`topic_family_review` 永远不能直接写入 `up`。
 

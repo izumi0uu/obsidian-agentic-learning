@@ -35,6 +35,7 @@ WIKILINK_RE = re.compile(r"\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]")
 # child card's one-line/body describes a member/subtype/instance of the parent
 # family, and the parent is already a stable concept card.
 ACCEPT_TAXONOMY: dict[tuple[str, str], str] = {
+    ("Agent Evaluation Benchmark", "Benchmark"): "Agent Evaluation Benchmark is a benchmark subtype focused on agent/assistant action tasks, environments, tools, and scoring protocols.",
     ("AgentScope", "Agent Framework"): "AgentScope is an engineering platform/framework in the Agent Framework family.",
     ("Agentic RAG", "RAG"): "Agentic RAG is a RAG mode where an agent controls retrieval decisions.",
     ("Agentic Retrieval", "Retriever"): "Agentic Retrieval is a retrieval-layer pattern; Retriever is the broader retrieval component family.",
@@ -56,6 +57,7 @@ ACCEPT_TAXONOMY: dict[tuple[str, str], str] = {
     ("Semantic Memory", "Memory"): "Semantic memory is a subtype of memory for stable facts/preferences/concepts.",
     ("Tool Calling", "Tool Use"): "Tool Calling is a structured form of tool use.",
     ("Trajectory Evaluation", "Evaluation"): "Trajectory Evaluation is evaluation of an agent's action process rather than only final output.",
+    ("BFCL", "Agent Evaluation Benchmark"): "BFCL is a function/tool-calling benchmark and a representative member of the Agent Evaluation Benchmark family.",
     # Lower-confidence title-only candidates accepted by semantic boundary, but
     # kept outside the default first small writeback batch unless the limit is raised.
     ("Computer Use", "Tool Use"): "Computer Use is a tool-use mode where the agent operates browser/desktop/terminal surfaces.",

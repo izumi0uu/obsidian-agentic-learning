@@ -71,6 +71,8 @@ REVIEW_STATUSES = {
 STABLE_PARENT_WHITELIST = [
     "Agent Framework",
     "Agent Workflow",
+    "Benchmark",
+    "Agent Evaluation Benchmark",
     "Tool Use",
     "Observability",
     "RAG",
@@ -113,6 +115,16 @@ STABLE_PARENT_WHITELIST_REVIEW = {
         "role": "agent_execution_structure_parent",
         "reason": "Explains controllable stages, branches, loops, approvals, and handoffs; safe parent for workflow patterns/structures, not for runtime implementations.",
         "guard": "Do not classify runtime engines or observability standards under Agent Workflow; use relations when something executes or supports a workflow.",
+    },
+    "Benchmark": {
+        "role": "evaluation_task_protocol_parent",
+        "reason": "Explains fixed task sets, environments, scoring rules, and reporting protocols; safe parent for benchmark families, not metrics/evaluators/loaders.",
+        "guard": "Do not classify LLM judges, win-rate metrics, dataset loaders, reports, or trace objects under Benchmark merely because benchmark reports use them.",
+    },
+    "Agent Evaluation Benchmark": {
+        "role": "agent_evaluation_benchmark_parent",
+        "reason": "Explains benchmark families whose tasks/protocols evaluate agent or assistant action capability: tool use, environment interaction, multi-step tasks, computer use, or collaboration.",
+        "guard": "Do not classify metrics, checkers, evaluator models, dataset loaders, or generic math/QA datasets under Agent Evaluation Benchmark unless the card itself is a benchmark/task protocol for Agent action capability.",
     },
     "Tool Use": {
         "role": "tool_behavior_parent",

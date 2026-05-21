@@ -1,24 +1,24 @@
 {
   "schema_version": 1,
   "artifact_type": "temporary_concept_relationship_map",
-  "generated_at": "2026-05-20T14:22:20Z",
+  "generated_at": "2026-05-21T04:48:22Z",
   "scope": {
     "concept_dir": "agentic learning/wiki/concepts",
     "temporary": true,
     "write_policy": "Do not write these candidates into concept cards without a separate review task."
   },
   "summary": {
-    "total_concepts": 146,
+    "total_concepts": 152,
     "edge_counts": {
-      "related_link": 852,
-      "body_link": 270,
-      "typed_relation": 53,
-      "taxonomy": 37
+      "related_link": 898,
+      "body_link": 273,
+      "typed_relation": 54,
+      "taxonomy": 39
     },
     "typed_relation_counts": {
       "contrasts_with": 8,
       "related_to": 12,
-      "representative_of": 1,
+      "representative_of": 2,
       "based_on_intuition": 1,
       "paired_with": 2,
       "mechanism_for": 1,
@@ -39,10 +39,10 @@
       "composed_into": 2,
       "foundational_for": 1
     },
-    "concepts_without_up": 109,
+    "concepts_without_up": 113,
     "core_orphans": 0,
     "weakly_connected_concepts": 1,
-    "dangling_core_targets": 29,
+    "dangling_core_targets": 30,
     "candidate_edges": 78,
     "taxonomy_candidates": 11,
     "topic_family_review_signals": 67
@@ -198,6 +198,37 @@
       ]
     },
     {
+      "id": "Agent Evaluation Benchmark",
+      "title": "Agent Evaluation Benchmark",
+      "file": "agentic learning/wiki/concepts/Agent Evaluation Benchmark.md",
+      "topics": [
+        "evaluation",
+        "agent",
+        "benchmark"
+      ],
+      "status": "growing",
+      "freshness": "watch",
+      "aliases": [
+        "智能体评估基准",
+        "Agent Benchmark",
+        "Agentic Benchmark",
+        "Agentic Evaluation Benchmark"
+      ],
+      "source_count": 5,
+      "evidence_count": 7,
+      "up": [
+        "Benchmark"
+      ],
+      "related": [
+        "Benchmark",
+        "Evaluation",
+        "BFCL",
+        "Eval Harness",
+        "LLM-as-Judge",
+        "Task Success Rate"
+      ]
+    },
+    {
       "id": "Agent Framework",
       "title": "Agent Framework",
       "file": "agentic learning/wiki/concepts/Agent Framework.md",
@@ -238,8 +269,8 @@
       "status": "seed",
       "freshness": "watch",
       "aliases": [],
-      "source_count": 6,
-      "evidence_count": 6,
+      "source_count": 7,
+      "evidence_count": 7,
       "up": [],
       "related": [
         "Agent",
@@ -252,7 +283,9 @@
         "Repo Context",
         "Eval Harness",
         "Tool Registry",
-        "Tool Poisoning"
+        "Tool Poisoning",
+        "Agent Skills",
+        "Managed Agent Harness"
       ]
     },
     {
@@ -308,6 +341,41 @@
       ]
     },
     {
+      "id": "Agent Payments Protocol",
+      "title": "Agent Payments Protocol",
+      "file": "agentic learning/wiki/concepts/Agent Payments Protocol.md",
+      "topics": [
+        "agent",
+        "protocol",
+        "payments",
+        "security",
+        "frontier"
+      ],
+      "status": "seed",
+      "freshness": "volatile",
+      "aliases": [
+        "AP2",
+        "Agent Payments Protocol",
+        "Agent Payment Protocol",
+        "Agentic Payment Protocol",
+        "Agent 支付协议",
+        "代理支付协议",
+        "智能体支付协议"
+      ],
+      "source_count": 1,
+      "evidence_count": 1,
+      "up": [],
+      "related": [
+        "A2A",
+        "MCP",
+        "Approval Gate",
+        "Tool Permissioning",
+        "Policy Engine",
+        "Audit Log",
+        "Data Exfiltration"
+      ]
+    },
+    {
       "id": "Agent Robustness",
       "title": "Agent Robustness",
       "file": "agentic learning/wiki/concepts/Agent Robustness.md",
@@ -339,6 +407,38 @@
         "Trajectory Evaluation",
         "Trace",
         "Guardrails",
+        "Tool Calling"
+      ]
+    },
+    {
+      "id": "Agent Skills",
+      "title": "Agent Skills",
+      "file": "agentic learning/wiki/concepts/Agent Skills.md",
+      "topics": [
+        "agent",
+        "skills",
+        "context-engineering",
+        "security"
+      ],
+      "status": "growing",
+      "freshness": "watch",
+      "aliases": [
+        "Agent Skill",
+        "Agent Skills",
+        "AI Agent Skills",
+        "Agent 技能",
+        "技能包",
+        "SKILL.md"
+      ],
+      "source_count": 4,
+      "evidence_count": 4,
+      "up": [],
+      "related": [
+        "Agent Harness",
+        "Progressive Disclosure",
+        "Tool Registry",
+        "Tool Poisoning",
+        "MCP",
         "Tool Calling"
       ]
     },
@@ -580,6 +680,40 @@
       ]
     },
     {
+      "id": "BFCL",
+      "title": "BFCL",
+      "file": "agentic learning/wiki/concepts/BFCL.md",
+      "topics": [
+        "evaluation",
+        "agent",
+        "tool-use",
+        "benchmark"
+      ],
+      "status": "seed",
+      "freshness": "watch",
+      "aliases": [
+        "Berkeley Function Calling Leaderboard",
+        "Berkeley Function-Calling Leaderboard",
+        "BFCL 工具调用评测",
+        "Function Calling Leaderboard"
+      ],
+      "source_count": 1,
+      "evidence_count": 5,
+      "up": [
+        "Agent Evaluation Benchmark"
+      ],
+      "related": [
+        "Agent Evaluation Benchmark",
+        "Tool Calling",
+        "Tool Use",
+        "Benchmark",
+        "Eval Harness",
+        "Trajectory Evaluation",
+        "Agent Robustness",
+        "GAIA Benchmark"
+      ]
+    },
+    {
       "id": "BM25",
       "title": "BM25",
       "file": "agentic learning/wiki/concepts/BM25.md",
@@ -617,12 +751,14 @@
       "status": "growing",
       "freshness": "stable",
       "aliases": [],
-      "source_count": 2,
-      "evidence_count": 2,
+      "source_count": 3,
+      "evidence_count": 3,
       "up": [],
       "related": [
         "Evaluation",
-        "Task Success Rate"
+        "Agent Evaluation Benchmark",
+        "Task Success Rate",
+        "BFCL"
       ]
     },
     {
@@ -1767,7 +1903,12 @@
       ],
       "status": "growing",
       "freshness": "stable",
-      "aliases": [],
+      "aliases": [
+        "LLM Judge",
+        "LLM-as-a-Judge",
+        "LLM 评估器",
+        "LLM 裁判"
+      ],
       "source_count": 2,
       "evidence_count": 6,
       "up": [],
@@ -1941,18 +2082,53 @@
         "Model Context Protocol",
         "模型上下文协议"
       ],
-      "source_count": 6,
-      "evidence_count": 6,
+      "source_count": 7,
+      "evidence_count": 8,
       "up": [],
       "related": [
         "Tool Calling",
         "Tool Registry",
+        "MCP Registry",
         "MCP Transport",
+        "MCP Elicitation",
         "Prompt",
         "A2A",
         "ANP",
         "A2A MCP ANP 对比",
         "Tool Poisoning"
+      ]
+    },
+    {
+      "id": "MCP Elicitation",
+      "title": "MCP Elicitation",
+      "file": "agentic learning/wiki/concepts/MCP Elicitation.md",
+      "topics": [
+        "agent",
+        "tools",
+        "protocol",
+        "mcp"
+      ],
+      "status": "seed",
+      "freshness": "watch",
+      "aliases": [
+        "MCP elicitation",
+        "Elicitation",
+        "MCP 用户澄清",
+        "MCP 结构化追问",
+        "MCP 结构化补充信息请求",
+        "MCP 表单追问",
+        "MCP URL 授权请求"
+      ],
+      "source_count": 1,
+      "evidence_count": 1,
+      "up": [],
+      "related": [
+        "MCP",
+        "MCP Transport",
+        "Tool Permissioning",
+        "Approval Gate",
+        "Human-in-the-loop",
+        "Tool Calling"
       ]
     },
     {
@@ -1967,8 +2143,8 @@
       "status": "growing",
       "freshness": "watch",
       "aliases": [],
-      "source_count": 2,
-      "evidence_count": 2,
+      "source_count": 3,
+      "evidence_count": 4,
       "up": [],
       "related": [
         "MCP",
@@ -2010,6 +2186,39 @@
         "Tool Registry",
         "Tool Permissioning",
         "MCP Registry"
+      ]
+    },
+    {
+      "id": "Managed Agent Harness",
+      "title": "Managed Agent Harness",
+      "file": "agentic learning/wiki/concepts/Managed Agent Harness.md",
+      "topics": [
+        "agent",
+        "harness",
+        "runtime",
+        "cloud"
+      ],
+      "status": "seed",
+      "freshness": "volatile",
+      "aliases": [
+        "Managed Agents",
+        "Claude Managed Agents",
+        "Managed Agent Runtime",
+        "托管 Agent",
+        "托管 Agent Harness",
+        "托管 Agent 运行时"
+      ],
+      "source_count": 3,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Agent Harness",
+        "Agent Skills",
+        "MCP",
+        "Sandbox Workspace",
+        "Trace",
+        "Durable Execution",
+        "Tool Permissioning"
       ]
     },
     {
@@ -3406,8 +3615,8 @@
       "status": "growing",
       "freshness": "stable",
       "aliases": [],
-      "source_count": 2,
-      "evidence_count": 2,
+      "source_count": 3,
+      "evidence_count": 3,
       "up": [],
       "related": [
         "Evaluation",
@@ -4252,6 +4461,86 @@
       "note": ""
     },
     {
+      "source": "Agent Evaluation Benchmark",
+      "target": "Benchmark",
+      "kind": "taxonomy",
+      "relation_type": "up",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.up",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
+      "target": "BFCL",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
+      "target": "Benchmark",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
+      "target": "Eval Harness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
+      "target": "Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
+      "target": "LLM-as-Judge",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
+      "target": "Task Success Rate",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
+      "target": "Trajectory Evaluation",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "Agent Framework",
       "target": "Agent",
       "kind": "related_link",
@@ -4453,6 +4742,16 @@
     },
     {
       "source": "Agent Harness",
+      "target": "Agent Skills",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Harness",
       "target": "Agent State",
       "kind": "related_link",
       "relation_type": "related",
@@ -4484,6 +4783,16 @@
     {
       "source": "Agent Harness",
       "target": "Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Harness",
+      "target": "Managed Agent Harness",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -4732,6 +5041,76 @@
       "note": ""
     },
     {
+      "source": "Agent Payments Protocol",
+      "target": "A2A",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Payments Protocol",
+      "target": "Approval Gate",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Payments Protocol",
+      "target": "Audit Log",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Payments Protocol",
+      "target": "Data Exfiltration",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Payments Protocol",
+      "target": "MCP",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Payments Protocol",
+      "target": "Policy Engine",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Payments Protocol",
+      "target": "Tool Permissioning",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "Agent Robustness",
       "target": "Guardrails",
       "kind": "typed_relation",
@@ -4839,6 +5218,66 @@
       "confidence": "observed",
       "status": "internal",
       "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Agent Skills",
+      "target": "Agent Harness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Skills",
+      "target": "MCP",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Skills",
+      "target": "Progressive Disclosure",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Skills",
+      "target": "Tool Calling",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Skills",
+      "target": "Tool Poisoning",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Skills",
+      "target": "Tool Registry",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
       "note": ""
     },
     {
@@ -5682,6 +6121,106 @@
       "note": ""
     },
     {
+      "source": "BFCL",
+      "target": "Agent Evaluation Benchmark",
+      "kind": "taxonomy",
+      "relation_type": "up",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.up",
+      "note": ""
+    },
+    {
+      "source": "BFCL",
+      "target": "Agent Evaluation Benchmark",
+      "kind": "typed_relation",
+      "relation_type": "representative_of",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "BFCL 是工具/function calling 方向的代表性 Agent evaluation benchmark；代表关系不等于 AST、state check 或 harness 组件本身。"
+    },
+    {
+      "source": "BFCL",
+      "target": "Agent Evaluation Benchmark",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "BFCL",
+      "target": "Agent Robustness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "BFCL",
+      "target": "Benchmark",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "BFCL",
+      "target": "Eval Harness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "BFCL",
+      "target": "GAIA Benchmark",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "external_or_missing",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "BFCL",
+      "target": "Tool Calling",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "BFCL",
+      "target": "Tool Use",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "BFCL",
+      "target": "Trajectory Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "BM25",
       "target": "Sparse Retrieval",
       "kind": "taxonomy",
@@ -5809,6 +6348,26 @@
       "confidence": "observed",
       "status": "internal",
       "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Benchmark",
+      "target": "Agent Evaluation Benchmark",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Benchmark",
+      "target": "BFCL",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
       "note": ""
     },
     {
@@ -10033,6 +10592,26 @@
     },
     {
       "source": "MCP",
+      "target": "MCP Elicitation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MCP",
+      "target": "MCP Registry",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MCP",
       "target": "MCP Transport",
       "kind": "related_link",
       "relation_type": "related",
@@ -10119,6 +10698,66 @@
       "confidence": "observed",
       "status": "internal",
       "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "MCP Elicitation",
+      "target": "Approval Gate",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MCP Elicitation",
+      "target": "Human-in-the-loop",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MCP Elicitation",
+      "target": "MCP",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MCP Elicitation",
+      "target": "MCP Transport",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MCP Elicitation",
+      "target": "Tool Calling",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MCP Elicitation",
+      "target": "Tool Permissioning",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
       "note": ""
     },
     {
@@ -10209,6 +10848,86 @@
       "confidence": "existing",
       "status": "internal",
       "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Managed Agent Harness",
+      "target": "Agent Harness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Managed Agent Harness",
+      "target": "Agent Skills",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Managed Agent Harness",
+      "target": "Durable Execution",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Managed Agent Harness",
+      "target": "MCP",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Managed Agent Harness",
+      "target": "Sandbox Workspace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Managed Agent Harness",
+      "target": "Tool Permissioning",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Managed Agent Harness",
+      "target": "Trace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Managed Agent Harness",
+      "target": "Agent Framework",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
       "note": ""
     },
     {
@@ -14693,6 +15412,16 @@
     },
     {
       "source": "Task Success Rate",
+      "target": "LLM-as-Judge",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Task Success Rate",
       "target": "Observability",
       "kind": "body_link",
       "relation_type": "body_wikilink",
@@ -16799,7 +17528,9 @@
       "Agent Harness",
       "Agent Lifecycle Hook",
       "Agent Loop",
+      "Agent Payments Protocol",
       "Agent Robustness",
+      "Agent Skills",
       "Agent State",
       "Agent Workflow",
       "Agent Workflow Static Verification",
@@ -16840,8 +17571,10 @@
       "Least Privilege Tools",
       "Long-Horizon Context Engineering",
       "MCP",
+      "MCP Elicitation",
       "MCP Registry",
       "MCP Transport",
+      "Managed Agent Harness",
       "Memory",
       "Multi-Head Attention",
       "NLP",
@@ -16937,7 +17670,15 @@
         2
       ],
       [
+        "Benchmark",
+        1
+      ],
+      [
         "Observability",
+        1
+      ],
+      [
+        "Agent Evaluation Benchmark",
         1
       ],
       [
@@ -17025,6 +17766,16 @@
       {
         "source": "AutoGen",
         "target": "Agent Framework 编排范式对比",
+        "kind": "related_link",
+        "relation_type": "related",
+        "confidence": "existing",
+        "status": "external_or_missing",
+        "evidence": "frontmatter.related",
+        "note": ""
+      },
+      {
+        "source": "BFCL",
+        "target": "GAIA Benchmark",
         "kind": "related_link",
         "relation_type": "related",
         "confidence": "existing",

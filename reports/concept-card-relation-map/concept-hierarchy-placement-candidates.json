@@ -1,14 +1,16 @@
 {
   "schema_version": 1,
   "artifact_type": "taxonomy_placement_candidates",
-  "generated_at": "2026-05-21T00:47:57Z",
+  "generated_at": "2026-05-21T04:49:18Z",
   "input_review": "reports/concept-card-relation-map/concept-hierarchy-placement-review.json",
   "classification_stage": "conservative_candidates",
   "policy": {
     "candidate_scope": "Only Initial triage/3 deferred rows are considered in Conservative candidate generation.",
     "allowed_targets": [
+      "Agent Evaluation Benchmark",
       "Agent Framework",
       "Agent Workflow",
+      "Benchmark",
       "Chunking",
       "Evaluation",
       "Memory",
@@ -35,7 +37,7 @@
   },
   "summary": {
     "deferred_rows_considered": 27,
-    "approved_parent_count": 14,
+    "approved_parent_count": 16,
     "generated_candidates": 2,
     "suppressed_signals": 25,
     "candidate_targets": {

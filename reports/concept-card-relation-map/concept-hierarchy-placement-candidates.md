@@ -1,13 +1,13 @@
 # Concept Hierarchy Placement Candidates — Conservative candidate generation
 
-Generated: `2026-05-21T00:47:57Z`
+Generated: `2026-05-21T04:49:18Z`
 
 > Conservative candidate taxonomy only. These rows are **not** accepted taxonomy and must go through Candidate adjudication before any dry-run/writeback.
 
 ## Summary
 
 - deferred_rows_considered: 27
-- approved_parent_count: 14
+- approved_parent_count: 16
 - generated_candidates: 2
 - suppressed_signals: 25
 - candidate_targets: `{"Agent Workflow": 2}`
@@ -19,8 +19,10 @@ Generated: `2026-05-21T00:47:57Z`
 
 - candidate_scope: Only Initial triage/3 deferred rows are considered in Conservative candidate generation.
 - allowed_targets:
+  - Agent Evaluation Benchmark
   - Agent Framework
   - Agent Workflow
+  - Benchmark
   - Chunking
   - Evaluation
   - Memory

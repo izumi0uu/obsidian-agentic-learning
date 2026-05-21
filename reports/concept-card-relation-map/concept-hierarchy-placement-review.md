@@ -1,23 +1,23 @@
 # Concept Hierarchy Placement Review — 层级归属待审计概念卡
 
-Generated: `2026-05-21T00:47:57Z`
+Generated: `2026-05-21T04:49:18Z`
 Classification stage: `audit_closure`
 
 > Audit closure: remaining `defer_boundary_review` rows are closed as `deferred_with_backlog`; no concept cards are edited and no fallback parents are invented.
 
 ## Summary
 
-- total_concepts: 150
-- reviewed_concepts: 150
+- total_concepts: 152
+- reviewed_concepts: 152
 - taxonomy_placement_unreviewed: 0
-- concepts_with_up: 37
+- concepts_with_up: 39
 - concepts_without_up: 113
 - concepts_with_candidate_basis: 64
 - candidate_basis_rows: 78
 - known_forbidden_candidate_pairs: 2
 - accepted_taxonomy: 0
-- root_or_anchor_no_up: 19
-- relation_only_terminal: 60
+- root_or_anchor_no_up: 20
+- relation_only_terminal: 59
 - weak_or_backlog_terminal: 7
 - defer_boundary_review: 25
 - open_unclassified: 0
@@ -25,10 +25,10 @@ Classification stage: `audit_closure`
 - open_writeback: 0
 - dry_run_planned: 0
 - write_policy: Audit closure only. Remaining defer_boundary_review rows are closed as deferred_with_backlog and no concept-card fields are written.
-- decision_counts: `{"already_has_up_reviewed": 37, "defer_boundary_review": 25, "reject_taxonomy": 2, "relation_only_terminal": 60, "root_or_anchor_no_up": 19, "weak_or_backlog_terminal": 7}`
-- review_status_counts: `{"deferred_with_backlog": 25, "terminal_non_writeback": 125}`
+- decision_counts: `{"already_has_up_reviewed": 39, "defer_boundary_review": 25, "reject_taxonomy": 2, "relation_only_terminal": 59, "root_or_anchor_no_up": 20, "weak_or_backlog_terminal": 7}`
+- review_status_counts: `{"deferred_with_backlog": 25, "terminal_non_writeback": 127}`
 - parent_whitelist_reviewed: True
-- stable_parent_whitelist_approved: 14
+- stable_parent_whitelist_approved: 16
 - proposed_parent_anchors_not_auto_approved: 3
 - missing_proposed_parent_anchors: 2
 - root_anchors_not_parent_whitelist: 5
@@ -62,13 +62,15 @@ Classification stage: `audit_closure`
 
 ## Initial triage by decision
 
-### already_has_up_reviewed (37)
+### already_has_up_reviewed (39)
 
+- [[Agent Evaluation Benchmark]]
 - [[AgentScope]]
 - [[Agentic RAG]]
 - [[Agentic Retrieval]]
 - [[Audit Log]]
 - [[AutoGen]]
+- [[BFCL]]
 - [[BM25]]
 - [[CAMEL]]
 - [[Computer Use]]
@@ -135,7 +137,7 @@ Classification stage: `audit_closure`
 - [[Approval Gate]]
 - [[ReAct]]
 
-### relation_only_terminal (60)
+### relation_only_terminal (59)
 
 - [[ANP]]
 - [[Agent Control Plane]]
@@ -145,7 +147,6 @@ Classification stage: `audit_closure`
 - [[Agent Robustness]]
 - [[Agent State]]
 - [[Agent Workflow Static Verification]]
-- [[Benchmark]]
 - [[Context Engineering]]
 - [[Context Projection]]
 - [[Context Rot]]
@@ -198,11 +199,12 @@ Classification stage: `audit_closure`
 - [[Vector Database]]
 - [[Workflow Guardrails]]
 
-### root_or_anchor_no_up (19)
+### root_or_anchor_no_up (20)
 
 - [[Agent]]
 - [[Agent Framework]]
 - [[Agent Workflow]]
+- [[Benchmark]]
 - [[Chunking]]
 - [[Context Window]]
 - [[Evaluation]]
@@ -238,6 +240,8 @@ Use **层级归属待审计概念卡** instead of `no-up 卡`. Missing `up` is o
 
 - [[Agent Framework]]
 - [[Agent Workflow]]
+- [[Benchmark]]
+- [[Agent Evaluation Benchmark]]
 - [[Tool Use]]
 - [[Observability]]
 - [[RAG]]
@@ -267,6 +271,8 @@ Parent-whitelist review fixes the candidate-generation boundary. An approved par
 |---|---|---|---|---|
 | [[Agent Framework]] | agent_engineering_parent |  | Explains reusable engineering abstractions for building/running Agents; safe parent only for frameworks/SDK/toolkits that are themselves framework abstractions. | Do not classify products, runtimes, protocols, or infra support layers under Agent Framework merely because they help build agents. |
 | [[Agent Workflow]] | agent_execution_structure_parent |  | Explains controllable stages, branches, loops, approvals, and handoffs; safe parent for workflow patterns/structures, not for runtime implementations. | Do not classify runtime engines or observability standards under Agent Workflow; use relations when something executes or supports a workflow. |
+| [[Benchmark]] | evaluation_task_protocol_parent |  | Explains fixed task sets, environments, scoring rules, and reporting protocols; safe parent for benchmark families, not metrics/evaluators/loaders. | Do not classify LLM judges, win-rate metrics, dataset loaders, reports, or trace objects under Benchmark merely because benchmark reports use them. |
+| [[Agent Evaluation Benchmark]] | agent_evaluation_benchmark_parent | [[Benchmark]] | Explains benchmark families whose tasks/protocols evaluate agent or assistant action capability: tool use, environment interaction, multi-step tasks, computer use, or collaboration. | Do not classify metrics, checkers, evaluator models, dataset loaders, or generic math/QA datasets under Agent Evaluation Benchmark unless the card itself is a benchmark/task protocol for Agent action capability. |
 | [[Tool Use]] | tool_behavior_parent |  | Explains the broad behavior of using external capabilities; safe parent only for direct tool-use behavior/pattern cards after evidence review. | Do not classify tool safety policies, permissioning rules, or protocols as Tool Use unless the card says they are a type of tool-use behavior. |
 | [[Observability]] | system_visibility_parent |  | Explains visibility/debug/trace/monitoring responsibility; safe parent for observability methods/objects, not for standards that merely support it. | Do not classify semantic conventions, instrumentation libraries, or audit records as Observability just because they support visibility. |
 | [[RAG]] | rag_system_parent |  | Stable retrieval-augmented generation system concept; safe parent for RAG variants whose definition is a kind of RAG. | Do not classify components such as retrievers, rerankers, chunking, or graph databases as RAG; they compose with or support RAG. |
@@ -337,7 +343,7 @@ Parent-whitelist review fixes the candidate-generation boundary. An approved par
 Conservative candidate generation generates conservative candidates only from Parent-whitelist review approved parents. These candidates are **not** accepted taxonomy and cannot enter writeback until Candidate adjudication.
 
 - deferred_rows_considered: 27
-- approved_parent_count: 14
+- approved_parent_count: 16
 - generated_candidates: 2
 - suppressed_signals: 25
 - candidate_targets: `{"Agent Workflow": 2}`
@@ -440,8 +446,8 @@ Apply artifact:
 
 Audit closure closes the whole concept hierarchy placement audit by routing every remaining deferred row to a durable backlog home. It does not add `up`; future changes must reopen a new candidate/adjudication/dry-run/limited-apply cycle.
 
-- total_concepts: 150
-- reviewed_concepts: 150
+- total_concepts: 152
+- reviewed_concepts: 152
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0
@@ -492,11 +498,13 @@ Closure artifact:
 
 | Concept | Current up | Typed relations | Candidate basis rows |
 |---|---:|---:|---:|
+| [[Agent Evaluation Benchmark]] | [[Benchmark]] | 0 | 0 |
 | [[AgentScope]] | [[Agent Framework]] | 0 | 0 |
 | [[Agentic RAG]] | [[RAG]] | 0 | 0 |
 | [[Agentic Retrieval]] | [[Retriever]] | 0 | 0 |
 | [[Audit Log]] | [[Observability]] | 0 | 0 |
 | [[AutoGen]] | [[Agent Framework]] | 0 | 0 |
+| [[BFCL]] | [[Agent Evaluation Benchmark]] | 1 | 0 |
 | [[BM25]] | [[Sparse Retrieval]] | 3 | 0 |
 | [[CAMEL]] | [[Agent Framework]] | 0 | 0 |
 | [[Computer Use]] | [[Tool Use]] | 0 | 0 |
@@ -551,7 +559,7 @@ Closure artifact:
 | [[Agent Workflow]] | root_or_anchor_no_up |  | 0 | 0 |
 | [[Agent Workflow Static Verification]] | relation_only_terminal |  | 2 | 4 |
 | [[Approval Gate]] | reject_taxonomy |  | 0 | 2 |
-| [[Benchmark]] | relation_only_terminal |  | 1 | 2 |
+| [[Benchmark]] | root_or_anchor_no_up |  | 1 | 1 |
 | [[Browser Agent]] | defer_boundary_review |  | 0 | 3 |
 | [[Chunking]] | root_or_anchor_no_up |  | 1 | 1 |
 | [[Code Execution Sandbox]] | defer_boundary_review |  | 0 | 3 |

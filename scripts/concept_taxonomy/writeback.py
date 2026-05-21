@@ -7,6 +7,7 @@ import argparse
 import json
 import re
 import subprocess
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -22,7 +23,7 @@ DRY_JSON = OUT_DIR / "writeback-dry-run.json"
 DRY_MD = OUT_DIR / "writeback-dry-run.md"
 APPLY_JSON = OUT_DIR / "writeback-apply-report.json"
 APPLY_MD = OUT_DIR / "writeback-apply-report.md"
-TODAY = "2026-05-16"
+TODAY = date.today().isoformat()
 FM_RE = re.compile(r"^---\n(.*?)\n---\n", re.S)
 WIKILINK_RE = re.compile(r"\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]")
 TOP_LEVEL_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_-]*:\s*")

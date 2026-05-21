@@ -1,12 +1,12 @@
 # Plugin Contract Verification
 
-Generated: `2026-05-21T00:53:12Z`
+Generated: `2026-05-21T05:01:48Z`
 
 ## Summary
 
-- concept_cards_checked: `150`
-- top_level_up_edges: `37`
-- temp_map_taxonomy_edges: `37`
+- concept_cards_checked: `152`
+- top_level_up_edges: `39`
+- temp_map_taxonomy_edges: `39`
 - relation_writeback_dry_run_planned: `0`
 - taxonomy_post_apply_dry_run_planned: `0`
 - taxonomy_post_apply_dry_run_ready: `0`
@@ -15,12 +15,12 @@ Generated: `2026-05-21T00:53:12Z`
 - taxonomy_placement_defer_boundary_review: `25`
 - taxonomy_placement_deferred_with_backlog: `25`
 - taxonomy_placement_open_writeback: `0`
-- relation_apply_rows_checked: `13`
+- relation_apply_rows_checked: `2`
 - taxonomy_apply_rows_checked: `1`
 - plugin_problems: `0`
 - forbidden_up_edges: `0`
 - forbidden_top_level_fields: `0`
-- nested_relation_records_with_mirror-like_types: `23`
+- nested_relation_records_with_mirror-like_types: `24`
 - obsidian_plugin_config_present: `False`
 - problems: `0`
 

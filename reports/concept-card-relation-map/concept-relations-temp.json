@@ -1,24 +1,24 @@
 {
   "schema_version": 1,
   "artifact_type": "temporary_concept_relationship_map",
-  "generated_at": "2026-05-20T15:20:51Z",
+  "generated_at": "2026-05-21T04:49:18Z",
   "scope": {
     "concept_dir": "agentic learning/wiki/concepts",
     "temporary": true,
     "write_policy": "Do not write these candidates into concept cards without a separate review task."
   },
   "summary": {
-    "total_concepts": 150,
+    "total_concepts": 152,
     "edge_counts": {
-      "related_link": 881,
-      "body_link": 271,
-      "typed_relation": 53,
-      "taxonomy": 37
+      "related_link": 898,
+      "body_link": 273,
+      "typed_relation": 54,
+      "taxonomy": 39
     },
     "typed_relation_counts": {
       "contrasts_with": 8,
       "related_to": 12,
-      "representative_of": 1,
+      "representative_of": 2,
       "based_on_intuition": 1,
       "paired_with": 2,
       "mechanism_for": 1,
@@ -42,7 +42,7 @@
     "concepts_without_up": 113,
     "core_orphans": 0,
     "weakly_connected_concepts": 1,
-    "dangling_core_targets": 29,
+    "dangling_core_targets": 30,
     "candidate_edges": 78,
     "taxonomy_candidates": 11,
     "topic_family_review_signals": 67
@@ -195,6 +195,37 @@
         "Audit Log",
         "Approval Gate",
         "Tool Permissioning"
+      ]
+    },
+    {
+      "id": "Agent Evaluation Benchmark",
+      "title": "Agent Evaluation Benchmark",
+      "file": "agentic learning/wiki/concepts/Agent Evaluation Benchmark.md",
+      "topics": [
+        "evaluation",
+        "agent",
+        "benchmark"
+      ],
+      "status": "growing",
+      "freshness": "watch",
+      "aliases": [
+        "智能体评估基准",
+        "Agent Benchmark",
+        "Agentic Benchmark",
+        "Agentic Evaluation Benchmark"
+      ],
+      "source_count": 5,
+      "evidence_count": 7,
+      "up": [
+        "Benchmark"
+      ],
+      "related": [
+        "Benchmark",
+        "Evaluation",
+        "BFCL",
+        "Eval Harness",
+        "LLM-as-Judge",
+        "Task Success Rate"
       ]
     },
     {
@@ -649,6 +680,40 @@
       ]
     },
     {
+      "id": "BFCL",
+      "title": "BFCL",
+      "file": "agentic learning/wiki/concepts/BFCL.md",
+      "topics": [
+        "evaluation",
+        "agent",
+        "tool-use",
+        "benchmark"
+      ],
+      "status": "seed",
+      "freshness": "watch",
+      "aliases": [
+        "Berkeley Function Calling Leaderboard",
+        "Berkeley Function-Calling Leaderboard",
+        "BFCL 工具调用评测",
+        "Function Calling Leaderboard"
+      ],
+      "source_count": 1,
+      "evidence_count": 5,
+      "up": [
+        "Agent Evaluation Benchmark"
+      ],
+      "related": [
+        "Agent Evaluation Benchmark",
+        "Tool Calling",
+        "Tool Use",
+        "Benchmark",
+        "Eval Harness",
+        "Trajectory Evaluation",
+        "Agent Robustness",
+        "GAIA Benchmark"
+      ]
+    },
+    {
       "id": "BM25",
       "title": "BM25",
       "file": "agentic learning/wiki/concepts/BM25.md",
@@ -686,12 +751,14 @@
       "status": "growing",
       "freshness": "stable",
       "aliases": [],
-      "source_count": 2,
-      "evidence_count": 2,
+      "source_count": 3,
+      "evidence_count": 3,
       "up": [],
       "related": [
         "Evaluation",
-        "Task Success Rate"
+        "Agent Evaluation Benchmark",
+        "Task Success Rate",
+        "BFCL"
       ]
     },
     {
@@ -1836,7 +1903,12 @@
       ],
       "status": "growing",
       "freshness": "stable",
-      "aliases": [],
+      "aliases": [
+        "LLM Judge",
+        "LLM-as-a-Judge",
+        "LLM 评估器",
+        "LLM 裁判"
+      ],
       "source_count": 2,
       "evidence_count": 6,
       "up": [],
@@ -2010,12 +2082,13 @@
         "Model Context Protocol",
         "模型上下文协议"
       ],
-      "source_count": 6,
-      "evidence_count": 6,
+      "source_count": 7,
+      "evidence_count": 8,
       "up": [],
       "related": [
         "Tool Calling",
         "Tool Registry",
+        "MCP Registry",
         "MCP Transport",
         "MCP Elicitation",
         "Prompt",
@@ -2070,8 +2143,8 @@
       "status": "growing",
       "freshness": "watch",
       "aliases": [],
-      "source_count": 2,
-      "evidence_count": 2,
+      "source_count": 3,
+      "evidence_count": 4,
       "up": [],
       "related": [
         "MCP",
@@ -3542,8 +3615,8 @@
       "status": "growing",
       "freshness": "stable",
       "aliases": [],
-      "source_count": 2,
-      "evidence_count": 2,
+      "source_count": 3,
+      "evidence_count": 3,
       "up": [],
       "related": [
         "Evaluation",
@@ -4385,6 +4458,86 @@
       "confidence": "existing",
       "status": "internal",
       "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
+      "target": "Benchmark",
+      "kind": "taxonomy",
+      "relation_type": "up",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.up",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
+      "target": "BFCL",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
+      "target": "Benchmark",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
+      "target": "Eval Harness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
+      "target": "Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
+      "target": "LLM-as-Judge",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
+      "target": "Task Success Rate",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
+      "target": "Trajectory Evaluation",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
       "note": ""
     },
     {
@@ -5968,6 +6121,106 @@
       "note": ""
     },
     {
+      "source": "BFCL",
+      "target": "Agent Evaluation Benchmark",
+      "kind": "taxonomy",
+      "relation_type": "up",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.up",
+      "note": ""
+    },
+    {
+      "source": "BFCL",
+      "target": "Agent Evaluation Benchmark",
+      "kind": "typed_relation",
+      "relation_type": "representative_of",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "BFCL 是工具/function calling 方向的代表性 Agent evaluation benchmark；代表关系不等于 AST、state check 或 harness 组件本身。"
+    },
+    {
+      "source": "BFCL",
+      "target": "Agent Evaluation Benchmark",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "BFCL",
+      "target": "Agent Robustness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "BFCL",
+      "target": "Benchmark",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "BFCL",
+      "target": "Eval Harness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "BFCL",
+      "target": "GAIA Benchmark",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "external_or_missing",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "BFCL",
+      "target": "Tool Calling",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "BFCL",
+      "target": "Tool Use",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "BFCL",
+      "target": "Trajectory Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "BM25",
       "target": "Sparse Retrieval",
       "kind": "taxonomy",
@@ -6095,6 +6348,26 @@
       "confidence": "observed",
       "status": "internal",
       "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Benchmark",
+      "target": "Agent Evaluation Benchmark",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Benchmark",
+      "target": "BFCL",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
       "note": ""
     },
     {
@@ -10320,6 +10593,16 @@
     {
       "source": "MCP",
       "target": "MCP Elicitation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MCP",
+      "target": "MCP Registry",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -15129,6 +15412,16 @@
     },
     {
       "source": "Task Success Rate",
+      "target": "LLM-as-Judge",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Task Success Rate",
       "target": "Observability",
       "kind": "body_link",
       "relation_type": "body_wikilink",
@@ -17377,7 +17670,15 @@
         2
       ],
       [
+        "Benchmark",
+        1
+      ],
+      [
         "Observability",
+        1
+      ],
+      [
+        "Agent Evaluation Benchmark",
         1
       ],
       [
@@ -17465,6 +17766,16 @@
       {
         "source": "AutoGen",
         "target": "Agent Framework 编排范式对比",
+        "kind": "related_link",
+        "relation_type": "related",
+        "confidence": "existing",
+        "status": "external_or_missing",
+        "evidence": "frontmatter.related",
+        "note": ""
+      },
+      {
+        "source": "BFCL",
+        "target": "GAIA Benchmark",
         "kind": "related_link",
         "relation_type": "related",
         "confidence": "existing",

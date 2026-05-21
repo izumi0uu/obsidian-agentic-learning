@@ -6,10 +6,15 @@ topic:
   - frontier
 status: growing
 created: 2026-05-06
-updated: 2026-05-10
+updated: 2026-05-21
 last_checked: 2026-05-10
 freshness: stable
 conflicts: []
+aliases:
+  - LLM Judge
+  - LLM-as-a-Judge
+  - LLM 评估器
+  - LLM 裁判
 source:
   - "[[LangSmith Evaluation and Observability]]"
   - "[[Langfuse Observability and Evaluation]]"
@@ -77,6 +82,8 @@ LLM-as-Judge 不是绝对裁判。
 - LLM-as-Judge 适合做弱监督、批量筛查和辅助评分，不适合当唯一真理。
 - 如果任务有明确规则，优先规则判定；如果涉及主观质量，再用 judge 辅助。
 - judge 结果要当成“可疑信号”而不是最终裁定。
+- 在智能体评估体系图里，LLM Judge 属于 evaluator / scorer 层，不属于 benchmark / dataset 层。它可以给 [[GAIA Benchmark]] 风格开放任务、数据生成质量或 trajectory 打分，但它不定义任务分布，也不负责加载数据。
+- LLM Judge 和 Win Rate 常一起出现，但不是同一个东西。Judge 是产生偏好或分数的评估器；Win Rate 是基于 A/B 或 pairwise 比较汇总出来的指标。没有 judge rubric、tie 处理和人工校准，win rate 容易把“更会讨裁判喜欢”误当“更正确”。
 
 ## 现代性状态
 
@@ -97,6 +104,7 @@ LLM-as-Judge 不是绝对裁判。
 - 什么时候应该用规则而不是 judge？
 - judge 为什么需要版本化和校准？
 - 哪些内容不适合送给外部 judge 模型？
+- 为什么 LLM Judge 是 evaluator，而不是 benchmark 或 dataset loader？
 
 ## 相关链接
 

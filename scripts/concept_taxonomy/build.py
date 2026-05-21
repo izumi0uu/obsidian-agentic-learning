@@ -40,6 +40,7 @@ TOPIC_FAMILY_RULES = [
 ]
 
 TITLE_PARENT_RULES = [
+    (re.compile(r".+\bBenchmark$"), "Benchmark", "title suffix Benchmark"),
     (re.compile(r".+\bEvaluation$"), "Evaluation", "title suffix Evaluation"),
     (re.compile(r".+\bMemory$"), "Memory", "title suffix Memory"),
     (re.compile(r".+\bRAG$|^GraphRAG$|^RAGGraph$"), "RAG", "RAG method/title family"),
