@@ -14,6 +14,7 @@ source:
   - "[[BFCL]]"
   - "[[Eval Harness]]"
   - "[[LLM-as-Judge]]"
+  - "[[Win Rate]]"
   - "[[Task Success Rate]]"
   - "[[Agent Robustness]]"
   - "[[RAG Evaluation]]"
@@ -25,6 +26,7 @@ evidence:
   - "[[BFCL#证据锚点]]"
   - "[[Eval Harness#证据锚点]]"
   - "[[LLM-as-Judge#证据锚点]]"
+  - "[[Win Rate#证据锚点]]"
   - "[[Task Success Rate#证据锚点]]"
   - "[[Agent Robustness#证据锚点]]"
   - "[[RAG Evaluation#证据锚点]]"
@@ -35,6 +37,7 @@ related:
   - "[[Observability]]"
   - "[[BFCL]]"
   - "[[Agent Robustness]]"
+  - "[[Win Rate]]"
   - "[[Replay]]"
   - "[[Patch Validation]]"
   - "[[Trajectory Trace 类型对比]]"
@@ -44,7 +47,7 @@ related:
 
 ## 一句话总览
 
-这页把 Agent 评测拆成层次：[[Evaluation]] 是总的判断过程，[[Benchmark]] 给固定任务协议，[[Agent Evaluation Benchmark]] 是面向智能体行动能力的 benchmark 子类，[[BFCL]] / [[GAIA Benchmark]] / AIME 这类 benchmark 或数据集分别测不同能力面，[[Eval Harness]] 把任务跑成可复现实验，[[Task Success Rate]] 是端到端结果指标，[[Agent Robustness]] 是扰动条件下的系统性质，[[LLM-as-Judge]] 是一种语义评估器，[[RAG Evaluation]] 和 [[Trajectory Evaluation]] 分别把评测下沉到检索链路和行动轨迹。
+这页把 Agent 评测拆成层次：[[Evaluation]] 是总的判断过程，[[Benchmark]] 给固定任务协议，[[Agent Evaluation Benchmark]] 是面向智能体行动能力的 benchmark 子类，[[BFCL]] / [[GAIA Benchmark]] / AIME 这类 benchmark 或数据集分别测不同能力面，[[Eval Harness]] 把任务跑成可复现实验，[[Task Success Rate]] 是端到端结果指标，[[Win Rate]] 是 pairwise comparison 的相对偏好指标，[[Agent Robustness]] 是扰动条件下的系统性质，[[LLM-as-Judge]] 是一种语义评估器，[[RAG Evaluation]] 和 [[Trajectory Evaluation]] 分别把评测下沉到检索链路和行动轨迹。
 
 最小边界：benchmark 不是 evaluation 全部；dataset loader 不是 evaluator；success rate 不是失败解释；win rate 不是绝对正确率；robustness 不是单点成功率；judge 不是最终真理；harness 不是指标，而是把样例、运行、trace、score 和 replay 连接起来的工程外壳。
 
@@ -119,10 +122,10 @@ flowchart TD
 | AIME 数据集加载器 | [[Eval Harness]] 的 dataset loader 组件 | 如何把题目、答案、split、metadata 装入 runner | evaluator / scorer |
 | AST / quasi-exact / accuracy | scorer / checker / metric | 如何判断某类答案是否匹配 | benchmark 本身 |
 | [[LLM-as-Judge]] | evaluator | 对开放式输出或轨迹按 rubric 评分 | 绝对真理或唯一评估 |
-| Win Rate | pairwise comparison metric | 版本 A 相对版本 B 在样本上的胜出比例 | 绝对正确率或任务完成率 |
+| [[Win Rate]] | pairwise comparison metric | 版本 A 相对版本 B 在样本上的胜出比例 | 绝对正确率或任务完成率 |
 | 人工验证 | human review / calibration | 高风险、开放式或 judge 争议样本的人类复核 | 自动化 harness 的替代品 |
 
-小边界：`BFCL / GAIA / AIME` 属于任务或数据层；`AST / quasi-exact / LLM judge / Win Rate / 人工验证` 属于判定层；`数据集加载器 / runner / result store / report` 属于 harness 执行层。把这三层混在一起，会导致“以为换了评分器就是换了 benchmark”，或“以为加载了 AIME 数据就完成了推理评估”。
+小边界：BFCL / GAIA / AIME 属于任务或数据层；AST / quasi-exact / LLM judge / [[Win Rate]] / 人工验证 属于判定层；数据集加载器 / runner / result store / report 属于 harness 执行层。把这三层混在一起，会导致“以为换了评分器就是换了 benchmark”，或“以为加载了 AIME 数据就完成了推理评估”。
 
 ## 核心区别表
 
@@ -134,6 +137,7 @@ flowchart TD
 | [[BFCL]] | 工具调用 benchmark | 生成 tool call 后执行 checker / scoring | 函数文档、用户请求、model tool call、工具状态 | tool-calling accuracy、分类分数、失败样本 | [[BFCL#证据锚点]] |
 | [[Eval Harness]] | 运行、记录、评分和报告的工程外壳 | 批量执行任务并保存证据 | dataset、runner、environment、scorer | trace、score、diff、报告、失败样本 | [[Eval Harness#证据锚点]] |
 | [[Task Success Rate]] | 端到端任务完成指标 | 任务执行后统计 | 成功判定、总任务数、通过样本 | 成功比例 | [[Task Success Rate#证据锚点]] |
+| [[Win Rate]] | 相对偏好指标 | A/B 输出或版本成对比较后统计 | 同一批样本、两个候选、judge/人工/规则判断、tie 口径 | Win/Loss/Tie、相对胜率 | [[Win Rate#证据锚点]] |
 | [[Agent Robustness]] | 扰动条件下的系统级稳定性和恢复能力 | 正常集与故障/噪声/攻击集对比 | failure set、noisy observation、tool error、trace、outcome | 成功率下降、恢复质量、越权/停止/升级行为 | [[Agent Robustness#证据锚点]] |
 | [[LLM-as-Judge]] | 语义质量评估器 | 输出后或轨迹后评分 | 被评内容、rubric、judge prompt | score、label、理由 | [[LLM-as-Judge#证据锚点]] |
 | [[RAG Evaluation]] | 检索、上下文、引用和回答链路 | retrieve 前后、generate 后分层检查 | query、chunks、context、answer、citations | retrieval/context/generation/citation 分层结果 | [[RAG Evaluation#证据锚点]] |
@@ -153,7 +157,7 @@ flowchart TD
 
 [[Benchmark]] 是总类，任何固定任务集和评分协议都可以属于它。[[Agent Evaluation Benchmark]] 是窄类，只有当任务协议明确评估 Agent 的工具使用、环境交互、多步任务、通用助手能力、协作或 computer-use 行为时才进入这里。
 
-边界：[[LLM-as-Judge]]、Win Rate、AST matching、quasi-exact matching、AIME 数据集加载器都可以参与 Agent evaluation report，但它们分别是 evaluator、metric、checker 或 loader，不是 Agent Evaluation Benchmark 的子类。
+边界：[[LLM-as-Judge]]、[[Win Rate]]、AST matching、quasi-exact matching、AIME 数据集加载器都可以参与 Agent evaluation report，但它们分别是 evaluator、metric、checker 或 loader，不是 Agent Evaluation Benchmark 的子类。
 
 ### BFCL vs GAIA vs AIME
 
@@ -175,9 +179,9 @@ flowchart TD
 
 ### Win Rate vs Task Success Rate
 
-Win Rate 常用于 pairwise comparison：同一批样本上，让 judge、人类或规则比较 A/B 两个输出，统计 A 赢、B 赢或平局。它适合回答“新版本是否更受偏好/更符合 rubric”，但不等于 [[Task Success Rate]]。Task Success Rate 要先定义成功 checker；Win Rate 可以在两个都不完美的答案之间选更好者。
+[[Win Rate]] 常用于 pairwise comparison：同一批样本上，让 judge、人类或规则比较 A/B 两个输出，统计 A 赢、B 赢或平局。它适合回答“新版本是否更受偏好/更符合 rubric”，但不等于 [[Task Success Rate]]。Task Success Rate 要先定义成功 checker；Win Rate 可以在两个都不完美的答案之间选更好者。
 
-边界：win rate 高不代表绝对正确。如果两个版本都经常错，但 A 的表达更顺、更讨 judge 喜欢，A 仍可能赢。因此 win rate 应和 hard checker、人工校准、失败分类一起看。
+边界：win rate 高不代表绝对正确。如果两个版本都经常错，但 A 的表达更顺、更讨 judge 喜欢，A 仍可能赢。因此 [[Win Rate]] 应和 hard checker、人工校准、失败分类一起看。
 
 ### RAG Evaluation vs Trajectory Evaluation
 
@@ -192,6 +196,7 @@ Eval Harness:        dataset -> runner/environment -> trace/artifacts -> scorer 
 Task Success Rate:   completed tasks / all tasks after checker
 Agent Robustness:    normal set vs perturbation set -> degradation/recovery/safety
 LLM-as-Judge:        output/trajectory + rubric -> judge model -> score/reason
+Win Rate:            paired outputs + judge/human/rules -> Win/Loss/Tie -> relative preference
 RAG Evaluation:      query -> retrieve/context/citation/generation checks
 Trajectory Eval:     trace/trajectory -> rules/judge/human -> process judgment
 ```
@@ -234,6 +239,7 @@ Trajectory Eval:     trace/trajectory -> rules/judge/human -> process judgment
 | 想横向比较系统在固定任务上的能力 | [[Benchmark]] | 它定义任务集、协议和分数口径 | 可能被污染、刷分或不贴近真实业务 |
 | 想稳定回归测试 prompt / model / workflow 改动 | [[Eval Harness]] | 它能批量运行、保存 trace、比较版本 | harness 配置变化会让结果不可比 |
 | 想看用户任务端到端是否完成 | [[Task Success Rate]] | 它是任务完成的第一层指标 | 不解释失败原因，也不保证过程安全 |
+| 想比较两个 prompt、模型或开放式输出哪个更符合偏好 | [[Win Rate]] | 它用同一批样本上的成对比较给出相对胜负 | 不代表绝对正确或任务完成 |
 | 想看工具异常、噪声、攻击或用户变化下系统是否稳定 | [[Agent Robustness]] | 它比较正常集与扰动集下的成功率、恢复动作和安全边界 | 扰动集设计过窄会虚高；不能把所有 Robustness 都归到 Agent |
 | 想批量筛查回答是否忠实、清楚、符合 rubric | [[LLM-as-Judge]] | 适合语义质量和弱监督评分 | judge 偏差、漂移、诱导和隐私风险 |
 | 想定位 RAG 是检索错还是生成错 | [[RAG Evaluation]] | 它把 retrieval/context/generation/citation 拆开 | 只看最终答案会混淆根因 |
@@ -249,7 +255,7 @@ Trajectory Eval:     trace/trajectory -> rules/judge/human -> process judgment
 
 ## 证据锚点
 
-- Concept anchors: [[Evaluation#证据锚点]], [[Benchmark#证据锚点]], [[BFCL#证据锚点]], [[Eval Harness#证据锚点]], [[LLM-as-Judge#证据锚点]], [[Task Success Rate#证据锚点]], [[Agent Robustness#证据锚点]], [[RAG Evaluation#证据锚点]], [[Trajectory Evaluation#证据锚点]]
+- Concept anchors: [[Evaluation#证据锚点]], [[Benchmark#证据锚点]], [[BFCL#证据锚点]], [[Eval Harness#证据锚点]], [[LLM-as-Judge#证据锚点]], [[Win Rate#证据锚点]], [[Task Success Rate#证据锚点]], [[Agent Robustness#证据锚点]], [[RAG Evaluation#证据锚点]], [[Trajectory Evaluation#证据锚点]]
 - Source examples: [[GAIA Benchmark#为什么收]], [[SWE-bench#为什么收]], [[BFCL - Berkeley Function Calling Leaderboard#关键事实]], [[LangSmith Evaluation and Observability#一句话]], [[Langfuse Observability and Evaluation#一句话]], [[OpenAI Agents SDK 文档#Tracing 补充]], [[Microsoft RAG 官方文档#一句话]]
 - Diagram: the user-provided evaluation-system image is preserved as inline Mermaid in this page; it is a learning sketch, not source evidence.
 - Evidence type: existing concept-card synthesis + benchmark/docs/source notes + clearly labeled engineering synthesis + learning analogy.
@@ -262,8 +268,9 @@ Trajectory Eval:     trace/trajectory -> rules/judge/human -> process judgment
 2. BFCL、GAIA、AIME 分别更适合测 Agent / LLM 的哪一类能力？
 3. 为什么正常 Task Success Rate 相同的两个 Agent，Agent Robustness 可能完全不同？
 4. LLM-as-Judge 适合判断什么？什么时候必须让规则、测试或人审优先？
-5. RAG Evaluation 和 Trajectory Evaluation 分别会看 trace 里的哪些不同证据？
-6. 把一次线上失败转成回归样本时，Eval Harness 至少要保存什么？
+5. Win Rate 为什么不能直接当作 Task Success Rate？
+6. RAG Evaluation 和 Trajectory Evaluation 分别会看 trace 里的哪些不同证据？
+7. 把一次线上失败转成回归样本时，Eval Harness 至少要保存什么？
 
 ## 相关链接
 
@@ -273,6 +280,7 @@ Trajectory Eval:     trace/trajectory -> rules/judge/human -> process judgment
 - [[BFCL]]
 - [[Eval Harness]]
 - [[LLM-as-Judge]]
+- [[Win Rate]]
 - [[Task Success Rate]]
 - [[Agent Robustness]]
 - [[RAG Evaluation]]

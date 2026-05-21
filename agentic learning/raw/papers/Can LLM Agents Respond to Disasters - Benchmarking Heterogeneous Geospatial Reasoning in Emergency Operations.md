@@ -30,7 +30,7 @@ topic:
   - evaluation
   - frontier
 created: 2026-05-14
-updated: 2026-05-15
+updated: 2026-05-21
 last_checked: 2026-05-14
 freshness: watch
 conflicts: []
@@ -44,6 +44,7 @@ related:
   - "[[Evaluation]]"
   - "[[Guardrails]]"
   - "[[MCP]]"
+  - "[[ReWOO]]"
 ---
 
 # Can LLM Agents Respond to Disasters? Benchmarking Heterogeneous Geospatial Reasoning in Emergency Operations
@@ -146,6 +147,28 @@ DORA 用真实灾害事件和可重放 tool-call gold trajectories，评估 LLM 
   - 这条短摘只证明作者在论文第一页/摘要中提出该 claim；不能证明方法已经被独立复现或成为稳定工程标准。
   - 如果短摘包含数字、排名、benchmark、攻击成功率、性能提升或用户研究，必须再读 Evaluation / Table / Limitations 后才能写入概念卡。
 
+#### 必读块 4：Table 6 / scaffold ablation
+
+- 位置：extracted Page 10 / Table 6, Agent scaffolding ablation
+- 为什么必读：这里把 ReAct、Plan-then-Execute、Reflexion 和 ReWOO 放在同一 DORA 任务分布上比较，能校准 scaffold 是否适合数据密集灾害响应任务。
+- 原文短摘：
+  > ReWOO collapses, confirming that removing observation feedback hurts data-heavy tasks.
+- 中文概括：
+  - Table 6 报告 ReAct AVG 51.17，Plan-then-Execute 54.41，Reflexion 52.74，ReWOO 44.26。
+  - 作者解释 ReWOO 下降，是因为 DORA 这类任务依赖中间 masks 和 geometries，移除 observation feedback 会伤害后续工具参数和组合推理。
+  - 这条证据适合写入 [[Agent Evaluation Benchmark]] 和 [[ReWOO]]，作为 scaffold-task fit 的边界反例。
+- 我需要理解的机制：
+  1. scaffold ablation 是 benchmark 证据，不是单独概念层级。
+  2. 同一个 Agent scaffold 在不同任务反馈结构下可能相反：可预判 evidence 任务受益，强中间反馈任务受损。
+  3. 评估 Agent scaffold 时要看任务是否需要 observation 驱动 replan，而不是只看最终答案平均分。
+- 支撑概念:
+  - [[Agent Evaluation Benchmark]]
+  - [[ReWOO]]
+  - [[ReAct]]
+  - [[Observation]]
+- 证据边界：
+  - 这条证据来自 DORA 的 Gemma-4-31B scaffold ablation；不能外推成 ReWOO 在所有 benchmark 上较差，只能说明高反馈、数据密集任务中移除 observation feedback 有明显风险。
+
 ### 选读
 
 - Related Work：用于判断它和已有概念卡 / 对比页的关系。
@@ -164,6 +187,7 @@ DORA 用真实灾害事件和可重放 tool-call gold trajectories，评估 LLM 
 ### 读完要更新
 
 - 可能更新的概念卡：[[Benchmark]], [[Tool Use]], [[Agent Workflow]], [[Planning]], [[Evaluation]]
+  - Scaffold 边界补充：[[Agent Evaluation Benchmark]], [[ReWOO]]
 - 可能更新的 topic / map：[[Agent 主题]], [[Agent 知识地图]], [[03 前沿追踪]]
 - 如果精读后出现稳定概念，再从本 source note 拆卡；不要只凭标题创建弱概念卡。
 
@@ -174,6 +198,7 @@ DORA 用真实灾害事件和可重放 tool-call gold trajectories，评估 LLM 
 | 端到端灾害响应需要多源信号整合、空间关系、撤离规划和行动报告。 | Abstract | high | [[Agent Workflow]] |
 | DORA 包含 515 expert-authored tasks、45 real-world disaster events 和 3,500 tool-call steps。 | Abstract | medium-high | [[Benchmark]] |
 | 任务使用 108-tool MCP library 覆盖异构 geospatial data。 | Abstract | medium | [[Tool Use]] |
+| DORA 的 scaffold ablation 显示 ReWOO 在该数据密集灾害响应任务上显著低于 ReAct，作者归因于移除 observation feedback 伤害中间 masks / geometries 驱动任务。 | Table 6 / extracted Page 10 | medium | [[ReWOO]] |
 
 边界：这些 claim 当前主要来自本地 extracted Page 1 / Abstract；没有读到 section/page/figure 时，不伪造页码或段落级证据。
 
@@ -192,6 +217,7 @@ DORA 用真实灾害事件和可重放 tool-call gold trajectories，评估 LLM 
 - 数据集 / benchmark：从本地 extracted Page 1 / Abstract 可确认的证据线索：Tasks span five dimensions that cover the operational disaster-response pipeline: disaster perception, spatial relational analysis, disaster operational planning, temporal evolution reasoning,andmulti-modalreportsynthesis.
 - 指标：Abstract 层级没有展开完整指标清单；本页只保留作者明示的评价/结果线索，不补造未读过的 metric。
 - 关键结果：见上方必读块和本节数据集 / benchmark；任何数字、排名、通过率或攻击成功率都必须回 PDF 表格和实验设置核对后再写入概念卡。
+- Scaffold ablation：extracted Page 10 / Table 6 报告 ReWOO AVG 44.26，低于 ReAct 51.17；作者给出的边界解释是移除 observation feedback 会伤害由中间 masks 和 geometries 驱动的数据密集任务。
 - 作者给出的局限：Abstract 层级不能替代完整 limitations；精读时优先核对 Limitations / Discussion / Appendix。
 
 ## 现代性 / 前沿性初判
@@ -209,7 +235,7 @@ DORA 用真实灾害事件和可重放 tool-call gold trajectories，评估 LLM 
 
 ## Ingest 摘要
 
-- 已沉淀到 wiki 的概念：暂无；本页先作为 raw source evidence，后续精读后再决定是否拆卡。
+- 已沉淀到 wiki 的概念：[[ReWOO]] 的 observation-feedback 边界反例；本页其余内容仍先作为 raw source evidence，后续精读后再决定是否拆更多卡。
 - 还没处理的证据：PDF 正文、实验细节、limitations、artifact / code。
 
 ## 可以拆成概念卡
@@ -219,6 +245,7 @@ DORA 用真实灾害事件和可重放 tool-call gold trajectories，评估 LLM 
 | [[Benchmark]] | 补真实应急任务的 tool-call trajectory benchmark | [[Can LLM Agents Respond to Disasters - Benchmarking Heterogeneous Geospatial Reasoning in Emergency Operations#需要我读的内容]] | P1 |
 | [[Tool Use]] | 多工具 orchestration 在高风险场景中的评估边界 | [[Can LLM Agents Respond to Disasters - Benchmarking Heterogeneous Geospatial Reasoning in Emergency Operations#需要我读的内容]] | P1 |
 | [[Planning]] | 撤离 / 时间演化推理需要长程计划 | [[Can LLM Agents Respond to Disasters - Benchmarking Heterogeneous Geospatial Reasoning in Emergency Operations#需要我读的内容]] | P2 |
+| [[ReWOO]] | Table 6 提供 observation feedback 边界反例：并非所有预规划 evidence-slot scaffold 都适合高反馈工具任务 | [[Can LLM Agents Respond to Disasters - Benchmarking Heterogeneous Geospatial Reasoning in Emergency Operations#实验 / 证据]] | P1 |
 
 ## 我的疑问
 

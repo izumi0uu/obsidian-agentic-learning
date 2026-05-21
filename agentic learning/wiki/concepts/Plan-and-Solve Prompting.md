@@ -6,12 +6,14 @@ topic:
   - planning
 status: seed
 created: 2026-05-08
-updated: 2026-05-12
+updated: 2026-05-21
 source:
   - "[[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models]]"
+  - "[[ReWOO - Decoupling Reasoning from Observations for Efficient Augmented Language Models]]"
 evidence:
   - "[[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models#为什么收]]"
   - "[[Plan-and-Solve Prompting - Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models#Ingest 摘要]]"
+  - "[[ReWOO - Decoupling Reasoning from Observations for Efficient Augmented Language Models#需要我读的内容]]"
 last_checked: 2026-05-10
 freshness: stable
 conflicts: []
@@ -20,6 +22,7 @@ related:
   - "[[Planning]]"
   - "[[Reasoning Trace]]"
   - "[[ReAct]]"
+  - "[[ReWOO]]"
   - "[[Agent Loop]]"
   - "[[Agent Workflow]]"
   - "[[Evaluation]]"
@@ -97,9 +100,12 @@ Solve:
 
 ```text
 Plan-and-Solve Prompting: Prompt -> Plan -> Solve -> Answer
+ReWOO: Goal -> Planner(Plan/#E) -> Worker(Evidence) -> Solver(Answer)
 ReAct: Thought -> Action -> Observation -> Thought -> ... -> Answer
 Plan-and-execute workflow: Goal -> Plan -> Task list -> Execute -> Evaluate/Replan
 ```
+
+和 [[ReWOO]] 的区别尤其适合校准“计划”这个词：Plan-and-Solve 的 plan 仍然是一次回答内部的文本脚手架；ReWOO 的 Planner 会预留 `#E` evidence slots，并让 Worker 调工具填 evidence，再由 Solver 汇总。也就是说，ReWOO 吸收了“先计划”的直觉，但已经进入工具增强推理；它不是纯 prompt-level plan-solve。
 
 用户提供的 Planning Phase / Solving Phase 图里出现了 Task Agent、Exec、Loop 和 Replan。那张图更接近 plan-and-execute workflow：它把计划变成任务清单，并在执行阶段允许重新规划。它可以帮助理解 planning 的工程形态，但不要直接当成 Plan-and-Solve Prompting 论文方法本身。
 
@@ -148,6 +154,7 @@ Plan-and-execute workflow: Goal -> Plan -> Task list -> Execute -> Evaluate/Repl
 - [[Zero-shot CoT]]
 - [[Reasoning Trace]]
 - [[ReAct]]
+- [[ReWOO]]
 - [[Agent Loop]]
 - [[Agent Workflow]]
 - [[Evaluation]]

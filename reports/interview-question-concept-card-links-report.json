@@ -12,7 +12,7 @@
   "already_linked_pages": 362,
   "already_linked_targets": 941,
   "skipped_no_match_pages": 411,
-  "unsafe_region_skips": 4034,
+  "unsafe_region_skips": 4036,
   "protected_region_violations": 0,
   "request_meta_page_hits": [],
   "missing_concept_candidates": 0,
@@ -11215,10 +11215,12 @@
       "root": "agent_java_offer",
       "has_related_section": true,
       "related_targets": [
-        "Evaluation"
+        "Evaluation",
+        "Win Rate"
       ],
       "existing_targets": [
-        "Evaluation"
+        "Evaluation",
+        "Win Rate"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -11226,8 +11228,10 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 0,
-      "unmatched_existing_targets": [],
+      "unsafe_region_skips": 2,
+      "unmatched_existing_targets": [
+        "Win Rate"
+      ],
       "request_meta_hits": [],
       "no_match_reason": null
     },

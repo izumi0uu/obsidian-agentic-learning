@@ -4,10 +4,11 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-18
+updated: 2026-05-21
 related:
   - "[[Agent]]"
   - "[[ReAct]]"
+  - "[[ReWOO]]"
   - "[[Coding Agent]]"
   - "[[Agent Workflow Static Verification]]"
   - "[[Agent 知识地图]]"
@@ -66,6 +67,7 @@ SORT created DESC
 - [[ReAct]]
 - [[Reflexion]]
 - [[Plan-and-Solve Prompting]]
+- [[ReWOO]]
 - [[Reasoning Trace]]
 - [[Observation]]
 - [[Coding Agent]]

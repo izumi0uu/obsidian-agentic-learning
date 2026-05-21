@@ -20,6 +20,7 @@ related:
   - "[[TTL]]"
   - "[[Prompt Engineering]]"
   - "[[Planning]]"
+  - "[[ReWOO]]"
   - "[[Evaluation]]"
   - "[[BFCL]]"
   - "[[ReAct Plan-and-Solve Reflexion 对比]]"
@@ -83,6 +84,7 @@ LLM 地基：
 - [[Workflow Guardrails]]：理解 guardrails 应该放在 workflow 的输入、检索、工具、输出、状态和副作用边界，而不是只做最终回答过滤。
 - [[Durable Execution]]：理解长任务为什么需要暂停、恢复和重试。
 - [[Reflexion]]：理解 Agent 如何把失败反馈转成反思文本，并用经验改进下一轮行动。
+- [[ReWOO]]：理解先规划 evidence slots、再取证、最后合成答案的工具增强推理边界，尤其是它和 ReAct 的 Observation 回流差异。
 - [[Human-in-the-loop]]：理解人类确认、接管和修正如何进入 Agent loop。
 - [[Agent Lifecycle Hook]]：理解 runtime 如何在工具调用前后、会话开始/停止和上下文压缩等边界拦截、记录和恢复 Agent loop。
 - [[MCP]]、[[MCP Transport]]、[[MCP Elicitation]]、[[A2A]]、[[ANP]]：区分工具/context server 连接、MCP client/server 消息承载通道、MCP server 向用户请求补充输入、Agent-to-Agent 任务协作、以及 Agent 网络身份/发现/描述/协议协商。
@@ -158,7 +160,8 @@ LLM 地基：
 - [[Coding Agent 执行边界对比]]：区分 coding agent、repo context、patch validation、sandbox、code execution sandbox 和 AGENTS.md。
 - [[Coding Agent 为什么不用传统 RAG]]：解释 Codex CLI / Claude Code 这类客户端为什么更偏工具化 repo context gathering，而不是让用户维护可见的传统 RAG pipeline。
 - [[OpenClaw Repo vs Hermes Agent]]：区分 OpenClaw 的 Gateway-first personal assistant harness 和 Hermes 的 runtime-first self-improving agent harness。
-- [[Evaluation 层次对比]]：区分 evaluation、benchmark、BFCL/GAIA/AIME 任务层、eval harness、LLM-as-Judge、Win Rate、task success rate、RAG evaluation 和 trajectory evaluation。
+- [[Evaluation 层次对比]]：区分 evaluation、benchmark、BFCL/GAIA/AIME 任务层、eval harness、LLM-as-Judge、[[Win Rate]]、task success rate、RAG evaluation 和 trajectory evaluation。
+- [[Win Rate]]：理解 A/B 或 pairwise comparison 中的相对胜率为什么不能替代任务成功率。
 - [[Observability Audit 对比]]：区分 observability、trace、audit log、replay 和 OpenTelemetry GenAI。
 - [[ReAct Plan-and-Solve Reflexion 对比]]：从“行动前计划 / 执行中观察校正 / 执行后反思经验”切开 ReAct、Plan-and-Solve 和 Reflexion。
 - [[Environment Observation 类型对比]]：区分 Environment、Observation、Tool Result 等反馈来源。
@@ -224,6 +227,7 @@ SORT file.name ASC
 - [x] [[Agent Workflow]]
 - [x] [[Durable Execution]]
 - [x] [[Reflexion]]
+- [x] [[ReWOO]]
 - [x] [[Handoff]]
 - [x] [[Code Execution Sandbox]]
 - [x] [[LLM Gateway]]

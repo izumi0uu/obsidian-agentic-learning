@@ -30,6 +30,7 @@ related:
   - "[[Benchmark]]"
   - "[[Trace]]"
   - "[[Task Success Rate]]"
+  - "[[Win Rate]]"
 ---
 
 # Eval Harness
@@ -65,7 +66,7 @@ GAIA loader:
   question -> files/web/multimodal inputs -> expected short answer -> difficulty
 ```
 
-Loader 的输出还没有被评估；它只是让 runner 可以批量执行。真正的评分发生在 scorer / checker 层：AIME 可能用 exact match 或数值答案检查，BFCL 可能用 AST / executable / state-based check，开放式数据生成质量可能用 [[LLM-as-Judge]]、Win Rate 或人工验证。
+Loader 的输出还没有被评估；它只是让 runner 可以批量执行。真正的评分发生在 scorer / checker 层：AIME 可能用 exact match 或数值答案检查，BFCL 可能用 AST / executable / state-based check，开放式数据生成质量可能用 [[LLM-as-Judge]]、[[Win Rate]] 或人工验证。
 
 小边界：把 AIME 题目加载进系统，只说明 harness 能读数据；不说明模型会推理，也不说明 evaluator 可靠。很多评估 bug 其实出在 loader：答案字段读错、split 混淆、metadata 丢失、样本过滤不一致，都会让 report 看起来正常但结论失真。
 
@@ -142,3 +143,4 @@ Eval Harness 属于 current-practice。
 - [[Trace]]
 - [[Replay]]
 - [[Trajectory Evaluation]]
+- [[Win Rate]]

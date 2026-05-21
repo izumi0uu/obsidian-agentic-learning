@@ -5,7 +5,7 @@ topic:
   - evaluation
 status: growing
 created: 2026-05-05
-updated: 2026-05-18
+updated: 2026-05-21
 last_checked: 2026-05-10
 freshness: stable
 conflicts: []
@@ -35,6 +35,7 @@ related:
   - "[[Benchmark]]"
   - "[[Agent Robustness]]"
   - "[[Task Success Rate]]"
+  - "[[Win Rate]]"
   - "[[Eval Harness]]"
   - "[[LLM-as-Judge]]"
   - "[[Trace]]"
@@ -107,7 +108,7 @@ Evaluation 的对象可以是模型、prompt、工具、RAG pipeline、完整 Ag
 
 - [[Benchmark]] 是外部或固定任务集；Evaluation 是更大的判断过程。
 - [[Agent Robustness]] 是被 evaluation 测量的系统性质之一；Evaluation 定义任务、扰动、trace 和评分协议，不等于鲁棒性本身。
-- [[Task Success Rate]] 是一个指标；Evaluation 还要解释为什么成功或失败。
+- [[Task Success Rate]] 和 [[Win Rate]] 都是指标；前者看绝对任务完成比例，后者看成对比较中的相对胜出比例。Evaluation 还要解释为什么成功、失败或胜出。
 - [[LLM-as-Judge]] 是一种评估器；Evaluation 还可以包含规则、测试、人审和业务指标。
 - [[Eval Harness]] 是运行和记录评估的工程系统；Evaluation 是判断目标、样例和标准。
 - [[Observability]] 说明发生了什么；Evaluation 判断这件事好不好。
@@ -166,6 +167,7 @@ Evaluation 的局限是：它永远只能覆盖一部分任务分布。benchmark
 - [[Benchmark]]
 - [[Agent Robustness]]
 - [[Task Success Rate]]
+- [[Win Rate]]
 - [[Eval Harness]]
 - [[LLM-as-Judge]]
 - [[Trace]]

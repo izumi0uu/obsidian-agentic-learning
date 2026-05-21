@@ -51,7 +51,7 @@ Generated: `2026-05-17T05:31:24Z`
 - review_artifact_md: reports/concept-card-relation-map/concept-hierarchy-placement-review.md
 - classification_stage: limited_apply
 - concepts_with_up: 39
-- concepts_without_up: 113
+- concepts_without_up: 115
 - post_apply_dry_run_planned: 0
 - post_apply_dry_run_ready: 0
 

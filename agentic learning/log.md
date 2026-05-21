@@ -1457,3 +1457,21 @@ related:
 - Terminology and taxonomy: [[Agent Evaluation Benchmark]] is now the strict benchmark-family child of [[Benchmark]], and [[BFCL]] is its tool/function-calling benchmark child. `LLM Judge` is an alias of [[LLM-as-Judge]]; Win Rate and AIME 数据集加载器 are kept as metric / loader boundaries rather than weak concept cards. No alias-map or interview auto-link behavior was changed.
 - Updated navigation: [[资料收集索引]], [[04 页面目录]], and [[Agent 知识地图]].
 - Validation: request-meta audit PASS with 1207 files / 0 hits; concept-card audit PASS with 152 cards / needs action 0; comparison-topic audit PASS with 25 pages / needs action 0; taxonomy validate PASS with 152 concepts / 0 open review / 0 open writeback / 2 relation apply rows; plugin contract, control-surface sync, and baseline-map validation PASS; search index regenerated and `--check` PASS with 1209 documents; `git diff --check` PASS.
+
+## [2026-05-21] concept-ingest | ReWOO observation-feedback boundary
+
+- Created raw paper source note [[ReWOO - Decoupling Reasoning from Observations for Efficient Augmented Language Models]] and concept card [[ReWOO]].
+- Boundary decision: ReWOO is recorded as a seed concept for Plan-Work-Solve / evidence-slot planning, not as a production [[Agent Framework]] and not as an alias of [[ReAct]] or [[Plan-and-Solve Prompting]].
+- Mention sweep: searched ReWOO / Reasoning WithOut Observation / Reasoning without Observation / Decoupling Reasoning; durable existing hits were the DORA extracted paper references, now linked through the DORA source note and relevant concept/topic pages rather than rewriting extracted raw text.
+- Taxonomy: no `up` writeback. Current baseline has no safe scaffold-pattern parent; ReWOO stays relation-only adjacent to [[ReAct]], [[Plan-and-Solve Prompting]], and [[Observation]] until a later taxonomy pass approves a narrower parent.
+- Updated navigation and synthesis surfaces: [[ReAct]], [[Plan-and-Solve Prompting]], [[Agent Evaluation Benchmark]], [[Can LLM Agents Respond to Disasters - Benchmarking Heterogeneous Geospatial Reasoning in Emergency Operations]], [[ReAct Plan-and-Solve Reflexion 对比]], [[Agent 知识地图]], [[Agent 主题]], [[01 术语表]], [[资料收集索引]], and [[04 页面目录]].
+- Validation: pending in current run; see final response for fresh validation evidence.
+
+## [2026-05-21] concept-ingest | Win Rate evaluation metric boundary
+
+- Created [[Win Rate]] as the durable card for pairwise comparison / Win-Loss-Tie metric semantics.
+- Boundary decision: Win Rate is a metric, not [[LLM-as-Judge]], not [[Task Success Rate]], not [[Benchmark]], and not an [[Agent Evaluation Benchmark]] child. Generic pairwise comparison remains a method boundary, not an alias unless the page is explicitly about the reported win-rate metric.
+- Mention sweep: searched `Win Rate`, `win rate`, `胜率`, `Win/Loss/Tie`, `pairwise`, `成对比较`, and `A/B` across wiki, raw, maps, and the interview alias map; linked high-confidence evaluation-metric mentions and left broad A/B or generic pairwise mentions unlinked.
+- Taxonomy: no `up` writeback. Current baseline keeps metric-like cards such as [[Task Success Rate]] relation-only; [[Win Rate]] stays parentless until a future `Evaluation Metric` parent is reviewed through the taxonomy toolchain.
+- Updated navigation and synthesis surfaces: [[Evaluation 层次对比]], [[Evaluation]], [[Eval Harness]], [[LLM-as-Judge]], [[Task Success Rate]], [[Agent Evaluation Benchmark]], [[Agent 知识地图]], [[01 术语表]], [[04 页面目录]], and [[raw/repos/agent_java_offer/questions/177 01_AI 06_评测与监控 在进行人工评估时，如何设计合理的评估准则和流程，以保证评估结果的客观性和一致性？]].
+- Validation: pending in current run; see final response for fresh validation evidence.
