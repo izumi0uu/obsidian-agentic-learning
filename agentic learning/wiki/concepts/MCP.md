@@ -7,8 +7,8 @@ topic:
   - frontier
 status: growing
 created: 2026-05-06
-updated: 2026-05-20
-last_checked: 2026-05-20
+updated: 2026-05-21
+last_checked: 2026-05-21
 freshness: watch
 conflicts: []
 aliases:
@@ -18,6 +18,7 @@ source:
   - "[[Model Context Protocol 官方文档]]"
   - "[[Model Context Protocol Python SDK Repo]]"
   - "[[MCP Tool Poisoning Threat Model]]"
+  - "[[Smithery MCP Registry]]"
   - "[[055 ai tools 4. 什么是 MCP（模型上下文协议）？讲讲它的核心内容？]]"
   - "[[056 ai tools 5. MCP 由哪几部分组成？]]"
   - "[[048 ai tools 13. MCP 协议通常采用什么通信方式？]]"
@@ -25,12 +26,15 @@ evidence:
   - "[[Model Context Protocol 官方文档#为什么收]]"
   - "[[Model Context Protocol Python SDK Repo#为什么收]]"
   - "[[MCP Tool Poisoning Threat Model#为什么收]]"
+  - "[[Smithery MCP Registry#为什么收]]"
+  - "[[Smithery MCP Registry#关键事实]]"
   - "[[055 ai tools 4. 什么是 MCP（模型上下文协议）？讲讲它的核心内容？#三类核心能力，Tools、Resources、Prompts]]"
   - "[[056 ai tools 5. MCP 由哪几部分组成？#第二层：能力类型，Tools / Resources / Prompts]]"
   - "[[048 ai tools 13. MCP 协议通常采用什么通信方式？#传输方式二：Streamable HTTP（当前标准的远程传输）]]"
 related:
   - "[[Tool Calling]]"
   - "[[Tool Registry]]"
+  - "[[MCP Registry]]"
   - "[[MCP Transport]]"
   - "[[MCP Elicitation]]"
   - "[[Prompt]]"
@@ -178,6 +182,14 @@ sequenceDiagram
 
 最小边界是：server 发起 `elicitation/create`，client 控制 UI、隐私和策略，用户可以 `accept`、`decline` 或 `cancel`。在当前 spec 里，`form` 模式用于受限 schema 的表单输入，`url` 模式用于跳转外部授权或配置流程。它不是 [[Approval Gate]]，也不是模型随口追问；后续工具执行仍要经过 [[Tool Permissioning]] 和策略检查。
 
+## Registry / 生态发现边界
+
+[[MCP Registry]] 是 MCP server 的发现、发布和分发层，不是 MCP 协议本体。MCP 规定 client / server 如何暴露和调用 tools、resources、prompts；registry 则帮助 host 或开发者找到候选 server、查看元数据、安装或连接它们。
+
+[[Smithery MCP Registry]] 是这个边界的第三方生态例子：它帮助用户发现和连接 MCP server，也让开发者把 server 发布到 Smithery registry。它的学习价值不在于某个实时 server 数量，而在于说明 MCP 生态会自然长出“server marketplace / registry / discovery”层。这个层可以提高接入效率，也会放大供应链、tool description、schema 和权限治理风险。
+
+正确心智模型是：registry 只提供候选入口；host 仍要做来源校验、版本锁定、权限收窄、sandbox、approval gate 和 trace。一个 server 在 Smithery 或其他 MCP registry 里可见，不等于它对当前任务可信。
+
 ## 它不是什么
 
 MCP 不是 Agent 框架。
@@ -216,6 +228,7 @@ frontier / volatile。MCP 是当前工具协议生态的重要前沿，核心抽
 ## 证据锚点
 
 - Evidence type: source evidence — [[Model Context Protocol 官方文档#为什么收]]；[[Model Context Protocol Python SDK Repo#为什么收]]；[[MCP Tool Poisoning Threat Model#为什么收]]；[[055 ai tools 4. 什么是 MCP（模型上下文协议）？讲讲它的核心内容？#三类核心能力，Tools、Resources、Prompts]]；[[056 ai tools 5. MCP 由哪几部分组成？#第二层：能力类型，Tools / Resources / Prompts]]
+- Evidence type: ecosystem example — [[Smithery MCP Registry#为什么收]]；[[Smithery MCP Registry#关键事实]] 支持“Smithery 是第三方 MCP server discovery / publishing / connection 平台例子”，但不把它写成 MCP 协议本体或安全背书。
 - Evidence type: source boundary — 本卡只使用现有 source note / project note 的小节级证据；未伪造段落、页码或不存在的小节。
 - Evidence type: engineering synthesis — “概念详解”“边界细节”“现代性状态”把 [[Model Context Protocol 官方文档]]；[[Model Context Protocol Python SDK Repo]]；[[MCP Tool Poisoning Threat Model]] 与本 vault 的 Agent 工程学习目标综合起来。
 - Evidence type: learning diagram — [[MCP#调用流程图（学习图）]] 是用户提供图片的 Mermaid 转写，用于学习 MCP client / server / filesystem 调用时序；它不是官方规范原图。

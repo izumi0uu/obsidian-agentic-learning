@@ -1431,3 +1431,19 @@ related:
 - Taxonomy: no direct `up` / `relations` writeback; protocol, harness, and skill parent boundaries remain relation-only until the taxonomy baseline approves a strict parent.
 - Boundary: concept/content ingest, not a schema/template/workflow-rule change. Alias map and interview auto-link behavior were not changed.
 - Validation: pending in current run; see final response for fresh validation evidence.
+
+## [2026-05-21] concept-update | Smithery as MCP registry example
+
+- Created source note [[Smithery MCP Registry]] for Smithery.ai as a third-party MCP server discovery / publishing / connection platform.
+- Updated [[MCP]] with a registry / ecosystem discovery boundary: MCP is the client/server protocol; registry platforms help find and connect candidate servers but do not provide trust or permissioning by themselves.
+- Updated [[MCP Registry]] with Smithery as a concrete ecosystem example and reinforced that server discovery, metadata filtering, and connection onboarding are not safety guarantees.
+- Updated [[资料收集索引]] and [[04 页面目录]] for the new source note.
+- Terminology: `Smithery` is treated as a product/source example, not a new concept card or an alias of [[MCP]] / [[MCP Registry]]. Existing `MCP Registry` canonical concept remains the durable boundary.
+- Boundary: simple content/source update; no alias-map change, no `up` / `relations` writeback, and no workflow/schema/template change.
+
+## [2026-05-21] topic-update | PBRFT to Agentic RL training boundary
+
+- Created [[PBRFT 到 Agentic RL 的训练范式转变对比]] as a topic/comparison page explaining why trajectory-level Agentic RL can train reasoning, tool use, memory, planning, self-improvement, and perception policy tendencies.
+- Updated [[LLM 主题]], [[03 前沿追踪]], and [[04 页面目录]] so the topic is reachable from training/post-training and frontier navigation.
+- Preserved terminology boundary: `PBRFT` is recorded only as user-context shorthand for preference-style single-answer optimization, not as a stable concept card or alias.
+- Boundary: simple topic/navigation update; no concept card, alias-map, schema/template, or taxonomy relationship writeback.
