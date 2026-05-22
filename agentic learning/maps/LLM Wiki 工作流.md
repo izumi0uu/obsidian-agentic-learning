@@ -6,7 +6,7 @@ topic:
   - workflow
 status: active
 created: 2026-05-05
-updated: 2026-05-20
+updated: 2026-05-22
 source: /Users/idah/Downloads/llm-wiki.md
 related:
   - "[[Agent 知识地图]]"
@@ -88,6 +88,18 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 验收规则：`wiki/`、`raw/` 的 synthesis 段落、`maps/05 Query 写回队列.md` 的问题栏，都不应出现用户侧收录决策关键词；历史 log 可以记录操作，但也应优先写成中性边界语言。
 
 项目脚本：`python3 scripts/request_meta_audit.py --format markdown` 是请求 / 会话元信息隔离的固定审计入口。它扫描 `wiki/`、`raw/`、`maps/`、`reviews/` 和 `log.md`，用于发现聊天包装、hook 文本、goal reconciliation 片段和请求路由话术是否被误写入 durable vault 页面。误报要先收窄规则或加明确边界，不要为了通过审计删除真实技术概念内容。
+
+## 文章来源原子性 / Source-Claim Atomicity
+
+当用户要求“把某个观点录入”且该观点来自外部文章、课程、文档或论文时，写回对象必须是来源支持的原子主张，而不是用户当场提问的原话。
+
+硬性规则：
+
+- 一条写回尽量只承载一个来源主张、一个边界判断和一个最小证据锚点；不要把文章观点、用户理解、agent 推断和 vault 决策混成一段。
+- 不保留用户临场措辞、比喻、口语化中英混写或提问前提，除非这些措辞本身就是研究对象。进入 `raw/`、`wiki/`、`maps/`、`log.md` 前要改成中性、专业、可复用的知识语言。
+- 区分四层：文章明确说了什么、文章例子说明了什么、agent 基于机制做了什么推断、vault 最终沉淀了什么边界。文章没有直接支持的推断，必须标成 engineering synthesis 或边界判断，不能当作文章事实引用。
+- 证据优先锚到 source note 的小节，例如 `[[Source#关键事实]]`、PDF page / section、文章小节或 source markdown。不要用整篇文章为一个宽泛推断背书。
+- 避免长摘原文；只有短句必须作为证据时才引用，并用中文概括承担学习解释。source note 要保持足够原子，方便未来概念卡复用时精确追溯。
 
 ## 验证与公开搜索索引门禁
 

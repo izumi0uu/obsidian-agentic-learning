@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "plugin_contract_verification",
-  "generated_at": "2026-05-21T09:49:58Z",
+  "generated_at": "2026-05-22T11:23:29Z",
   "input_artifacts": {
     "temp_map": "reports/concept-card-relation-map/concept-relations-temp.json",
     "relation_ledger": "reports/concept-card-relation-map/relation-decision-ledger.json",

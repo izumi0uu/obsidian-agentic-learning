@@ -1475,3 +1475,14 @@ related:
 - Taxonomy: no `up` writeback. Current baseline keeps metric-like cards such as [[Task Success Rate]] relation-only; [[Win Rate]] stays parentless until a future `Evaluation Metric` parent is reviewed through the taxonomy toolchain.
 - Updated navigation and synthesis surfaces: [[Evaluation 层次对比]], [[Evaluation]], [[Eval Harness]], [[LLM-as-Judge]], [[Task Success Rate]], [[Agent Evaluation Benchmark]], [[Agent 知识地图]], [[01 术语表]], [[04 页面目录]], and [[raw/repos/agent_java_offer/questions/177 01_AI 06_评测与监控 在进行人工评估时，如何设计合理的评估准则和流程，以保证评估结果的客观性和一致性？]].
 - Validation: pending in current run; see final response for fresh validation evidence.
+
+## [2026-05-22] concept-update | prompt detail as conditional generation
+
+- Created source note [[AI Engineering From Scratch - Prompt Engineering]] for the prompt-engineering lesson that contrasts vague and engineered prompts.
+- Updated [[Prompt Engineering]] with the mechanism boundary: adding task detail to a prompt does not perform training-data retrieval; it conditions `P(next token | context)` and narrows the valid output space through clearer role, domain, audience, format, inclusion, and exclusion signals.
+- Boundary: simple source/concept update. No new concept card, alias map, taxonomy relation, schema, template, script, or workflow rule changed.
+
+## [2026-05-22] workflow-rule | source-claim atomicity
+
+- Added source-claim atomicity to `AGENTS.md` and [[LLM Wiki 工作流]] so article/course/document write-backs preserve professional neutral language and cite atomic source claims rather than user-side phrasing.
+- Rule boundary: this changes raw/source annotation and durable write-back behavior. It does not change frontmatter schema, templates, scripts, alias maps, taxonomy relationships, or concept-card structure.

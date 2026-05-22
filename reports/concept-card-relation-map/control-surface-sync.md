@@ -1,6 +1,6 @@
 # Taxonomy Tooling Control-Surface Sync
 
-Generated: `2026-05-21T09:50:03Z`
+Generated: `2026-05-22T11:23:29Z`
 
 ## Summary
 

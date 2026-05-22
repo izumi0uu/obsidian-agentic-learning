@@ -191,6 +191,14 @@ Request-meta boundary:
 - If the user's side context matters only for the current request, keep it in the reply or log at most; do not promote it into `wiki/` unless it is itself the subject being documented.
 - For weekly or systemic maintenance, run `python3 scripts/request_meta_audit.py --format markdown` to catch leaked chat wrappers, hook text, or request-routing wording in durable vault pages.
 
+Source-claim atomicity:
+
+- When a user asks to record a viewpoint from an external article, split the write-back into atomic source claims: one claim, one boundary, one evidence anchor where possible.
+- Do not preserve the user's spontaneous wording, metaphor, premise, or mixed-language phrasing as durable wiki prose unless that wording is explicitly the object being studied. Rewrite it into neutral professional language before it enters `raw/`, `wiki/`, `maps/`, or `log.md`.
+- Keep four layers distinct: what the article says, what the article's example illustrates, what the agent infers, and what the vault decides as a durable boundary. Do not cite the article for an inference that the article does not itself support.
+- Prefer section-level anchors such as `[[Source#关键事实]]`, page/section notes, or a source-note subsection over whole-article citations. If an article only supports a teaching analogy, mark it as analogy or engineering synthesis rather than source fact.
+- Avoid copying article phrasing unless a short quote is necessary for evidence; paraphrase professionally and keep the source note atomic enough that future concept cards can trace exactly which small claim is being reused.
+
 Map boundary:
 
 - Do not create new map files just because a source batch, paper batch, repo batch, or "recent / speed-read" collection was ingested.
