@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "taxonomy_tooling_control_surface_sync",
-  "generated_at": "2026-05-22T11:23:29Z",
+  "generated_at": "2026-05-23T12:47:34Z",
   "input_artifacts": {
     "plugin_contract_verification": "reports/concept-card-relation-map/plugin-contract-verification.json",
     "taxonomy_review": "reports/concept-card-relation-map/concept-hierarchy-placement-review.json",
@@ -11,7 +11,7 @@
     "required_surfaces_total": 8,
     "required_surfaces_synced": 8,
     "taxonomy_open_review_remaining": 0,
-    "taxonomy_defer_boundary_review_remaining": 26,
+    "taxonomy_defer_boundary_review_remaining": 25,
     "taxonomy_open_writeback": 0,
     "plugin_contract_problems": 0,
     "plugin_problems": 0,

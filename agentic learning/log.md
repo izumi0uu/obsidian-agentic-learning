@@ -1486,3 +1486,42 @@ related:
 
 - Added source-claim atomicity to `AGENTS.md` and [[LLM Wiki 工作流]] so article/course/document write-backs preserve professional neutral language and cite atomic source claims rather than user-side phrasing.
 - Rule boundary: this changes raw/source annotation and durable write-back behavior. It does not change frontmatter schema, templates, scripts, alias maps, taxonomy relationships, or concept-card structure.
+
+## [2026-05-22] concept-update | prompt specificity mechanism atoms
+
+- Strengthened [[AI Engineering From Scratch - Prompt Engineering]] and [[Prompt Engineering]] with atomic mechanism notes for prompt specificity: added conditions, context-token participation, semantic-neighborhood shift, output-space narrowing, few-shot / role prompt as temporary task definition, and hallucination risk when constraints are over-specific or unsupported.
+- Boundary: simple source/concept update. The article remains evidence for the vague-vs-engineered prompt teaching analogy; Transformer / LLM mechanism details are recorded as engineering synthesis, not as claims directly made by the article.
+
+## [2026-05-23] topic-update | CoT and reasoning tokens boundary
+
+- Created [[CoT 与 Reasoning Tokens 边界]] to summarize the boundary between classic [[Zero-shot CoT]], simple factual questions, hidden/internal reasoning tokens, and modern reasoning models.
+- Updated [[LLM 主题]] and [[04 页面目录]] so the topic is reachable from the LLM prompt-time reasoning route.
+- Boundary: simple topic/navigation update. No concept card, alias map, taxonomy relationship, schema, template, script, or workflow rule changed.
+
+## [2026-05-23] concept-ingest | Tree of Thoughts prompt-time search boundary
+
+- Created source note [[Tree of Thoughts - Deliberate Problem Solving with Large Language Models]] and concept card [[Tree of Thoughts]].
+- Terminology: `Tree of Thoughts` is the canonical concept; `ToT`, `Tree-of-Thought`, `Tree of Thought`, `思维树`, and `树状思维` are aliases. `Graph of Thoughts` / `GoT` is recorded only as an adjacent future boundary, not as an alias or new weak card.
+- Mention sweep: searched `Tree of Thoughts`, `Tree-of-Thought`, `Tree of Thought`, `ToT`, `思维树`, `树状思维`, `Graph of Thoughts`, and `GoT`; linked high-confidence raw/topic/map hits and left extracted-paper mentions as raw evidence rather than rewriting extracted text.
+- Taxonomy: read [[09 概念层级审计基线]], regenerated the machine/human taxonomy baseline, and did not write `up` / `relations`; latest baseline keeps ToT `relation_only_terminal` because prompt-time search scaffolds have planning/prompting adjacency but no approved strict parent.
+- Updated navigation, source, and automation surfaces: [[LLM 主题]], [[CoT 与 Reasoning Tokens 边界]], [[Agent 知识地图]], [[01 术语表]], [[04 页面目录]], [[资料收集索引]], and `scripts/interview_question_concept_aliases.json`.
+
+## [2026-05-23] concept-ingest | Constrained Decoding structured-output boundary
+
+- Created source note [[OpenAI Structured Outputs 文档]] and concept card [[Constrained Decoding]] for token-level schema / grammar constrained generation.
+- Terminology: `Constrained Decoding` is the canonical concept; `constrained decoding`, `约束解码`, and `受限解码` are aliases. Structured Outputs, JSON mode, schema validation, Tool Calling, Type-safe Agent SDK, Workflow Guardrails, Outlines, Guidance, token mask, and schema adherence are adjacent/evidence terms rather than aliases.
+- Mention sweep: searched `Constrained Decoding`, `constrained decoding`, `约束解码`, `受限解码`, `Structured Outputs`, `Outlines`, `Guidance`, `token mask`, `token masks`, and `mask invalid tokens`; linked high-confidence source/wiki/topic/map hits and left unrelated mask/guidance mentions unlinked.
+- Boundary decision: constrained decoding means generation-time token masking against schema / grammar; it improves structure validity but does not prove facts, permissions, business rules, tool choice, or workflow safety.
+- Taxonomy: regenerated the machine/human taxonomy baseline and did not write `up` / `relations`; [[Constrained Decoding]] remains `weak_or_backlog_terminal` until a safer generation-control parent is reviewed through the taxonomy toolchain.
+- Updated navigation, source, and automation surfaces: [[LLM 主题]], [[Tool 接口层对比]], [[Agent 知识地图]], [[01 术语表]], [[04 页面目录]], [[资料收集索引]], [[Tool Calling]], [[Type-safe Agent SDK]], [[Workflow Guardrails]], [[Hallucination]], [[Agentproof - Static Verification of Agent Workflow Graphs]], [[OpenAI Function Calling 文档]], and `scripts/interview_question_concept_aliases.json`.
+
+## [2026-05-23] concept-ingest | AI Engineering LLM lesson coverage
+
+- Added source notes for [[AI Engineering From Scratch - Few-Shot CoT]] and [[AI Engineering From Scratch - Structured Outputs]], and connected them with the existing [[AI Engineering From Scratch - Prompt Engineering]] note.
+- Created concept cards [[Few-shot Prompting]], [[Few-shot CoT]], [[Self-Consistency]], [[Prompt Chaining]], and [[Structured Outputs]] so the three LLM engineering lessons now cover prompt examples, CoT variants, inference-time sampling aggregation, sequential LLM pipelines, and schema-bound output contracts.
+- Updated [[Prompt Engineering]], [[Zero-shot CoT]], [[CoT 与 Reasoning Tokens 边界]], [[LLM 主题]], [[Agent 知识地图]], [[01 术语表]], [[04 页面目录]], and [[资料收集索引]] so the new concepts are reachable from prompt engineering, prompt-time reasoning, and structured-output learning routes.
+- Terminology: canonical names stay English for the stable paper/docs/community concepts. Chinese aliases were recorded only when they are true aliases. Weak or adjacent candidates such as Temperature, Top-p, Assistant Prefill, JSON Schema, Pydantic, Instructor, Graph of Thoughts, and bare `自洽` were intentionally not promoted into concept cards or aliases in this batch.
+- Mention sweep: searched the new canonical titles, Chinese aliases, abbreviations, and high-confidence phrase forms across wiki, raw, maps, reviews, and the interview alias map; linked high-confidence raw-question/source hits through `related` and `## 相关知识 wiki`, without rewriting raw source正文.
+- Taxonomy: read [[09 概念层级审计基线]] and did not write direct `up` fields for the new prompting / structured-output cards; their strict parent boundaries remain deferred until a future reviewed taxonomy pass approves stable parents such as `Prompting`, `Generation Control`, or `LLM Application Engineering`.
+- Updated automation surface `scripts/interview_question_concept_aliases.json` for safe interview-question auto-link aliases only.
+- Validation: pending in current run; see final response for fresh gate evidence.

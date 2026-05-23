@@ -9,7 +9,7 @@ topic:
   - agent
 status: inbox
 created: 2026-05-07
-updated: 2026-05-17
+updated: 2026-05-23
 url: https://xiaolinnote.com/ai/agent/3_workflow_tools.html
 source: https://xiaolinnote.com/ai/agent/3_workflow_tools.html
 last_checked: 2026-05-17
@@ -23,6 +23,7 @@ related:
   - "[[Tool Calling]]"
   - "[[Tool Registry]]"
   - "[[Agent Framework]]"
+  - "[[Prompt Chaining]]"
 ---
 
 # 3. [[Agent Workflow|Workflow]]，[[Agent]]，Tools 这三个的概念和区别介绍一下？
@@ -38,6 +39,7 @@ related:
 - [[Tool Calling]]
 - [[Tool Registry]]
 - [[Agent Framework]]
+- [[Prompt Chaining]]
 
 ## 页面正文
 

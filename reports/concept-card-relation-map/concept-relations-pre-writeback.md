@@ -1,21 +1,21 @@
 # Temporary Concept Relationship Map
 
-Generated: `2026-05-21T04:48:22Z`
+Generated: `2026-05-23T11:29:40Z`
 
 > 临时文件：用于后续概念层级开发评估。不要把候选边自动写回概念卡；每条 candidate 都需要单独人工/LLM 复核。
 
 ## Summary
 
-- total_concepts: 152
-- edge_counts: {'related_link': 898, 'body_link': 273, 'typed_relation': 54, 'taxonomy': 39}
-- typed_relation_counts: {'contrasts_with': 8, 'related_to': 12, 'representative_of': 2, 'based_on_intuition': 1, 'paired_with': 2, 'mechanism_for': 1, 'projects_from': 1, 'draws_from': 2, 'risk_for': 1, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 8, 'uses': 4, 'pattern_for': 1, 'specializes': 1, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
-- concepts_without_up: 113
+- total_concepts: 156
+- edge_counts: {'related_link': 937, 'body_link': 279, 'typed_relation': 57, 'taxonomy': 39}
+- typed_relation_counts: {'contrasts_with': 8, 'related_to': 15, 'representative_of': 2, 'based_on_intuition': 1, 'paired_with': 2, 'mechanism_for': 1, 'projects_from': 1, 'draws_from': 2, 'risk_for': 1, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 8, 'uses': 4, 'pattern_for': 1, 'specializes': 1, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
+- concepts_without_up: 117
 - core_orphans: 0
 - weakly_connected_concepts: 1
-- dangling_core_targets: 30
-- candidate_edges: 78
+- dangling_core_targets: 31
+- candidate_edges: 80
 - taxonomy_candidates: 11
-- topic_family_review_signals: 67
+- topic_family_review_signals: 69
 
 ## Existing taxonomy edges (`up`)
 
@@ -111,6 +111,9 @@ Generated: `2026-05-21T04:48:22Z`
 | [[RAGGraph]] | contrasts_with | [[GraphRAG]] | frontmatter.relations | GraphRAG 是图结构参与检索和上下文构造；RAGGraph 更可能指 RAG 执行流程图或项目名，二者不能互当别名。 |
 | [[RAGGraph]] | related_to | [[Agentic RAG]] | frontmatter.relations | 若 RAGGraph 指带分支和循环的检索工作流，它更接近 Agentic RAG / workflow graph 的实现语境，而不是独立稳定方法族。 |
 | [[RAGGraph]] | related_to | [[RAG]] | frontmatter.relations | RAGGraph 讨论的是 RAG pipeline 可能被图式编排，但这个命名不稳定；当前不把它写成 RAG 的 strict taxonomy 子类。 |
+| [[ReWOO]] | related_to | [[Observation]] | frontmatter.relations | ReWOO 的核心边界就是限制 observation 对 planner reasoning 的中途回流。 |
+| [[ReWOO]] | related_to | [[Plan-and-Solve Prompting]] | frontmatter.relations | ReWOO 保留先计划再求解的直觉，但加入 Worker 工具取证；不是纯 prompt-level plan-solve。 |
+| [[ReWOO]] | related_to | [[ReAct]] | frontmatter.relations | ReWOO 与 ReAct 都面向工具增强推理，但 ReAct 让 Observation 反馈驱动下一步，ReWOO 先规划 evidence slots 后取证。 |
 | [[Reciprocal Rank Fusion]] | precedes | [[Reranking]] | frontmatter.relations | RRF 是候选融合/粗排；reranking 是融合后对较小候选集做精排。 |
 | [[Reciprocal Rank Fusion]] | used_by | [[Hybrid Search]] | frontmatter.relations | Hybrid Search 常用 RRF 把 dense/vector 与 sparse/BM25 两路排序融合。 |
 | [[Sparse Retrieval]] | composed_into | [[Hybrid Search]] | frontmatter.relations | Sparse Retrieval 常被组合进 Hybrid Search 作为词面检索一路。 |
@@ -202,9 +205,11 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[Top-K]] | [[Retriever]] | topic_family_review | low | frontmatter.related | topic family: retrieval/search |
 | [[Trace]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Trace]] | [[Observability]] | topic_family_review | low | frontmatter.related | topic family: observability |
+| [[Tree of Thoughts]] | [[Planning]] | topic_family_review | low | frontmatter.related | topic family: planning |
 | [[Type-safe Agent SDK]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | topic family: framework |
 | [[Type-safe Agent SDK]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Vector Database]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
+| [[Win Rate]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Workflow Guardrails]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | topic family: workflow |
 
 ## Concepts without `up`
@@ -231,6 +236,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Chunking]]
 - [[Code Execution Sandbox]]
 - [[Coding Agent]]
+- [[Constrained Decoding]]
 - [[Context Engineering]]
 - [[Context Projection]]
 - [[Context Rot]]
@@ -294,6 +300,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[RAGFlow]]
 - [[RAGGraph]]
 - [[ReAct]]
+- [[ReWOO]]
 - [[Reasoning Trace]]
 - [[Reflexion]]
 - [[Replay]]
@@ -317,8 +324,10 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Trace]]
 - [[Trajectory]]
 - [[Transformer]]
+- [[Tree of Thoughts]]
 - [[Type-safe Agent SDK]]
 - [[Vector Database]]
+- [[Win Rate]]
 - [[Workflow Guardrails]]
 - [[Zero-shot CoT]]
 - [[双链]]
@@ -354,6 +363,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[Plan-and-Solve Prompting]] | related | ReAct Plan-and-Solve Reflexion 对比 | related_link |
 | [[ReAct]] | related | Environment Observation 类型对比 | related_link |
 | [[ReAct]] | related | ReAct Plan-and-Solve Reflexion 对比 | related_link |
+| [[ReWOO]] | related | ReAct Plan-and-Solve Reflexion 对比 | related_link |
 | [[Reasoning Trace]] | related | Trajectory Trace 类型对比 | related_link |
 | [[Reflexion]] | related | ReAct Plan-and-Solve Reflexion 对比 | related_link |
 | [[Trace]] | related | Trajectory Trace 类型对比 | related_link |

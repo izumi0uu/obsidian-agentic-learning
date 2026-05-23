@@ -9,7 +9,7 @@ topic:
   - agent
 status: inbox
 created: 2026-05-07
-updated: 2026-05-17
+updated: 2026-05-23
 url: https://xiaolinnote.com/ai/agent/14_planning.html
 source: https://xiaolinnote.com/ai/agent/14_planning.html
 last_checked: 2026-05-17
@@ -20,6 +20,7 @@ related:
   - "[[资料收集索引]]"
   - "[[Planning]]"
   - "[[Plan-and-Solve Prompting]]"
+  - "[[Tree of Thoughts]]"
   - "[[Agent Workflow]]"
 ---
 
@@ -33,6 +34,7 @@ related:
 
 - [[Planning]]
 - [[Plan-and-Solve Prompting]]
+- [[Tree of Thoughts]]
 - [[Agent Workflow]]
 
 ## 页面正文

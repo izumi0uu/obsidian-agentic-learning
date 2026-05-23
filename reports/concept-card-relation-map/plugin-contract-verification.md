@@ -1,10 +1,10 @@
 # Plugin Contract Verification
 
-Generated: `2026-05-22T11:23:29Z`
+Generated: `2026-05-23T12:47:16Z`
 
 ## Summary
 
-- concept_cards_checked: `154`
+- concept_cards_checked: `161`
 - top_level_up_edges: `39`
 - temp_map_taxonomy_edges: `39`
 - relation_writeback_dry_run_planned: `0`
@@ -12,8 +12,8 @@ Generated: `2026-05-22T11:23:29Z`
 - taxonomy_post_apply_dry_run_ready: `0`
 - taxonomy_limited_apply_rows: `1`
 - taxonomy_placement_open_review: `0`
-- taxonomy_placement_defer_boundary_review: `26`
-- taxonomy_placement_deferred_with_backlog: `26`
+- taxonomy_placement_defer_boundary_review: `25`
+- taxonomy_placement_deferred_with_backlog: `25`
 - taxonomy_placement_open_writeback: `0`
 - relation_apply_rows_checked: `2`
 - taxonomy_apply_rows_checked: `1`

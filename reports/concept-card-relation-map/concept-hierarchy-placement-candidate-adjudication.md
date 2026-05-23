@@ -1,6 +1,6 @@
 # Concept Hierarchy Placement Candidate adjudication Adjudication — LLM 逐条判定
 
-Generated: `2026-05-21T09:47:41Z`
+Generated: `2026-05-23T12:46:06Z`
 
 > Candidate adjudication only adjudicates candidate semantics. It does not edit concept cards; accepted rows must still pass Writeback dry-run before any limited apply.
 

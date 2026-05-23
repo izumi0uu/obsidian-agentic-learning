@@ -8,7 +8,7 @@ topic:
   - llm
 status: inbox
 created: 2026-05-17
-updated: 2026-05-17
+updated: 2026-05-23
 url: https://xiaolinnote.com/ai/llm/finetuning.html
 source: https://xiaolinnote.com/ai/llm/finetuning.html
 last_checked: 2026-05-17
@@ -19,6 +19,7 @@ related:
   - "[[资料收集索引]]"
   - "[[LLM]]"
   - "[[LLM 主题]]"
+  - "[[Few-shot Prompting]]"
 ---
 
 # 8. [[LLM|大模型]]微调的方案有哪些？
@@ -31,6 +32,7 @@ related:
 
 - [[LLM]]
 - [[LLM 主题]]
+- [[Few-shot Prompting]]
 
 ## 页面正文
 

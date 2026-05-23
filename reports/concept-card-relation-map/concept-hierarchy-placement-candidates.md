@@ -1,15 +1,15 @@
 # Concept Hierarchy Placement Candidates — Conservative candidate generation
 
-Generated: `2026-05-21T09:47:41Z`
+Generated: `2026-05-23T12:46:06Z`
 
 > Conservative candidate taxonomy only. These rows are **not** accepted taxonomy and must go through Candidate adjudication before any dry-run/writeback.
 
 ## Summary
 
-- deferred_rows_considered: 28
+- deferred_rows_considered: 27
 - approved_parent_count: 16
 - generated_candidates: 2
-- suppressed_signals: 26
+- suppressed_signals: 25
 - candidate_targets: `{"Agent Workflow": 2}`
 - adjudication_items: 2
 - open_writeback: 0
@@ -81,7 +81,6 @@ Generated: `2026-05-21T09:47:41Z`
 | [[Self-Attention]] | [[Transformer]] | component_of_not_kind_of | Self-Attention is a Transformer mechanism/component, not a kind of Transformer. |
 | [[Step-back Prompting]] |  | no_conservative_approved_parent_signal | No conservative signal points to a Parent-whitelist review approved stable parent. |
 | [[Trajectory]] | [[Evaluation]] | evaluated_object_not_evaluation_method | Trajectory can be evaluated or observed, but the path/object being evaluated is not itself Evaluation. |
-| [[Win Rate]] |  | no_conservative_approved_parent_signal | No conservative signal points to a Parent-whitelist review approved stable parent. |
 
 ## Next command
 

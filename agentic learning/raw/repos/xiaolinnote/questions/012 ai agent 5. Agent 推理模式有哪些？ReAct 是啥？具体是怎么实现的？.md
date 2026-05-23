@@ -9,7 +9,7 @@ topic:
   - agent
 status: inbox
 created: 2026-05-07
-updated: 2026-05-17
+updated: 2026-05-23
 url: https://xiaolinnote.com/ai/agent/5_react.html
 source: https://xiaolinnote.com/ai/agent/5_react.html
 last_checked: 2026-05-17
@@ -23,6 +23,8 @@ related:
   - "[[Observation]]"
   - "[[Tool Calling]]"
   - "[[Reasoning Trace]]"
+  - "[[Zero-shot CoT]]"
+  - "[[Few-shot CoT]]"
 ---
 
 # 5. Agent 推理模式有哪些？[[ReAct]] 是啥？具体是怎么实现的？
@@ -38,6 +40,8 @@ related:
 - [[Observation]]
 - [[Tool Calling]]
 - [[Reasoning Trace]]
+- [[Zero-shot CoT]]
+- [[Few-shot CoT]]
 
 ## 页面正文
 

@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-21
+updated: 2026-05-23
 related:
   - "[[Agent]]"
   - "[[前沿主源清单]]"
@@ -13,13 +13,19 @@ related:
   - "[[Agent Loop]]"
   - "[[Observation]]"
   - "[[Tool Calling]]"
+  - "[[Constrained Decoding]]"
+  - "[[Structured Outputs]]"
   - "[[MCP Transport]]"
   - "[[RAG]]"
   - "[[Memory]]"
   - "[[Context Projection]]"
   - "[[TTL]]"
   - "[[Prompt Engineering]]"
+  - "[[Few-shot Prompting]]"
   - "[[Planning]]"
+  - "[[Self-Consistency]]"
+  - "[[Tree of Thoughts]]"
+  - "[[Prompt Chaining]]"
   - "[[ReWOO]]"
   - "[[Evaluation]]"
   - "[[BFCL]]"
@@ -53,12 +59,18 @@ LLM 地基：
 - [[Multi-Head Attention]]
 - [[Positional Encoding]]
 - [[KV Cache]]
-- [[Prompt]] 和 [[Prompt Engineering]]：区分输入内容本身与围绕输入内容的设计、测试和版本治理。
+- [[Constrained Decoding]]：理解 structured output / strict tool arguments 如何从 prompt 约束下沉到 token-level 解码约束。
+- [[Structured Outputs]]：理解 LLM 输出怎样变成 schema / typed object / tool arguments 这类软件契约，以及为什么结构合法不等于事实正确。
+- [[Prompt]]、[[Prompt Engineering]] 和 [[Few-shot Prompting]]：区分输入内容本身、围绕输入内容的设计测试治理、以及示例作为推理时临时任务定义的边界。
 
 ## 行动能力
 
 - [[Tool Calling]]：模型如何通过结构化 tool call 和 schema 请求外部工具执行动作。
+- [[Constrained Decoding]]：理解 schema adherence 如何在单次模型生成中被约束，但不要把结构合法误当成权限安全或事实正确。
 - [[Planning]]：目标如何拆成步骤，并在执行中调整。
+- [[Self-Consistency]]：理解多路径采样和投票如何用更多推理时成本换取部分推理任务的鲁棒性。
+- [[Tree of Thoughts]]：理解 LLM 推理如何从单条 CoT 链扩展为多分支搜索、评估和剪枝，并把它和工程化 [[Agent Workflow]] 区分开。
+- [[Prompt Chaining]]：理解顺序 LLM pipeline 如何把中间产物变成可检查节点，但仍不等于完整 Agent。
 - [[Memory]]：Agent 如何保存和使用过去的信息。
 - [[Oh My Codex (OMX)]]：一个具体的 Codex CLI 编排实践，用来观察 Agent Harness 如何落地。
 - [[Hermes Agent]]：一个具体的 self-improving Agent runtime，用来观察 memory、skills、messaging gateway、MCP、security approval 和 `/goal` 如何组合。
@@ -196,6 +208,12 @@ SORT file.name ASC
 - [x] [[KV Cache]]
 - [x] [[Prompt]]
 - [x] [[Prompt Engineering]]
+- [x] [[Few-shot Prompting]]
+- [x] [[Few-shot CoT]]
+- [x] [[Self-Consistency]]
+- [x] [[Prompt Chaining]]
+- [x] [[Structured Outputs]]
+- [x] [[Tree of Thoughts]]
 - [x] [[Hallucination]]
 - [x] [[Embedding]]
 - [x] [[TF-IDF]]

@@ -6,19 +6,23 @@ topic:
   - rag
 status: growing
 created: 2026-05-12
-updated: 2026-05-16
+updated: 2026-05-23
 last_checked: 2026-05-12
 freshness: stable
 source:
   - "[[LLM]]"
   - "[[RAG]]"
   - "[[RAG Evaluation]]"
+  - "[[raw/repos/xiaolinnote/questions/127 ai llm 18. 大模型为什么会出现幻觉？怎么缓解？]]"
 evidence:
   - "[[LLM#它不是什么]]"
   - "[[RAG#常见误解 / 风险]]"
   - "[[RAG Evaluation#概念详解]]"
+  - "[[raw/repos/xiaolinnote/questions/127 ai llm 18. 大模型为什么会出现幻觉？怎么缓解？#4. 约束解码（Constrained Decoding）]]"
 related:
   - "[[LLM]]"
+  - "[[Structured Outputs]]"
+  - "[[Constrained Decoding]]"
   - "[[RAG]]"
   - "[[RAG Evaluation]]"
   - "[[RAG Citation Faithfulness]]"
@@ -87,11 +91,14 @@ Hallucination 不是模型有意识欺骗。
 
 局限是没有单一手段能消灭幻觉。可靠性来自分层控制：证据进入、上下文装配、输出检查和持续评估。
 
+[[Constrained Decoding]] 可以降低结构/格式类幻觉，例如输出 JSON、SQL、枚举或特定 schema 时跑偏；但它不能证明内容事实正确。一个合法 JSON 仍可能包含错误事实、错误引用或不应执行的工具参数。
+
 ## 证据锚点
 
 - Concept anchor: [[LLM#它不是什么]]
 - Concept anchor: [[RAG#常见误解 / 风险]]
 - Concept anchor: [[RAG Evaluation#概念详解]]
+- Source anchor: [[raw/repos/xiaolinnote/questions/127 ai llm 18. 大模型为什么会出现幻觉？怎么缓解？#4. 约束解码（Constrained Decoding）]]
 - Evidence type: existing concept synthesis + engineering inference.
 
 - Boundary: Hallucination 是输出与事实/证据/上下文不一致的失败形态，不等于所有错误、风格不佳或模型不确定。
@@ -104,6 +111,7 @@ Hallucination 不是模型有意识欺骗。
 ## 相关链接
 
 - [[LLM]]
+- [[Constrained Decoding]]
 - [[RAG]]
 - [[RAG Evaluation]]
 - [[RAG Citation Faithfulness]]

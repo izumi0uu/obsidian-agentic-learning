@@ -4,10 +4,10 @@
 - 扫描题页：779
 - 含 `## 相关知识 wiki`：779
 - 已有正文概念链接页：362
-- 本次可新增/已新增链接：42
-- would modify pages：34
-- skipped/no-match pages：411
-- unsafe-region skips：4036
+- 本次可新增/已新增链接：65
+- would modify pages：48
+- skipped/no-match pages：410
+- unsafe-region skips：4102
 - missing concept candidates：0（unique 0）
 - protected-region violations：0
 
@@ -15,8 +15,8 @@
 
 | root | total | related | already-linked pages | would-modify pages | proposed links | skipped/no-match |
 |---|---:|---:|---:|---:|---:|---:|
-| xiaolinnote | 142 | 142 | 81 | 14 | 17 | 60 |
-| agent_java_offer | 637 | 637 | 281 | 20 | 25 | 351 |
+| xiaolinnote | 142 | 142 | 81 | 26 | 36 | 59 |
+| agent_java_offer | 637 | 637 | 281 | 22 | 29 | 351 |
 
 ## Sample files selected
 
@@ -28,10 +28,10 @@
 - agentic learning/raw/repos/agent_java_offer/questions/228 01_AI 08_框架协议与工程化 追问：LCEL 和手写 if else 调用代码相比，工程收益在哪？.md
 - agentic learning/raw/repos/agent_java_offer/questions/301 02_后端 04_并发与异步任务 `CompletableFuture` 常见坑？.md
 - agentic learning/raw/repos/agent_java_offer/questions/407 02_后端 10_网络I_O与发布治理 Netty 如何体现 Reactor 模型？.md
-- agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md
-- agentic learning/raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md
-- agentic learning/raw/repos/xiaolinnote/questions/048 ai tools 13. MCP 协议通常采用什么通信方式？.md
-- agentic learning/raw/repos/xiaolinnote/questions/049 ai tools 14. 说说 WebSocket 和 SSE 通信的区别及局限性？.md
+- agentic learning/raw/repos/xiaolinnote/questions/005 ai agent 14. 如何赋予 LLM 规划能力？.md
+- agentic learning/raw/repos/xiaolinnote/questions/006 ai agent 15. 讲讲 Agent 的反思机制？为什么要用反思？具体怎么实现？.md
+- agentic learning/raw/repos/xiaolinnote/questions/009 ai agent 2. Agent 的基本架构由哪些核心组件构成？.md
+- agentic learning/raw/repos/xiaolinnote/questions/012 ai agent 5. Agent 推理模式有哪些？ReAct 是啥？具体是怎么实现的？.md
 
 ## Missing targets
 
@@ -41,7 +41,6 @@
 
 - agentic learning/raw/repos/xiaolinnote/questions/019 ai langchian LangChain框架面试题介绍.md — no safe alias match
 - agentic learning/raw/repos/xiaolinnote/questions/020 ai langchian 05｜ LangChain框架面试题.md — no safe alias match
-- agentic learning/raw/repos/xiaolinnote/questions/030 ai rag 17. 如何规避 RAG 系统中大模型的幻觉？.md — no safe alias match
 - agentic learning/raw/repos/xiaolinnote/questions/050 ai tools 15. 为什么要用 WebRTC 协议？它和 WebSocket（WS）在 AI 对话流中的核心差异是什么？.md — no body concept links found
 - agentic learning/raw/repos/xiaolinnote/questions/064 git 01｜为什么要学 Git？.md — no body concept links found
 - agentic learning/raw/repos/xiaolinnote/questions/065 git 02｜准备工作：5 分钟搞定 Git 安装与配置.md — no body concept links found
@@ -119,13 +118,22 @@
 - agentic learning/raw/repos/agent_java_offer/questions/093 01_AI 03_RAG 如何做检索质量回归测试？.md — no safe alias match
 - agentic learning/raw/repos/agent_java_offer/questions/099 01_AI 03_RAG 知识库的实时更新： 如何高效地保持向量索引与源数据的同步？当源文档被修改或删除时，需要有可靠的机制来更新或废弃对应的向量，这涉及到复杂的ETL（Extract, Trans a58e85.md — no safe alias match
 - agentic learning/raw/repos/agent_java_offer/questions/120 01_AI 04_上下文工程与记忆 什么时候必须进入微调阶段？.md — no safe alias match
-- ... 其余 331 条见 JSON 报告。
+- agentic learning/raw/repos/agent_java_offer/questions/121 01_AI 04_上下文工程与记忆 如何做 A B 与灰度验证？.md — no safe alias match
+- ... 其余 330 条见 JSON 报告。
 
 ## Proposed/applied links（前 80 条）
 
+- agentic learning/raw/repos/xiaolinnote/questions/005 ai agent 14. 如何赋予 LLM 规划能力？.md:58 — `ToT` -> `[[Tree of Thoughts]]`
+- agentic learning/raw/repos/xiaolinnote/questions/006 ai agent 15. 讲讲 Agent 的反思机制？为什么要用反思？具体怎么实现？.md:177 — `ToT` -> `[[Tree of Thoughts]]`
+- agentic learning/raw/repos/xiaolinnote/questions/009 ai agent 2. Agent 的基本架构由哪些核心组件构成？.md:222 — `ToT` -> `[[Tree of Thoughts]]`
+- agentic learning/raw/repos/xiaolinnote/questions/010 ai agent 3. Workflow，Agent，Tools 这三个的概念和区别介绍一下？.md:306 — `Prompt Chaining` -> `[[Prompt Chaining]]`
+- agentic learning/raw/repos/xiaolinnote/questions/012 ai agent 5. Agent 推理模式有哪些？ReAct 是啥？具体是怎么实现的？.md:114 — `Zero-shot CoT` -> `[[Zero-shot CoT]]`
+- agentic learning/raw/repos/xiaolinnote/questions/012 ai agent 5. Agent 推理模式有哪些？ReAct 是啥？具体是怎么实现的？.md:115 — `Few-shot CoT` -> `[[Few-shot CoT]]`
+- agentic learning/raw/repos/xiaolinnote/questions/014 ai agent 7. 复杂任务怎么做的任务拆分？为什么要拆分？效果如何提升？.md:100 — `ToT` -> `[[Tree of Thoughts]]`
 - agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md:64 — `HyDE` -> `[[HyDE]]`
 - agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md:64 — `Step-back Prompting` -> `[[Step-back Prompting]]`
 - agentic learning/raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md:155 — `HyDE` -> `[[HyDE]]`
+- agentic learning/raw/repos/xiaolinnote/questions/030 ai rag 17. 如何规避 RAG 系统中大模型的幻觉？.md:64 — `结构化输出` -> `[[Structured Outputs]]`
 - agentic learning/raw/repos/xiaolinnote/questions/045 ai tools 10. MCP 和 Agent Skill 的区别是什么？.md:108 — `渐进式加载` -> `[[Progressive Disclosure]]`
 - agentic learning/raw/repos/xiaolinnote/questions/048 ai tools 13. MCP 协议通常采用什么通信方式？.md:65 — `Streamable HTTP` -> `[[MCP Transport]]`
 - agentic learning/raw/repos/xiaolinnote/questions/049 ai tools 14. 说说 WebSocket 和 SSE 通信的区别及局限性？.md:163 — `Streamable HTTP` -> `[[MCP Transport]]`
@@ -133,19 +141,34 @@
 - agentic learning/raw/repos/xiaolinnote/questions/056 ai tools 5. MCP 由哪几部分组成？.md:71 — `Streamable HTTP` -> `[[MCP Transport]]`
 - agentic learning/raw/repos/xiaolinnote/questions/060 ai tools 9. Skill 是什么？.md:69 — `Agent Skills` -> `[[Agent Skills]]`
 - agentic learning/raw/repos/xiaolinnote/questions/060 ai tools 9. Skill 是什么？.md:136 — `渐进式加载` -> `[[Progressive Disclosure]]`
+- agentic learning/raw/repos/xiaolinnote/questions/121 ai llm 17. 什么是 CoT？为啥效果好？它有什么缺点或局限性？.md:98 — `Zero-shot CoT` -> `[[Zero-shot CoT]]`
+- agentic learning/raw/repos/xiaolinnote/questions/121 ai llm 17. 什么是 CoT？为啥效果好？它有什么缺点或局限性？.md:97 — `Few-shot CoT` -> `[[Few-shot CoT]]`
+- agentic learning/raw/repos/xiaolinnote/questions/121 ai llm 17. 什么是 CoT？为啥效果好？它有什么缺点或局限性？.md:112 — `Self-Consistency` -> `[[Self-Consistency]]`
+- agentic learning/raw/repos/xiaolinnote/questions/122 ai llm 12. 大模型生成文本时的解码策略有哪些？贪心、Beam Search、采样分别什么时候用？.md:51 — `Top-K` -> `[[Top-K]]`
+- agentic learning/raw/repos/xiaolinnote/questions/122 ai llm 12. 大模型生成文本时的解码策略有哪些？贪心、Beam Search、采样分别什么时候用？.md:211 — `Self-Consistency` -> `[[Self-Consistency]]`
 - agentic learning/raw/repos/xiaolinnote/questions/123 ai llm 20. 大模型部署有哪些主流方案？vLLM、TGI、llama.cpp、SGLang 实际项目里怎么选？.md:53 — `KV Cache` -> `[[KV Cache]]`
-- agentic learning/raw/repos/xiaolinnote/questions/128 ai llm 14. KV Cache 是什么？Prompt Caching 的原理是什么？.md:25 — `KV Cache` -> `[[KV Cache]]`
+- agentic learning/raw/repos/xiaolinnote/questions/126 ai llm 8. 大模型微调的方案有哪些？.md:63 — `Few-shot` -> `[[Few-shot Prompting]]`
+- agentic learning/raw/repos/xiaolinnote/questions/127 ai llm 18. 大模型为什么会出现幻觉？怎么缓解？.md:83 — `约束解码` -> `[[Constrained Decoding]]`
+- agentic learning/raw/repos/xiaolinnote/questions/127 ai llm 18. 大模型为什么会出现幻觉？怎么缓解？.md:83 — `Self-Consistency` -> `[[Self-Consistency]]`
+- agentic learning/raw/repos/xiaolinnote/questions/128 ai llm 14. KV Cache 是什么？Prompt Caching 的原理是什么？.md:26 — `KV Cache` -> `[[KV Cache]]`
+- agentic learning/raw/repos/xiaolinnote/questions/128 ai llm 14. KV Cache 是什么？Prompt Caching 的原理是什么？.md:196 — `Few-shot` -> `[[Few-shot Prompting]]`
 - agentic learning/raw/repos/xiaolinnote/questions/131 ai llm 3. 多头注意力（MHA）有哪些局限？MQA、GQA、Flash Attention 怎么解决？.md:69 — `KV Cache` -> `[[KV Cache]]`
-- agentic learning/raw/repos/xiaolinnote/questions/136 ai llm 16. 如何写好 Prompt？分享下 Prompt 工程实践经验？.md:26 — `Prompt` -> `[[Prompt]]`
-- agentic learning/raw/repos/xiaolinnote/questions/136 ai llm 16. 如何写好 Prompt？分享下 Prompt 工程实践经验？.md:26 — `Prompt 工程` -> `[[Prompt Engineering]]`
+- agentic learning/raw/repos/xiaolinnote/questions/132 ai llm 22. 对比使用过哪些主流大模型？你们项目中最终选用了哪个模型？为什么？.md:69 — `结构化输出` -> `[[Structured Outputs]]`
+- agentic learning/raw/repos/xiaolinnote/questions/136 ai llm 16. 如何写好 Prompt？分享下 Prompt 工程实践经验？.md:28 — `Prompt` -> `[[Prompt]]`
+- agentic learning/raw/repos/xiaolinnote/questions/136 ai llm 16. 如何写好 Prompt？分享下 Prompt 工程实践经验？.md:28 — `Prompt 工程` -> `[[Prompt Engineering]]`
+- agentic learning/raw/repos/xiaolinnote/questions/136 ai llm 16. 如何写好 Prompt？分享下 Prompt 工程实践经验？.md:67 — `Few-shot` -> `[[Few-shot Prompting]]`
 - agentic learning/raw/repos/xiaolinnote/questions/137 ai llm 15. 大模型量化是什么？INT8-INT4-AWQ-GPTQ 怎么选？.md:105 — `KV Cache` -> `[[KV Cache]]`
 - agentic learning/raw/repos/xiaolinnote/questions/142 ai llm 1. 什么是大语言模型？和传统 NLP 模型有什么区别？.md:25 — `NLP` -> `[[NLP]]`
+- agentic learning/raw/repos/agent_java_offer/questions/008 01_AI 01_Agent基础 ReAct与规划能力（CoT ToT GoT）.md:42 — `ToT` -> `[[Tree of Thoughts]]`
+- agentic learning/raw/repos/agent_java_offer/questions/014 01_AI 01_Agent基础 在 Agent 的设计中，“规划能力”至重要。请谈谈目前有哪些主流方法可以赋予 LLM 规划能力？（例如 CoT, ToT, GoT等）.md:39 — `ToT` -> `[[Tree of Thoughts]]`
 - agentic learning/raw/repos/agent_java_offer/questions/026 01_AI 02_Workflow与多Agent 在构建一个复杂的 Agent 时，你认为最主要的挑战是什么？.md:88 — `规划与推理的鲁棒性` -> `[[Agent Robustness]]`
 - agentic learning/raw/repos/agent_java_offer/questions/072 01_AI 03_RAG RAG检索优化与高级范式（重排 图谱 自适应检索 向量库）.md:78 — `HyDE` -> `[[HyDE]]`
 - agentic learning/raw/repos/agent_java_offer/questions/077 01_AI 03_RAG 除了基础的向量检索，你还知道哪些可以提升 RAG 检索质量的技术？.md:111 — `HyDE` -> `[[HyDE]]`
 - agentic learning/raw/repos/agent_java_offer/questions/109 01_AI 04_上下文工程与记忆 记忆系统与状态设计（短期 长期 State）.md:92 — `TTL` -> `[[TTL]]`
-- agentic learning/raw/repos/agent_java_offer/questions/122 01_AI 04_上下文工程与记忆 LLM 调优（训练调优 + Prompt 调优）怎么分层做？.md:112 — `HyDE` -> `[[HyDE]]`
-- agentic learning/raw/repos/agent_java_offer/questions/122 01_AI 04_上下文工程与记忆 LLM 调优（训练调优 + Prompt 调优）怎么分层做？.md:104 — `Gather-Select-Structure-Compress` -> `[[GSSC Pipeline]]`
+- agentic learning/raw/repos/agent_java_offer/questions/122 01_AI 04_上下文工程与记忆 LLM 调优（训练调优 + Prompt 调优）怎么分层做？.md:116 — `HyDE` -> `[[HyDE]]`
+- agentic learning/raw/repos/agent_java_offer/questions/122 01_AI 04_上下文工程与记忆 LLM 调优（训练调优 + Prompt 调优）怎么分层做？.md:108 — `Gather-Select-Structure-Compress` -> `[[GSSC Pipeline]]`
+- agentic learning/raw/repos/agent_java_offer/questions/122 01_AI 04_上下文工程与记忆 LLM 调优（训练调优 + Prompt 调优）怎么分层做？.md:107 — `few-shot` -> `[[Few-shot Prompting]]`
+- agentic learning/raw/repos/agent_java_offer/questions/122 01_AI 04_上下文工程与记忆 LLM 调优（训练调优 + Prompt 调优）怎么分层做？.md:106 — `结构化输出` -> `[[Structured Outputs]]`
 - agentic learning/raw/repos/agent_java_offer/questions/123 01_AI 04_上下文工程与记忆 Prompt Engineering 及 Prompt 优化策略有哪些？.md:43 — `Prompt` -> `[[Prompt]]`
 - agentic learning/raw/repos/agent_java_offer/questions/124 01_AI 04_上下文工程与记忆 Prompt Engineering 和微调策略如何协同？.md:74 — `Prompt` -> `[[Prompt]]`
 - agentic learning/raw/repos/agent_java_offer/questions/161 01_AI 05_模型调优与微调 11 NLP是什么.md:37 — `NLP` -> `[[NLP]]`

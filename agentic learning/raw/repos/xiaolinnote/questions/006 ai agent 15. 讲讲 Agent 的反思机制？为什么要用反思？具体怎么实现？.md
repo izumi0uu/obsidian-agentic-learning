@@ -9,7 +9,7 @@ topic:
   - agent
 status: inbox
 created: 2026-05-07
-updated: 2026-05-17
+updated: 2026-05-23
 url: https://xiaolinnote.com/ai/agent/15_reflection.html
 source: https://xiaolinnote.com/ai/agent/15_reflection.html
 last_checked: 2026-05-17
@@ -22,6 +22,7 @@ related:
   - "[[Memory Reflection]]"
   - "[[Agent Loop]]"
   - "[[Reasoning Trace]]"
+  - "[[Tree of Thoughts]]"
 ---
 
 # 15. 讲讲 Agent 的反思机制？为什么要用反思？具体怎么实现？
@@ -36,6 +37,7 @@ related:
 - [[Memory Reflection]]
 - [[Agent Loop]]
 - [[Reasoning Trace]]
+- [[Tree of Thoughts]]
 
 ## 页面正文
 

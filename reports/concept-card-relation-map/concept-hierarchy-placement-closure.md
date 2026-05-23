@@ -1,20 +1,20 @@
 # Concept Hierarchy Placement Audit closure — Completion Closure
 
-Generated: `2026-05-21T09:47:41Z`
+Generated: `2026-05-23T12:46:06Z`
 
 > Audit closure closes remaining concept-hierarchy-placement open reviews as backlog-backed defers. It does not write concept cards or create fallback parents.
 
 ## Summary
 
-- total_concepts: 154
-- reviewed_concepts: 154
+- total_concepts: 161
+- reviewed_concepts: 161
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0
 - open_writeback: 0
 - dry_run_planned: 0
-- defer_boundary_review: 26
-- deferred_with_backlog: 26
+- defer_boundary_review: 25
+- deferred_with_backlog: 25
 - concept_card_writes: 0
 - plugin_problems: 0
 - forbidden_up_edges: 0
@@ -70,7 +70,6 @@ Backlog home: `agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念�
 | [[Self-Attention]] | [[Transformer]] | component_of_not_kind_of | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Step-back Prompting]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Trajectory]] | [[Evaluation]] | evaluated_object_not_evaluation_method | Trace/evaluation object; may be evaluated or observed, but it is not automatically Evaluation or Observability. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
-| [[Win Rate]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 
 ## Boundary
 

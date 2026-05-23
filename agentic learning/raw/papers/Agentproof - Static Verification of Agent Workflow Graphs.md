@@ -22,7 +22,7 @@ topic:
   - framework
   - frontier
 created: 2026-05-14
-updated: 2026-05-15
+updated: 2026-05-23
 last_checked: 2026-05-14
 freshness: watch
 conflicts: []
@@ -30,6 +30,7 @@ status: growing
 source: https://arxiv.org/abs/2603.20356
 related:
   - "[[Agent Workflow Static Verification]]"
+  - "[[Constrained Decoding]]"
   - "[[Agent Workflow]]"
   - "[[LangGraph]]"
   - "[[Guardrails]]"
@@ -208,6 +209,12 @@ Agentproof 把现代 Agent framework 暴露出的 workflow graph 当成静态分
 | 显式 Agent workflow graph 可以在部署前做静态检查，补 runtime guardrail 的路径覆盖缺口。 | Extracted Page 1-3 / Abstract + Introduction | high | [[Agent Workflow Static Verification]] |
 | Agentproof 的主要工程贡献是跨框架抽取统一图模型，而不是发明新的基础图算法。 | Extracted Page 2、Page 16 / Contributions + Comparison to ad-hoc scripts | high | [[Agent Framework]] |
 | 六类结构检查覆盖 reachability、livelock、dead end、router shape、human gate 和 tool declaration 等拓扑问题。 | Extracted Page 9-10 / Section 6.1 | high | [[Agent Workflow Static Verification]] |
+
+## Related work：constrained decoding 与 workflow verification
+
+Agentproof 的 related work 把 constrained decoding 和 workflow graph verification 明确分层：[[Constrained Decoding]] 在单次 LLM 调用内部约束输出结构，例如把 grammar 或 JSON Schema 编译成 token mask；Agentproof 约束的是 workflow 节点之间的转移结构。两者互补，但不在同一层。
+
+证据边界：这条证据支持“constrained decoding 是 token-level output-structure control”，也支持它与 workflow topology verification 的层级差异；不能把它外推成事实正确性或 workflow 安全证明。
 | temporal policy DSL 可编译为 DFA，并以静态 graph-product 或 runtime event monitor 两种方式使用。 | Extracted Page 10-11 / Section 6.2 | medium-high | [[Policy Engine]] |
 | 论文评估使用 18 个作者构造 workflow，适合作为工具检测能力 benchmark，不适合作为生产缺陷率统计。 | Extracted Page 12-14、Page 21 / Evaluation + Limitations | high | [[Evaluation]] |
 | 静态验证不替代 runtime guardrails；它只覆盖 topology / event stream，不证明 LLM 输出事实性或意图。 | Extracted Page 17、Page 20-21 / Guardrails comparison + Limitations | high | [[Guardrails]] |

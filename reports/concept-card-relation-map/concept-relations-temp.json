@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
   "artifact_type": "temporary_concept_relationship_map",
-  "generated_at": "2026-05-21T09:47:24Z",
+  "generated_at": "2026-05-23T12:46:06Z",
   "scope": {
     "concept_dir": "agentic learning/wiki/concepts",
     "temporary": true,
     "write_policy": "Do not write these candidates into concept cards without a separate review task."
   },
   "summary": {
-    "total_concepts": 154,
+    "total_concepts": 161,
     "edge_counts": {
-      "related_link": 918,
-      "body_link": 274,
+      "related_link": 977,
+      "body_link": 281,
       "typed_relation": 57,
       "taxonomy": 39
     },
@@ -39,13 +39,13 @@
       "composed_into": 2,
       "foundational_for": 1
     },
-    "concepts_without_up": 115,
+    "concepts_without_up": 122,
     "core_orphans": 0,
     "weakly_connected_concepts": 1,
     "dangling_core_targets": 31,
-    "candidate_edges": 79,
+    "candidate_edges": 81,
     "taxonomy_candidates": 11,
-    "topic_family_review_signals": 68
+    "topic_family_review_signals": 70
   },
   "nodes": [
     {
@@ -907,6 +907,37 @@
       ]
     },
     {
+      "id": "Constrained Decoding",
+      "title": "Constrained Decoding",
+      "file": "agentic learning/wiki/concepts/Constrained Decoding.md",
+      "topics": [
+        "llm",
+        "decoding",
+        "structured-output",
+        "tools"
+      ],
+      "status": "seed",
+      "freshness": "watch",
+      "aliases": [
+        "constrained decoding",
+        "约束解码",
+        "受限解码"
+      ],
+      "source_count": 4,
+      "evidence_count": 4,
+      "up": [],
+      "related": [
+        "Structured Outputs",
+        "Tool Calling",
+        "Type-safe Agent SDK",
+        "Workflow Guardrails",
+        "Hallucination",
+        "Token",
+        "Top-K",
+        "Prompt Engineering"
+      ]
+    },
+    {
       "id": "Context Engineering",
       "title": "Context Engineering",
       "file": "agentic learning/wiki/concepts/Context Engineering.md",
@@ -1438,6 +1469,65 @@
       ]
     },
     {
+      "id": "Few-shot CoT",
+      "title": "Few-shot CoT",
+      "file": "agentic learning/wiki/concepts/Few-shot CoT.md",
+      "topics": [
+        "llm",
+        "prompting",
+        "reasoning"
+      ],
+      "status": "seed",
+      "freshness": "stable",
+      "aliases": [
+        "few-shot CoT",
+        "Few-shot Chain-of-Thought",
+        "few-shot chain of thought",
+        "少样本 CoT",
+        "少样本思维链"
+      ],
+      "source_count": 4,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Few-shot Prompting",
+        "Zero-shot CoT",
+        "Self-Consistency",
+        "Tree of Thoughts",
+        "Reasoning Trace",
+        "Plan-and-Solve Prompting"
+      ]
+    },
+    {
+      "id": "Few-shot Prompting",
+      "title": "Few-shot Prompting",
+      "file": "agentic learning/wiki/concepts/Few-shot Prompting.md",
+      "topics": [
+        "llm",
+        "prompting"
+      ],
+      "status": "seed",
+      "freshness": "stable",
+      "aliases": [
+        "few-shot prompting",
+        "Few-shot",
+        "few-shot",
+        "少样本提示",
+        "少样本提示词"
+      ],
+      "source_count": 3,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Prompt Engineering",
+        "Prompt",
+        "Few-shot CoT",
+        "Zero-shot CoT",
+        "KV Cache",
+        "LLM Training Pipeline"
+      ]
+    },
+    {
       "id": "Frontend-first AI Toolkit",
       "title": "Frontend-first AI Toolkit",
       "file": "agentic learning/wiki/concepts/Frontend-first AI Toolkit.md",
@@ -1598,11 +1688,13 @@
       "status": "growing",
       "freshness": "stable",
       "aliases": [],
-      "source_count": 3,
-      "evidence_count": 3,
+      "source_count": 4,
+      "evidence_count": 4,
       "up": [],
       "related": [
         "LLM",
+        "Structured Outputs",
+        "Constrained Decoding",
         "RAG",
         "RAG Evaluation",
         "RAG Citation Faithfulness"
@@ -2856,6 +2948,35 @@
       ]
     },
     {
+      "id": "Prompt Chaining",
+      "title": "Prompt Chaining",
+      "file": "agentic learning/wiki/concepts/Prompt Chaining.md",
+      "topics": [
+        "llm",
+        "prompting",
+        "workflow"
+      ],
+      "status": "seed",
+      "freshness": "stable",
+      "aliases": [
+        "prompt chaining",
+        "Prompt Chain",
+        "prompt chain",
+        "提示链",
+        "提示词链"
+      ],
+      "source_count": 3,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Prompt Engineering",
+        "Agent Workflow",
+        "ReAct",
+        "Workflow Guardrails",
+        "Structured Outputs"
+      ]
+    },
+    {
       "id": "Prompt Engineering",
       "title": "Prompt Engineering",
       "file": "agentic learning/wiki/concepts/Prompt Engineering.md",
@@ -2873,11 +2994,14 @@
         "提示词工程",
         "提示工程"
       ],
-      "source_count": 6,
-      "evidence_count": 7,
+      "source_count": 7,
+      "evidence_count": 9,
       "up": [],
       "related": [
         "Prompt",
+        "Few-shot Prompting",
+        "Few-shot CoT",
+        "Structured Outputs",
         "Context Engineering",
         "Evaluation",
         "LLM Training Pipeline",
@@ -3449,6 +3573,37 @@
       ]
     },
     {
+      "id": "Self-Consistency",
+      "title": "Self-Consistency",
+      "file": "agentic learning/wiki/concepts/Self-Consistency.md",
+      "topics": [
+        "llm",
+        "reasoning",
+        "decoding"
+      ],
+      "status": "seed",
+      "freshness": "stable",
+      "aliases": [
+        "self-consistency",
+        "Self Consistency",
+        "self consistency",
+        "自洽采样",
+        "多路径投票",
+        "多次采样投票"
+      ],
+      "source_count": 4,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Few-shot CoT",
+        "Zero-shot CoT",
+        "Tree of Thoughts",
+        "Reasoning Trace",
+        "Top-K",
+        "Hallucination"
+      ]
+    },
+    {
       "id": "Self-RAG",
       "title": "Self-RAG",
       "file": "agentic learning/wiki/concepts/Self-RAG.md",
@@ -3583,6 +3738,37 @@
       ]
     },
     {
+      "id": "Structured Outputs",
+      "title": "Structured Outputs",
+      "file": "agentic learning/wiki/concepts/Structured Outputs.md",
+      "topics": [
+        "llm",
+        "structured-output",
+        "tools"
+      ],
+      "status": "seed",
+      "freshness": "watch",
+      "aliases": [
+        "structured outputs",
+        "Structured Output",
+        "structured output",
+        "结构化输出",
+        "schema mode",
+        "schema-constrained output"
+      ],
+      "source_count": 4,
+      "evidence_count": 4,
+      "up": [],
+      "related": [
+        "Constrained Decoding",
+        "Tool Calling",
+        "Type-safe Agent SDK",
+        "Workflow Guardrails",
+        "Hallucination",
+        "Prompt Engineering"
+      ]
+    },
+    {
       "id": "TF-IDF",
       "title": "TF-IDF",
       "file": "agentic learning/wiki/concepts/TF-IDF.md",
@@ -3699,8 +3885,8 @@
         "工具调用",
         "函数调用"
       ],
-      "source_count": 5,
-      "evidence_count": 6,
+      "source_count": 6,
+      "evidence_count": 7,
       "up": [
         "Tool Use"
       ],
@@ -3709,6 +3895,8 @@
         "Tool Use",
         "Tool Registry",
         "Tool Permissioning",
+        "Structured Outputs",
+        "Constrained Decoding",
         "Observation",
         "MCP"
       ]
@@ -3931,6 +4119,41 @@
       ]
     },
     {
+      "id": "Tree of Thoughts",
+      "title": "Tree of Thoughts",
+      "file": "agentic learning/wiki/concepts/Tree of Thoughts.md",
+      "topics": [
+        "llm",
+        "reasoning",
+        "planning",
+        "prompting"
+      ],
+      "status": "seed",
+      "freshness": "stable",
+      "aliases": [
+        "ToT",
+        "Tree-of-Thought",
+        "Tree of Thought",
+        "思维树",
+        "树状思维"
+      ],
+      "source_count": 3,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Zero-shot CoT",
+        "Few-shot CoT",
+        "Self-Consistency",
+        "Plan-and-Solve Prompting",
+        "Reasoning Trace",
+        "Planning",
+        "ReAct",
+        "ReWOO",
+        "Agent Workflow",
+        "Task Success Rate"
+      ]
+    },
+    {
       "id": "Type-safe Agent SDK",
       "title": "Type-safe Agent SDK",
       "file": "agentic learning/wiki/concepts/Type-safe Agent SDK.md",
@@ -3943,11 +4166,12 @@
       "status": "growing",
       "freshness": "volatile",
       "aliases": [],
-      "source_count": 3,
-      "evidence_count": 3,
+      "source_count": 4,
+      "evidence_count": 4,
       "up": [],
       "related": [
         "Tool Calling",
+        "Constrained Decoding",
         "Evaluation",
         "Eval Harness",
         "Agent Framework"
@@ -4014,8 +4238,8 @@
       "status": "growing",
       "freshness": "watch",
       "aliases": [],
-      "source_count": 3,
-      "evidence_count": 4,
+      "source_count": 4,
+      "evidence_count": 5,
       "up": [],
       "related": [
         "Guardrails",
@@ -4023,6 +4247,7 @@
         "Agent Lifecycle Hook",
         "Policy Engine",
         "Approval Gate",
+        "Constrained Decoding",
         "Agent Workflow Static Verification"
       ]
     },
@@ -4043,6 +4268,9 @@
       "up": [],
       "related": [
         "Plan-and-Solve Prompting",
+        "Few-shot CoT",
+        "Self-Consistency",
+        "Tree of Thoughts",
         "LLM Training Pipeline",
         "Reasoning Trace",
         "ReAct",
@@ -6904,6 +7132,106 @@
       "note": ""
     },
     {
+      "source": "Constrained Decoding",
+      "target": "Hallucination",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
+      "target": "Prompt Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
+      "target": "Structured Outputs",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
+      "target": "Token",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
+      "target": "Tool Calling",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
+      "target": "Top-K",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
+      "target": "Type-safe Agent SDK",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
+      "target": "Workflow Guardrails",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
+      "target": "Approval Gate",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
+      "target": "Tool Permissioning",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "Context Engineering",
       "target": "Agent Harness",
       "kind": "related_link",
@@ -8654,6 +8982,136 @@
       "note": ""
     },
     {
+      "source": "Few-shot CoT",
+      "target": "Few-shot Prompting",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot CoT",
+      "target": "Plan-and-Solve Prompting",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot CoT",
+      "target": "Reasoning Trace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot CoT",
+      "target": "Self-Consistency",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot CoT",
+      "target": "Tree of Thoughts",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot CoT",
+      "target": "Zero-shot CoT",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot CoT",
+      "target": "Prompt Chaining",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Few-shot Prompting",
+      "target": "Few-shot CoT",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot Prompting",
+      "target": "KV Cache",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot Prompting",
+      "target": "LLM Training Pipeline",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot Prompting",
+      "target": "Prompt",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot Prompting",
+      "target": "Prompt Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot Prompting",
+      "target": "Zero-shot CoT",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "Frontend-first AI Toolkit",
       "target": "Agent Framework",
       "kind": "related_link",
@@ -9045,6 +9503,16 @@
     },
     {
       "source": "Hallucination",
+      "target": "Constrained Decoding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Hallucination",
       "target": "LLM",
       "kind": "related_link",
       "relation_type": "related",
@@ -9076,6 +9544,16 @@
     {
       "source": "Hallucination",
       "target": "RAG Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Hallucination",
+      "target": "Structured Outputs",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -13064,6 +13542,66 @@
       "note": ""
     },
     {
+      "source": "Prompt Chaining",
+      "target": "Agent Workflow",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Chaining",
+      "target": "Prompt Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Chaining",
+      "target": "ReAct",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Chaining",
+      "target": "Structured Outputs",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Chaining",
+      "target": "Workflow Guardrails",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Chaining",
+      "target": "Tree of Thoughts",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "Prompt Engineering",
       "target": "Context Engineering",
       "kind": "related_link",
@@ -13076,6 +13614,26 @@
     {
       "source": "Prompt Engineering",
       "target": "Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Few-shot CoT",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Few-shot Prompting",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -13125,6 +13683,26 @@
     },
     {
       "source": "Prompt Engineering",
+      "target": "Structured Outputs",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "LLM",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
       "target": "Plan-and-Solve Prompting",
       "kind": "body_link",
       "relation_type": "body_wikilink",
@@ -13136,6 +13714,26 @@
     {
       "source": "Prompt Engineering",
       "target": "Step-back Prompting",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Token",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Transformer",
       "kind": "body_link",
       "relation_type": "body_wikilink",
       "confidence": "observed",
@@ -15034,6 +15632,66 @@
       "note": ""
     },
     {
+      "source": "Self-Consistency",
+      "target": "Few-shot CoT",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Self-Consistency",
+      "target": "Hallucination",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Self-Consistency",
+      "target": "Reasoning Trace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Self-Consistency",
+      "target": "Top-K",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Self-Consistency",
+      "target": "Tree of Thoughts",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Self-Consistency",
+      "target": "Zero-shot CoT",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "Self-RAG",
       "target": "RAG",
       "kind": "taxonomy",
@@ -15434,6 +16092,66 @@
       "note": ""
     },
     {
+      "source": "Structured Outputs",
+      "target": "Constrained Decoding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Structured Outputs",
+      "target": "Hallucination",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Structured Outputs",
+      "target": "Prompt Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Structured Outputs",
+      "target": "Tool Calling",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Structured Outputs",
+      "target": "Type-safe Agent SDK",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Structured Outputs",
+      "target": "Workflow Guardrails",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "TF-IDF",
       "target": "Sparse Retrieval",
       "kind": "typed_relation",
@@ -15785,6 +16503,16 @@
     },
     {
       "source": "Tool Calling",
+      "target": "Constrained Decoding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tool Calling",
       "target": "MCP",
       "kind": "related_link",
       "relation_type": "related",
@@ -15796,6 +16524,16 @@
     {
       "source": "Tool Calling",
       "target": "Observation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tool Calling",
+      "target": "Structured Outputs",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -16524,8 +17262,118 @@
       "note": ""
     },
     {
+      "source": "Tree of Thoughts",
+      "target": "Agent Workflow",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
+      "target": "Few-shot CoT",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
+      "target": "Plan-and-Solve Prompting",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
+      "target": "Planning",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
+      "target": "ReAct",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
+      "target": "ReWOO",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
+      "target": "Reasoning Trace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
+      "target": "Self-Consistency",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
+      "target": "Task Success Rate",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
+      "target": "Zero-shot CoT",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "Type-safe Agent SDK",
       "target": "Agent Framework",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Type-safe Agent SDK",
+      "target": "Constrained Decoding",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -16725,6 +17573,16 @@
     },
     {
       "source": "Workflow Guardrails",
+      "target": "Constrained Decoding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Workflow Guardrails",
       "target": "Guardrails",
       "kind": "related_link",
       "relation_type": "related",
@@ -16756,6 +17614,16 @@
     {
       "source": "Zero-shot CoT",
       "target": "Agent Workflow",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Zero-shot CoT",
+      "target": "Few-shot CoT",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -16806,6 +17674,26 @@
     {
       "source": "Zero-shot CoT",
       "target": "Reasoning Trace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Zero-shot CoT",
+      "target": "Self-Consistency",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Zero-shot CoT",
+      "target": "Tree of Thoughts",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -17443,6 +18331,17 @@
       ]
     },
     {
+      "source": "Prompt Chaining",
+      "target": "Agent Workflow",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: workflow",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
       "source": "Prompt Engineering",
       "target": "Evaluation",
       "candidate_type": "topic_family_review",
@@ -17775,6 +18674,17 @@
       ]
     },
     {
+      "source": "Tree of Thoughts",
+      "target": "Planning",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: planning",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
       "source": "Type-safe Agent SDK",
       "target": "Agent Framework",
       "candidate_type": "topic_family_review",
@@ -17854,6 +18764,7 @@
       "Chunking",
       "Code Execution Sandbox",
       "Coding Agent",
+      "Constrained Decoding",
       "Context Engineering",
       "Context Projection",
       "Context Rot",
@@ -17866,6 +18777,8 @@
       "Entity Resolution",
       "Eval Harness",
       "Evaluation",
+      "Few-shot CoT",
+      "Few-shot Prompting",
       "Frontend-first AI Toolkit",
       "GSSC Pipeline",
       "GUI Grounding",
@@ -17906,6 +18819,7 @@
       "Positional Encoding",
       "Progressive Disclosure",
       "Prompt",
+      "Prompt Chaining",
       "Prompt Engineering",
       "Prompt Injection",
       "Provider-first Agent SDK",
@@ -17927,8 +18841,10 @@
       "Role-playing Agent",
       "Sandbox Workspace",
       "Self-Attention",
+      "Self-Consistency",
       "State Graph Runtime",
       "Step-back Prompting",
+      "Structured Outputs",
       "TF-IDF",
       "TTL",
       "Task Success Rate",
@@ -17941,6 +18857,7 @@
       "Trace",
       "Trajectory",
       "Transformer",
+      "Tree of Thoughts",
       "Type-safe Agent SDK",
       "Vector Database",
       "Win Rate",

@@ -9,7 +9,7 @@ topic:
   - agent
 status: inbox
 created: 2026-05-07
-updated: 2026-05-17
+updated: 2026-05-23
 url: https://xiaolinnote.com/ai/agent/2_components.html
 source: https://xiaolinnote.com/ai/agent/2_components.html
 last_checked: 2026-05-17
@@ -23,6 +23,7 @@ related:
   - "[[Tool Calling]]"
   - "[[Memory]]"
   - "[[Planning]]"
+  - "[[Tree of Thoughts]]"
   - "[[Agent State]]"
 ---
 
@@ -39,6 +40,7 @@ related:
 - [[Tool Calling]]
 - [[Memory]]
 - [[Planning]]
+- [[Tree of Thoughts]]
 - [[Agent State]]
 
 ## 页面正文

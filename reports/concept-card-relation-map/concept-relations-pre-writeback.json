@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
   "artifact_type": "temporary_concept_relationship_map",
-  "generated_at": "2026-05-21T04:48:22Z",
+  "generated_at": "2026-05-23T11:29:40Z",
   "scope": {
     "concept_dir": "agentic learning/wiki/concepts",
     "temporary": true,
     "write_policy": "Do not write these candidates into concept cards without a separate review task."
   },
   "summary": {
-    "total_concepts": 152,
+    "total_concepts": 156,
     "edge_counts": {
-      "related_link": 898,
-      "body_link": 273,
-      "typed_relation": 54,
+      "related_link": 937,
+      "body_link": 279,
+      "typed_relation": 57,
       "taxonomy": 39
     },
     "typed_relation_counts": {
       "contrasts_with": 8,
-      "related_to": 12,
+      "related_to": 15,
       "representative_of": 2,
       "based_on_intuition": 1,
       "paired_with": 2,
@@ -39,13 +39,13 @@
       "composed_into": 2,
       "foundational_for": 1
     },
-    "concepts_without_up": 113,
+    "concepts_without_up": 117,
     "core_orphans": 0,
     "weakly_connected_concepts": 1,
-    "dangling_core_targets": 30,
-    "candidate_edges": 78,
+    "dangling_core_targets": 31,
+    "candidate_edges": 80,
     "taxonomy_candidates": 11,
-    "topic_family_review_signals": 67
+    "topic_family_review_signals": 69
   },
   "nodes": [
     {
@@ -214,8 +214,8 @@
         "Agentic Benchmark",
         "Agentic Evaluation Benchmark"
       ],
-      "source_count": 5,
-      "evidence_count": 7,
+      "source_count": 7,
+      "evidence_count": 9,
       "up": [
         "Benchmark"
       ],
@@ -225,7 +225,9 @@
         "BFCL",
         "Eval Harness",
         "LLM-as-Judge",
-        "Task Success Rate"
+        "Win Rate",
+        "Task Success Rate",
+        "ReWOO"
       ]
     },
     {
@@ -905,6 +907,36 @@
       ]
     },
     {
+      "id": "Constrained Decoding",
+      "title": "Constrained Decoding",
+      "file": "agentic learning/wiki/concepts/Constrained Decoding.md",
+      "topics": [
+        "llm",
+        "decoding",
+        "structured-output",
+        "tools"
+      ],
+      "status": "seed",
+      "freshness": "watch",
+      "aliases": [
+        "constrained decoding",
+        "约束解码",
+        "受限解码"
+      ],
+      "source_count": 4,
+      "evidence_count": 4,
+      "up": [],
+      "related": [
+        "Tool Calling",
+        "Type-safe Agent SDK",
+        "Workflow Guardrails",
+        "Hallucination",
+        "Token",
+        "Top-K",
+        "Prompt Engineering"
+      ]
+    },
+    {
       "id": "Context Engineering",
       "title": "Context Engineering",
       "file": "agentic learning/wiki/concepts/Context Engineering.md",
@@ -1398,7 +1430,8 @@
         "Evaluation",
         "Benchmark",
         "Trace",
-        "Task Success Rate"
+        "Task Success Rate",
+        "Win Rate"
       ]
     },
     {
@@ -1425,6 +1458,7 @@
         "Benchmark",
         "Agent Robustness",
         "Task Success Rate",
+        "Win Rate",
         "Eval Harness",
         "LLM-as-Judge",
         "Trace",
@@ -1594,11 +1628,12 @@
       "status": "growing",
       "freshness": "stable",
       "aliases": [],
-      "source_count": 3,
-      "evidence_count": 3,
+      "source_count": 4,
+      "evidence_count": 4,
       "up": [],
       "related": [
         "LLM",
+        "Constrained Decoding",
         "RAG",
         "RAG Evaluation",
         "RAG Citation Faithfulness"
@@ -1915,7 +1950,8 @@
       "related": [
         "Evaluation",
         "Eval Harness",
-        "Trajectory Evaluation"
+        "Trajectory Evaluation",
+        "Win Rate"
       ]
     },
     {
@@ -2718,14 +2754,15 @@
       "status": "seed",
       "freshness": "stable",
       "aliases": [],
-      "source_count": 1,
-      "evidence_count": 2,
+      "source_count": 2,
+      "evidence_count": 3,
       "up": [],
       "related": [
         "Zero-shot CoT",
         "Planning",
         "Reasoning Trace",
         "ReAct",
+        "ReWOO",
         "Agent Loop",
         "Agent Workflow",
         "Evaluation",
@@ -2867,8 +2904,8 @@
         "提示词工程",
         "提示工程"
       ],
-      "source_count": 6,
-      "evidence_count": 7,
+      "source_count": 7,
+      "evidence_count": 9,
       "up": [],
       "related": [
         "Prompt",
@@ -3150,8 +3187,8 @@
       "status": "growing",
       "freshness": "watch",
       "aliases": [],
-      "source_count": 5,
-      "evidence_count": 5,
+      "source_count": 6,
+      "evidence_count": 6,
       "up": [],
       "related": [
         "Agent Loop",
@@ -3164,6 +3201,36 @@
         "Agent Lifecycle Hook",
         "Guardrails",
         "Evaluation",
+        "ReWOO",
+        "ReAct Plan-and-Solve Reflexion 对比"
+      ]
+    },
+    {
+      "id": "ReWOO",
+      "title": "ReWOO",
+      "file": "agentic learning/wiki/concepts/ReWOO.md",
+      "topics": [
+        "agent",
+        "reasoning",
+        "planning",
+        "tool-use"
+      ],
+      "status": "seed",
+      "freshness": "stable",
+      "aliases": [
+        "Reasoning WithOut Observation",
+        "Reasoning Without Observation"
+      ],
+      "source_count": 2,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "ReAct",
+        "Plan-and-Solve Prompting",
+        "Observation",
+        "Tool Calling",
+        "Agent Loop",
+        "Agent Evaluation Benchmark",
         "ReAct Plan-and-Solve Reflexion 对比"
       ]
     },
@@ -3622,7 +3689,8 @@
         "Evaluation",
         "Benchmark",
         "Agent Harness",
-        "Agent Robustness"
+        "Agent Robustness",
+        "Win Rate"
       ]
     },
     {
@@ -3662,8 +3730,8 @@
         "工具调用",
         "函数调用"
       ],
-      "source_count": 5,
-      "evidence_count": 6,
+      "source_count": 6,
+      "evidence_count": 7,
       "up": [
         "Tool Use"
       ],
@@ -3672,6 +3740,7 @@
         "Tool Use",
         "Tool Registry",
         "Tool Permissioning",
+        "Constrained Decoding",
         "Observation",
         "MCP"
       ]
@@ -3894,6 +3963,39 @@
       ]
     },
     {
+      "id": "Tree of Thoughts",
+      "title": "Tree of Thoughts",
+      "file": "agentic learning/wiki/concepts/Tree of Thoughts.md",
+      "topics": [
+        "llm",
+        "reasoning",
+        "planning",
+        "prompting"
+      ],
+      "status": "seed",
+      "freshness": "stable",
+      "aliases": [
+        "ToT",
+        "Tree-of-Thought",
+        "Tree of Thought",
+        "思维树",
+        "树状思维"
+      ],
+      "source_count": 3,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Zero-shot CoT",
+        "Plan-and-Solve Prompting",
+        "Reasoning Trace",
+        "Planning",
+        "ReAct",
+        "ReWOO",
+        "Agent Workflow",
+        "Task Success Rate"
+      ]
+    },
+    {
       "id": "Type-safe Agent SDK",
       "title": "Type-safe Agent SDK",
       "file": "agentic learning/wiki/concepts/Type-safe Agent SDK.md",
@@ -3906,11 +4008,12 @@
       "status": "growing",
       "freshness": "volatile",
       "aliases": [],
-      "source_count": 3,
-      "evidence_count": 3,
+      "source_count": 4,
+      "evidence_count": 4,
       "up": [],
       "related": [
         "Tool Calling",
+        "Constrained Decoding",
         "Evaluation",
         "Eval Harness",
         "Agent Framework"
@@ -3939,6 +4042,32 @@
       ]
     },
     {
+      "id": "Win Rate",
+      "title": "Win Rate",
+      "file": "agentic learning/wiki/concepts/Win Rate.md",
+      "topics": [
+        "evaluation",
+        "metric"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "胜率",
+        "胜率评估",
+        "Pairwise Win Rate"
+      ],
+      "source_count": 2,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Evaluation",
+        "LLM-as-Judge",
+        "Task Success Rate",
+        "Eval Harness",
+        "Benchmark"
+      ]
+    },
+    {
       "id": "Workflow Guardrails",
       "title": "Workflow Guardrails",
       "file": "agentic learning/wiki/concepts/Workflow Guardrails.md",
@@ -3951,8 +4080,8 @@
       "status": "growing",
       "freshness": "watch",
       "aliases": [],
-      "source_count": 3,
-      "evidence_count": 4,
+      "source_count": 4,
+      "evidence_count": 5,
       "up": [],
       "related": [
         "Guardrails",
@@ -3960,6 +4089,7 @@
         "Agent Lifecycle Hook",
         "Policy Engine",
         "Approval Gate",
+        "Constrained Decoding",
         "Agent Workflow Static Verification"
       ]
     },
@@ -4522,7 +4652,27 @@
     },
     {
       "source": "Agent Evaluation Benchmark",
+      "target": "ReWOO",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
       "target": "Task Success Rate",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
+      "target": "Win Rate",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -6821,6 +6971,96 @@
       "note": ""
     },
     {
+      "source": "Constrained Decoding",
+      "target": "Hallucination",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
+      "target": "Prompt Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
+      "target": "Token",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
+      "target": "Tool Calling",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
+      "target": "Top-K",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
+      "target": "Type-safe Agent SDK",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
+      "target": "Workflow Guardrails",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
+      "target": "Approval Gate",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
+      "target": "Tool Permissioning",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "Context Engineering",
       "target": "Agent Harness",
       "kind": "related_link",
@@ -8362,6 +8602,16 @@
     },
     {
       "source": "Eval Harness",
+      "target": "Win Rate",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Eval Harness",
       "target": "LLM-as-Judge",
       "kind": "body_link",
       "relation_type": "body_wikilink",
@@ -8533,6 +8783,16 @@
     {
       "source": "Evaluation",
       "target": "Trace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Evaluation",
+      "target": "Win Rate",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -8938,6 +9198,16 @@
       "confidence": "observed",
       "status": "internal",
       "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Hallucination",
+      "target": "Constrained Decoding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
       "note": ""
     },
     {
@@ -9943,6 +10213,16 @@
     {
       "source": "LLM-as-Judge",
       "target": "Trajectory Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "LLM-as-Judge",
+      "target": "Win Rate",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -12602,6 +12882,16 @@
     },
     {
       "source": "Plan-and-Solve Prompting",
+      "target": "ReWOO",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Plan-and-Solve Prompting",
       "target": "Reasoning Trace",
       "kind": "related_link",
       "relation_type": "related",
@@ -13002,6 +13292,16 @@
     },
     {
       "source": "Prompt Engineering",
+      "target": "LLM",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
       "target": "Plan-and-Solve Prompting",
       "kind": "body_link",
       "relation_type": "body_wikilink",
@@ -13013,6 +13313,26 @@
     {
       "source": "Prompt Engineering",
       "target": "Step-back Prompting",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Token",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Transformer",
       "kind": "body_link",
       "relation_type": "body_wikilink",
       "confidence": "observed",
@@ -14052,6 +14372,16 @@
     },
     {
       "source": "ReAct",
+      "target": "ReWOO",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "ReAct",
       "target": "Reasoning Trace",
       "kind": "related_link",
       "relation_type": "related",
@@ -14143,6 +14473,116 @@
     {
       "source": "ReAct",
       "target": "Zero-shot CoT",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "ReWOO",
+      "target": "Observation",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "ReWOO 的核心边界就是限制 observation 对 planner reasoning 的中途回流。"
+    },
+    {
+      "source": "ReWOO",
+      "target": "Plan-and-Solve Prompting",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "ReWOO 保留先计划再求解的直觉，但加入 Worker 工具取证；不是纯 prompt-level plan-solve。"
+    },
+    {
+      "source": "ReWOO",
+      "target": "ReAct",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "ReWOO 与 ReAct 都面向工具增强推理，但 ReAct 让 Observation 反馈驱动下一步，ReWOO 先规划 evidence slots 后取证。"
+    },
+    {
+      "source": "ReWOO",
+      "target": "Agent Evaluation Benchmark",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "ReWOO",
+      "target": "Agent Loop",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "ReWOO",
+      "target": "Observation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "ReWOO",
+      "target": "Plan-and-Solve Prompting",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "ReWOO",
+      "target": "ReAct",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "ReWOO",
+      "target": "ReAct Plan-and-Solve Reflexion 对比",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "external_or_missing",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "ReWOO",
+      "target": "Tool Calling",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "ReWOO",
+      "target": "Agent Framework",
       "kind": "body_link",
       "relation_type": "body_wikilink",
       "confidence": "observed",
@@ -15402,6 +15842,16 @@
     },
     {
       "source": "Task Success Rate",
+      "target": "Win Rate",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Task Success Rate",
       "target": "Eval Harness",
       "kind": "body_link",
       "relation_type": "body_wikilink",
@@ -15523,6 +15973,16 @@
     {
       "source": "Tool Calling",
       "target": "Agent Loop",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tool Calling",
+      "target": "Constrained Decoding",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -16271,8 +16731,98 @@
       "note": ""
     },
     {
+      "source": "Tree of Thoughts",
+      "target": "Agent Workflow",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
+      "target": "Plan-and-Solve Prompting",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
+      "target": "Planning",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
+      "target": "ReAct",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
+      "target": "ReWOO",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
+      "target": "Reasoning Trace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
+      "target": "Task Success Rate",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
+      "target": "Zero-shot CoT",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "Type-safe Agent SDK",
       "target": "Agent Framework",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Type-safe Agent SDK",
+      "target": "Constrained Decoding",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -16381,6 +16931,56 @@
       "note": ""
     },
     {
+      "source": "Win Rate",
+      "target": "Benchmark",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Win Rate",
+      "target": "Eval Harness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Win Rate",
+      "target": "Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Win Rate",
+      "target": "LLM-as-Judge",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Win Rate",
+      "target": "Task Success Rate",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "Workflow Guardrails",
       "target": "Agent Lifecycle Hook",
       "kind": "related_link",
@@ -16413,6 +17013,16 @@
     {
       "source": "Workflow Guardrails",
       "target": "Approval Gate",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Workflow Guardrails",
+      "target": "Constrained Decoding",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -17472,6 +18082,17 @@
       ]
     },
     {
+      "source": "Tree of Thoughts",
+      "target": "Planning",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: planning",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
       "source": "Type-safe Agent SDK",
       "target": "Agent Framework",
       "candidate_type": "topic_family_review",
@@ -17500,6 +18121,17 @@
       "confidence": "low",
       "status": "needs_review",
       "rationale": "topic family: rag",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
+      "source": "Win Rate",
+      "target": "Evaluation",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: evaluation",
       "support": [
         "frontmatter.related"
       ]
@@ -17540,6 +18172,7 @@
       "Chunking",
       "Code Execution Sandbox",
       "Coding Agent",
+      "Constrained Decoding",
       "Context Engineering",
       "Context Projection",
       "Context Rot",
@@ -17603,6 +18236,7 @@
       "RAGFlow",
       "RAGGraph",
       "ReAct",
+      "ReWOO",
       "Reasoning Trace",
       "Reflexion",
       "Replay",
@@ -17626,8 +18260,10 @@
       "Trace",
       "Trajectory",
       "Transformer",
+      "Tree of Thoughts",
       "Type-safe Agent SDK",
       "Vector Database",
+      "Win Rate",
       "Workflow Guardrails",
       "Zero-shot CoT",
       "双链"
@@ -17925,6 +18561,16 @@
       },
       {
         "source": "ReAct",
+        "target": "ReAct Plan-and-Solve Reflexion 对比",
+        "kind": "related_link",
+        "relation_type": "related",
+        "confidence": "existing",
+        "status": "external_or_missing",
+        "evidence": "frontmatter.related",
+        "note": ""
+      },
+      {
+        "source": "ReWOO",
         "target": "ReAct Plan-and-Solve Reflexion 对比",
         "kind": "related_link",
         "relation_type": "related",

@@ -1,27 +1,27 @@
 {
   "schema_version": 1,
   "artifact_type": "concept_relation_decision_ledger",
-  "generated_at": "2026-05-21T04:48:23Z",
+  "generated_at": "2026-05-23T12:45:37Z",
   "input_map": "reports/concept-card-relation-map/concept-relations-pre-writeback.json",
   "current_map_at_decision_time": "reports/concept-card-relation-map/concept-relations-temp.json",
   "summary": {
-    "candidate_edges": 78,
+    "candidate_edges": 80,
     "decision_counts": {
       "reject_taxonomy": 11,
-      "adjacency_only": 67
+      "adjacency_only": 69
     },
     "writeback_candidates": 0,
     "open_writeback_items": 0,
     "open_review_items": 0,
     "relation_tail_open_items": 0,
     "relation_tail_status": "closed",
-    "terminal_non_writeback_decisions": 78,
+    "terminal_non_writeback_decisions": 80,
     "already_applied_or_present_taxonomy": 0,
     "remaining_writeback_candidates": 0,
     "accepted_taxonomy": 0,
     "rejected_taxonomy": 11,
     "deferred_taxonomy": 0,
-    "adjacency_only": 67,
+    "adjacency_only": 69,
     "duplicate_signals": 0,
     "non_taxonomy_boundary_guardrails": 2,
     "write_policy": "Only decisions with writeback_action=add_up may be applied, and only through dry-run/apply small batches."
@@ -1781,6 +1781,28 @@
       "resolution_status": "terminal_non_writeback"
     },
     {
+      "source": "Tree of Thoughts",
+      "target": "Planning",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: planning",
+      "support": [
+        "frontmatter.related"
+      ],
+      "source_file": "agentic learning/wiki/concepts/Tree of Thoughts.md",
+      "source_one_line": "Tree of Thoughts（ToT，思维树）是把 [[Zero-shot CoT]] 的单条推理链扩展成多分支搜索：模型先生成多个候选 thought，再评估、剪枝、回溯或继续展开，用更多推理时计算换更高的复杂任务成功率。",
+      "existing_up": [],
+      "decision": "adjacency_only",
+      "writeback_action": "none",
+      "proposed_field": "related/body context only",
+      "judge_confidence": "medium",
+      "llm_judgment_basis": "card frontmatter + one-line/boundary snippets + relation-field rules; not source-level re-reading",
+      "decision_rationale": "Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge.",
+      "guardrail": "Never bulk-write topic_family_review into up.",
+      "resolution_status": "terminal_non_writeback"
+    },
+    {
       "source": "Type-safe Agent SDK",
       "target": "Agent Framework",
       "candidate_type": "topic_family_review",
@@ -1836,6 +1858,28 @@
       ],
       "source_file": "agentic learning/wiki/concepts/Vector Database.md",
       "source_one_line": "Vector Database 是为 embedding 向量检索设计的数据库或索引系统，常用于 RAG 从大量文档片段中找语义相似内容。",
+      "existing_up": [],
+      "decision": "adjacency_only",
+      "writeback_action": "none",
+      "proposed_field": "related/body context only",
+      "judge_confidence": "medium",
+      "llm_judgment_basis": "card frontmatter + one-line/boundary snippets + relation-field rules; not source-level re-reading",
+      "decision_rationale": "Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge.",
+      "guardrail": "Never bulk-write topic_family_review into up.",
+      "resolution_status": "terminal_non_writeback"
+    },
+    {
+      "source": "Win Rate",
+      "target": "Evaluation",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: evaluation",
+      "support": [
+        "frontmatter.related"
+      ],
+      "source_file": "agentic learning/wiki/concepts/Win Rate.md",
+      "source_one_line": "Win Rate 是在同一批样本上比较两个版本、模型或输出时，统计 A 相对 B 胜出的比例；它回答“哪一个更好”，不直接回答“任务是否绝对完成”。",
       "existing_up": [],
       "decision": "adjacency_only",
       "writeback_action": "none",

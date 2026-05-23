@@ -6,7 +6,7 @@ topic:
   - prompting
 status: seed
 created: 2026-05-10
-updated: 2026-05-10
+updated: 2026-05-23
 last_checked: 2026-05-10
 freshness: stable
 conflicts: []
@@ -23,6 +23,9 @@ evidence:
   - "[[raw/repos/xiaolinnote/questions/005 ai agent 14. 如何赋予 LLM 规划能力？#CoT：最简单的激活方式，加一句话就够了]]"
 related:
   - "[[Plan-and-Solve Prompting]]"
+  - "[[Few-shot CoT]]"
+  - "[[Self-Consistency]]"
+  - "[[Tree of Thoughts]]"
   - "[[LLM Training Pipeline]]"
   - "[[Reasoning Trace]]"
   - "[[ReAct]]"
@@ -91,7 +94,10 @@ Possible answer:
 ```text
 Direct prompting: Prompt -> Answer
 Zero-shot CoT: Prompt -> Reasoning steps -> Answer
+Few-shot CoT: Worked examples -> Reasoning steps -> Answer
+Self-Consistency: Sample N reasoning paths -> Vote final answer
 Plan-and-Solve Prompting: Prompt -> Plan -> Solve -> Answer
+Tree of Thoughts: State -> Candidate thoughts -> Evaluate/Search -> Answer
 ReAct: Thought -> Action -> Observation -> Thought -> ... -> Answer
 Agent Workflow: Goal -> Plan/State -> Execute -> Evaluate/Replan -> Done
 ```
@@ -159,6 +165,9 @@ Reasoning model: 模型训练 / 后训练阶段已经强化长推理、验证、
 ## 相关链接
 
 - [[Plan-and-Solve Prompting]]
+- [[Few-shot CoT]]
+- [[Self-Consistency]]
+- [[Tree of Thoughts]]
 - [[Reasoning Trace]]
 - [[ReAct]]
 - [[Planning]]

@@ -1,41 +1,41 @@
 # Concept Hierarchy Placement Review — 层级归属待审计概念卡
 
-Generated: `2026-05-21T09:47:41Z`
+Generated: `2026-05-23T12:46:06Z`
 Classification stage: `audit_closure`
 
 > Audit closure: remaining `defer_boundary_review` rows are closed as `deferred_with_backlog`; no concept cards are edited and no fallback parents are invented.
 
 ## Summary
 
-- total_concepts: 154
-- reviewed_concepts: 154
+- total_concepts: 161
+- reviewed_concepts: 161
 - taxonomy_placement_unreviewed: 0
 - concepts_with_up: 39
-- concepts_without_up: 115
-- concepts_with_candidate_basis: 65
-- candidate_basis_rows: 79
+- concepts_without_up: 122
+- concepts_with_candidate_basis: 67
+- candidate_basis_rows: 81
 - known_forbidden_candidate_pairs: 2
 - accepted_taxonomy: 0
 - root_or_anchor_no_up: 20
-- relation_only_terminal: 60
-- weak_or_backlog_terminal: 7
-- defer_boundary_review: 26
+- relation_only_terminal: 62
+- weak_or_backlog_terminal: 13
+- defer_boundary_review: 25
 - open_unclassified: 0
 - open_review: 0
 - open_writeback: 0
 - dry_run_planned: 0
 - write_policy: Audit closure only. Remaining defer_boundary_review rows are closed as deferred_with_backlog and no concept-card fields are written.
-- decision_counts: `{"already_has_up_reviewed": 39, "defer_boundary_review": 26, "reject_taxonomy": 2, "relation_only_terminal": 60, "root_or_anchor_no_up": 20, "weak_or_backlog_terminal": 7}`
-- review_status_counts: `{"deferred_with_backlog": 26, "terminal_non_writeback": 128}`
+- decision_counts: `{"already_has_up_reviewed": 39, "defer_boundary_review": 25, "reject_taxonomy": 2, "relation_only_terminal": 62, "root_or_anchor_no_up": 20, "weak_or_backlog_terminal": 13}`
+- review_status_counts: `{"deferred_with_backlog": 25, "terminal_non_writeback": 136}`
 - parent_whitelist_reviewed: True
 - stable_parent_whitelist_approved: 16
 - proposed_parent_anchors_not_auto_approved: 3
 - missing_proposed_parent_anchors: 2
 - root_anchors_not_parent_whitelist: 5
-- deferred_rows_parent_prechecked: 28
+- deferred_rows_parent_prechecked: 27
 - candidate_adjudication_needed: 2
 - conservative_candidates_generated: 2
-- candidate_generation_suppressed_signals: 26
+- candidate_generation_suppressed_signals: 25
 - adjudication_items: 2
 - adjudicated_candidates: 2
 - adjudication_accept_taxonomy: 0
@@ -56,7 +56,7 @@ Classification stage: `audit_closure`
 - limited_apply_concept_card_writes: 1
 - limited_apply_post_apply_dry_run_planned: 0
 - limited_apply_post_apply_dry_run_ready: 0
-- deferred_with_backlog: 26
+- deferred_with_backlog: 25
 - audit_closure_concept_card_writes: 0
 - completion_definition_met: True
 
@@ -104,7 +104,7 @@ Classification stage: `audit_closure`
 - [[Tool Calling]]
 - [[Trajectory Evaluation]]
 
-### defer_boundary_review (26)
+### defer_boundary_review (25)
 
 - [[A2A]]
 - [[ACP]]
@@ -131,14 +131,13 @@ Classification stage: `audit_closure`
 - [[Self-Attention]]
 - [[Step-back Prompting]]
 - [[Trajectory]]
-- [[Win Rate]]
 
 ### reject_taxonomy (2)
 
 - [[Approval Gate]]
 - [[ReAct]]
 
-### relation_only_terminal (60)
+### relation_only_terminal (62)
 
 - [[ANP]]
 - [[Agent Control Plane]]
@@ -197,8 +196,10 @@ Classification stage: `audit_closure`
 - [[Tool Registry]]
 - [[Top-K]]
 - [[Trace]]
+- [[Tree of Thoughts]]
 - [[Type-safe Agent SDK]]
 - [[Vector Database]]
+- [[Win Rate]]
 - [[Workflow Guardrails]]
 
 ### root_or_anchor_no_up (20)
@@ -224,13 +225,19 @@ Classification stage: `audit_closure`
 - [[Tool Use]]
 - [[Transformer]]
 
-### weak_or_backlog_terminal (7)
+### weak_or_backlog_terminal (13)
 
 - [[AGENTS.md]]
 - [[Agent Payments Protocol]]
 - [[Coding Agent]]
+- [[Constrained Decoding]]
+- [[Few-shot CoT]]
+- [[Few-shot Prompting]]
 - [[MCP Elicitation]]
 - [[Managed Agent Harness]]
+- [[Prompt Chaining]]
+- [[Self-Consistency]]
+- [[Structured Outputs]]
 - [[Zero-shot CoT]]
 - [[双链]]
 
@@ -339,16 +346,15 @@ Parent-whitelist review fixes the candidate-generation boundary. An approved par
 | [[Self-Attention]] | likely_relation_only |  | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. |
 | [[Step-back Prompting]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
 | [[Trajectory]] | remain_deferred |  | Trace/evaluation object; may be evaluated or observed, but it is not automatically Evaluation or Observability. |
-| [[Win Rate]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
 
 ## Conservative candidate generation conservative taxonomy candidates
 
 Conservative candidate generation generates conservative candidates only from Parent-whitelist review approved parents. These candidates are **not** accepted taxonomy and cannot enter writeback until Candidate adjudication.
 
-- deferred_rows_considered: 28
+- deferred_rows_considered: 27
 - approved_parent_count: 16
 - generated_candidates: 2
-- suppressed_signals: 26
+- suppressed_signals: 25
 - candidate_targets: `{"Agent Workflow": 2}`
 - adjudication_items: 2
 - open_writeback: 0
@@ -449,15 +455,15 @@ Apply artifact:
 
 Audit closure closes the whole concept hierarchy placement audit by routing every remaining deferred row to a durable backlog home. It does not add `up`; future changes must reopen a new candidate/adjudication/dry-run/limited-apply cycle.
 
-- total_concepts: 154
-- reviewed_concepts: 154
+- total_concepts: 161
+- reviewed_concepts: 161
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0
 - open_writeback: 0
 - dry_run_planned: 0
-- defer_boundary_review: 26
-- deferred_with_backlog: 26
+- defer_boundary_review: 25
+- deferred_with_backlog: 25
 - concept_card_writes: 0
 - plugin_problems: 0
 - forbidden_up_edges: 0
@@ -496,7 +502,6 @@ Closure artifact:
 | [[Self-Attention]] | [[Transformer]] | component_of_not_kind_of | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. |
 | [[Step-back Prompting]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
 | [[Trajectory]] | [[Evaluation]] | evaluated_object_not_evaluation_method | Trace/evaluation object; may be evaluated or observed, but it is not automatically Evaluation or Observability. |
-| [[Win Rate]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
 
 ## Concepts with existing `up`
 
@@ -568,6 +573,7 @@ Closure artifact:
 | [[Chunking]] | root_or_anchor_no_up |  | 1 | 1 |
 | [[Code Execution Sandbox]] | defer_boundary_review |  | 0 | 3 |
 | [[Coding Agent]] | weak_or_backlog_terminal |  | 0 | 0 |
+| [[Constrained Decoding]] | weak_or_backlog_terminal |  | 0 | 0 |
 | [[Context Engineering]] | relation_only_terminal |  | 1 | 2 |
 | [[Context Projection]] | relation_only_terminal |  | 1 | 2 |
 | [[Context Rot]] | relation_only_terminal |  | 0 | 0 |
@@ -580,6 +586,8 @@ Closure artifact:
 | [[Entity Resolution]] | defer_boundary_review |  | 0 | 3 |
 | [[Eval Harness]] | relation_only_terminal |  | 1 | 2 |
 | [[Evaluation]] | root_or_anchor_no_up |  | 0 | 0 |
+| [[Few-shot CoT]] | weak_or_backlog_terminal |  | 0 | 0 |
+| [[Few-shot Prompting]] | weak_or_backlog_terminal |  | 0 | 0 |
 | [[Frontend-first AI Toolkit]] | relation_only_terminal |  | 1 | 2 |
 | [[GSSC Pipeline]] | relation_only_terminal |  | 0 | 0 |
 | [[GUI Grounding]] | defer_boundary_review |  | 0 | 3 |
@@ -620,6 +628,7 @@ Closure artifact:
 | [[Positional Encoding]] | defer_boundary_review |  | 0 | 3 |
 | [[Progressive Disclosure]] | relation_only_terminal |  | 1 | 2 |
 | [[Prompt]] | root_or_anchor_no_up |  | 0 | 0 |
+| [[Prompt Chaining]] | weak_or_backlog_terminal |  | 1 | 1 |
 | [[Prompt Engineering]] | relation_only_terminal |  | 1 | 2 |
 | [[Prompt Injection]] | defer_boundary_review |  | 0 | 3 |
 | [[Provider-first Agent SDK]] | relation_only_terminal |  | 1 | 2 |
@@ -641,8 +650,10 @@ Closure artifact:
 | [[Role-playing Agent]] | relation_only_terminal |  | 1 | 2 |
 | [[Sandbox Workspace]] | defer_boundary_review |  | 0 | 3 |
 | [[Self-Attention]] | defer_boundary_review |  | 0 | 3 |
+| [[Self-Consistency]] | weak_or_backlog_terminal |  | 0 | 0 |
 | [[State Graph Runtime]] | relation_only_terminal | [[Agent Workflow]] | 2 | 3 |
 | [[Step-back Prompting]] | defer_boundary_review |  | 0 | 2 |
+| [[Structured Outputs]] | weak_or_backlog_terminal |  | 0 | 0 |
 | [[TF-IDF]] | relation_only_terminal |  | 2 | 4 |
 | [[TTL]] | relation_only_terminal |  | 2 | 4 |
 | [[Task Success Rate]] | relation_only_terminal |  | 1 | 2 |
@@ -655,9 +666,10 @@ Closure artifact:
 | [[Trace]] | relation_only_terminal |  | 2 | 4 |
 | [[Trajectory]] | defer_boundary_review |  | 0 | 3 |
 | [[Transformer]] | root_or_anchor_no_up |  | 0 | 0 |
+| [[Tree of Thoughts]] | relation_only_terminal |  | 1 | 2 |
 | [[Type-safe Agent SDK]] | relation_only_terminal |  | 2 | 4 |
 | [[Vector Database]] | relation_only_terminal |  | 1 | 2 |
-| [[Win Rate]] | defer_boundary_review |  | 1 | 3 |
+| [[Win Rate]] | relation_only_terminal |  | 1 | 2 |
 | [[Workflow Guardrails]] | relation_only_terminal |  | 1 | 2 |
 | [[Zero-shot CoT]] | weak_or_backlog_terminal |  | 0 | 0 |
 | [[双链]] | weak_or_backlog_terminal |  | 0 | 0 |
@@ -709,6 +721,7 @@ Candidate basis is evidence for later adjudication, not an accepted parent.
 | [[Patch Validation]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | no |
 | [[Plan-and-Solve Prompting]] | [[Planning]] | topic_family_review | low | frontmatter.related | no |
 | [[Progressive Disclosure]] | [[Tool Use]] | topic_family_review | low | body wikilink | no |
+| [[Prompt Chaining]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | no |
 | [[Prompt Engineering]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | no |
 | [[Provider-first Agent SDK]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | no |
 | [[Query Planning]] | [[Retriever]] | topic_family_review | low | frontmatter.related | no |
@@ -742,6 +755,7 @@ Candidate basis is evidence for later adjudication, not an accepted parent.
 | [[Top-K]] | [[Retriever]] | topic_family_review | low | frontmatter.related | no |
 | [[Trace]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | no |
 | [[Trace]] | [[Observability]] | topic_family_review | low | frontmatter.related | no |
+| [[Tree of Thoughts]] | [[Planning]] | topic_family_review | low | frontmatter.related | no |
 | [[Type-safe Agent SDK]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | no |
 | [[Type-safe Agent SDK]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | no |
 | [[Vector Database]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |

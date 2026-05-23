@@ -1,21 +1,21 @@
 # Temporary Concept Relationship Map
 
-Generated: `2026-05-21T09:47:24Z`
+Generated: `2026-05-23T12:46:06Z`
 
 > 临时文件：用于后续概念层级开发评估。不要把候选边自动写回概念卡；每条 candidate 都需要单独人工/LLM 复核。
 
 ## Summary
 
-- total_concepts: 154
-- edge_counts: {'related_link': 918, 'body_link': 274, 'typed_relation': 57, 'taxonomy': 39}
+- total_concepts: 161
+- edge_counts: {'related_link': 977, 'body_link': 281, 'typed_relation': 57, 'taxonomy': 39}
 - typed_relation_counts: {'contrasts_with': 8, 'related_to': 15, 'representative_of': 2, 'based_on_intuition': 1, 'paired_with': 2, 'mechanism_for': 1, 'projects_from': 1, 'draws_from': 2, 'risk_for': 1, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 8, 'uses': 4, 'pattern_for': 1, 'specializes': 1, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
-- concepts_without_up: 115
+- concepts_without_up: 122
 - core_orphans: 0
 - weakly_connected_concepts: 1
 - dangling_core_targets: 31
-- candidate_edges: 79
+- candidate_edges: 81
 - taxonomy_candidates: 11
-- topic_family_review_signals: 68
+- topic_family_review_signals: 70
 
 ## Existing taxonomy edges (`up`)
 
@@ -175,6 +175,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[Patch Validation]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Plan-and-Solve Prompting]] | [[Planning]] | topic_family_review | low | frontmatter.related | topic family: planning |
 | [[Progressive Disclosure]] | [[Tool Use]] | topic_family_review | low | body wikilink | topic family: tool-use/tools |
+| [[Prompt Chaining]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | topic family: workflow |
 | [[Prompt Engineering]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Provider-first Agent SDK]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | topic family: framework |
 | [[Query Planning]] | [[Retriever]] | topic_family_review | low | frontmatter.related | topic family: retrieval/search |
@@ -205,6 +206,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[Top-K]] | [[Retriever]] | topic_family_review | low | frontmatter.related | topic family: retrieval/search |
 | [[Trace]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Trace]] | [[Observability]] | topic_family_review | low | frontmatter.related | topic family: observability |
+| [[Tree of Thoughts]] | [[Planning]] | topic_family_review | low | frontmatter.related | topic family: planning |
 | [[Type-safe Agent SDK]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | topic family: framework |
 | [[Type-safe Agent SDK]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
 | [[Vector Database]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
@@ -235,6 +237,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Chunking]]
 - [[Code Execution Sandbox]]
 - [[Coding Agent]]
+- [[Constrained Decoding]]
 - [[Context Engineering]]
 - [[Context Projection]]
 - [[Context Rot]]
@@ -247,6 +250,8 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Entity Resolution]]
 - [[Eval Harness]]
 - [[Evaluation]]
+- [[Few-shot CoT]]
+- [[Few-shot Prompting]]
 - [[Frontend-first AI Toolkit]]
 - [[GSSC Pipeline]]
 - [[GUI Grounding]]
@@ -287,6 +292,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Positional Encoding]]
 - [[Progressive Disclosure]]
 - [[Prompt]]
+- [[Prompt Chaining]]
 - [[Prompt Engineering]]
 - [[Prompt Injection]]
 - [[Provider-first Agent SDK]]
@@ -308,8 +314,10 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Role-playing Agent]]
 - [[Sandbox Workspace]]
 - [[Self-Attention]]
+- [[Self-Consistency]]
 - [[State Graph Runtime]]
 - [[Step-back Prompting]]
+- [[Structured Outputs]]
 - [[TF-IDF]]
 - [[TTL]]
 - [[Task Success Rate]]
@@ -322,6 +330,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Trace]]
 - [[Trajectory]]
 - [[Transformer]]
+- [[Tree of Thoughts]]
 - [[Type-safe Agent SDK]]
 - [[Vector Database]]
 - [[Win Rate]]

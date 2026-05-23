@@ -9,7 +9,7 @@ topic:
   - agent
 status: inbox
 created: 2026-05-07
-updated: 2026-05-17
+updated: 2026-05-23
 url: https://xiaolinnote.com/ai/agent/7_tasksplit.html
 source: https://xiaolinnote.com/ai/agent/7_tasksplit.html
 last_checked: 2026-05-17
@@ -20,6 +20,7 @@ related:
   - "[[资料收集索引]]"
   - "[[Planning]]"
   - "[[Agent Workflow]]"
+  - "[[Tree of Thoughts]]"
   - "[[Context Engineering]]"
 ---
 
@@ -33,6 +34,7 @@ related:
 
 - [[Planning]]
 - [[Agent Workflow]]
+- [[Tree of Thoughts]]
 - [[Context Engineering]]
 
 ## 页面正文

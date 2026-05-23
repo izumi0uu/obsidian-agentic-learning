@@ -7,10 +7,11 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-20
+updated: 2026-05-23
 source:
   - "[[Tool Use]]"
   - "[[Tool Calling]]"
+  - "[[Constrained Decoding]]"
   - "[[Agent Skills]]"
   - "[[Tool Registry]]"
   - "[[Tool Permissioning]]"
@@ -19,11 +20,13 @@ source:
   - "[[MCP Registry]]"
   - "[[Toolformer]]"
   - "[[OpenAI Function Calling 文档]]"
+  - "[[OpenAI Structured Outputs 文档]]"
   - "[[Anthropic Tool Use 文档]]"
   - "[[Model Context Protocol 官方文档]]"
 evidence:
   - "[[Tool Use#证据锚点]]"
   - "[[Tool Calling#证据锚点]]"
+  - "[[Constrained Decoding#证据锚点]]"
   - "[[Agent Skills#证据锚点]]"
   - "[[Tool Registry#证据锚点]]"
   - "[[Tool Permissioning#证据锚点]]"
@@ -34,6 +37,7 @@ related:
   - "[[Agent 知识地图]]"
   - "[[Tool Use]]"
   - "[[Tool Calling]]"
+  - "[[Constrained Decoding]]"
   - "[[Agent Skills]]"
   - "[[Tool Registry]]"
   - "[[Tool Permissioning]]"
@@ -88,6 +92,7 @@ task/context
 |---|---|---|---|---|---|
 | [[Tool Use]] | 行为能力：模型/Agent 借助外部能力完成任务 | 需求判断贯穿任务前、中、后 | 目标、上下文、可用工具、工具结果 | “是否用工具、用哪个、如何利用结果”的行为路径 | [[Tool Use#证据锚点]] |
 | [[Tool Calling]] | 结构化调用接口：工具名、参数、schema | 模型生成 action intent 后，runtime 执行前 | tool schema、上下文、模型输出约束 | tool call 请求；通常还要 runtime 校验 | [[Tool Calling#证据锚点]] |
+| [[Constrained Decoding]] | 解码层结构约束：按 schema / grammar mask 非法 token | 单次模型生成过程中 | schema / grammar、partial output、token vocabulary | 更可能 well-formed 的结构化输出 | [[Constrained Decoding#证据锚点]] |
 | [[Agent Skills]] | 可按需加载的能力包 / 做事方法 | 任务匹配后，工具调用前后都可能介入 | `SKILL.md`、metadata、脚本、模板、参考资料 | 可执行流程、上下文资源、脚本调用和完成标准 | [[Agent Skills#证据锚点]] |
 | [[Tool Registry]] | host 内部工具目录和元数据管理 | 模型选择工具前；工具上线/下线/版本变化时 | 工具名、description、schema、版本、权限标签、来源 | 当前任务可见/可调用工具集合 | [[Tool Registry#证据锚点]] |
 | [[Tool Permissioning]] | 授权与风险控制机制 | 工具展示前、调用前、参数提交前、执行前 | 用户/任务/工具/参数/数据范围/风险等级 | allow / deny / require approval / sandbox-only 等执行边界 | [[Tool Permissioning#证据锚点]] |
@@ -98,6 +103,7 @@ task/context
 ## 最容易混淆的边界
 
 - [[Tool Use]] vs [[Tool Calling]]：前者是“会不会借助外部能力”的行为问题；后者是“如何表达一次调用请求”的接口问题。一个系统可以有 tool calling API，却仍然不会在正确时机用工具。
+- [[Tool Calling]] vs [[Constrained Decoding]]：前者定义工具调用请求的接口形态；后者在生成过程中限制 token 选择，让请求更符合 schema。格式合法仍不等于工具该被执行。
 - [[Agent Skills]] vs [[Tool Calling]]：skill 是做事方法和资源包，可能包含脚本、模板和参考资料；tool calling 是一次结构化调用请求。Skill 可以指导何时调用工具，但不是 tool call 本身。
 - [[Agent Skills]] vs [[MCP]]：MCP 连接外部 server 暴露的 tools/resources/prompts；skill 组织 Agent 如何执行一类任务。Skill 可以调用 MCP tool，但 skill 自身不等于 MCP server。
 - [[Tool Calling]] vs tool execution：tool call 是请求，不是执行本身。真正读文件、发请求、写数据库或付款的是 runtime / harness / 应用代码。
@@ -111,6 +117,8 @@ task/context
 ```text
 Tool Use:          Goal -> decide external capability is needed -> use result in next reasoning/action
 Tool Calling:      Tool schema -> model emits tool name + arguments -> runtime validates/executes -> observation
+Constrained Decoding:
+                   Schema/grammar + partial output -> mask invalid tokens -> well-formed output
 Agent Skills:      Skill metadata -> task match -> load SKILL.md/resources/scripts -> guide workflow/tool use
 Tool Registry:     Tool lifecycle -> register/describe/version/tag -> expose subset to model/runtime
 Tool Permissioning:User/task/data/risk -> allow/deny/gate/sandbox -> execute or stop
@@ -142,6 +150,7 @@ MCP Registry:      Search/select server -> inspect metadata/source/version -> in
 
 - [[Toolformer]] 和 [[Tool Use#证据锚点]] 支持“工具使用是一种模型/Agent 行为能力，需要判断何时调用、调用什么、如何利用结果”。
 - [[OpenAI Function Calling 文档]]、[[Anthropic Tool Use 文档]] 和 [[Tool Calling#证据锚点]] 支持“结构化 schema / tool call / tool result 是现代工具接口的基础层”。
+- [[OpenAI Structured Outputs 文档]] 和 [[Constrained Decoding#证据锚点]] 支持“schema adherence 可以下沉到解码层，而不是只靠 prompt 或生成后校验”。
 - [[Anthropic Agent Skills 文档]] 和 [[Agent Skills#证据锚点]] 支持“skill 是按需加载的能力包 / 做事方法，不是单次 tool call 或 MCP server”。
 - [[Model Context Protocol 官方文档]]、[[MCP#证据锚点]] 和 [[MCP Registry#证据锚点]] 支持“协议与 registry 解决工具/上下文服务接入和发现问题”。
 - [[MCP Tool Poisoning Threat Model]]、[[Tool Registry#证据锚点]] 和 [[Tool Permissioning#证据锚点]] 支持“工具描述、server 来源、权限和供应链是安全边界”。
@@ -162,6 +171,7 @@ MCP Registry:      Search/select server -> inspect metadata/source/version -> in
 |---|---|---|---|
 | 想判断模型是否需要外部能力 | [[Tool Use]] | 关注行为决策：何时用工具、用哪个、结果怎么进入下一步 | 容易把“能调用”误当成“会正确使用” |
 | 模型输出参数格式不稳定 | [[Tool Calling]] | 关注 schema、必填字段、枚举、strict mode 和 runtime validation | schema 正确仍可能业务越权 |
+| 结构化输出总是漏字段或格式错 | [[Constrained Decoding]] | 在解码阶段排除不可能符合 schema / grammar 的 token | 只能保证形状更稳，不保证事实或权限正确 |
 | 同类任务需要复用流程、脚本、模板和参考资料 | [[Agent Skills]] | 关注做事方法如何按需发现、加载和执行 | skill metadata 可能误导选择或扩大权限 |
 | 工具数量变多、prompt 里塞不下 | [[Tool Registry]] | 需要目录、版本、可见性、描述和状态管理 | 工具描述本身可能被投毒 |
 | 需要限制文件路径、网络域名、写操作或付款 | [[Tool Permissioning]] | 关注数据范围、参数范围、动作副作用和审批阈值 | 只隐藏工具名无法覆盖参数级越权 |
@@ -171,13 +181,13 @@ MCP Registry:      Search/select server -> inspect metadata/source/version -> in
 ## 它们共同不是什么
 
 - 都不是完整 Agent。工具接口层不替代 planning、state、memory、evaluation、observability 或 handoff。
-- 都不是安全保证。schema、registry、MCP 和 permissioning 都需要 policy、approval、sandbox、trace 和测试配合。
+- 都不是安全保证。schema、constrained decoding、registry、MCP 和 permissioning 都需要 policy、approval、sandbox、trace 和测试配合。
 - 都不是工具实现本身。真正副作用发生在执行器、外部 API、文件系统、浏览器或数据库里。
 - 都不是越多越好。暴露过多工具会增加选择错误、权限扩大、prompt injection 和 tool poisoning 风险。
 
 ## 证据锚点
 
-- Concept anchors: [[Tool Use#证据锚点]], [[Tool Calling#证据锚点]], [[Agent Skills#证据锚点]], [[Tool Registry#证据锚点]], [[Tool Permissioning#证据锚点]], [[MCP#证据锚点]], [[MCP Registry#证据锚点]]
+- Concept anchors: [[Tool Use#证据锚点]], [[Tool Calling#证据锚点]], [[Constrained Decoding#证据锚点]], [[Agent Skills#证据锚点]], [[Tool Registry#证据锚点]], [[Tool Permissioning#证据锚点]], [[MCP#证据锚点]], [[MCP Registry#证据锚点]]
 - Source examples: [[Toolformer]], [[OpenAI Function Calling 文档]], [[Anthropic Tool Use 文档]], [[Model Context Protocol 官方文档]], [[Model Context Protocol Python SDK Repo]], [[MCP Tool Poisoning Threat Model]]
 - Evidence type: concept-card synthesis + paper/docs source notes + protocol source notes + engineering synthesis + learning analogy.
 - Confidence: high for Tool Use / Tool Calling / execution boundary; medium for MCP Registry and registry/security layering because生态和具体实现仍在变化。
@@ -197,6 +207,7 @@ MCP Registry:      Search/select server -> inspect metadata/source/version -> in
 - [[Agent 知识地图]]
 - [[Tool Use]]
 - [[Tool Calling]]
+- [[Constrained Decoding]]
 - [[Agent Skills]]
 - [[Tool Registry]]
 - [[Tool Permissioning]]

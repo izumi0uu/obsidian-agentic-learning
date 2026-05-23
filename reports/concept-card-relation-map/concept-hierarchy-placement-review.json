@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "taxonomy_placement_review",
-  "generated_at": "2026-05-21T09:47:41Z",
+  "generated_at": "2026-05-23T12:46:06Z",
   "classification_stage": "audit_closure",
   "input_map": "reports/concept-card-relation-map/concept-relations-temp.json",
   "scope": {
@@ -51,19 +51,19 @@
     "Agent"
   ],
   "summary": {
-    "total_concepts": 154,
-    "reviewed_concepts": 154,
+    "total_concepts": 161,
+    "reviewed_concepts": 161,
     "taxonomy_placement_unreviewed": 0,
     "concepts_with_up": 39,
-    "concepts_without_up": 115,
-    "concepts_with_candidate_basis": 65,
-    "candidate_basis_rows": 79,
+    "concepts_without_up": 122,
+    "concepts_with_candidate_basis": 67,
+    "candidate_basis_rows": 81,
     "known_forbidden_candidate_pairs": 2,
     "accepted_taxonomy": 0,
     "root_or_anchor_no_up": 20,
-    "relation_only_terminal": 60,
-    "weak_or_backlog_terminal": 7,
-    "defer_boundary_review": 26,
+    "relation_only_terminal": 62,
+    "weak_or_backlog_terminal": 13,
+    "defer_boundary_review": 25,
     "open_unclassified": 0,
     "open_review": 0,
     "open_writeback": 0,
@@ -71,25 +71,25 @@
     "write_policy": "Audit closure only. Remaining defer_boundary_review rows are closed as deferred_with_backlog and no concept-card fields are written.",
     "decision_counts": {
       "already_has_up_reviewed": 39,
-      "defer_boundary_review": 26,
+      "defer_boundary_review": 25,
       "reject_taxonomy": 2,
-      "relation_only_terminal": 60,
+      "relation_only_terminal": 62,
       "root_or_anchor_no_up": 20,
-      "weak_or_backlog_terminal": 7
+      "weak_or_backlog_terminal": 13
     },
     "review_status_counts": {
-      "deferred_with_backlog": 26,
-      "terminal_non_writeback": 128
+      "deferred_with_backlog": 25,
+      "terminal_non_writeback": 136
     },
     "parent_whitelist_reviewed": true,
     "stable_parent_whitelist_approved": 16,
     "proposed_parent_anchors_not_auto_approved": 3,
     "missing_proposed_parent_anchors": 2,
     "root_anchors_not_parent_whitelist": 5,
-    "deferred_rows_parent_prechecked": 28,
+    "deferred_rows_parent_prechecked": 27,
     "candidate_adjudication_needed": 2,
     "conservative_candidates_generated": 2,
-    "candidate_generation_suppressed_signals": 26,
+    "candidate_generation_suppressed_signals": 25,
     "adjudication_items": 2,
     "adjudicated_candidates": 2,
     "adjudication_accept_taxonomy": 0,
@@ -110,7 +110,7 @@
     "limited_apply_concept_card_writes": 1,
     "limited_apply_post_apply_dry_run_planned": 0,
     "limited_apply_post_apply_dry_run_ready": 0,
-    "deferred_with_backlog": 26,
+    "deferred_with_backlog": 25,
     "audit_closure_concept_card_writes": 0,
     "completion_definition_met": true
   },
@@ -179,6 +179,7 @@
       "Chunking",
       "Code Execution Sandbox",
       "Coding Agent",
+      "Constrained Decoding",
       "Context Engineering",
       "Context Projection",
       "Context Rot",
@@ -191,6 +192,8 @@
       "Entity Resolution",
       "Eval Harness",
       "Evaluation",
+      "Few-shot CoT",
+      "Few-shot Prompting",
       "Frontend-first AI Toolkit",
       "GSSC Pipeline",
       "GUI Grounding",
@@ -231,6 +234,7 @@
       "Positional Encoding",
       "Progressive Disclosure",
       "Prompt",
+      "Prompt Chaining",
       "Prompt Engineering",
       "Prompt Injection",
       "Provider-first Agent SDK",
@@ -252,8 +256,10 @@
       "Role-playing Agent",
       "Sandbox Workspace",
       "Self-Attention",
+      "Self-Consistency",
       "State Graph Runtime",
       "Step-back Prompting",
+      "Structured Outputs",
       "TF-IDF",
       "TTL",
       "Task Success Rate",
@@ -266,6 +272,7 @@
       "Trace",
       "Trajectory",
       "Transformer",
+      "Tree of Thoughts",
       "Type-safe Agent SDK",
       "Vector Database",
       "Win Rate",
@@ -311,6 +318,7 @@
       "Patch Validation",
       "Plan-and-Solve Prompting",
       "Progressive Disclosure",
+      "Prompt Chaining",
       "Prompt Engineering",
       "Provider-first Agent SDK",
       "Query Planning",
@@ -335,6 +343,7 @@
       "Tool Registry",
       "Top-K",
       "Trace",
+      "Tree of Thoughts",
       "Type-safe Agent SDK",
       "Vector Database",
       "Win Rate",
@@ -419,8 +428,7 @@
         "Sandbox Workspace",
         "Self-Attention",
         "Step-back Prompting",
-        "Trajectory",
-        "Win Rate"
+        "Trajectory"
       ],
       "reject_taxonomy": [
         "Approval Gate",
@@ -484,8 +492,10 @@
         "Tool Registry",
         "Top-K",
         "Trace",
+        "Tree of Thoughts",
         "Type-safe Agent SDK",
         "Vector Database",
+        "Win Rate",
         "Workflow Guardrails"
       ],
       "root_or_anchor_no_up": [
@@ -514,8 +524,14 @@
         "AGENTS.md",
         "Agent Payments Protocol",
         "Coding Agent",
+        "Constrained Decoding",
+        "Few-shot CoT",
+        "Few-shot Prompting",
         "MCP Elicitation",
         "Managed Agent Harness",
+        "Prompt Chaining",
+        "Self-Consistency",
+        "Structured Outputs",
         "Zero-shot CoT",
         "双链"
       ]
@@ -558,8 +574,7 @@
       "Sandbox Workspace",
       "Self-Attention",
       "Step-back Prompting",
-      "Trajectory",
-      "Win Rate"
+      "Trajectory"
     ]
   },
   "rows": [
@@ -584,7 +599,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "A2A is a protocol/ecosystem card. `Agent` is intentionally not an auto-approved parent, and no approved protocol parent exists.",
@@ -627,7 +642,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "ACP is a protocol/ecosystem card. `Agent` is intentionally not an auto-approved parent, and no approved protocol parent exists.",
@@ -670,7 +685,7 @@
       "decision_reason": "The card is seed/review state with no current `up` and no safe taxonomy candidate; keep it parentless until its boundary matures or it enters a later backlog review.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -711,7 +726,7 @@
       "decision_reason": "The card already carries typed relation evidence, but no strict parent candidate; keep the value in `relations` rather than inventing a taxonomy parent.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -734,7 +749,7 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -772,7 +787,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Agent Control Plane up [[Observability]] from topic_family_review; topic overlap is only a review signal.",
@@ -802,7 +817,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -839,7 +854,7 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Agent Framework up [[Agent Workflow]] from topic_family_review; topic overlap is only a review signal."
@@ -878,7 +893,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Agent Harness up [[Evaluation]] from topic_family_review; topic overlap is only a review signal.",
@@ -918,7 +933,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Agent Lifecycle Hook up [[Observability]] from topic_family_review; topic overlap is only a review signal.",
@@ -957,7 +972,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Agent Loop up [[Agent Workflow]] from topic_family_review; topic overlap is only a review signal.",
@@ -987,7 +1002,7 @@
       "decision_reason": "The card is seed/review state with no current `up` and no safe taxonomy candidate; keep it parentless until its boundary matures or it enters a later backlog review.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -1041,7 +1056,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Agent Robustness up [[Evaluation]] from topic_family_review; topic overlap is only a review signal.",
@@ -1070,7 +1085,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -1135,7 +1150,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Agent State up [[Agent Workflow]] from topic_family_review; topic overlap is only a review signal.",
@@ -1164,7 +1179,7 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -1214,7 +1229,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Agent Workflow Static Verification up [[Agent Framework]] from topic_family_review; topic overlap is only a review signal.",
@@ -1247,7 +1262,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -1274,7 +1289,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -1301,7 +1316,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -1327,7 +1342,7 @@
       "decision_reason": "Reject `up: [[Agent Workflow]]`: the child card defines Approval Gate as an execution-before-control point for high-risk actions. The parent card allows workflows to contain approval gates, but containment/composition is not strict taxonomy.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-candidate-adjudication",
       "drift_guard": [
         "Do not classify Approval Gate under Agent Workflow merely because workflow definitions can contain approval nodes; node/control-point-in is not kind-of.",
@@ -1359,7 +1374,7 @@
           "writeback_action": "none",
           "review_status": "terminal_non_writeback",
           "dry_run_eligible": false,
-          "reviewed_at": "2026-05-21T09:47:41Z"
+          "reviewed_at": "2026-05-23T12:46:06Z"
         }
       ]
     },
@@ -1386,7 +1401,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -1414,7 +1429,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -1448,7 +1463,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -1491,7 +1506,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -1526,7 +1541,7 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Benchmark up [[Evaluation]] from topic_family_review; topic overlap is only a review signal."
@@ -1554,7 +1569,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -1600,7 +1615,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -1636,7 +1651,7 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Chunking up [[RAG]] from topic_family_review; topic overlap is only a review signal."
@@ -1663,7 +1678,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "A sandbox supports safe tool/code execution, but support/infrastructure is not a kind of Tool Use.",
@@ -1706,7 +1721,7 @@
       "decision_reason": "The card is seed/review state with no current `up` and no safe taxonomy candidate; keep it parentless until its boundary matures or it enters a later backlog review.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -1733,7 +1748,33 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
+      "reviewer": "rule:concept-hierarchy-audit-initial-triage",
+      "drift_guard": []
+    },
+    {
+      "concept": "Constrained Decoding",
+      "title": "Constrained Decoding",
+      "path": "agentic learning/wiki/concepts/Constrained Decoding.md",
+      "topics": [
+        "llm",
+        "decoding",
+        "structured-output",
+        "tools"
+      ],
+      "card_status": "seed",
+      "current_up": [],
+      "current_relations_count": 0,
+      "current_relations": [],
+      "current_related_count": 8,
+      "body_link_count": 2,
+      "candidate_parent": null,
+      "candidate_basis": [],
+      "decision": "weak_or_backlog_terminal",
+      "decision_reason": "The card is seed/review state with no current `up` and no safe taxonomy candidate; keep it parentless until its boundary matures or it enters a later backlog review.",
+      "writeback_action": "none",
+      "review_status": "terminal_non_writeback",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -1770,7 +1811,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Context Engineering up [[RAG]] from topic_family_review; topic overlap is only a review signal.",
@@ -1805,7 +1846,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -1865,7 +1906,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Context Projection up [[Memory]] from topic_family_review; topic overlap is only a review signal.",
@@ -1900,7 +1941,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -1941,7 +1982,7 @@
       "decision_reason": "The card already carries typed relation evidence, but no strict parent candidate; keep the value in `relations` rather than inventing a taxonomy parent.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -1965,7 +2006,7 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -1992,7 +2033,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -2020,7 +2061,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -2053,7 +2094,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -2078,7 +2119,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -2124,7 +2165,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -2173,7 +2214,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write DeerFlow up [[Agent Framework]] from topic_family_review; topic overlap is only a review signal.",
@@ -2224,7 +2265,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -2261,7 +2302,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Document Ingestion up [[RAG]] from topic_family_review; topic overlap is only a review signal.",
@@ -2301,7 +2342,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Ledger: Durable Execution -> Agent Workflow: Durable Execution is a runtime capability used by workflows, not a workflow subtype."
@@ -2339,7 +2380,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Embedding up [[RAG]] from topic_family_review; topic overlap is only a review signal.",
@@ -2367,7 +2408,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -2412,7 +2453,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -2449,7 +2490,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Eval Harness up [[Evaluation]] from topic_family_review; topic overlap is only a review signal.",
@@ -2476,7 +2517,56 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
+      "reviewer": "rule:concept-hierarchy-audit-initial-triage",
+      "drift_guard": []
+    },
+    {
+      "concept": "Few-shot CoT",
+      "title": "Few-shot CoT",
+      "path": "agentic learning/wiki/concepts/Few-shot CoT.md",
+      "topics": [
+        "llm",
+        "prompting",
+        "reasoning"
+      ],
+      "card_status": "seed",
+      "current_up": [],
+      "current_relations_count": 0,
+      "current_relations": [],
+      "current_related_count": 6,
+      "body_link_count": 1,
+      "candidate_parent": null,
+      "candidate_basis": [],
+      "decision": "weak_or_backlog_terminal",
+      "decision_reason": "The card is seed/review state with no current `up` and no safe taxonomy candidate; keep it parentless until its boundary matures or it enters a later backlog review.",
+      "writeback_action": "none",
+      "review_status": "terminal_non_writeback",
+      "reviewed_at": "2026-05-23T12:46:06Z",
+      "reviewer": "rule:concept-hierarchy-audit-initial-triage",
+      "drift_guard": []
+    },
+    {
+      "concept": "Few-shot Prompting",
+      "title": "Few-shot Prompting",
+      "path": "agentic learning/wiki/concepts/Few-shot Prompting.md",
+      "topics": [
+        "llm",
+        "prompting"
+      ],
+      "card_status": "seed",
+      "current_up": [],
+      "current_relations_count": 0,
+      "current_relations": [],
+      "current_related_count": 6,
+      "body_link_count": 0,
+      "candidate_parent": null,
+      "candidate_basis": [],
+      "decision": "weak_or_backlog_terminal",
+      "decision_reason": "The card is seed/review state with no current `up` and no safe taxonomy candidate; keep it parentless until its boundary matures or it enters a later backlog review.",
+      "writeback_action": "none",
+      "review_status": "terminal_non_writeback",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -2514,7 +2604,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Frontend-first AI Toolkit up [[Agent Framework]] from topic_family_review; topic overlap is only a review signal.",
@@ -2553,7 +2643,7 @@
       "decision_reason": "The card already carries typed relation evidence, but no strict parent candidate; keep the value in `relations` rather than inventing a taxonomy parent.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -2578,7 +2668,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -2623,7 +2713,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -2650,7 +2740,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -2687,7 +2777,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Guardrails up [[Evaluation]] from topic_family_review; topic overlap is only a review signal.",
@@ -2707,7 +2797,7 @@
       "current_up": [],
       "current_relations_count": 0,
       "current_relations": [],
-      "current_related_count": 4,
+      "current_related_count": 6,
       "body_link_count": 1,
       "candidate_parent": null,
       "candidate_basis": [
@@ -2727,7 +2817,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Hallucination up [[RAG]] from topic_family_review; topic overlap is only a review signal.",
@@ -2766,7 +2856,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Ledger: Handoff -> Agent Workflow: Handoff is a transfer mechanism inside workflows, not a workflow subtype."
@@ -2807,7 +2897,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Hermes Agent up [[Agent Workflow]] from topic_family_review; topic overlap is only a review signal.",
@@ -2847,7 +2937,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Ledger: Human-in-the-loop -> Agent Workflow: Human-in-the-loop is an intervention/approval pattern inside workflows, not a workflow subtype."
@@ -2886,7 +2976,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write HyDE up [[Retriever]] from topic_family_review; topic overlap is only a review signal.",
@@ -2931,7 +3021,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -2969,7 +3059,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Indirect Prompt Injection up [[RAG]] from topic_family_review; topic overlap is only a review signal.",
@@ -2997,7 +3087,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -3051,7 +3141,7 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Knowledge Graph up [[RAG]] from topic_family_review; topic overlap is only a review signal."
@@ -3076,7 +3166,7 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -3113,7 +3203,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write LLM Gateway up [[Observability]] from topic_family_review; topic overlap is only a review signal.",
@@ -3153,7 +3243,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write LLM Training Pipeline up [[Evaluation]] from topic_family_review; topic overlap is only a review signal.",
@@ -3193,7 +3283,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write LLM-as-Judge up [[Evaluation]] from topic_family_review; topic overlap is only a review signal.",
@@ -3224,7 +3314,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -3252,7 +3342,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -3278,7 +3368,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -3351,7 +3441,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Long-Horizon Context Engineering up [[Memory]] from topic_family_review; topic overlap is only a review signal.",
@@ -3381,7 +3471,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -3407,7 +3497,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -3451,7 +3541,7 @@
       "decision_reason": "The card is seed/review state with no current `up` and no safe taxonomy candidate; keep it parentless until its boundary matures or it enters a later backlog review.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -3476,7 +3566,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -3520,7 +3610,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -3563,7 +3653,7 @@
       "decision_reason": "The card is seed/review state with no current `up` and no safe taxonomy candidate; keep it parentless until its boundary matures or it enters a later backlog review.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -3587,7 +3677,7 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -3614,7 +3704,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [],
       "limited_apply_applied_up": {
@@ -3648,7 +3738,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -3672,7 +3762,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -3728,7 +3818,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -3771,7 +3861,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -3798,7 +3888,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -3822,7 +3912,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -3876,7 +3966,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Neo4j up [[RAG]] from topic_family_review; topic overlap is only a review signal.",
@@ -3905,7 +3995,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -3943,7 +4033,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write OMX $ 指令 up [[Agent Workflow]] from topic_family_review; topic overlap is only a review signal.",
@@ -3983,7 +4073,7 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Observability up [[Evaluation]] from topic_family_review; topic overlap is only a review signal."
@@ -4008,7 +4098,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -4050,7 +4140,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -4094,7 +4184,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -4171,7 +4261,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write OpenTelemetry GenAI up [[Evaluation]] from topic_family_review; topic overlap is only a review signal.",
@@ -4204,7 +4294,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -4242,7 +4332,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -4278,7 +4368,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Patch Validation up [[Evaluation]] from topic_family_review; topic overlap is only a review signal.",
@@ -4318,7 +4408,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Plan-and-Solve Prompting up [[Planning]] from topic_family_review; topic overlap is only a review signal.",
@@ -4345,7 +4435,7 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -4370,7 +4460,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "A policy engine constrains tools/actions; constraint layer is not a kind of Tool Use.",
@@ -4412,7 +4502,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -4467,7 +4557,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Progressive Disclosure up [[Tool Use]] from topic_family_review; topic overlap is only a review signal.",
@@ -4495,9 +4585,48 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
+    },
+    {
+      "concept": "Prompt Chaining",
+      "title": "Prompt Chaining",
+      "path": "agentic learning/wiki/concepts/Prompt Chaining.md",
+      "topics": [
+        "llm",
+        "prompting",
+        "workflow"
+      ],
+      "card_status": "seed",
+      "current_up": [],
+      "current_relations_count": 0,
+      "current_relations": [],
+      "current_related_count": 5,
+      "body_link_count": 1,
+      "candidate_parent": null,
+      "candidate_basis": [
+        {
+          "target": "Agent Workflow",
+          "candidate_type": "topic_family_review",
+          "confidence": "low",
+          "support": [
+            "frontmatter.related"
+          ],
+          "rationale": "topic family: workflow",
+          "candidate_status": "needs_review",
+          "known_forbidden_as_up": false
+        }
+      ],
+      "decision": "weak_or_backlog_terminal",
+      "decision_reason": "The card is seed/review state with no current `up` and no safe taxonomy candidate; keep it parentless until its boundary matures or it enters a later backlog review.",
+      "writeback_action": "none",
+      "review_status": "terminal_non_writeback",
+      "reviewed_at": "2026-05-23T12:46:06Z",
+      "reviewer": "rule:concept-hierarchy-audit-initial-triage",
+      "drift_guard": [
+        "Do not bulk-write Prompt Chaining up [[Agent Workflow]] from topic_family_review; topic overlap is only a review signal."
+      ]
     },
     {
       "concept": "Prompt Engineering",
@@ -4513,8 +4642,8 @@
       "current_up": [],
       "current_relations_count": 0,
       "current_relations": [],
-      "current_related_count": 6,
-      "body_link_count": 3,
+      "current_related_count": 9,
+      "body_link_count": 6,
       "candidate_parent": null,
       "candidate_basis": [
         {
@@ -4533,7 +4662,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Prompt Engineering up [[Evaluation]] from topic_family_review; topic overlap is only a review signal.",
@@ -4561,7 +4690,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -4617,7 +4746,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Provider-first Agent SDK up [[Agent Framework]] from topic_family_review; topic overlap is only a review signal.",
@@ -4657,7 +4786,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Query Planning up [[Retriever]] from topic_family_review; topic overlap is only a review signal.",
@@ -4696,7 +4825,7 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Query Rewrite up [[Retriever]] from topic_family_review; topic overlap is only a review signal."
@@ -4722,7 +4851,7 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -4759,7 +4888,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write RAG Access Control up [[RAG]] from topic_family_review; topic overlap is only a review signal.",
@@ -4798,7 +4927,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write RAG Citation Faithfulness up [[RAG]] from topic_family_review; topic overlap is only a review signal.",
@@ -4827,7 +4956,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -4888,7 +5017,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write RAGFlow up [[Agent Framework]] from topic_family_review; topic overlap is only a review signal.",
@@ -4960,7 +5089,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write RAGGraph up [[RAG]] from topic_family_review; topic overlap is only a review signal.",
@@ -4989,7 +5118,7 @@
       "decision_reason": "Reject `up: [[Agent Workflow]]`: the ReAct card explicitly frames ReAct as an Agent Loop / reasoning-action-observation pattern and warns it is not a production workflow template. The card says modern systems often put stable paths into workflows and keep dynamic parts in an agent loop, so the relation is boundary/adjacency rather than strict taxonomy.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-candidate-adjudication",
       "drift_guard": [
         "Do not classify ReAct under Agent Workflow from a mere workflow mention; ReAct is primarily an Agent Loop pattern.",
@@ -5023,7 +5152,7 @@
           "writeback_action": "none",
           "review_status": "terminal_non_writeback",
           "dry_run_eligible": false,
-          "reviewed_at": "2026-05-21T09:47:41Z"
+          "reviewed_at": "2026-05-23T12:46:06Z"
         }
       ]
     },
@@ -5065,7 +5194,7 @@
       "decision_reason": "The card already carries typed relation evidence, but no strict parent candidate; keep the value in `relations` rather than inventing a taxonomy parent.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -5101,7 +5230,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Ledger: Reasoning Trace -> Observability: Reasoning Trace is a kind of trace/trajectory artifact; Observability is too broad as a direct parent here."
@@ -5141,7 +5270,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -5179,7 +5308,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Reflexion up [[Evaluation]] from topic_family_review; topic overlap is only a review signal.",
@@ -5230,7 +5359,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Replay up [[Evaluation]] from topic_family_review; topic overlap is only a review signal.",
@@ -5271,7 +5400,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Repo Context up [[RAG]] from topic_family_review; topic overlap is only a review signal.",
@@ -5322,7 +5451,7 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Reranking up [[RAG]] from topic_family_review; topic overlap is only a review signal.",
@@ -5361,7 +5490,7 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Retriever up [[RAG]] from topic_family_review; topic overlap is only a review signal."
@@ -5401,7 +5530,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Role-playing Agent up [[Agent Framework]] from topic_family_review; topic overlap is only a review signal.",
@@ -5429,7 +5558,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "A sandbox workspace hosts actions/tools; hosting infrastructure is not a Tool Use subtype.",
@@ -5471,7 +5600,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -5492,6 +5621,31 @@
           "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
         ]
       }
+    },
+    {
+      "concept": "Self-Consistency",
+      "title": "Self-Consistency",
+      "path": "agentic learning/wiki/concepts/Self-Consistency.md",
+      "topics": [
+        "llm",
+        "reasoning",
+        "decoding"
+      ],
+      "card_status": "seed",
+      "current_up": [],
+      "current_relations_count": 0,
+      "current_relations": [],
+      "current_related_count": 6,
+      "body_link_count": 0,
+      "candidate_parent": null,
+      "candidate_basis": [],
+      "decision": "weak_or_backlog_terminal",
+      "decision_reason": "The card is seed/review state with no current `up` and no safe taxonomy candidate; keep it parentless until its boundary matures or it enters a later backlog review.",
+      "writeback_action": "none",
+      "review_status": "terminal_non_writeback",
+      "reviewed_at": "2026-05-23T12:46:06Z",
+      "reviewer": "rule:concept-hierarchy-audit-initial-triage",
+      "drift_guard": []
     },
     {
       "concept": "Self-RAG",
@@ -5516,7 +5670,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -5543,7 +5697,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -5591,7 +5745,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -5640,7 +5794,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write State Graph Runtime up [[Agent Workflow]] from topic_family_review; topic overlap is only a review signal.",
@@ -5670,7 +5824,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -5690,6 +5844,31 @@
           "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
         ]
       }
+    },
+    {
+      "concept": "Structured Outputs",
+      "title": "Structured Outputs",
+      "path": "agentic learning/wiki/concepts/Structured Outputs.md",
+      "topics": [
+        "llm",
+        "structured-output",
+        "tools"
+      ],
+      "card_status": "seed",
+      "current_up": [],
+      "current_relations_count": 0,
+      "current_relations": [],
+      "current_related_count": 6,
+      "body_link_count": 0,
+      "candidate_parent": null,
+      "candidate_basis": [],
+      "decision": "weak_or_backlog_terminal",
+      "decision_reason": "The card is seed/review state with no current `up` and no safe taxonomy candidate; keep it parentless until its boundary matures or it enters a later backlog review.",
+      "writeback_action": "none",
+      "review_status": "terminal_non_writeback",
+      "reviewed_at": "2026-05-23T12:46:06Z",
+      "reviewer": "rule:concept-hierarchy-audit-initial-triage",
+      "drift_guard": []
     },
     {
       "concept": "TF-IDF",
@@ -5747,7 +5926,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not write TF-IDF up [[RAG]]: TF-IDF is a sparse lexical weighting/representation used in retrieval contexts; it is not a RAG subtype.",
@@ -5800,7 +5979,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write TTL up [[Memory]] from topic_family_review; topic overlap is only a review signal.",
@@ -5841,7 +6020,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Task Success Rate up [[Evaluation]] from topic_family_review; topic overlap is only a review signal.",
@@ -5867,7 +6046,7 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -5886,7 +6065,7 @@
       ],
       "current_relations_count": 0,
       "current_relations": [],
-      "current_related_count": 6,
+      "current_related_count": 8,
       "body_link_count": 7,
       "candidate_parent": null,
       "candidate_basis": [],
@@ -5894,7 +6073,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -5931,7 +6110,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Ledger: Tool Permissioning -> Tool Use: Tool Permissioning constrains and governs tools; it is not a tool-use subtype."
@@ -5971,7 +6150,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Ledger: Tool Poisoning -> Tool Use: Tool Poisoning is a threat/failure mode against tools; it is not a tool-use subtype."
@@ -6010,7 +6189,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Ledger: Tool Registry -> Tool Use: Tool Registry is infrastructure/catalog metadata for tools; it is not a tool-use subtype."
@@ -6037,7 +6216,7 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -6086,7 +6265,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Top-K up [[Retriever]] from topic_family_review; topic overlap is only a review signal.",
@@ -6138,7 +6317,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Trace up [[Evaluation]] from topic_family_review; topic overlap is only a review signal.",
@@ -6168,7 +6347,7 @@
       "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
       "writeback_action": "none",
       "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
       "drift_guard": [
         "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
@@ -6213,7 +6392,7 @@
       "decision_reason": "Existing top-level `up` was produced by the prior guarded relation pipeline; Initial triage records that concept hierarchy placement is already present and does not schedule another writeback.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -6237,9 +6416,50 @@
       "decision_reason": "This concept is a stable parent/root/anchor candidate for this vault's learning taxonomy; no parent is forced merely to reduce the no-up count.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
+    },
+    {
+      "concept": "Tree of Thoughts",
+      "title": "Tree of Thoughts",
+      "path": "agentic learning/wiki/concepts/Tree of Thoughts.md",
+      "topics": [
+        "llm",
+        "reasoning",
+        "planning",
+        "prompting"
+      ],
+      "card_status": "seed",
+      "current_up": [],
+      "current_relations_count": 0,
+      "current_relations": [],
+      "current_related_count": 10,
+      "body_link_count": 0,
+      "candidate_parent": null,
+      "candidate_basis": [
+        {
+          "target": "Planning",
+          "candidate_type": "topic_family_review",
+          "confidence": "low",
+          "support": [
+            "frontmatter.related"
+          ],
+          "rationale": "topic family: planning",
+          "candidate_status": "needs_review",
+          "known_forbidden_as_up": false
+        }
+      ],
+      "decision": "relation_only_terminal",
+      "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
+      "writeback_action": "none",
+      "review_status": "terminal_non_writeback",
+      "reviewed_at": "2026-05-23T12:46:06Z",
+      "reviewer": "rule:concept-hierarchy-audit-initial-triage",
+      "drift_guard": [
+        "Do not bulk-write Tree of Thoughts up [[Planning]] from topic_family_review; topic overlap is only a review signal.",
+        "Ledger: Tree of Thoughts -> Planning: Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge."
+      ]
     },
     {
       "concept": "Type-safe Agent SDK",
@@ -6255,7 +6475,7 @@
       "current_up": [],
       "current_relations_count": 0,
       "current_relations": [],
-      "current_related_count": 4,
+      "current_related_count": 5,
       "body_link_count": 1,
       "candidate_parent": null,
       "candidate_basis": [
@@ -6286,7 +6506,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Type-safe Agent SDK up [[Agent Framework]] from topic_family_review; topic overlap is only a review signal.",
@@ -6327,7 +6547,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Vector Database up [[RAG]] from topic_family_review; topic overlap is only a review signal.",
@@ -6362,31 +6582,16 @@
           "known_forbidden_as_up": false
         }
       ],
-      "decision": "defer_boundary_review",
-      "decision_reason": "No safe parent, existing `up`, typed relation, or terminal weak/backlog signal was found; this requires concept-card evidence review in a later stage. Audit closure keeps the card parentless for now and routes the unresolved boundary to the health-check backlog instead of forcing `up`.",
+      "decision": "relation_only_terminal",
+      "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
-      "review_status": "deferred_with_backlog",
-      "reviewed_at": "2026-05-21T09:47:41Z",
-      "reviewer": "llm-adjudicator:concept-hierarchy-audit-closure",
+      "review_status": "terminal_non_writeback",
+      "reviewed_at": "2026-05-23T12:46:06Z",
+      "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
-        "Audit closure is not permission to write a fallback parent later; reopen through candidate/adjudication/dry-run/limited-apply.",
-        "Backlog home: agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
-        "Do not bulk-write Win Rate up [[Evaluation]] from topic_family_review; topic overlap is only a review signal."
-      ],
-      "audit_closure_deferred_backlog": {
-        "status": "deferred_with_backlog",
-        "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
-        "reason": "No approved strict parent exists in the current concept hierarchy placement pass.",
-        "suppressed_target": null,
-        "suppressed_signal_type": null,
-        "suppressed_reason": null,
-        "writeback_action": "none",
-        "reopen_triggers": [
-          "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
-          "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
-          "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
-        ]
-      }
+        "Do not bulk-write Win Rate up [[Evaluation]] from topic_family_review; topic overlap is only a review signal.",
+        "Ledger: Win Rate -> Evaluation: Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge."
+      ]
     },
     {
       "concept": "Workflow Guardrails",
@@ -6402,7 +6607,7 @@
       "current_up": [],
       "current_relations_count": 0,
       "current_relations": [],
-      "current_related_count": 6,
+      "current_related_count": 7,
       "body_link_count": 1,
       "candidate_parent": null,
       "candidate_basis": [
@@ -6422,7 +6627,7 @@
       "decision_reason": "Existing candidate-edge ledger decisions for this concept are terminal non-writeback signals (reject_taxonomy or adjacency_only); keep them as related/relations/body context rather than `up`.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": [
         "Do not bulk-write Workflow Guardrails up [[Agent Workflow]] from topic_family_review; topic overlap is only a review signal.",
@@ -6442,7 +6647,7 @@
       "current_up": [],
       "current_relations_count": 0,
       "current_relations": [],
-      "current_related_count": 6,
+      "current_related_count": 9,
       "body_link_count": 2,
       "candidate_parent": null,
       "candidate_basis": [],
@@ -6450,7 +6655,7 @@
       "decision_reason": "The card is seed/review state with no current `up` and no safe taxonomy candidate; keep it parentless until its boundary matures or it enters a later backlog review.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     },
@@ -6475,13 +6680,13 @@
       "decision_reason": "The card is seed/review state with no current `up` and no safe taxonomy candidate; keep it parentless until its boundary matures or it enters a later backlog review.",
       "writeback_action": "none",
       "review_status": "terminal_non_writeback",
-      "reviewed_at": "2026-05-21T09:47:40Z",
+      "reviewed_at": "2026-05-23T12:46:06Z",
       "reviewer": "rule:concept-hierarchy-audit-initial-triage",
       "drift_guard": []
     }
   ],
   "parent_whitelist_review": {
-    "reviewed_at": "2026-05-21T09:47:41Z",
+    "reviewed_at": "2026-05-23T12:46:06Z",
     "reviewer": "llm-adjudicator:concept-hierarchy-audit-parent-whitelist",
     "rules": [
       "`up` remains strict taxonomy / belongs-to only.",
@@ -6978,27 +7183,18 @@
         "possible_parent_is_approved": false,
         "reason": "Trace/evaluation object; may be evaluated or observed, but it is not automatically Evaluation or Observability.",
         "writeback_action": "none"
-      },
-      {
-        "concept": "Win Rate",
-        "path": "agentic learning/wiki/concepts/Win Rate.md",
-        "route": "remain_deferred",
-        "possible_parent": null,
-        "possible_parent_is_approved": false,
-        "reason": "No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication.",
-        "writeback_action": "none"
       }
     ]
   },
   "conservative_candidates": {
-    "generated_at": "2026-05-21T09:47:41Z",
+    "generated_at": "2026-05-23T12:46:06Z",
     "candidate_artifact_json": "reports/concept-card-relation-map/concept-hierarchy-placement-candidates.json",
     "candidate_artifact_md": "reports/concept-card-relation-map/concept-hierarchy-placement-candidates.md",
     "summary": {
-      "deferred_rows_considered": 28,
+      "deferred_rows_considered": 27,
       "approved_parent_count": 16,
       "generated_candidates": 2,
-      "suppressed_signals": 26,
+      "suppressed_signals": 25,
       "candidate_targets": {
         "Agent Workflow": 2
       },
@@ -7035,12 +7231,11 @@
       "Sandbox Workspace",
       "Self-Attention",
       "Step-back Prompting",
-      "Trajectory",
-      "Win Rate"
+      "Trajectory"
     ]
   },
   "candidate_adjudication": {
-    "generated_at": "2026-05-21T09:47:41Z",
+    "generated_at": "2026-05-23T12:46:06Z",
     "adjudication_artifact_json": "reports/concept-card-relation-map/concept-hierarchy-placement-candidate-adjudication.json",
     "adjudication_artifact_md": "reports/concept-card-relation-map/concept-hierarchy-placement-candidate-adjudication.md",
     "summary": {
@@ -7072,7 +7267,7 @@
     ]
   },
   "writeback_dry_run": {
-    "generated_at": "2026-05-21T09:47:41Z",
+    "generated_at": "2026-05-23T12:46:06Z",
     "dry_run_artifact_json": "reports/concept-card-relation-map/concept-hierarchy-placement-writeback-dry-run.json",
     "dry_run_artifact_md": "reports/concept-card-relation-map/concept-hierarchy-placement-writeback-dry-run.md",
     "summary": {
@@ -7102,7 +7297,7 @@
     ]
   },
   "limited_apply": {
-    "generated_at": "2026-05-21T09:47:41Z",
+    "generated_at": "2026-05-23T12:46:06Z",
     "apply_artifact_json": "reports/concept-card-relation-map/concept-hierarchy-placement-apply-report.json",
     "apply_artifact_md": "reports/concept-card-relation-map/concept-hierarchy-placement-apply-report.md",
     "summary": {
@@ -7142,20 +7337,20 @@
     ]
   },
   "audit_closure": {
-    "generated_at": "2026-05-21T09:47:41Z",
+    "generated_at": "2026-05-23T12:46:06Z",
     "closure_artifact_json": "reports/concept-card-relation-map/concept-hierarchy-placement-closure.json",
     "closure_artifact_md": "reports/concept-card-relation-map/concept-hierarchy-placement-closure.md",
     "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
     "summary": {
-      "total_concepts": 154,
-      "reviewed_concepts": 154,
+      "total_concepts": 161,
+      "reviewed_concepts": 161,
       "taxonomy_placement_unreviewed": 0,
       "open_unclassified": 0,
       "open_review_after_closure": 0,
       "open_writeback": 0,
       "dry_run_planned": 0,
-      "defer_boundary_review": 26,
-      "deferred_with_backlog": 26,
+      "defer_boundary_review": 25,
+      "deferred_with_backlog": 25,
       "concept_card_writes": 0,
       "plugin_problems": 0,
       "forbidden_up_edges": 0,
@@ -7311,12 +7506,6 @@
         "suppressed_target": "Evaluation",
         "suppressed_signal_type": "evaluated_object_not_evaluation_method",
         "reason": "Trace/evaluation object; may be evaluated or observed, but it is not automatically Evaluation or Observability."
-      },
-      {
-        "concept": "Win Rate",
-        "suppressed_target": null,
-        "suppressed_signal_type": null,
-        "reason": "No approved strict parent exists in the current concept hierarchy placement pass."
       }
     ]
   }
