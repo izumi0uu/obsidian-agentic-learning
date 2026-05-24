@@ -13,6 +13,7 @@ related:
   - "[[Agent Workflow Static Verification]]"
   - "[[Agent 知识地图]]"
   - "[[Agent 工程分层对比]]"
+  - "[[Agent Skills 按需加载与上下文边界]]"
   - "[[Workflow Guardrails 与 Prefect 控制点映射]]"
   - "[[OpenClaw Repo vs Hermes Agent]]"
   - "[[Tool 接口层对比]]"
@@ -47,6 +48,7 @@ SORT created DESC
 
 - [[Agent 知识地图]]
 - [[Agent 工程分层对比]]
+- [[Agent Skills 按需加载与上下文边界]]
 - [[Tool 接口层对比]]
 - [[A2A MCP ANP 对比]]
 - [[Agent 安全控制点对比]]

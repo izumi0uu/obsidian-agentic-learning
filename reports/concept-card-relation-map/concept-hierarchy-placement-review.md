@@ -1,41 +1,41 @@
 # Concept Hierarchy Placement Review — 层级归属待审计概念卡
 
-Generated: `2026-05-23T12:46:06Z`
+Generated: `2026-05-24T07:27:25Z`
 Classification stage: `audit_closure`
 
 > Audit closure: remaining `defer_boundary_review` rows are closed as `deferred_with_backlog`; no concept cards are edited and no fallback parents are invented.
 
 ## Summary
 
-- total_concepts: 161
-- reviewed_concepts: 161
+- total_concepts: 162
+- reviewed_concepts: 162
 - taxonomy_placement_unreviewed: 0
 - concepts_with_up: 39
-- concepts_without_up: 122
+- concepts_without_up: 123
 - concepts_with_candidate_basis: 67
 - candidate_basis_rows: 81
 - known_forbidden_candidate_pairs: 2
 - accepted_taxonomy: 0
 - root_or_anchor_no_up: 20
-- relation_only_terminal: 62
-- weak_or_backlog_terminal: 13
-- defer_boundary_review: 25
+- relation_only_terminal: 63
+- weak_or_backlog_terminal: 12
+- defer_boundary_review: 26
 - open_unclassified: 0
 - open_review: 0
 - open_writeback: 0
 - dry_run_planned: 0
 - write_policy: Audit closure only. Remaining defer_boundary_review rows are closed as deferred_with_backlog and no concept-card fields are written.
-- decision_counts: `{"already_has_up_reviewed": 39, "defer_boundary_review": 25, "reject_taxonomy": 2, "relation_only_terminal": 62, "root_or_anchor_no_up": 20, "weak_or_backlog_terminal": 13}`
-- review_status_counts: `{"deferred_with_backlog": 25, "terminal_non_writeback": 136}`
+- decision_counts: `{"already_has_up_reviewed": 39, "defer_boundary_review": 26, "reject_taxonomy": 2, "relation_only_terminal": 63, "root_or_anchor_no_up": 20, "weak_or_backlog_terminal": 12}`
+- review_status_counts: `{"deferred_with_backlog": 26, "terminal_non_writeback": 136}`
 - parent_whitelist_reviewed: True
 - stable_parent_whitelist_approved: 16
 - proposed_parent_anchors_not_auto_approved: 3
 - missing_proposed_parent_anchors: 2
 - root_anchors_not_parent_whitelist: 5
-- deferred_rows_parent_prechecked: 27
+- deferred_rows_parent_prechecked: 28
 - candidate_adjudication_needed: 2
 - conservative_candidates_generated: 2
-- candidate_generation_suppressed_signals: 25
+- candidate_generation_suppressed_signals: 26
 - adjudication_items: 2
 - adjudicated_candidates: 2
 - adjudication_accept_taxonomy: 0
@@ -56,7 +56,7 @@ Classification stage: `audit_closure`
 - limited_apply_concept_card_writes: 1
 - limited_apply_post_apply_dry_run_planned: 0
 - limited_apply_post_apply_dry_run_ready: 0
-- deferred_with_backlog: 25
+- deferred_with_backlog: 26
 - audit_closure_concept_card_writes: 0
 - completion_definition_met: True
 
@@ -104,7 +104,7 @@ Classification stage: `audit_closure`
 - [[Tool Calling]]
 - [[Trajectory Evaluation]]
 
-### defer_boundary_review (25)
+### defer_boundary_review (26)
 
 - [[A2A]]
 - [[ACP]]
@@ -115,6 +115,7 @@ Classification stage: `audit_closure`
 - [[Entity Resolution]]
 - [[GUI Grounding]]
 - [[KV Cache]]
+- [[L2 Normalization]]
 - [[Least Privilege Tools]]
 - [[MCP]]
 - [[MCP Registry]]
@@ -137,7 +138,7 @@ Classification stage: `audit_closure`
 - [[Approval Gate]]
 - [[ReAct]]
 
-### relation_only_terminal (62)
+### relation_only_terminal (63)
 
 - [[ANP]]
 - [[Agent Control Plane]]
@@ -174,6 +175,7 @@ Classification stage: `audit_closure`
 - [[Patch Validation]]
 - [[Plan-and-Solve Prompting]]
 - [[Progressive Disclosure]]
+- [[Prompt Chaining]]
 - [[Prompt Engineering]]
 - [[Provider-first Agent SDK]]
 - [[Query Planning]]
@@ -225,7 +227,7 @@ Classification stage: `audit_closure`
 - [[Tool Use]]
 - [[Transformer]]
 
-### weak_or_backlog_terminal (13)
+### weak_or_backlog_terminal (12)
 
 - [[AGENTS.md]]
 - [[Agent Payments Protocol]]
@@ -235,7 +237,6 @@ Classification stage: `audit_closure`
 - [[Few-shot Prompting]]
 - [[MCP Elicitation]]
 - [[Managed Agent Harness]]
-- [[Prompt Chaining]]
 - [[Self-Consistency]]
 - [[Structured Outputs]]
 - [[Zero-shot CoT]]
@@ -329,6 +330,7 @@ Parent-whitelist review fixes the candidate-generation boundary. An approved par
 | [[Entity Resolution]] | remain_deferred |  | May support Knowledge Graph or retrieval, but support/use is not strict taxonomy. |
 | [[GUI Grounding]] | remain_deferred |  | Computer-use/grounding capability; no approved grounding or computer-use parent exists. |
 | [[KV Cache]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
+| [[L2 Normalization]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
 | [[Least Privilege Tools]] | remain_deferred |  | Tool safety/policy principle; related to Tool Use but not automatically a kind of Tool Use. |
 | [[MCP]] | remain_deferred |  | Protocol/root ecosystem card; no approved protocol parent exists. |
 | [[MCP Registry]] | remain_deferred |  | Registry/ecosystem component likely belongs near MCP, but MCP is not yet an approved parent. |
@@ -351,10 +353,10 @@ Parent-whitelist review fixes the candidate-generation boundary. An approved par
 
 Conservative candidate generation generates conservative candidates only from Parent-whitelist review approved parents. These candidates are **not** accepted taxonomy and cannot enter writeback until Candidate adjudication.
 
-- deferred_rows_considered: 27
+- deferred_rows_considered: 28
 - approved_parent_count: 16
 - generated_candidates: 2
-- suppressed_signals: 25
+- suppressed_signals: 26
 - candidate_targets: `{"Agent Workflow": 2}`
 - adjudication_items: 2
 - open_writeback: 0
@@ -455,15 +457,15 @@ Apply artifact:
 
 Audit closure closes the whole concept hierarchy placement audit by routing every remaining deferred row to a durable backlog home. It does not add `up`; future changes must reopen a new candidate/adjudication/dry-run/limited-apply cycle.
 
-- total_concepts: 161
-- reviewed_concepts: 161
+- total_concepts: 162
+- reviewed_concepts: 162
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0
 - open_writeback: 0
 - dry_run_planned: 0
-- defer_boundary_review: 25
-- deferred_with_backlog: 25
+- defer_boundary_review: 26
+- deferred_with_backlog: 26
 - concept_card_writes: 0
 - plugin_problems: 0
 - forbidden_up_edges: 0
@@ -486,6 +488,7 @@ Closure artifact:
 | [[Entity Resolution]] | [[Knowledge Graph]] | supports_graph_not_graph | May support Knowledge Graph or retrieval, but support/use is not strict taxonomy. |
 | [[GUI Grounding]] | [[Agent]] | capability_not_broad_agent_parent | Computer-use/grounding capability; no approved grounding or computer-use parent exists. |
 | [[KV Cache]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
+| [[L2 Normalization]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
 | [[Least Privilege Tools]] | [[Tool Use]] | policy_principle_not_tool_behavior | Tool safety/policy principle; related to Tool Use but not automatically a kind of Tool Use. |
 | [[MCP]] | [[Tool Use]] | protocol_not_tool_behavior | Protocol/root ecosystem card; no approved protocol parent exists. |
 | [[MCP Registry]] | [[MCP]] | unapproved_parent | Registry/ecosystem component likely belongs near MCP, but MCP is not yet an approved parent. |
@@ -600,6 +603,7 @@ Closure artifact:
 | [[Indirect Prompt Injection]] | relation_only_terminal |  | 1 | 2 |
 | [[KV Cache]] | defer_boundary_review |  | 0 | 2 |
 | [[Knowledge Graph]] | root_or_anchor_no_up |  | 1 | 1 |
+| [[L2 Normalization]] | defer_boundary_review |  | 0 | 2 |
 | [[LLM]] | root_or_anchor_no_up |  | 0 | 0 |
 | [[LLM Gateway]] | relation_only_terminal |  | 1 | 2 |
 | [[LLM Training Pipeline]] | relation_only_terminal |  | 1 | 2 |
@@ -628,7 +632,7 @@ Closure artifact:
 | [[Positional Encoding]] | defer_boundary_review |  | 0 | 3 |
 | [[Progressive Disclosure]] | relation_only_terminal |  | 1 | 2 |
 | [[Prompt]] | root_or_anchor_no_up |  | 0 | 0 |
-| [[Prompt Chaining]] | weak_or_backlog_terminal |  | 1 | 1 |
+| [[Prompt Chaining]] | relation_only_terminal |  | 1 | 2 |
 | [[Prompt Engineering]] | relation_only_terminal |  | 1 | 2 |
 | [[Prompt Injection]] | defer_boundary_review |  | 0 | 3 |
 | [[Provider-first Agent SDK]] | relation_only_terminal |  | 1 | 2 |

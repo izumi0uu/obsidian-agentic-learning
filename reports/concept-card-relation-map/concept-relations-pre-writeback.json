@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
   "artifact_type": "temporary_concept_relationship_map",
-  "generated_at": "2026-05-23T11:29:40Z",
+  "generated_at": "2026-05-24T07:26:40Z",
   "scope": {
     "concept_dir": "agentic learning/wiki/concepts",
     "temporary": true,
     "write_policy": "Do not write these candidates into concept cards without a separate review task."
   },
   "summary": {
-    "total_concepts": 156,
+    "total_concepts": 162,
     "edge_counts": {
-      "related_link": 937,
-      "body_link": 279,
+      "related_link": 984,
+      "body_link": 281,
       "typed_relation": 57,
       "taxonomy": 39
     },
@@ -39,13 +39,13 @@
       "composed_into": 2,
       "foundational_for": 1
     },
-    "concepts_without_up": 117,
+    "concepts_without_up": 123,
     "core_orphans": 0,
     "weakly_connected_concepts": 1,
     "dangling_core_targets": 31,
-    "candidate_edges": 80,
+    "candidate_edges": 81,
     "taxonomy_candidates": 11,
-    "topic_family_review_signals": 69
+    "topic_family_review_signals": 70
   },
   "nodes": [
     {
@@ -927,6 +927,7 @@
       "evidence_count": 4,
       "up": [],
       "related": [
+        "Structured Outputs",
         "Tool Calling",
         "Type-safe Agent SDK",
         "Workflow Guardrails",
@@ -1289,7 +1290,8 @@
         "Hybrid Search",
         "Multi-Route Retrieval",
         "Reranking",
-        "Cross-Encoder"
+        "Cross-Encoder",
+        "L2 Normalization"
       ]
     },
     {
@@ -1361,7 +1363,8 @@
         "Retriever",
         "Chunking",
         "TF-IDF",
-        "Dense Retrieval"
+        "Dense Retrieval",
+        "L2 Normalization"
       ]
     },
     {
@@ -1465,6 +1468,65 @@
         "Observability",
         "Tool Registry",
         "Tool Poisoning"
+      ]
+    },
+    {
+      "id": "Few-shot CoT",
+      "title": "Few-shot CoT",
+      "file": "agentic learning/wiki/concepts/Few-shot CoT.md",
+      "topics": [
+        "llm",
+        "prompting",
+        "reasoning"
+      ],
+      "status": "seed",
+      "freshness": "stable",
+      "aliases": [
+        "few-shot CoT",
+        "Few-shot Chain-of-Thought",
+        "few-shot chain of thought",
+        "少样本 CoT",
+        "少样本思维链"
+      ],
+      "source_count": 4,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Few-shot Prompting",
+        "Zero-shot CoT",
+        "Self-Consistency",
+        "Tree of Thoughts",
+        "Reasoning Trace",
+        "Plan-and-Solve Prompting"
+      ]
+    },
+    {
+      "id": "Few-shot Prompting",
+      "title": "Few-shot Prompting",
+      "file": "agentic learning/wiki/concepts/Few-shot Prompting.md",
+      "topics": [
+        "llm",
+        "prompting"
+      ],
+      "status": "seed",
+      "freshness": "stable",
+      "aliases": [
+        "few-shot prompting",
+        "Few-shot",
+        "few-shot",
+        "少样本提示",
+        "少样本提示词"
+      ],
+      "source_count": 3,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Prompt Engineering",
+        "Prompt",
+        "Few-shot CoT",
+        "Zero-shot CoT",
+        "KV Cache",
+        "LLM Training Pipeline"
       ]
     },
     {
@@ -1633,6 +1695,7 @@
       "up": [],
       "related": [
         "LLM",
+        "Structured Outputs",
         "Constrained Decoding",
         "RAG",
         "RAG Evaluation",
@@ -1852,6 +1915,37 @@
         "Retriever",
         "Vector Database",
         "Hybrid Search"
+      ]
+    },
+    {
+      "id": "L2 Normalization",
+      "title": "L2 Normalization",
+      "file": "agentic learning/wiki/concepts/L2 Normalization.md",
+      "topics": [
+        "rag",
+        "retrieval",
+        "embedding"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "L2 normalization",
+        "L2 归一化",
+        "L2范数归一化",
+        "L2 范数归一化",
+        "单位向量归一化",
+        "unit vector normalization",
+        "vector normalization"
+      ],
+      "source_count": 4,
+      "evidence_count": 4,
+      "up": [],
+      "related": [
+        "Embedding",
+        "Dense Retrieval",
+        "Vector Database",
+        "Hybrid Search",
+        "Reciprocal Rank Fusion"
       ]
     },
     {
@@ -2887,6 +2981,35 @@
       ]
     },
     {
+      "id": "Prompt Chaining",
+      "title": "Prompt Chaining",
+      "file": "agentic learning/wiki/concepts/Prompt Chaining.md",
+      "topics": [
+        "llm",
+        "prompting",
+        "workflow"
+      ],
+      "status": "seed",
+      "freshness": "stable",
+      "aliases": [
+        "prompt chaining",
+        "Prompt Chain",
+        "prompt chain",
+        "提示链",
+        "提示词链"
+      ],
+      "source_count": 3,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Prompt Engineering",
+        "Agent Workflow",
+        "ReAct",
+        "Workflow Guardrails",
+        "Structured Outputs"
+      ]
+    },
+    {
       "id": "Prompt Engineering",
       "title": "Prompt Engineering",
       "file": "agentic learning/wiki/concepts/Prompt Engineering.md",
@@ -2909,6 +3032,9 @@
       "up": [],
       "related": [
         "Prompt",
+        "Few-shot Prompting",
+        "Few-shot CoT",
+        "Structured Outputs",
         "Context Engineering",
         "Evaluation",
         "LLM Training Pipeline",
@@ -3480,6 +3606,37 @@
       ]
     },
     {
+      "id": "Self-Consistency",
+      "title": "Self-Consistency",
+      "file": "agentic learning/wiki/concepts/Self-Consistency.md",
+      "topics": [
+        "llm",
+        "reasoning",
+        "decoding"
+      ],
+      "status": "seed",
+      "freshness": "stable",
+      "aliases": [
+        "self-consistency",
+        "Self Consistency",
+        "self consistency",
+        "自洽采样",
+        "多路径投票",
+        "多次采样投票"
+      ],
+      "source_count": 4,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Few-shot CoT",
+        "Zero-shot CoT",
+        "Tree of Thoughts",
+        "Reasoning Trace",
+        "Top-K",
+        "Hallucination"
+      ]
+    },
+    {
       "id": "Self-RAG",
       "title": "Self-RAG",
       "file": "agentic learning/wiki/concepts/Self-RAG.md",
@@ -3614,6 +3771,37 @@
       ]
     },
     {
+      "id": "Structured Outputs",
+      "title": "Structured Outputs",
+      "file": "agentic learning/wiki/concepts/Structured Outputs.md",
+      "topics": [
+        "llm",
+        "structured-output",
+        "tools"
+      ],
+      "status": "seed",
+      "freshness": "watch",
+      "aliases": [
+        "structured outputs",
+        "Structured Output",
+        "structured output",
+        "结构化输出",
+        "schema mode",
+        "schema-constrained output"
+      ],
+      "source_count": 4,
+      "evidence_count": 4,
+      "up": [],
+      "related": [
+        "Constrained Decoding",
+        "Tool Calling",
+        "Type-safe Agent SDK",
+        "Workflow Guardrails",
+        "Hallucination",
+        "Prompt Engineering"
+      ]
+    },
+    {
       "id": "TF-IDF",
       "title": "TF-IDF",
       "file": "agentic learning/wiki/concepts/TF-IDF.md",
@@ -3740,6 +3928,7 @@
         "Tool Use",
         "Tool Registry",
         "Tool Permissioning",
+        "Structured Outputs",
         "Constrained Decoding",
         "Observation",
         "MCP"
@@ -3986,6 +4175,8 @@
       "up": [],
       "related": [
         "Zero-shot CoT",
+        "Few-shot CoT",
+        "Self-Consistency",
         "Plan-and-Solve Prompting",
         "Reasoning Trace",
         "Planning",
@@ -4110,6 +4301,9 @@
       "up": [],
       "related": [
         "Plan-and-Solve Prompting",
+        "Few-shot CoT",
+        "Self-Consistency",
+        "Tree of Thoughts",
         "LLM Training Pipeline",
         "Reasoning Trace",
         "ReAct",
@@ -6992,6 +7186,16 @@
     },
     {
       "source": "Constrained Decoding",
+      "target": "Structured Outputs",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Constrained Decoding",
       "target": "Token",
       "kind": "related_link",
       "relation_type": "related",
@@ -8192,6 +8396,16 @@
     },
     {
       "source": "Dense Retrieval",
+      "target": "L2 Normalization",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Dense Retrieval",
       "target": "Multi-Route Retrieval",
       "kind": "related_link",
       "relation_type": "related",
@@ -8373,6 +8587,16 @@
     {
       "source": "Embedding",
       "target": "Dense Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding",
+      "target": "L2 Normalization",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -8811,6 +9035,136 @@
       "note": ""
     },
     {
+      "source": "Few-shot CoT",
+      "target": "Few-shot Prompting",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot CoT",
+      "target": "Plan-and-Solve Prompting",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot CoT",
+      "target": "Reasoning Trace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot CoT",
+      "target": "Self-Consistency",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot CoT",
+      "target": "Tree of Thoughts",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot CoT",
+      "target": "Zero-shot CoT",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot CoT",
+      "target": "Prompt Chaining",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Few-shot Prompting",
+      "target": "Few-shot CoT",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot Prompting",
+      "target": "KV Cache",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot Prompting",
+      "target": "LLM Training Pipeline",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot Prompting",
+      "target": "Prompt",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot Prompting",
+      "target": "Prompt Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Few-shot Prompting",
+      "target": "Zero-shot CoT",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "Frontend-first AI Toolkit",
       "target": "Agent Framework",
       "kind": "related_link",
@@ -9243,6 +9597,16 @@
     {
       "source": "Hallucination",
       "target": "RAG Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Hallucination",
+      "target": "Structured Outputs",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -9928,6 +10292,56 @@
       "confidence": "observed",
       "status": "internal",
       "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "L2 Normalization",
+      "target": "Dense Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "L2 Normalization",
+      "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "L2 Normalization",
+      "target": "Hybrid Search",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "L2 Normalization",
+      "target": "Reciprocal Rank Fusion",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "L2 Normalization",
+      "target": "Vector Database",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
       "note": ""
     },
     {
@@ -13231,6 +13645,66 @@
       "note": ""
     },
     {
+      "source": "Prompt Chaining",
+      "target": "Agent Workflow",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Chaining",
+      "target": "Prompt Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Chaining",
+      "target": "ReAct",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Chaining",
+      "target": "Structured Outputs",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Chaining",
+      "target": "Workflow Guardrails",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Chaining",
+      "target": "Tree of Thoughts",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "Prompt Engineering",
       "target": "Context Engineering",
       "kind": "related_link",
@@ -13243,6 +13717,26 @@
     {
       "source": "Prompt Engineering",
       "target": "Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Few-shot CoT",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Few-shot Prompting",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -13283,6 +13777,16 @@
     {
       "source": "Prompt Engineering",
       "target": "RAG",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Prompt Engineering",
+      "target": "Structured Outputs",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -15231,6 +15735,66 @@
       "note": ""
     },
     {
+      "source": "Self-Consistency",
+      "target": "Few-shot CoT",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Self-Consistency",
+      "target": "Hallucination",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Self-Consistency",
+      "target": "Reasoning Trace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Self-Consistency",
+      "target": "Top-K",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Self-Consistency",
+      "target": "Tree of Thoughts",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Self-Consistency",
+      "target": "Zero-shot CoT",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "Self-RAG",
       "target": "RAG",
       "kind": "taxonomy",
@@ -15631,6 +16195,66 @@
       "note": ""
     },
     {
+      "source": "Structured Outputs",
+      "target": "Constrained Decoding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Structured Outputs",
+      "target": "Hallucination",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Structured Outputs",
+      "target": "Prompt Engineering",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Structured Outputs",
+      "target": "Tool Calling",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Structured Outputs",
+      "target": "Type-safe Agent SDK",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Structured Outputs",
+      "target": "Workflow Guardrails",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "TF-IDF",
       "target": "Sparse Retrieval",
       "kind": "typed_relation",
@@ -16003,6 +16627,16 @@
     {
       "source": "Tool Calling",
       "target": "Observation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tool Calling",
+      "target": "Structured Outputs",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -16742,6 +17376,16 @@
     },
     {
       "source": "Tree of Thoughts",
+      "target": "Few-shot CoT",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
       "target": "Plan-and-Solve Prompting",
       "kind": "related_link",
       "relation_type": "related",
@@ -16783,6 +17427,16 @@
     {
       "source": "Tree of Thoughts",
       "target": "Reasoning Trace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Tree of Thoughts",
+      "target": "Self-Consistency",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -17072,6 +17726,16 @@
     },
     {
       "source": "Zero-shot CoT",
+      "target": "Few-shot CoT",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Zero-shot CoT",
       "target": "LLM Training Pipeline",
       "kind": "related_link",
       "relation_type": "related",
@@ -17113,6 +17777,26 @@
     {
       "source": "Zero-shot CoT",
       "target": "Reasoning Trace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Zero-shot CoT",
+      "target": "Self-Consistency",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Zero-shot CoT",
+      "target": "Tree of Thoughts",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -17750,6 +18434,17 @@
       ]
     },
     {
+      "source": "Prompt Chaining",
+      "target": "Agent Workflow",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: workflow",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
       "source": "Prompt Engineering",
       "target": "Evaluation",
       "candidate_type": "topic_family_review",
@@ -18185,6 +18880,8 @@
       "Entity Resolution",
       "Eval Harness",
       "Evaluation",
+      "Few-shot CoT",
+      "Few-shot Prompting",
       "Frontend-first AI Toolkit",
       "GSSC Pipeline",
       "GUI Grounding",
@@ -18197,6 +18894,7 @@
       "Indirect Prompt Injection",
       "KV Cache",
       "Knowledge Graph",
+      "L2 Normalization",
       "LLM",
       "LLM Gateway",
       "LLM Training Pipeline",
@@ -18225,6 +18923,7 @@
       "Positional Encoding",
       "Progressive Disclosure",
       "Prompt",
+      "Prompt Chaining",
       "Prompt Engineering",
       "Prompt Injection",
       "Provider-first Agent SDK",
@@ -18246,8 +18945,10 @@
       "Role-playing Agent",
       "Sandbox Workspace",
       "Self-Attention",
+      "Self-Consistency",
       "State Graph Runtime",
       "Step-back Prompting",
+      "Structured Outputs",
       "TF-IDF",
       "TTL",
       "Task Success Rate",

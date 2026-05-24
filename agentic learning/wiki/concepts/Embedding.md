@@ -5,7 +5,7 @@ topic:
   - llm
 status: growing
 created: 2026-05-06
-updated: 2026-05-16
+updated: 2026-05-24
 last_checked: 2026-05-10
 freshness: stable
 conflicts: []
@@ -29,6 +29,7 @@ related:
   - "[[Chunking]]"
   - "[[TF-IDF]]"
   - "[[Dense Retrieval]]"
+  - "[[L2 Normalization]]"
 ---
 
 # Embedding
@@ -79,6 +80,8 @@ Embedding 不是理解本身，也不是事实验证。
 
 和 [[Vector Database]] 的边界：embedding 是表示；vector database 是存储和搜索这些表示的系统。
 
+和 [[L2 Normalization]] 的边界：embedding 生成语义向量；L2 normalization 只把已有向量缩放到单位长度，让相似度比较更关注方向。
+
 和 [[Hybrid Search]] 的边界：embedding 检索偏语义；hybrid search 把语义检索和关键词/全文检索结合起来。
 
 和 [[TF-IDF]] 的边界：TF-IDF 是词表维度上的稀疏词项权重，擅长精确词面匹配；embedding 是模型学习出的稠密语义表示，擅长语义相似。
@@ -111,6 +114,7 @@ Embedding 不是理解本身，也不是事实验证。
 - 为什么 embedding 相似不等于答案正确？
 - 什么时候纯向量检索会输给关键词检索？
 - embedding、vector database、retriever 三者分别负责什么？
+- 为什么 L2 normalized embedding 的 dot product 可以按 cosine similarity 理解？
 
 ## 相关链接
 
@@ -119,3 +123,4 @@ Embedding 不是理解本身，也不是事实验证。
 - [[Retriever]]
 - [[Chunking]]
 - [[TF-IDF]]
+- [[L2 Normalization]]

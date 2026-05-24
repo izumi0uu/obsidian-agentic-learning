@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "artifact_type": "temporary_concept_relationship_map",
-  "generated_at": "2026-05-23T12:46:06Z",
+  "generated_at": "2026-05-24T07:27:25Z",
   "scope": {
     "concept_dir": "agentic learning/wiki/concepts",
     "temporary": true,
     "write_policy": "Do not write these candidates into concept cards without a separate review task."
   },
   "summary": {
-    "total_concepts": 161,
+    "total_concepts": 162,
     "edge_counts": {
-      "related_link": 977,
+      "related_link": 984,
       "body_link": 281,
       "typed_relation": 57,
       "taxonomy": 39
@@ -39,7 +39,7 @@
       "composed_into": 2,
       "foundational_for": 1
     },
-    "concepts_without_up": 122,
+    "concepts_without_up": 123,
     "core_orphans": 0,
     "weakly_connected_concepts": 1,
     "dangling_core_targets": 31,
@@ -1290,7 +1290,8 @@
         "Hybrid Search",
         "Multi-Route Retrieval",
         "Reranking",
-        "Cross-Encoder"
+        "Cross-Encoder",
+        "L2 Normalization"
       ]
     },
     {
@@ -1362,7 +1363,8 @@
         "Retriever",
         "Chunking",
         "TF-IDF",
-        "Dense Retrieval"
+        "Dense Retrieval",
+        "L2 Normalization"
       ]
     },
     {
@@ -1913,6 +1915,37 @@
         "Retriever",
         "Vector Database",
         "Hybrid Search"
+      ]
+    },
+    {
+      "id": "L2 Normalization",
+      "title": "L2 Normalization",
+      "file": "agentic learning/wiki/concepts/L2 Normalization.md",
+      "topics": [
+        "rag",
+        "retrieval",
+        "embedding"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "L2 normalization",
+        "L2 归一化",
+        "L2范数归一化",
+        "L2 范数归一化",
+        "单位向量归一化",
+        "unit vector normalization",
+        "vector normalization"
+      ],
+      "source_count": 4,
+      "evidence_count": 4,
+      "up": [],
+      "related": [
+        "Embedding",
+        "Dense Retrieval",
+        "Vector Database",
+        "Hybrid Search",
+        "Reciprocal Rank Fusion"
       ]
     },
     {
@@ -8363,6 +8396,16 @@
     },
     {
       "source": "Dense Retrieval",
+      "target": "L2 Normalization",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Dense Retrieval",
       "target": "Multi-Route Retrieval",
       "kind": "related_link",
       "relation_type": "related",
@@ -8544,6 +8587,16 @@
     {
       "source": "Embedding",
       "target": "Dense Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding",
+      "target": "L2 Normalization",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -10239,6 +10292,56 @@
       "confidence": "observed",
       "status": "internal",
       "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "L2 Normalization",
+      "target": "Dense Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "L2 Normalization",
+      "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "L2 Normalization",
+      "target": "Hybrid Search",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "L2 Normalization",
+      "target": "Reciprocal Rank Fusion",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "L2 Normalization",
+      "target": "Vector Database",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
       "note": ""
     },
     {
@@ -18791,6 +18894,7 @@
       "Indirect Prompt Injection",
       "KV Cache",
       "Knowledge Graph",
+      "L2 Normalization",
       "LLM",
       "LLM Gateway",
       "LLM Training Pipeline",

@@ -1525,3 +1525,17 @@ related:
 - Taxonomy: read [[09 概念层级审计基线]] and did not write direct `up` fields for the new prompting / structured-output cards; their strict parent boundaries remain deferred until a future reviewed taxonomy pass approves stable parents such as `Prompting`, `Generation Control`, or `LLM Application Engineering`.
 - Updated automation surface `scripts/interview_question_concept_aliases.json` for safe interview-question auto-link aliases only.
 - Validation: pending in current run; see final response for fresh gate evidence.
+
+## [2026-05-24] topic-update | Agent Skills on-demand context boundary
+
+- Created [[Agent Skills 按需加载与上下文边界]] as a topic / boundary page connecting [[Agent Skills]], [[Progressive Disclosure]], [[Context Engineering]], [[GSSC Pipeline]], [[Agent Harness]], [[Agent Lifecycle Hook]], [[Trace]], [[Hallucination]], and [[Indirect Prompt Injection]].
+- Boundary decision: this is not a duplicate concept card for Skill. It records the mechanism chain from skill metadata to `SKILL.md`, resources, runtime loading, context assembly, execution evidence, and hallucination governance.
+- Updated navigation: [[Agent 主题]], [[LLM 主题]], and [[04 页面目录]].
+- Boundary: simple topic/navigation update. No concept card, alias map, taxonomy relationship, schema, template, script, or workflow rule changed.
+
+## [2026-05-24] concept-ingest | L2 normalization vector-scale boundary
+
+- Created [[L2 Normalization]] as a small retrieval/embedding concept card for vector length normalization, unit vectors, and the cosine / dot-product boundary.
+- Updated [[Embedding]] and [[Dense Retrieval]] with backlinks so the concept sits inside the existing RAG vector-search learning path.
+- Terminology: `L2 Normalization` is the canonical name; `L2 归一化`, `L2 范数归一化`, `单位向量归一化`, `unit vector normalization`, and `vector normalization` are aliases. Hybrid-search score normalization and L2 regularization are boundary contrasts, not aliases.
+- Taxonomy: read [[09 概念层级审计基线]] and did not write `up` / `relations`; this is a relation-only vector-scale detail adjacent to [[Embedding]], [[Dense Retrieval]], and [[Vector Database]], not a strict retrieval parent/child.

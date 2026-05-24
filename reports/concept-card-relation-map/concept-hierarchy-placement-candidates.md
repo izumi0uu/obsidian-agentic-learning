@@ -1,15 +1,15 @@
 # Concept Hierarchy Placement Candidates — Conservative candidate generation
 
-Generated: `2026-05-23T12:46:06Z`
+Generated: `2026-05-24T07:27:25Z`
 
 > Conservative candidate taxonomy only. These rows are **not** accepted taxonomy and must go through Candidate adjudication before any dry-run/writeback.
 
 ## Summary
 
-- deferred_rows_considered: 27
+- deferred_rows_considered: 28
 - approved_parent_count: 16
 - generated_candidates: 2
-- suppressed_signals: 25
+- suppressed_signals: 26
 - candidate_targets: `{"Agent Workflow": 2}`
 - adjudication_items: 2
 - open_writeback: 0
@@ -65,6 +65,7 @@ Generated: `2026-05-23T12:46:06Z`
 | [[Entity Resolution]] | [[Knowledge Graph]] | supports_graph_not_graph | Entity resolution can support knowledge graphs, but support/use is not strict taxonomy; Knowledge Graph is also not auto-approved. |
 | [[GUI Grounding]] | [[Agent]] | capability_not_broad_agent_parent | GUI grounding is a capability used by computer-use agents, not automatically a kind of Agent. |
 | [[KV Cache]] |  | no_conservative_approved_parent_signal | No conservative signal points to a Parent-whitelist review approved stable parent. |
+| [[L2 Normalization]] |  | no_conservative_approved_parent_signal | No conservative signal points to a Parent-whitelist review approved stable parent. |
 | [[Least Privilege Tools]] | [[Tool Use]] | policy_principle_not_tool_behavior | Least-privilege tooling constrains Tool Use, but the policy principle itself is not automatically a Tool Use subtype. |
 | [[MCP]] | [[Tool Use]] | protocol_not_tool_behavior | MCP standardizes tool/context connection; protocol/support is not a kind of Tool Use. |
 | [[MCP Registry]] | [[MCP]] | unapproved_parent | MCP Registry likely belongs near MCP, but MCP is not an approved parent in Conservative candidate generation. |
