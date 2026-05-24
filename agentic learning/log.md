@@ -1566,3 +1566,10 @@ related:
 - Updated [[Agents Best Practices Repo]] with an Evaluation / Trajectory boundary: evaluation is explicit in the repo; trajectory is covered indirectly through trace events, trace grading, tool-call decisions, and failure replay.
 - Added links to [[Trace]], [[Trajectory Evaluation]], and [[Trajectory Trace 类型对比]] without promoting the repo into a Trajectory primary source.
 - Boundary: simple source note update. No concept card, alias map, taxonomy relationship, schema, template, script, or workflow rule changed.
+
+## [2026-05-24] source-ingest | AI Engineering From Scratch Agent learning route
+
+- Created [[AI Engineering From Scratch]] as the course / project-level source note for the AI Engineering from Scratch website and GitHub repo.
+- Recorded the fast Agent-development route as `Phase 11 -> Phase 13 -> Phase 14 -> 少量 Phase 15/16/17/18 -> Capstone`, with Phase 11 lesson anchors linked to existing local source notes.
+- Updated navigation: [[资料收集索引]], [[Agent 知识地图]], [[LLM 主题]], [[Agent 主题]], and [[04 页面目录]].
+- Boundary: simple source/navigation update. No concept card, alias map, taxonomy relationship, schema, template, script, or workflow rule changed.

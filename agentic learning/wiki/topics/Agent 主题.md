@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-21
+updated: 2026-05-24
 related:
   - "[[Agent]]"
   - "[[ReAct]]"
@@ -20,6 +20,7 @@ related:
   - "[[A2A MCP ANP 对比]]"
   - "[[Agent 安全控制点对比]]"
   - "[[ReAct Plan-and-Solve Reflexion 对比]]"
+  - "[[AI Engineering From Scratch]]"
 ---
 
 # Agent 主题
@@ -65,6 +66,10 @@ SORT created DESC
 - [[oh-my-codex 使用教程]]
 - [[Agents Best Practices Repo]]
 
+## 课程型来源
+
+- [[AI Engineering From Scratch]]：快速 Agent 开发路线源，按 `Phase 11 -> Phase 13 -> Phase 14 -> 少量 Phase 15/16/17/18 -> Capstone` 串起 LLM Engineering、工具协议、Agent loop、memory、eval、observability、production 和 safety。
+
 ## 论文进入的关键概念
 
 - [[ReAct]]
@@ -92,6 +97,7 @@ SORT created DESC
 
 ## 工程工具教程
 
+- [[AI Engineering From Scratch]]
 - [[oh-my-codex 使用教程]]
 - [[Oh My Codex (OMX)]]
 - [[Agents Best Practices Repo]]

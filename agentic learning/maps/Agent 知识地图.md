@@ -44,6 +44,7 @@ related:
   - "[[Workflow Guardrails 与 Prefect 控制点映射]]"
   - "[[Tool 接口层对比]]"
   - "[[A2A MCP ANP 对比]]"
+  - "[[AI Engineering From Scratch]]"
 ---
 
 # Agent 知识地图
@@ -51,6 +52,12 @@ related:
 这张地图负责回答：学习 Agent 时，哪些概念是地基，哪些概念是扩展。
 
 前沿扩展见：[[前沿主源清单]]
+
+## 快速 Agent 开发路线
+
+- [[AI Engineering From Scratch]]：课程型路线源。快速从事 Agent 开发时，优先走 `Phase 11 -> Phase 13 -> Phase 14 -> 少量 Phase 15/16/17/18 -> Capstone`，也就是先补 LLM Engineering，再补 Tools & Protocols 和 Agent Engineering，最后用 production / safety / capstone 压实工程闭环。
+
+小边界：这是一条学习顺序，不是概念层级。Phase 11/13/14 是主干；Phase 15/16/17/18 按项目缺口选择性补，不需要一开始把 multi-agent、safety 或 LLM from scratch 全量展开。
 
 ## 地基
 
