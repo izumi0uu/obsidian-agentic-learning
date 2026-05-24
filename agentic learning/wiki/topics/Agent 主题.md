@@ -63,6 +63,7 @@ SORT created DESC
 - [[ReAct Plan-and-Solve Reflexion 对比]]
 - [[03 前沿追踪]]
 - [[oh-my-codex 使用教程]]
+- [[Agents Best Practices Repo]]
 
 ## 论文进入的关键概念
 
@@ -93,6 +94,7 @@ SORT created DESC
 
 - [[oh-my-codex 使用教程]]
 - [[Oh My Codex (OMX)]]
+- [[Agents Best Practices Repo]]
 - [[Hermes Agent]]
 - [[OpenClaw Repo]]
 - [[LangChain DeepAgents]]

@@ -81,6 +81,7 @@ LLM 地基：
 - [[Prompt Chaining]]：理解顺序 LLM pipeline 如何把中间产物变成可检查节点，但仍不等于完整 Agent。
 - [[Memory]]：Agent 如何保存和使用过去的信息。
 - [[Oh My Codex (OMX)]]：一个具体的 Codex CLI 编排实践，用来观察 Agent Harness 如何落地。
+- [[Agents Best Practices Repo]]：一个 provider-neutral 的 Agent harness 工程实践包，用来观察 MVP blueprint、harness audit、工具权限、上下文压缩、skills/connectors、观测评测和 launch gate 如何进入 checklist。
 - [[Hermes Agent]]：一个具体的 self-improving Agent runtime，用来观察 memory、skills、messaging gateway、MCP、security approval 和 `/goal` 如何组合。
 - [[OpenClaw Repo]]：一个 local-first personal assistant / Agent gateway source，用来观察多渠道入口、workspace memory、skills、sandbox、security audit 和 background tasks 如何组合。
 - [[OMX $ 指令]]：理解 OMX 如何把澄清、计划、执行、研究、评审和 goal 验收做成可触发的 skill/workflow 入口。

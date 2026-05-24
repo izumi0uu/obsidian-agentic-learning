@@ -1554,3 +1554,15 @@ related:
 - Taxonomy writeback: used the guarded relation toolchain to write `up` for [[Approximate Nearest Neighbor Search]] -> [[Vector Search Algorithm]], [[HNSW]] -> [[Approximate Nearest Neighbor Search]], [[Matryoshka Embeddings]] -> [[Embedding Optimization]], [[Embedding Quantization]] -> [[Embedding Optimization]], [[MTEB]] -> [[Embedding Evaluation Benchmark]], and [[Embedding Evaluation Benchmark]] -> [[Benchmark]].
 - Boundary decisions: [[Semantic Search]] remains relation-only with [[Retriever]]; [[Vector Similarity Metrics]] remains deferred because metric parentage needs a future safer `Similarity Metric` / vector-metric parent rather than [[Vector Search Algorithm]].
 - Updated durable control surfaces: taxonomy scripts and reports, [[09 概念层级审计基线]], [[04 页面目录]], [[Agent 知识地图]], [[RAG 主题]], [[Retrieval 组件对比]], and [[常用向量数据库对比]].
+
+## [2026-05-24] source-ingest | Agent harness best-practices repo
+
+- Created [[Agents Best Practices Repo]] for `DenisSergeevitch/agents-best-practices`, a provider-neutral skill / reference repo for Agent harness design, audit, tools/permissions, planning/goals, context compaction, skills/connectors, observability, evals, cost, and launch gates.
+- Updated navigation: [[资料收集索引]], [[Agent 知识地图]], [[Agent 主题]], and [[04 页面目录]].
+- Boundary: simple source/navigation update. No concept card, alias map, taxonomy relationship, schema, template, script, or workflow rule changed.
+
+## [2026-05-24] source-update | Agents Best Practices evaluation trajectory boundary
+
+- Updated [[Agents Best Practices Repo]] with an Evaluation / Trajectory boundary: evaluation is explicit in the repo; trajectory is covered indirectly through trace events, trace grading, tool-call decisions, and failure replay.
+- Added links to [[Trace]], [[Trajectory Evaluation]], and [[Trajectory Trace 类型对比]] without promoting the repo into a Trajectory primary source.
+- Boundary: simple source note update. No concept card, alias map, taxonomy relationship, schema, template, script, or workflow rule changed.
