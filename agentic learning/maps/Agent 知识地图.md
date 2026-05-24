@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-23
+updated: 2026-05-24
 related:
   - "[[Agent]]"
   - "[[前沿主源清单]]"
@@ -17,6 +17,14 @@ related:
   - "[[Structured Outputs]]"
   - "[[MCP Transport]]"
   - "[[RAG]]"
+  - "[[Semantic Search]]"
+  - "[[Vector Similarity Metrics]]"
+  - "[[Vector Search Algorithm]]"
+  - "[[Approximate Nearest Neighbor Search]]"
+  - "[[HNSW]]"
+  - "[[Embedding Optimization]]"
+  - "[[Embedding Evaluation Benchmark]]"
+  - "[[MTEB]]"
   - "[[Memory]]"
   - "[[Context Projection]]"
   - "[[TTL]]"
@@ -106,7 +114,8 @@ LLM 地基：
 - [[RAG]]：如何从外部知识库检索资料再生成回答；完整学习入口见 [[RAG 主题]]。
 - [[RAGFlow]]：理解 RAG / context layer 平台如何把复杂文档解析、chunking、多路召回、重排、引用和 Agent workflow 产品化。
 - [[Document Ingestion]]、[[Chunking]] 和 [[Embedding]]：理解资料进入知识库、被切成证据单元并变成语义表示的入口质量。
-- [[Retriever]]、[[Top-K]]、[[TF-IDF]]、[[Sparse Retrieval]]、[[BM25]]、[[Vector Database]]、[[Multi-Route Retrieval]]、[[Hybrid Search]] 和 [[Reranking]]：理解生产 RAG 的召回数量、稀疏检索家族、关键词打分代表、检索基础设施、多路召回、混合检索和排序质量层；常见实现生态见 [[常用向量数据库对比]]。
+- [[Semantic Search]]、[[Dense Retrieval]]、[[Vector Similarity Metrics]]、[[Vector Search Algorithm]]、[[Approximate Nearest Neighbor Search]]、[[HNSW]]、[[Vector Database]]、[[Embedding Optimization]]、[[Matryoshka Embeddings]]、[[Embedding Quantization]]、[[Embedding Evaluation Benchmark]] 和 [[MTEB]]：理解 embedding 进入生产检索后的语义搜索、相似度度量、向量搜索算法、近似索引、维度 / 精度成本和 benchmark 初筛边界。
+- [[Retriever]]、[[Top-K]]、[[TF-IDF]]、[[Sparse Retrieval]]、[[BM25]]、[[Multi-Route Retrieval]]、[[Hybrid Search]] 和 [[Reranking]]：理解生产 RAG 的召回数量、稀疏检索家族、关键词打分代表、多路召回、混合检索和排序质量层；常见实现生态见 [[常用向量数据库对比]]。
 - [[Knowledge Graph]]、[[GraphRAG]] 和 [[Neo4j]]：理解关系结构、图增强检索和图数据库工程生态如何结合。
 - [[RAG Evaluation]]：理解 RAG 失败要分层评估检索、上下文、引用和最终回答。
 - [[RAG Citation Faithfulness]]、[[RAG Access Control]] 和 [[TTL]]：理解 RAG 可靠性不只看答案，还要看引用支持、权限过滤和资料 freshness 边界。

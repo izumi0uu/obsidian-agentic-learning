@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "taxonomy_placement_candidates",
-  "generated_at": "2026-05-24T07:27:25Z",
+  "generated_at": "2026-05-24T09:21:19Z",
   "input_review": "reports/concept-card-relation-map/concept-hierarchy-placement-review.json",
   "classification_stage": "conservative_candidates",
   "policy": {
@@ -12,6 +12,8 @@
       "Agent Workflow",
       "Benchmark",
       "Chunking",
+      "Embedding Evaluation Benchmark",
+      "Embedding Optimization",
       "Evaluation",
       "Memory",
       "Multi-Route Retrieval",
@@ -22,7 +24,8 @@
       "Reranking",
       "Retriever",
       "Sparse Retrieval",
-      "Tool Use"
+      "Tool Use",
+      "Vector Search Algorithm"
     ],
     "forbidden_inputs": [
       "topic overlap alone",
@@ -36,10 +39,10 @@
     "write_policy": "No writeback in Conservative candidate generation. Candidates feed Candidate adjudication only."
   },
   "summary": {
-    "deferred_rows_considered": 28,
-    "approved_parent_count": 16,
+    "deferred_rows_considered": 29,
+    "approved_parent_count": 19,
     "generated_candidates": 2,
-    "suppressed_signals": 26,
+    "suppressed_signals": 27,
     "candidate_targets": {
       "Agent Workflow": 2
     },
@@ -333,6 +336,15 @@
       "signal_type": "evaluated_object_not_evaluation_method",
       "status": "suppressed_not_candidate",
       "reason": "Trajectory can be evaluated or observed, but the path/object being evaluated is not itself Evaluation.",
+      "writeback_action": "none"
+    },
+    {
+      "source": "Vector Similarity Metrics",
+      "source_path": "agentic learning/wiki/concepts/Vector Similarity Metrics.md",
+      "target": null,
+      "signal_type": "no_conservative_approved_parent_signal",
+      "status": "suppressed_not_candidate",
+      "reason": "No conservative signal points to a Parent-whitelist review approved stable parent.",
       "writeback_action": "none"
     }
   ]

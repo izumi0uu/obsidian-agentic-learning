@@ -1,15 +1,15 @@
 # Concept Hierarchy Placement Candidates — Conservative candidate generation
 
-Generated: `2026-05-24T07:27:25Z`
+Generated: `2026-05-24T09:21:19Z`
 
 > Conservative candidate taxonomy only. These rows are **not** accepted taxonomy and must go through Candidate adjudication before any dry-run/writeback.
 
 ## Summary
 
-- deferred_rows_considered: 28
-- approved_parent_count: 16
+- deferred_rows_considered: 29
+- approved_parent_count: 19
 - generated_candidates: 2
-- suppressed_signals: 26
+- suppressed_signals: 27
 - candidate_targets: `{"Agent Workflow": 2}`
 - adjudication_items: 2
 - open_writeback: 0
@@ -24,6 +24,8 @@ Generated: `2026-05-24T07:27:25Z`
   - Agent Workflow
   - Benchmark
   - Chunking
+  - Embedding Evaluation Benchmark
+  - Embedding Optimization
   - Evaluation
   - Memory
   - Multi-Route Retrieval
@@ -35,6 +37,7 @@ Generated: `2026-05-24T07:27:25Z`
   - Retriever
   - Sparse Retrieval
   - Tool Use
+  - Vector Search Algorithm
 - forbidden_inputs:
   - topic overlap alone
   - body wikilink once
@@ -82,6 +85,7 @@ Generated: `2026-05-24T07:27:25Z`
 | [[Self-Attention]] | [[Transformer]] | component_of_not_kind_of | Self-Attention is a Transformer mechanism/component, not a kind of Transformer. |
 | [[Step-back Prompting]] |  | no_conservative_approved_parent_signal | No conservative signal points to a Parent-whitelist review approved stable parent. |
 | [[Trajectory]] | [[Evaluation]] | evaluated_object_not_evaluation_method | Trajectory can be evaluated or observed, but the path/object being evaluated is not itself Evaluation. |
+| [[Vector Similarity Metrics]] |  | no_conservative_approved_parent_signal | No conservative signal points to a Parent-whitelist review approved stable parent. |
 
 ## Next command
 

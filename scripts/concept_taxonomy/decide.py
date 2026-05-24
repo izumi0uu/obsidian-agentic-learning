@@ -58,6 +58,12 @@ ACCEPT_TAXONOMY: dict[tuple[str, str], str] = {
     ("Tool Calling", "Tool Use"): "Tool Calling is a structured form of tool use.",
     ("Trajectory Evaluation", "Evaluation"): "Trajectory Evaluation is evaluation of an agent's action process rather than only final output.",
     ("BFCL", "Agent Evaluation Benchmark"): "BFCL is a function/tool-calling benchmark and a representative member of the Agent Evaluation Benchmark family.",
+    ("Approximate Nearest Neighbor Search", "Vector Search Algorithm"): "Approximate Nearest Neighbor Search is a vector-search algorithm family that uses approximate indexing to speed up nearest-neighbor lookup.",
+    ("HNSW", "Approximate Nearest Neighbor Search"): "HNSW is a concrete graph-index algorithm in the Approximate Nearest Neighbor Search family.",
+    ("Matryoshka Embeddings", "Embedding Optimization"): "Matryoshka Embeddings are an embedding optimization route for reducing effective vector dimensionality under controlled quality tradeoffs.",
+    ("Embedding Quantization", "Embedding Optimization"): "Embedding Quantization is an embedding optimization route for reducing vector precision, storage, and retrieval cost.",
+    ("MTEB", "Embedding Evaluation Benchmark"): "MTEB is a concrete text embedding benchmark/leaderboard in the Embedding Evaluation Benchmark family.",
+    ("Embedding Evaluation Benchmark", "Benchmark"): "Embedding Evaluation Benchmark is a benchmark subtype focused on text embedding model evaluation tasks and reporting protocols.",
     # Lower-confidence title-only candidates accepted by semantic boundary, but
     # kept outside the default first small writeback batch unless the limit is raised.
     ("Computer Use", "Tool Use"): "Computer Use is a tool-use mode where the agent operates browser/desktop/terminal surfaces.",
@@ -78,6 +84,10 @@ REJECT_TAXONOMY: dict[tuple[str, str], str] = {
     ("OpenTelemetry GenAI", "Observability"): "OpenTelemetry GenAI is a semantic-convention/standardization layer that supports observability; it is not itself an observability capability subtype.",
     ("RAGGraph", "RAG"): "RAGGraph is an unstable ambiguity/reminder card for workflow graph vs GraphRAG confusion; it remains related to RAG but is not a stable RAG subtype.",
     ("State Graph Runtime", "Agent Workflow"): "State Graph Runtime executes and persists workflows; runtime infrastructure is adjacent to Agent Workflow, not a workflow subtype.",
+    ("Semantic Search", "Retriever"): "Semantic Search is a retrieval/search task and experience goal; Retriever is the component that may implement it, so this remains adjacency rather than strict taxonomy.",
+    ("Approximate Nearest Neighbor Search", "Retriever"): "Approximate Nearest Neighbor Search is a vector-index/search algorithm family used inside retrieval systems; it is not itself a Retriever component subtype.",
+    ("Vector Search Algorithm", "Retriever"): "Vector Search Algorithm is an algorithm-family layer used by retrievers/vector indexes; it is not itself the Retriever component.",
+    ("Vector Similarity Metrics", "Vector Search Algorithm"): "Vector Similarity Metrics define how vector closeness is scored; they are not search algorithms.",
 }
 
 DEFER_TAXONOMY: dict[tuple[str, str], str] = {

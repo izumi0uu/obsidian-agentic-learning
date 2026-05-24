@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "taxonomy_placement_audit_closure",
-  "generated_at": "2026-05-24T07:27:25Z",
+  "generated_at": "2026-05-24T09:21:19Z",
   "input_review": "reports/concept-card-relation-map/concept-hierarchy-placement-review.json",
   "classification_stage": "audit_closure",
   "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
@@ -12,15 +12,15 @@
     "write_policy": "No concept cards are edited in Audit closure."
   },
   "summary": {
-    "total_concepts": 162,
-    "reviewed_concepts": 162,
+    "total_concepts": 172,
+    "reviewed_concepts": 172,
     "taxonomy_placement_unreviewed": 0,
     "open_unclassified": 0,
     "open_review_after_closure": 0,
     "open_writeback": 0,
     "dry_run_planned": 0,
-    "defer_boundary_review": 26,
-    "deferred_with_backlog": 26,
+    "defer_boundary_review": 27,
+    "deferred_with_backlog": 27,
     "concept_card_writes": 0,
     "plugin_problems": 0,
     "forbidden_up_edges": 0,
@@ -450,6 +450,22 @@
       "suppressed_target": "Evaluation",
       "suppressed_signal_type": "evaluated_object_not_evaluation_method",
       "suppressed_reason": "Trajectory can be evaluated or observed, but the path/object being evaluated is not itself Evaluation.",
+      "writeback_action": "none",
+      "reopen_triggers": [
+        "A narrower canonical parent concept card is created and added to the approved parent whitelist.",
+        "The concept card's own definition/evidence changes enough to prove a strict kind-of relation.",
+        "A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary."
+      ]
+    },
+    {
+      "concept": "Vector Similarity Metrics",
+      "path": "agentic learning/wiki/concepts/Vector Similarity Metrics.md",
+      "status": "deferred_with_backlog",
+      "backlog_home": "agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念层级审计边界队列",
+      "reason": "No approved strict parent exists in the current concept hierarchy placement pass.",
+      "suppressed_target": null,
+      "suppressed_signal_type": null,
+      "suppressed_reason": null,
       "writeback_action": "none",
       "reopen_triggers": [
         "A narrower canonical parent concept card is created and added to the approved parent whitelist.",

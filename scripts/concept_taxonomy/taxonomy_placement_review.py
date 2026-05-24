@@ -85,6 +85,9 @@ STABLE_PARENT_WHITELIST = [
     "Query Rewrite",
     "Chunking",
     "Multi-Route Retrieval",
+    "Vector Search Algorithm",
+    "Embedding Optimization",
+    "Embedding Evaluation Benchmark",
 ]
 
 PROPOSED_PARENT_ANCHORS = [
@@ -185,6 +188,21 @@ STABLE_PARENT_WHITELIST_REVIEW = {
         "role": "retrieval_orchestration_parent",
         "reason": "Already reviewed under Retriever and describes multi-route candidate recall/fusion; safe parent for retrieval strategies whose defining feature is multiple routes.",
         "guard": "Do not classify BM25/TF-IDF under Multi-Route Retrieval; they can be routes/signals, not the route orchestration strategy.",
+    },
+    "Vector Search Algorithm": {
+        "role": "vector_search_algorithm_parent",
+        "reason": "Explains algorithms that search vectors by similarity; safe parent for exact/approximate vector-search algorithm families and concrete vector index algorithms.",
+        "guard": "Do not classify retriever components, vector databases, or similarity metrics under Vector Search Algorithm unless the child is itself a search algorithm or algorithm family.",
+    },
+    "Embedding Optimization": {
+        "role": "embedding_cost_quality_parent",
+        "reason": "Explains methods that optimize embedding dimensions, precision, storage, indexing, or retrieval cost under quality tradeoffs.",
+        "guard": "Do not classify evaluation benchmarks, vector databases, or generic embedding concepts under Embedding Optimization merely because they relate to embeddings.",
+    },
+    "Embedding Evaluation Benchmark": {
+        "role": "embedding_benchmark_parent",
+        "reason": "Explains benchmark families focused on text embedding model evaluation; safe parent for specific embedding benchmark suites and leaderboards.",
+        "guard": "Do not classify business RAG eval, retrieval metrics, or model-selection heuristics under Embedding Evaluation Benchmark unless the card is itself a benchmark/task protocol.",
     },
 }
 
@@ -2939,7 +2957,7 @@ def write_audit_closure_markdown(closure: dict[str, Any], path: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build/check concept hierarchy placement review artifacts.")
     parser.add_argument("--build", action="store_true", help="Generate concept-hierarchy-placement-review.json/md from the current relation map.")
-    parser.add_argument("--initial-triage", action="store_true", help="Apply the concept hierarchy audit Initial triage while generating the review artifact.")
+    parser.add_argument("--initial-triage", dest="classify_initial_triage", action="store_true", help="Apply the concept hierarchy audit Initial triage while generating the review artifact.")
     parser.add_argument("--review-parent-whitelist", action="store_true", help="Apply the concept hierarchy audit Parent-whitelist review stable-parent whitelist review while generating the review artifact.")
     parser.add_argument("--generate-candidates", action="store_true", help="Apply the concept hierarchy audit Conservative candidate generation conservative taxonomy candidate generation.")
     parser.add_argument("--adjudicate-candidates", action="store_true", help="Apply the concept hierarchy audit Candidate adjudication LLM adjudication over Conservative candidate generation candidates without editing concept cards.")

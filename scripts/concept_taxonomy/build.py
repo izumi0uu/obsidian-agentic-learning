@@ -40,6 +40,10 @@ TOPIC_FAMILY_RULES = [
 ]
 
 TITLE_PARENT_RULES = [
+    (re.compile(r"^Approximate Nearest Neighbor Search$"), "Vector Search Algorithm", "reviewed vector-search algorithm family parent"),
+    (re.compile(r"^HNSW$"), "Approximate Nearest Neighbor Search", "reviewed ANN representative algorithm parent"),
+    (re.compile(r"^(Matryoshka Embeddings|Embedding Quantization)$"), "Embedding Optimization", "reviewed embedding optimization method parent"),
+    (re.compile(r"^MTEB$"), "Embedding Evaluation Benchmark", "reviewed embedding benchmark family parent"),
     (re.compile(r".+\bBenchmark$"), "Benchmark", "title suffix Benchmark"),
     (re.compile(r".+\bEvaluation$"), "Evaluation", "title suffix Evaluation"),
     (re.compile(r".+\bMemory$"), "Memory", "title suffix Memory"),

@@ -1,21 +1,21 @@
 # Temporary Concept Relationship Map
 
-Generated: `2026-05-24T07:26:40Z`
+Generated: `2026-05-24T09:21:10Z`
 
 > 临时文件：用于后续概念层级开发评估。不要把候选边自动写回概念卡；每条 candidate 都需要单独人工/LLM 复核。
 
 ## Summary
 
-- total_concepts: 162
-- edge_counts: {'related_link': 984, 'body_link': 281, 'typed_relation': 57, 'taxonomy': 39}
+- total_concepts: 172
+- edge_counts: {'related_link': 1061, 'body_link': 292, 'typed_relation': 57, 'taxonomy': 45}
 - typed_relation_counts: {'contrasts_with': 8, 'related_to': 15, 'representative_of': 2, 'based_on_intuition': 1, 'paired_with': 2, 'mechanism_for': 1, 'projects_from': 1, 'draws_from': 2, 'risk_for': 1, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 8, 'uses': 4, 'pattern_for': 1, 'specializes': 1, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
-- concepts_without_up: 123
+- concepts_without_up: 127
 - core_orphans: 0
 - weakly_connected_concepts: 1
 - dangling_core_targets: 31
-- candidate_edges: 81
-- taxonomy_candidates: 11
-- topic_family_review_signals: 70
+- candidate_edges: 84
+- taxonomy_candidates: 12
+- topic_family_review_signals: 72
 
 ## Existing taxonomy edges (`up`)
 
@@ -25,6 +25,7 @@ Generated: `2026-05-24T07:26:40Z`
 | [[AgentScope]] | up | [[Agent Framework]] | frontmatter.up |  |
 | [[Agentic RAG]] | up | [[RAG]] | frontmatter.up |  |
 | [[Agentic Retrieval]] | up | [[Retriever]] | frontmatter.up |  |
+| [[Approximate Nearest Neighbor Search]] | up | [[Vector Search Algorithm]] | frontmatter.up |  |
 | [[Audit Log]] | up | [[Observability]] | frontmatter.up |  |
 | [[AutoGen]] | up | [[Agent Framework]] | frontmatter.up |  |
 | [[BFCL]] | up | [[Agent Evaluation Benchmark]] | frontmatter.up |  |
@@ -38,13 +39,18 @@ Generated: `2026-05-24T07:26:40Z`
 | [[Cross-Encoder]] | up | [[Reranking]] | frontmatter.up |  |
 | [[Data-first Agent Framework]] | up | [[Agent Framework]] | frontmatter.up |  |
 | [[Dense Retrieval]] | up | [[Retriever]] | frontmatter.up |  |
+| [[Embedding Evaluation Benchmark]] | up | [[Benchmark]] | frontmatter.up |  |
+| [[Embedding Quantization]] | up | [[Embedding Optimization]] | frontmatter.up |  |
 | [[Episodic Memory]] | up | [[Memory]] | frontmatter.up |  |
 | [[Graph Construction Evaluation]] | up | [[Evaluation]] | frontmatter.up |  |
 | [[GraphRAG]] | up | [[RAG]] | frontmatter.up |  |
+| [[HNSW]] | up | [[Approximate Nearest Neighbor Search]] | frontmatter.up |  |
 | [[Hybrid Search]] | up | [[Retriever]] | frontmatter.up |  |
 | [[LangChain DeepAgents]] | up | [[Agent Framework]] | frontmatter.up |  |
 | [[LangGraph]] | up | [[Agent Framework]] | frontmatter.up |  |
 | [[Long-term Memory]] | up | [[Memory]] | frontmatter.up |  |
+| [[MTEB]] | up | [[Embedding Evaluation Benchmark]] | frontmatter.up |  |
+| [[Matryoshka Embeddings]] | up | [[Embedding Optimization]] | frontmatter.up |  |
 | [[Memory Reflection]] | up | [[Memory]] | frontmatter.up |  |
 | [[Microsoft Agent Framework]] | up | [[Agent Framework]] | frontmatter.up |  |
 | [[Multi-Query Retrieval]] | up | [[Query Rewrite]] | frontmatter.up |  |
@@ -133,6 +139,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 |---|---|---|---|---|---|
 | [[OpenTelemetry GenAI]] | [[Observability]] | taxonomy_candidate | medium | frontmatter.related | trace/observability title family |
 | [[RAGGraph]] | [[RAG]] | taxonomy_candidate | medium | frontmatter.related, relations:related_to | RAG method/title family |
+| [[Semantic Search]] | [[Retriever]] | taxonomy_candidate | medium | frontmatter.related | retrieval/search title family |
 | [[State Graph Runtime]] | [[Agent Workflow]] | taxonomy_candidate | medium | frontmatter.related | workflow/runtime title family |
 | [[Top-K]] | [[Retriever]] | taxonomy_candidate | medium | frontmatter.related | retrieval/search title family |
 | [[Agent Control Plane]] | [[Observability]] | topic_family_review | low | frontmatter.related | topic family: observability |
@@ -194,6 +201,8 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[Reranking]] | [[Retriever]] | topic_family_review | low | frontmatter.related | topic family: retrieval/search |
 | [[Retriever]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
 | [[Role-playing Agent]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | topic family: framework |
+| [[Semantic Search]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
+| [[Semantic Search]] | [[Retriever]] | topic_family_review | low | frontmatter.related | topic family: retrieval/search |
 | [[State Graph Runtime]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | topic family: workflow |
 | [[TF-IDF]] | [[RAG]] | topic_family_review | low | body wikilink | topic family: rag |
 | [[TF-IDF]] | [[Retriever]] | topic_family_review | low | frontmatter.related | topic family: retrieval/search |
@@ -247,6 +256,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Document Ingestion]]
 - [[Durable Execution]]
 - [[Embedding]]
+- [[Embedding Optimization]]
 - [[Entity Resolution]]
 - [[Eval Harness]]
 - [[Evaluation]]
@@ -316,6 +326,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Sandbox Workspace]]
 - [[Self-Attention]]
 - [[Self-Consistency]]
+- [[Semantic Search]]
 - [[State Graph Runtime]]
 - [[Step-back Prompting]]
 - [[Structured Outputs]]
@@ -334,6 +345,8 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Tree of Thoughts]]
 - [[Type-safe Agent SDK]]
 - [[Vector Database]]
+- [[Vector Search Algorithm]]
+- [[Vector Similarity Metrics]]
 - [[Win Rate]]
 - [[Workflow Guardrails]]
 - [[Zero-shot CoT]]

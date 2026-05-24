@@ -1539,3 +1539,18 @@ related:
 - Updated [[Embedding]] and [[Dense Retrieval]] with backlinks so the concept sits inside the existing RAG vector-search learning path.
 - Terminology: `L2 Normalization` is the canonical name; `L2 归一化`, `L2 范数归一化`, `单位向量归一化`, `unit vector normalization`, and `vector normalization` are aliases. Hybrid-search score normalization and L2 regularization are boundary contrasts, not aliases.
 - Taxonomy: read [[09 概念层级审计基线]] and did not write `up` / `relations`; this is a relation-only vector-scale detail adjacent to [[Embedding]], [[Dense Retrieval]], and [[Vector Database]], not a strict retrieval parent/child.
+
+## [2026-05-24] concept-ingest | embedding retrieval production boundary
+
+- Created source note [[AI Engineering From Scratch - Embeddings]] for the embeddings / vector representations lesson.
+- Created concept cards [[Semantic Search]], [[Vector Similarity Metrics]], [[Approximate Nearest Neighbor Search]], [[HNSW]], [[Matryoshka Embeddings]], [[Embedding Quantization]], and [[MTEB]].
+- Updated [[Embedding]], [[L2 Normalization]], [[Dense Retrieval]], [[Vector Database]], [[RAG Evaluation]], [[RAG 主题]], [[Retrieval 组件对比]], [[常用向量数据库对比]], [[Agent 知识地图]], [[资料收集索引]], and [[04 页面目录]] so the new concepts are reachable from the retrieval learning path.
+- Boundary decisions: stable mechanism facts were recorded; volatile model rankings, prices, provider-specific dimensions, API defaults, and vendor performance claims were not written as durable facts.
+- Taxonomy: no direct `up` writeback for the new cards in this batch. Refreshed the concept taxonomy reports / [[09 概念层级审计基线]], and recorded guarded non-taxonomy decisions for [[Semantic Search]] -> [[Retriever]] and [[Approximate Nearest Neighbor Search]] -> [[Retriever]] in the taxonomy decision toolchain.
+
+## [2026-05-24] taxonomy-update | embedding vector-search parent layer
+
+- Created parent concept cards [[Vector Search Algorithm]], [[Embedding Optimization]], and [[Embedding Evaluation Benchmark]] to avoid forcing embedding/vector-search details under unsafe broad parents.
+- Taxonomy writeback: used the guarded relation toolchain to write `up` for [[Approximate Nearest Neighbor Search]] -> [[Vector Search Algorithm]], [[HNSW]] -> [[Approximate Nearest Neighbor Search]], [[Matryoshka Embeddings]] -> [[Embedding Optimization]], [[Embedding Quantization]] -> [[Embedding Optimization]], [[MTEB]] -> [[Embedding Evaluation Benchmark]], and [[Embedding Evaluation Benchmark]] -> [[Benchmark]].
+- Boundary decisions: [[Semantic Search]] remains relation-only with [[Retriever]]; [[Vector Similarity Metrics]] remains deferred because metric parentage needs a future safer `Similarity Metric` / vector-metric parent rather than [[Vector Search Algorithm]].
+- Updated durable control surfaces: taxonomy scripts and reports, [[09 概念层级审计基线]], [[04 页面目录]], [[Agent 知识地图]], [[RAG 主题]], [[Retrieval 组件对比]], and [[常用向量数据库对比]].

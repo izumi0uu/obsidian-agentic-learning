@@ -1,41 +1,41 @@
 # Concept Hierarchy Placement Review — 层级归属待审计概念卡
 
-Generated: `2026-05-24T07:27:25Z`
+Generated: `2026-05-24T09:21:19Z`
 Classification stage: `audit_closure`
 
 > Audit closure: remaining `defer_boundary_review` rows are closed as `deferred_with_backlog`; no concept cards are edited and no fallback parents are invented.
 
 ## Summary
 
-- total_concepts: 162
-- reviewed_concepts: 162
+- total_concepts: 172
+- reviewed_concepts: 172
 - taxonomy_placement_unreviewed: 0
-- concepts_with_up: 39
-- concepts_without_up: 123
-- concepts_with_candidate_basis: 67
-- candidate_basis_rows: 81
-- known_forbidden_candidate_pairs: 2
+- concepts_with_up: 45
+- concepts_without_up: 127
+- concepts_with_candidate_basis: 68
+- candidate_basis_rows: 84
+- known_forbidden_candidate_pairs: 4
 - accepted_taxonomy: 0
-- root_or_anchor_no_up: 20
-- relation_only_terminal: 63
+- root_or_anchor_no_up: 22
+- relation_only_terminal: 64
 - weak_or_backlog_terminal: 12
-- defer_boundary_review: 26
+- defer_boundary_review: 27
 - open_unclassified: 0
 - open_review: 0
 - open_writeback: 0
 - dry_run_planned: 0
 - write_policy: Audit closure only. Remaining defer_boundary_review rows are closed as deferred_with_backlog and no concept-card fields are written.
-- decision_counts: `{"already_has_up_reviewed": 39, "defer_boundary_review": 26, "reject_taxonomy": 2, "relation_only_terminal": 63, "root_or_anchor_no_up": 20, "weak_or_backlog_terminal": 12}`
-- review_status_counts: `{"deferred_with_backlog": 26, "terminal_non_writeback": 136}`
+- decision_counts: `{"already_has_up_reviewed": 45, "defer_boundary_review": 27, "reject_taxonomy": 2, "relation_only_terminal": 64, "root_or_anchor_no_up": 22, "weak_or_backlog_terminal": 12}`
+- review_status_counts: `{"deferred_with_backlog": 27, "terminal_non_writeback": 145}`
 - parent_whitelist_reviewed: True
-- stable_parent_whitelist_approved: 16
+- stable_parent_whitelist_approved: 19
 - proposed_parent_anchors_not_auto_approved: 3
 - missing_proposed_parent_anchors: 2
 - root_anchors_not_parent_whitelist: 5
-- deferred_rows_parent_prechecked: 28
+- deferred_rows_parent_prechecked: 29
 - candidate_adjudication_needed: 2
 - conservative_candidates_generated: 2
-- candidate_generation_suppressed_signals: 26
+- candidate_generation_suppressed_signals: 27
 - adjudication_items: 2
 - adjudicated_candidates: 2
 - adjudication_accept_taxonomy: 0
@@ -56,18 +56,19 @@ Classification stage: `audit_closure`
 - limited_apply_concept_card_writes: 1
 - limited_apply_post_apply_dry_run_planned: 0
 - limited_apply_post_apply_dry_run_ready: 0
-- deferred_with_backlog: 26
+- deferred_with_backlog: 27
 - audit_closure_concept_card_writes: 0
 - completion_definition_met: True
 
 ## Initial triage by decision
 
-### already_has_up_reviewed (39)
+### already_has_up_reviewed (45)
 
 - [[Agent Evaluation Benchmark]]
 - [[AgentScope]]
 - [[Agentic RAG]]
 - [[Agentic Retrieval]]
+- [[Approximate Nearest Neighbor Search]]
 - [[Audit Log]]
 - [[AutoGen]]
 - [[BFCL]]
@@ -81,13 +82,18 @@ Classification stage: `audit_closure`
 - [[Cross-Encoder]]
 - [[Data-first Agent Framework]]
 - [[Dense Retrieval]]
+- [[Embedding Evaluation Benchmark]]
+- [[Embedding Quantization]]
 - [[Episodic Memory]]
 - [[Graph Construction Evaluation]]
 - [[GraphRAG]]
+- [[HNSW]]
 - [[Hybrid Search]]
 - [[LangChain DeepAgents]]
 - [[LangGraph]]
 - [[Long-term Memory]]
+- [[MTEB]]
+- [[Matryoshka Embeddings]]
 - [[Memory Reflection]]
 - [[Microsoft Agent Framework]]
 - [[Multi-Query Retrieval]]
@@ -104,7 +110,7 @@ Classification stage: `audit_closure`
 - [[Tool Calling]]
 - [[Trajectory Evaluation]]
 
-### defer_boundary_review (26)
+### defer_boundary_review (27)
 
 - [[A2A]]
 - [[ACP]]
@@ -132,13 +138,14 @@ Classification stage: `audit_closure`
 - [[Self-Attention]]
 - [[Step-back Prompting]]
 - [[Trajectory]]
+- [[Vector Similarity Metrics]]
 
 ### reject_taxonomy (2)
 
 - [[Approval Gate]]
 - [[ReAct]]
 
-### relation_only_terminal (63)
+### relation_only_terminal (64)
 
 - [[ANP]]
 - [[Agent Control Plane]]
@@ -189,6 +196,7 @@ Classification stage: `audit_closure`
 - [[Replay]]
 - [[Repo Context]]
 - [[Role-playing Agent]]
+- [[Semantic Search]]
 - [[State Graph Runtime]]
 - [[TF-IDF]]
 - [[TTL]]
@@ -204,7 +212,7 @@ Classification stage: `audit_closure`
 - [[Win Rate]]
 - [[Workflow Guardrails]]
 
-### root_or_anchor_no_up (20)
+### root_or_anchor_no_up (22)
 
 - [[Agent]]
 - [[Agent Framework]]
@@ -212,6 +220,7 @@ Classification stage: `audit_closure`
 - [[Benchmark]]
 - [[Chunking]]
 - [[Context Window]]
+- [[Embedding Optimization]]
 - [[Evaluation]]
 - [[Knowledge Graph]]
 - [[LLM]]
@@ -226,6 +235,7 @@ Classification stage: `audit_closure`
 - [[Token]]
 - [[Tool Use]]
 - [[Transformer]]
+- [[Vector Search Algorithm]]
 
 ### weak_or_backlog_terminal (12)
 
@@ -264,6 +274,9 @@ Use **层级归属待审计概念卡** instead of `no-up 卡`. Missing `up` is o
 - [[Query Rewrite]]
 - [[Chunking]]
 - [[Multi-Route Retrieval]]
+- [[Vector Search Algorithm]]
+- [[Embedding Optimization]]
+- [[Embedding Evaluation Benchmark]]
 
 ## Proposed anchors not auto-approved
 
@@ -295,6 +308,9 @@ Parent-whitelist review fixes the candidate-generation boundary. An approved par
 | [[Query Rewrite]] | retrieval_query_transformation_parent |  | Stable parent for techniques that transform the user's query before retrieval. | Do not classify query planning or multi-source orchestration as Query Rewrite unless the core action is rewriting the query expression. |
 | [[Chunking]] | ingestion_segmentation_parent |  | Stable parent for document segmentation strategies that create retrievable/contextual units. | Do not classify retrieval, embedding, or ingestion tooling as Chunking unless the card is specifically a chunking strategy. |
 | [[Multi-Route Retrieval]] | retrieval_orchestration_parent | [[Retriever]] | Already reviewed under Retriever and describes multi-route candidate recall/fusion; safe parent for retrieval strategies whose defining feature is multiple routes. | Do not classify BM25/TF-IDF under Multi-Route Retrieval; they can be routes/signals, not the route orchestration strategy. |
+| [[Vector Search Algorithm]] | vector_search_algorithm_parent |  | Explains algorithms that search vectors by similarity; safe parent for exact/approximate vector-search algorithm families and concrete vector index algorithms. | Do not classify retriever components, vector databases, or similarity metrics under Vector Search Algorithm unless the child is itself a search algorithm or algorithm family. |
+| [[Embedding Optimization]] | embedding_cost_quality_parent |  | Explains methods that optimize embedding dimensions, precision, storage, indexing, or retrieval cost under quality tradeoffs. | Do not classify evaluation benchmarks, vector databases, or generic embedding concepts under Embedding Optimization merely because they relate to embeddings. |
+| [[Embedding Evaluation Benchmark]] | embedding_benchmark_parent | [[Benchmark]] | Explains benchmark families focused on text embedding model evaluation; safe parent for specific embedding benchmark suites and leaderboards. | Do not classify business RAG eval, retrieval metrics, or model-selection heuristics under Embedding Evaluation Benchmark unless the card is itself a benchmark/task protocol. |
 
 ### Proposed anchors not auto-approved
 
@@ -348,15 +364,16 @@ Parent-whitelist review fixes the candidate-generation boundary. An approved par
 | [[Self-Attention]] | likely_relation_only |  | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. |
 | [[Step-back Prompting]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
 | [[Trajectory]] | remain_deferred |  | Trace/evaluation object; may be evaluated or observed, but it is not automatically Evaluation or Observability. |
+| [[Vector Similarity Metrics]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
 
 ## Conservative candidate generation conservative taxonomy candidates
 
 Conservative candidate generation generates conservative candidates only from Parent-whitelist review approved parents. These candidates are **not** accepted taxonomy and cannot enter writeback until Candidate adjudication.
 
-- deferred_rows_considered: 28
-- approved_parent_count: 16
+- deferred_rows_considered: 29
+- approved_parent_count: 19
 - generated_candidates: 2
-- suppressed_signals: 26
+- suppressed_signals: 27
 - candidate_targets: `{"Agent Workflow": 2}`
 - adjudication_items: 2
 - open_writeback: 0
@@ -457,15 +474,15 @@ Apply artifact:
 
 Audit closure closes the whole concept hierarchy placement audit by routing every remaining deferred row to a durable backlog home. It does not add `up`; future changes must reopen a new candidate/adjudication/dry-run/limited-apply cycle.
 
-- total_concepts: 162
-- reviewed_concepts: 162
+- total_concepts: 172
+- reviewed_concepts: 172
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0
 - open_writeback: 0
 - dry_run_planned: 0
-- defer_boundary_review: 26
-- deferred_with_backlog: 26
+- defer_boundary_review: 27
+- deferred_with_backlog: 27
 - concept_card_writes: 0
 - plugin_problems: 0
 - forbidden_up_edges: 0
@@ -505,6 +522,7 @@ Closure artifact:
 | [[Self-Attention]] | [[Transformer]] | component_of_not_kind_of | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. |
 | [[Step-back Prompting]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
 | [[Trajectory]] | [[Evaluation]] | evaluated_object_not_evaluation_method | Trace/evaluation object; may be evaluated or observed, but it is not automatically Evaluation or Observability. |
+| [[Vector Similarity Metrics]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
 
 ## Concepts with existing `up`
 
@@ -514,6 +532,7 @@ Closure artifact:
 | [[AgentScope]] | [[Agent Framework]] | 0 | 0 |
 | [[Agentic RAG]] | [[RAG]] | 0 | 0 |
 | [[Agentic Retrieval]] | [[Retriever]] | 0 | 0 |
+| [[Approximate Nearest Neighbor Search]] | [[Vector Search Algorithm]] | 0 | 0 |
 | [[Audit Log]] | [[Observability]] | 0 | 0 |
 | [[AutoGen]] | [[Agent Framework]] | 0 | 0 |
 | [[BFCL]] | [[Agent Evaluation Benchmark]] | 1 | 0 |
@@ -527,13 +546,18 @@ Closure artifact:
 | [[Cross-Encoder]] | [[Reranking]] | 1 | 0 |
 | [[Data-first Agent Framework]] | [[Agent Framework]] | 0 | 0 |
 | [[Dense Retrieval]] | [[Retriever]] | 4 | 0 |
+| [[Embedding Evaluation Benchmark]] | [[Benchmark]] | 0 | 0 |
+| [[Embedding Quantization]] | [[Embedding Optimization]] | 0 | 0 |
 | [[Episodic Memory]] | [[Memory]] | 0 | 0 |
 | [[Graph Construction Evaluation]] | [[Evaluation]] | 0 | 0 |
 | [[GraphRAG]] | [[RAG]] | 0 | 0 |
+| [[HNSW]] | [[Approximate Nearest Neighbor Search]] | 0 | 0 |
 | [[Hybrid Search]] | [[Retriever]] | 3 | 0 |
 | [[LangChain DeepAgents]] | [[Agent Framework]] | 0 | 0 |
 | [[LangGraph]] | [[Agent Framework]] | 0 | 0 |
 | [[Long-term Memory]] | [[Memory]] | 0 | 0 |
+| [[MTEB]] | [[Embedding Evaluation Benchmark]] | 0 | 0 |
+| [[Matryoshka Embeddings]] | [[Embedding Optimization]] | 0 | 0 |
 | [[Memory Reflection]] | [[Memory]] | 0 | 0 |
 | [[Microsoft Agent Framework]] | [[Agent Framework]] | 0 | 0 |
 | [[Multi-Query Retrieval]] | [[Query Rewrite]] | 2 | 0 |
@@ -586,6 +610,7 @@ Closure artifact:
 | [[Document Ingestion]] | relation_only_terminal |  | 1 | 2 |
 | [[Durable Execution]] | relation_only_terminal | [[Agent Workflow]] | 1 | 1 |
 | [[Embedding]] | relation_only_terminal |  | 1 | 2 |
+| [[Embedding Optimization]] | root_or_anchor_no_up |  | 0 | 0 |
 | [[Entity Resolution]] | defer_boundary_review |  | 0 | 3 |
 | [[Eval Harness]] | relation_only_terminal |  | 1 | 2 |
 | [[Evaluation]] | root_or_anchor_no_up |  | 0 | 0 |
@@ -655,6 +680,7 @@ Closure artifact:
 | [[Sandbox Workspace]] | defer_boundary_review |  | 0 | 3 |
 | [[Self-Attention]] | defer_boundary_review |  | 0 | 3 |
 | [[Self-Consistency]] | weak_or_backlog_terminal |  | 0 | 0 |
+| [[Semantic Search]] | relation_only_terminal |  | 3 | 4 |
 | [[State Graph Runtime]] | relation_only_terminal | [[Agent Workflow]] | 2 | 3 |
 | [[Step-back Prompting]] | defer_boundary_review |  | 0 | 2 |
 | [[Structured Outputs]] | weak_or_backlog_terminal |  | 0 | 0 |
@@ -673,6 +699,8 @@ Closure artifact:
 | [[Tree of Thoughts]] | relation_only_terminal |  | 1 | 2 |
 | [[Type-safe Agent SDK]] | relation_only_terminal |  | 2 | 4 |
 | [[Vector Database]] | relation_only_terminal |  | 1 | 2 |
+| [[Vector Search Algorithm]] | root_or_anchor_no_up |  | 0 | 0 |
+| [[Vector Similarity Metrics]] | defer_boundary_review |  | 0 | 2 |
 | [[Win Rate]] | relation_only_terminal |  | 1 | 2 |
 | [[Workflow Guardrails]] | relation_only_terminal |  | 1 | 2 |
 | [[Zero-shot CoT]] | weak_or_backlog_terminal |  | 0 | 0 |
@@ -745,6 +773,9 @@ Candidate basis is evidence for later adjudication, not an accepted parent.
 | [[Reranking]] | [[Retriever]] | topic_family_review | low | frontmatter.related | no |
 | [[Retriever]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |
 | [[Role-playing Agent]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | no |
+| [[Semantic Search]] | [[Retriever]] | taxonomy_candidate | medium | frontmatter.related | yes |
+| [[Semantic Search]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |
+| [[Semantic Search]] | [[Retriever]] | topic_family_review | low | frontmatter.related | yes |
 | [[State Graph Runtime]] | [[Agent Workflow]] | taxonomy_candidate | medium | frontmatter.related | no |
 | [[State Graph Runtime]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | no |
 | [[TF-IDF]] | [[RAG]] | topic_family_review | low | body wikilink | yes |
@@ -770,6 +801,8 @@ Candidate basis is evidence for later adjudication, not an accepted parent.
 
 | Source | Target | Candidate type |
 |---|---|---|
+| [[Semantic Search]] | [[Retriever]] | taxonomy_candidate |
+| [[Semantic Search]] | [[Retriever]] | topic_family_review |
 | [[TF-IDF]] | [[RAG]] | topic_family_review |
 | [[TF-IDF]] | [[Retriever]] | topic_family_review |
 

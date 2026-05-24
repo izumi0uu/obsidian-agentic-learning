@@ -6,13 +6,24 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-16
+updated: 2026-05-24
 source:
   - "[[Retriever]]"
   - "[[Hybrid Search]]"
   - "[[Reranking]]"
   - "[[Vector Database]]"
   - "[[Embedding]]"
+  - "[[AI Engineering From Scratch - Embeddings]]"
+  - "[[Semantic Search]]"
+  - "[[Vector Similarity Metrics]]"
+  - "[[Vector Search Algorithm]]"
+  - "[[Approximate Nearest Neighbor Search]]"
+  - "[[HNSW]]"
+  - "[[Embedding Optimization]]"
+  - "[[Matryoshka Embeddings]]"
+  - "[[Embedding Quantization]]"
+  - "[[Embedding Evaluation Benchmark]]"
+  - "[[MTEB]]"
   - "[[TF-IDF]]"
   - "[[Sparse Retrieval]]"
   - "[[BM25]]"
@@ -33,6 +44,17 @@ evidence:
   - "[[Reranking#证据锚点]]"
   - "[[Vector Database#证据锚点]]"
   - "[[Embedding#证据锚点]]"
+  - "[[AI Engineering From Scratch - Embeddings#关键事实]]"
+  - "[[Semantic Search#证据锚点]]"
+  - "[[Vector Similarity Metrics#证据锚点]]"
+  - "[[Vector Search Algorithm#证据锚点]]"
+  - "[[Approximate Nearest Neighbor Search#证据锚点]]"
+  - "[[HNSW#证据锚点]]"
+  - "[[Embedding Optimization#证据锚点]]"
+  - "[[Matryoshka Embeddings#证据锚点]]"
+  - "[[Embedding Quantization#证据锚点]]"
+  - "[[Embedding Evaluation Benchmark#证据锚点]]"
+  - "[[MTEB#证据锚点]]"
   - "[[TF-IDF#证据锚点]]"
   - "[[Sparse Retrieval#证据锚点]]"
   - "[[BM25#证据锚点]]"
@@ -51,6 +73,16 @@ related:
   - "[[RAG Evaluation]]"
   - "[[常用向量数据库对比]]"
   - "[[TF-IDF]]"
+  - "[[Semantic Search]]"
+  - "[[Vector Similarity Metrics]]"
+  - "[[Vector Search Algorithm]]"
+  - "[[Approximate Nearest Neighbor Search]]"
+  - "[[HNSW]]"
+  - "[[Embedding Optimization]]"
+  - "[[Matryoshka Embeddings]]"
+  - "[[Embedding Quantization]]"
+  - "[[Embedding Evaluation Benchmark]]"
+  - "[[MTEB]]"
   - "[[Sparse Retrieval]]"
   - "[[BM25]]"
   - "[[Multi-Route Retrieval]]"
@@ -65,9 +97,9 @@ related:
 
 ## 一句话总览
 
-这页回答：Retrieval 链路里的 Document Ingestion、Chunking/Parent-Child Chunking、Embedding/Dense Retrieval、TF-IDF、Sparse Retrieval、BM25、Vector Database、Retriever、Multi-Route Retrieval、Hybrid Search、Reranking 分别负责什么。
+这页回答：Retrieval 链路里的 Document Ingestion、Chunking/Parent-Child Chunking、Embedding/Semantic Search/Dense Retrieval、Vector Similarity Metrics、Vector Search Algorithm、ANN/HNSW、TF-IDF、Sparse Retrieval、BM25、Vector Database、Retriever、Multi-Route Retrieval、Hybrid Search、Reranking，以及 embedding 选型 / 成本边界中的 Embedding Optimization、Matryoshka Embeddings、Embedding Quantization、Embedding Evaluation Benchmark、MTEB 分别负责什么。
 
-最小边界：[[Document Ingestion]] 决定资料怎样进库；[[Embedding]] 把内容变成语义向量；[[Dense Retrieval]] 用向量相似度召回；[[TF-IDF]] 帮你理解稀疏词项权重；[[Sparse Retrieval]] 是词法/稀疏检索家族；[[BM25]] 是常见关键词检索打分代表；[[Vector Database]] 存和搜向量；[[Retriever]] 从索引里找候选；[[Multi-Route Retrieval]] 组织多条召回路线并融合候选；[[Multi-Query Retrieval]] 扩展 query 视角；[[Reciprocal Rank Fusion]] 融合多路排序；[[Hybrid Search]] 把向量和关键词/全文信号结合；[[Reranking]] 在候选集上重新排序，[[Cross-Encoder]] 是常见精排结构。它们共同服务 [[RAG]]，但没有一个单独等于 RAG 本身。
+最小边界：[[Document Ingestion]] 决定资料怎样进库；[[Embedding]] 把内容变成语义向量；[[Semantic Search]] 是按语义找资料的任务目标；[[Dense Retrieval]] 用向量相似度召回；[[Vector Similarity Metrics]] 定义 cosine / dot product / L2 等比较规则；[[Vector Search Algorithm]] 定义怎样搜索向量；[[Approximate Nearest Neighbor Search]] 和 [[HNSW]] 解决大规模向量搜索速度；[[TF-IDF]] 帮你理解稀疏词项权重；[[Sparse Retrieval]] 是词法/稀疏检索家族；[[BM25]] 是常见关键词检索打分代表；[[Vector Database]] 存和搜向量；[[Retriever]] 从索引里找候选；[[Multi-Route Retrieval]] 组织多条召回路线并融合候选；[[Multi-Query Retrieval]] 扩展 query 视角；[[Reciprocal Rank Fusion]] 融合多路排序；[[Hybrid Search]] 把向量和关键词/全文信号结合；[[Reranking]] 在候选集上重新排序，[[Cross-Encoder]] 是常见精排结构；[[Embedding Optimization]]、[[Matryoshka Embeddings]]、[[Embedding Quantization]]、[[Embedding Evaluation Benchmark]] 和 [[MTEB]] 分别处理 embedding 成本优化、维度截短、低精度压缩和 embedding benchmark 初筛。它们共同服务 [[RAG]]，但没有一个单独等于 RAG 本身。
 
 ## 为什么这组值得对比
 
@@ -88,7 +120,7 @@ raw docs
   -> Document Ingestion
   -> chunk + metadata
   -> Embedding / sparse features ([[TF-IDF]] / [[BM25]])
-  -> Vector Database / search index
+  -> metric + ANN/HNSW / Vector Database / search index
   -> Retriever
   -> Multi-Route Retrieval / Hybrid Search / filters
   -> Reranking
@@ -103,7 +135,17 @@ raw docs
 |---|---|---|---|---|---|
 | [[Document Ingestion]] | 原始资料进入知识库的入口流程 | 离线或增量更新时 | PDF、网页、表格、代码、图片说明、权限信息 | 清洗后的文本、结构、metadata、待切分资料 | [[Document Ingestion#证据锚点]] |
 | [[Embedding]] | 语义表示 | 入库时给 chunk 向量；查询时给 query 向量 | chunk、query、文本/图片对象 | 向量，用于相似度搜索 | [[Embedding#证据锚点]] |
+| [[Semantic Search]] | 语义检索任务目标 | 查询时，通常作为用户可感知的搜索能力 | query、语义表示、索引、过滤条件 | 语义相似候选 | [[Semantic Search#证据锚点]] |
 | [[Dense Retrieval]] | 稠密向量召回路线 | 查询时用 query embedding 搜索近邻 chunk | query embedding、chunk embeddings、向量索引 | 语义相似候选 | [[Dense Retrieval#证据锚点]] |
+| [[Vector Similarity Metrics]] | 向量比较规则 | 索引配置和查询排序时 | query vector、candidate vectors、metric / normalization 假设 | 相似度或距离分数 | [[Vector Similarity Metrics#证据锚点]] |
+| [[Vector Search Algorithm]] | 向量搜索算法层 | 向量索引构建后、在线查询时 | 向量、metric、索引算法、search 参数 | exact 或近似近邻候选 | [[Vector Search Algorithm#证据锚点]] |
+| [[Approximate Nearest Neighbor Search]] | 大规模向量搜索加速方法族 | 向量索引构建后、在线查询时 | 向量、metric、索引结构、search 参数 | 近似 top-k 候选 | [[Approximate Nearest Neighbor Search#证据锚点]] |
+| [[HNSW]] | 常见 ANN 图索引 | 建索引和在线向量搜索时 | embedding vectors、近邻图参数、metric | 通过多层图找到的近似近邻 | [[HNSW#证据锚点]] |
+| [[Embedding Optimization]] | embedding 成本 / 质量折中父层 | 模型选型、建库、索引优化和回归评测时 | 向量维度、精度、索引、成本和质量目标 | 更低成本或更低延迟的检索配置 | [[Embedding Optimization#证据锚点]] |
+| [[Matryoshka Embeddings]] | embedding 维度截短能力 | 模型选型、建库和成本优化时 | 支持截短的 embedding、目标维度 | 更短维度的向量索引 | [[Matryoshka Embeddings#证据锚点]] |
+| [[Embedding Quantization]] | embedding 向量低精度压缩 | 建索引、第一阶段召回或存储优化时 | full-precision vectors、量化策略 | 低精度 / 二值化向量候选 | [[Embedding Quantization#证据锚点]] |
+| [[Embedding Evaluation Benchmark]] | embedding benchmark 家族 | 模型初筛和对照时 | 候选 embedding 模型、固定任务协议 | 可比较的 embedding 评测信号 | [[Embedding Evaluation Benchmark#证据锚点]] |
+| [[MTEB]] | embedding 模型通用 benchmark | 模型初筛和对照时 | 候选 embedding 模型、benchmark 任务 | 通用任务分数 / 排行参考 | [[MTEB#证据锚点]] |
 | [[TF-IDF]] | 稀疏词项权重表示 | 入库/索引时建立词表和权重；查询时按词面匹配打分 | 文档、query、词表、语料统计 | sparse vector / TF-IDF feature matrix | [[TF-IDF#证据锚点]] |
 | [[Sparse Retrieval]] | 稀疏/词法检索家族 | 建倒排或稀疏索引；查询时按词项命中召回 | query 词项、文档词项、索引、分词规则 | 精确词面匹配候选 | [[Sparse Retrieval#证据锚点]] |
 | [[BM25]] | 关键词检索打分代表 | 查询时对词面命中的文档或 chunk 排序 | query 词项、文档词频、文档频率、长度信息 | BM25 排序候选 | [[BM25#证据锚点]] |
@@ -130,11 +172,23 @@ raw docs
 
 纯向量相似只是 retriever 的一种策略。现代 retriever 可能包含 query rewrite、metadata filter、全文检索、hybrid search、去重、权限过滤和 reranking。
 
+### Semantic Search vs Dense Retrieval
+
+[[Semantic Search]] 是任务 / 产品能力边界：用户希望按意思找资料，而不只按词面找资料。[[Dense Retrieval]] 是实现 semantic search 的常见向量召回路线。Semantic search 还可能结合 sparse retrieval、metadata filter、query rewrite、reranking 和权限过滤，所以不要把它缩成“只要有 embedding 就行”。
+
+### Vector Similarity Metrics vs ANN / HNSW
+
+[[Vector Similarity Metrics]] 决定“近”的数学含义，例如 cosine、dot product 或 Euclidean / L2 distance。[[Approximate Nearest Neighbor Search]] 决定如何不用全量扫描也能快速找到近似近邻。[[HNSW]] 是 ANN 的一个常见图索引实现。metric 配错会让排序含义错；ANN 参数不合适会影响 recall / latency；这两个问题都不是 LLM 生成阶段能补救的。
+
 ### Vector Database vs RAG
 
 [[Vector Database]] 是 retrieval infrastructure；[[RAG]] 是检索增强生成的架构模式。一个系统可以有向量库但没有可靠 RAG，例如没有 citation、没有 chunk metadata、没有权限同步、没有 rerank 或评估。
 
 反过来，RAG 也不一定只靠向量库；[[Sparse Retrieval]]、[[BM25]] / 全文检索、hybrid search、知识图谱和 SQL 数据库都可能成为外部知识来源。
+
+### MTEB vs RAG Evaluation
+
+[[MTEB]] 评的是 embedding 模型的通用任务表现，适合模型初筛；[[RAG Evaluation]] 评的是自己的系统链路，包括 chunking、retrieval、reranking、context、citation、权限、延迟和成本。MTEB 分数高只能说明“值得进入候选”，不能直接说明“适合这个业务知识库”。
 
 ### Hybrid Search vs Reranking
 
@@ -155,7 +209,7 @@ Offline / ingestion time:
   source -> parse/clean -> metadata/permissions -> chunk -> embedding + sparse index -> vector db / search index
 
 Online / query time:
-  query -> query embedding / rewrite -> vector search + BM25/sparse keyword search + optional multi-query route -> merge/filter -> rerank -> context
+  query -> query embedding / rewrite -> metric + ANN/vector search + BM25/sparse keyword search + optional multi-query route -> merge/filter -> rerank -> context
 
 Failure diagnosis:
   bad source parse? -> ingestion
@@ -178,7 +232,14 @@ Failure diagnosis:
 |---|---|---|
 | [[Document Ingestion]] | 把新书拆封、登记、去重、贴标签、放进馆藏系统 | 整理错了，后面很难找对 |
 | [[Embedding]] | 给每段内容生成“语义坐标” | 坐标相近不等于答案正确 |
+| [[Semantic Search]] | 按意思找资料 | 相似资料不一定可用、可信或有权限 |
 | [[Dense Retrieval]] | 按语义坐标找近邻片段 | 不是整个 retriever，也不保精确词 |
+| [[Vector Similarity Metrics]] | 决定语义坐标怎么比较 | 分数不是事实置信度 |
+| [[Approximate Nearest Neighbor Search]] | 在大资料馆里快速找近似近邻 | 近似搜索牺牲一点精确召回换速度 |
+| [[HNSW]] | 用多层近邻图从粗到细找位置 | 图索引不是数据库或答案质量保证 |
+| [[Matryoshka Embeddings]] | 只保留前几层语义坐标也尽量可用 | 不是所有 embedding 都能随便截短 |
+| [[Embedding Quantization]] | 把坐标压缩成更省空间的表示 | 压缩可能改变排序，需要评估 |
+| [[MTEB]] | 公共模型测评榜 | 榜单不是你的业务评测集 |
 | [[TF-IDF]] | 给每段内容做关键词权重索引 | 词面命中强，不等于理解同义表达 |
 | [[Sparse Retrieval]] | 按词面、编号、代码符号和倒排索引找资料 | 不是语义理解，也不是只等于 TF-IDF |
 | [[BM25]] | 给关键词命中的资料做更稳的相关性排序 | 是 sparse retrieval 的代表，不是整个检索系统 |
@@ -195,9 +256,10 @@ Failure diagnosis:
 
 ### 来源支持
 
-- [[Document Ingestion]]、[[Chunking]]、[[Embedding]]、[[TF-IDF]]、[[Sparse Retrieval]]、[[BM25]] 支持：RAG 质量受资料入口、切分和表示限制；表示层既可能是 dense semantic vector，也可能是 sparse lexical / keyword signal。
+- [[Document Ingestion]]、[[Chunking]]、[[Embedding]]、[[Semantic Search]]、[[Vector Similarity Metrics]]、[[Approximate Nearest Neighbor Search]]、[[HNSW]]、[[TF-IDF]]、[[Sparse Retrieval]]、[[BM25]] 支持：RAG 质量受资料入口、切分、语义表示、相似度度量、索引近似和稀疏词面信号共同限制。
 - [[Retriever]]、[[Multi-Route Retrieval]]、[[Hybrid Search]]、[[Reranking]] 支持：检索质量可以拆成召回路线、融合和排序多个环节。
 - [[Vector Database]] 支持：向量库是基础设施层，不等于完整 RAG。
+- [[Matryoshka Embeddings]]、[[Embedding Quantization]]、[[MTEB]] 支持：embedding 的维度、压缩和公共 benchmark 是成本 / 质量判断的一部分，但不替代业务检索评测。
 - [[Microsoft RAG 官方文档]]、[[Agent 工程基础设施主源]] 和 [[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]] 支持：现代 RAG 需要数据治理、索引、检索、生成和评估的组合。
 
 ### 工程综合 / inference
@@ -213,7 +275,10 @@ Failure diagnosis:
 | 场景 | 更应该看哪个概念 | 为什么 | 风险 |
 |---|---|---|---|
 | PDF 表格、网页结构、权限标签混乱 | [[Document Ingestion]] | 问题在资料进入系统前后的结构保真和治理 | 后续检索会在脏数据上工作 |
-| 语义相近但不同措辞找不到 | [[Embedding]] / [[Retriever]] | 需要检查 query/chunk 表示和召回策略 | 语义相似仍可能找来无关资料 |
+| 语义相近但不同措辞找不到 | [[Semantic Search]] / [[Embedding]] / [[Retriever]] | 需要检查 query/chunk 表示和召回策略 | 语义相似仍可能找来无关资料 |
+| 向量召回结果不稳定或分数难解释 | [[Vector Similarity Metrics]] / [[L2 Normalization]] | 需要检查 metric、normalization、模型空间和索引配置是否一致 | 相似度分数不是事实置信度 |
+| 数据量上来后检索变慢 | [[Approximate Nearest Neighbor Search]] / [[HNSW]] / [[Vector Database]] | 需要用索引和近似搜索平衡 recall / latency | 索引加速不自动提高召回质量 |
+| 向量成本太高 | [[Matryoshka Embeddings]] / [[Embedding Quantization]] / [[MTEB]] | 需要在维度、精度、benchmark 和业务检索集之间做折中 | 降维或量化可能让长尾 query 召回变差 |
 | 专有名词、编号、代码符号漏召回 | [[Sparse Retrieval]] / [[BM25]] / [[Hybrid Search]] | 需要稀疏词项或关键词/全文信号补足向量检索；[[TF-IDF]] 可作为理解词项权重的基础入口 | 分数融合和去重可能引入噪音 |
 | 同一问题存在多种表述、多个来源或多种索引路线 | [[Multi-Route Retrieval]] | 需要同时覆盖 dense、sparse、多 Query、图路线或多源 retriever | 路线过多会增加成本、重复和融合调试难度 |
 | 找到正确文档但排在很后 | [[Reranking]] | 候选已召回，但需要精排进入上下文预算 | 初召回缺证据时 rerank 无能为力 |
@@ -230,7 +295,7 @@ Failure diagnosis:
 
 ## 证据锚点
 
-- Concept anchors: [[Document Ingestion#证据锚点]], [[Embedding#证据锚点]], [[Dense Retrieval#证据锚点]], [[TF-IDF#证据锚点]], [[Sparse Retrieval#证据锚点]], [[BM25#证据锚点]], [[Vector Database#证据锚点]], [[Retriever#证据锚点]], [[Multi-Route Retrieval#证据锚点]], [[Multi-Query Retrieval#证据锚点]], [[Reciprocal Rank Fusion#证据锚点]], [[Hybrid Search#证据锚点]], [[Reranking#证据锚点]], [[Cross-Encoder#证据锚点]], [[RAG#证据锚点]]
+- Concept anchors: [[Document Ingestion#证据锚点]], [[Embedding#证据锚点]], [[Semantic Search#证据锚点]], [[Dense Retrieval#证据锚点]], [[Vector Similarity Metrics#证据锚点]], [[Approximate Nearest Neighbor Search#证据锚点]], [[HNSW#证据锚点]], [[Matryoshka Embeddings#证据锚点]], [[Embedding Quantization#证据锚点]], [[MTEB#证据锚点]], [[TF-IDF#证据锚点]], [[Sparse Retrieval#证据锚点]], [[BM25#证据锚点]], [[Vector Database#证据锚点]], [[Retriever#证据锚点]], [[Multi-Route Retrieval#证据锚点]], [[Multi-Query Retrieval#证据锚点]], [[Reciprocal Rank Fusion#证据锚点]], [[Hybrid Search#证据锚点]], [[Reranking#证据锚点]], [[Cross-Encoder#证据锚点]], [[RAG#证据锚点]]
 - Topic anchor: [[RAG 类型对比#最容易混淆的边界]] / [[RAG 类型对比#证据锚点]]
 - Source examples: [[Agent 工程基础设施主源]], [[Microsoft RAG 官方文档]], [[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]]
 - Evidence type: concept-card synthesis + existing comparison topic + docs/paper/source-note evidence + engineering synthesis + learning analogy.
@@ -244,7 +309,9 @@ Failure diagnosis:
 3. [[Multi-Route Retrieval]] 和 [[Hybrid Search]] 的最小区别是什么？
 4. 如果正确答案所在 PDF 表格被解析错，你会先检查哪个组件？为什么？
 5. [[Embedding]] 和 [[Retriever]] 的边界是什么？
-6. 初召回没有找到正确 chunk 时，为什么 [[Reranking]] 救不了？
+6. [[Vector Similarity Metrics]] 和 [[Approximate Nearest Neighbor Search]] 的边界是什么？
+7. 为什么 [[MTEB]] 不能替代自己的 retrieval evaluation？
+8. 初召回没有找到正确 chunk 时，为什么 [[Reranking]] 救不了？
 
 ## 相关链接
 
@@ -254,6 +321,13 @@ Failure diagnosis:
 - [[Reranking]]
 - [[Vector Database]]
 - [[Embedding]]
+- [[Semantic Search]]
+- [[Vector Similarity Metrics]]
+- [[Approximate Nearest Neighbor Search]]
+- [[HNSW]]
+- [[Matryoshka Embeddings]]
+- [[Embedding Quantization]]
+- [[MTEB]]
 - [[TF-IDF]]
 - [[Sparse Retrieval]]
 - [[BM25]]

@@ -9,7 +9,7 @@ topic:
   - rag
 status: inbox
 created: 2026-05-07
-updated: 2026-05-17
+updated: 2026-05-24
 url: https://xiaolinnote.com/ai/rag/9_vectordb_practice.html
 source: https://xiaolinnote.com/ai/rag/9_vectordb_practice.html
 last_checked: 2026-05-17
@@ -21,6 +21,9 @@ related:
   - "[[Vector Database]]"
   - "[[Embedding]]"
   - "[[Retriever]]"
+  - "[[Approximate Nearest Neighbor Search]]"
+  - "[[HNSW]]"
+  - "[[Embedding Quantization]]"
 ---
 
 # 9. 讲讲你用的[[Vector Database|向量数据库]]？数据量级是多大？性能如何？遇到过性能瓶颈吗？
@@ -34,6 +37,9 @@ related:
 - [[Vector Database]]
 - [[Embedding]]
 - [[Retriever]]
+- [[Approximate Nearest Neighbor Search]]
+- [[HNSW]]
+- [[Embedding Quantization]]
 
 ## 页面正文
 

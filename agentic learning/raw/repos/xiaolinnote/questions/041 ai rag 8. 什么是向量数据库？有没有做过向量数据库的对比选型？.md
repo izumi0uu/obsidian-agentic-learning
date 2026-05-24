@@ -9,7 +9,7 @@ topic:
   - rag
 status: inbox
 created: 2026-05-07
-updated: 2026-05-17
+updated: 2026-05-24
 url: https://xiaolinnote.com/ai/rag/8_vectordb.html
 source: https://xiaolinnote.com/ai/rag/8_vectordb.html
 last_checked: 2026-05-17
@@ -21,6 +21,9 @@ related:
   - "[[Vector Database]]"
   - "[[Embedding]]"
   - "[[Retriever]]"
+  - "[[Approximate Nearest Neighbor Search]]"
+  - "[[HNSW]]"
+  - "[[Vector Similarity Metrics]]"
 ---
 
 # 8. 什么是[[Vector Database|向量数据库]]？有没有做过向量数据库的对比选型？
@@ -34,6 +37,9 @@ related:
 - [[Vector Database]]
 - [[Embedding]]
 - [[Retriever]]
+- [[Approximate Nearest Neighbor Search]]
+- [[HNSW]]
+- [[Vector Similarity Metrics]]
 
 ## 页面正文
 

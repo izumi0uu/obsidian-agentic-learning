@@ -10,7 +10,7 @@ topic:
   - rag
 status: inbox
 created: 2026-05-09
-updated: 2026-05-15
+updated: 2026-05-24
 url: https://github.com/guoguo-tju/agent_java_offer/blob/12bf4c915cca01f513e040935e1917d3687f8b35/docs/interview_prep/01_AI/03_RAG/01_%E6%A0%B8%E5%BF%83%E9%97%AE%E7%AD%94.md
 source: https://github.com/guoguo-tju/agent_java_offer
 source_path: docs/interview_prep/01_AI/03_RAG/01_核心问答.md
@@ -31,6 +31,8 @@ related:
   - "[[Task Success Rate]]"
   - "[[Retriever]]"
   - "[[Embedding]]"
+  - "[[Vector Similarity Metrics]]"
+  - "[[MTEB]]"
   - "[[RAG]]"
   - "[[RAG Evaluation]]"
   - "[[LLM Training Pipeline]]"
@@ -55,6 +57,8 @@ related:
 - [[Task Success Rate]]
 - [[Retriever]]
 - [[Embedding]]
+- [[Vector Similarity Metrics]]
+- [[MTEB]]
 - [[RAG]]
 - [[RAG Evaluation]]
 - [[LLM Training Pipeline]]

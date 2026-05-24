@@ -156,8 +156,8 @@
     "review_artifact_json": "reports/concept-card-relation-map/concept-hierarchy-placement-review.json",
     "review_artifact_md": "reports/concept-card-relation-map/concept-hierarchy-placement-review.md",
     "classification_stage": "limited_apply",
-    "concepts_with_up": 39,
-    "concepts_without_up": 123,
+    "concepts_with_up": 45,
+    "concepts_without_up": 127,
     "post_apply_dry_run_planned": 0,
     "post_apply_dry_run_ready": 0
   },

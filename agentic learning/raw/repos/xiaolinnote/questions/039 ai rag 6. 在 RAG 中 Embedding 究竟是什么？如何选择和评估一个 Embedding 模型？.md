@@ -9,7 +9,7 @@ topic:
   - rag
 status: inbox
 created: 2026-05-07
-updated: 2026-05-17
+updated: 2026-05-24
 url: https://xiaolinnote.com/ai/rag/6_embedding.html
 source: https://xiaolinnote.com/ai/rag/6_embedding.html
 last_checked: 2026-05-17
@@ -19,8 +19,11 @@ related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[Embedding]]"
+  - "[[Semantic Search]]"
+  - "[[Vector Similarity Metrics]]"
   - "[[Vector Database]]"
   - "[[RAG Evaluation]]"
+  - "[[MTEB]]"
 ---
 
 # 6. 在 RAG 中 [[Embedding]] 究竟是什么？如何选择和评估一个 Embedding 模型？
@@ -32,8 +35,11 @@ related:
 ## 相关知识 wiki
 
 - [[Embedding]]
+- [[Semantic Search]]
+- [[Vector Similarity Metrics]]
 - [[Vector Database]]
 - [[RAG Evaluation]]
+- [[MTEB]]
 
 ## 页面正文
 

@@ -78,6 +78,26 @@ NON_TAXONOMY_BOUNDARIES: dict[tuple[str, str], dict[str, str]] = {
         "safe_relation": "composes_with",
         "rationale": "Hybrid Search composes a dense retrieval side; it is not a Dense Retrieval subtype.",
     },
+    ("Semantic Search", "Retriever"): {
+        "kind": "task_vs_component",
+        "safe_relation": "implemented_by",
+        "rationale": "Semantic Search is a retrieval/search task and experience goal; Retriever is the component that may implement it, so this remains adjacency rather than strict taxonomy.",
+    },
+    ("Approximate Nearest Neighbor Search", "Retriever"): {
+        "kind": "algorithm_family_vs_component",
+        "safe_relation": "implemented_inside",
+        "rationale": "Approximate Nearest Neighbor Search is a vector-index/search algorithm family used inside retrieval systems; it is not itself a Retriever component subtype.",
+    },
+    ("Vector Search Algorithm", "Retriever"): {
+        "kind": "algorithm_family_vs_component",
+        "safe_relation": "implemented_inside",
+        "rationale": "Vector Search Algorithm is an algorithm-family layer used by retrievers/vector indexes; it is not itself the Retriever component.",
+    },
+    ("Vector Similarity Metrics", "Vector Search Algorithm"): {
+        "kind": "metric_vs_algorithm",
+        "safe_relation": "defines_metric_for",
+        "rationale": "Vector Similarity Metrics define how vector closeness is scored; they are not search algorithms.",
+    },
 }
 
 FORBIDDEN_UP_PAIRS = frozenset(NON_TAXONOMY_BOUNDARIES)

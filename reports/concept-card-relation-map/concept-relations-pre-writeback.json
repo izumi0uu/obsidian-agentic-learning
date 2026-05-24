@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "artifact_type": "temporary_concept_relationship_map",
-  "generated_at": "2026-05-24T07:26:40Z",
+  "generated_at": "2026-05-24T09:21:10Z",
   "scope": {
     "concept_dir": "agentic learning/wiki/concepts",
     "temporary": true,
     "write_policy": "Do not write these candidates into concept cards without a separate review task."
   },
   "summary": {
-    "total_concepts": 162,
+    "total_concepts": 172,
     "edge_counts": {
-      "related_link": 984,
-      "body_link": 281,
+      "related_link": 1061,
+      "body_link": 292,
       "typed_relation": 57,
-      "taxonomy": 39
+      "taxonomy": 45
     },
     "typed_relation_counts": {
       "contrasts_with": 8,
@@ -39,13 +39,13 @@
       "composed_into": 2,
       "foundational_for": 1
     },
-    "concepts_without_up": 123,
+    "concepts_without_up": 127,
     "core_orphans": 0,
     "weakly_connected_concepts": 1,
     "dangling_core_targets": 31,
-    "candidate_edges": 81,
-    "taxonomy_candidates": 11,
-    "topic_family_review_signals": 70
+    "candidate_edges": 84,
+    "taxonomy_candidates": 12,
+    "topic_family_review_signals": 72
   },
   "nodes": [
     {
@@ -628,6 +628,43 @@
         "Policy Engine",
         "Computer Use",
         "Tool Calling"
+      ]
+    },
+    {
+      "id": "Approximate Nearest Neighbor Search",
+      "title": "Approximate Nearest Neighbor Search",
+      "file": "agentic learning/wiki/concepts/Approximate Nearest Neighbor Search.md",
+      "topics": [
+        "rag",
+        "retrieval",
+        "vector-search",
+        "infrastructure"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "ANN",
+        "ANN Search",
+        "Approximate Nearest Neighbor",
+        "Approximate Nearest Neighbor Search",
+        "approximate nearest neighbor search",
+        "近似最近邻搜索",
+        "近似最近邻",
+        "ANN 搜索"
+      ],
+      "source_count": 3,
+      "evidence_count": 4,
+      "up": [
+        "Vector Search Algorithm"
+      ],
+      "related": [
+        "Vector Search Algorithm",
+        "Vector Database",
+        "Dense Retrieval",
+        "HNSW",
+        "Top-K",
+        "Vector Similarity Metrics",
+        "Embedding"
       ]
     },
     {
@@ -1276,15 +1313,19 @@
         "vector retrieval",
         "dense vector retrieval"
       ],
-      "source_count": 4,
-      "evidence_count": 4,
+      "source_count": 5,
+      "evidence_count": 6,
       "up": [
         "Retriever"
       ],
       "related": [
         "Retriever",
         "Embedding",
+        "Semantic Search",
+        "Vector Similarity Metrics",
         "Vector Database",
+        "Approximate Nearest Neighbor Search",
+        "HNSW",
         "Sparse Retrieval",
         "BM25",
         "Hybrid Search",
@@ -1354,8 +1395,8 @@
         "向量表示",
         "嵌入模型"
       ],
-      "source_count": 3,
-      "evidence_count": 3,
+      "source_count": 4,
+      "evidence_count": 5,
       "up": [],
       "related": [
         "RAG",
@@ -1363,8 +1404,112 @@
         "Retriever",
         "Chunking",
         "TF-IDF",
+        "Semantic Search",
         "Dense Retrieval",
-        "L2 Normalization"
+        "L2 Normalization",
+        "Vector Similarity Metrics",
+        "Matryoshka Embeddings",
+        "Embedding Quantization",
+        "MTEB"
+      ]
+    },
+    {
+      "id": "Embedding Evaluation Benchmark",
+      "title": "Embedding Evaluation Benchmark",
+      "file": "agentic learning/wiki/concepts/Embedding Evaluation Benchmark.md",
+      "topics": [
+        "rag",
+        "embedding",
+        "evaluation",
+        "benchmark"
+      ],
+      "status": "growing",
+      "freshness": "watch",
+      "aliases": [
+        "embedding benchmark",
+        "text embedding benchmark",
+        "embedding evaluation benchmark",
+        "embedding 评测基准",
+        "文本嵌入评测基准"
+      ],
+      "source_count": 3,
+      "evidence_count": 4,
+      "up": [
+        "Benchmark"
+      ],
+      "related": [
+        "Embedding",
+        "MTEB",
+        "Benchmark",
+        "RAG Evaluation"
+      ]
+    },
+    {
+      "id": "Embedding Optimization",
+      "title": "Embedding Optimization",
+      "file": "agentic learning/wiki/concepts/Embedding Optimization.md",
+      "topics": [
+        "rag",
+        "embedding",
+        "retrieval",
+        "optimization"
+      ],
+      "status": "growing",
+      "freshness": "watch",
+      "aliases": [
+        "embedding optimization",
+        "embedding cost optimization",
+        "embedding retrieval optimization",
+        "embedding 优化",
+        "向量表示优化",
+        "embedding 成本优化"
+      ],
+      "source_count": 3,
+      "evidence_count": 4,
+      "up": [],
+      "related": [
+        "Embedding",
+        "Matryoshka Embeddings",
+        "Embedding Quantization",
+        "Vector Database",
+        "RAG Evaluation"
+      ]
+    },
+    {
+      "id": "Embedding Quantization",
+      "title": "Embedding Quantization",
+      "file": "agentic learning/wiki/concepts/Embedding Quantization.md",
+      "topics": [
+        "rag",
+        "embedding",
+        "retrieval",
+        "optimization"
+      ],
+      "status": "growing",
+      "freshness": "watch",
+      "aliases": [
+        "embedding quantization",
+        "vector quantization for embeddings",
+        "Binary Quantization",
+        "binary quantization",
+        "embedding binary quantization",
+        "向量量化",
+        "embedding 量化",
+        "二值量化"
+      ],
+      "source_count": 1,
+      "evidence_count": 2,
+      "up": [
+        "Embedding Optimization"
+      ],
+      "related": [
+        "Embedding Optimization",
+        "Embedding",
+        "Vector Database",
+        "Approximate Nearest Neighbor Search",
+        "HNSW",
+        "Matryoshka Embeddings",
+        "Vector Similarity Metrics"
       ]
     },
     {
@@ -1679,6 +1824,40 @@
       ]
     },
     {
+      "id": "HNSW",
+      "title": "HNSW",
+      "file": "agentic learning/wiki/concepts/HNSW.md",
+      "topics": [
+        "rag",
+        "retrieval",
+        "vector-search",
+        "infrastructure"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "HNSW",
+        "Hierarchical Navigable Small World",
+        "HNSW index",
+        "HNSW 索引",
+        "分层可导航小世界",
+        "分层可导航小世界图"
+      ],
+      "source_count": 3,
+      "evidence_count": 4,
+      "up": [
+        "Approximate Nearest Neighbor Search"
+      ],
+      "related": [
+        "Approximate Nearest Neighbor Search",
+        "Vector Database",
+        "Dense Retrieval",
+        "Embedding",
+        "Top-K",
+        "Vector Similarity Metrics"
+      ]
+    },
+    {
       "id": "Hallucination",
       "title": "Hallucination",
       "file": "agentic learning/wiki/concepts/Hallucination.md",
@@ -1937,13 +2116,14 @@
         "unit vector normalization",
         "vector normalization"
       ],
-      "source_count": 4,
-      "evidence_count": 4,
+      "source_count": 5,
+      "evidence_count": 5,
       "up": [],
       "related": [
         "Embedding",
         "Dense Retrieval",
         "Vector Database",
+        "Vector Similarity Metrics",
         "Hybrid Search",
         "Reciprocal Rank Fusion"
       ]
@@ -2319,6 +2499,39 @@
       ]
     },
     {
+      "id": "MTEB",
+      "title": "MTEB",
+      "file": "agentic learning/wiki/concepts/MTEB.md",
+      "topics": [
+        "rag",
+        "embedding",
+        "evaluation",
+        "benchmark"
+      ],
+      "status": "growing",
+      "freshness": "watch",
+      "aliases": [
+        "Massive Text Embedding Benchmark",
+        "MTEB benchmark",
+        "MTEB Leaderboard",
+        "文本嵌入基准",
+        "embedding benchmark"
+      ],
+      "source_count": 3,
+      "evidence_count": 4,
+      "up": [
+        "Embedding Evaluation Benchmark"
+      ],
+      "related": [
+        "Embedding Evaluation Benchmark",
+        "Embedding",
+        "RAG Evaluation",
+        "Benchmark",
+        "Dense Retrieval",
+        "Matryoshka Embeddings"
+      ]
+    },
+    {
       "id": "Managed Agent Harness",
       "title": "Managed Agent Harness",
       "file": "agentic learning/wiki/concepts/Managed Agent Harness.md",
@@ -2349,6 +2562,42 @@
         "Trace",
         "Durable Execution",
         "Tool Permissioning"
+      ]
+    },
+    {
+      "id": "Matryoshka Embeddings",
+      "title": "Matryoshka Embeddings",
+      "file": "agentic learning/wiki/concepts/Matryoshka Embeddings.md",
+      "topics": [
+        "rag",
+        "embedding",
+        "retrieval",
+        "optimization"
+      ],
+      "status": "growing",
+      "freshness": "watch",
+      "aliases": [
+        "Matryoshka Embedding",
+        "Matryoshka embeddings",
+        "Matryoshka Representation Learning",
+        "Matryoshka truncation",
+        "可截断 embedding",
+        "可变维度 embedding",
+        "嵌套娃 embedding"
+      ],
+      "source_count": 2,
+      "evidence_count": 3,
+      "up": [
+        "Embedding Optimization"
+      ],
+      "related": [
+        "Embedding Optimization",
+        "Embedding",
+        "Vector Similarity Metrics",
+        "Vector Database",
+        "Embedding Quantization",
+        "MTEB",
+        "RAG Evaluation"
       ]
     },
     {
@@ -3229,8 +3478,8 @@
         "RAG 评估",
         "RAG 测评"
       ],
-      "source_count": 7,
-      "evidence_count": 13,
+      "source_count": 8,
+      "evidence_count": 15,
       "up": [
         "Evaluation"
       ],
@@ -3238,6 +3487,8 @@
         "RAG",
         "Evaluation",
         "Reranking",
+        "Embedding",
+        "MTEB",
         "Retriever",
         "Top-K",
         "Dense Retrieval",
@@ -3681,6 +3932,37 @@
         "Memory",
         "Long-term Memory",
         "Episodic Memory",
+        "RAG"
+      ]
+    },
+    {
+      "id": "Semantic Search",
+      "title": "Semantic Search",
+      "file": "agentic learning/wiki/concepts/Semantic Search.md",
+      "topics": [
+        "rag",
+        "retrieval",
+        "search",
+        "embedding"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "semantic search",
+        "语义搜索",
+        "semantic retrieval",
+        "语义检索"
+      ],
+      "source_count": 3,
+      "evidence_count": 4,
+      "up": [],
+      "related": [
+        "Embedding",
+        "Dense Retrieval",
+        "Sparse Retrieval",
+        "Hybrid Search",
+        "Vector Database",
+        "Retriever",
         "RAG"
       ]
     },
@@ -4221,15 +4503,90 @@
       "status": "growing",
       "freshness": "watch",
       "aliases": [],
-      "source_count": 4,
-      "evidence_count": 3,
+      "source_count": 5,
+      "evidence_count": 4,
       "up": [],
       "related": [
         "RAG",
         "Embedding",
+        "Vector Similarity Metrics",
+        "Approximate Nearest Neighbor Search",
+        "HNSW",
+        "Matryoshka Embeddings",
+        "Embedding Quantization",
         "Retriever",
         "Hybrid Search",
         "常用向量数据库对比"
+      ]
+    },
+    {
+      "id": "Vector Search Algorithm",
+      "title": "Vector Search Algorithm",
+      "file": "agentic learning/wiki/concepts/Vector Search Algorithm.md",
+      "topics": [
+        "rag",
+        "retrieval",
+        "vector-search",
+        "infrastructure"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "vector search algorithms",
+        "vector search method",
+        "vector index algorithm",
+        "向量搜索算法",
+        "向量索引算法"
+      ],
+      "source_count": 3,
+      "evidence_count": 4,
+      "up": [],
+      "related": [
+        "Embedding",
+        "Vector Similarity Metrics",
+        "Approximate Nearest Neighbor Search",
+        "HNSW",
+        "Vector Database"
+      ]
+    },
+    {
+      "id": "Vector Similarity Metrics",
+      "title": "Vector Similarity Metrics",
+      "file": "agentic learning/wiki/concepts/Vector Similarity Metrics.md",
+      "topics": [
+        "rag",
+        "retrieval",
+        "embedding",
+        "math"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "vector similarity metrics",
+        "vector distance metrics",
+        "向量相似度度量",
+        "向量距离度量",
+        "cosine similarity",
+        "余弦相似度",
+        "dot product",
+        "inner product",
+        "点积",
+        "内积",
+        "Euclidean distance",
+        "L2 distance",
+        "欧氏距离",
+        "L2 距离"
+      ],
+      "source_count": 2,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Embedding",
+        "Dense Retrieval",
+        "L2 Normalization",
+        "Vector Database",
+        "Top-K",
+        "Reranking"
       ]
     },
     {
@@ -6305,6 +6662,106 @@
       "note": ""
     },
     {
+      "source": "Approximate Nearest Neighbor Search",
+      "target": "Vector Search Algorithm",
+      "kind": "taxonomy",
+      "relation_type": "up",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.up",
+      "note": ""
+    },
+    {
+      "source": "Approximate Nearest Neighbor Search",
+      "target": "Dense Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Approximate Nearest Neighbor Search",
+      "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Approximate Nearest Neighbor Search",
+      "target": "HNSW",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Approximate Nearest Neighbor Search",
+      "target": "Top-K",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Approximate Nearest Neighbor Search",
+      "target": "Vector Database",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Approximate Nearest Neighbor Search",
+      "target": "Vector Search Algorithm",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Approximate Nearest Neighbor Search",
+      "target": "Vector Similarity Metrics",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Approximate Nearest Neighbor Search",
+      "target": "RAG",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Approximate Nearest Neighbor Search",
+      "target": "Reranking",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "Audit Log",
       "target": "Observability",
       "kind": "taxonomy",
@@ -8356,6 +8813,16 @@
     },
     {
       "source": "Dense Retrieval",
+      "target": "Approximate Nearest Neighbor Search",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Dense Retrieval",
       "target": "BM25",
       "kind": "related_link",
       "relation_type": "related",
@@ -8377,6 +8844,16 @@
     {
       "source": "Dense Retrieval",
       "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Dense Retrieval",
+      "target": "HNSW",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -8436,6 +8913,16 @@
     },
     {
       "source": "Dense Retrieval",
+      "target": "Semantic Search",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Dense Retrieval",
       "target": "Sparse Retrieval",
       "kind": "related_link",
       "relation_type": "related",
@@ -8447,6 +8934,16 @@
     {
       "source": "Dense Retrieval",
       "target": "Vector Database",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Dense Retrieval",
+      "target": "Vector Similarity Metrics",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -8596,7 +9093,37 @@
     },
     {
       "source": "Embedding",
+      "target": "Embedding Quantization",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding",
       "target": "L2 Normalization",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding",
+      "target": "MTEB",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding",
+      "target": "Matryoshka Embeddings",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -8626,6 +9153,16 @@
     },
     {
       "source": "Embedding",
+      "target": "Semantic Search",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding",
       "target": "TF-IDF",
       "kind": "related_link",
       "relation_type": "related",
@@ -8646,6 +9183,16 @@
     },
     {
       "source": "Embedding",
+      "target": "Vector Similarity Metrics",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding",
       "target": "Hybrid Search",
       "kind": "body_link",
       "relation_type": "body_wikilink",
@@ -8656,6 +9203,216 @@
     },
     {
       "source": "Embedding",
+      "target": "Reranking",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Embedding Evaluation Benchmark",
+      "target": "Benchmark",
+      "kind": "taxonomy",
+      "relation_type": "up",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.up",
+      "note": ""
+    },
+    {
+      "source": "Embedding Evaluation Benchmark",
+      "target": "Benchmark",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding Evaluation Benchmark",
+      "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding Evaluation Benchmark",
+      "target": "MTEB",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding Evaluation Benchmark",
+      "target": "RAG Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding Optimization",
+      "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding Optimization",
+      "target": "Embedding Quantization",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding Optimization",
+      "target": "Matryoshka Embeddings",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding Optimization",
+      "target": "RAG Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding Optimization",
+      "target": "Vector Database",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding Optimization",
+      "target": "Vector Search Algorithm",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Embedding Quantization",
+      "target": "Embedding Optimization",
+      "kind": "taxonomy",
+      "relation_type": "up",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.up",
+      "note": ""
+    },
+    {
+      "source": "Embedding Quantization",
+      "target": "Approximate Nearest Neighbor Search",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding Quantization",
+      "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding Quantization",
+      "target": "Embedding Optimization",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding Quantization",
+      "target": "HNSW",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding Quantization",
+      "target": "Matryoshka Embeddings",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding Quantization",
+      "target": "Vector Database",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding Quantization",
+      "target": "Vector Similarity Metrics",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding Quantization",
+      "target": "L2 Normalization",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Embedding Quantization",
       "target": "Reranking",
       "kind": "body_link",
       "relation_type": "body_wikilink",
@@ -9555,6 +10312,86 @@
       "note": ""
     },
     {
+      "source": "HNSW",
+      "target": "Approximate Nearest Neighbor Search",
+      "kind": "taxonomy",
+      "relation_type": "up",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.up",
+      "note": ""
+    },
+    {
+      "source": "HNSW",
+      "target": "Approximate Nearest Neighbor Search",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HNSW",
+      "target": "Dense Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HNSW",
+      "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HNSW",
+      "target": "Top-K",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HNSW",
+      "target": "Vector Database",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HNSW",
+      "target": "Vector Similarity Metrics",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "HNSW",
+      "target": "Reranking",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "Hallucination",
       "target": "Constrained Decoding",
       "kind": "related_link",
@@ -10337,6 +11174,16 @@
     {
       "source": "L2 Normalization",
       "target": "Vector Database",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "L2 Normalization",
+      "target": "Vector Similarity Metrics",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -11545,6 +12392,76 @@
       "note": ""
     },
     {
+      "source": "MTEB",
+      "target": "Embedding Evaluation Benchmark",
+      "kind": "taxonomy",
+      "relation_type": "up",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.up",
+      "note": ""
+    },
+    {
+      "source": "MTEB",
+      "target": "Benchmark",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MTEB",
+      "target": "Dense Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MTEB",
+      "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MTEB",
+      "target": "Embedding Evaluation Benchmark",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MTEB",
+      "target": "Matryoshka Embeddings",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "MTEB",
+      "target": "RAG Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "Managed Agent Harness",
       "target": "Agent Harness",
       "kind": "related_link",
@@ -11622,6 +12539,86 @@
       "confidence": "observed",
       "status": "internal",
       "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Matryoshka Embeddings",
+      "target": "Embedding Optimization",
+      "kind": "taxonomy",
+      "relation_type": "up",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.up",
+      "note": ""
+    },
+    {
+      "source": "Matryoshka Embeddings",
+      "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Matryoshka Embeddings",
+      "target": "Embedding Optimization",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Matryoshka Embeddings",
+      "target": "Embedding Quantization",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Matryoshka Embeddings",
+      "target": "MTEB",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Matryoshka Embeddings",
+      "target": "RAG Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Matryoshka Embeddings",
+      "target": "Vector Database",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Matryoshka Embeddings",
+      "target": "Vector Similarity Metrics",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
       "note": ""
     },
     {
@@ -14486,6 +15483,16 @@
     },
     {
       "source": "RAG Evaluation",
+      "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "RAG Evaluation",
       "target": "Evaluation",
       "kind": "related_link",
       "relation_type": "related",
@@ -14497,6 +15504,16 @@
     {
       "source": "RAG Evaluation",
       "target": "LLM-as-Judge",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "RAG Evaluation",
+      "target": "MTEB",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -15917,6 +16934,106 @@
     {
       "source": "Semantic Memory",
       "target": "Obsidian + LLM Wiki",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Semantic Search",
+      "target": "Dense Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Semantic Search",
+      "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Semantic Search",
+      "target": "Hybrid Search",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Semantic Search",
+      "target": "RAG",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Semantic Search",
+      "target": "Retriever",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Semantic Search",
+      "target": "Sparse Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Semantic Search",
+      "target": "Vector Database",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Semantic Search",
+      "target": "BM25",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Semantic Search",
+      "target": "Reranking",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Semantic Search",
+      "target": "Vector Similarity Metrics",
       "kind": "body_link",
       "relation_type": "body_wikilink",
       "confidence": "observed",
@@ -17526,6 +18643,16 @@
     },
     {
       "source": "Vector Database",
+      "target": "Approximate Nearest Neighbor Search",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Vector Database",
       "target": "Embedding",
       "kind": "related_link",
       "relation_type": "related",
@@ -17536,7 +18663,37 @@
     },
     {
       "source": "Vector Database",
+      "target": "Embedding Quantization",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Vector Database",
+      "target": "HNSW",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Vector Database",
       "target": "Hybrid Search",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Vector Database",
+      "target": "Matryoshka Embeddings",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -17566,6 +18723,16 @@
     },
     {
       "source": "Vector Database",
+      "target": "Vector Similarity Metrics",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Vector Database",
       "target": "常用向量数据库对比",
       "kind": "related_link",
       "relation_type": "related",
@@ -17577,6 +18744,136 @@
     {
       "source": "Vector Database",
       "target": "Chunking",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Vector Search Algorithm",
+      "target": "Approximate Nearest Neighbor Search",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Vector Search Algorithm",
+      "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Vector Search Algorithm",
+      "target": "HNSW",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Vector Search Algorithm",
+      "target": "Vector Database",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Vector Search Algorithm",
+      "target": "Vector Similarity Metrics",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Vector Similarity Metrics",
+      "target": "Dense Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Vector Similarity Metrics",
+      "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Vector Similarity Metrics",
+      "target": "L2 Normalization",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Vector Similarity Metrics",
+      "target": "Reranking",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Vector Similarity Metrics",
+      "target": "Top-K",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Vector Similarity Metrics",
+      "target": "Vector Database",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Vector Similarity Metrics",
+      "target": "Hybrid Search",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Vector Similarity Metrics",
+      "target": "RAG Evaluation",
       "kind": "body_link",
       "relation_type": "body_wikilink",
       "confidence": "observed",
@@ -17967,6 +19264,17 @@
       "support": [
         "frontmatter.related",
         "relations:related_to"
+      ]
+    },
+    {
+      "source": "Semantic Search",
+      "target": "Retriever",
+      "candidate_type": "taxonomy_candidate",
+      "confidence": "medium",
+      "status": "needs_review",
+      "rationale": "retrieval/search title family",
+      "support": [
+        "frontmatter.related"
       ]
     },
     {
@@ -18645,6 +19953,28 @@
       ]
     },
     {
+      "source": "Semantic Search",
+      "target": "RAG",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: rag",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
+      "source": "Semantic Search",
+      "target": "Retriever",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: retrieval/search",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
       "source": "State Graph Runtime",
       "target": "Agent Workflow",
       "candidate_type": "topic_family_review",
@@ -18877,6 +20207,7 @@
       "Document Ingestion",
       "Durable Execution",
       "Embedding",
+      "Embedding Optimization",
       "Entity Resolution",
       "Eval Harness",
       "Evaluation",
@@ -18946,6 +20277,7 @@
       "Sandbox Workspace",
       "Self-Attention",
       "Self-Consistency",
+      "Semantic Search",
       "State Graph Runtime",
       "Step-back Prompting",
       "Structured Outputs",
@@ -18964,6 +20296,8 @@
       "Tree of Thoughts",
       "Type-safe Agent SDK",
       "Vector Database",
+      "Vector Search Algorithm",
+      "Vector Similarity Metrics",
       "Win Rate",
       "Workflow Guardrails",
       "Zero-shot CoT",
@@ -18995,6 +20329,10 @@
         3
       ],
       [
+        "Benchmark",
+        2
+      ],
+      [
         "Tool Use",
         2
       ],
@@ -19007,7 +20345,11 @@
         2
       ],
       [
-        "Benchmark",
+        "Embedding Optimization",
+        2
+      ],
+      [
+        "Vector Search Algorithm",
         1
       ],
       [
@@ -19024,6 +20366,14 @@
       ],
       [
         "Reranking",
+        1
+      ],
+      [
+        "Approximate Nearest Neighbor Search",
+        1
+      ],
+      [
+        "Embedding Evaluation Benchmark",
         1
       ],
       [

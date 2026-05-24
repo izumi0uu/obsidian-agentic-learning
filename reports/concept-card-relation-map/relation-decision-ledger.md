@@ -1,27 +1,27 @@
 # Concept Relation Decision Ledger
 
-Generated: `2026-05-24T07:26:50Z`
+Generated: `2026-05-24T09:21:10Z`
 
 > 逐条判定台账：把临时图候选边分成 accepted taxonomy、rejected taxonomy、adjacency only、duplicate signal 和 deferred。只有 `writeback_action=add_up` 的行可以进入后续写回；`already_present` 表示本轮小批量已落地或卡片已有该 `up`；`topic_family_review` 永远不能直接写入 `up`。
 
 ## Summary
 
-- candidate_edges: 81
-- decision_counts: {'reject_taxonomy': 11, 'adjacency_only': 70}
+- candidate_edges: 84
+- decision_counts: {'reject_taxonomy': 12, 'adjacency_only': 72}
 - writeback_candidates: 0
 - open_writeback_items: 0
 - open_review_items: 0
 - relation_tail_open_items: 0
 - relation_tail_status: closed
-- terminal_non_writeback_decisions: 81
+- terminal_non_writeback_decisions: 84
 - already_applied_or_present_taxonomy: 0
 - remaining_writeback_candidates: 0
 - accepted_taxonomy: 0
-- rejected_taxonomy: 11
+- rejected_taxonomy: 12
 - deferred_taxonomy: 0
-- adjacency_only: 70
+- adjacency_only: 72
 - duplicate_signals: 0
-- non_taxonomy_boundary_guardrails: 2
+- non_taxonomy_boundary_guardrails: 4
 - write_policy: Only decisions with writeback_action=add_up may be applied, and only through dry-run/apply small batches.
 
 ## Tail closure summary
@@ -44,6 +44,7 @@ Generated: `2026-05-24T07:26:50Z`
 |---|---|---|---|---|---|---|
 | [[OpenTelemetry GenAI]] | [[Observability]] | taxonomy_candidate | reject_taxonomy | none `related or relations, not up` | high | OpenTelemetry GenAI is a semantic-convention/standardization layer that supports observability; it is not itself an observability capability subtype. |
 | [[RAGGraph]] | [[RAG]] | taxonomy_candidate | reject_taxonomy | none `related or relations, not up` | high | RAGGraph is an unstable ambiguity/reminder card for workflow graph vs GraphRAG confusion; it remains related to RAG but is not a stable RAG subtype. |
+| [[Semantic Search]] | [[Retriever]] | taxonomy_candidate | reject_taxonomy | none `relations or related, never up` | high | Semantic Search is a retrieval/search task and experience goal; Retriever is the component that may implement it, so this remains adjacency rather than strict taxonomy. |
 | [[State Graph Runtime]] | [[Agent Workflow]] | taxonomy_candidate | reject_taxonomy | none `related or relations, not up` | high | State Graph Runtime executes and persists workflows; runtime infrastructure is adjacent to Agent Workflow, not a workflow subtype. |
 | [[Top-K]] | [[Retriever]] | taxonomy_candidate | reject_taxonomy | none `related or relations, not up` | high | Top-K is a ranking/selection rule used by retrievers and decoders; it is not itself a retriever subtype. |
 | [[Durable Execution]] | [[Agent Workflow]] | taxonomy_candidate | reject_taxonomy | none `related or relations, not up` | high | Durable Execution is a runtime capability used by workflows, not a workflow subtype. |
@@ -113,6 +114,8 @@ Generated: `2026-05-24T07:26:50Z`
 | [[Reranking]] | [[Retriever]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[Retriever]] | [[RAG]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[Role-playing Agent]] | [[Agent Framework]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
+| [[Semantic Search]] | [[RAG]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
+| [[Semantic Search]] | [[Retriever]] | topic_family_review | adjacency_only | none `relations or related, never up` | high | Semantic Search is a retrieval/search task and experience goal; Retriever is the component that may implement it, so this remains adjacency rather than strict taxonomy. |
 | [[State Graph Runtime]] | [[Agent Workflow]] | topic_family_review | adjacency_only | none `related/body context only` | medium | Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge. |
 | [[TF-IDF]] | [[RAG]] | topic_family_review | adjacency_only | none `relations or related, never up` | high | TF-IDF is a sparse lexical weighting/representation used in retrieval contexts; it is not a RAG subtype. |
 | [[TF-IDF]] | [[Retriever]] | topic_family_review | adjacency_only | none `relations or related, never up` | high | TF-IDF can supply sparse lexical scoring intuition, but it is not a retriever component subtype. |
@@ -133,6 +136,8 @@ Generated: `2026-05-24T07:26:50Z`
 
 | Source | Target | Boundary kind | Safe relation | Decision | Rationale |
 |---|---|---|---|---|---|
+| [[Semantic Search]] | [[Retriever]] | task_vs_component | implemented_by | reject_taxonomy | Semantic Search is a retrieval/search task and experience goal; Retriever is the component that may implement it, so this remains adjacency rather than strict taxonomy. |
+| [[Semantic Search]] | [[Retriever]] | task_vs_component | implemented_by | adjacency_only | Semantic Search is a retrieval/search task and experience goal; Retriever is the component that may implement it, so this remains adjacency rather than strict taxonomy. |
 | [[TF-IDF]] | [[RAG]] | representation_vs_application | related_to | adjacency_only | TF-IDF is a sparse lexical weighting/representation used in retrieval contexts; it is not a RAG subtype. |
 | [[TF-IDF]] | [[Retriever]] | feature_vs_component | foundational_for -> Sparse Retrieval | adjacency_only | TF-IDF can supply sparse lexical scoring intuition, but it is not a retriever component subtype. |
 
@@ -142,6 +147,7 @@ Generated: `2026-05-24T07:26:50Z`
 
 | Source | Target | Boundary kind | Safe relation | Rationale |
 |---|---|---|---|---|
+| [[Approximate Nearest Neighbor Search]] | [[Retriever]] | algorithm_family_vs_component | implemented_inside | Approximate Nearest Neighbor Search is a vector-index/search algorithm family used inside retrieval systems; it is not itself a Retriever component subtype. |
 | [[BM25]] | [[Multi-Route Retrieval]] | algorithm_vs_strategy | composed_into via Sparse Retrieval | BM25 is a sparse retrieval scoring function/representative route signal, not a multi-route retrieval subtype. |
 | [[Dense Retrieval]] | [[Multi-Route Retrieval]] | route_vs_strategy | composed_into | Dense Retrieval can be one route inside Multi-Route Retrieval, but a route/component is not a child taxonomy of the orchestration strategy. |
 | [[Hybrid Search]] | [[Dense Retrieval]] | composition_vs_component | composes_with | Hybrid Search composes a dense retrieval side; it is not a Dense Retrieval subtype. |
@@ -150,12 +156,15 @@ Generated: `2026-05-24T07:26:50Z`
 | [[Multi-Route Retrieval]] | [[Hybrid Search]] | strategy_vs_common_shape | related_to | Hybrid Search is a common dense+sparse shape inside the wider multi-route retrieval design space; this should be explained as relation, not forced into up. |
 | [[Multi-Route Retrieval]] | [[Sparse Retrieval]] | strategy_vs_route | composes_with | Multi-Route Retrieval may compose Sparse Retrieval as one route; the strategy is not a child of the route. |
 | [[Reranking]] | [[Multi-Route Retrieval]] | stage_vs_strategy | composes_with | Reranking is a downstream ordering stage over candidates; it is not a recall route or subtype of Multi-Route Retrieval. |
+| [[Semantic Search]] | [[Retriever]] | task_vs_component | implemented_by | Semantic Search is a retrieval/search task and experience goal; Retriever is the component that may implement it, so this remains adjacency rather than strict taxonomy. |
 | [[Sparse Retrieval]] | [[Multi-Route Retrieval]] | route_vs_strategy | composed_into | Sparse Retrieval can be one route inside Multi-Route Retrieval, but a route/component is not a child taxonomy of the orchestration strategy. |
 | [[TF-IDF]] | [[Multi-Route Retrieval]] | feature_vs_strategy | foundational_for -> Sparse Retrieval; Sparse Retrieval composed_into -> Multi-Route Retrieval | TF-IDF itself is not a multi-route retrieval route or strategy; a sparse retrieval route may use TF-IDF/BM25-style signals inside multi-route retrieval. |
 | [[TF-IDF]] | [[RAG]] | representation_vs_application | related_to | TF-IDF is a sparse lexical weighting/representation used in retrieval contexts; it is not a RAG subtype. |
 | [[TF-IDF]] | [[Retriever]] | feature_vs_component | foundational_for -> Sparse Retrieval | TF-IDF can supply sparse lexical scoring intuition, but it is not a retriever component subtype. |
 | [[TF-IDF]] | [[Sparse Retrieval]] | foundation_vs_family | foundational_for | TF-IDF is a foundational sparse lexical weighting method; Sparse Retrieval is the broader retrieval family. |
 | [[Top-K]] | [[Multi-Route Retrieval]] | selection_rule_vs_strategy | related_to | Top-K is a candidate selection/ranking cutoff, not a multi-route retrieval subtype. |
+| [[Vector Search Algorithm]] | [[Retriever]] | algorithm_family_vs_component | implemented_inside | Vector Search Algorithm is an algorithm-family layer used by retrievers/vector indexes; it is not itself the Retriever component. |
+| [[Vector Similarity Metrics]] | [[Vector Search Algorithm]] | metric_vs_algorithm | defines_metric_for | Vector Similarity Metrics define how vector closeness is scored; they are not search algorithms. |
 
 ## Writeback gate
 

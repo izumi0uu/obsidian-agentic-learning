@@ -4,15 +4,15 @@
   "total_question_pages_scanned": 779,
   "total_pages_scanned": 779,
   "pages_with_related_section": 779,
-  "would_modify_pages": 48,
+  "would_modify_pages": 55,
   "modified_pages": 0,
-  "inline_links_inserted": 65,
-  "proposed_inline_links": 65,
+  "inline_links_inserted": 72,
+  "proposed_inline_links": 72,
   "applied_inline_links": 0,
   "already_linked_pages": 362,
   "already_linked_targets": 941,
   "skipped_no_match_pages": 410,
-  "unsafe_region_skips": 4102,
+  "unsafe_region_skips": 4161,
   "protected_region_violations": 0,
   "request_meta_page_hits": [],
   "missing_concept_candidates": 0,
@@ -22,9 +22,9 @@
     "xiaolinnote": {
       "total": 142,
       "with_related_section": 142,
-      "would_modify_pages": 26,
+      "would_modify_pages": 30,
       "modified_pages": 0,
-      "proposed_inline_links": 36,
+      "proposed_inline_links": 40,
       "applied_inline_links": 0,
       "already_linked_pages": 81,
       "skipped_no_match_pages": 59
@@ -32,9 +32,9 @@
     "agent_java_offer": {
       "total": 637,
       "with_related_section": 637,
-      "would_modify_pages": 22,
+      "would_modify_pages": 25,
       "modified_pages": 0,
-      "proposed_inline_links": 29,
+      "proposed_inline_links": 32,
       "applied_inline_links": 0,
       "already_linked_pages": 281,
       "skipped_no_match_pages": 351
@@ -824,6 +824,9 @@
         "Document Ingestion",
         "Chunking",
         "Embedding",
+        "Dense Retrieval",
+        "Approximate Nearest Neighbor Search",
+        "Vector Similarity Metrics",
         "Retriever",
         "Reranking"
       ],
@@ -832,6 +835,9 @@
         "Document Ingestion",
         "Chunking",
         "Embedding",
+        "Dense Retrieval",
+        "Approximate Nearest Neighbor Search",
+        "Vector Similarity Metrics",
         "Retriever",
         "Reranking"
       ],
@@ -841,12 +847,24 @@
         "Embedding",
         "Reranking"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "Dense Retrieval",
+          "alias": "向量检索",
+          "start": 1610,
+          "end": 1614,
+          "replacement": "[[Dense Retrieval|向量检索]]",
+          "line": 68,
+          "context": "Rerank）的区别是什么？多路召回做过吗？BM25 和向量检索怎么结合？Prompt 怎么拼才能抑制幻觉？你说「没什么"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 7,
+      "unsafe_region_skips": 20,
       "unmatched_existing_targets": [
         "Document Ingestion",
         "Chunking",
+        "Approximate Nearest Neighbor Search",
+        "Vector Similarity Metrics",
         "Retriever"
       ],
       "request_meta_hits": [],
@@ -962,6 +980,7 @@
         "Retriever",
         "Reranking",
         "Dense Retrieval",
+        "Vector Similarity Metrics",
         "Sparse Retrieval",
         "BM25",
         "Multi-Query Retrieval",
@@ -974,6 +993,7 @@
         "Retriever",
         "Reranking",
         "Dense Retrieval",
+        "Vector Similarity Metrics",
         "Sparse Retrieval",
         "BM25",
         "Multi-Query Retrieval",
@@ -993,9 +1013,10 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 6,
+      "unsafe_region_skips": 8,
       "unmatched_existing_targets": [
         "Retriever",
+        "Vector Similarity Metrics",
         "Sparse Retrieval"
       ],
       "request_meta_hits": [],
@@ -1435,22 +1456,40 @@
       "has_related_section": true,
       "related_targets": [
         "Embedding",
+        "Semantic Search",
+        "Vector Similarity Metrics",
         "Vector Database",
-        "RAG Evaluation"
+        "RAG Evaluation",
+        "MTEB"
       ],
       "existing_targets": [
         "Embedding",
+        "Semantic Search",
+        "Vector Similarity Metrics",
         "Vector Database",
-        "RAG Evaluation"
+        "RAG Evaluation",
+        "MTEB"
       ],
       "missing_targets": [],
       "already_linked_targets": [
         "Embedding"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "MTEB",
+          "alias": "MTEB",
+          "start": 1371,
+          "end": 1375,
+          "replacement": "[[MTEB]]",
+          "line": 60,
+          "context": "一定好吗？  🙋‍♂️我：那我就选排行榜分数最高的模型，MTEB 排行榜第一名应该没问题吧？  👔面试官：MTEB 用的"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 7,
+      "unsafe_region_skips": 13,
       "unmatched_existing_targets": [
+        "Semantic Search",
+        "Vector Similarity Metrics",
         "Vector Database",
         "RAG Evaluation"
       ],
@@ -1489,23 +1528,41 @@
       "related_targets": [
         "Vector Database",
         "Embedding",
-        "Retriever"
+        "Retriever",
+        "Approximate Nearest Neighbor Search",
+        "HNSW",
+        "Vector Similarity Metrics"
       ],
       "existing_targets": [
         "Vector Database",
         "Embedding",
-        "Retriever"
+        "Retriever",
+        "Approximate Nearest Neighbor Search",
+        "HNSW",
+        "Vector Similarity Metrics"
       ],
       "missing_targets": [],
       "already_linked_targets": [
         "Vector Database",
         "Embedding"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "HNSW",
+          "alias": "HNSW",
+          "start": 1523,
+          "end": 1527,
+          "replacement": "[[HNSW]]",
+          "line": 62,
+          "context": "还怎么做选型？选型的时候你考虑哪些因素？索引算法了解吗？HNSW 和 IVF 听说过吗？  🙋‍♂️我：选型嘛，就看哪个"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 2,
+      "unsafe_region_skips": 10,
       "unmatched_existing_targets": [
-        "Retriever"
+        "Retriever",
+        "Approximate Nearest Neighbor Search",
+        "Vector Similarity Metrics"
       ],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -1517,23 +1574,41 @@
       "related_targets": [
         "Vector Database",
         "Embedding",
-        "Retriever"
+        "Retriever",
+        "Approximate Nearest Neighbor Search",
+        "HNSW",
+        "Embedding Quantization"
       ],
       "existing_targets": [
         "Vector Database",
         "Embedding",
-        "Retriever"
+        "Retriever",
+        "Approximate Nearest Neighbor Search",
+        "HNSW",
+        "Embedding Quantization"
       ],
       "missing_targets": [],
       "already_linked_targets": [
         "Vector Database",
         "Embedding"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "HNSW",
+          "alias": "HNSW",
+          "start": 1782,
+          "end": 1786,
+          "replacement": "[[HNSW]]",
+          "line": 72,
+          "context": "s，数据量级在百万条向量左右，每条是 1024 维，用 HNSW 索引，单次查询的延迟在 20 到 50 毫秒。选 Mi"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 2,
+      "unsafe_region_skips": 8,
       "unmatched_existing_targets": [
-        "Retriever"
+        "Retriever",
+        "Approximate Nearest Neighbor Search",
+        "Embedding Quantization"
       ],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -6869,6 +6944,8 @@
         "Task Success Rate",
         "Retriever",
         "Embedding",
+        "Vector Similarity Metrics",
+        "MTEB",
         "RAG",
         "RAG Evaluation",
         "LLM Training Pipeline",
@@ -6882,6 +6959,8 @@
         "Task Success Rate",
         "Retriever",
         "Embedding",
+        "Vector Similarity Metrics",
+        "MTEB",
         "RAG",
         "RAG Evaluation",
         "LLM Training Pipeline",
@@ -6896,12 +6975,23 @@
         "Embedding",
         "RAG"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "MTEB",
+          "alias": "MTEB",
+          "start": 1952,
+          "end": 1956,
+          "replacement": "[[MTEB]]",
+          "line": 74,
+          "context": "景匹配：语言、领域、时延预算和部署方式，再看公开基准如 MTEB/C-MTEB。评估时重点看检索相关指标：Recall@"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 16,
+      "unsafe_region_skips": 20,
       "unmatched_existing_targets": [
         "Task Success Rate",
         "Retriever",
+        "Vector Similarity Metrics",
         "RAG Evaluation",
         "LLM Training Pipeline",
         "LLM",
@@ -8444,6 +8534,10 @@
         "Retriever",
         "Vector Database",
         "Embedding",
+        "Vector Similarity Metrics",
+        "Approximate Nearest Neighbor Search",
+        "HNSW",
+        "Embedding Quantization",
         "RAG",
         "RAG 主题",
         "Dense Retrieval"
@@ -8452,6 +8546,10 @@
         "Retriever",
         "Vector Database",
         "Embedding",
+        "Vector Similarity Metrics",
+        "Approximate Nearest Neighbor Search",
+        "HNSW",
+        "Embedding Quantization",
         "RAG",
         "RAG 主题",
         "Dense Retrieval"
@@ -8461,12 +8559,25 @@
         "Vector Database",
         "Dense Retrieval"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "HNSW",
+          "alias": "HNSW",
+          "start": 2233,
+          "end": 2237,
+          "replacement": "[[HNSW]]",
+          "line": 81,
+          "context": "度损失，召回率受聚类和编码参数影响。 - 基于图的方法：HNSW   - 通过多层图结构建立“高速查询通道”，查询时像在"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 10,
+      "unsafe_region_skips": 20,
       "unmatched_existing_targets": [
         "Retriever",
         "Embedding",
+        "Vector Similarity Metrics",
+        "Approximate Nearest Neighbor Search",
+        "Embedding Quantization",
         "RAG",
         "RAG 主题"
       ],
@@ -8545,6 +8656,10 @@
         "Retriever",
         "Vector Database",
         "Embedding",
+        "Vector Similarity Metrics",
+        "Approximate Nearest Neighbor Search",
+        "HNSW",
+        "Embedding Quantization",
         "RAG",
         "RAG 主题",
         "Dense Retrieval"
@@ -8553,6 +8668,10 @@
         "Retriever",
         "Vector Database",
         "Embedding",
+        "Vector Similarity Metrics",
+        "Approximate Nearest Neighbor Search",
+        "HNSW",
+        "Embedding Quantization",
         "RAG",
         "RAG 主题",
         "Dense Retrieval"
@@ -8562,12 +8681,25 @@
         "Vector Database",
         "Dense Retrieval"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "HNSW",
+          "alias": "HNSW",
+          "start": 2282,
+          "end": 2286,
+          "replacement": "[[HNSW]]",
+          "line": 83,
+          "context": "度损失，召回率受聚类和编码参数影响。 - 基于图的方法：HNSW   - 通过多层图结构建立“高速查询通道”，查询时像在"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 10,
+      "unsafe_region_skips": 20,
       "unmatched_existing_targets": [
         "Retriever",
         "Embedding",
+        "Vector Similarity Metrics",
+        "Approximate Nearest Neighbor Search",
+        "Embedding Quantization",
         "RAG",
         "RAG 主题"
       ],

@@ -19,11 +19,13 @@ aliases:
   - unit vector normalization
   - vector normalization
 source:
+  - "[[AI Engineering From Scratch - Embeddings]]"
   - "[[raw/repos/xiaolinnote/questions/023 ai rag 10. 你使用 RAG 给大模型一个输入，系统是怎样的工作流程？]]"
   - "[[raw/repos/xiaolinnote/questions/024 ai rag 11. 请你介绍一下向量检索和关键词检索的区别？]]"
   - "[[raw/repos/xiaolinnote/questions/040 ai rag 7. Embedding 有哪几种算法你了解过吗？]]"
   - "[[raw/repos/agent_java_offer/questions/066 01_AI 03_RAG 一个完整的 RAG 流水线包含哪些关键步骤？请从数据准备到最终生成，详细描述整个过程。]]"
 evidence:
+  - "[[AI Engineering From Scratch - Embeddings#关键事实]]"
   - "[[raw/repos/xiaolinnote/questions/023 ai rag 10. 你使用 RAG 给大模型一个输入，系统是怎样的工作流程？#第三步：向量检索（ANN 搜索）+ 多路召回]]"
   - "[[raw/repos/xiaolinnote/questions/024 ai rag 11. 请你介绍一下向量检索和关键词检索的区别？#向量检索：语义匹配，靠 Embedding]]"
   - "[[raw/repos/xiaolinnote/questions/040 ai rag 7. Embedding 有哪几种算法你了解过吗？#第三代：句子级对比学习 Embedding（SBERT / SimCSE / BGE）]]"
@@ -32,6 +34,7 @@ related:
   - "[[Embedding]]"
   - "[[Dense Retrieval]]"
   - "[[Vector Database]]"
+  - "[[Vector Similarity Metrics]]"
   - "[[Hybrid Search]]"
   - "[[Reciprocal Rank Fusion]]"
 ---
@@ -67,7 +70,7 @@ u dot v = cos(theta)
 
 这解释了为什么有些向量库或检索实现会在 cosine、inner product / dot product、L2 distance 之间做工程选择：当向量已经单位化时，这些度量之间可能只是计算形式不同；当向量没有单位化时，它们表达的排序偏好就不一样。
 
-学习时可以把它想成把所有 embedding 都放到同一个单位球面上。原始向量离原点有多远不再重要，重要的是两个点从原点看过去夹角有多小。这个处理不会改变向量维度，也不会改变 query 和 chunk 是否来自同一个 embedding 模型；它只是在同一向量空间内固定长度尺度。因此它必须在索引侧和查询侧保持一致，否则同一条检索链路里的相似度分数会混入不同尺度假设。
+学习时可以把它想成把所有 embedding 都放到同一个单位球面上。原始向量离原点有多远不再重要，重要的是两个点从原点看过去夹角有多小。这个处理不会改变向量维度，也不会改变 query 和 chunk 是否来自同一个 embedding 模型；它只是在同一向量空间内固定长度尺度。因此它必须在索引侧和查询侧保持一致，否则同一条检索链路里的相似度分数会混入不同尺度假设。相似度度量的完整边界见 [[Vector Similarity Metrics]]；本卡只解释单位化这个前处理。
 
 ## 它解决什么问题
 
@@ -110,6 +113,8 @@ sqrt(0.6^2 + 0.8^2) = 1
 
 和 [[Vector Database]] 的边界：vector database 负责存储和搜索向量；是否需要预先 L2 normalize、使用 cosine / dot product / L2 metric，是索引和检索配置的一部分。
 
+和 [[Vector Similarity Metrics]] 的边界：相似度度量定义“近”的数学规则；L2 normalization 改变向量长度，从而影响 dot product / cosine / L2 distance 的排序关系。
+
 和 [[Reciprocal Rank Fusion]] 的边界：RRF 绕开不同检索器分数不可比的问题，用排名融合；L2 normalization 不融合多路结果，只处理单路向量的长度。
 
 ## 现代性状态
@@ -127,6 +132,7 @@ sqrt(0.6^2 + 0.8^2) = 1
 
 ## 证据锚点
 
+- [[AI Engineering From Scratch - Embeddings#关键事实]]
 - [[raw/repos/xiaolinnote/questions/023 ai rag 10. 你使用 RAG 给大模型一个输入，系统是怎样的工作流程？#第三步：向量检索（ANN 搜索）+ 多路召回]]
 - [[raw/repos/xiaolinnote/questions/024 ai rag 11. 请你介绍一下向量检索和关键词检索的区别？#向量检索：语义匹配，靠 Embedding]]
 - [[raw/repos/xiaolinnote/questions/040 ai rag 7. Embedding 有哪几种算法你了解过吗？#第三代：句子级对比学习 Embedding（SBERT / SimCSE / BGE）]]
@@ -147,5 +153,6 @@ sqrt(0.6^2 + 0.8^2) = 1
 - [[Embedding]]
 - [[Dense Retrieval]]
 - [[Vector Database]]
+- [[Vector Similarity Metrics]]
 - [[Hybrid Search]]
 - [[Reciprocal Rank Fusion]]

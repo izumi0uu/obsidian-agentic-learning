@@ -1,32 +1,40 @@
 {
   "schema_version": 1,
   "artifact_type": "concept_relation_decision_ledger",
-  "generated_at": "2026-05-24T07:26:50Z",
+  "generated_at": "2026-05-24T09:21:10Z",
   "input_map": "reports/concept-card-relation-map/concept-relations-pre-writeback.json",
   "current_map_at_decision_time": "reports/concept-card-relation-map/concept-relations-temp.json",
   "summary": {
-    "candidate_edges": 81,
+    "candidate_edges": 84,
     "decision_counts": {
-      "reject_taxonomy": 11,
-      "adjacency_only": 70
+      "reject_taxonomy": 12,
+      "adjacency_only": 72
     },
     "writeback_candidates": 0,
     "open_writeback_items": 0,
     "open_review_items": 0,
     "relation_tail_open_items": 0,
     "relation_tail_status": "closed",
-    "terminal_non_writeback_decisions": 81,
+    "terminal_non_writeback_decisions": 84,
     "already_applied_or_present_taxonomy": 0,
     "remaining_writeback_candidates": 0,
     "accepted_taxonomy": 0,
-    "rejected_taxonomy": 11,
+    "rejected_taxonomy": 12,
     "deferred_taxonomy": 0,
-    "adjacency_only": 70,
+    "adjacency_only": 72,
     "duplicate_signals": 0,
-    "non_taxonomy_boundary_guardrails": 2,
+    "non_taxonomy_boundary_guardrails": 4,
     "write_policy": "Only decisions with writeback_action=add_up may be applied, and only through dry-run/apply small batches."
   },
   "non_taxonomy_boundary_policy": [
+    {
+      "source": "Approximate Nearest Neighbor Search",
+      "target": "Retriever",
+      "boundary_kind": "algorithm_family_vs_component",
+      "safe_relation": "implemented_inside",
+      "rationale": "Approximate Nearest Neighbor Search is a vector-index/search algorithm family used inside retrieval systems; it is not itself a Retriever component subtype.",
+      "guardrail": "forbidden_as_up"
+    },
     {
       "source": "BM25",
       "target": "Multi-Route Retrieval",
@@ -92,6 +100,14 @@
       "guardrail": "forbidden_as_up"
     },
     {
+      "source": "Semantic Search",
+      "target": "Retriever",
+      "boundary_kind": "task_vs_component",
+      "safe_relation": "implemented_by",
+      "rationale": "Semantic Search is a retrieval/search task and experience goal; Retriever is the component that may implement it, so this remains adjacency rather than strict taxonomy.",
+      "guardrail": "forbidden_as_up"
+    },
+    {
       "source": "Sparse Retrieval",
       "target": "Multi-Route Retrieval",
       "boundary_kind": "route_vs_strategy",
@@ -137,6 +153,22 @@
       "boundary_kind": "selection_rule_vs_strategy",
       "safe_relation": "related_to",
       "rationale": "Top-K is a candidate selection/ranking cutoff, not a multi-route retrieval subtype.",
+      "guardrail": "forbidden_as_up"
+    },
+    {
+      "source": "Vector Search Algorithm",
+      "target": "Retriever",
+      "boundary_kind": "algorithm_family_vs_component",
+      "safe_relation": "implemented_inside",
+      "rationale": "Vector Search Algorithm is an algorithm-family layer used by retrievers/vector indexes; it is not itself the Retriever component.",
+      "guardrail": "forbidden_as_up"
+    },
+    {
+      "source": "Vector Similarity Metrics",
+      "target": "Vector Search Algorithm",
+      "boundary_kind": "metric_vs_algorithm",
+      "safe_relation": "defines_metric_for",
+      "rationale": "Vector Similarity Metrics define how vector closeness is scored; they are not search algorithms.",
       "guardrail": "forbidden_as_up"
     }
   ],
@@ -184,6 +216,31 @@
       "llm_judgment_basis": "card frontmatter + one-line/boundary snippets + relation-field rules; not source-level re-reading",
       "decision_rationale": "RAGGraph is an unstable ambiguity/reminder card for workflow graph vs GraphRAG confusion; it remains related to RAG but is not a stable RAG subtype.",
       "guardrail": "Do not write this candidate to up; preserve as adjacency or explain with typed relation only if needed.",
+      "resolution_status": "terminal_non_writeback"
+    },
+    {
+      "source": "Semantic Search",
+      "target": "Retriever",
+      "candidate_type": "taxonomy_candidate",
+      "confidence": "medium",
+      "status": "needs_review",
+      "rationale": "retrieval/search title family",
+      "support": [
+        "frontmatter.related"
+      ],
+      "source_file": "agentic learning/wiki/concepts/Semantic Search.md",
+      "source_one_line": "Semantic Search 是按语义相似而不是只按关键词重叠来找资料的检索方式，常通过 [[Embedding]] 和 [[Dense Retrieval]] 实现。",
+      "existing_up": [],
+      "decision": "reject_taxonomy",
+      "writeback_action": "none",
+      "proposed_field": "relations or related, never up",
+      "judge_confidence": "high",
+      "llm_judgment_basis": "card frontmatter + one-line/boundary snippets + relation-field rules; not source-level re-reading",
+      "decision_rationale": "Semantic Search is a retrieval/search task and experience goal; Retriever is the component that may implement it, so this remains adjacency rather than strict taxonomy.",
+      "guardrail": "Do not write this pair to up. Keep representation/algorithm/route/strategy boundaries separate.",
+      "boundary_guardrail_applied": true,
+      "boundary_kind": "task_vs_component",
+      "safe_relation": "implemented_by",
       "resolution_status": "terminal_non_writeback"
     },
     {
@@ -1530,6 +1587,53 @@
       "llm_judgment_basis": "card frontmatter + one-line/boundary snippets + relation-field rules; not source-level re-reading",
       "decision_rationale": "Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge.",
       "guardrail": "Never bulk-write topic_family_review into up.",
+      "resolution_status": "terminal_non_writeback"
+    },
+    {
+      "source": "Semantic Search",
+      "target": "RAG",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: rag",
+      "support": [
+        "frontmatter.related"
+      ],
+      "source_file": "agentic learning/wiki/concepts/Semantic Search.md",
+      "source_one_line": "Semantic Search 是按语义相似而不是只按关键词重叠来找资料的检索方式，常通过 [[Embedding]] 和 [[Dense Retrieval]] 实现。",
+      "existing_up": [],
+      "decision": "adjacency_only",
+      "writeback_action": "none",
+      "proposed_field": "related/body context only",
+      "judge_confidence": "medium",
+      "llm_judgment_basis": "card frontmatter + one-line/boundary snippets + relation-field rules; not source-level re-reading",
+      "decision_rationale": "Topic-family overlap is useful for review batching, but it does not prove a strict parent/child taxonomy edge.",
+      "guardrail": "Never bulk-write topic_family_review into up.",
+      "resolution_status": "terminal_non_writeback"
+    },
+    {
+      "source": "Semantic Search",
+      "target": "Retriever",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: retrieval/search",
+      "support": [
+        "frontmatter.related"
+      ],
+      "source_file": "agentic learning/wiki/concepts/Semantic Search.md",
+      "source_one_line": "Semantic Search 是按语义相似而不是只按关键词重叠来找资料的检索方式，常通过 [[Embedding]] 和 [[Dense Retrieval]] 实现。",
+      "existing_up": [],
+      "decision": "adjacency_only",
+      "writeback_action": "none",
+      "proposed_field": "relations or related, never up",
+      "judge_confidence": "high",
+      "llm_judgment_basis": "card frontmatter + one-line/boundary snippets + relation-field rules; not source-level re-reading",
+      "decision_rationale": "Semantic Search is a retrieval/search task and experience goal; Retriever is the component that may implement it, so this remains adjacency rather than strict taxonomy.",
+      "guardrail": "Do not write this pair to up. Keep representation/algorithm/route/strategy boundaries separate.",
+      "boundary_guardrail_applied": true,
+      "boundary_kind": "task_vs_component",
+      "safe_relation": "implemented_by",
       "resolution_status": "terminal_non_writeback"
     },
     {
