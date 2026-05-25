@@ -1,41 +1,41 @@
 # Concept Hierarchy Placement Review — 层级归属待审计概念卡
 
-Generated: `2026-05-24T09:21:19Z`
+Generated: `2026-05-25T02:55:08Z`
 Classification stage: `audit_closure`
 
 > Audit closure: remaining `defer_boundary_review` rows are closed as `deferred_with_backlog`; no concept cards are edited and no fallback parents are invented.
 
 ## Summary
 
-- total_concepts: 172
-- reviewed_concepts: 172
+- total_concepts: 177
+- reviewed_concepts: 177
 - taxonomy_placement_unreviewed: 0
 - concepts_with_up: 45
-- concepts_without_up: 127
+- concepts_without_up: 132
 - concepts_with_candidate_basis: 68
 - candidate_basis_rows: 84
 - known_forbidden_candidate_pairs: 4
 - accepted_taxonomy: 0
 - root_or_anchor_no_up: 22
-- relation_only_terminal: 64
+- relation_only_terminal: 66
 - weak_or_backlog_terminal: 12
-- defer_boundary_review: 27
+- defer_boundary_review: 30
 - open_unclassified: 0
 - open_review: 0
 - open_writeback: 0
 - dry_run_planned: 0
 - write_policy: Audit closure only. Remaining defer_boundary_review rows are closed as deferred_with_backlog and no concept-card fields are written.
-- decision_counts: `{"already_has_up_reviewed": 45, "defer_boundary_review": 27, "reject_taxonomy": 2, "relation_only_terminal": 64, "root_or_anchor_no_up": 22, "weak_or_backlog_terminal": 12}`
-- review_status_counts: `{"deferred_with_backlog": 27, "terminal_non_writeback": 145}`
+- decision_counts: `{"already_has_up_reviewed": 45, "defer_boundary_review": 30, "reject_taxonomy": 2, "relation_only_terminal": 66, "root_or_anchor_no_up": 22, "weak_or_backlog_terminal": 12}`
+- review_status_counts: `{"deferred_with_backlog": 30, "terminal_non_writeback": 147}`
 - parent_whitelist_reviewed: True
 - stable_parent_whitelist_approved: 19
 - proposed_parent_anchors_not_auto_approved: 3
 - missing_proposed_parent_anchors: 2
 - root_anchors_not_parent_whitelist: 5
-- deferred_rows_parent_prechecked: 29
+- deferred_rows_parent_prechecked: 32
 - candidate_adjudication_needed: 2
 - conservative_candidates_generated: 2
-- candidate_generation_suppressed_signals: 27
+- candidate_generation_suppressed_signals: 30
 - adjudication_items: 2
 - adjudicated_candidates: 2
 - adjudication_accept_taxonomy: 0
@@ -56,7 +56,7 @@ Classification stage: `audit_closure`
 - limited_apply_concept_card_writes: 1
 - limited_apply_post_apply_dry_run_planned: 0
 - limited_apply_post_apply_dry_run_ready: 0
-- deferred_with_backlog: 27
+- deferred_with_backlog: 30
 - audit_closure_concept_card_writes: 0
 - completion_definition_met: True
 
@@ -110,7 +110,7 @@ Classification stage: `audit_closure`
 - [[Tool Calling]]
 - [[Trajectory Evaluation]]
 
-### defer_boundary_review (27)
+### defer_boundary_review (30)
 
 - [[A2A]]
 - [[ACP]]
@@ -126,6 +126,7 @@ Classification stage: `audit_closure`
 - [[MCP]]
 - [[MCP Registry]]
 - [[MCP Transport]]
+- [[Masked Attention]]
 - [[Multi-Head Attention]]
 - [[NLP]]
 - [[Observation]]
@@ -135,8 +136,10 @@ Classification stage: `audit_closure`
 - [[Positional Encoding]]
 - [[Prompt Injection]]
 - [[Sandbox Workspace]]
+- [[Scaled Dot-Product Attention]]
 - [[Self-Attention]]
 - [[Step-back Prompting]]
+- [[Token Embedding]]
 - [[Trajectory]]
 - [[Vector Similarity Metrics]]
 
@@ -145,7 +148,7 @@ Classification stage: `audit_closure`
 - [[Approval Gate]]
 - [[ReAct]]
 
-### relation_only_terminal (64)
+### relation_only_terminal (66)
 
 - [[ANP]]
 - [[Agent Control Plane]]
@@ -165,6 +168,7 @@ Classification stage: `audit_closure`
 - [[Eval Harness]]
 - [[Frontend-first AI Toolkit]]
 - [[GSSC Pipeline]]
+- [[Gating Mechanism]]
 - [[Guardrails]]
 - [[Hallucination]]
 - [[Handoff]]
@@ -196,6 +200,7 @@ Classification stage: `audit_closure`
 - [[Replay]]
 - [[Repo Context]]
 - [[Role-playing Agent]]
+- [[Rollout]]
 - [[Semantic Search]]
 - [[State Graph Runtime]]
 - [[TF-IDF]]
@@ -351,6 +356,7 @@ Parent-whitelist review fixes the candidate-generation boundary. An approved par
 | [[MCP]] | remain_deferred |  | Protocol/root ecosystem card; no approved protocol parent exists. |
 | [[MCP Registry]] | remain_deferred |  | Registry/ecosystem component likely belongs near MCP, but MCP is not yet an approved parent. |
 | [[MCP Transport]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
+| [[Masked Attention]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
 | [[Multi-Head Attention]] | likely_relation_only |  | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. |
 | [[NLP]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
 | [[Observation]] | remain_deferred |  | Agent loop/runtime signal; no approved Agent Loop parent exists. |
@@ -361,8 +367,10 @@ Parent-whitelist review fixes the candidate-generation boundary. An approved par
 | [[Prompt Injection]] | remain_deferred |  | Security risk/attack class; Prompt is related context but not a strict parent. |
 | [[ReAct]] | candidate_adjudication | [[Agent Workflow]] | May be an agent workflow/pattern, but its prompting/loop boundary needs Candidate adjudication. |
 | [[Sandbox Workspace]] | remain_deferred |  | Workspace/sandbox runtime boundary; no approved sandbox/workspace parent exists. |
+| [[Scaled Dot-Product Attention]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
 | [[Self-Attention]] | likely_relation_only |  | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. |
 | [[Step-back Prompting]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
+| [[Token Embedding]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
 | [[Trajectory]] | remain_deferred |  | Trace/evaluation object; may be evaluated or observed, but it is not automatically Evaluation or Observability. |
 | [[Vector Similarity Metrics]] | remain_deferred |  | No Parent-whitelist review route precheck rule; keep deferred until Candidate adjudication. |
 
@@ -370,10 +378,10 @@ Parent-whitelist review fixes the candidate-generation boundary. An approved par
 
 Conservative candidate generation generates conservative candidates only from Parent-whitelist review approved parents. These candidates are **not** accepted taxonomy and cannot enter writeback until Candidate adjudication.
 
-- deferred_rows_considered: 29
+- deferred_rows_considered: 32
 - approved_parent_count: 19
 - generated_candidates: 2
-- suppressed_signals: 27
+- suppressed_signals: 30
 - candidate_targets: `{"Agent Workflow": 2}`
 - adjudication_items: 2
 - open_writeback: 0
@@ -474,15 +482,15 @@ Apply artifact:
 
 Audit closure closes the whole concept hierarchy placement audit by routing every remaining deferred row to a durable backlog home. It does not add `up`; future changes must reopen a new candidate/adjudication/dry-run/limited-apply cycle.
 
-- total_concepts: 172
-- reviewed_concepts: 172
+- total_concepts: 177
+- reviewed_concepts: 177
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0
 - open_writeback: 0
 - dry_run_planned: 0
-- defer_boundary_review: 27
-- deferred_with_backlog: 27
+- defer_boundary_review: 30
+- deferred_with_backlog: 30
 - concept_card_writes: 0
 - plugin_problems: 0
 - forbidden_up_edges: 0
@@ -510,6 +518,7 @@ Closure artifact:
 | [[MCP]] | [[Tool Use]] | protocol_not_tool_behavior | Protocol/root ecosystem card; no approved protocol parent exists. |
 | [[MCP Registry]] | [[MCP]] | unapproved_parent | Registry/ecosystem component likely belongs near MCP, but MCP is not yet an approved parent. |
 | [[MCP Transport]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
+| [[Masked Attention]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
 | [[Multi-Head Attention]] | [[Transformer]] | component_of_not_kind_of | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. |
 | [[NLP]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
 | [[Observation]] | [[Agent Workflow]] | loop_signal_not_workflow | Agent loop/runtime signal; no approved Agent Loop parent exists. |
@@ -519,8 +528,10 @@ Closure artifact:
 | [[Positional Encoding]] | [[Transformer]] | component_of_not_kind_of | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. |
 | [[Prompt Injection]] | [[Prompt]] | attack_class_not_prompt | Security risk/attack class; Prompt is related context but not a strict parent. |
 | [[Sandbox Workspace]] | [[Tool Use]] | workspace_runtime_not_tool_behavior | Workspace/sandbox runtime boundary; no approved sandbox/workspace parent exists. |
+| [[Scaled Dot-Product Attention]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
 | [[Self-Attention]] | [[Transformer]] | component_of_not_kind_of | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. |
 | [[Step-back Prompting]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
+| [[Token Embedding]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
 | [[Trajectory]] | [[Evaluation]] | evaluated_object_not_evaluation_method | Trace/evaluation object; may be evaluated or observed, but it is not automatically Evaluation or Observability. |
 | [[Vector Similarity Metrics]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. |
 
@@ -619,6 +630,7 @@ Closure artifact:
 | [[Frontend-first AI Toolkit]] | relation_only_terminal |  | 1 | 2 |
 | [[GSSC Pipeline]] | relation_only_terminal |  | 0 | 0 |
 | [[GUI Grounding]] | defer_boundary_review |  | 0 | 3 |
+| [[Gating Mechanism]] | relation_only_terminal |  | 0 | 0 |
 | [[Guardrails]] | relation_only_terminal |  | 1 | 2 |
 | [[Hallucination]] | relation_only_terminal |  | 1 | 2 |
 | [[Handoff]] | relation_only_terminal | [[Agent Workflow]] | 1 | 1 |
@@ -640,6 +652,7 @@ Closure artifact:
 | [[MCP Registry]] | defer_boundary_review |  | 0 | 3 |
 | [[MCP Transport]] | defer_boundary_review |  | 0 | 2 |
 | [[Managed Agent Harness]] | weak_or_backlog_terminal |  | 0 | 0 |
+| [[Masked Attention]] | defer_boundary_review |  | 0 | 2 |
 | [[Memory]] | root_or_anchor_no_up |  | 0 | 0 |
 | [[Multi-Head Attention]] | defer_boundary_review |  | 0 | 3 |
 | [[NLP]] | defer_boundary_review |  | 0 | 2 |
@@ -677,7 +690,9 @@ Closure artifact:
 | [[Reranking]] | root_or_anchor_no_up |  | 2 | 2 |
 | [[Retriever]] | root_or_anchor_no_up |  | 1 | 1 |
 | [[Role-playing Agent]] | relation_only_terminal |  | 1 | 2 |
+| [[Rollout]] | relation_only_terminal |  | 0 | 0 |
 | [[Sandbox Workspace]] | defer_boundary_review |  | 0 | 3 |
+| [[Scaled Dot-Product Attention]] | defer_boundary_review |  | 0 | 2 |
 | [[Self-Attention]] | defer_boundary_review |  | 0 | 3 |
 | [[Self-Consistency]] | weak_or_backlog_terminal |  | 0 | 0 |
 | [[Semantic Search]] | relation_only_terminal |  | 3 | 4 |
@@ -688,6 +703,7 @@ Closure artifact:
 | [[TTL]] | relation_only_terminal |  | 2 | 4 |
 | [[Task Success Rate]] | relation_only_terminal |  | 1 | 2 |
 | [[Token]] | root_or_anchor_no_up |  | 0 | 0 |
+| [[Token Embedding]] | defer_boundary_review |  | 0 | 2 |
 | [[Tool Permissioning]] | relation_only_terminal | [[Tool Use]] | 1 | 1 |
 | [[Tool Poisoning]] | relation_only_terminal | [[Tool Use]] | 1 | 1 |
 | [[Tool Registry]] | relation_only_terminal | [[Tool Use]] | 1 | 1 |

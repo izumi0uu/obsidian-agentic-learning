@@ -6,7 +6,7 @@ topic:
   - benchmark
 status: growing
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-05-24
 
 up:
   - "[[Benchmark]]"
@@ -42,6 +42,7 @@ related:
   - "[[Evaluation]]"
   - "[[BFCL]]"
   - "[[Eval Harness]]"
+  - "[[Rollout]]"
   - "[[LLM-as-Judge]]"
   - "[[Win Rate]]"
   - "[[Task Success Rate]]"
@@ -147,7 +148,7 @@ report metric: task success rate + tool-call accuracy + unsafe-action count
 - 从 GAIA 学真实助手任务和短答案可验证设计。
 - 从 WebArena / OpenComputer 类方向学可验证软件环境和任务终态检查。
 - 从 BenchJack 学 benchmark 也需要 threat modeling、checker hardening 和失败样本复盘。
-- 从 Rollout Cards 类工作学记录环境、依赖、agent scaffold、运行预算和可复现 trace。
+- 从 Rollout Cards 类工作学记录环境、依赖、agent scaffold、运行预算、[[Rollout|rollout record]] 和可复现 trace。
 - 从 DORA 的 scaffold ablation 学一个很细的边界：[[ReWOO]] 这类先规划 evidence slots 的方法可能节省 prompt 成本，但在依赖中间 masks、geometries 或工具结果动态校正的任务里，移除 observation feedback 会显著伤害表现。
 
 它的局限也很清楚：公开 benchmark 的任务分布不等于你的产品任务，leaderboard 分数不等于权限安全，成功率也不说明失败原因。对自建 Agent，最好的吸收方式是建立自己的小型 benchmark + eval harness + trace/replay 回归集。

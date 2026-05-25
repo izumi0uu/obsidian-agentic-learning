@@ -7,7 +7,7 @@ topic:
   - security
 status: growing
 created: 2026-05-17
-updated: 2026-05-18
+updated: 2026-05-24
 last_checked: 2026-05-18
 freshness: watch
 conflicts: []
@@ -38,6 +38,7 @@ related:
   - "[[Evaluation]]"
   - "[[Task Success Rate]]"
   - "[[Trajectory Evaluation]]"
+  - "[[Rollout]]"
   - "[[Trace]]"
   - "[[Guardrails]]"
   - "[[Tool Calling]]"
@@ -45,6 +46,9 @@ relations:
   - type: related_to
     target: "[[Task Success Rate]]"
     note: Agent Robustness 常用扰动条件下的成功率下降幅度来观察；Task Success Rate 是被观察指标，不是鲁棒性本身。
+  - type: related_to
+    target: "[[Rollout]]"
+    note: 失败、错误、超时和跳过运行是否进入 rollout record，会直接影响鲁棒性评估是否可信。
   - type: related_to
     target: "[[Trajectory Evaluation]]"
     note: 工具超时、异常返回、噪声输入和恢复动作都需要看 trajectory，而不只看最终输出。
@@ -131,7 +135,7 @@ Agent Robustness 至少要拆成四层看：
 ## 现代性状态
 
 - 判定：current-practice / frontier-adjacent。
-- 为什么：生产 Agent 已经普遍需要故障注入、回归评测、trace、guardrails、human escalation 和线上 bad-case 回流；但“Agent robustness”作为统一指标体系仍在快速演化，尤其是用户模拟、rollout 记录、过程评分和安全压力测试。
+- 为什么：生产 Agent 已经普遍需要故障注入、回归评测、trace、guardrails、human escalation 和线上 bad-case 回流；但“Agent robustness”作为统一指标体系仍在快速演化，尤其是用户模拟、[[Rollout|rollout 记录]]、过程评分和安全压力测试。
 - 稳定部分：Agent 不能只看正常任务成功率；必须看异常、噪声和分布变化下的表现。
 - 易变部分：具体 benchmark、扰动集、用户模拟器、trajectory evaluator、平台字段和行业标准。
 - 复查点：当 Agent evaluation benchmark、rollout 标准、红队框架或主流 Agent 平台出现稳定 robustness 指标时更新。
@@ -154,7 +158,7 @@ Agent Robustness 至少要拆成四层看：
 - Interview evidence: [[raw/repos/agent_java_offer/questions/183 01_AI 06_评测与监控 还有一个是鲁棒性层面的指标。就是说系统在调用工具，工具会出现一些异常超时或者返回信息不符合预期的时候，系统会怎么样？思考推理进行下一步的动作。以及当外界条件出现一些噪声的时 7c989c#题目正文]] 直接提出工具异常、超时、返回不符预期和外界噪声下成功率是否稳定。
 - Interview evidence: [[raw/repos/agent_java_offer/questions/174 01_AI 06_评测与监控 你了解哪些专门用于评估 Agent 能力的基准测试？这些基准通常如何构建测试环境和任务？#题目正文]] 把可复现交互式 benchmark 的价值扩展到规划、工具使用和鲁棒性，而不只看最终文本质量。
 - Paper source: [[Beyond Cooperative Simulators - Generating Realistic User Personas for Robust Evaluation of LLM Agents#为什么收]] 支持“合作型模拟用户会高估真实部署稳健性”的评测分布边界。
-- Paper source: [[Rollout Cards - A Reproducibility Standard for Agent Research#为什么收]] 支持“不能只看 headline score，需要 rollout record 暴露失败、错误和跳过运行”的过程证据边界。
+- Paper source: [[Rollout Cards - A Reproducibility Standard for Agent Research#为什么收]] 支持“不能只看 headline score，需要 [[Rollout|rollout record]] 暴露失败、错误和跳过运行”的过程证据边界。
 - Evidence type: interview raw source + paper source note + engineering synthesis.
 - Confidence: medium-high for Agent evaluation boundary; medium for frontier paper generalization because相关论文仍是 2026 arXiv / watch 状态。
 - Boundary: 本卡沉淀 Agent 系统级鲁棒性；不把所有 `robustness / 鲁棒性` 命中都当作本卡别名。
@@ -171,6 +175,7 @@ Agent Robustness 至少要拆成四层看：
 - [[Evaluation]]
 - [[Task Success Rate]]
 - [[Trajectory Evaluation]]
+- [[Rollout]]
 - [[Trace]]
 - [[Observability]]
 - [[Guardrails]]

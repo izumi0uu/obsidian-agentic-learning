@@ -20,7 +20,7 @@ topic:
   - prompting
   - frontier
 created: 2026-05-14
-updated: 2026-05-15
+updated: 2026-05-24
 last_checked: 2026-05-14
 freshness: watch
 conflicts: []
@@ -29,6 +29,7 @@ source: https://arxiv.org/abs/2605.13295
 related:
   - "[[Multi-agent Orchestration]]"
   - "[[Evaluation]]"
+  - "[[Rollout]]"
   - "[[Agent Workflow]]"
   - "[[LLM-as-Judge]]"
   - "[[Prompt]]"
@@ -93,7 +94,7 @@ CANTANTE 用 contrastive credit attribution 把系统级奖励分解成 per-agen
   - 这条短摘只证明作者在论文第一页/摘要中提出该 claim；不能证明方法已经被独立复现或成为稳定工程标准。
   - 如果短摘包含数字、排名、benchmark、攻击成功率、性能提升或用户研究，必须再读 Evaluation / Table / Limitations 后才能写入概念卡。
 
-#### 必读块 2：Contrastive rollouts
+#### 必读块 2：Contrastive [[Rollout|rollouts]]
 
 - 位置：extracted Page 1 / Abstract（必要时连同 Page 1 Introduction 交叉核对）
 - 为什么必读：看同一 query 上多组 joint configurations 如何产生对比信号。
@@ -212,7 +213,7 @@ CANTANTE 用 contrastive credit attribution 把系统级奖励分解成 per-agen
 ## 我的疑问
 
 - per-agent credit 是否会忽略跨 agent 的非线性协同？
-- 对比 rollout 成本如何控制？
+- 对比 [[Rollout|rollout]] 成本如何控制？
 - 当 multi-agent 系统有工具和记忆时，credit 应归因给 prompt、tool choice 还是 state？
 
 ## 边界提醒

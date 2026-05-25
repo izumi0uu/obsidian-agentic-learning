@@ -1,20 +1,20 @@
 # Concept Hierarchy Placement Audit closure — Completion Closure
 
-Generated: `2026-05-24T09:21:19Z`
+Generated: `2026-05-25T02:55:08Z`
 
 > Audit closure closes remaining concept-hierarchy-placement open reviews as backlog-backed defers. It does not write concept cards or create fallback parents.
 
 ## Summary
 
-- total_concepts: 172
-- reviewed_concepts: 172
+- total_concepts: 177
+- reviewed_concepts: 177
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0
 - open_writeback: 0
 - dry_run_planned: 0
-- defer_boundary_review: 27
-- deferred_with_backlog: 27
+- defer_boundary_review: 30
+- deferred_with_backlog: 30
 - concept_card_writes: 0
 - plugin_problems: 0
 - forbidden_up_edges: 0
@@ -59,6 +59,7 @@ Backlog home: `agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念�
 | [[MCP]] | [[Tool Use]] | protocol_not_tool_behavior | Protocol/root ecosystem card; no approved protocol parent exists. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[MCP Registry]] | [[MCP]] | unapproved_parent | Registry/ecosystem component likely belongs near MCP, but MCP is not yet an approved parent. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[MCP Transport]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
+| [[Masked Attention]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Multi-Head Attention]] | [[Transformer]] | component_of_not_kind_of | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[NLP]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Observation]] | [[Agent Workflow]] | loop_signal_not_workflow | Agent loop/runtime signal; no approved Agent Loop parent exists. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
@@ -68,8 +69,10 @@ Backlog home: `agentic learning/maps/06 Wiki 健康检查.md#2026-05-17 概念�
 | [[Positional Encoding]] | [[Transformer]] | component_of_not_kind_of | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Prompt Injection]] | [[Prompt]] | attack_class_not_prompt | Security risk/attack class; Prompt is related context but not a strict parent. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Sandbox Workspace]] | [[Tool Use]] | workspace_runtime_not_tool_behavior | Workspace/sandbox runtime boundary; no approved sandbox/workspace parent exists. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
+| [[Scaled Dot-Product Attention]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Self-Attention]] | [[Transformer]] | component_of_not_kind_of | Architecture mechanism/component; do not auto-place under Transformer because component-of is not kind-of. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Step-back Prompting]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
+| [[Token Embedding]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Trajectory]] | [[Evaluation]] | evaluated_object_not_evaluation_method | Trace/evaluation object; may be evaluated or observed, but it is not automatically Evaluation or Observability. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 | [[Vector Similarity Metrics]] |  | None | No approved strict parent exists in the current concept hierarchy placement pass. | A narrower canonical parent concept card is created and added to the approved parent whitelist.<br>The concept card's own definition/evidence changes enough to prove a strict kind-of relation.<br>A future user request explicitly starts a new candidate/adjudication/dry-run/limited-apply cycle for this boundary. |
 

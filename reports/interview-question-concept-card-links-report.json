@@ -4,15 +4,15 @@
   "total_question_pages_scanned": 779,
   "total_pages_scanned": 779,
   "pages_with_related_section": 779,
-  "would_modify_pages": 55,
+  "would_modify_pages": 56,
   "modified_pages": 0,
-  "inline_links_inserted": 72,
-  "proposed_inline_links": 72,
+  "inline_links_inserted": 73,
+  "proposed_inline_links": 73,
   "applied_inline_links": 0,
   "already_linked_pages": 362,
   "already_linked_targets": 941,
   "skipped_no_match_pages": 410,
-  "unsafe_region_skips": 4161,
+  "unsafe_region_skips": 4183,
   "protected_region_violations": 0,
   "request_meta_page_hits": [],
   "missing_concept_candidates": 0,
@@ -22,9 +22,9 @@
     "xiaolinnote": {
       "total": 142,
       "with_related_section": 142,
-      "would_modify_pages": 30,
+      "would_modify_pages": 31,
       "modified_pages": 0,
-      "proposed_inline_links": 40,
+      "proposed_inline_links": 41,
       "applied_inline_links": 0,
       "already_linked_pages": 81,
       "skipped_no_match_pages": 59
@@ -3514,12 +3514,14 @@
       "related_targets": [
         "LLM",
         "Multi-Head Attention",
+        "Scaled Dot-Product Attention",
         "KV Cache",
         "LLM 主题"
       ],
       "existing_targets": [
         "LLM",
         "Multi-Head Attention",
+        "Scaled Dot-Product Attention",
         "KV Cache",
         "LLM 主题"
       ],
@@ -3531,17 +3533,18 @@
         {
           "target": "KV Cache",
           "alias": "KV Cache",
-          "start": 1857,
-          "end": 1865,
+          "start": 1931,
+          "end": 1939,
           "replacement": "[[KV Cache]]",
-          "line": 69,
+          "line": 71,
           "context": "所有 token 保存自己的 K 和 V 矩阵，这就是 KV Cache。头数越多、序列越长，显存占用越夸张。一个 7B 模型跑"
         }
       ],
       "applied_links": 0,
-      "unsafe_region_skips": 7,
+      "unsafe_region_skips": 9,
       "unmatched_existing_targets": [
         "Multi-Head Attention",
+        "Scaled Dot-Product Attention",
         "LLM 主题"
       ],
       "request_meta_hits": [],
@@ -3590,11 +3593,13 @@
       "has_related_section": true,
       "related_targets": [
         "LLM",
-        "LLM 主题"
+        "LLM 主题",
+        "Gating Mechanism"
       ],
       "existing_targets": [
         "LLM",
-        "LLM 主题"
+        "LLM 主题",
+        "Gating Mechanism"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -3602,9 +3607,10 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 2,
+      "unsafe_region_skips": 4,
       "unmatched_existing_targets": [
-        "LLM 主题"
+        "LLM 主题",
+        "Gating Mechanism"
       ],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -3615,11 +3621,17 @@
       "has_related_section": true,
       "related_targets": [
         "LLM",
-        "LLM 主题"
+        "LLM 主题",
+        "Token Embedding",
+        "Scaled Dot-Product Attention",
+        "Positional Encoding"
       ],
       "existing_targets": [
         "LLM",
-        "LLM 主题"
+        "LLM 主题",
+        "Token Embedding",
+        "Scaled Dot-Product Attention",
+        "Positional Encoding"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -3627,9 +3639,12 @@
       ],
       "proposed_links": [],
       "applied_links": 0,
-      "unsafe_region_skips": 2,
+      "unsafe_region_skips": 8,
       "unmatched_existing_targets": [
-        "LLM 主题"
+        "LLM 主题",
+        "Token Embedding",
+        "Scaled Dot-Product Attention",
+        "Positional Encoding"
       ],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -3839,21 +3854,45 @@
       "has_related_section": true,
       "related_targets": [
         "LLM",
-        "LLM 主题"
+        "LLM 主题",
+        "Gating Mechanism",
+        "Token Embedding",
+        "Scaled Dot-Product Attention",
+        "Masked Attention",
+        "Positional Encoding"
       ],
       "existing_targets": [
         "LLM",
-        "LLM 主题"
+        "LLM 主题",
+        "Gating Mechanism",
+        "Token Embedding",
+        "Scaled Dot-Product Attention",
+        "Masked Attention",
+        "Positional Encoding"
       ],
       "missing_targets": [],
       "already_linked_targets": [
         "LLM"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "Scaled Dot-Product Attention",
+          "alias": "Scaled Dot-Product Attention",
+          "start": 4570,
+          "end": 4598,
+          "replacement": "[[Scaled Dot-Product Attention]]",
+          "line": 134,
+          "context": "直觉)  公式里的 `/√d_k` 这一步常被叫做 **Scaled Dot-Product Attention（缩放点积注意力）**。这个 √d\\_k 不是随便加的，"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 2,
+      "unsafe_region_skips": 12,
       "unmatched_existing_targets": [
-        "LLM 主题"
+        "LLM 主题",
+        "Gating Mechanism",
+        "Token Embedding",
+        "Masked Attention",
+        "Positional Encoding"
       ],
       "request_meta_hits": [],
       "no_match_reason": null
@@ -3865,12 +3904,14 @@
       "related_targets": [
         "NLP",
         "LLM",
-        "LLM 主题"
+        "LLM 主题",
+        "Masked Attention"
       ],
       "existing_targets": [
         "NLP",
         "LLM",
-        "LLM 主题"
+        "LLM 主题",
+        "Masked Attention"
       ],
       "missing_targets": [],
       "already_linked_targets": [
@@ -3880,17 +3921,18 @@
         {
           "target": "NLP",
           "alias": "NLP",
-          "start": 514,
-          "end": 517,
+          "start": 541,
+          "end": 544,
           "replacement": "[[NLP]]",
-          "line": 25,
-          "context": "题]]\" ---  # 1. 什么是大语言模型？和传统 NLP 模型有什么区别？  原始链接：https://xiao"
+          "line": 26,
+          "context": "n]]\" ---  # 1. 什么是大语言模型？和传统 NLP 模型有什么区别？  原始链接：https://xiao"
         }
       ],
       "applied_links": 0,
-      "unsafe_region_skips": 9,
+      "unsafe_region_skips": 11,
       "unmatched_existing_targets": [
-        "LLM 主题"
+        "LLM 主题",
+        "Masked Attention"
       ],
       "request_meta_hits": [],
       "no_match_reason": null

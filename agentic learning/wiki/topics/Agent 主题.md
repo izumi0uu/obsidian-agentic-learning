@@ -18,6 +18,7 @@ related:
   - "[[OpenClaw Repo vs Hermes Agent]]"
   - "[[Tool 接口层对比]]"
   - "[[A2A MCP ANP 对比]]"
+  - "[[Rollout]]"
   - "[[Agent 安全控制点对比]]"
   - "[[ReAct Plan-and-Solve Reflexion 对比]]"
   - "[[AI Engineering From Scratch]]"
@@ -77,6 +78,7 @@ SORT created DESC
 - [[Plan-and-Solve Prompting]]
 - [[ReWOO]]
 - [[Reasoning Trace]]
+- [[Rollout]]
 - [[Observation]]
 - [[Coding Agent]]
 - [[Repo Context]]

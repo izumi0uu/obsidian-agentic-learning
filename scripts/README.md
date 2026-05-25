@@ -158,6 +158,28 @@ python3 scripts/concept_taxonomy/validate_taxonomy_baseline_map.py
 
 边界：默认验证命令不会新增概念卡关系；`concepts_without_up` 允许大于 0，只要审计台账证明它们是 root/terminal/deferred-with-backlog。
 
+## True Recall 概念卡导入草稿
+
+```bash
+cd /Users/idah/Projects-combined/obsidian-agentic-learning
+python3 scripts/export_true_recall_concept_cards.py Transformer --dry-run
+python3 scripts/export_true_recall_concept_cards.py Transformer --output reports/true-recall-transformer-import.md
+python3 scripts/export_true_recall_concept_cards.py RAG MCP "Agent Workflow" --include-triggers
+python3 scripts/import_true_recall_cards.py reports/true-recall-transformer-import.md --dry-run
+python3 scripts/import_true_recall_cards.py reports/true-recall-transformer-import.md
+```
+
+脚本行为：
+
+- 只读扫描 `agentic learning/wiki/concepts/*.md`，或扫描命令行指定的概念卡。
+- 从 `## 一句话`、`## 它不是什么`、`## 边界细节`、`## 现代性状态`、`## 常见误解` 等 section 生成少量 basic flashcards。
+- 输出 True Recall Import Studio 可识别的 block format：`#type/basic`、`Front:`、`Back:`，卡片之间用 `---` 分隔。
+- 默认只写 `reports/true-recall-concept-cards.md`，不直接写 True Recall SQLite 数据库，也不修改概念卡正文。
+- `--include-triggers` 会把 `## 复习触发` 的问题转成 open self-test cards；这类卡默认让用户先自行作答，再回看源概念卡。
+- `import_true_recall_cards.py` 读取导入草稿，给源 Markdown 补 `flashcard_uid`，备份 `.true-recall` 数据库，然后写入 `notes` / `cards`。重复导入同一 source + front/back 时会跳过重复卡。
+
+边界：True Recall 是间隔复习层，不是 wiki 的证据层。导入前应先删掉过宽、过长或不想背的卡；成熟边界仍要写回 `wiki/concepts/` 或 `wiki/topics/`，不能只停留在插件卡片里。导入器只支持本 vault 当前 True Recall 1.9.x 的本地 SQLite schema；插件升级后先 dry-run 并检查 schema。
+
 ## 请求 / 会话元信息审计
 
 ```bash

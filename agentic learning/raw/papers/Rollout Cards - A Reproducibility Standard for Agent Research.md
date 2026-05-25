@@ -22,7 +22,7 @@ topic:
   - benchmark
   - frontier
 created: 2026-05-14
-updated: 2026-05-18
+updated: 2026-05-24
 last_checked: 2026-05-14
 freshness: watch
 conflicts: []
@@ -32,6 +32,7 @@ related:
   - "[[Evaluation]]"
   - "[[Agent Robustness]]"
   - "[[Benchmark]]"
+  - "[[Rollout]]"
   - "[[Trajectory Evaluation]]"
   - "[[Trace]]"
   - "[[Replay]]"
@@ -56,11 +57,11 @@ related:
 
 ## 为什么收
 
-这篇值得靠前读，因为它把 Agent 评估的证据单位从 headline score 拉回 rollout record。对 Agent 学习来说，这是一个很重要的边界：同一段行为可能因为截取、失败统计、cost/token 规则不同而得到不同分数。
+这篇值得靠前读，因为它把 Agent 评估的证据单位从 headline score 拉回 [[Rollout|rollout record]]。对 Agent 学习来说，这是一个很重要的边界：同一段行为可能因为截取、失败统计、cost/token 规则不同而得到不同分数。
 
 ## 一句话
 
-Rollout Cards 主张 Agent 研究复现时应公开 rollout record、reporting rules 和 drops manifest，而不只报告分数。
+Rollout Cards 主张 Agent 研究复现时应公开 [[Rollout|rollout record]]、reporting rules 和 drops manifest，而不只报告分数。
 
 ## 先读什么
 
@@ -92,6 +93,7 @@ Rollout Cards 主张 Agent 研究复现时应公开 rollout record、reporting r
 - 支撑概念:
   - [[Evaluation]]
   - [[Benchmark]]
+  - [[Rollout]]
   - [[Trajectory Evaluation]]
 - 证据边界：
   - 这条短摘只证明作者在论文第一页/摘要中提出该 claim；不能证明方法已经被独立复现或成为稳定工程标准。
@@ -113,6 +115,7 @@ Rollout Cards 主张 Agent 研究复现时应公开 rollout record、reporting r
 - 支撑概念:
   - [[Evaluation]]
   - [[Benchmark]]
+  - [[Rollout]]
   - [[Trajectory Evaluation]]
 - 证据边界：
   - 这条短摘只证明作者在论文第一页/摘要中提出该 claim；不能证明方法已经被独立复现或成为稳定工程标准。
@@ -134,6 +137,7 @@ Rollout Cards 主张 Agent 研究复现时应公开 rollout record、reporting r
 - 支撑概念:
   - [[Evaluation]]
   - [[Benchmark]]
+  - [[Rollout]]
   - [[Trajectory Evaluation]]
 - 证据边界：
   - 这条短摘只证明作者在论文第一页/摘要中提出该 claim；不能证明方法已经被独立复现或成为稳定工程标准。
@@ -156,7 +160,7 @@ Rollout Cards 主张 Agent 研究复现时应公开 rollout record、reporting r
 
 ### 读完要更新
 
-- 可能更新的概念卡：[[Evaluation]], [[Benchmark]], [[Trajectory Evaluation]], [[Trace]], [[Replay]]
+- 可能更新的概念卡：[[Rollout]], [[Evaluation]], [[Benchmark]], [[Trajectory Evaluation]], [[Trace]], [[Replay]]
 - 可能更新的 topic / map：[[Agent 主题]], [[Agent 知识地图]], [[03 前沿追踪]]
 - 如果精读后出现稳定概念，再从本 source note 拆卡；不要只凭标题创建弱概念卡。
 
@@ -164,9 +168,9 @@ Rollout Cards 主张 Agent 研究复现时应公开 rollout record、reporting r
 
 | Claim | Evidence anchor | Confidence | Target concept |
 |---|---|---|---|
-| Agentic tasks 的复现单位应是 rollout record，而非只看 reported score。 | Abstract | high | [[Trajectory Evaluation]] |
+| Agentic tasks 的复现单位应是 [[Rollout|rollout record]]，而非只看 reported score。 | Abstract | high | [[Rollout]] |
 | 不同 reporting rules 可以改变 task-success、cost/token 和 timing 等结果。 | Abstract | medium-high | [[Evaluation]] |
-| Rollout cards 保存 rollout record 并声明视图、报告规则和丢弃清单。 | Abstract | medium | [[Audit Log]] |
+| Rollout cards 保存 [[Rollout|rollout record]] 并声明视图、报告规则和丢弃清单。 | Abstract | medium | [[Audit Log]] |
 
 边界：这些 claim 当前主要来自本地 extracted Page 1 / Abstract；没有读到 section/page/figure 时，不伪造页码或段落级证据。
 
@@ -202,13 +206,14 @@ Rollout Cards 主张 Agent 研究复现时应公开 rollout record、reporting r
 
 ## Ingest 摘要
 
-- 已沉淀到 wiki 的概念：暂无；本页先作为 raw source evidence，后续精读后再决定是否拆卡。
+- 已沉淀到 wiki 的概念：[[Rollout]]；本页继续作为 raw source evidence，后续精读后再补充 section / table / limitations 级证据。
 - 还没处理的证据：PDF 正文、实验细节、limitations、artifact / code。
 
 ## 可以拆成概念卡
 
 | Concept | Why it deserves a card | Source anchor | Priority |
 |---|---|---|---|
+| [[Rollout]] | 区分一次实际运行、trajectory、trace、rollout record 和 reported score | [[Rollout Cards - A Reproducibility Standard for Agent Research#需要我读的内容]] | P1 done |
 | [[Trajectory Evaluation]] | 补强“过程记录是评估对象”这个核心判断 | [[Rollout Cards - A Reproducibility Standard for Agent Research#需要我读的内容]] | P1 |
 | [[Benchmark]] | 补 benchmark reporting / reproducibility 边界 | [[Rollout Cards - A Reproducibility Standard for Agent Research#需要我读的内容]] | P1 |
 | [[Replay]] | rollout record 与 replay / audit 的关系值得后续拆 | [[Rollout Cards - A Reproducibility Standard for Agent Research#需要我读的内容]] | P2 |
@@ -217,7 +222,7 @@ Rollout Cards 主张 Agent 研究复现时应公开 rollout record、reporting r
 
 - 最小 rollout card 应该包含哪些字段，才能支持重算 task success rate？
 - 失败、错误、跳过运行应该如何和最终分数一起报告？
-- rollout card 与 trace / audit log / replay 的边界如何切开？
+- rollout card 与 [[Trace]] / [[Audit Log]] / [[Replay]] 的边界如何切开？
 
 ## 边界提醒
 

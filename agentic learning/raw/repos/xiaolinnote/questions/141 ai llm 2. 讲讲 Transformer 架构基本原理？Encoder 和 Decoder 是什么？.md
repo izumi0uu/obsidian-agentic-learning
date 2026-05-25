@@ -8,7 +8,7 @@ topic:
   - llm
 status: inbox
 created: 2026-05-17
-updated: 2026-05-17
+updated: 2026-05-25
 url: https://xiaolinnote.com/ai/llm/transformer_architecture.html
 source: https://xiaolinnote.com/ai/llm/transformer_architecture.html
 last_checked: 2026-05-17
@@ -19,6 +19,11 @@ related:
   - "[[资料收集索引]]"
   - "[[LLM]]"
   - "[[LLM 主题]]"
+  - "[[Gating Mechanism]]"
+  - "[[Token Embedding]]"
+  - "[[Scaled Dot-Product Attention]]"
+  - "[[Masked Attention]]"
+  - "[[Positional Encoding]]"
 ---
 
 # 2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？
@@ -31,6 +36,11 @@ related:
 
 - [[LLM]]
 - [[LLM 主题]]
+- [[Gating Mechanism]]
+- [[Token Embedding]]
+- [[Scaled Dot-Product Attention]]
+- [[Masked Attention]]
+- [[Positional Encoding]]
 
 ## 页面正文
 

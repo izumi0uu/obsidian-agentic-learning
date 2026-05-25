@@ -7,7 +7,7 @@ topic:
   - math
 status: growing
 created: 2026-05-24
-updated: 2026-05-24
+updated: 2026-05-25
 last_checked: 2026-05-24
 freshness: stable
 conflicts: []
@@ -40,6 +40,7 @@ related:
   - "[[Vector Database]]"
   - "[[Top-K]]"
   - "[[Reranking]]"
+  - "[[Scaled Dot-Product Attention]]"
 ---
 
 # Vector Similarity Metrics
@@ -96,6 +97,8 @@ score = cosine_similarity(query_vec, chunk_vec)
 
 和 [[L2 Normalization]] 的边界：L2 normalization 是把向量缩放到单位长度；Vector Similarity Metrics 是比较向量的规则。归一化会改变 dot product / cosine / L2 distance 的等价关系。
 
+和 [[Scaled Dot-Product Attention]] 的边界：二者都用 dot product 比较向量，但 attention 里的 Q/K 是模型内部临时投影，用来生成 token 间注意力权重；RAG 相似度 metric 通常比较 query embedding 和 document embedding，用来排序候选资料。
+
 和 [[Top-K]] 的边界：similarity metric 产生排序分数；Top-K 是只保留前 K 个候选的预算控制。
 
 和 [[Hybrid Search]] 的边界：hybrid search 要合并向量相似度、BM25 等不同量纲信号；这时通常不能直接把原始分数相加，可能需要 RRF、归一化或 reranking。
@@ -134,3 +137,4 @@ score = cosine_similarity(query_vec, chunk_vec)
 - [[Vector Database]]
 - [[Top-K]]
 - [[Reranking]]
+- [[Scaled Dot-Product Attention]]

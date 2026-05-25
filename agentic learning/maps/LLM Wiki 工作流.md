@@ -6,7 +6,7 @@ topic:
   - workflow
 status: active
 created: 2026-05-05
-updated: 2026-05-22
+updated: 2026-05-25
 source: /Users/idah/Downloads/llm-wiki.md
 related:
   - "[[Agent 知识地图]]"
@@ -41,6 +41,8 @@ reviews/ -> concept-triggered review, Feynman answers, write-back candidates
 ```
 
 小边界：`reviews/` 记录“我怎么检查自己有没有懂”，不替代 `wiki/` 的稳定概念卡，也不作为 `raw/` 的来源证据。
+
+True Recall 间隔复习是第三层：它只承接已经稳定到可背诵 / 可自测的小颗粒问题，不替代 `wiki/` 的概念卡，也不替代 `reviews/` 的费曼复述。需要批量导入时，先用 `python3 scripts/export_true_recall_concept_cards.py <Concept...>` 生成 `#type/basic` 导入草稿；审阅后可以在 True Recall Import Studio 保存，或用 `python3 scripts/import_true_recall_cards.py <draft.md>` 导入本地数据库。插件卡片暴露的新误解仍要回到 `reviews/`、[[02 问题池]]、[[05 Query 写回队列]] 或概念卡正文闭环。
 
 ## Map 准入边界
 

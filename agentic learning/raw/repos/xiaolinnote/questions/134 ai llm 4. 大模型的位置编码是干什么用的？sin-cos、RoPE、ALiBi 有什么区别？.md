@@ -8,7 +8,7 @@ topic:
   - llm
 status: inbox
 created: 2026-05-17
-updated: 2026-05-17
+updated: 2026-05-25
 url: https://xiaolinnote.com/ai/llm/position_encoding.html
 source: https://xiaolinnote.com/ai/llm/position_encoding.html
 last_checked: 2026-05-17
@@ -19,6 +19,9 @@ related:
   - "[[资料收集索引]]"
   - "[[LLM]]"
   - "[[LLM 主题]]"
+  - "[[Token Embedding]]"
+  - "[[Scaled Dot-Product Attention]]"
+  - "[[Positional Encoding]]"
 ---
 
 # 4. [[LLM|大模型]]的位置编码是干什么用的？sin/cos、RoPE、ALiBi 有什么区别？
@@ -31,6 +34,9 @@ related:
 
 - [[LLM]]
 - [[LLM 主题]]
+- [[Token Embedding]]
+- [[Scaled Dot-Product Attention]]
+- [[Positional Encoding]]
 
 ## 页面正文
 

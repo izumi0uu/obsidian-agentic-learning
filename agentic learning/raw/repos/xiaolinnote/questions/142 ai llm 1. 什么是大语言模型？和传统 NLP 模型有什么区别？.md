@@ -8,7 +8,7 @@ topic:
   - llm
 status: inbox
 created: 2026-05-17
-updated: 2026-05-18
+updated: 2026-05-25
 url: https://xiaolinnote.com/ai/llm/what_is_llm.html
 source: https://xiaolinnote.com/ai/llm/what_is_llm.html
 last_checked: 2026-05-17
@@ -20,6 +20,7 @@ related:
   - "[[NLP]]"
   - "[[LLM]]"
   - "[[LLM 主题]]"
+  - "[[Masked Attention]]"
 ---
 
 # 1. 什么是大语言模型？和传统 NLP 模型有什么区别？
@@ -33,6 +34,7 @@ related:
 - [[NLP]]
 - [[LLM]]
 - [[LLM 主题]]
+- [[Masked Attention]]
 
 ## 页面正文
 

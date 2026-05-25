@@ -5,18 +5,22 @@ topic:
   - transformer
 status: growing
 created: 2026-05-05
-updated: 2026-05-10
+updated: 2026-05-25
 last_checked: 2026-05-10
 freshness: stable
 conflicts: []
 source:
   - "[[Attention Is All You Need]]"
+  - "[[20分钟读懂AI神级论文 Attention Is All You Need]]"
 evidence:
   - "[[Attention Is All You Need#为什么收]]"
+  - "[[20分钟读懂AI神级论文 Attention Is All You Need#Multi-Head Attention：从多个视角看同一句话]]"
 related:
   - "[[Transformer]]"
   - "[[Self-Attention]]"
   - "[[LLM]]"
+  - "[[Scaled Dot-Product Attention]]"
+  - "[[Masked Attention]]"
 ---
 
 # Multi-Head Attention
@@ -33,7 +37,7 @@ Multi-Head Attention 的问题背景是单一 attention 视角容易把不同关
 
 对 Agent 学习来说，它的边界尤其重要：Multi-Head Attention 是 LLM 内部序列建模机制，不是多个 Agent、不是多模型协作，也不是 tool routing。它说明 LLM 为什么能成为强文本底座，却不解释工具权限、状态恢复、计划执行或安全评估。现代系统通常不直接操作 head，而是在模型外层用工具、RAG、trace 和 evaluation 约束输出。
 
-从机制上看，每个 head 都会把输入表示投影成自己的 query/key/value 空间，计算一组注意力结果。多个 head 的意义不是“让模型开会”，而是让同一层能并行提取不同关系，再交给后续层继续组合。学习时只需要把这个抽象抓住，不必把每个 head 都解释成固定语法功能。
+从机制上看，每个 head 都会把输入表示投影成自己的 query/key/value 空间，通常用 [[Scaled Dot-Product Attention]] 计算一组注意力结果。多个 head 的意义不是“让模型开会”，而是让同一层能并行提取不同关系，再交给后续层继续组合。原始 Transformer 的一个具体配置是 `d_model = 512`、`h = 8`，每个 head 常用 `d_k = 64`，8 个 head 的结果拼接后回到 512 维；这只是原论文配置例子，不是所有 Transformer 的固定规则。decoder 里的 masked multi-head attention 只是给这些 head 加上未来 token 不可见的约束，不是另一组独立 Agent。学习时只需要把这个抽象抓住，不必把每个 head 都解释成固定语法功能。
 
 
 ## 它解决什么问题
@@ -49,6 +53,8 @@ Multi-Head Attention 不是多个 Agent。
 ## 最小例子
 
 一个 head 可能更关注主语和动词的关系，另一个 head 可能更关注代词和指代对象的关系。最终这些 head 的结果会被拼接和投影。
+
+原始 Transformer 的教学数字是 8 个 head，每个 head 64 维，拼接后回到 512 维。这个数字帮助理解“多头并行 + 拼接回模型维度”，不要外推成现代模型的固定头数或维度。
 
 ## 常见误解
 
@@ -81,4 +87,6 @@ foundation。Multi-Head Attention 是 Transformer 论文中的稳定架构概念
 - [[Transformer]]
 - [[Self-Attention]]
 - [[LLM]]
+- [[Scaled Dot-Product Attention]]
+- [[Masked Attention]]
 - [[Attention Is All You Need]]

@@ -5,14 +5,16 @@ topic:
   - transformer
 status: growing
 created: 2026-05-05
-updated: 2026-05-10
+updated: 2026-05-25
 last_checked: 2026-05-10
 freshness: stable
 conflicts: []
 source:
   - "[[Attention Is All You Need]]"
+  - "[[20分钟读懂AI神级论文 Attention Is All You Need]]"
 evidence:
   - "[[Attention Is All You Need#为什么收]]"
+  - "[[20分钟读懂AI神级论文 Attention Is All You Need#Positional Encoding：给并行模型补上顺序]]"
 related:
   - "[[Transformer]]"
   - "[[Self-Attention]]"

@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
   "artifact_type": "temporary_concept_relationship_map",
-  "generated_at": "2026-05-24T09:21:10Z",
+  "generated_at": "2026-05-25T02:54:37Z",
   "scope": {
     "concept_dir": "agentic learning/wiki/concepts",
     "temporary": true,
     "write_policy": "Do not write these candidates into concept cards without a separate review task."
   },
   "summary": {
-    "total_concepts": 172,
+    "total_concepts": 177,
     "edge_counts": {
-      "related_link": 1061,
-      "body_link": 292,
-      "typed_relation": 57,
+      "related_link": 1104,
+      "body_link": 297,
+      "typed_relation": 65,
       "taxonomy": 45
     },
     "typed_relation_counts": {
-      "contrasts_with": 8,
-      "related_to": 15,
+      "contrasts_with": 9,
+      "related_to": 22,
       "representative_of": 2,
       "based_on_intuition": 1,
       "paired_with": 2,
@@ -39,7 +39,7 @@
       "composed_into": 2,
       "foundational_for": 1
     },
-    "concepts_without_up": 127,
+    "concepts_without_up": 132,
     "core_orphans": 0,
     "weakly_connected_concepts": 1,
     "dangling_core_targets": 31,
@@ -224,6 +224,7 @@
         "Evaluation",
         "BFCL",
         "Eval Harness",
+        "Rollout",
         "LLM-as-Judge",
         "Win Rate",
         "Task Success Rate",
@@ -407,6 +408,7 @@
         "Evaluation",
         "Task Success Rate",
         "Trajectory Evaluation",
+        "Rollout",
         "Trace",
         "Guardrails",
         "Tool Calling"
@@ -438,6 +440,7 @@
       "related": [
         "Agent Harness",
         "Progressive Disclosure",
+        "Gating Mechanism",
         "Tool Registry",
         "Tool Poisoning",
         "MCP",
@@ -626,6 +629,7 @@
       "related": [
         "Least Privilege Tools",
         "Policy Engine",
+        "Gating Mechanism",
         "Computer Use",
         "Tool Calling"
       ]
@@ -1410,7 +1414,8 @@
         "Vector Similarity Metrics",
         "Matryoshka Embeddings",
         "Embedding Quantization",
-        "MTEB"
+        "MTEB",
+        "Token Embedding"
       ]
     },
     {
@@ -1749,6 +1754,33 @@
         "Computer Use",
         "Browser Agent",
         "Observation"
+      ]
+    },
+    {
+      "id": "Gating Mechanism",
+      "title": "Gating Mechanism",
+      "file": "agentic learning/wiki/concepts/Gating Mechanism.md",
+      "topics": [
+        "llm",
+        "transformer",
+        "architecture"
+      ],
+      "status": "growing",
+      "freshness": "watch",
+      "aliases": [
+        "门控机制",
+        "gating mechanism",
+        "gated activation"
+      ],
+      "source_count": 4,
+      "evidence_count": 4,
+      "up": [],
+      "related": [
+        "LLM",
+        "Transformer",
+        "Multi-Head Attention",
+        "Agent Skills",
+        "Approval Gate"
       ]
     },
     {
@@ -2149,6 +2181,7 @@
       "related": [
         "Agent",
         "Transformer",
+        "Gating Mechanism",
         "LLM Training Pipeline",
         "Tool Calling",
         "RAG",
@@ -2565,6 +2598,36 @@
       ]
     },
     {
+      "id": "Masked Attention",
+      "title": "Masked Attention",
+      "file": "agentic learning/wiki/concepts/Masked Attention.md",
+      "topics": [
+        "llm",
+        "transformer"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "masked attention",
+        "masked multi-head attention",
+        "causal mask",
+        "causal masking",
+        "因果掩码",
+        "遮罩注意力",
+        "掩码注意力"
+      ],
+      "source_count": 2,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Transformer",
+        "Self-Attention",
+        "Multi-Head Attention",
+        "Token",
+        "Constrained Decoding"
+      ]
+    },
+    {
       "id": "Matryoshka Embeddings",
       "title": "Matryoshka Embeddings",
       "file": "agentic learning/wiki/concepts/Matryoshka Embeddings.md",
@@ -2686,13 +2749,15 @@
       "status": "growing",
       "freshness": "stable",
       "aliases": [],
-      "source_count": 1,
-      "evidence_count": 1,
+      "source_count": 2,
+      "evidence_count": 2,
       "up": [],
       "related": [
         "Transformer",
         "Self-Attention",
-        "LLM"
+        "LLM",
+        "Scaled Dot-Product Attention",
+        "Masked Attention"
       ]
     },
     {
@@ -3167,8 +3232,8 @@
       "status": "growing",
       "freshness": "stable",
       "aliases": [],
-      "source_count": 1,
-      "evidence_count": 1,
+      "source_count": 2,
+      "evidence_count": 2,
       "up": [],
       "related": [
         "Transformer",
@@ -3708,6 +3773,7 @@
       "evidence_count": 2,
       "up": [],
       "related": [
+        "Rollout",
         "Trace",
         "Observability",
         "Eval Harness"
@@ -3815,6 +3881,34 @@
       ]
     },
     {
+      "id": "Rollout",
+      "title": "Rollout",
+      "file": "agentic learning/wiki/concepts/Rollout.md",
+      "topics": [
+        "agent",
+        "evaluation",
+        "reproducibility",
+        "observability"
+      ],
+      "status": "growing",
+      "freshness": "watch",
+      "aliases": [
+        "agent rollout",
+        "rollout record"
+      ],
+      "source_count": 1,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Trajectory",
+        "Trace",
+        "Trajectory Evaluation",
+        "Replay",
+        "Eval Harness",
+        "Task Success Rate"
+      ]
+    },
+    {
       "id": "Sandbox Workspace",
       "title": "Sandbox Workspace",
       "file": "agentic learning/wiki/concepts/Sandbox Workspace.md",
@@ -3837,6 +3931,33 @@
       ]
     },
     {
+      "id": "Scaled Dot-Product Attention",
+      "title": "Scaled Dot-Product Attention",
+      "file": "agentic learning/wiki/concepts/Scaled Dot-Product Attention.md",
+      "topics": [
+        "llm",
+        "transformer",
+        "math"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "scaled dot-product attention",
+        "缩放点积注意力",
+        "缩放点乘注意力",
+        "QK attention"
+      ],
+      "source_count": 2,
+      "evidence_count": 3,
+      "up": [],
+      "related": [
+        "Self-Attention",
+        "Multi-Head Attention",
+        "Vector Similarity Metrics",
+        "L2 Normalization"
+      ]
+    },
+    {
       "id": "Self-Attention",
       "title": "Self-Attention",
       "file": "agentic learning/wiki/concepts/Self-Attention.md",
@@ -3847,13 +3968,15 @@
       "status": "growing",
       "freshness": "stable",
       "aliases": [],
-      "source_count": 1,
-      "evidence_count": 1,
+      "source_count": 2,
+      "evidence_count": 2,
       "up": [],
       "related": [
         "Transformer",
         "Multi-Head Attention",
-        "LLM"
+        "LLM",
+        "Scaled Dot-Product Attention",
+        "Masked Attention"
       ]
     },
     {
@@ -4180,7 +4303,36 @@
         "LLM",
         "Context Window",
         "Prompt",
-        "Transformer"
+        "Transformer",
+        "Token Embedding"
+      ]
+    },
+    {
+      "id": "Token Embedding",
+      "title": "Token Embedding",
+      "file": "agentic learning/wiki/concepts/Token Embedding.md",
+      "topics": [
+        "llm",
+        "transformer"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "token embedding",
+        "input embedding",
+        "词嵌入",
+        "输入嵌入",
+        "token 向量"
+      ],
+      "source_count": 4,
+      "evidence_count": 5,
+      "up": [],
+      "related": [
+        "Token",
+        "Embedding",
+        "Transformer",
+        "Positional Encoding",
+        "Self-Attention"
       ]
     },
     {
@@ -4354,6 +4506,7 @@
         "Tool Calling",
         "Agent Lifecycle Hook",
         "Trajectory Trace 类型对比",
+        "Rollout",
         "Trajectory",
         "Reasoning Trace",
         "Replay"
@@ -4376,6 +4529,7 @@
       "up": [],
       "related": [
         "Trajectory Trace 类型对比",
+        "Rollout",
         "Trace",
         "Reasoning Trace",
         "Trajectory Evaluation",
@@ -4397,13 +4551,14 @@
       "status": "growing",
       "freshness": "watch",
       "aliases": [],
-      "source_count": 2,
-      "evidence_count": 4,
+      "source_count": 3,
+      "evidence_count": 5,
       "up": [
         "Evaluation"
       ],
       "related": [
         "Evaluation",
+        "Rollout",
         "Trajectory",
         "Trace",
         "Eval Harness",
@@ -4423,14 +4578,16 @@
       "status": "growing",
       "freshness": "stable",
       "aliases": [],
-      "source_count": 1,
-      "evidence_count": 1,
+      "source_count": 2,
+      "evidence_count": 2,
       "up": [],
       "related": [
         "LLM",
         "Self-Attention",
         "Multi-Head Attention",
-        "Positional Encoding"
+        "Positional Encoding",
+        "Gating Mechanism",
+        "Token Embedding"
       ]
     },
     {
@@ -4586,7 +4743,8 @@
         "L2 Normalization",
         "Vector Database",
         "Top-K",
-        "Reranking"
+        "Reranking",
+        "Scaled Dot-Product Attention"
       ]
     },
     {
@@ -5213,6 +5371,16 @@
     },
     {
       "source": "Agent Evaluation Benchmark",
+      "target": "Rollout",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Evaluation Benchmark",
       "target": "Task Success Rate",
       "kind": "related_link",
       "relation_type": "related",
@@ -5823,6 +5991,16 @@
     },
     {
       "source": "Agent Robustness",
+      "target": "Rollout",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "失败、错误、超时和跳过运行是否进入 rollout record，会直接影响鲁棒性评估是否可信。"
+    },
+    {
+      "source": "Agent Robustness",
       "target": "Task Success Rate",
       "kind": "typed_relation",
       "relation_type": "related_to",
@@ -5854,6 +6032,16 @@
     {
       "source": "Agent Robustness",
       "target": "Guardrails",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Robustness",
+      "target": "Rollout",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -5924,6 +6112,16 @@
     {
       "source": "Agent Skills",
       "target": "Agent Harness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Agent Skills",
+      "target": "Gating Mechanism",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -6604,6 +6802,16 @@
     {
       "source": "Approval Gate",
       "target": "Computer Use",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Approval Gate",
+      "target": "Gating Mechanism",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -9173,6 +9381,16 @@
     },
     {
       "source": "Embedding",
+      "target": "Token Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Embedding",
       "target": "Vector Database",
       "kind": "related_link",
       "relation_type": "related",
@@ -10109,6 +10327,86 @@
       "confidence": "observed",
       "status": "internal",
       "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Gating Mechanism",
+      "target": "Approval Gate",
+      "kind": "typed_relation",
+      "relation_type": "contrasts_with",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "Approval Gate 是执行前安全准入点，不是神经网络内部 gate。"
+    },
+    {
+      "source": "Gating Mechanism",
+      "target": "Agent Skills",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "Agent skill 按需加载像系统层离散门控，但不是模型内部连续数学门控。"
+    },
+    {
+      "source": "Gating Mechanism",
+      "target": "Transformer",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "现代 LLM 中的门控常出现在 FFN 激活、MoE 路由或多模态适配层中，是 Transformer 结构上的机制扩展。"
+    },
+    {
+      "source": "Gating Mechanism",
+      "target": "Agent Skills",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Gating Mechanism",
+      "target": "Approval Gate",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Gating Mechanism",
+      "target": "LLM",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Gating Mechanism",
+      "target": "Multi-Head Attention",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Gating Mechanism",
+      "target": "Transformer",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
       "note": ""
     },
     {
@@ -11194,6 +11492,16 @@
     {
       "source": "LLM",
       "target": "Agent",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "LLM",
+      "target": "Gating Mechanism",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -12542,6 +12850,66 @@
       "note": ""
     },
     {
+      "source": "Masked Attention",
+      "target": "Constrained Decoding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Masked Attention",
+      "target": "Multi-Head Attention",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Masked Attention",
+      "target": "Self-Attention",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Masked Attention",
+      "target": "Token",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Masked Attention",
+      "target": "Transformer",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Masked Attention",
+      "target": "KV Cache",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "Matryoshka Embeddings",
       "target": "Embedding Optimization",
       "kind": "taxonomy",
@@ -12904,6 +13272,26 @@
     {
       "source": "Multi-Head Attention",
       "target": "LLM",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Multi-Head Attention",
+      "target": "Masked Attention",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Multi-Head Attention",
+      "target": "Scaled Dot-Product Attention",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -16353,6 +16741,16 @@
     },
     {
       "source": "Replay",
+      "target": "Rollout",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Replay",
       "target": "Trace",
       "kind": "related_link",
       "relation_type": "related",
@@ -16642,6 +17040,136 @@
       "note": ""
     },
     {
+      "source": "Rollout",
+      "target": "Replay",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "保存足够完整的 rollout record 后，后续才能 replay、re-score 或比较 reporting rule。"
+    },
+    {
+      "source": "Rollout",
+      "target": "Trace",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "Trace 是系统记录下来的过程数据；rollout record 要把一次执行的任务、环境、动作、状态、失败和元数据保存成可复用证据。"
+    },
+    {
+      "source": "Rollout",
+      "target": "Trajectory",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "Rollout 关注一次实际执行 episode / run；trajectory 关注这次执行中的路径序列。"
+    },
+    {
+      "source": "Rollout",
+      "target": "Trajectory Evaluation",
+      "kind": "typed_relation",
+      "relation_type": "related_to",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "Trajectory Evaluation 可以读取 rollout / rollout record 来判断过程质量，而不只看最终分数。"
+    },
+    {
+      "source": "Rollout",
+      "target": "Eval Harness",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Rollout",
+      "target": "Replay",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Rollout",
+      "target": "Task Success Rate",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Rollout",
+      "target": "Trace",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Rollout",
+      "target": "Trajectory",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Rollout",
+      "target": "Trajectory Evaluation",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Rollout",
+      "target": "Agent Evaluation Benchmark",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Rollout",
+      "target": "Agent Robustness",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Rollout",
+      "target": "Reasoning Trace",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "Sandbox Workspace",
       "target": "Agent Harness",
       "kind": "related_link",
@@ -16712,6 +17240,46 @@
       "note": ""
     },
     {
+      "source": "Scaled Dot-Product Attention",
+      "target": "L2 Normalization",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Scaled Dot-Product Attention",
+      "target": "Multi-Head Attention",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Scaled Dot-Product Attention",
+      "target": "Self-Attention",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Scaled Dot-Product Attention",
+      "target": "Vector Similarity Metrics",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
       "source": "Self-Attention",
       "target": "LLM",
       "kind": "related_link",
@@ -16723,7 +17291,27 @@
     },
     {
       "source": "Self-Attention",
+      "target": "Masked Attention",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Self-Attention",
       "target": "Multi-Head Attention",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Self-Attention",
+      "target": "Scaled Dot-Product Attention",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -17683,6 +18271,16 @@
     },
     {
       "source": "Token",
+      "target": "Token Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Token",
       "target": "Transformer",
       "kind": "related_link",
       "relation_type": "related",
@@ -17699,6 +18297,56 @@
       "confidence": "observed",
       "status": "internal",
       "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Token Embedding",
+      "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Token Embedding",
+      "target": "Positional Encoding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Token Embedding",
+      "target": "Self-Attention",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Token Embedding",
+      "target": "Token",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Token Embedding",
+      "target": "Transformer",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
       "note": ""
     },
     {
@@ -18203,6 +18851,16 @@
     },
     {
       "source": "Trace",
+      "target": "Rollout",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Trace",
       "target": "Tool Calling",
       "kind": "related_link",
       "relation_type": "related",
@@ -18294,6 +18952,16 @@
     {
       "source": "Trajectory",
       "target": "Replay",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Trajectory",
+      "target": "Rollout",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -18413,6 +19081,16 @@
     },
     {
       "source": "Trajectory Evaluation",
+      "target": "Rollout",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Trajectory Evaluation",
       "target": "Trace",
       "kind": "related_link",
       "relation_type": "related",
@@ -18424,6 +19102,16 @@
     {
       "source": "Trajectory Evaluation",
       "target": "Trajectory",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Transformer",
+      "target": "Gating Mechanism",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -18473,7 +19161,27 @@
     },
     {
       "source": "Transformer",
+      "target": "Token Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Transformer",
       "target": "Agent",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
+      "source": "Transformer",
+      "target": "Masked Attention",
       "kind": "body_link",
       "relation_type": "body_wikilink",
       "confidence": "observed",
@@ -18834,6 +19542,16 @@
     {
       "source": "Vector Similarity Metrics",
       "target": "Reranking",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Vector Similarity Metrics",
+      "target": "Scaled Dot-Product Attention",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -20216,6 +20934,7 @@
       "Frontend-first AI Toolkit",
       "GSSC Pipeline",
       "GUI Grounding",
+      "Gating Mechanism",
       "Guardrails",
       "Hallucination",
       "Handoff",
@@ -20237,6 +20956,7 @@
       "MCP Registry",
       "MCP Transport",
       "Managed Agent Harness",
+      "Masked Attention",
       "Memory",
       "Multi-Head Attention",
       "NLP",
@@ -20274,7 +20994,9 @@
       "Reranking",
       "Retriever",
       "Role-playing Agent",
+      "Rollout",
       "Sandbox Workspace",
+      "Scaled Dot-Product Attention",
       "Self-Attention",
       "Self-Consistency",
       "Semantic Search",
@@ -20285,6 +21007,7 @@
       "TTL",
       "Task Success Rate",
       "Token",
+      "Token Embedding",
       "Tool Permissioning",
       "Tool Poisoning",
       "Tool Registry",

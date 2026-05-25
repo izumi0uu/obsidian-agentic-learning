@@ -4,10 +4,10 @@
 - 扫描题页：779
 - 含 `## 相关知识 wiki`：779
 - 已有正文概念链接页：362
-- 本次可新增/已新增链接：72
-- would modify pages：55
+- 本次可新增/已新增链接：73
+- would modify pages：56
 - skipped/no-match pages：410
-- unsafe-region skips：4161
+- unsafe-region skips：4183
 - missing concept candidates：0（unique 0）
 - protected-region violations：0
 
@@ -15,7 +15,7 @@
 
 | root | total | related | already-linked pages | would-modify pages | proposed links | skipped/no-match |
 |---|---:|---:|---:|---:|---:|---:|
-| xiaolinnote | 142 | 142 | 81 | 30 | 40 | 59 |
+| xiaolinnote | 142 | 142 | 81 | 31 | 41 | 59 |
 | agent_java_offer | 637 | 637 | 281 | 25 | 32 | 351 |
 
 ## Sample files selected
@@ -156,13 +156,14 @@
 - agentic learning/raw/repos/xiaolinnote/questions/127 ai llm 18. 大模型为什么会出现幻觉？怎么缓解？.md:83 — `Self-Consistency` -> `[[Self-Consistency]]`
 - agentic learning/raw/repos/xiaolinnote/questions/128 ai llm 14. KV Cache 是什么？Prompt Caching 的原理是什么？.md:26 — `KV Cache` -> `[[KV Cache]]`
 - agentic learning/raw/repos/xiaolinnote/questions/128 ai llm 14. KV Cache 是什么？Prompt Caching 的原理是什么？.md:196 — `Few-shot` -> `[[Few-shot Prompting]]`
-- agentic learning/raw/repos/xiaolinnote/questions/131 ai llm 3. 多头注意力（MHA）有哪些局限？MQA、GQA、Flash Attention 怎么解决？.md:69 — `KV Cache` -> `[[KV Cache]]`
+- agentic learning/raw/repos/xiaolinnote/questions/131 ai llm 3. 多头注意力（MHA）有哪些局限？MQA、GQA、Flash Attention 怎么解决？.md:71 — `KV Cache` -> `[[KV Cache]]`
 - agentic learning/raw/repos/xiaolinnote/questions/132 ai llm 22. 对比使用过哪些主流大模型？你们项目中最终选用了哪个模型？为什么？.md:69 — `结构化输出` -> `[[Structured Outputs]]`
 - agentic learning/raw/repos/xiaolinnote/questions/136 ai llm 16. 如何写好 Prompt？分享下 Prompt 工程实践经验？.md:28 — `Prompt` -> `[[Prompt]]`
 - agentic learning/raw/repos/xiaolinnote/questions/136 ai llm 16. 如何写好 Prompt？分享下 Prompt 工程实践经验？.md:28 — `Prompt 工程` -> `[[Prompt Engineering]]`
 - agentic learning/raw/repos/xiaolinnote/questions/136 ai llm 16. 如何写好 Prompt？分享下 Prompt 工程实践经验？.md:67 — `Few-shot` -> `[[Few-shot Prompting]]`
 - agentic learning/raw/repos/xiaolinnote/questions/137 ai llm 15. 大模型量化是什么？INT8-INT4-AWQ-GPTQ 怎么选？.md:105 — `KV Cache` -> `[[KV Cache]]`
-- agentic learning/raw/repos/xiaolinnote/questions/142 ai llm 1. 什么是大语言模型？和传统 NLP 模型有什么区别？.md:25 — `NLP` -> `[[NLP]]`
+- agentic learning/raw/repos/xiaolinnote/questions/141 ai llm 2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？.md:134 — `Scaled Dot-Product Attention` -> `[[Scaled Dot-Product Attention]]`
+- agentic learning/raw/repos/xiaolinnote/questions/142 ai llm 1. 什么是大语言模型？和传统 NLP 模型有什么区别？.md:26 — `NLP` -> `[[NLP]]`
 - agentic learning/raw/repos/agent_java_offer/questions/008 01_AI 01_Agent基础 ReAct与规划能力（CoT ToT GoT）.md:42 — `ToT` -> `[[Tree of Thoughts]]`
 - agentic learning/raw/repos/agent_java_offer/questions/014 01_AI 01_Agent基础 在 Agent 的设计中，“规划能力”至重要。请谈谈目前有哪些主流方法可以赋予 LLM 规划能力？（例如 CoT, ToT, GoT等）.md:39 — `ToT` -> `[[Tree of Thoughts]]`
 - agentic learning/raw/repos/agent_java_offer/questions/026 01_AI 02_Workflow与多Agent 在构建一个复杂的 Agent 时，你认为最主要的挑战是什么？.md:88 — `规划与推理的鲁棒性` -> `[[Agent Robustness]]`

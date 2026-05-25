@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-24
+updated: 2026-05-25
 related:
   - "[[Agent]]"
   - "[[前沿主源清单]]"
@@ -15,6 +15,7 @@ related:
   - "[[Tool Calling]]"
   - "[[Constrained Decoding]]"
   - "[[Structured Outputs]]"
+  - "[[Gating Mechanism]]"
   - "[[MCP Transport]]"
   - "[[RAG]]"
   - "[[Semantic Search]]"
@@ -69,11 +70,15 @@ related:
 LLM 地基：
 
 - [[NLP]]：先区分自然语言任务域、模型求解器、架构和工程方法。
+- [[Token Embedding]]：理解 token ID 如何变成模型内部向量，并和 RAG embedding 区分。
 - [[Transformer]]
 - [[Self-Attention]]
+- [[Scaled Dot-Product Attention]]：理解 Q/K/V 点积、缩放、softmax 和加权 V 汇总这条 attention 公式链。
 - [[Multi-Head Attention]]
+- [[Masked Attention]]：理解自回归训练为什么不能看到未来 token，并和 constrained decoding 的 token mask 区分。
 - [[Positional Encoding]]
 - [[KV Cache]]
+- [[Gating Mechanism]]：理解模型内部如何选择性放行特征、激活专家或调制计算路径，并和 Agent 层 approval/skill gate 切开。
 - [[Constrained Decoding]]：理解 structured output / strict tool arguments 如何从 prompt 约束下沉到 token-level 解码约束。
 - [[Structured Outputs]]：理解 LLM 输出怎样变成 schema / typed object / tool arguments 这类软件契约，以及为什么结构合法不等于事实正确。
 - [[Prompt]]、[[Prompt Engineering]] 和 [[Few-shot Prompting]]：区分输入内容本身、围绕输入内容的设计测试治理、以及示例作为推理时临时任务定义的边界。
@@ -189,12 +194,12 @@ LLM 地基：
 - [[Coding Agent 执行边界对比]]：区分 coding agent、repo context、patch validation、sandbox、code execution sandbox 和 AGENTS.md。
 - [[Coding Agent 为什么不用传统 RAG]]：解释 Codex CLI / Claude Code 这类客户端为什么更偏工具化 repo context gathering，而不是让用户维护可见的传统 RAG pipeline。
 - [[OpenClaw Repo vs Hermes Agent]]：区分 OpenClaw 的 Gateway-first personal assistant harness 和 Hermes 的 runtime-first self-improving agent harness。
-- [[Evaluation 层次对比]]：区分 evaluation、benchmark、BFCL/GAIA/AIME 任务层、eval harness、LLM-as-Judge、[[Win Rate]]、task success rate、RAG evaluation 和 trajectory evaluation。
+- [[Evaluation 层次对比]]：区分 evaluation、benchmark、BFCL/GAIA/AIME 任务层、eval harness、LLM-as-Judge、[[Win Rate]]、task success rate、RAG evaluation、trajectory evaluation 和 [[Rollout]] 证据单位。
 - [[Win Rate]]：理解 A/B 或 pairwise comparison 中的相对胜率为什么不能替代任务成功率。
 - [[Observability Audit 对比]]：区分 observability、trace、audit log、replay 和 OpenTelemetry GenAI。
 - [[ReAct Plan-and-Solve Reflexion 对比]]：从“行动前计划 / 执行中观察校正 / 执行后反思经验”切开 ReAct、Plan-and-Solve 和 Reflexion。
 - [[Environment Observation 类型对比]]：区分 Environment、Observation、Tool Result 等反馈来源。
-- [[Trajectory Trace 类型对比]]：区分 trajectory、trace、reasoning trace、trajectory evaluation 和 replay。
+- [[Trajectory Trace 类型对比]]：区分 trajectory、[[Rollout|rollout]]、trace、reasoning trace、trajectory evaluation 和 replay。
 - [[RAG 类型对比]]：区分 RAG、Agentic RAG、Corrective RAG、Self-RAG 等检索增强路线。
 - [[Context RAG Memory 对比]]：区分 context engineering、RAG、memory、repo context 和 retriever。
 - [[Retrieval 组件对比]]：区分 retrieval pipeline 的入库、表示、召回、混合检索和重排。
@@ -207,6 +212,7 @@ LLM 地基：
 - [[LLM 上下文限制与突破条件]]：拆开 context window 的容量、计算、结构、有效使用和治理限制，避免把长上下文误当长期记忆或可靠性保证。
 - [[Context Rot]]：理解长上下文里“信息在窗口内”仍可能因为噪声、干扰和结构问题被模型不稳定使用。
 - [[KV Cache]]：理解自回归 LLM 推理为什么需要缓存历史 K/V，以及长上下文为什么会变成显存和带宽管理问题。
+- [[Gating Mechanism]]：理解 gated activation、MoE router 和 system-level gate 的边界。
 
 ## 当前概念卡
 
@@ -220,6 +226,7 @@ SORT file.name ASC
 ## 下一批要补的概念
 
 - [x] [[Token]]
+- [x] [[Token Embedding]]
 - [x] [[Context Window]]
 - [x] [[Context Rot]]
 - [x] [[KV Cache]]
@@ -266,6 +273,8 @@ SORT file.name ASC
 - [x] [[Handoff]]
 - [x] [[Code Execution Sandbox]]
 - [x] [[LLM Gateway]]
+- [x] [[Scaled Dot-Product Attention]]
+- [x] [[Masked Attention]]
 - [x] [[OpenTelemetry GenAI]]
 - [x] [[MCP Registry]]
 - [x] [[Audit Log]]

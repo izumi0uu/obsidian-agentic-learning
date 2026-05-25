@@ -5,7 +5,7 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-07
-updated: 2026-05-20
+updated: 2026-05-25
 related:
   - "[[LLM Wiki 工作流]]"
   - "[[02 问题池]]"
@@ -76,6 +76,7 @@ related:
 | P2 | done | [[Retriever]] / [[Hybrid Search]] / [[Reranking]] / [[Vector Database]] / [[Embedding]] / [[Document Ingestion]] | 都是 retrieval pipeline 组件，但分别对应资料入库、向量表示、候选召回、多路召回和排序校正 | 已写入 [[Retrieval 组件对比]] |
 | P2 | done | [[Multi-agent Orchestration]] / [[Handoff]] / [[A2A]] / [[ACP]] / [[MCP]] / [[Agent Workflow]] / [[Durable Execution]] | 都处理 Agent 协作或跨边界连接，但 workflow、handoff、agent-to-agent 协议、tool/resource 协议和持久执行不是同一层 | 已写入 [[Multi-agent Handoff Protocol 对比]] |
 | P2 | done | [[Coding Agent]] / [[Repo Context]] / [[Patch Validation]] / [[Sandbox Workspace]] / [[Code Execution Sandbox]] / [[AGENTS.md]] | 都在代码 Agent 执行边界附近，但分别是行动主体、上下文、补丁验证、工作区隔离、代码执行隔离和人类规则入口 | 已写入 [[Coding Agent 执行边界对比]] |
+| P2 | pending | Encoder-only / Decoder-only / Encoder-Decoder | 三者都来自 Transformer 架构变体，但可见性、训练目标和适用任务不同；面试题 raw 已有“为什么 Decoder-only 赢了”的强学习线索 | 先用 [[raw/repos/xiaolinnote/questions/141 ai llm 2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？#Encoder-only、Decoder-only 和 Encoder-Decoder 三种架构]] 与 [[raw/repos/xiaolinnote/questions/141 ai llm 2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？#为什么 Decoder-only 赢了]] 做证据核验；证据足够后再决定写入现有 [[LLM 基础结构对比]] 还是新建架构变体对比页 |
 | P2 | existing | [[Trajectory]] / [[Trace]] / [[Reasoning Trace]] / [[Trajectory Evaluation]] / [[Replay]] | 已有高价值边界页，说明 trajectory、trace 和 reasoning trace 的层级差异 | 见 [[Trajectory Trace 类型对比]]；后续只做维护 |
 | P2 | existing | [[RAG]] / [[Agentic RAG]] / [[Corrective RAG]] / [[Self-RAG]] | 已有 RAG 类型比较入口，适合继续补 evidence / modernity | 见 [[RAG 类型对比]]；后续只做维护 |
 | P3 | done | [[Transformer]] / [[Self-Attention]] / [[Multi-Head Attention]] / [[Positional Encoding]] | 都是 LLM 架构地基，容易把架构、机制和位置编码混成同一层 | 已写入 [[LLM 基础结构对比]] |

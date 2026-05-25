@@ -5,7 +5,7 @@ topic:
   - llm
 status: growing
 created: 2026-05-06
-updated: 2026-05-24
+updated: 2026-05-25
 last_checked: 2026-05-10
 freshness: stable
 conflicts: []
@@ -38,6 +38,7 @@ related:
   - "[[Matryoshka Embeddings]]"
   - "[[Embedding Quantization]]"
   - "[[MTEB]]"
+  - "[[Token Embedding]]"
 ---
 
 # Embedding
@@ -98,6 +99,8 @@ Embedding 不是理解本身，也不是事实验证。
 
 和 [[TF-IDF]] 的边界：TF-IDF 是词表维度上的稀疏词项权重，擅长精确词面匹配；embedding 是模型学习出的稠密语义表示，擅长语义相似。
 
+和 [[Token Embedding]] 的边界：Token Embedding 是 LLM 内部把 token ID 查表成向量的输入层；本卡主要记录 RAG / semantic search 中把 query、chunk 或对象编码成检索向量的工程边界。
+
 和 [[Reranking]] 的边界：embedding 常用于初召回；reranker 在较小候选集上做更精细的相关性排序。
 
 和 [[Matryoshka Embeddings]] / [[Embedding Quantization]] 的边界：后两者是 embedding 向量的成本优化方式。Matryoshka 改“用多少维”；quantization 改“每一维用多少精度 / bit 表示”。
@@ -146,4 +149,5 @@ Embedding 不是理解本身，也不是事实验证。
 - [[Semantic Search]]
 - [[Matryoshka Embeddings]]
 - [[Embedding Quantization]]
+- [[Token Embedding]]
 - [[MTEB]]

@@ -1,15 +1,15 @@
 # Temporary Concept Relationship Map
 
-Generated: `2026-05-24T09:21:10Z`
+Generated: `2026-05-25T02:54:37Z`
 
 > 临时文件：用于后续概念层级开发评估。不要把候选边自动写回概念卡；每条 candidate 都需要单独人工/LLM 复核。
 
 ## Summary
 
-- total_concepts: 172
-- edge_counts: {'related_link': 1061, 'body_link': 292, 'typed_relation': 57, 'taxonomy': 45}
-- typed_relation_counts: {'contrasts_with': 8, 'related_to': 15, 'representative_of': 2, 'based_on_intuition': 1, 'paired_with': 2, 'mechanism_for': 1, 'projects_from': 1, 'draws_from': 2, 'risk_for': 1, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 8, 'uses': 4, 'pattern_for': 1, 'specializes': 1, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
-- concepts_without_up: 127
+- total_concepts: 177
+- edge_counts: {'related_link': 1104, 'body_link': 297, 'typed_relation': 65, 'taxonomy': 45}
+- typed_relation_counts: {'contrasts_with': 9, 'related_to': 22, 'representative_of': 2, 'based_on_intuition': 1, 'paired_with': 2, 'mechanism_for': 1, 'projects_from': 1, 'draws_from': 2, 'risk_for': 1, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 8, 'uses': 4, 'pattern_for': 1, 'specializes': 1, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
+- concepts_without_up: 132
 - core_orphans: 0
 - weakly_connected_concepts: 1
 - dangling_core_targets: 31
@@ -75,6 +75,7 @@ Generated: `2026-05-24T09:21:10Z`
 | [[ANP]] | contrasts_with | [[MCP]] | frontmatter.relations | MCP 连接 AI 应用与工具/资源/context server；ANP 连接网络中的 Agent 身份和通信入口。 |
 | [[ANP]] | related_to | [[MCP Registry]] | frontmatter.relations | 两者都涉及发现与生态分发，但 MCP Registry 面向 MCP server；ANP discovery 面向 Agent identity/description。 |
 | [[Agent Robustness]] | related_to | [[Guardrails]] | frontmatter.relations | Guardrails 可以提高部分扰动下的可控性，但安全拦截机制不等于鲁棒性指标。 |
+| [[Agent Robustness]] | related_to | [[Rollout]] | frontmatter.relations | 失败、错误、超时和跳过运行是否进入 rollout record，会直接影响鲁棒性评估是否可信。 |
 | [[Agent Robustness]] | related_to | [[Task Success Rate]] | frontmatter.relations | Agent Robustness 常用扰动条件下的成功率下降幅度来观察；Task Success Rate 是被观察指标，不是鲁棒性本身。 |
 | [[Agent Robustness]] | related_to | [[Trajectory Evaluation]] | frontmatter.relations | 工具超时、异常返回、噪声输入和恢复动作都需要看 trajectory，而不只看最终输出。 |
 | [[BFCL]] | representative_of | [[Agent Evaluation Benchmark]] | frontmatter.relations | BFCL 是工具/function calling 方向的代表性 Agent evaluation benchmark；代表关系不等于 AST、state check 或 harness 组件本身。 |
@@ -99,6 +100,9 @@ Generated: `2026-05-24T09:21:10Z`
 | [[Dense Retrieval]] | uses | [[Embedding]] | frontmatter.relations | Dense Retrieval 依赖文档和 query 的 embedding 表示。 |
 | [[GSSC Pipeline]] | composes_with | [[Progressive Disclosure]] | frontmatter.relations | 两者都服务按需控制上下文；GSSC 是构建流水线，Progressive Disclosure 是信息暴露策略。 |
 | [[GSSC Pipeline]] | pattern_for | [[Context Engineering]] | frontmatter.relations | 把上下文构建拆成 gather、select、structure、compress 四个工程阶段。 |
+| [[Gating Mechanism]] | contrasts_with | [[Approval Gate]] | frontmatter.relations | Approval Gate 是执行前安全准入点，不是神经网络内部 gate。 |
+| [[Gating Mechanism]] | related_to | [[Agent Skills]] | frontmatter.relations | Agent skill 按需加载像系统层离散门控，但不是模型内部连续数学门控。 |
+| [[Gating Mechanism]] | related_to | [[Transformer]] | frontmatter.relations | 现代 LLM 中的门控常出现在 FFN 激活、MoE 路由或多模态适配层中，是 Transformer 结构上的机制扩展。 |
 | [[Hybrid Search]] | composes_with | [[Dense Retrieval]] | frontmatter.relations | Hybrid Search 通常把 dense retrieval 作为另一条语义召回。 |
 | [[Hybrid Search]] | composes_with | [[Sparse Retrieval]] | frontmatter.relations | Hybrid Search 通常把 sparse retrieval / BM25 作为一路候选。 |
 | [[Hybrid Search]] | related_to | [[Multi-Route Retrieval]] | frontmatter.relations | Hybrid Search 是多路召回最常见的双路形态，但多路召回更宽。 |
@@ -122,6 +126,10 @@ Generated: `2026-05-24T09:21:10Z`
 | [[ReWOO]] | related_to | [[ReAct]] | frontmatter.relations | ReWOO 与 ReAct 都面向工具增强推理，但 ReAct 让 Observation 反馈驱动下一步，ReWOO 先规划 evidence slots 后取证。 |
 | [[Reciprocal Rank Fusion]] | precedes | [[Reranking]] | frontmatter.relations | RRF 是候选融合/粗排；reranking 是融合后对较小候选集做精排。 |
 | [[Reciprocal Rank Fusion]] | used_by | [[Hybrid Search]] | frontmatter.relations | Hybrid Search 常用 RRF 把 dense/vector 与 sparse/BM25 两路排序融合。 |
+| [[Rollout]] | related_to | [[Replay]] | frontmatter.relations | 保存足够完整的 rollout record 后，后续才能 replay、re-score 或比较 reporting rule。 |
+| [[Rollout]] | related_to | [[Trace]] | frontmatter.relations | Trace 是系统记录下来的过程数据；rollout record 要把一次执行的任务、环境、动作、状态、失败和元数据保存成可复用证据。 |
+| [[Rollout]] | related_to | [[Trajectory]] | frontmatter.relations | Rollout 关注一次实际执行 episode / run；trajectory 关注这次执行中的路径序列。 |
+| [[Rollout]] | related_to | [[Trajectory Evaluation]] | frontmatter.relations | Trajectory Evaluation 可以读取 rollout / rollout record 来判断过程质量，而不只看最终分数。 |
 | [[Sparse Retrieval]] | composed_into | [[Hybrid Search]] | frontmatter.relations | Sparse Retrieval 常被组合进 Hybrid Search 作为词面检索一路。 |
 | [[Sparse Retrieval]] | composed_into | [[Multi-Route Retrieval]] | frontmatter.relations | Sparse Retrieval 可以作为多路召回中的词面检索一路；这是 route/strategy 组合关系，不是 `up`。 |
 | [[Sparse Retrieval]] | related_to | [[BM25]] | frontmatter.relations | BM25 是 sparse retrieval 的常见代表；这张卡覆盖更宽的词法检索家族。 |
@@ -265,6 +273,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Frontend-first AI Toolkit]]
 - [[GSSC Pipeline]]
 - [[GUI Grounding]]
+- [[Gating Mechanism]]
 - [[Guardrails]]
 - [[Hallucination]]
 - [[Handoff]]
@@ -286,6 +295,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[MCP Registry]]
 - [[MCP Transport]]
 - [[Managed Agent Harness]]
+- [[Masked Attention]]
 - [[Memory]]
 - [[Multi-Head Attention]]
 - [[NLP]]
@@ -323,7 +333,9 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Reranking]]
 - [[Retriever]]
 - [[Role-playing Agent]]
+- [[Rollout]]
 - [[Sandbox Workspace]]
+- [[Scaled Dot-Product Attention]]
 - [[Self-Attention]]
 - [[Self-Consistency]]
 - [[Semantic Search]]
@@ -334,6 +346,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[TTL]]
 - [[Task Success Rate]]
 - [[Token]]
+- [[Token Embedding]]
 - [[Tool Permissioning]]
 - [[Tool Poisoning]]
 - [[Tool Registry]]

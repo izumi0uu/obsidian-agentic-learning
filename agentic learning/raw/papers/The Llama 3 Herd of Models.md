@@ -12,7 +12,7 @@ topic:
   - llm
   - training
 created: 2026-05-09
-updated: 2026-05-15
+updated: 2026-05-24
 last_checked: 2026-05-11
 freshness: watch
 conflicts: []
@@ -22,6 +22,7 @@ related:
   - "[[LLM Training Pipeline]]"
   - "[[LLM]]"
   - "[[Evaluation]]"
+  - "[[Gating Mechanism]]"
 ---
 
 # The Llama 3 Herd of Models
@@ -98,6 +99,26 @@ Llama 3 把大规模预训练、数据治理、指令调优、偏好优化、安
 - 证据边界：
   - Llama 3 是具体模型家族报告，结论受 Meta 数据、算力、模型尺寸和开放策略限制。
 
+#### 必读块 3：Architecture hyperparameters / SwiGLU activation
+
+- 位置：Extracted Markdown `The Llama 3 Herd of Models.extracted.md` / Page 7 / Table 3
+- 为什么必读：这里给出 Llama 3 8B、70B 和 405B 的关键架构超参数，其中 activation function 写成 `SwiGLU`，可作为现代 LLM 使用 gated activation / FFN 变体的证据。
+- 原文短摘：
+  > Activation Function SwiGLU
+- 中文概括：
+  - Llama 3 把 SwiGLU 作为架构超参数记录，说明 gated activation 已经是现代 Transformer/LLM 工程配方中的常见组件之一。
+  - 这能支撑 [[Gating Mechanism]] 的一个具体落点：门控不只存在于早期 RNN/LSTM，也会出现在现代 Transformer block 的 FFN/activation 设计中。
+- 我需要理解的机制：
+  1. SwiGLU
+  2. gated activation
+  3. FFN activation choice
+- 支撑概念：
+  - [[Gating Mechanism]]
+  - [[Transformer]]
+  - [[LLM]]
+- 证据边界：
+  - 这条证据只说明 Llama 3 报告使用 SwiGLU；不能推出所有现代 LLM 都采用同一种 gated activation，也不能单独解释模型全部能力。
+
 ### 选读
 
 - 实验表格、ablation 或 benchmark 细节：用于确认效果边界，不作为第一轮理解入口。
@@ -132,6 +153,7 @@ Llama 3 把大规模预训练、数据治理、指令调优、偏好优化、安
 - data curation
 - post-training
 - synthetic data
+- [[Gating Mechanism]]
 
 ## 我的疑问
 

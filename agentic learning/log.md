@@ -1573,3 +1573,44 @@ related:
 - Recorded the fast Agent-development route as `Phase 11 -> Phase 13 -> Phase 14 -> 少量 Phase 15/16/17/18 -> Capstone`, with Phase 11 lesson anchors linked to existing local source notes.
 - Updated navigation: [[资料收集索引]], [[Agent 知识地图]], [[LLM 主题]], [[Agent 主题]], and [[04 页面目录]].
 - Boundary: simple source/navigation update. No concept card, alias map, taxonomy relationship, schema, template, script, or workflow rule changed.
+
+## [2026-05-24] concept-ingest | rollout as agent run evidence unit
+
+- Created [[Rollout]] as the canonical concept for an Agent / RL episode or run used as process evidence, separating it from [[Trajectory]], [[Trace]], [[Trajectory Evaluation]], [[Replay]], and rollout-card publication bundles.
+- Updated [[Rollout Cards - A Reproducibility Standard for Agent Research]] so the raw paper source now points to [[Rollout]] as the first stable concept split from the source.
+- Updated comparison and navigation surfaces: [[Trajectory Trace 类型对比]], [[Evaluation 层次对比]], [[Agent 主题]], [[Agent 知识地图]], [[01 术语表]], [[03 前沿追踪]], [[04 页面目录]], and [[资料收集索引]].
+- Mention sweep: linked high-confidence concept mentions in [[Trajectory]], [[Trace]], [[Replay]], [[Trajectory Evaluation]], [[Agent Robustness]], [[Agent Evaluation Benchmark]], [[Argus - Evidence Assembly for Scalable Deep Research Agents]], [[CANTANTE - Optimizing Agentic Systems via Contrastive Credit Attribution]], and [[Nudging Beyond the Comfort Zone - Efficient Strategy-Guided Exploration for RLVR]]. Extracted paper text was intentionally not edited.
+- Terminology / taxonomy: canonical name stays `Rollout`; Chinese phrases such as “一次运行” are explanatory prose, not aliases. Read [[09 概念层级审计基线]] and did not write `up`; rollout is a run / evidence unit adjacent to trajectory and evaluation, not a strict child of [[Evaluation]].
+
+## [2026-05-24] concept-ingest | gating mechanism model-internal boundary
+
+- Created [[Gating Mechanism]] as the canonical concept for model-internal selective information / feature / computation-path gating, with `门控机制` as a Chinese alias.
+- Evidence split: [[The Llama 3 Herd of Models]] supports SwiGLU as a modern LLM activation-function example; [[133 ai llm 19. MoE 混合专家模型是什么？DeepSeek V3、Qwen 为什么用 MoE？]] supports MoE router / `gate_logits` / Top-K expert routing; [[141 ai llm 2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？]] supports the LSTM historical boundary; [[Attention Is All You Need]] supports the Transformer-vs-recurrence architecture boundary.
+- Boundary decision: Gating Mechanism is not [[Approval Gate]], not [[Agent Skills]], and not attention itself. Agent skill progressive disclosure is only a system-layer analogy; Approval Gate remains a safety/execution-control false friend.
+- Updated backlinks and navigation: [[LLM]], [[Transformer]], [[Agent Skills]], [[Approval Gate]], [[LLM 主题]], [[LLM 基础结构对比]], [[Agent 知识地图]], [[01 术语表]], and [[04 页面目录]].
+- Mention sweep: searched `Gating Mechanism`, `门控机制`, `SwiGLU`, `GLU`, `gated activation`, `gate_logits`, `Noisy Top-K Gating`, `MoE`, and `Router`; linked high-confidence raw/source hits through source metadata and wiki sections, and intentionally did not add broad aliases such as `gate`, `Router`, or `MoE` to avoid false links with approval gates, quality gates, workflow routers, and future MoE-specific cards.
+
+## [2026-05-25] video-ingest | Transformer input and attention mechanics
+
+- Created [[20分钟读懂AI神级论文 Attention Is All You Need]] as a video raw source note preserving the Bilibili ASR summary, chapter notes, local transcript paths, and ASR caveats.
+- Created concept cards [[Token Embedding]], [[Masked Attention]], and [[Scaled Dot-Product Attention]] to capture the video's reusable Transformer mechanism boundaries: token ID -> vector lookup, causal masking / future-token leakage, and QK^T / sqrt(d_k) attention scoring.
+- Updated backlinks and navigation: [[Transformer]], [[Self-Attention]], [[Multi-Head Attention]], [[Positional Encoding]], [[Token]], [[Embedding]], [[Vector Similarity Metrics]], [[LLM 主题]], [[LLM 基础结构对比]], [[Agent 知识地图]], [[01 术语表]], [[04 页面目录]], and [[资料收集索引]].
+- Terminology: did not create a generic `Dot Product` card because `dot product / inner product / 内积` is already an alias boundary inside [[Vector Similarity Metrics]]; the Transformer-specific mechanism is recorded as [[Scaled Dot-Product Attention]] to avoid alias conflict.
+- Taxonomy: read [[09 概念层级审计基线]] and did not write direct `up` fields; the new Transformer mechanism cards remain parentless until the taxonomy toolchain reviews a safe architecture/mechanism parent.
+
+## [2026-05-25] workflow-tooling | True Recall concept-card import draft
+
+- Added `scripts/export_true_recall_concept_cards.py` to generate editable True Recall Import Studio `#type/basic` drafts from stable concept-card sections.
+- Added `scripts/import_true_recall_cards.py` for local True Recall SQLite imports with pre-write backup, source-note `flashcard_uid` creation, and duplicate-card skipping.
+- Updated workflow surfaces [[LLM Wiki 工作流]] and [[reviews/复习记录索引]] so True Recall is treated as an interval-review layer, not a replacement for concept cards, raw evidence, or Feynman review notes.
+- Added script usage notes to `scripts/README.md`.
+- Imported the first Transformer batch from `reports/true-recall-transformer-import.md`: 3 notes / 3 cards in True Recall, source UID `1762a234`, with backup `agentic learning/.true-recall/backups/codex/true-recall-backup-2026-05-25-173711.db`.
+- Boundary: the exporter writes Markdown import drafts only; the importer writes only local True Recall `notes` / `cards` and `flashcard_uid` metadata, not concept-card explanation content.
+
+## [2026-05-25] concept-update | Transformer video anchor repair and example writeback
+
+- Repaired stale anchors from [[20分钟读懂AI神级论文 Attention Is All You Need]] after the video raw note was rewritten without timestamp headings.
+- Updated [[Transformer]], [[Self-Attention]], [[Token Embedding]], [[Multi-Head Attention]], [[Masked Attention]], [[Scaled Dot-Product Attention]], and [[Positional Encoding]] with current evidence anchors and small learning examples from the video: token ID -> embedding row -> vector, “它” -> “书” Q/K/V matching, original 8 x 64 = 512 multi-head configuration, causal-mask training/inference analogy, and `QK^T / sqrt(d_k) -> softmax -> V`.
+- Updated [[LLM 基础结构对比]] source examples to point at the current video source heading.
+- Backlog decisions: recorded `Transformer Block` as a future concept-card candidate in [[08 面试题概念卡待补充]], and recorded Encoder-only / Decoder-only / Encoder-Decoder as a future comparison candidate in [[05 Query 写回队列]]. No new weak concept cards were created in this pass.
+- Boundary: simple content/link repair and concept-card explanation update. No schema, template, alias map, taxonomy relationship, script, or workflow rule changed.

@@ -23,7 +23,7 @@ topic:
   - training
   - frontier
 created: 2026-05-18
-updated: 2026-05-18
+updated: 2026-05-24
 last_checked: 2026-05-18
 freshness: watch
 conflicts: []
@@ -32,6 +32,7 @@ source: https://arxiv.org/abs/2605.15726
 related:
   - "[[Reasoning Trace]]"
   - "[[Evaluation]]"
+  - "[[Rollout]]"
   - "[[Trajectory]]"
   - "[[Planning]]"
 ---

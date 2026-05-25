@@ -8,7 +8,7 @@ topic:
   - llm
 status: inbox
 created: 2026-05-17
-updated: 2026-05-17
+updated: 2026-05-25
 url: https://xiaolinnote.com/ai/llm/mha_mqa_gqa_flash_attention.html
 source: https://xiaolinnote.com/ai/llm/mha_mqa_gqa_flash_attention.html
 last_checked: 2026-05-17
@@ -19,6 +19,7 @@ related:
   - "[[资料收集索引]]"
   - "[[LLM]]"
   - "[[Multi-Head Attention]]"
+  - "[[Scaled Dot-Product Attention]]"
   - "[[KV Cache]]"
   - "[[LLM 主题]]"
 ---
@@ -33,6 +34,7 @@ related:
 
 - [[LLM]]
 - [[Multi-Head Attention]]
+- [[Scaled Dot-Product Attention]]
 - [[KV Cache]]
 - [[LLM 主题]]
 
