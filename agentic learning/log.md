@@ -1629,3 +1629,9 @@ related:
 - Updated [[Agent Harness]], [[Context Engineering]], and [[KV Cache]] with lightweight boundary links: harness owns application-layer cache key / TTL / permission / version governance, while KV cache and provider prompt cache hit behavior belong to serving layers.
 - Updated navigation: [[Agent 工程分层对比]], [[LLM 主题]], [[RAG 主题]], [[Agent 主题]], [[Agent 知识地图]], and [[04 页面目录]].
 - Boundary: simple content/navigation update. No new concept card, alias map, taxonomy relationship, schema, template, script, or workflow rule changed.
+
+## [2026-05-27] concept-update | automated metrics boundary inside Evaluation
+
+- Updated [[Evaluation]] with a dedicated automatic-metrics boundary: BLEU and ROUGE are lexical-overlap metrics, BERTScore is a semantic-similarity metric, and BERT is a model family rather than an evaluation metric.
+- Evidence writeback stayed intentionally narrow: reused existing raw interview evidence [[167 01_AI 06_评测与监控 为什么 BLEU ROUGE 评 LLM 不够？]] and [[170 01_AI 06_评测与监控 为什么传统的 NLP 评估指标（如 BLEU, ROUGE）对于评估现代 LLM 的生成质量来说，存在很大的局限性？]] instead of creating weak standalone concept cards for BLEU / ROUGE / BERTScore / BERT.
+- Boundary decision: this is a simple concept-card clarification under [[Evaluation]], not a systemic workflow/schema change. No alias map, taxonomy relationship, template, script, map, or backlog surface changed in this pass.
