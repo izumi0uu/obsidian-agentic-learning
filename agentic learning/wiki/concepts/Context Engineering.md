@@ -6,7 +6,7 @@ topic:
   - rag
 status: growing
 created: 2026-05-06
-updated: 2026-05-18
+updated: 2026-05-26
 last_checked: 2026-05-10
 freshness: stable
 conflicts: []
@@ -29,6 +29,7 @@ related:
   - "[[GSSC Pipeline]]"
   - "[[Long-Horizon Context Engineering]]"
   - "[[Context Rot]]"
+  - "[[Agent Harness 缓存分层与命中率]]"
 ---
 
 # Context Engineering
@@ -94,6 +95,8 @@ system rules
 
 和 [[Prompt Engineering]] 的边界：Prompt Engineering 关注指令文本、模板、示例、输出格式和评测迭代；Context Engineering 关注运行时信息装配、来源、顺序、预算、更新和淘汰。
 
+和缓存的边界见 [[Agent Harness 缓存分层与命中率]]：把稳定前缀放前面可以提高 provider Prompt Caching 命中概率，但检索结果、工具结果、摘要和 memory 这类动态上下文仍要按来源、权限、版本和 [[TTL]] 治理，不能为了命中率把 volatile 信息伪装成静态前缀。
+
 ## 现代性状态
 
 - 判定：current-practice。
@@ -104,6 +107,8 @@ system rules
 ## 现代系统怎么吸收 Context Engineering 的价值
 
 现代系统通常把 context assembly 做成显式步骤：retrieval -> filter -> rerank -> compress -> cite -> answer；Agent 系统还会把 state、tools、memory、guardrails 和 trace 摘要分层放入上下文。这样上下文不只是文本堆叠，而是可解释、可评估、可回放的运行时输入。
+
+在成本敏感系统里，context assembly 还会变成 cache-aware：system / developer 指令、tool schema 和稳定 skill 描述尽量保持前缀稳定，动态证据、tool result 和用户输入放在后段；但这个优化只降低重复计算，不替代证据排序、权限检查和 freshness 校验。
 
 ## 证据锚点
 
@@ -133,3 +138,4 @@ system rules
 - [[GSSC Pipeline]]
 - [[Long-Horizon Context Engineering]]
 - [[Context Rot]]
+- [[Agent Harness 缓存分层与命中率]]

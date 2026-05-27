@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-25
+updated: 2026-05-26
 related:
   - "[[Agent]]"
   - "[[前沿主源清单]]"
@@ -40,6 +40,7 @@ related:
   - "[[BFCL]]"
   - "[[ReAct Plan-and-Solve Reflexion 对比]]"
   - "[[Agent 工程分层对比]]"
+  - "[[Agent Harness 缓存分层与命中率]]"
   - "[[Agent Framework 编排范式对比]]"
   - "[[LangGraph 生产项目蓝图]]"
   - "[[Workflow Guardrails 与 Prefect 控制点映射]]"
@@ -120,6 +121,7 @@ LLM 地基：
 - [[ReWOO]]：理解先规划 evidence slots、再取证、最后合成答案的工具增强推理边界，尤其是它和 ReAct 的 Observation 回流差异。
 - [[Human-in-the-loop]]：理解人类确认、接管和修正如何进入 Agent loop。
 - [[Agent Lifecycle Hook]]：理解 runtime 如何在工具调用前后、会话开始/停止和上下文压缩等边界拦截、记录和恢复 Agent loop。
+- [[Agent Harness 缓存分层与命中率]]：理解 cache hit rate 应按 serving、provider prompt cache、tool result、retrieval、embedding 和 context / summary cache 分层读取，避免把效率指标误当正确性指标。
 - [[MCP]]、[[MCP Transport]]、[[MCP Elicitation]]、[[A2A]]、[[ANP]]：区分工具/context server 连接、MCP client/server 消息承载通道、MCP server 向用户请求补充输入、Agent-to-Agent 任务协作、以及 Agent 网络身份/发现/描述/协议协商。
 
 ## 知识能力
@@ -127,7 +129,7 @@ LLM 地基：
 - [[RAG]]：如何从外部知识库检索资料再生成回答；完整学习入口见 [[RAG 主题]]。
 - [[RAGFlow]]：理解 RAG / context layer 平台如何把复杂文档解析、chunking、多路召回、重排、引用和 Agent workflow 产品化。
 - [[Document Ingestion]]、[[Chunking]] 和 [[Embedding]]：理解资料进入知识库、被切成证据单元并变成语义表示的入口质量。
-- [[Semantic Search]]、[[Dense Retrieval]]、[[Vector Similarity Metrics]]、[[Vector Search Algorithm]]、[[Approximate Nearest Neighbor Search]]、[[HNSW]]、[[Vector Database]]、[[Embedding Optimization]]、[[Matryoshka Embeddings]]、[[Embedding Quantization]]、[[Embedding Evaluation Benchmark]] 和 [[MTEB]]：理解 embedding 进入生产检索后的语义搜索、相似度度量、向量搜索算法、近似索引、维度 / 精度成本和 benchmark 初筛边界。
+- [[Semantic Search]]、[[Dense Retrieval]]、[[Bi-Encoder]]、[[Vector Similarity Metrics]]、[[Vector Search Algorithm]]、[[Approximate Nearest Neighbor Search]]、[[HNSW]]、[[Vector Database]]、[[Embedding Optimization]]、[[Matryoshka Embeddings]]、[[Embedding Quantization]]、[[Embedding Evaluation Benchmark]] 和 [[MTEB]]：理解 embedding 进入生产检索后的语义搜索、召回模型结构、相似度度量、向量搜索算法、近似索引、维度 / 精度成本和 benchmark 初筛边界。
 - [[Retriever]]、[[Top-K]]、[[TF-IDF]]、[[Sparse Retrieval]]、[[BM25]]、[[Multi-Route Retrieval]]、[[Hybrid Search]] 和 [[Reranking]]：理解生产 RAG 的召回数量、稀疏检索家族、关键词打分代表、多路召回、混合检索和排序质量层；常见实现生态见 [[常用向量数据库对比]]。
 - [[Knowledge Graph]]、[[GraphRAG]] 和 [[Neo4j]]：理解关系结构、图增强检索和图数据库工程生态如何结合。
 - [[RAG Evaluation]]：理解 RAG 失败要分层评估检索、上下文、引用和最终回答。
@@ -183,6 +185,7 @@ LLM 地基：
 ## 对比入口
 
 - [[Agent 工程分层对比]]：区分 framework、harness、workflow、state 和 loop。
+- [[Agent Harness 缓存分层与命中率]]：区分 [[KV Cache]]、Prompt Caching、tool result cache、retrieval cache、embedding cache 和 context / summary cache 的控制层。
 - [[Agent Framework 全量选型对比 2026-05]]：按当前官方文档横向比较 13 个热门 Agent framework / SDK / toolkit 的抽象层、状态/流程、多 Agent、RAG/memory、观测评测、部署和选型边界。
 - [[Tool 接口层对比]]：区分 tool use、tool calling、registry、permissioning、MCP 和 registry。
 - [[A2A MCP ANP 对比]]：区分 Agent-to-Agent 任务协作、工具/context server 连接、Agent 网络身份/发现/描述/协议协商。

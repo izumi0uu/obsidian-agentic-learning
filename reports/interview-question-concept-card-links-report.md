@@ -4,10 +4,10 @@
 - 扫描题页：779
 - 含 `## 相关知识 wiki`：779
 - 已有正文概念链接页：362
-- 本次可新增/已新增链接：73
-- would modify pages：56
+- 本次可新增/已新增链接：75
+- would modify pages：57
 - skipped/no-match pages：410
-- unsafe-region skips：4183
+- unsafe-region skips：4187
 - missing concept candidates：0（unique 0）
 - protected-region violations：0
 
@@ -15,7 +15,7 @@
 
 | root | total | related | already-linked pages | would-modify pages | proposed links | skipped/no-match |
 |---|---:|---:|---:|---:|---:|---:|
-| xiaolinnote | 142 | 142 | 81 | 31 | 41 | 59 |
+| xiaolinnote | 142 | 142 | 81 | 32 | 43 | 59 |
 | agent_java_offer | 637 | 637 | 281 | 25 | 32 | 351 |
 
 ## Sample files selected
@@ -133,9 +133,11 @@
 - agentic learning/raw/repos/xiaolinnote/questions/023 ai rag 10. 你使用 RAG 给大模型一个输入，系统是怎样的工作流程？.md:68 — `向量检索` -> `[[Dense Retrieval]]`
 - agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md:64 — `HyDE` -> `[[HyDE]]`
 - agentic learning/raw/repos/xiaolinnote/questions/025 ai rag 12. 如何润色用户的 Query（Query Rewrite）？目的是什么？.md:64 — `Step-back Prompting` -> `[[Step-back Prompting]]`
-- agentic learning/raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md:155 — `HyDE` -> `[[HyDE]]`
+- agentic learning/raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md:157 — `HyDE` -> `[[HyDE]]`
+- agentic learning/raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？.md:206 — `Bi-encoder` -> `[[Bi-Encoder]]`
 - agentic learning/raw/repos/xiaolinnote/questions/030 ai rag 17. 如何规避 RAG 系统中大模型的幻觉？.md:64 — `结构化输出` -> `[[Structured Outputs]]`
 - agentic learning/raw/repos/xiaolinnote/questions/039 ai rag 6. 在 RAG 中 Embedding 究竟是什么？如何选择和评估一个 Embedding 模型？.md:60 — `MTEB` -> `[[MTEB]]`
+- agentic learning/raw/repos/xiaolinnote/questions/040 ai rag 7. Embedding 有哪几种算法你了解过吗？.md:120 — `bi-encoder` -> `[[Bi-Encoder]]`
 - agentic learning/raw/repos/xiaolinnote/questions/041 ai rag 8. 什么是向量数据库？有没有做过向量数据库的对比选型？.md:62 — `HNSW` -> `[[HNSW]]`
 - agentic learning/raw/repos/xiaolinnote/questions/042 ai rag 9. 讲讲你用的向量数据库？数据量级是多大？性能如何？遇到过性能瓶颈吗？.md:72 — `HNSW` -> `[[HNSW]]`
 - agentic learning/raw/repos/xiaolinnote/questions/045 ai tools 10. MCP 和 Agent Skill 的区别是什么？.md:108 — `渐进式加载` -> `[[Progressive Disclosure]]`

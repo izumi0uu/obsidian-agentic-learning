@@ -1,6 +1,6 @@
 # Breadcrumbs / Abstract Folder Compatibility Validation
 
-- concept_cards_checked: 177
+- concept_cards_checked: 178
 - up_edges_checked: 45
 - applied_rows_checked: 6
 - problems: 0

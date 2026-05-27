@@ -1614,3 +1614,18 @@ related:
 - Updated [[LLM 基础结构对比]] source examples to point at the current video source heading.
 - Backlog decisions: recorded `Transformer Block` as a future concept-card candidate in [[08 面试题概念卡待补充]], and recorded Encoder-only / Decoder-only / Encoder-Decoder as a future comparison candidate in [[05 Query 写回队列]]. No new weak concept cards were created in this pass.
 - Boundary: simple content/link repair and concept-card explanation update. No schema, template, alias map, taxonomy relationship, script, or workflow rule changed.
+
+## [2026-05-25] concept-ingest | Bi-Encoder retrieval structure
+
+- Created [[Bi-Encoder]] as the canonical concept for query / chunk independent encoding in dense retrieval, with `双编码器` and `双塔结构` as bounded aliases.
+- Boundary decision: Bi-Encoder is a retrieval model structure used by [[Dense Retrieval]], not the dense retrieval route itself, not [[Cross-Encoder]], and not [[Vector Database]].
+- Updated source and navigation surfaces: [[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]], [[AI Engineering From Scratch - Embeddings]], [[raw/repos/xiaolinnote/questions/027 ai rag 14. RAG 检索优化策略有哪些？]], [[raw/repos/xiaolinnote/questions/040 ai rag 7. Embedding 有哪几种算法你了解过吗？]], [[Dense Retrieval]], [[Cross-Encoder]], [[RAG 主题]], [[Retrieval 组件对比]], [[Agent 知识地图]], [[01 术语表]], [[04 页面目录]], and [[08 面试题概念卡待补充]].
+- Updated `scripts/interview_question_concept_aliases.json` so future interview-question linking recognizes Bi-Encoder / dual encoder / 双编码器 / 双塔结构.
+- Taxonomy: read and refreshed [[09 概念层级审计基线]] plus `reports/concept-card-relation-map/`; did not write `up`. The card uses typed `relations` because it is a model-structure boundary adjacent to [[Dense Retrieval]] and [[Cross-Encoder]], not a reviewed strict child in the current baseline.
+
+## [2026-05-26] topic-update | Agent harness cache layer hit-rate boundary
+
+- Created [[Agent Harness 缓存分层与命中率]] as a topic boundary page for reading cache hit metrics across model serving, provider prompt caching, tool result cache, embedding cache, retrieval cache, and context / summary cache.
+- Updated [[Agent Harness]], [[Context Engineering]], and [[KV Cache]] with lightweight boundary links: harness owns application-layer cache key / TTL / permission / version governance, while KV cache and provider prompt cache hit behavior belong to serving layers.
+- Updated navigation: [[Agent 工程分层对比]], [[LLM 主题]], [[RAG 主题]], [[Agent 主题]], [[Agent 知识地图]], and [[04 页面目录]].
+- Boundary: simple content/navigation update. No new concept card, alias map, taxonomy relationship, schema, template, script, or workflow rule changed.

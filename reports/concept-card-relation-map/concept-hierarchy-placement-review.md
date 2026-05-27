@@ -1,23 +1,23 @@
 # Concept Hierarchy Placement Review — 层级归属待审计概念卡
 
-Generated: `2026-05-25T02:55:08Z`
+Generated: `2026-05-25T13:55:07Z`
 Classification stage: `audit_closure`
 
 > Audit closure: remaining `defer_boundary_review` rows are closed as `deferred_with_backlog`; no concept cards are edited and no fallback parents are invented.
 
 ## Summary
 
-- total_concepts: 177
-- reviewed_concepts: 177
+- total_concepts: 178
+- reviewed_concepts: 178
 - taxonomy_placement_unreviewed: 0
 - concepts_with_up: 45
-- concepts_without_up: 132
-- concepts_with_candidate_basis: 68
-- candidate_basis_rows: 84
+- concepts_without_up: 133
+- concepts_with_candidate_basis: 69
+- candidate_basis_rows: 85
 - known_forbidden_candidate_pairs: 4
 - accepted_taxonomy: 0
 - root_or_anchor_no_up: 22
-- relation_only_terminal: 66
+- relation_only_terminal: 67
 - weak_or_backlog_terminal: 12
 - defer_boundary_review: 30
 - open_unclassified: 0
@@ -25,8 +25,8 @@ Classification stage: `audit_closure`
 - open_writeback: 0
 - dry_run_planned: 0
 - write_policy: Audit closure only. Remaining defer_boundary_review rows are closed as deferred_with_backlog and no concept-card fields are written.
-- decision_counts: `{"already_has_up_reviewed": 45, "defer_boundary_review": 30, "reject_taxonomy": 2, "relation_only_terminal": 66, "root_or_anchor_no_up": 22, "weak_or_backlog_terminal": 12}`
-- review_status_counts: `{"deferred_with_backlog": 30, "terminal_non_writeback": 147}`
+- decision_counts: `{"already_has_up_reviewed": 45, "defer_boundary_review": 30, "reject_taxonomy": 2, "relation_only_terminal": 67, "root_or_anchor_no_up": 22, "weak_or_backlog_terminal": 12}`
+- review_status_counts: `{"deferred_with_backlog": 30, "terminal_non_writeback": 148}`
 - parent_whitelist_reviewed: True
 - stable_parent_whitelist_approved: 19
 - proposed_parent_anchors_not_auto_approved: 3
@@ -148,7 +148,7 @@ Classification stage: `audit_closure`
 - [[Approval Gate]]
 - [[ReAct]]
 
-### relation_only_terminal (66)
+### relation_only_terminal (67)
 
 - [[ANP]]
 - [[Agent Control Plane]]
@@ -158,6 +158,7 @@ Classification stage: `audit_closure`
 - [[Agent Robustness]]
 - [[Agent State]]
 - [[Agent Workflow Static Verification]]
+- [[Bi-Encoder]]
 - [[Context Engineering]]
 - [[Context Projection]]
 - [[Context Rot]]
@@ -482,8 +483,8 @@ Apply artifact:
 
 Audit closure closes the whole concept hierarchy placement audit by routing every remaining deferred row to a durable backlog home. It does not add `up`; future changes must reopen a new candidate/adjudication/dry-run/limited-apply cycle.
 
-- total_concepts: 177
-- reviewed_concepts: 177
+- total_concepts: 178
+- reviewed_concepts: 178
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0
@@ -554,7 +555,7 @@ Closure artifact:
 | [[Context Recall]] | [[RAG Evaluation]] | 1 | 0 |
 | [[Corrective RAG]] | [[RAG]] | 0 | 0 |
 | [[Crew Orchestration]] | [[Agent Workflow]] | 0 | 0 |
-| [[Cross-Encoder]] | [[Reranking]] | 1 | 0 |
+| [[Cross-Encoder]] | [[Reranking]] | 2 | 0 |
 | [[Data-first Agent Framework]] | [[Agent Framework]] | 0 | 0 |
 | [[Dense Retrieval]] | [[Retriever]] | 4 | 0 |
 | [[Embedding Evaluation Benchmark]] | [[Benchmark]] | 0 | 0 |
@@ -607,6 +608,7 @@ Closure artifact:
 | [[Agent Workflow Static Verification]] | relation_only_terminal |  | 2 | 4 |
 | [[Approval Gate]] | reject_taxonomy |  | 0 | 2 |
 | [[Benchmark]] | root_or_anchor_no_up |  | 1 | 1 |
+| [[Bi-Encoder]] | relation_only_terminal |  | 1 | 2 |
 | [[Browser Agent]] | defer_boundary_review |  | 0 | 3 |
 | [[Chunking]] | root_or_anchor_no_up |  | 1 | 1 |
 | [[Code Execution Sandbox]] | defer_boundary_review |  | 0 | 3 |
@@ -739,6 +741,7 @@ Candidate basis is evidence for later adjudication, not an accepted parent.
 | [[Agent Workflow Static Verification]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | no |
 | [[Agent Workflow Static Verification]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | no |
 | [[Benchmark]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | no |
+| [[Bi-Encoder]] | [[Retriever]] | topic_family_review | low | frontmatter.related | no |
 | [[Chunking]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |
 | [[Context Engineering]] | [[RAG]] | topic_family_review | low | frontmatter.related | no |
 | [[Context Projection]] | [[Memory]] | topic_family_review | low | frontmatter.related, relations:draws_from | no |

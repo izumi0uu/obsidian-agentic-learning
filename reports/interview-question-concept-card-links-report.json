@@ -4,15 +4,15 @@
   "total_question_pages_scanned": 779,
   "total_pages_scanned": 779,
   "pages_with_related_section": 779,
-  "would_modify_pages": 56,
+  "would_modify_pages": 57,
   "modified_pages": 0,
-  "inline_links_inserted": 73,
-  "proposed_inline_links": 73,
+  "inline_links_inserted": 75,
+  "proposed_inline_links": 75,
   "applied_inline_links": 0,
   "already_linked_pages": 362,
   "already_linked_targets": 941,
   "skipped_no_match_pages": 410,
-  "unsafe_region_skips": 4183,
+  "unsafe_region_skips": 4187,
   "protected_region_violations": 0,
   "request_meta_page_hits": [],
   "missing_concept_candidates": 0,
@@ -22,9 +22,9 @@
     "xiaolinnote": {
       "total": 142,
       "with_related_section": 142,
-      "would_modify_pages": 31,
+      "would_modify_pages": 32,
       "modified_pages": 0,
-      "proposed_inline_links": 41,
+      "proposed_inline_links": 43,
       "applied_inline_links": 0,
       "already_linked_pages": 81,
       "skipped_no_match_pages": 59
@@ -1038,6 +1038,7 @@
         "HyDE",
         "Multi-Route Retrieval",
         "Dense Retrieval",
+        "Bi-Encoder",
         "Sparse Retrieval",
         "BM25",
         "Reciprocal Rank Fusion",
@@ -1055,6 +1056,7 @@
         "HyDE",
         "Multi-Route Retrieval",
         "Dense Retrieval",
+        "Bi-Encoder",
         "Sparse Retrieval",
         "BM25",
         "Reciprocal Rank Fusion",
@@ -1076,15 +1078,24 @@
         {
           "target": "HyDE",
           "alias": "HyDE",
-          "start": 5598,
-          "end": 5602,
+          "start": 5636,
+          "end": 5640,
           "replacement": "[[HyDE]]",
-          "line": 155,
+          "line": 157,
           "context": "中可能会丢失一些原始细节，原始问题反而最精准。 - **HyDE**（Hypothetical Document Emb"
+        },
+        {
+          "target": "Bi-Encoder",
+          "alias": "Bi-encoder",
+          "start": 7818,
+          "end": 7828,
+          "replacement": "[[Bi-Encoder|Bi-encoder]]",
+          "line": 206,
+          "context": "更准，需要先理解两种不同的模型结构。  向量检索用的是 Bi-encoder 结构：query 和 chunk 各自独立编码成向量，"
         }
       ],
       "applied_links": 0,
-      "unsafe_region_skips": 13,
+      "unsafe_region_skips": 15,
       "unmatched_existing_targets": [
         "Retriever",
         "Hybrid Search",
@@ -1502,19 +1513,31 @@
       "has_related_section": true,
       "related_targets": [
         "Embedding",
+        "Bi-Encoder",
         "Vector Database"
       ],
       "existing_targets": [
         "Embedding",
+        "Bi-Encoder",
         "Vector Database"
       ],
       "missing_targets": [],
       "already_linked_targets": [
         "Embedding"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "Bi-Encoder",
+          "alias": "bi-encoder",
+          "start": 4543,
+          "end": 4553,
+          "replacement": "[[Bi-Encoder|bi-encoder]]",
+          "line": 120,
+          "context": "个思路解决了 BERT 在检索场景下用不了的问题。它用 bi-encoder 结构：两个句子分别独立过 BERT，各自得到一个句子级"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 8,
+      "unsafe_region_skips": 10,
       "unmatched_existing_targets": [
         "Vector Database"
       ],

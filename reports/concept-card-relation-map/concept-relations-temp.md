@@ -1,21 +1,21 @@
 # Temporary Concept Relationship Map
 
-Generated: `2026-05-25T02:54:37Z`
+Generated: `2026-05-25T13:55:07Z`
 
 > 临时文件：用于后续概念层级开发评估。不要把候选边自动写回概念卡；每条 candidate 都需要单独人工/LLM 复核。
 
 ## Summary
 
-- total_concepts: 177
-- edge_counts: {'related_link': 1104, 'body_link': 297, 'typed_relation': 65, 'taxonomy': 45}
-- typed_relation_counts: {'contrasts_with': 9, 'related_to': 22, 'representative_of': 2, 'based_on_intuition': 1, 'paired_with': 2, 'mechanism_for': 1, 'projects_from': 1, 'draws_from': 2, 'risk_for': 1, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 8, 'uses': 4, 'pattern_for': 1, 'specializes': 1, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'used_by': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
-- concepts_without_up: 132
+- total_concepts: 178
+- edge_counts: {'related_link': 1115, 'body_link': 298, 'typed_relation': 69, 'taxonomy': 45}
+- typed_relation_counts: {'contrasts_with': 11, 'related_to': 22, 'representative_of': 2, 'based_on_intuition': 1, 'used_by': 2, 'enables': 1, 'paired_with': 2, 'mechanism_for': 1, 'projects_from': 1, 'draws_from': 2, 'risk_for': 1, 'concrete-harness-for': 1, 'built-on': 1, 'composes_with': 8, 'uses': 4, 'pattern_for': 1, 'specializes': 1, 'mitigates': 1, 'concrete-platform-for': 1, 'adjacent-to': 1, 'precedes': 1, 'composed_into': 2, 'foundational_for': 1}
+- concepts_without_up: 133
 - core_orphans: 0
 - weakly_connected_concepts: 1
 - dangling_core_targets: 31
-- candidate_edges: 84
+- candidate_edges: 85
 - taxonomy_candidates: 12
-- topic_family_review_signals: 72
+- topic_family_review_signals: 73
 
 ## Existing taxonomy edges (`up`)
 
@@ -82,6 +82,9 @@ Generated: `2026-05-25T02:54:37Z`
 | [[BM25]] | based_on_intuition | [[TF-IDF]] | frontmatter.relations | BM25 延续 TF-IDF 的词项权重直觉，但加入长度归一化和饱和控制。 |
 | [[BM25]] | related_to | [[Hybrid Search]] | frontmatter.relations | Hybrid Search 常把 BM25 作为 sparse route 或关键词侧候选。 |
 | [[BM25]] | representative_of | [[Sparse Retrieval]] | frontmatter.relations | BM25 是 sparse retrieval 的常见代表算法。 |
+| [[Bi-Encoder]] | contrasts_with | [[Cross-Encoder]] | frontmatter.relations | Bi-Encoder 牺牲 query-chunk token 级交互换速度和可预计算；Cross-Encoder 把二者联合输入，适合小候选集精排。 |
+| [[Bi-Encoder]] | enables | [[Vector Database]] | frontmatter.relations | 文档侧 embedding 可离线预计算并写入向量库，是大规模向量检索能在线工作的关键前提。 |
+| [[Bi-Encoder]] | used_by | [[Dense Retrieval]] | frontmatter.relations | Dense retrieval 常用 bi-encoder / dual-encoder 把 query 和 chunk 分开编码成向量，再用相似度做召回。 |
 | [[Context Precision]] | paired_with | [[Context Recall]] | frontmatter.relations | Context Precision 看检索上下文的相关性和排序质量；Context Recall 看必要信息是否被覆盖。 |
 | [[Context Projection]] | draws_from | [[Memory]] | frontmatter.relations | 记忆只有被选中并投影进上下文时才影响本轮回答。 |
 | [[Context Projection]] | draws_from | [[Trace]] | frontmatter.relations | trace 可作为失败复盘、长任务继续或审计解释时的候选材料。 |
@@ -91,11 +94,12 @@ Generated: `2026-05-25T02:54:37Z`
 | [[Context Rot]] | contrasts_with | [[Context Window]] | frontmatter.relations | Context Window 是容量边界；Context Rot 是长输入中有效使用质量下降的风险。 |
 | [[Context Rot]] | related_to | [[Long-Horizon Context Engineering]] | frontmatter.relations | 长任务直接累积历史、工具结果和中间产物时，context rot 是核心风险之一。 |
 | [[Context Rot]] | risk_for | [[Context Engineering]] | frontmatter.relations | 上下文工程需要通过选择、结构化、去噪和压缩来降低 context rot。 |
+| [[Cross-Encoder]] | contrasts_with | [[Bi-Encoder]] | frontmatter.relations | Bi-Encoder 把 query 和 chunk 分开编码，适合快速召回；Cross-Encoder 把二者联合输入，适合小候选集精排。 |
 | [[Cross-Encoder]] | contrasts_with | [[Dense Retrieval]] | frontmatter.relations | Dense Retrieval 常用双塔/bi-encoder 思路快速召回；Cross-Encoder 把 query 和 chunk 放在一起深度判断，适合小候选集精排。 |
 | [[DeerFlow]] | built-on | [[LangGraph]] | frontmatter.relations |  |
 | [[DeerFlow]] | concrete-harness-for | [[Agent Harness]] | frontmatter.relations |  |
 | [[Dense Retrieval]] | composes_with | [[Hybrid Search]] | frontmatter.relations | Hybrid Search 常把 dense retrieval 和 sparse/BM25 route 组合起来互补。 |
-| [[Dense Retrieval]] | contrasts_with | [[Cross-Encoder]] | frontmatter.relations | Bi-encoder / Dense Retrieval 把 query 和 chunk 分开编码，适合快速召回；Cross-Encoder 把二者放在一起判断，适合小候选集精排。 |
+| [[Dense Retrieval]] | contrasts_with | [[Cross-Encoder]] | frontmatter.relations | Dense Retrieval 常用 Bi-Encoder 把 query 和 chunk 分开编码，适合快速召回；Cross-Encoder 把二者放在一起判断，适合小候选集精排。 |
 | [[Dense Retrieval]] | contrasts_with | [[Sparse Retrieval]] | frontmatter.relations | Dense Retrieval 用稠密语义向量找相似内容；Sparse Retrieval / BM25 用词项、倒排和词面信号找精确匹配。 |
 | [[Dense Retrieval]] | uses | [[Embedding]] | frontmatter.relations | Dense Retrieval 依赖文档和 query 的 embedding 表示。 |
 | [[GSSC Pipeline]] | composes_with | [[Progressive Disclosure]] | frontmatter.relations | 两者都服务按需控制上下文；GSSC 是构建流水线，Progressive Disclosure 是信息暴露策略。 |
@@ -161,6 +165,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 | [[Agent Workflow Static Verification]] | [[Agent Framework]] | topic_family_review | low | frontmatter.related | topic family: framework |
 | [[Agent Workflow Static Verification]] | [[Agent Workflow]] | topic_family_review | low | frontmatter.related | topic family: workflow |
 | [[Benchmark]] | [[Evaluation]] | topic_family_review | low | frontmatter.related | topic family: evaluation |
+| [[Bi-Encoder]] | [[Retriever]] | topic_family_review | low | frontmatter.related | topic family: retrieval/search |
 | [[Chunking]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
 | [[Context Engineering]] | [[RAG]] | topic_family_review | low | frontmatter.related | topic family: rag |
 | [[Context Projection]] | [[Memory]] | topic_family_review | low | frontmatter.related, relations:draws_from | topic family: memory |
@@ -250,6 +255,7 @@ Retrieval boundary: representation/feature concepts such as TF-IDF, route famili
 - [[Agent Workflow Static Verification]]
 - [[Approval Gate]]
 - [[Benchmark]]
+- [[Bi-Encoder]]
 - [[Browser Agent]]
 - [[Chunking]]
 - [[Code Execution Sandbox]]

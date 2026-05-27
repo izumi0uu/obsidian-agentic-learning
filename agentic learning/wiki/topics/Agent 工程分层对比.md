@@ -8,7 +8,7 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-26
 source:
   - "[[Agent Framework]]"
   - "[[Agent Harness]]"
@@ -38,6 +38,7 @@ related:
   - "[[Trace]]"
   - "[[Evaluation]]"
   - "[[Durable Execution]]"
+  - "[[Agent Harness 缓存分层与命中率]]"
 ---
 
 # Agent 工程分层对比
@@ -91,6 +92,7 @@ model intention
 - [[Agent State]] vs context window：state 是 runtime 保存的结构化事实；context window 只是某次模型调用能看到的投影。把全部历史都塞给模型不是好的 state 设计。
 - [[Agent Harness]] vs [[Evaluation]]：harness 可以运行测试和收集证据，但 evaluation 是对结果或 trajectory 的判断层；运行壳不自动保证评分标准正确。
 - [[Agent Loop]] vs 多轮聊天：只有 action、observation 和状态更新形成闭环，才接近 Agent Loop；单纯让模型多说几轮不是工程闭环。
+- [[Agent Harness]] vs serving cache：harness 可以治理 tool result、retrieval、embedding、summary / context cache 的 key、TTL、权限和版本；[[KV Cache]] 和 provider Prompt Caching 的真正命中发生在模型 serving 层。分层见 [[Agent Harness 缓存分层与命中率]]。
 
 ## 执行时序 / 机制差异
 
@@ -147,6 +149,7 @@ model intention
 | 讨论“哪些步骤固定，哪些步骤交给模型判断” | [[Agent Workflow]] | 这是任务路径和控制粒度问题 | workflow 过窄会卡异常，过宽会失控 |
 | 讨论“中断后从哪里恢复、哪些工具结果已看过” | [[Agent State]] | 这是当前 run 的结构化事实和 checkpoint 问题 | 把 state 当 memory 会污染长期知识 |
 | 讨论“下一步是否应根据测试/网页/工具返回调整” | [[Agent Loop]] | 这是 observation 是否回流决策的问题 | 多轮聊天不等于真实闭环 |
+| 讨论“缓存命中率高不高、成本和延迟怎么降” | [[Agent Harness 缓存分层与命中率]] / [[KV Cache]] | 先判断命中发生在 serving 层、provider prompt cache，还是 harness / app 层 cache | 不要把命中率误当正确率，也不要跨权限复用 |
 | 讨论“最终是否完成、过程是否安全经济” | [[Evaluation]] / [[Trace]] | 分层概念提供证据，评价层判断好坏 | trace 记录事实，不自动给质量结论 |
 
 ## 它们共同不是什么
@@ -187,3 +190,4 @@ model intention
 - [[Evaluation]]
 - [[Durable Execution]]
 - [[Handoff]]
+- [[Agent Harness 缓存分层与命中率]]

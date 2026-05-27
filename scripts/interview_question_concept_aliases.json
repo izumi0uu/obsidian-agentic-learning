@@ -13,6 +13,7 @@
   "Approval Gate": ["Approval Gate", "审批门", "人工审批", "审批关卡", "人工确认"],
   "Audit Log": ["Audit Log", "审计日志", "审计记录"],
   "Benchmark": ["Benchmark", "基准测试", "评测基准"],
+  "Bi-Encoder": ["Bi-Encoder", "Bi Encoder", "Bi-encoder", "bi-encoder", "Dual Encoder", "dual encoder", "dual-encoder", "双编码器", "双塔结构"],
   "BM25": ["BM25"],
   "Browser Agent": ["Browser Agent", "浏览器 Agent", "浏览器智能体"],
   "Chunking": ["Chunking", "文档切分", "切分策略", "分块", "chunk"],

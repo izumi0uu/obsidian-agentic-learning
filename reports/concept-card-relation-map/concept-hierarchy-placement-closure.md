@@ -1,13 +1,13 @@
 # Concept Hierarchy Placement Audit closure — Completion Closure
 
-Generated: `2026-05-25T02:55:08Z`
+Generated: `2026-05-25T13:55:07Z`
 
 > Audit closure closes remaining concept-hierarchy-placement open reviews as backlog-backed defers. It does not write concept cards or create fallback parents.
 
 ## Summary
 
-- total_concepts: 177
-- reviewed_concepts: 177
+- total_concepts: 178
+- reviewed_concepts: 178
 - taxonomy_placement_unreviewed: 0
 - open_unclassified: 0
 - open_review_after_closure: 0

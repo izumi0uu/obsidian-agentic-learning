@@ -19,6 +19,7 @@ related:
   - "[[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]"
   - "[[资料收集索引]]"
   - "[[Embedding]]"
+  - "[[Bi-Encoder]]"
   - "[[Vector Database]]"
 ---
 
@@ -31,6 +32,7 @@ related:
 ## 相关知识 wiki
 
 - [[Embedding]]
+- [[Bi-Encoder]]
 - [[Vector Database]]
 
 ## 页面正文

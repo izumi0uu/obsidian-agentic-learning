@@ -25,10 +25,14 @@ up:
   - "[[Reranking]]"
 relations:
   - type: contrasts_with
+    target: "[[Bi-Encoder]]"
+    note: Bi-Encoder 把 query 和 chunk 分开编码，适合快速召回；Cross-Encoder 把二者联合输入，适合小候选集精排。
+  - type: contrasts_with
     target: "[[Dense Retrieval]]"
     note: Dense Retrieval 常用双塔/bi-encoder 思路快速召回；Cross-Encoder 把 query 和 chunk 放在一起深度判断，适合小候选集精排。
 related:
   - "[[Reranking]]"
+  - "[[Bi-Encoder]]"
   - "[[Dense Retrieval]]"
   - "[[Retriever]]"
   - "[[RAG Evaluation]]"
@@ -46,7 +50,7 @@ Cross-Encoder 是一种把 query 和 candidate chunk 拼在一起输入模型、
 
 Cross-Encoder 反过来牺牲速度换精度：把 `query + chunk` 作为一对输入，让模型直接看这两个文本之间的关系，输出相关性分数。因为每个候选 chunk 都要单独跑一次模型，它不适合全库召回；但在 top-20、top-50 这类小候选集上做 [[Reranking]] 很合适。
 
-source note 里用 Bi-encoder 与 Cross-encoder 对比解释 rerank：Bi-encoder 像先分别看两份简历再估计匹配度；Cross-encoder 像把两个人放在一起观察互动。这个类比的边界是：Cross-Encoder 更擅长细粒度相关性判断，但成本和延迟更高，不能替代初召回。
+source note 里用 [[Bi-Encoder]] 与 Cross-encoder 对比解释 rerank：Bi-encoder 像先分别看两份简历再估计匹配度；Cross-encoder 像把两个人放在一起观察互动。这个类比的边界是：Cross-Encoder 更擅长细粒度相关性判断，但成本和延迟更高，不能替代初召回。
 
 在 RAG pipeline 中，Cross-Encoder 常位于“候选足够小之后”。它不能像向量索引那样预先给每个文档生成一个可复用 embedding，因为每次判断都依赖 query 和 chunk 的联合输入；这让它更贵，但也能捕捉短语匹配、否定、实体关系和问题意图。学习时要把它当成 precision 改善工具：先由 BM25 / dense / hybrid 找到候选，再用 cross-encoder 判断哪些候选最值得进入最终上下文。
 ## 它解决什么问题
@@ -81,6 +85,8 @@ for each chunk:
 
 和 [[Dense Retrieval]] 的边界：dense retrieval 优先速度和可索引；Cross-Encoder 优先相关性判断。
 
+和 [[Bi-Encoder]] 的边界：Bi-Encoder 是 query / chunk 分开编码的召回结构；Cross-Encoder 是 query + chunk 联合输入的精排结构。
+
 和 [[Reranking]] 的边界：Reranking 可以用 Cross-Encoder、LLM judge、规则或业务权重；Cross-Encoder 是其中一种常见实现。
 
 和 [[Reciprocal Rank Fusion]] 的边界：RRF 先合并多路排序；Cross-Encoder 常在融合后的小候选集上精排。
@@ -108,7 +114,7 @@ for each chunk:
 ## 相关链接
 
 - [[Reranking]]
+- [[Bi-Encoder]]
 - [[Dense Retrieval]]
 - [[Retriever]]
 - [[Reciprocal Rank Fusion]]
-

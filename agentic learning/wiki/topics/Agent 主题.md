@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-24
+updated: 2026-05-26
 related:
   - "[[Agent]]"
   - "[[ReAct]]"
@@ -13,6 +13,7 @@ related:
   - "[[Agent Workflow Static Verification]]"
   - "[[Agent 知识地图]]"
   - "[[Agent 工程分层对比]]"
+  - "[[Agent Harness 缓存分层与命中率]]"
   - "[[Agent Skills 按需加载与上下文边界]]"
   - "[[Workflow Guardrails 与 Prefect 控制点映射]]"
   - "[[OpenClaw Repo vs Hermes Agent]]"
@@ -50,6 +51,7 @@ SORT created DESC
 
 - [[Agent 知识地图]]
 - [[Agent 工程分层对比]]
+- [[Agent Harness 缓存分层与命中率]]
 - [[Agent Skills 按需加载与上下文边界]]
 - [[Tool 接口层对比]]
 - [[A2A MCP ANP 对比]]

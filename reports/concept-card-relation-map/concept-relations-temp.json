@@ -1,25 +1,27 @@
 {
   "schema_version": 1,
   "artifact_type": "temporary_concept_relationship_map",
-  "generated_at": "2026-05-25T02:54:37Z",
+  "generated_at": "2026-05-25T13:55:07Z",
   "scope": {
     "concept_dir": "agentic learning/wiki/concepts",
     "temporary": true,
     "write_policy": "Do not write these candidates into concept cards without a separate review task."
   },
   "summary": {
-    "total_concepts": 177,
+    "total_concepts": 178,
     "edge_counts": {
-      "related_link": 1104,
-      "body_link": 297,
-      "typed_relation": 65,
+      "related_link": 1115,
+      "body_link": 298,
+      "typed_relation": 69,
       "taxonomy": 45
     },
     "typed_relation_counts": {
-      "contrasts_with": 9,
+      "contrasts_with": 11,
       "related_to": 22,
       "representative_of": 2,
       "based_on_intuition": 1,
+      "used_by": 2,
+      "enables": 1,
       "paired_with": 2,
       "mechanism_for": 1,
       "projects_from": 1,
@@ -34,18 +36,17 @@
       "mitigates": 1,
       "concrete-platform-for": 1,
       "adjacent-to": 1,
-      "used_by": 1,
       "precedes": 1,
       "composed_into": 2,
       "foundational_for": 1
     },
-    "concepts_without_up": 132,
+    "concepts_without_up": 133,
     "core_orphans": 0,
     "weakly_connected_concepts": 1,
     "dangling_core_targets": 31,
-    "candidate_edges": 84,
+    "candidate_edges": 85,
     "taxonomy_candidates": 12,
-    "topic_family_review_signals": 72
+    "topic_family_review_signals": 73
   },
   "nodes": [
     {
@@ -805,6 +806,42 @@
       ]
     },
     {
+      "id": "Bi-Encoder",
+      "title": "Bi-Encoder",
+      "file": "agentic learning/wiki/concepts/Bi-Encoder.md",
+      "topics": [
+        "rag",
+        "retrieval",
+        "embedding",
+        "model-architecture"
+      ],
+      "status": "growing",
+      "freshness": "stable",
+      "aliases": [
+        "Bi-encoder",
+        "bi-encoder",
+        "Dual Encoder",
+        "dual encoder",
+        "dual-encoder",
+        "双编码器",
+        "双塔结构"
+      ],
+      "source_count": 5,
+      "evidence_count": 5,
+      "up": [],
+      "related": [
+        "Embedding",
+        "Dense Retrieval",
+        "Semantic Search",
+        "Vector Similarity Metrics",
+        "Vector Database",
+        "Approximate Nearest Neighbor Search",
+        "Reranking",
+        "Cross-Encoder",
+        "Retriever"
+      ]
+    },
+    {
       "id": "Browser Agent",
       "title": "Browser Agent",
       "file": "agentic learning/wiki/concepts/Browser Agent.md",
@@ -1217,6 +1254,7 @@
       ],
       "related": [
         "Reranking",
+        "Bi-Encoder",
         "Dense Retrieval",
         "Retriever",
         "RAG Evaluation"
@@ -1325,6 +1363,7 @@
       "related": [
         "Retriever",
         "Embedding",
+        "Bi-Encoder",
         "Semantic Search",
         "Vector Similarity Metrics",
         "Vector Database",
@@ -4325,7 +4364,7 @@
         "token 向量"
       ],
       "source_count": 4,
-      "evidence_count": 5,
+      "evidence_count": 4,
       "up": [],
       "related": [
         "Token",
@@ -4579,7 +4618,7 @@
       "freshness": "stable",
       "aliases": [],
       "source_count": 2,
-      "evidence_count": 2,
+      "evidence_count": 3,
       "up": [],
       "related": [
         "LLM",
@@ -7430,6 +7469,136 @@
       "note": ""
     },
     {
+      "source": "Bi-Encoder",
+      "target": "Cross-Encoder",
+      "kind": "typed_relation",
+      "relation_type": "contrasts_with",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "Bi-Encoder 牺牲 query-chunk token 级交互换速度和可预计算；Cross-Encoder 把二者联合输入，适合小候选集精排。"
+    },
+    {
+      "source": "Bi-Encoder",
+      "target": "Vector Database",
+      "kind": "typed_relation",
+      "relation_type": "enables",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "文档侧 embedding 可离线预计算并写入向量库，是大规模向量检索能在线工作的关键前提。"
+    },
+    {
+      "source": "Bi-Encoder",
+      "target": "Dense Retrieval",
+      "kind": "typed_relation",
+      "relation_type": "used_by",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "Dense retrieval 常用 bi-encoder / dual-encoder 把 query 和 chunk 分开编码成向量，再用相似度做召回。"
+    },
+    {
+      "source": "Bi-Encoder",
+      "target": "Approximate Nearest Neighbor Search",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Bi-Encoder",
+      "target": "Cross-Encoder",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Bi-Encoder",
+      "target": "Dense Retrieval",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Bi-Encoder",
+      "target": "Embedding",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Bi-Encoder",
+      "target": "Reranking",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Bi-Encoder",
+      "target": "Retriever",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Bi-Encoder",
+      "target": "Semantic Search",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Bi-Encoder",
+      "target": "Vector Database",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Bi-Encoder",
+      "target": "Vector Similarity Metrics",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Bi-Encoder",
+      "target": "HNSW",
+      "kind": "body_link",
+      "relation_type": "body_wikilink",
+      "confidence": "observed",
+      "status": "internal",
+      "evidence": "body wikilink",
+      "note": ""
+    },
+    {
       "source": "Browser Agent",
       "target": "Computer Use",
       "kind": "related_link",
@@ -8651,6 +8820,16 @@
     },
     {
       "source": "Cross-Encoder",
+      "target": "Bi-Encoder",
+      "kind": "typed_relation",
+      "relation_type": "contrasts_with",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.relations",
+      "note": "Bi-Encoder 把 query 和 chunk 分开编码，适合快速召回；Cross-Encoder 把二者联合输入，适合小候选集精排。"
+    },
+    {
+      "source": "Cross-Encoder",
       "target": "Dense Retrieval",
       "kind": "typed_relation",
       "relation_type": "contrasts_with",
@@ -8658,6 +8837,16 @@
       "status": "internal",
       "evidence": "frontmatter.relations",
       "note": "Dense Retrieval 常用双塔/bi-encoder 思路快速召回；Cross-Encoder 把 query 和 chunk 放在一起深度判断，适合小候选集精排。"
+    },
+    {
+      "source": "Cross-Encoder",
+      "target": "Bi-Encoder",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
     },
     {
       "source": "Cross-Encoder",
@@ -8997,7 +9186,7 @@
       "confidence": "existing",
       "status": "internal",
       "evidence": "frontmatter.relations",
-      "note": "Bi-encoder / Dense Retrieval 把 query 和 chunk 分开编码，适合快速召回；Cross-Encoder 把二者放在一起判断，适合小候选集精排。"
+      "note": "Dense Retrieval 常用 Bi-Encoder 把 query 和 chunk 分开编码，适合快速召回；Cross-Encoder 把二者放在一起判断，适合小候选集精排。"
     },
     {
       "source": "Dense Retrieval",
@@ -9032,6 +9221,16 @@
     {
       "source": "Dense Retrieval",
       "target": "BM25",
+      "kind": "related_link",
+      "relation_type": "related",
+      "confidence": "existing",
+      "status": "internal",
+      "evidence": "frontmatter.related",
+      "note": ""
+    },
+    {
+      "source": "Dense Retrieval",
+      "target": "Bi-Encoder",
       "kind": "related_link",
       "relation_type": "related",
       "confidence": "existing",
@@ -20139,6 +20338,17 @@
       ]
     },
     {
+      "source": "Bi-Encoder",
+      "target": "Retriever",
+      "candidate_type": "topic_family_review",
+      "confidence": "low",
+      "status": "needs_review",
+      "rationale": "topic family: retrieval/search",
+      "support": [
+        "frontmatter.related"
+      ]
+    },
+    {
       "source": "Chunking",
       "target": "RAG",
       "candidate_type": "topic_family_review",
@@ -20911,6 +21121,7 @@
       "Agent Workflow Static Verification",
       "Approval Gate",
       "Benchmark",
+      "Bi-Encoder",
       "Browser Agent",
       "Chunking",
       "Code Execution Sandbox",
