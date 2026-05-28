@@ -1635,3 +1635,10 @@ related:
 - Updated [[Evaluation]] with a dedicated automatic-metrics boundary: BLEU and ROUGE are lexical-overlap metrics, BERTScore is a semantic-similarity metric, and BERT is a model family rather than an evaluation metric.
 - Evidence writeback stayed intentionally narrow: reused existing raw interview evidence [[167 01_AI 06_评测与监控 为什么 BLEU ROUGE 评 LLM 不够？]] and [[170 01_AI 06_评测与监控 为什么传统的 NLP 评估指标（如 BLEU, ROUGE）对于评估现代 LLM 的生成质量来说，存在很大的局限性？]] instead of creating weak standalone concept cards for BLEU / ROUGE / BERTScore / BERT.
 - Boundary decision: this is a simple concept-card clarification under [[Evaluation]], not a systemic workflow/schema change. No alias map, taxonomy relationship, template, script, map, or backlog surface changed in this pass.
+
+## [2026-05-28] source | Pi Agent Harness Repo
+
+- Added source: [[Pi Agent Harness Repo]]
+- Updated: [[Agent Harness]], [[Coding Agent]], [[资料收集索引]], [[05 Query 写回队列]]
+- Sources checked: GitHub repo README, `packages/coding-agent/README.md`, `packages/agent/README.md`, `packages/ai/README.md`, providers docs, GitHub release `v0.76.0`, npm package version `0.76.0`
+- Boundary: Pi 更适合作为具体 coding-agent / harness repo source 录入，不新建弱 `Pi Agent` 概念卡；稳定写回点是 “minimal terminal coding harness” 边界，以及 “sub-agents / plan mode 是可选产品层，不是 coding agent 定义前提”。

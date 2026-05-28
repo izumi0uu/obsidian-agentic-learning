@@ -5,7 +5,7 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-07
-updated: 2026-05-25
+updated: 2026-05-28
 related:
   - "[[LLM Wiki 工作流]]"
   - "[[02 问题池]]"
@@ -50,6 +50,7 @@ related:
 | 2026-05-18 | done | “Agent 鲁棒性 / Agent Robustness 的边界是什么？” | [[Agent Robustness]], [[Task Success Rate]], [[Evaluation]], [[Evaluation 层次对比]], `scripts/interview_question_concept_aliases.json` | 已创建 [[Agent Robustness]] 概念卡；边界写明它是扰动条件下的系统级稳定性和恢复能力，不等于通用可靠性、安全性、evaluation 或 task success rate，也不把裸 `鲁棒性 / Robustness` 自动当 alias。 |
 | 2026-05-19 | pending | “为什么在 Agent 出来之前，RAG 概念并没有明显进入市场和日常生活？” | [[RAG]], [[Agentic RAG]], [[RAG 主题]] | 待写回：校正“RAG 没应用”的前提；RAG 在 Agent 前已用于企业搜索、知识库问答和文档检索，但它更像后台信息管道。Agent 把 RAG 接到目标、工具、状态、workflow、评估和行动闭环里，才让普通用户感知为可交付的 AI 产品能力。 |
 | 2026-05-20 | done | “近期值得学习的 AI / Agent 概念应录入哪些边界？” | [[Agent Skills]], [[Managed Agent Harness]], [[MCP Elicitation]], [[Agent Payments Protocol]], [[03 前沿追踪]] | 已录入 4 张概念卡和 3 份 official/source note；边界：优先沉淀能力包、托管运行外壳、MCP 结构化用户输入和 Agent 支付授权协议，不把产品 API、beta header 或前沿论文标题写成稳定概念。 |
+| 2026-05-28 | done | “earendil-works/pi 里的 Pi agent 是什么？” | [[Pi Agent Harness Repo]], [[Agent Harness]], [[Coding Agent]] | 已写回：Pi 更适合作为具体 coding-agent / harness repo source 来学习；它是 minimal terminal coding harness mono repo，不是新的通用 Agent 概念，也不把 sub-agents / plan mode 当定义前提。 |
 
 ## 写回模板
 
