@@ -4,7 +4,7 @@ topic:
   - rag
 status: active
 created: 2026-05-05
-updated: 2026-05-26
+updated: 2026-06-02
 source:
   - "[[RAG]]"
   - "[[RAG 类型对比]]"
@@ -112,6 +112,8 @@ RAG 主题的学习主线不是“向量库 + LLM”，而是：**外部资料�
 - [[RAG 可靠性与治理对比]]：把 [[RAG Citation Faithfulness]]、[[RAG Access Control]]、trace、audit 和 evaluation 放到同一张治理地图里。
 - [[Query Rewrite Query Planning Agentic Retrieval 对比]]：区分 query rewrite、multi-query、HyDE、step-back、query planning 和 agentic retrieval 的检索决策层级。
 - [[Parallel Search and Explicit Merging 检索模式]]：学习 deep search / agentic RAG 中“多 query 并行检索 + 显式证据合并”的信噪比边界。
+- [[Search as Code]]：理解 frontier search architecture 如何把固定 search endpoint 拆成可编排 primitives，并和 [[Agentic Retrieval]]、[[Tool Calling]] 的边界切开。
+- [[传统 Tool-Calling 搜索 vs Perplexity SaC 对比]]：把 monolithic search endpoint 和 Perplexity 的 programmable search stack 放在同一张结构图里比较。
 - [[GraphRAG 构图与评估对比]]：区分 [[Knowledge Graph]]、[[Entity Resolution]]、[[Graph Construction Evaluation]]、[[GraphRAG]] 和 [[Neo4j]]。
 - [[Neo4j GraphRAG 官方文档]] / [[Neo4j]]：GraphRAG / Knowledge Graph RAG 的重要工程主源与实现生态。
 
@@ -276,6 +278,7 @@ SORT file.name ASC
 - [x] [[GraphRAG]]
 - [x] [[Neo4j]]
 - [x] [[Agentic RAG]] / [[Agentic Retrieval]]
+- [x] [[Search as Code]]
 - [x] [[Corrective RAG]] / [[Self-RAG]]
 - [x] [[RAGGraph]]
 - [x] [[RAG Citation Faithfulness]]
@@ -301,9 +304,9 @@ RAG 能让 LLM 使用外部资料，但不能保证资料完整、检索正确�
 
 ## 证据锚点
 
-- Concept anchors: [[RAG#证据锚点]], [[Retriever#证据锚点]], [[Top-K#证据锚点]], [[Multi-Route Retrieval#证据锚点]], [[Query Rewrite#证据锚点]], [[Multi-Query Retrieval#证据锚点]], [[HyDE#证据锚点]], [[Step-back Prompting#证据锚点]], [[Query Planning#证据锚点]], [[Document Ingestion#证据锚点]], [[Chunking#证据锚点]], [[Embedding#证据锚点]], [[Semantic Search#证据锚点]], [[Dense Retrieval#证据锚点]], [[Vector Similarity Metrics#证据锚点]], [[Approximate Nearest Neighbor Search#证据锚点]], [[HNSW#证据锚点]], [[Matryoshka Embeddings#证据锚点]], [[Embedding Quantization#证据锚点]], [[MTEB#证据锚点]], [[TF-IDF#证据锚点]], [[Sparse Retrieval#证据锚点]], [[BM25#证据锚点]], [[Vector Database#证据锚点]], [[Hybrid Search#证据锚点]], [[Reranking#证据锚点]], [[Cross-Encoder#证据锚点]], [[RAG Evaluation#证据锚点]], [[Context Recall#证据锚点]], [[Context Precision#证据锚点]], [[RAG Citation Faithfulness#证据锚点]], [[RAG Access Control#证据锚点]], [[TTL#证据锚点]], [[Knowledge Graph#证据锚点]], [[Entity Resolution#证据锚点]], [[Graph Construction Evaluation#证据锚点]], [[GraphRAG#证据锚点]], [[Neo4j#证据锚点]]。
+- Concept anchors: [[RAG#证据锚点]], [[Retriever#证据锚点]], [[Top-K#证据锚点]], [[Multi-Route Retrieval#证据锚点]], [[Query Rewrite#证据锚点]], [[Multi-Query Retrieval#证据锚点]], [[HyDE#证据锚点]], [[Step-back Prompting#证据锚点]], [[Query Planning#证据锚点]], [[Search as Code#证据锚点]], [[Document Ingestion#证据锚点]], [[Chunking#证据锚点]], [[Embedding#证据锚点]], [[Semantic Search#证据锚点]], [[Dense Retrieval#证据锚点]], [[Vector Similarity Metrics#证据锚点]], [[Approximate Nearest Neighbor Search#证据锚点]], [[HNSW#证据锚点]], [[Matryoshka Embeddings#证据锚点]], [[Embedding Quantization#证据锚点]], [[MTEB#证据锚点]], [[TF-IDF#证据锚点]], [[Sparse Retrieval#证据锚点]], [[BM25#证据锚点]], [[Vector Database#证据锚点]], [[Hybrid Search#证据锚点]], [[Reranking#证据锚点]], [[Cross-Encoder#证据锚点]], [[RAG Evaluation#证据锚点]], [[Context Recall#证据锚点]], [[Context Precision#证据锚点]], [[RAG Citation Faithfulness#证据锚点]], [[RAG Access Control#证据锚点]], [[TTL#证据锚点]], [[Knowledge Graph#证据锚点]], [[Entity Resolution#证据锚点]], [[Graph Construction Evaluation#证据锚点]], [[GraphRAG#证据锚点]], [[Neo4j#证据锚点]]。
 - Topic anchors: [[Retrieval 组件对比#证据锚点]], [[RAG 类型对比#证据锚点]], [[Context RAG Memory 对比#证据锚点]], [[Evaluation 层次对比#RAG Evaluation vs Trajectory Evaluation]]。
-- Source examples: [[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]], [[Microsoft RAG 官方文档]], [[Neo4j GraphRAG 官方文档]], [[Azure AI Search Agentic Retrieval]], [[Corrective Retrieval Augmented Generation]], [[Self-RAG - Learning to Retrieve Generate and Critique]], [[Scaling Retrieval-Augmented Reasoning with Parallel Search and Explicit Merging]]。
+- Source examples: [[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]], [[Microsoft RAG 官方文档]], [[Neo4j GraphRAG 官方文档]], [[Azure AI Search Agentic Retrieval]], [[Perplexity - Rethinking Search as Code Generation]], [[Corrective Retrieval Augmented Generation]], [[Self-RAG - Learning to Retrieve Generate and Critique]], [[Scaling Retrieval-Augmented Reasoning with Parallel Search and Explicit Merging]]。
 - Evidence type: 本页是 topic map 综合；稳定定义来自概念卡和 source note，诊断表和选型判断属于工程综合 / inference。
 
 ## 复习触发
@@ -345,7 +348,9 @@ RAG 能让 LLM 使用外部资料，但不能保证资料完整、检索正确�
 - [[HyDE]]
 - [[Step-back Prompting]]
 - [[Query Planning]]
+- [[Search as Code]]
 - [[Query Rewrite Query Planning Agentic Retrieval 对比]]
+- [[传统 Tool-Calling 搜索 vs Perplexity SaC 对比]]
 - [[Parallel Search and Explicit Merging 检索模式]]
 - [[Graph Construction Evaluation]]
 - [[Entity Resolution]]

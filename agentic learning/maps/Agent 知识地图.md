@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-26
+updated: 2026-06-02
 related:
   - "[[Agent]]"
   - "[[前沿主源清单]]"
@@ -135,6 +135,7 @@ LLM 地基：
 - [[RAG Evaluation]]：理解 RAG 失败要分层评估检索、上下文、引用和最终回答。
 - [[RAG Citation Faithfulness]]、[[RAG Access Control]] 和 [[TTL]]：理解 RAG 可靠性不只看答案，还要看引用支持、权限过滤和资料 freshness 边界。
 - [[Query Rewrite]]、[[Multi-Query Retrieval]]、[[HyDE]]、[[Step-back Prompting]]、[[Query Planning]] 和 [[Agentic Retrieval]]：理解检索层如何从改写 query、扩展查询视角、假设文档、背景抽象，走向检索计划和多轮检索控制。
+- [[Search as Code]]：理解 frontier search architecture 如何把固定 search endpoint 继续下沉成可编排 primitives，让模型在 sandbox 中用代码组织 retrieval、filter、fanout、merge 和 rendering。
 - [[Parallel Search and Explicit Merging 检索模式]]：理解 deep search / agentic RAG 如何在单个 reasoning step 里扩展多 query 检索，并用显式合并控制信噪比。
 - [[Entity Resolution]] 和 [[Graph Construction Evaluation]]：理解 GraphRAG 的构图质量、实体合并和评估边界。
 - [[RAG 可靠性与治理对比]]、[[Query Rewrite Query Planning Agentic Retrieval 对比]]、[[GraphRAG 构图与评估对比]]：RAG 可靠性、检索决策和构图评估的对比入口。
@@ -210,6 +211,7 @@ LLM 地基：
 - [[RAG 可靠性与治理对比]]：区分 RAG evaluation、citation faithfulness、access control、trace 和 audit 的治理位置。
 - [[Query Rewrite Query Planning Agentic Retrieval 对比]]：区分 query rewrite、multi-query、HyDE、step-back、query planning、agentic retrieval 和 agentic RAG。
 - [[Parallel Search and Explicit Merging 检索模式]]：区分 parallel multi-query search、explicit merging、Hybrid Search、Reranking 和 RAG Evaluation 的层级。
+- [[传统 Tool-Calling 搜索 vs Perplexity SaC 对比]]：区分固定 search endpoint 的串行 tool-call 搜索，与 primitive-level programmable search orchestration 的结构边界。
 - [[GraphRAG 构图与评估对比]]：区分 knowledge graph、entity resolution、graph construction evaluation、GraphRAG 和 Neo4j。
 - [[LLM 输入输出基础边界对比]]：区分 token、context window、prompt 和 hallucination。
 - [[LLM 上下文限制与突破条件]]：拆开 context window 的容量、计算、结构、有效使用和治理限制，避免把长上下文误当长期记忆或可靠性保证。

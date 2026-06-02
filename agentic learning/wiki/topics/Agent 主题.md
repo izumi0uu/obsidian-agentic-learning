@@ -4,7 +4,7 @@ topic:
   - agent
 status: active
 created: 2026-05-05
-updated: 2026-05-26
+updated: 2026-06-02
 related:
   - "[[Agent]]"
   - "[[ReAct]]"
@@ -54,6 +54,7 @@ SORT created DESC
 - [[Agent Harness 缓存分层与命中率]]
 - [[Agent Skills 按需加载与上下文边界]]
 - [[Tool 接口层对比]]
+- [[传统 Tool-Calling 搜索 vs Perplexity SaC 对比]]
 - [[A2A MCP ANP 对比]]
 - [[Agent 安全控制点对比]]
 - [[Workflow Guardrails 与 Prefect 控制点映射]]

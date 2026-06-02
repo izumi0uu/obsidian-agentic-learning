@@ -1642,3 +1642,12 @@ related:
 - Updated: [[Agent Harness]], [[Coding Agent]], [[资料收集索引]], [[05 Query 写回队列]]
 - Sources checked: GitHub repo README, `packages/coding-agent/README.md`, `packages/agent/README.md`, `packages/ai/README.md`, providers docs, GitHub release `v0.76.0`, npm package version `0.76.0`
 - Boundary: Pi 更适合作为具体 coding-agent / harness repo source 录入，不新建弱 `Pi Agent` 概念卡；稳定写回点是 “minimal terminal coding harness” 边界，以及 “sub-agents / plan mode 是可选产品层，不是 coding agent 定义前提”。
+
+## [2026-06-02] source+concept+topic | Perplexity Search as Code ingest
+
+- Created raw source note [[Perplexity - Rethinking Search as Code Generation]] for Perplexity Research's `2026-06-01` article, preserving the architecture claim, failure modes, CVE case-study details, benchmark numbers, and product-boundary caveat.
+- Created [[Search as Code]] as the canonical concept, with `SaC` and `搜索即代码` as bounded aliases, to capture the boundary between fixed search endpoints and programmable search primitives orchestrated in a sandbox.
+- Created [[传统 Tool-Calling 搜索 vs Perplexity SaC 对比]] plus the learning-redraw asset `tool-calling-search-vs-search-as-code.svg` to compare monolithic tool-call search with Perplexity's code-orchestrated search stack.
+- Updated navigation and discovery surfaces: [[资料收集索引]], [[Agent 知识地图]], [[RAG 主题]], [[Agent 主题]], [[01 术语表]], and [[04 页面目录]].
+- Mention sweep: searched `Search as Code`, `SaC`, and `搜索即代码` across the vault before writeback; there were no preexisting high-confidence same-concept mentions to retarget, so the new concept was linked only from the newly updated navigation/topic surfaces.
+- Terminology / taxonomy: canonical name stays `Search as Code`; `Perplexity SaC` is product-context wording, not a separate concept card. Read [[09 概念层级审计基线]] and intentionally did not write `up` / `relations`; this is a new frontier retrieval/tooling boundary whose strict parent should not be guessed from the current conversation.
