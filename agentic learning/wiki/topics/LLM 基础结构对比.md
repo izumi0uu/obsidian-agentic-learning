@@ -6,7 +6,7 @@ topic:
   - comparison
 status: active
 created: 2026-05-12
-updated: 2026-05-25
+updated: 2026-06-08
 source:
   - "[[LLM]]"
   - "[[Transformer]]"
@@ -18,6 +18,8 @@ source:
   - "[[Positional Encoding]]"
   - "[[Gating Mechanism]]"
   - "[[LLM Training Pipeline]]"
+  - "[[2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？]]"
+  - "[[Decoder-only]]"
 evidence:
   - "[[LLM#证据锚点]]"
   - "[[Transformer#证据锚点]]"
@@ -29,10 +31,16 @@ evidence:
   - "[[Positional Encoding#证据锚点]]"
   - "[[Gating Mechanism#证据锚点]]"
   - "[[LLM Training Pipeline#证据锚点]]"
+  - "[[2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？#Encoder-only、Decoder-only 和 Encoder-Decoder 三种架构]]"
+  - "[[2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？#为什么 Decoder-only 赢了]]"
+  - "[[Decoder-only#证据锚点]]"
 related:
   - "[[Attention Is All You Need]]"
   - "[[Agent]]"
   - "[[LLM 主题]]"
+  - "[[Encoder-only]]"
+  - "[[Decoder-only]]"
+  - "[[Encoder-Decoder]]"
 ---
 
 # LLM 基础结构对比
@@ -141,6 +149,24 @@ LLM output -> tool/runtime/action -> observation/state/trace -> next LLM call
 
 最后一段 runtime side 是边界对照：它说明 LLM 基础结构和 Agent 执行系统不是同一层。
 
+## 架构变体对比
+
+这一组回答的是同一个问题：Transformer 家族到底怎样组织“看输入”和“生成输出”的路径。它们的差别不在于名字，而在于可见性、训练目标和典型任务形态。
+
+| 架构变体 | 可见性 | 常见训练目标 | 更擅长的任务 | 这次 vault 的处理 |
+|---|---|---|---|---|
+| [[Encoder-only]] | 双向看上下文 | MLM / 判别式目标 | 分类、检索、embedding、相似度、序列标注 | 已升格为独立概念卡 |
+| [[Decoder-only]] | 单向看前缀，不能看未来 token | CLM / next-token prediction | 通用生成、对话、代码、开放式推理 | 已升格为独立概念卡 |
+| [[Encoder-Decoder]] | Encoder 双向理解输入，Decoder 单向生成输出，并通过 cross-attention 连接 | seq2seq / denoising / 生成式任务目标 | 翻译、摘要、输入输出明显分离的任务 | 已升格为独立概念卡 |
+
+最小判断法：
+
+- 如果问题是“模型怎样把一个完整输入先读懂，再产出另一段文本”，更接近 [[Encoder-Decoder]]。
+- 如果问题是“模型怎样沿着已有前缀持续往后写”，更接近 [[Decoder-only]]。
+- 如果问题是“模型怎样给一个完整文本做理解、打分、分类或向量化”，更接近 [[Encoder-only]]。
+
+为什么主流通用生成式 LLM 大多选 [[Decoder-only]]：因为它把大量任务统一成“预测下一个 token”这一件事，能直接吃海量无标注文本做自监督训练，也更容易随着数据、参数和算力一起 scale up。这个“统一训练目标”是它在大模型时代胜出的核心，不等于其他两类架构失去价值。
+
 ## 学习类比（非证据）
 
 > 这一节只是 learning analogy，不是论文、官方文档或 source note 证据。
@@ -163,6 +189,7 @@ LLM output -> tool/runtime/action -> observation/state/trace -> next LLM call
 ## 现代系统如何吸收或限制
 
 - 来源支持：[[LLM]]、[[Transformer]]、[[Token Embedding]]、[[Self-Attention]]、[[Scaled Dot-Product Attention]]、[[Multi-Head Attention]]、[[Masked Attention]]、[[Positional Encoding]] 的证据锚点主要回到 [[Attention Is All You Need]] 和 [[20分钟读懂AI神级论文 Attention Is All You Need]]；[[LLM Training Pipeline]] 还连接 scaling、Chinchilla、RLHF、Constitutional AI、DeepSeek-R1、Llama 3、Toolformer 等训练/能力来源 source notes。
+- 架构变体对比：[[Encoder-only]] / [[Decoder-only]] / [[Encoder-Decoder]] 的差别与“为什么 Decoder-only 赢了”的学习线索，当前主要落在 [[2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？]]、[[Encoder-only]]、[[Decoder-only]] 和 [[Encoder-Decoder]]。
 - 工程综合 / inference：现代 Agent 系统把 LLM 当成推理和语言接口，但把工具执行、状态、记忆、权限、sandbox、trace 和 evaluation 放到外部 harness，而不是要求 Transformer 内部直接完成。
 - 仍需警惕的外推：具体 attention 变体、位置编码实现、长上下文技术和训练配方变化很快；本页只沉淀学习层级，不写最新产品能力结论。
 
@@ -214,6 +241,9 @@ LLM output -> tool/runtime/action -> observation/state/trace -> next LLM call
 - [[Positional Encoding]]
 - [[Gating Mechanism]]
 - [[LLM Training Pipeline]]
+- [[Encoder-only]]
+- [[Encoder-Decoder]]
+- [[Decoder-only]]
 - [[Attention Is All You Need]]
 - [[Agent]]
 - [[LLM 主题]]

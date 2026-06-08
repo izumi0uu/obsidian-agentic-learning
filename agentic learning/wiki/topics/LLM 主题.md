@@ -4,7 +4,7 @@ topic:
   - llm
 status: active
 created: 2026-05-05
-updated: 2026-05-26
+updated: 2026-06-08
 related:
   - "[[NLP]]"
   - "[[LLM]]"
@@ -20,6 +20,9 @@ related:
   - "[[Few-shot Prompting]]"
   - "[[Hallucination]]"
   - "[[Transformer]]"
+  - "[[Encoder-only]]"
+  - "[[Encoder-Decoder]]"
+  - "[[Decoder-only]]"
   - "[[Token Embedding]]"
   - "[[Masked Attention]]"
   - "[[Scaled Dot-Product Attention]]"
@@ -42,7 +45,7 @@ related:
 
 ## 一句话总览
 
-LLM 主题先回答“自然语言任务是什么、模型一次调用如何读输入、生成输出、受什么边界限制”，再进入 Transformer 架构、推理缓存、结构化输出、训练/后训练、prompt-time reasoning 和 Agent 工程承载。最小入口是 [[NLP]]、[[LLM]]、[[Token]]、[[Token Embedding]]、[[Context Window]]、[[Context Rot]]、[[KV Cache]]、[[Gating Mechanism]]、[[Structured Outputs]] / [[Constrained Decoding]]、[[Prompt]]、[[Prompt Engineering]]、[[Hallucination]] 和 [[LLM 输入输出基础边界对比]]。
+LLM 主题先回答“自然语言任务是什么、模型一次调用如何读输入、生成输出、受什么边界限制”，再进入 Transformer 架构、三类 Transformer 架构变体、推理缓存、结构化输出、训练/后训练、prompt-time reasoning 和 Agent 工程承载。最小入口是 [[NLP]]、[[LLM]]、[[Token]]、[[Token Embedding]]、[[Context Window]]、[[Context Rot]]、[[KV Cache]]、[[Gating Mechanism]]、[[Structured Outputs]] / [[Constrained Decoding]]、[[Prompt]]、[[Prompt Engineering]]、[[Hallucination]] 和 [[LLM 输入输出基础边界对比]]。
 
 ## 先看这个
 
@@ -53,7 +56,10 @@ LLM 主题先回答“自然语言任务是什么、模型一次调用如何读�
 - [[Context Rot]]：理解长窗口里“看得见”和“用得稳”不是一回事。
 - [[KV Cache]]：理解自回归解码为什么要缓存历史 K/V，以及长上下文为什么会变成显存和带宽问题；再用 [[Agent Harness 缓存分层与命中率]] 把 KV cache、Prompt Caching 和 harness / app 层 cache 区分开。
 - [[Gating Mechanism]]：理解模型内部如何用 gate 选择性放行特征、路由专家或调制计算路径，并把它和 Approval Gate / Skill 按需加载切开。
-- [[LLM 基础结构对比]]：区分 Transformer、self-attention、multi-head attention 和 positional encoding。
+- [[LLM 基础结构对比]]：区分 Transformer、self-attention、multi-head attention、positional encoding 和三类 Transformer 架构变体。
+- [[Encoder-only]]：理解为什么“先把整段输入读懂再输出表示/判断”的架构路线仍然长期服务于分类、embedding、匹配和 rerank。
+- [[Encoder-Decoder]]：理解为什么原始 [[Transformer]] 是先编码输入、再条件生成输出的 seq2seq 路线，以及它和通用生成式 LLM 主航道的分叉。
+- [[Decoder-only]]：理解为什么主流通用生成式 LLM 大多采用自回归的仅解码器架构，以及它和 Encoder-only / Encoder-Decoder 的边界。
 - [[Prompt Engineering]]：理解 prompt 如何从一次性文本变成可测试、可版本化、可回滚的工程资产。
 - [[Few-shot Prompting]]：理解示例如何在推理时临时定义任务格式、标签边界和输出风格。
 - [[Context Engineering]]：理解 prompt 之外，系统如何选择和装配上下文。
@@ -65,7 +71,7 @@ LLM 主题先回答“自然语言任务是什么、模型一次调用如何读�
 课程型入口：[[AI Engineering From Scratch]] 可作为快速 Agent 开发的外部课程路线。对 LLM 主题而言，先取 Phase 11 的 Prompt Engineering、Structured Outputs、Context Engineering、RAG、Function Calling、Evaluation、Guardrails、MCP 和 cost / caching，再接到 Phase 13/14 的工具协议与 Agent 工程。
 
 1. **任务和输入输出边界**：读 [[NLP]]、[[Token]]、[[Context Window]]、[[Prompt]]、[[Prompt Engineering]]、[[Few-shot Prompting]]、[[Hallucination]]，先知道自然语言任务是什么、一次模型调用能看到什么、怎样被指令、哪里会不可靠，以及 prompt / 示例如何被工程化维护。
-2. **模型结构地基**：读 [[Token Embedding]]、[[Transformer]]、[[Self-Attention]]、[[Scaled Dot-Product Attention]]、[[Multi-Head Attention]]、[[Masked Attention]]、[[Positional Encoding]]，理解输入向量、注意力机制、遮罩和位置表示只是模型架构，不是 Agent 行动能力。
+2. **模型结构地基**：读 [[Token Embedding]]、[[Transformer]]、[[Self-Attention]]、[[Scaled Dot-Product Attention]]、[[Multi-Head Attention]]、[[Masked Attention]]、[[Positional Encoding]]、[[Encoder-only]]、[[Encoder-Decoder]]、[[Decoder-only]]，理解输入向量、注意力机制、遮罩、位置表示和三类主流架构变体只是模型结构，不是 Agent 行动能力。
 3. **推理运行成本**：读 [[KV Cache]]、[[LLM 上下文限制与突破条件]] 和 [[Agent Harness 缓存分层与命中率]]，理解长上下文为什么会放大显存、带宽、延迟和并发吞吐问题，以及 provider prompt cache / harness cache 指标为什么不能混读。
 4. **结构化输出控制**：读 [[Structured Outputs]] 和 [[Constrained Decoding]]，理解 structured output 是应用层 typed boundary，constrained decoding 是可能的 token-level 机制；再和 [[Tool Calling]]、schema validation、[[Type-safe Agent SDK]] 区分。
 5. **训练与能力来源**：读 [[LLM Training Pipeline]]、[[Scaling Laws for Neural Language Models]]、[[Training Language Models to Follow Instructions with Human Feedback]] 和 [[PBRFT 到 Agentic RL 的训练范式转变对比]]，理解预训练、指令微调、偏好优化、推理强化和轨迹级 Agentic RL 的证据边界。
@@ -113,6 +119,9 @@ SORT file.name ASC
 - [x] [[LLM 输入输出基础边界对比]]
 - [x] [[LLM 上下文限制与突破条件]]
 - [x] [[Transformer]]
+- [x] [[Encoder-only]]
+- [x] [[Encoder-Decoder]]
+- [x] [[Decoder-only]]
 - [x] [[Token Embedding]]
 - [x] [[Self-Attention]]
 - [x] [[Scaled Dot-Product Attention]]

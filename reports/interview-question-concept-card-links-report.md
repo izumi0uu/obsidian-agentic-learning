@@ -4,10 +4,10 @@
 - 扫描题页：779
 - 含 `## 相关知识 wiki`：779
 - 已有正文概念链接页：362
-- 本次可新增/已新增链接：75
-- would modify pages：57
+- 本次可新增/已新增链接：82
+- would modify pages：58
 - skipped/no-match pages：410
-- unsafe-region skips：4187
+- unsafe-region skips：4211
 - missing concept candidates：0（unique 0）
 - protected-region violations：0
 
@@ -15,8 +15,8 @@
 
 | root | total | related | already-linked pages | would-modify pages | proposed links | skipped/no-match |
 |---|---:|---:|---:|---:|---:|---:|
-| xiaolinnote | 142 | 142 | 81 | 32 | 43 | 59 |
-| agent_java_offer | 637 | 637 | 281 | 25 | 32 | 351 |
+| xiaolinnote | 142 | 142 | 81 | 32 | 46 | 59 |
+| agent_java_offer | 637 | 637 | 281 | 26 | 36 | 351 |
 
 ## Sample files selected
 
@@ -164,7 +164,10 @@
 - agentic learning/raw/repos/xiaolinnote/questions/136 ai llm 16. 如何写好 Prompt？分享下 Prompt 工程实践经验？.md:28 — `Prompt 工程` -> `[[Prompt Engineering]]`
 - agentic learning/raw/repos/xiaolinnote/questions/136 ai llm 16. 如何写好 Prompt？分享下 Prompt 工程实践经验？.md:67 — `Few-shot` -> `[[Few-shot Prompting]]`
 - agentic learning/raw/repos/xiaolinnote/questions/137 ai llm 15. 大模型量化是什么？INT8-INT4-AWQ-GPTQ 怎么选？.md:105 — `KV Cache` -> `[[KV Cache]]`
-- agentic learning/raw/repos/xiaolinnote/questions/141 ai llm 2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？.md:134 — `Scaled Dot-Product Attention` -> `[[Scaled Dot-Product Attention]]`
+- agentic learning/raw/repos/xiaolinnote/questions/141 ai llm 2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？.md:75 — `Encoder-only` -> `[[Encoder-only]]`
+- agentic learning/raw/repos/xiaolinnote/questions/141 ai llm 2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？.md:75 — `Decoder-only` -> `[[Decoder-only]]`
+- agentic learning/raw/repos/xiaolinnote/questions/141 ai llm 2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？.md:128 — `Encoder-Decoder` -> `[[Encoder-Decoder]]`
+- agentic learning/raw/repos/xiaolinnote/questions/141 ai llm 2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？.md:142 — `Scaled Dot-Product Attention` -> `[[Scaled Dot-Product Attention]]`
 - agentic learning/raw/repos/xiaolinnote/questions/142 ai llm 1. 什么是大语言模型？和传统 NLP 模型有什么区别？.md:26 — `NLP` -> `[[NLP]]`
 - agentic learning/raw/repos/agent_java_offer/questions/008 01_AI 01_Agent基础 ReAct与规划能力（CoT ToT GoT）.md:42 — `ToT` -> `[[Tree of Thoughts]]`
 - agentic learning/raw/repos/agent_java_offer/questions/014 01_AI 01_Agent基础 在 Agent 的设计中，“规划能力”至重要。请谈谈目前有哪些主流方法可以赋予 LLM 规划能力？（例如 CoT, ToT, GoT等）.md:39 — `ToT` -> `[[Tree of Thoughts]]`
@@ -181,8 +184,12 @@
 - agentic learning/raw/repos/agent_java_offer/questions/122 01_AI 04_上下文工程与记忆 LLM 调优（训练调优 + Prompt 调优）怎么分层做？.md:106 — `结构化输出` -> `[[Structured Outputs]]`
 - agentic learning/raw/repos/agent_java_offer/questions/123 01_AI 04_上下文工程与记忆 Prompt Engineering 及 Prompt 优化策略有哪些？.md:43 — `Prompt` -> `[[Prompt]]`
 - agentic learning/raw/repos/agent_java_offer/questions/124 01_AI 04_上下文工程与记忆 Prompt Engineering 和微调策略如何协同？.md:74 — `Prompt` -> `[[Prompt]]`
+- agentic learning/raw/repos/agent_java_offer/questions/160 01_AI 05_模型调优与微调 10 Bert模型与现在大语言模型LLM的区别.md:62 — `Encoder-only` -> `[[Encoder-only]]`
+- agentic learning/raw/repos/agent_java_offer/questions/160 01_AI 05_模型调优与微调 10 Bert模型与现在大语言模型LLM的区别.md:63 — `Decoder-only` -> `[[Decoder-only]]`
 - agentic learning/raw/repos/agent_java_offer/questions/161 01_AI 05_模型调优与微调 11 NLP是什么.md:37 — `NLP` -> `[[NLP]]`
-- agentic learning/raw/repos/agent_java_offer/questions/164 01_AI 05_模型调优与微调 补充原文：BERT、NLP、TFRecord 与 TensorFlow Transformer 关系.md:39 — `NLP` -> `[[NLP]]`
+- agentic learning/raw/repos/agent_java_offer/questions/164 01_AI 05_模型调优与微调 补充原文：BERT、NLP、TFRecord 与 TensorFlow Transformer 关系.md:41 — `NLP` -> `[[NLP]]`
+- agentic learning/raw/repos/agent_java_offer/questions/164 01_AI 05_模型调优与微调 补充原文：BERT、NLP、TFRecord 与 TensorFlow Transformer 关系.md:70 — `Encoder-only` -> `[[Encoder-only]]`
+- agentic learning/raw/repos/agent_java_offer/questions/164 01_AI 05_模型调优与微调 补充原文：BERT、NLP、TFRecord 与 TensorFlow Transformer 关系.md:71 — `Decoder-only` -> `[[Decoder-only]]`
 - agentic learning/raw/repos/agent_java_offer/questions/170 01_AI 06_评测与监控 为什么传统的 NLP 评估指标（如 BLEU, ROUGE）对于评估现代 LLM 的生成质量来说，存在很大的局限性？.md:34 — `NLP` -> `[[NLP]]`
 - agentic learning/raw/repos/agent_java_offer/questions/210 01_AI 08_框架协议与工程化 框架选型与架构关系（LangChain LangGraph LlamaIndex RAG框架）.md:74 — `Ragflow` -> `[[RAGFlow]]`
 - agentic learning/raw/repos/agent_java_offer/questions/212 01_AI 08_框架协议与工程化 CrewAI、AutoGen、Ragflow 适合什么阶段？.md:36 — `Ragflow` -> `[[RAGFlow]]`
@@ -196,5 +203,4 @@
 - agentic learning/raw/repos/agent_java_offer/questions/594 05_项目表达 03_垂直写作与审阅平台 额外加分点（展示你懂企业落地）.md:204 — `BM25` -> `[[BM25]]`
 - agentic learning/raw/repos/agent_java_offer/questions/594 05_项目表达 03_垂直写作与审阅平台 额外加分点（展示你懂企业落地）.md:178 — `向量检索` -> `[[Dense Retrieval]]`
 - agentic learning/raw/repos/agent_java_offer/questions/594 05_项目表达 03_垂直写作与审阅平台 额外加分点（展示你懂企业落地）.md:178 — `rerank` -> `[[Reranking]]`
-- agentic learning/raw/repos/agent_java_offer/questions/594 05_项目表达 03_垂直写作与审阅平台 额外加分点（展示你懂企业落地）.md:204 — `Cross-Encoder` -> `[[Cross-Encoder]]`
-- agentic learning/raw/repos/agent_java_offer/questions/594 05_项目表达 03_垂直写作与审阅平台 额外加分点（展示你懂企业落地）.md:204 — `多查询检索` -> `[[Multi-Query Retrieval]]`
+- ... 其余 2 条见 JSON 报告。

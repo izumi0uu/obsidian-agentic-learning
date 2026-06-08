@@ -6,7 +6,7 @@ topic:
   - context
 status: growing
 created: 2026-05-17
-updated: 2026-05-26
+updated: 2026-06-08
 last_checked: 2026-05-17
 freshness: watch
 source:
@@ -33,6 +33,7 @@ aliases:
 related:
   - "[[LLM]]"
   - "[[Transformer]]"
+  - "[[Decoder-only]]"
   - "[[Self-Attention]]"
   - "[[Multi-Head Attention]]"
   - "[[Context Window]]"
@@ -66,7 +67,7 @@ LLM 逐 token 生成文本。生成第 `t` 个 token 时，模型需要让这个
 
 没有 KV Cache，自回归生成每一步都会重复计算已经处理过的前缀。序列越长，重复计算越夸张，生成延迟会快速放大。
 
-KV Cache 解决的是推理时“历史上下文已经算过，下一步能不能复用”的问题。它让 decoder-only LLM 可以逐 token 连续生成，并让 prompt prefix、system prompt、few-shot 示例和历史上下文在一次请求内被复用。
+KV Cache 解决的是推理时“历史上下文已经算过，下一步能不能复用”的问题。它让 [[Decoder-only|decoder-only LLM]] 可以逐 token 连续生成，并让 prompt prefix、system prompt、few-shot 示例和历史上下文在一次请求内被复用。
 
 ## 它不是什么
 

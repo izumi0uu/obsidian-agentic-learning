@@ -5,7 +5,7 @@ topic:
   - llm-wiki
 status: active
 created: 2026-05-05
-updated: 2026-05-18
+updated: 2026-06-08
 source:
 related:
   - "[[LLM Wiki 工作流]]"
@@ -39,6 +39,14 @@ related:
 - Added extracted text: `raw/papers/extracted/Attention Is All You Need.extracted.md`
 - Updated: [[LLM]], [[Transformer]], [[Self-Attention]], [[Multi-Head Attention]], [[Positional Encoding]]
 - Questions: [[Transformer]] 为什么是 LLM 的地基但不是 Agent 能力；[[Self-Attention]] 和 [[Memory]] 的边界；[[Positional Encoding]] 和长上下文能力的关系。
+
+## [2026-06-08] concept | Encoder-only and Encoder-Decoder architecture boundaries
+
+- Added concepts: [[Encoder-only]], [[Encoder-Decoder]]
+- Updated architecture comparison and navigation surfaces: [[LLM 基础结构对比]], [[LLM 主题]], [[Agent 知识地图]], [[01 术语表]], [[04 页面目录]]
+- Updated raw/source backlinks: [[2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？]], [[10 Bert模型与现在大语言模型LLM的区别?]], [[补充原文：BERT、NLP、TFRecord 与 TensorFlow Transformer 关系]]
+- Updated neighboring concept boundaries: [[Transformer]], [[Decoder-only]], [[NLP]]
+- Boundary: this pass promotes the remaining two Transformer architecture variants into durable cards, but still keeps taxonomy cautious: no direct `up` writeback, no alias-map expansion, and no new cross-attention weak card.
 
 ## [2026-05-05] ingest | Remaining paper batch
 
@@ -117,6 +125,12 @@ related:
 - Removed temporary preview directory: `/tmp/omx-setup-preview`.
 - Updated: [[oh-my-codex 使用教程]]
 - Boundary: this machine is now set up for project-scope OMX on demand, not global always-on OMX.
+
+## [2026-06-08] concept | Decoder-only architecture boundary
+
+- Added concept: [[Decoder-only]]
+- Updated: [[LLM 基础结构对比]], [[LLM 主题]], [[05 Query 写回队列]], [[2. 讲讲 Transformer 架构基本原理？Encoder 和 Decoder 是什么？]]
+- Boundary: this pass promotes [[Decoder-only]] because it has stable evidence and strong learning leverage, but keeps Encoder-only and Encoder-Decoder as comparison-only boundaries inside [[LLM 基础结构对比]] rather than forcing two additional thin concept cards.
 
 ## [2026-05-06] tutorial | OMX relay provider
 

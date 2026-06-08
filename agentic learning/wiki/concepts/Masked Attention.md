@@ -5,7 +5,7 @@ topic:
   - transformer
 status: growing
 created: 2026-05-25
-updated: 2026-05-25
+updated: 2026-06-08
 last_checked: 2026-05-25
 freshness: stable
 conflicts: []
@@ -28,6 +28,7 @@ related:
   - "[[Transformer]]"
   - "[[Self-Attention]]"
   - "[[Multi-Head Attention]]"
+  - "[[Decoder-only]]"
   - "[[Token]]"
   - "[[Constrained Decoding]]"
 ---
@@ -42,7 +43,7 @@ Masked Attention 是在 attention 计算里遮住不允许看的位置，让生�
 
 Transformer decoder 训练时有一个看似矛盾的问题：训练数据里完整答案已经存在，但模型的任务是学会“根据前文预测下一个 token”。如果 decoder 在预测第 i 个位置时能直接看到第 i 之后的标准答案，它就会通过答案泄漏完成训练，而不是学到自回归生成。
 
-Masked attention 的做法是在 attention score matrix 上加一个 mask。对当前位置来说，未来 token 的注意力分数会在 softmax 前被置为不可选的极小值或等价形式；softmax 后这些位置的权重接近 0。这样第 i 个位置只能关注自己和之前的位置，不能关注未来答案。原始 Transformer 把它用于 decoder self-attention；现代 decoder-only LLM 也依赖类似 causal mask 来维持 next-token prediction。
+Masked attention 的做法是在 attention score matrix 上加一个 mask。对当前位置来说，未来 token 的注意力分数会在 softmax 前被置为不可选的极小值或等价形式；softmax 后这些位置的权重接近 0。这样第 i 个位置只能关注自己和之前的位置，不能关注未来答案。原始 Transformer 把它用于 decoder self-attention；现代 [[Decoder-only|decoder-only LLM]] 也依赖类似 causal mask 来维持 next-token prediction。
 
 它解释了“为什么不让 LLM 先看到答案”：训练时如果让模型看到未来 token，损失会变得虚假地低，推理时却没有未来答案可看，训练目标和真实生成条件不一致。mask 让训练条件模拟推理条件：永远只能用已知前缀预测下一步。
 

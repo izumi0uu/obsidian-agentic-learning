@@ -99,7 +99,7 @@ NLP 也不是 [[RAG]]。RAG 是把检索和生成结合起来的架构路线，�
 
 - 任务域：[[NLP]]，回答“自然语言任务是什么”。
 - 模型/求解器：[[LLM]]、BERT 类模型、分类器、检索模型，回答“用什么能力来解”。
-- 架构：[[Transformer]]、encoder-only、decoder-only，回答“模型内部怎么建模序列”。
+- 架构：[[Transformer]]、[[Encoder-only]]、[[Decoder-only]]、[[Encoder-Decoder]]，回答“模型内部怎么建模序列”。
 - 工程方法：[[Prompt Engineering]]、[[RAG]]、tool use、structured output，回答“怎样把能力接到产品和工作流里”。
 
 这样切开以后，很多混淆会消失：LLM 可以成为 NLP 的主力求解器，但它不替代任务定义；RAG 可以服务知识密集型 NLP，但不是所有 NLP；prompt 可以表达任务，但不等于任务本身。

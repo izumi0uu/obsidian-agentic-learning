@@ -19,6 +19,9 @@ evidence:
   - "[[20分钟读懂AI神级论文 Attention Is All You Need#Transformer 之前：RNN 和 CNN 的瓶颈]]"
 related:
   - "[[LLM]]"
+  - "[[Encoder-only]]"
+  - "[[Encoder-Decoder]]"
+  - "[[Decoder-only]]"
   - "[[Self-Attention]]"
   - "[[Multi-Head Attention]]"
   - "[[Positional Encoding]]"
@@ -36,7 +39,7 @@ Transformer 是一种主要基于 attention 的序列建模架构，是现代 LL
 
 Transformer 的问题背景是早期序列模型很依赖 RNN 或 CNN。RNN 顺序处理 token，训练并行性受限，长距离信息要沿很多时间步传递，容易衰减或被中间状态压缩；CNN 可以并行一些，但远距离位置也需要靠多层堆叠才能间接连通。Transformer 用 attention 作为主要序列建模机制，让不同位置可以直接交互，并更适合大规模并行训练。[[Attention Is All You Need]] 对本 vault 的学习价值，就是把现代 LLM 的架构地基和 Agent 系统层边界切开。
 
-机制上，Transformer 由 [[Token Embedding|token 表示]]、位置编码、self-attention/multi-head attention、前馈网络、残差/归一化等结构组成。decoder 侧还会用 [[Masked Attention]] 防止当前位置看到未来 token。现代 LLM 还常在这些 block 内加入 [[Gating Mechanism|门控机制]]，例如 gated FFN / activation 或 MoE router。原论文是 encoder-decoder 架构，但现代 LLM 常用不同变体；因此这张卡不把某个产品等同于 Transformer，而把它作为“基于 attention 的序列建模架构家族”来理解。它解释模型如何在上下文中组合信息，不解释系统怎样行动。
+机制上，Transformer 由 [[Token Embedding|token 表示]]、位置编码、self-attention/multi-head attention、前馈网络、残差/归一化等结构组成。decoder 侧还会用 [[Masked Attention]] 防止当前位置看到未来 token。现代 LLM 还常在这些 block 内加入 [[Gating Mechanism|门控机制]]，例如 gated FFN / activation 或 MoE router。原论文是 [[Encoder-Decoder]] 架构，但现代 LLM 常见的学习入口还包括 [[Encoder-only]] 和 [[Decoder-only]] 这两类变体；因此这张卡不把某个产品等同于 Transformer，而把它作为“基于 attention 的序列建模架构家族”来理解。它解释模型如何在上下文中组合信息，不解释系统怎样行动。
 
 它和 [[LLM]] 的边界：LLM 是训练出来并被产品化的大语言模型，Transformer 是常见架构地基之一。它和 [[Agent]] 的边界更明显：Agent 需要目标、工具、状态、观察、权限、评估和恢复；Transformer 只在模型内部处理表示。理解这个边界，可以避免把“模型更强”误当成“runtime、工具安全和验证都不需要”。
 
@@ -89,6 +92,9 @@ foundation。Transformer 是现代 LLM 的关键架构地基。具体模型架�
 ## 相关链接
 
 - [[LLM]]
+- [[Encoder-only]]
+- [[Encoder-Decoder]]
+- [[Decoder-only]]
 - [[Self-Attention]]
 - [[Multi-Head Attention]]
 - [[Positional Encoding]]

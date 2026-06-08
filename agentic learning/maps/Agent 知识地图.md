@@ -73,6 +73,8 @@ LLM 地基：
 - [[NLP]]：先区分自然语言任务域、模型求解器、架构和工程方法。
 - [[Token Embedding]]：理解 token ID 如何变成模型内部向量，并和 RAG embedding 区分。
 - [[Transformer]]
+- [[Encoder-only]]：理解“先读完整输入再输出表示/判断”的架构路线，为什么常落在分类、embedding、相似度和 rerank。
+- [[Encoder-Decoder]]：理解原始 Transformer 的条件生成形态，为什么它适合输入输出分离明确的 seq2seq 任务。
 - [[Self-Attention]]
 - [[Scaled Dot-Product Attention]]：理解 Q/K/V 点积、缩放、softmax 和加权 V 汇总这条 attention 公式链。
 - [[Multi-Head Attention]]

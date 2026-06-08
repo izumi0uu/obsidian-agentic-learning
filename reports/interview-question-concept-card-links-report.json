@@ -4,15 +4,15 @@
   "total_question_pages_scanned": 779,
   "total_pages_scanned": 779,
   "pages_with_related_section": 779,
-  "would_modify_pages": 57,
+  "would_modify_pages": 58,
   "modified_pages": 0,
-  "inline_links_inserted": 75,
-  "proposed_inline_links": 75,
+  "inline_links_inserted": 82,
+  "proposed_inline_links": 82,
   "applied_inline_links": 0,
   "already_linked_pages": 362,
   "already_linked_targets": 941,
   "skipped_no_match_pages": 410,
-  "unsafe_region_skips": 4187,
+  "unsafe_region_skips": 4211,
   "protected_region_violations": 0,
   "request_meta_page_hits": [],
   "missing_concept_candidates": 0,
@@ -24,7 +24,7 @@
       "with_related_section": 142,
       "would_modify_pages": 32,
       "modified_pages": 0,
-      "proposed_inline_links": 43,
+      "proposed_inline_links": 46,
       "applied_inline_links": 0,
       "already_linked_pages": 81,
       "skipped_no_match_pages": 59
@@ -32,9 +32,9 @@
     "agent_java_offer": {
       "total": 637,
       "with_related_section": 637,
-      "would_modify_pages": 25,
+      "would_modify_pages": 26,
       "modified_pages": 0,
-      "proposed_inline_links": 32,
+      "proposed_inline_links": 36,
       "applied_inline_links": 0,
       "already_linked_pages": 281,
       "skipped_no_match_pages": 351
@@ -3878,6 +3878,10 @@
       "related_targets": [
         "LLM",
         "LLM 主题",
+        "Encoder-only",
+        "Decoder-only",
+        "Encoder-Decoder",
+        "LLM 基础结构对比",
         "Gating Mechanism",
         "Token Embedding",
         "Scaled Dot-Product Attention",
@@ -3887,6 +3891,10 @@
       "existing_targets": [
         "LLM",
         "LLM 主题",
+        "Encoder-only",
+        "Decoder-only",
+        "Encoder-Decoder",
+        "LLM 基础结构对比",
         "Gating Mechanism",
         "Token Embedding",
         "Scaled Dot-Product Attention",
@@ -3899,19 +3907,47 @@
       ],
       "proposed_links": [
         {
+          "target": "Encoder-only",
+          "alias": "Encoder-only",
+          "start": 1857,
+          "end": 1869,
+          "replacement": "[[Encoder-only]]",
+          "line": 75,
+          "context": "👔面试官：勉强能说出来。那再问一个：BERT 用的是 Encoder-only，GPT 用的是 Decoder-only。为什么现在主"
+        },
+        {
+          "target": "Decoder-only",
+          "alias": "Decoder-only",
+          "start": 1878,
+          "end": 1890,
+          "replacement": "[[Decoder-only]]",
+          "line": 75,
+          "context": "RT 用的是 Encoder-only，GPT 用的是 Decoder-only。为什么现在主流大模型（GPT、Claude、Qwen）"
+        },
+        {
+          "target": "Encoder-Decoder",
+          "alias": "Encoder-Decoder",
+          "start": 4242,
+          "end": 4257,
+          "replacement": "[[Encoder-Decoder]]",
+          "line": 128,
+          "context": "这就是「**自**注意力」里那个「自」字的含义，区别于 Encoder-Decoder 架构里 Cross-Attention 那种「Q 来自"
+        },
+        {
           "target": "Scaled Dot-Product Attention",
           "alias": "Scaled Dot-Product Attention",
-          "start": 4570,
-          "end": 4598,
+          "start": 4740,
+          "end": 4768,
           "replacement": "[[Scaled Dot-Product Attention]]",
-          "line": 134,
+          "line": 142,
           "context": "直觉)  公式里的 `/√d_k` 这一步常被叫做 **Scaled Dot-Product Attention（缩放点积注意力）**。这个 √d\\_k 不是随便加的，"
         }
       ],
       "applied_links": 0,
-      "unsafe_region_skips": 12,
+      "unsafe_region_skips": 28,
       "unmatched_existing_targets": [
         "LLM 主题",
+        "LLM 基础结构对比",
         "Gating Mechanism",
         "Token Embedding",
         "Masked Attention",
@@ -11004,6 +11040,8 @@
       "related_targets": [
         "Agent",
         "Transformer",
+        "Encoder-only",
+        "Decoder-only",
         "LLM",
         "LLM Training Pipeline",
         "LLM 主题"
@@ -11011,6 +11049,8 @@
       "existing_targets": [
         "Agent",
         "Transformer",
+        "Encoder-only",
+        "Decoder-only",
         "LLM",
         "LLM Training Pipeline",
         "LLM 主题"
@@ -11021,9 +11061,28 @@
         "Transformer",
         "LLM"
       ],
-      "proposed_links": [],
+      "proposed_links": [
+        {
+          "target": "Encoder-only",
+          "alias": "Encoder-only",
+          "start": 1790,
+          "end": 1802,
+          "replacement": "[[Encoder-only]]",
+          "line": 62,
+          "context": "[[Transformer]] 模型。 - BERT：Encoder-only，偏“理解”； - 主流 LLM（如 GPT 类）：De"
+        },
+        {
+          "target": "Decoder-only",
+          "alias": "Decoder-only",
+          "start": 1828,
+          "end": 1840,
+          "replacement": "[[Decoder-only]]",
+          "line": 63,
+          "context": "ly，偏“理解”； - 主流 LLM（如 GPT 类）：Decoder-only，自回归逐词生成，偏“生成 + 推理”。 - 结果上：B"
+        }
+      ],
       "applied_links": 0,
-      "unsafe_region_skips": 4,
+      "unsafe_region_skips": 8,
       "unmatched_existing_targets": [
         "LLM Training Pipeline",
         "LLM 主题"
@@ -11148,6 +11207,8 @@
         "LLM Training Pipeline",
         "LLM",
         "Transformer",
+        "Encoder-only",
+        "Decoder-only",
         "LLM 主题"
       ],
       "existing_targets": [
@@ -11158,6 +11219,8 @@
         "LLM Training Pipeline",
         "LLM",
         "Transformer",
+        "Encoder-only",
+        "Decoder-only",
         "LLM 主题"
       ],
       "missing_targets": [],
@@ -11171,15 +11234,33 @@
         {
           "target": "NLP",
           "alias": "NLP",
-          "start": 1090,
-          "end": 1093,
+          "start": 1136,
+          "end": 1139,
           "replacement": "[[NLP]]",
-          "line": 39,
+          "line": 41,
           "context": "[LLM 主题]]\" ---  # 补充原文：BERT、NLP、TFRecord 与 TensorFlow / [[T"
+        },
+        {
+          "target": "Encoder-only",
+          "alias": "Encoder-only",
+          "start": 1994,
+          "end": 2006,
+          "replacement": "[[Encoder-only]]",
+          "line": 70,
+          "context": "生成”的 Transformer 模型。 - BERT：Encoder-only，偏“理解”； - 主流 LLM（如 GPT 类）：De"
+        },
+        {
+          "target": "Decoder-only",
+          "alias": "Decoder-only",
+          "start": 2032,
+          "end": 2044,
+          "replacement": "[[Decoder-only]]",
+          "line": 71,
+          "context": "ly，偏“理解”； - 主流 LLM（如 GPT 类）：Decoder-only，自回归逐词生成，偏“生成 + 推理”。 - 结果上：B"
         }
       ],
       "applied_links": 0,
-      "unsafe_region_skips": 8,
+      "unsafe_region_skips": 12,
       "unmatched_existing_targets": [
         "Retriever",
         "LLM Training Pipeline",
