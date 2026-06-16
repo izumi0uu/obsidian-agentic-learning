@@ -74,7 +74,7 @@ Context Rot 出现的背景是长窗口模型越来越常见，很多人会自�
 - 帮助排错时区分：是没检索到关键证据，还是证据在上下文里但被噪声、顺序或结构影响了。
 - 给 long-context evaluation 一个复习触发：要测模型是否真的使用长输入，而不是只看能否接收长输入。
 
-## 它不是什么
+## 容易混淆的概念
 
 Context Rot 不是 [[Context Window]]。Context Window 是一次调用能放多少 token；Context Rot 是放进去之后质量是否稳定的问题。
 

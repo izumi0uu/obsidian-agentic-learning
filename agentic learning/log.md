@@ -48,6 +48,13 @@ related:
 - Updated neighboring concept boundaries: [[Transformer]], [[Decoder-only]], [[NLP]]
 - Boundary: this pass promotes the remaining two Transformer architecture variants into durable cards, but still keeps taxonomy cautious: no direct `up` writeback, no alias-map expansion, and no new cross-attention weak card.
 
+## [2026-06-16] systemic-style | concept-card boundary wording cleanup
+
+- Reframed the durable concept-card boundary section from `它不是什么` to `容易混淆的概念`, and the comparison-page boundary section from `它们共同不是什么` to `这组概念最容易混在哪里`, across affected `wiki/concepts/`, `wiki/topics/`, templates, and control-surface docs.
+- Updated systemic control surfaces: `AGENTS.md`, [[LLM Wiki 工作流]], [[06 Wiki 健康检查]], [[07 Team 概念卡全量规范化]], [[01 术语表]], [[index]], `README.md`, and the concept/review/comparison templates.
+- Updated automation compatibility: `scripts/concept_card_audit.py`, `scripts/comparison_topic_audit.py`, `scripts/export_true_recall_concept_cards.py`, `scripts/concept_taxonomy/decide.py`, and `scripts/README.md` now accept the new headings while remaining compatible with older cards.
+- Boundary: this is a systemic style and template change, not a taxonomy or alias-semantic change. `字段规范.md`, alias maps, raw/source evidence notes, and taxonomy reports were intentionally not rewritten because field semantics and evidence-layer content did not change.
+
 ## [2026-05-05] ingest | Remaining paper batch
 
 - Sources: [[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks]], [[ReAct - Synergizing Reasoning and Acting in Language Models]], [[Toolformer]], [[GAIA Benchmark]], [[SWE-bench]]
@@ -316,7 +323,7 @@ related:
 - Updated: [[Plan-and-Solve Prompting]], [[LLM Wiki 工作流]]
 - Updated skill: `obsidian-llm-wiki`
 - Updated project instruction: `AGENTS.md`
-- Boundary: durable concept cards should follow the [[ReAct]]-style learning-card shape, with explicit "它不是什么", "边界细节", evidence anchors, and a modern-system absorption section when a paper/prompting pattern needs to be separated from production Agent runtime behavior.
+- Boundary: durable concept cards should follow the [[ReAct]]-style learning-card shape, with explicit "容易混淆的概念", "边界细节", evidence anchors, and a modern-system absorption section when a paper/prompting pattern needs to be separated from production Agent runtime behavior.
 ## [2026-05-10] correction | concept card style reference
 
 - Corrected style reference from [[ReAct]] to [[Plan-and-Solve Prompting]] in `obsidian-llm-wiki`, [[LLM Wiki 工作流]], and `AGENTS.md`.

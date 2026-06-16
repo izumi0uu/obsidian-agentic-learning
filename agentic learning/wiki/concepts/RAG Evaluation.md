@@ -83,7 +83,7 @@ RAG 系统失败可能发生在很多层：没检到、检错了、排序错了�
 
 代表工具包括 Ragas、DeepEval、Phoenix、Promptfoo 等。
 
-## 它不是什么
+## 容易混淆的概念
 
 RAG Evaluation 不是只问“答案对不对”。
 

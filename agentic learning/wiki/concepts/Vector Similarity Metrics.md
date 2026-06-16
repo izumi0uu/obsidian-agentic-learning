@@ -67,7 +67,7 @@ Euclidean / L2 distance 是向量空间里的直线距离，距离越小越近�
 
 它解决的是“embedding 生成后，系统如何把 query 和候选 chunk 排序”的问题。没有明确的相似度度量，向量检索无法定义 top-k。
 
-## 它不是什么
+## 容易混淆的概念
 
 它不是 [[Embedding]] 模型本身。Embedding 生成向量；similarity metric 比较向量。
 

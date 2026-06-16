@@ -176,7 +176,7 @@ After attempt:   Reflexion style evaluation-reflection-memory loop
 | 任务会多次尝试，且有 evaluator 能判断失败原因 | [[Reflexion]] | 失败反馈可转成下一轮经验 | evaluator 错误会污染经验；反思写入长期记忆前需要门槛 |
 | 生产级长任务 Agent | 这些方法都只能作为局部思想 | 需要 plan、evidence collection、action loop、eval、memory、guardrails、human-in-the-loop 组合 | 不应把任何一个论文范式当完整 Agent framework |
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 它们都不是完整的生产级 [[Agent Framework]]。
 - 它们都不是模型权重训练方法；Reflexion 明确强调通过语言反馈而不是更新权重。

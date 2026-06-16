@@ -54,7 +54,7 @@ Plan-and-Solve 先要求模型生成 plan，相当于先搭一个任务骨架，
 
 PS+ 进一步把提示词写得更明确，用额外 instruction 去压低计算错误、推理错误和语义误解。它的核心不是让模型“变成 Agent”，而是让一次回答里的推理过程更有结构。
 
-## 它不是什么
+## 容易混淆的概念
 
 Plan-and-Solve Prompting 不是 [[ReAct]]。
 

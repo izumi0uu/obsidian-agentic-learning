@@ -26,16 +26,16 @@ from typing import Iterable
 ROOT = Path(__file__).resolve().parents[1]
 CONCEPT_DIR = ROOT / "agentic learning" / "wiki" / "concepts"
 
-REQUIRED_SECTIONS = [
-    "## 一句话",
-    "## 它解决什么问题",
-    "## 它不是什么",
-    "## 最小例子",
-    "## 边界细节",
-    "## 现代性状态",
-    "## 证据锚点",
-    "## 复习触发",
-    "## 相关链接",
+REQUIRED_SECTION_GROUPS = [
+    ("## 一句话", ("## 一句话",)),
+    ("## 它解决什么问题", ("## 它解决什么问题",)),
+    ("## 容易混淆的概念 / ## 它不是什么", ("## 容易混淆的概念", "## 它不是什么")),
+    ("## 最小例子", ("## 最小例子",)),
+    ("## 边界细节", ("## 边界细节",)),
+    ("## 现代性状态", ("## 现代性状态",)),
+    ("## 证据锚点", ("## 证据锚点",)),
+    ("## 复习触发", ("## 复习触发",)),
+    ("## 相关链接", ("## 相关链接",)),
 ]
 DEEP_SECTION = "## 概念详解"
 RISK_SECTION_RE = re.compile(r"^## (常见误解|风险|常见误解 / 风险|常见误解和风险|常见误解 / 风险 / 边界细节)\b", re.M)
@@ -198,6 +198,10 @@ def section_body(text: str, heading: str) -> str:
     return rest.strip()
 
 
+def has_heading(text: str, heading: str) -> bool:
+    return bool(re.search(rf"(?m)^{re.escape(heading)}\s*$", text))
+
+
 def classify_depth(path: Path, topics: list[str], status: str, freshness: str) -> str:
     """Assign a repair depth without turning every card into an anchor.
 
@@ -240,7 +244,11 @@ def audit_card(path: Path) -> CardAudit:
     depth = classify_depth(path, topics, status, freshness)
     lane = assign_lane(path, topics)
 
-    missing = [section for section in REQUIRED_SECTIONS if section not in text]
+    missing = [
+        label
+        for label, headings in REQUIRED_SECTION_GROUPS
+        if not any(has_heading(text, heading) for heading in headings)
+    ]
     has_risk = bool(RISK_SECTION_RE.search(text))
     has_detail = DEEP_SECTION in text
     detail_chars = len(section_body(text, DEEP_SECTION)) if has_detail else 0

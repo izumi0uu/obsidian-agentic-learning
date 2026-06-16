@@ -43,7 +43,7 @@ Entity Resolution 是把不同文档、别名、拼写或 ID 中指向同一真�
 
 它解决知识图谱里的“同物异名”和“同名异物”问题，让检索和图遍历能围绕正确实体展开。
 
-## 它不是什么
+## 容易混淆的概念
 
 Entity Resolution 不是实体抽取本身。实体抽取是从文本中找 mention；entity resolution 是判断 mention 是否指向同一真实对象。
 

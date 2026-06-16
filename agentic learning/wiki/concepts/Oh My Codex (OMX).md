@@ -64,7 +64,7 @@ OMX 给 Codex 加了一层 [[Agent Harness]]：
 
 具体 `$` 入口见 [[OMX $ 指令]]。小边界：这些 `$` 指令是 Codex 会话里的 skill / workflow 触发入口，不等于普通 shell 命令；有些 workflow 会配合 `omx ...` CLI 和 `.omx/` artifact，但两者不是同一层。
 
-## 它不是什么
+## 容易混淆的概念
 
 OMX 不是新模型，也不是 Codex 的替代品。
 

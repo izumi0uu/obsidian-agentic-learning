@@ -52,7 +52,7 @@ Transformer 的问题背景是早期序列模型很依赖 RNN 或 CNN。RNN 顺�
 
 Transformer 用 self-attention 让序列中不同位置可以直接建立联系，并且更适合并行训练。
 
-## 它不是什么
+## 容易混淆的概念
 
 Transformer 不是 Agent。
 

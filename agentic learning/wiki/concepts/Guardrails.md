@@ -51,7 +51,7 @@ Agent 可能输出不合规内容、误用工具、泄露数据、忽略格式�
 
 代表生态包括 NVIDIA NeMo Guardrails、OpenAI Agents SDK guardrails、Guardrails AI、Llama Guard 类模型。
 
-## 它不是什么
+## 容易混淆的概念
 
 Guardrails 不是绝对安全。
 

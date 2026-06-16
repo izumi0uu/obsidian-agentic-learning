@@ -47,7 +47,7 @@ Frontend-first 的价值在于把 AI 交互直接嵌入产品界面：流式输�
 - 管理 provider、tool loop、UI state、telemetry 和用户体验。
 - 构建生成式 UI、聊天界面、轻量 agent loop 和 workflow pattern。
 
-## 它不是什么
+## 容易混淆的概念
 
 - 不是完整 Agent 平台。它通常不负责所有部署治理、RBAC、audit、长任务恢复。
 - 不是 State Graph Runtime。复杂控制流仍需要显式 workflow/runtime。

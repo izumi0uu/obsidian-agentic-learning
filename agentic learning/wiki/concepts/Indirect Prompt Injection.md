@@ -45,7 +45,7 @@ Indirect Prompt Injection 的问题背景是 Agent 不只读取用户直接输�
 
 直接 prompt injection 来自用户输入；间接 prompt injection 来自 Agent 读取的外部内容。Agent 越会浏览、检索、使用工具，风险越大。
 
-## 它不是什么
+## 容易混淆的概念
 
 它不是用户直接恶意提问。
 

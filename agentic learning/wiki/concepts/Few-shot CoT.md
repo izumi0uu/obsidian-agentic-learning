@@ -56,7 +56,7 @@ Few-shot CoT 结合了 [[Few-shot Prompting]] 和 chain-of-thought 的两个信�
 
 它解决的是 Zero-shot CoT 格式和深度不稳定的问题。只说“请一步步思考”时，模型可能步骤太少、格式漂移或答案不易抽取；Few-shot CoT 用 worked examples 把推理粒度和答案格式固定下来。
 
-## 它不是什么
+## 容易混淆的概念
 
 Few-shot CoT 不是 [[Self-Consistency]]。它仍然可以是一次调用、一条推理路径；Self-Consistency 是采样多条路径再投票。
 

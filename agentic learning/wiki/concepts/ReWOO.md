@@ -65,7 +65,7 @@ ReWOO 主要解决 observation-dependent 工具增强推理里的 prompt redunda
 
 它也帮助学习者看到一个成本-反馈权衡：中途 observation feedback 很贵，但它也很有价值。ReWOO 的价值不在于消灭 observation，而在于提醒我们：有些任务可以把 observation 延后到 evidence filling 和 final solve，有些任务必须让 observation 驱动下一步行动。
 
-## 它不是什么
+## 容易混淆的概念
 
 ReWOO 不是“不用工具”。Worker 仍然会调用外部工具、检索知识或收集 evidence；“without observation”指的是 Planner 的 reasoning 不在每一步 observation 之后继续展开。
 

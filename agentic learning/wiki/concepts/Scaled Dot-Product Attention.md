@@ -57,7 +57,7 @@ Attention(Q, K, V) = softmax(QK^T / sqrt(d_k)) V
 
 它解决的是“如何把 Q/K 的匹配关系变成可归一化的注意力权重，并用这些权重汇总 V”的问题。
 
-## 它不是什么
+## 容易混淆的概念
 
 它不是完整 Transformer。Transformer 还包括 embedding、position signal、multi-head 组合、FFN、残差、归一化和输出层。
 

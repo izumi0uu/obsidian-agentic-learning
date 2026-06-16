@@ -55,7 +55,7 @@ Token embedding 也不是 Q/K/V 本身。Q/K/V 是注意力层对当前 token re
 
 它解决的是“离散 token 如何进入连续神经网络计算”的问题。没有 token embedding，Transformer 只能看到 token ID 这样的编号，无法在向量空间里做加法、点积、投影和 attention。
 
-## 它不是什么
+## 容易混淆的概念
 
 Token Embedding 不是 tokenizer。Tokenizer 决定文本怎么切成 token 和 ID；token embedding 把这些 ID 映射成向量。
 

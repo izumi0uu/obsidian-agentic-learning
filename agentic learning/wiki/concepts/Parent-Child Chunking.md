@@ -58,7 +58,7 @@ Parent-Child Chunking 解决的是检索粒度和阅读粒度不一致的问题�
 
 它解决检索精度和上下文完整性之间的张力：小 chunk 适合匹配，大片段适合阅读。
 
-## 它不是什么
+## 容易混淆的概念
 
 Parent-Child Chunking 不是普通 fixed-size chunking，也不是简单增大 chunk size。
 

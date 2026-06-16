@@ -60,7 +60,7 @@ OpenAI Structured Outputs、Outlines、Guidance 这类能力/库的共同思想�
 
 在 Agent 工程里，它常用于把模型输出接到可解析的软件边界上：tool call arguments、structured result、classifier enum、routing decision、extraction schema。它让“格式合法性”更接近确定性工程问题，而不是完全靠模型服从提示。
 
-## 它不是什么
+## 容易混淆的概念
 
 Constrained Decoding 不是 [[Tool Calling]] 本身。Tool Calling 是模型表达“我要调用哪个工具、参数是什么”的接口形式；Constrained Decoding 是让这类结构化输出在 token 级更不容易越界的解码机制。
 

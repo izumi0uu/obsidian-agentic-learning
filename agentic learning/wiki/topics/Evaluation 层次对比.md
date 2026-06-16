@@ -256,7 +256,7 @@ Trajectory Eval:     trace/trajectory -> rules/judge/human -> process judgment
 | 想定位 RAG 是检索错还是生成错 | [[RAG Evaluation]] | 它把 retrieval/context/generation/citation 拆开 | 只看最终答案会混淆根因 |
 | 想判断 Agent 工具路径是否安全合规 | [[Trajectory Evaluation]] | 它评估整条路径，而不只看输出 | 需要足够 trace；软 judge 不能替代硬规则 |
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 都不是“模型自我感觉良好”的证明。
 - 都不能单独保证生产可靠性；真实系统还需要监控、权限、回滚、人工升级和安全评审。

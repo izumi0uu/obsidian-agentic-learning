@@ -208,7 +208,7 @@ LLM output -> tool/runtime/action -> observation/state/trace -> next LLM call
 | 想解释为什么模型会选择性放行特征或只激活部分 experts | [[Gating Mechanism]] | 它解释 gated activation / MoE router 等机制 | 不要把它说成 Approval Gate 或 Agent skill |
 | 想解释能力从哪里训练出来 | [[LLM Training Pipeline]] | 它连接数据、目标、反馈和评估 | 训练能力不等于运行时安全可靠 |
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 都不是完整 [[Agent]] 或 [[Agent Framework]]。
 - 都不是工具调用、RAG、长期记忆或 sandbox 本身。

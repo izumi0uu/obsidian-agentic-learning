@@ -48,7 +48,7 @@ Provider-first 的优势是路径短：模型调用、工具定义、handoff、g
 - 避免每个项目手写 provider adapter、事件记录和工具循环。
 - 让团队沿着官方推荐路径构建 agentic app，降低样板代码。
 
-## 它不是什么
+## 容易混淆的概念
 
 - 不是通用 Agent Framework 的全部。它可能缺少显式 state graph、复杂 checkpoint 或跨云部署治理。
 - 不是模型能力本身。SDK 封装不能让底层模型自动更可靠。

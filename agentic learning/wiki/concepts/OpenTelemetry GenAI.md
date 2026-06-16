@@ -51,7 +51,7 @@ OpenTelemetry GenAI 出现的背景是：LLM 应用和 Agent 平台都在记录 
 
 相关生态包括 OpenTelemetry semantic conventions、OpenInference、Phoenix、Langfuse OTel integration。
 
-## 它不是什么
+## 容易混淆的概念
 
 OpenTelemetry GenAI 不是一个评测指标。
 

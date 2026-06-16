@@ -50,7 +50,7 @@ Agent Control Plane 是管理 Agent 平台运行的控制层：它负责会话�
 - 线上运行缺少成本、延迟、失败、用户会话和 trace 管理。
 - 团队协作中无法管理谁能访问哪些 Agent、工具和数据。
 
-## 它不是什么
+## 容易混淆的概念
 
 - 不是 Agent SDK。SDK 让开发者写 Agent；Control Plane 管理 Agent 如何运行和被治理。
 - 不是 observability 本身。它可能包含 trace/audit，但还包括权限、部署、调度和接口。

@@ -62,7 +62,7 @@ Matryoshka Representation Learning 的思路是像套娃一样组织表示：前
 
 它解决 embedding 维度固定带来的存储、索引和计算成本问题，让同一模型在不同成本预算下有可控降维路径。
 
-## 它不是什么
+## 容易混淆的概念
 
 Matryoshka Embeddings 不是普通 PCA / 随机降维，也不是随便截掉后几维。
 

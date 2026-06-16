@@ -163,7 +163,7 @@ OpenClaw 和 Hermes 都说明一个共同趋势：Agent 产品的竞争点不只
 | 多 persona / 多账号消息路由如何隔离 | [[OpenClaw Repo]] | multi-agent routing 强调 workspace、agentDir、session/auth profile boundary | routing key 不是强安全边界 |
 | 比较 coding-agent 执行风险 | [[Coding Agent 执行边界对比]] + 本页 | OpenClaw/Hermes 是具体样本；执行边界页给通用框架 | 不要用产品 README 替代验证和审计 |
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 都不是 [[Agent]] 的通用定义；它们只是具体项目。
 - 都不是模型训练方法；memory、skills、session search 和 goals 都属于外部 runtime / harness 能力。

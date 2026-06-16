@@ -160,7 +160,7 @@ question -> plan -> retrieve -> inspect evidence -> refine/retrieve again -> pac
 - 任务还需要工具调用、memory、反思或最终回答策略：[[Agentic RAG]] / [[Agent Workflow]]。
 - 检索候选足够但排序差：先看 [[Reranking]]，不要误把排序问题当 planning 问题。
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 不是事实校验本身；检索计划找到证据后仍要做 [[RAG Evaluation]] 和 citation 检查。
 - 不是越 agentic 越好；简单 FAQ 引入多轮 planning 只会增加成本和不可控性。

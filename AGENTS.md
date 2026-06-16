@@ -308,7 +308,7 @@ When creating or materially updating concept cards, preserve this structure wher
 - 一句话
 - 概念详解：主体段落；解释概念为什么出现、内部机制/组成部分、论文/官方文档/社区实践如何描述它、以及现代系统如何吸收或限制它
 - 它解决什么问题
-- 它不是什么
+- 容易混淆的概念（旧卡兼容 `它不是什么`）
 - 最小例子
 - 常见误解 or 风险
 - 边界细节
@@ -319,6 +319,8 @@ When creating or materially updating concept cards, preserve this structure wher
 - 相关链接
 
 `## 一句话` is only an entry point. It must not become the whole card when the concept needs background, examples, boundary cuts, or evidence. A qualified durable concept card should not be a label plus one sentence plus bullets; it needs a real explanation section. If it is intentionally short, state why the concept is low-scope or still `seed`.
+
+Style boundary: keep the judgment layer, but do not reduce it to a slogan. Prefer natural prose that explains why concepts get confused, where the real difference lands, and what mistake the confusion would cause. Use “不是……而是……” only when it is genuinely the clearest sentence, not as the default tone.
 
 Style reference: `wiki/concepts/Plan-and-Solve Prompting.md`, with one upgrade: modern concept cards should include `## 概念详解` when the concept is important enough to learn deeply. Concept cards should start from the concept's own problem, make neighboring boundaries explicit, include common misunderstandings, and explain whether diagrams or assets are source evidence, user-provided redraws, community summary, or engineering analogy.
 

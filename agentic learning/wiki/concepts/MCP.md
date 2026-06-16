@@ -190,7 +190,7 @@ sequenceDiagram
 
 正确心智模型是：registry 只提供候选入口；host 仍要做来源校验、版本锁定、权限收窄、sandbox、approval gate 和 trace。一个 server 在 Smithery 或其他 MCP registry 里可见，不等于它对当前任务可信。
 
-## 它不是什么
+## 容易混淆的概念
 
 MCP 不是 Agent 框架。
 

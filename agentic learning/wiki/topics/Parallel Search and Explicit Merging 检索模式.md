@@ -165,7 +165,7 @@ production-facing trace should record:
 - 没有 trace，无法复查 query、候选、merge 和答案之间的关系。
 - 需要强权限隔离但 metadata / access control 尚未可靠接入。
 
-## 它共同不是什么
+## 这组概念最容易混在哪里
 
 - 不是 [[Hybrid Search]]：hybrid search 是召回信号融合；parallel search 是多 query 执行形态。
 - 不是 [[Reranking]]：rerank 排序，merge 归并证据。

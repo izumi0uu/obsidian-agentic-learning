@@ -64,7 +64,7 @@ Agent lifecycle hook 把“模型输出之外但会影响任务安全和连续�
 
 Hook 把这些“模型输出之外的边界动作”放进 [[Agent Harness]]，让 agent loop 不只依赖 prompt 纪律。
 
-## 它不是什么
+## 容易混淆的概念
 
 Agent Lifecycle Hook 不是 LLM 自身能力。LLM 可以决定“我想调用工具”，但 `PreToolUse`、`PostToolUse` 这类 hook 的触发、执行、阻断、记录和反馈，属于本地产品 / CLI / framework / harness 的运行时能力。
 

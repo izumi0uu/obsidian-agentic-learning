@@ -112,7 +112,7 @@ text / tool results / memory / retrieved docs
 - 输出事实不可靠、引用不支持、模型编造：看 [[Hallucination]]、[[RAG Evaluation]] 和 [[RAG Citation Faithfulness]]。
 - 需要跨轮保留用户偏好或任务状态：看 [[Memory]] / [[Agent State]]，不要只扩大 context window。
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 不是完整的 Agent 能力；Agent 还需要目标、工具、状态、观测和控制 loop。
 - 不是越长越好；更多 token 和更大 context window 会增加成本、延迟和噪音。

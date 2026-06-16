@@ -62,7 +62,7 @@ HNSW 不是向量数据库本身。Milvus、Qdrant、Weaviate、pgvector、OpenS
 
 它解决向量库里“向量很多时，如何快速找近邻”的问题。特别是在 semantic search 和 RAG 中，它让 query embedding 不必和全部 document embeddings 逐一比较。
 
-## 它不是什么
+## 容易混淆的概念
 
 HNSW 不是 [[Embedding]]，不生成向量。
 

@@ -46,7 +46,7 @@ Reasoning Trace 的学习价值主要在“可解释入口”，不是“真相�
 
 它还帮助学习者理解 ReAct、Plan-and-Solve、Reflexion 等方法为什么会把“想法/行动/观察”拆开。
 
-## 它不是什么
+## 容易混淆的概念
 
 Reasoning Trace 不一定等于模型真实内部原因。
 

@@ -76,7 +76,7 @@ Agent demo 成功一次不代表系统可靠。Eval Harness 让同一批任务�
 
 它通常包括数据集、执行器、工具环境、评分器、trace、结果存储和报告。
 
-## 它不是什么
+## 容易混淆的概念
 
 Eval Harness 不是单个 benchmark。
 

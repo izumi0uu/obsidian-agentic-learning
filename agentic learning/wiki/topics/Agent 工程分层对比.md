@@ -152,7 +152,7 @@ model intention
 | 讨论“缓存命中率高不高、成本和延迟怎么降” | [[Agent Harness 缓存分层与命中率]] / [[KV Cache]] | 先判断命中发生在 serving 层、provider prompt cache，还是 harness / app 层 cache | 不要把命中率误当正确率，也不要跨权限复用 |
 | 讨论“最终是否完成、过程是否安全经济” | [[Evaluation]] / [[Trace]] | 分层概念提供证据，评价层判断好坏 | trace 记录事实，不自动给质量结论 |
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 都不是模型权重、模型真实内心或“智能来源”本身。
 - 都不是单独的生产可靠性保证；还需要权限、数据治理、测试、eval、observability 和 human-in-the-loop。

@@ -15,7 +15,7 @@ source:
   - "[[RAG Evaluation]]"
   - "[[raw/repos/xiaolinnote/questions/127 ai llm 18. 大模型为什么会出现幻觉？怎么缓解？]]"
 evidence:
-  - "[[LLM#它不是什么]]"
+  - "[[LLM#容易混淆的概念]]"
   - "[[RAG#常见误解 / 风险]]"
   - "[[RAG Evaluation#概念详解]]"
   - "[[raw/repos/xiaolinnote/questions/127 ai llm 18. 大模型为什么会出现幻觉？怎么缓解？#4. 约束解码（Constrained Decoding）]]"
@@ -47,7 +47,7 @@ Hallucination 的边界要分层看：有些是知识缺失，有些是检索失
 
 它帮助学习者把“模型说得像真的”与“有证据支持”分开。没有这个概念，容易把流畅性、置信语气或引用格式误认为事实正确。
 
-## 它不是什么
+## 容易混淆的概念
 
 Hallucination 不是模型有意识欺骗。
 
@@ -95,7 +95,7 @@ Hallucination 不是模型有意识欺骗。
 
 ## 证据锚点
 
-- Concept anchor: [[LLM#它不是什么]]
+- Concept anchor: [[LLM#容易混淆的概念]]
 - Concept anchor: [[RAG#常见误解 / 风险]]
 - Concept anchor: [[RAG Evaluation#概念详解]]
 - Source anchor: [[raw/repos/xiaolinnote/questions/127 ai llm 18. 大模型为什么会出现幻觉？怎么缓解？#4. 约束解码（Constrained Decoding）]]

@@ -172,7 +172,7 @@ python3 scripts/import_true_recall_cards.py reports/true-recall-transformer-impo
 脚本行为：
 
 - 只读扫描 `agentic learning/wiki/concepts/*.md`，或扫描命令行指定的概念卡。
-- 从 `## 一句话`、`## 它不是什么`、`## 边界细节`、`## 现代性状态`、`## 常见误解` 等 section 生成少量 basic flashcards。
+- 从 `## 一句话`、`## 容易混淆的概念`（兼容旧标题 `## 它不是什么`）、`## 边界细节`、`## 现代性状态`、`## 常见误解` 等 section 生成少量 basic flashcards。
 - 输出 True Recall Import Studio 可识别的 block format：`#type/basic`、`Front:`、`Back:`，卡片之间用 `---` 分隔。
 - 默认只写 `reports/true-recall-concept-cards.md`，不直接写 True Recall SQLite 数据库，也不修改概念卡正文。
 - `--include-triggers` 会把 `## 复习触发` 的问题转成 open self-test cards；这类卡默认让用户先自行作答，再回看源概念卡。

@@ -50,7 +50,7 @@ Planning 在 Agent 学习里不是“写一个好看的 todo list”，而是把
 
 复杂任务通常不能一步完成。Planning 帮 Agent 决定先做什么、后做什么、什么时候检查、什么时候停止。
 
-## 它不是什么
+## 容易混淆的概念
 
 Planning 不等于一次性列计划。真正有用的 planning 会随着执行结果变化。
 

@@ -146,6 +146,14 @@ def section_text(body: str, heading: str) -> str:
     return (rest[:nxt.start()] if nxt else rest).strip()
 
 
+def section_text_any(body: str, headings: list[str]) -> str:
+    for heading in headings:
+        text = section_text(body, heading)
+        if text:
+            return text
+    return ""
+
+
 def load_cards() -> dict[str, dict[str, Any]]:
     cards: dict[str, dict[str, Any]] = {}
     for path in sorted(CONCEPT_DIR.glob("*.md")):
@@ -157,7 +165,7 @@ def load_cards() -> dict[str, dict[str, Any]]:
             "file": str(path.relative_to(ROOT)),
             "frontmatter": fm,
             "one_line": section_text(body, "一句话").replace("\n", " ").strip(),
-            "not_what": section_text(body, "它不是什么").replace("\n", " ").strip(),
+            "not_what": section_text_any(body, ["容易混淆的概念", "它不是什么"]).replace("\n", " ").strip(),
             "boundary": section_text(body, "边界细节").replace("\n", " ").strip(),
         }
     return cards

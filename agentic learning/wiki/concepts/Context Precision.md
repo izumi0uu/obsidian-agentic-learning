@@ -55,7 +55,7 @@ source note 把 Context Precision 和 [[Context Recall]] 配对：Recall 看该�
 
 它解决“检索结果里噪音太多、相关证据排序不够靠前”的问题。它帮助区分：答案错是因为没找全，还是找到了但上下文太脏/排序太差。
 
-## 它不是什么
+## 容易混淆的概念
 
 Context Precision 不是 [[Context Recall]]。Precision 看相关性和排序；Recall 看覆盖完整性。
 

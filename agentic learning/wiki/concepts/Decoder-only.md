@@ -56,7 +56,7 @@ Decoder-only 是只保留 Transformer decoder 侧、自回归地根据前缀预�
 
 相比需要区分理解任务和生成任务的多套接口，Decoder-only 让模型始终做同一件事：根据前缀预测下一个 token。这个统一目标降低了任务切换成本，也更适合持续扩大数据、参数和训练规模。
 
-## 它不是什么
+## 容易混淆的概念
 
 Decoder-only 不是“所有带 decoder 的模型”。Encoder-Decoder 型模型同样有 decoder，但它们还有 encoder，并通过 cross-attention 读取 encoder 输出。
 

@@ -60,7 +60,7 @@ Context Engineering 解决的是“模型这一轮到底看见什么”的工程
 
 Agent 的表现不只取决于 prompt，还取决于它看到什么：系统指令、工具说明、用户目标、历史状态、检索材料、记忆、trace 摘要和安全约束。
 
-## 它不是什么
+## 容易混淆的概念
 
 Context Engineering 不只是 [[Prompt Engineering]]。
 

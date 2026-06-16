@@ -133,7 +133,7 @@ transcript / retrieval
 - Prefect 适合承载 workflow guardrails 的 orchestration 结果，但不替代模型内容安全、schema validation、business policy 和 human approval。
 - 具体系统应把 guardrail 定义、policy 规则、failure policy 和 state transition 都写成可测试、可追踪的对象，否则 guardrails 会变成散落的业务代码。
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 都不是“加一个安全库就完成治理”。
 - 都不是最终回答过滤器。

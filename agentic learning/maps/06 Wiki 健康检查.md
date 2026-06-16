@@ -109,7 +109,7 @@ related:
   - `python3 scripts/concept_taxonomy/validate_taxonomy_baseline_map.py`
   - `python3 scripts/request_meta_audit.py --format markdown`
   - `git diff --check`
-- [ ] 检查概念卡是否有“它不是什么”。
+- [ ] 检查概念卡是否有 `容易混淆的概念`，或兼容旧标题 `它不是什么`。
 - [ ] 检查概念卡是否有 `## 边界细节`。
 - [ ] 检查 Agent / prompting / framework / evaluation / RAG / memory / tooling / safety / protocol / product-ecosystem 概念卡是否有 `## 现代性状态`。
 - [ ] 检查概念卡是否有 `## 复习触发`。
@@ -213,7 +213,7 @@ related:
 
 ### 结构验收结果
 
-- 8 张目标卡均包含：`一句话`、`它解决什么问题`、`它不是什么`、`最小例子`、`常见误解/风险`、`边界细节`、`现代性状态`、`证据锚点`、`复习触发`、`相关链接`。
+- 8 张目标卡均包含：`一句话`、`它解决什么问题`、`容易混淆的概念`（当时标题为 `它不是什么`）、`最小例子`、`常见误解/风险`、`边界细节`、`现代性状态`、`证据锚点`、`复习触发`、`相关链接`。
 - 新增判断均保留来源锚点，或明确作为工程综合理解处理。
 - `git diff --check` 通过。
 - hard boundary 通过：未改 `raw/`、`AGENTS.md`、模板页，也未批量改 P2 协议/前沿卡。
@@ -260,7 +260,7 @@ P1 8 张目标卡已按新标准补齐 `## 概念详解`：
 
 ### 验收边界
 
-- 所有新增对比页都应保留 [[LLM Wiki 工作流#概念对比 / 类比 topic 页写法]] 要求的 section：一句话总览、为什么值得对比、共同问题域、核心区别表、混淆边界、机制差异、非证据类比、现代系统吸收/限制、什么时候用哪个判断、共同不是什么、证据锚点、复习触发、相关链接。
+- 所有新增对比页都应保留 [[LLM Wiki 工作流#概念对比 / 类比 topic 页写法]] 要求的 section：一句话总览、为什么值得对比、共同问题域、核心区别表、混淆边界、机制差异、非证据类比、现代系统吸收/限制、什么时候用哪个判断、这组概念最容易混在哪里（旧页兼容 `共同不是什么`）、证据锚点、复习触发、相关链接。
 - `raw/` 仍保持 evidence 层，本轮不编辑 raw source notes。
 - [[Oh My Codex (OMX)]] / [[Hermes Agent]] / [[LangChain DeepAgents]] / [[Agent Framework]] 这类 runtime / 产品对比暂不强行成页；它们变化快，进入 [[05 Query 写回队列]] 的 P3 pending。
 - [[LLM]] / [[LLM Training Pipeline]] / [[Zero-shot CoT]] / [[Plan-and-Solve Prompting]] 的“能力来源”对比也暂不强行成页；需先补训练主源与 prompting paper 的证据边界。

@@ -247,7 +247,7 @@ PBRFT 像老师只批改你的最终作文：哪篇更清楚、更礼貌、更�
 | 长期研究、信息雷达、文献综述、Hermes 多源 evidence 管线 | Agentic RL + [[Memory]] + [[Agent State]] | 奖励可以覆盖查证、保留证据、更新状态和最终综合质量 | 记忆写错会长期污染，必须有 TTL、证据锚点和审计 |
 | 生产级 Agent 工作流 | Agentic RL + [[Agent Harness]] + [[Trajectory Evaluation]] | 模型策略和 runtime 控制必须配合 | 只训练模型但没有 harness，仍然无法保证安全执行 |
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 都不是“模型真实内心”的证明；推理链、反思和计划都需要外部验证。
 - 都不是完整 [[Agent Framework]]；训练方法不等于 runtime、tool execution、state、permission、trace 和 deployment。

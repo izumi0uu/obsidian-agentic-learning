@@ -146,7 +146,7 @@ Computer Use 面对 UI、坐标、控件、截图、页面变化和失败恢复�
 | 要限制命令、代码、网络和资源 | [[Code Execution Sandbox]] | 它控制执行环境 | sandbox 配置错误会造成假安全感 |
 | 要控制提交表单、下载、发送、删除等高风险动作 | [[Tool Permissioning]] | 它设置 allow/deny/confirm/scope | 只看工具名不够，参数和上下文也要审查 |
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 都不是完整生产级 Agent framework。
 - 都不能保证任务成功；还需要 planning、state、trace、eval、retry 和 human-in-the-loop。

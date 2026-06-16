@@ -54,7 +54,7 @@ Encoder-Decoder 是先用 encoder 双向理解输入、再用 decoder 在 cross-
 
 当任务天然是输入文本到输出文本的映射，而不是开放式续写时，Encoder-Decoder 能更清楚地表达这种结构。
 
-## 它不是什么
+## 容易混淆的概念
 
 Encoder-Decoder 不是所有有 encoder 和 decoder 名字的系统。这里讨论的是 Transformer 架构变体，不是任意软件系统里的编解码流程。
 

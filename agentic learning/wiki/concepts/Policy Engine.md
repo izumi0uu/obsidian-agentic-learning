@@ -41,7 +41,7 @@ Policy Engine 的问题背景是 Agent 行动不能只由模型自然语言自�
 
 仅靠模型“自觉遵守规则”不够。Policy Engine 把安全策略从自然语言提示中抽出来，用更确定的方式限制工具、数据和动作。
 
-## 它不是什么
+## 容易混淆的概念
 
 Policy Engine 不是系统 prompt。
 

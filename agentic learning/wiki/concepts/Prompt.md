@@ -18,7 +18,7 @@ source:
 evidence:
   - "[[Prompt Engineering#证据锚点]]"
   - "[[Context Engineering#概念详解]]"
-  - "[[LLM#它不是什么]]"
+  - "[[LLM#容易混淆的概念]]"
   - "[[Plan-and-Solve Prompting#证据锚点]]"
   - "[[OpenAI - A Practical Guide to Building Agents#为什么收]]"
 related:
@@ -49,7 +49,7 @@ Prompt 的学习重点不是“写一句神奇指令”，而是把任务、输�
 
 Prompt 解决“模型这一轮应该按什么任务和约束生成”的输入组织问题。没有清晰 prompt，模型可能不知道角色、目标、输出格式、证据使用规则或拒答条件。
 
-## 它不是什么
+## 容易混淆的概念
 
 Prompt 不是模型训练。它在推理时改变输入，不直接改变模型参数。
 
@@ -100,7 +100,7 @@ Prompt 也不是完整 [[Prompt Engineering]] 或 [[Context Engineering]]；前�
 
 - Concept anchor: [[Context Engineering#概念详解]]
 - Concept anchor: [[Prompt Engineering#证据锚点]]
-- Concept anchor: [[LLM#它不是什么]]
+- Concept anchor: [[LLM#容易混淆的概念]]
 - Concept anchor: [[Plan-and-Solve Prompting#证据锚点]]
 - Source anchor: [[OpenAI - A Practical Guide to Building Agents#为什么收]]
 - Evidence type: concept/source synthesis + engineering inference.

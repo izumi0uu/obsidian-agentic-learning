@@ -57,7 +57,7 @@ Embedding 提供了 semantic search 的常见表示层：把 query 和 document 
 
 它解决用户 query 和知识库文字“表达不同但意思相近”的召回问题。它让搜索从词面匹配扩展到语义匹配。
 
-## 它不是什么
+## 容易混淆的概念
 
 Semantic Search 不是 [[RAG]] 本身。它只是找资料的方式之一。
 

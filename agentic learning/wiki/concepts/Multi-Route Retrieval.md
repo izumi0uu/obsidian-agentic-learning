@@ -71,7 +71,7 @@ Multi-Route Retrieval（多路召回）是在 RAG 的召回阶段同时走多条
 
 典型场景包括：产品型号、错误码、代码符号需要 BM25 / sparse route；同义表达和语义相似需要 dense route；用户问法和文档写法角度差异很大时，需要多 Query route；关系路径或实体网络明显时，可以引入 graph route。
 
-## 它不是什么
+## 容易混淆的概念
 
 Multi-Route Retrieval 不是 [[Hybrid Search]] 的同义词。Hybrid Search 常是向量检索和关键词/全文检索的双路融合；多路召回是更宽的策略，可以包含 hybrid search，也可以包含多 Query、图检索、metadata filter 或多源 retriever。
 

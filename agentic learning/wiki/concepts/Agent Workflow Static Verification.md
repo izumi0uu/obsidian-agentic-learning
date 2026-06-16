@@ -53,7 +53,7 @@ Agent workflow 变成 graph 之后，系统多了一种以前 prompt-only Agent 
 
 它还让高风险流程更接近软件工程里的 CI lint：workflow 定义变更后，先通过结构检查和策略检查，再部署或放行。
 
-## 它不是什么
+## 容易混淆的概念
 
 它不是 [[Guardrails]] 的替代品。Guardrails 仍然需要处理 prompt injection、内容安全、输出格式、运行时工具参数和上下文依赖风险。
 

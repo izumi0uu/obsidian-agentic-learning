@@ -52,7 +52,7 @@ Type-safe 的学习重点是把“不稳定的自然语言接口”尽量包进�
 - 测试和评估时难以替换依赖、复现上下文。
 - Agent SDK 和后端工程类型系统割裂。
 
-## 它不是什么
+## 容易混淆的概念
 
 - 不是事实校验器。JSON schema 通过不代表答案真实。
 - 不是完整 orchestration runtime。复杂长任务仍可能需要 workflow / state graph。

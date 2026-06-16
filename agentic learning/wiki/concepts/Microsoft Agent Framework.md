@@ -48,7 +48,7 @@ Microsoft Agent Framework 重要，是因为它改变了“微软多 Agent 框�
 
 对学习者来说，它解决的是“微软框架该看哪条主线”的问题：当前应把 Microsoft Agent Framework 纳入对比，而不是只比较 AutoGen。
 
-## 它不是什么
+## 容易混淆的概念
 
 它不是 AutoGen 的简单改名，也不是说 AutoGen / Semantic Kernel 的历史概念都失效。更准确地说，MAF 是微软当前整合路线，AutoGen 的 conversation-first 思想和 Semantic Kernel 的企业 SDK 思想仍是理解它的来源。
 

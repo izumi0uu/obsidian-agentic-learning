@@ -44,7 +44,7 @@ Multi-Head Attention 的问题背景是单一 attention 视角容易把不同关
 
 单个 attention 可能把不同关系平均在一起。多个 head 可以让模型在不同子空间里同时关注不同类型的信息，例如语法关系、指代关系或位置关系。
 
-## 它不是什么
+## 容易混淆的概念
 
 Multi-Head Attention 不是多个 Agent。
 

@@ -144,7 +144,7 @@ MCP 让 AI 应用连接外部工具和 context server。ANP 让 Agent 在网络�
 
 工程判断点：协议只让系统“能连接”。可靠协作还需要 ownership、权限、状态恢复、审计和最终验证。
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 它们都不是 Agent framework。它们不替代 LangGraph / Agents SDK / AutoGen 这类本地编排和运行时。
 - 它们都不是安全保证。身份、schema、tool description 和 Agent description 都可能过时、夸大或被污染。

@@ -60,7 +60,7 @@ Agent Skills 解决的是“可复用做事方法怎么被 Agent 发现、选择
 
 它让团队可以把重复工作沉淀为能力包：少量 metadata 负责触发，详细流程负责执行，脚本和参考资料负责稳定性和事实支持。这样既减少重复提示，也减少上下文被大量不相关资料占满。
 
-## 它不是什么
+## 容易混淆的概念
 
 Agent Skills 不是 [[MCP]]。MCP 解决 host/client/server 如何连接外部 tools、resources、prompts；skill 解决 Agent 拿到能力和工具后按什么流程做事。一个 skill 内部可以调用 MCP 工具，但 skill 自身不是 MCP server。
 

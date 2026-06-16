@@ -57,7 +57,7 @@ Multi-agent Orchestration 关注的不是“有几个 Agent”，而是多个能
 
 [[Oh My Codex (OMX)]] 的 `$team` 就是代码 Agent 场景里的一个具体例子：多个 worker 在不同 worktree 里并行处理任务，再由 leader 整合。
 
-## 它不是什么
+## 容易混淆的概念
 
 Multi-agent Orchestration 不是“Agent 越多越好”。
 

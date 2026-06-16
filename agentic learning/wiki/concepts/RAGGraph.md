@@ -69,7 +69,7 @@ query -> rewrite -> retrieve -> grade -> rerank -> answer
 
 RAGGraph 这类说法想表达：RAG 不一定是一条直线，它也可以是一个由节点、边、条件和循环组成的工作流。
 
-## 它不是什么
+## 容易混淆的概念
 
 RAGGraph 不是一个稳定统一的学术概念。
 

@@ -57,7 +57,7 @@ RAG 需要从外部知识库里快速找相关材料。普通数据库擅长精�
 
 代表生态包括 Pinecone、Weaviate、Qdrant、Milvus，以及云厂商搜索/数据库里的 vector index。
 
-## 它不是什么
+## 容易混淆的概念
 
 Vector Database 不是 RAG 本身。
 

@@ -73,7 +73,7 @@ Agent Framework 之所以出现，是因为早期 Agent demo 往往把太多责�
 
 Agent Framework 解决的是这些工程责任的重复建设问题：与其每个项目都手写工具解析、状态管理、重试、handoff 和观测，不如用框架提供的抽象把它们组合起来。代表生态包括 [[LangGraph]]、LlamaIndex、Semantic Kernel、[[AutoGen]]、CrewAI、OpenAI Agents SDK、Pydantic AI、Mastra、Vercel AI SDK、[[AgentScope]]、[[CAMEL]] 和 [[Microsoft Agent Framework]] 等。
 
-## 它不是什么
+## 容易混淆的概念
 
 Agent Framework 不是 [[Agent]] 本身。框架提供运行结构，Agent 是围绕目标行动的系统；一个框架可以承载很多不同 Agent，也可能只被用来搭普通 workflow。
 

@@ -50,7 +50,7 @@ LangGraph 解决的是复杂 Agent workflow 的显式控制问题：长任务需
 
 它尤其适合理解：Plan-and-execute、Reflection loop、多 Agent handoff、RAG query planning、human approval、checkpoint recovery、失败后从某个节点恢复等工程模式。
 
-## 它不是什么
+## 容易混淆的概念
 
 LangGraph 不是模型，也不是简单 prompt 模板。它也不是 DeepAgents harness；DeepAgents 是更高层的长任务 Agent 脚手架，LangGraph 是底层 runtime / state graph。
 

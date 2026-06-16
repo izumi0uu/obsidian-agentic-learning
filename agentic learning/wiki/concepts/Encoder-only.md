@@ -54,7 +54,7 @@ Encoder-only 是只保留 Transformer encoder 侧、双向读取完整上下文�
 
 当任务目标不是自由生成，而是分类、抽取、排序、相似度或 embedding 时，Encoder-only 往往比自回归生成接口更直接。
 
-## 它不是什么
+## 容易混淆的概念
 
 Encoder-only 不是所有“能理解文本”的模型总称。它是 Transformer 架构变体，不等于所有分类器、检索器或 embedding 模型。
 

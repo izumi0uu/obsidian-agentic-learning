@@ -55,7 +55,7 @@ Workflow Guardrails 是把 guardrails 放到 workflow 的输入、模型调用�
 - 让失败策略可被审计：retry、reask、fix、filter、refuse、exception、human review、rollback 或 FAILED 状态都有归宿。
 - 帮助把 LLM validation、policy engine、human-in-the-loop、trace、Prefect state hook / transaction / automation 连接起来。
 
-## 它不是什么
+## 容易混淆的概念
 
 - 不是 [[Guardrails]] 的替代概念；它是 guardrails 在 workflow 层的放置方式。
 - 不是某个厂商 SDK 功能。OpenAI、LangChain、NeMo、Bedrock、Guardrails AI、Semantic Kernel、ADK 的 API 都是证据和实现样本，不是稳定定义本身。

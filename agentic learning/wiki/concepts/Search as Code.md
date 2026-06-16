@@ -63,7 +63,7 @@ Perplexity 的文章把 monolithic search 对 agent 的三个典型失败模式�
 
 SaC 的作用就是把这些 deterministic retrieval-side 操作尽量放进 code + sandbox，而不是全都留给 token-space reasoning。
 
-## 它不是什么
+## 容易混淆的概念
 
 它不是“把普通 Search API 放进 Python 里”。
 

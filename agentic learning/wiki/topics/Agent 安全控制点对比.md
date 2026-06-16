@@ -201,7 +201,7 @@ untrusted input / tool metadata / external content
 | 需要输入/输出/工具动作多点防护 | [[Guardrails]] | guardrails 是组合防护层，可调用 policy、分类器、schema 和审批 | guardrails 会误判漏判，不能单独保证安全 |
 | 需要把 guardrail 接到 flow/task/DB 写入/失败处置 | [[Workflow Guardrails]] | 它关注 guardrail placement、failure policy 和副作用边界 | 不要把 hook、callback 或 transaction 误当成安全判断本身 |
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 都不是“模型真的理解并永远遵守规则”的证明。
 - 都不是只靠 system prompt 可以解决的问题。

@@ -69,7 +69,7 @@ Rollout 帮助把 Agent 评测从“报告一个分数”推进到“保存一�
 
 没有 rollout / rollout record，很多 Agent 评测只能停留在结果表格，难以复现和审计。
 
-## 它不是什么
+## 容易混淆的概念
 
 Rollout 不是最终答案。最终答案只是一次 rollout 的可能输出之一。
 

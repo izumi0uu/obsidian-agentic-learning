@@ -72,7 +72,7 @@ Context Projection 解决的是一个很细但很关键的问题：系统“拥�
 - 让长任务在 compaction、恢复、子代理汇总后仍能保留关键上下文。
 - 让上下文错误更容易 debug：是候选信息没保存，还是保存了但没有投影进本轮输入。
 
-## 它不是什么
+## 容易混淆的概念
 
 Context Projection 不是 [[Agent State]] 本身。State 是系统持有的运行事实；projection 是把其中一部分变成模型输入。
 

@@ -58,7 +58,7 @@ Managed Agent Harness 解决的是“长任务 Agent 的基础设施由谁来建
 
 自建 harness 时，团队要处理容器、权限、工具调用、事件流、状态持久化、恢复、网络、认证、日志和成本。托管 harness 把这些变成平台能力，适合想快速把 Agent 接到真实工作流、又不想从零搭运行外壳的团队。
 
-## 它不是什么
+## 容易混淆的概念
 
 Managed Agent Harness 不是模型本身。模型生成意图，harness 承载执行。
 

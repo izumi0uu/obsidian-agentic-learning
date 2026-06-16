@@ -54,7 +54,7 @@ Azure AI Search 的 source note 把 agentic retrieval 描述成面向复杂问�
 
 Agentic Retrieval 让检索不再只是“搜索一次”，而是先判断信息需求，再生成多个子查询，执行检索、排序、合并 grounding data。
 
-## 它不是什么
+## 容易混淆的概念
 
 它不是完整 Agent。
 

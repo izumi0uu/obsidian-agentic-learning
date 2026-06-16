@@ -297,7 +297,7 @@ Failure diagnosis:
 | Agent/RAG 项目要选向量库 | [[常用向量数据库对比]] + [[Vector Database#Agent / RAG 选型边界]] | 先看现有后端/搜索栈、数据规模、QPS、metadata/权限、更新频率、hybrid search 和运维成本 | 把 Qdrant、pgvector、Chroma、FAISS、Milvus、Weaviate、Pinecone 当成同一层 vendor 排名，会忽略本地库、Postgres 扩展、专用服务、搜索系统和图数据库的层级差异 |
 | 不知道 RAG 错在检索还是生成 | trace + [[RAG Evaluation]] | 需要分开看 retrieval ranking metrics（Hit@K / Recall@K / MRR / nDCG）、rerank、faithfulness、citation | 只看最终答案会误判根因 |
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 都不是 [[RAG]] 的全部；RAG 还包括上下文组织、生成、引用、评估和治理。
 - 都不是“防幻觉按钮”；检索链路错误会把坏上下文更稳定地送给模型。

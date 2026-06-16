@@ -84,7 +84,7 @@ Dense Retrieval 的盲区也很稳定：它对产品型号、错误码、函数�
 
 它解决“同义表达、口语化表达、跨表述角度导致关键词匹配漏召回”的问题。尤其当用户问题和文档描述语义相近但词面不同，dense retrieval 往往比纯关键词检索更容易找到候选。
 
-## 它不是什么
+## 容易混淆的概念
 
 Dense Retrieval 不是整个 [[Retriever]]。Retriever 是组件或流程，可以包含 dense、sparse、metadata filter、query rewrite、权限过滤、reranking 等步骤。
 

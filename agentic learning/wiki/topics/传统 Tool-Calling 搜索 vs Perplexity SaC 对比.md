@@ -155,7 +155,7 @@ Perplexity 原文明确主张，复杂 agent 任务需要把 retrieval、ranking
 - 高层 shorthand endpoint 仍然要保留，因为很多简单任务不值得动用完整可编排栈。
 - 这不等于所有 Agent 产品都已经公开采用 SaC；就当前公开表述，Perplexity 明确点名的是 Computer 和 Agent API，不能自动外推到所有 Search API / Sonar / 第三方 agent 平台内部也以同样方式暴露。
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 都不自动保证事实正确。source 质量、ranking 质量、citation 检查和最终生成 faithful 仍然重要。
 - 都不替代权限治理。能搜到什么、能看哪些 source、哪些结果可以进入上下文，仍然需要 policy 和 audit。

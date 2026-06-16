@@ -120,7 +120,7 @@ runtime evidence  -> trace/audit/eval sample -> regression monitoring
 - 线上偶发、难复现：补 [[Trace]]、[[Observability]] 和 eval sample capture。
 - 合规、责任和事故复盘：补 [[Audit Log]]，不要只保留调试日志。
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 不是“把 top-k 调大”就能解决的参数问题。
 - 不是只靠更强模型就能解决的推理问题。

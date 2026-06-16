@@ -50,7 +50,7 @@ State Graph Runtime 出现，是因为自然语言 prompt loop 很难稳定表�
 - 线上失败后只能看日志，很难重放具体路径。
 - 多 Agent / 多工具流程没有统一状态边界，容易互相污染。
 
-## 它不是什么
+## 容易混淆的概念
 
 - 不是图数据库。这里的 graph 是执行控制图，不是知识图谱或向量索引。
 - 不是 UI 流程图。图只是外显表示，真正关键是 runtime 如何保存 state、执行 node、路由 edge 和恢复 checkpoint。

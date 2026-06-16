@@ -50,7 +50,7 @@ MCP Elicitation 是 MCP server 在交互过程中通过 client/host 向用户请
 
 有些 MCP server workflow 不能只靠一次工具调用完成，因为 server 不知道用户偏好、目标对象或必要字段。Elicitation 给 server 一个标准方式请求补充信息，同时让 client/host 保留交互控制权。
 
-## 它不是什么
+## 容易混淆的概念
 
 MCP Elicitation 不是 [[Approval Gate]]。Approval gate 重点是高风险动作执行前的准入；elicitation 重点是补充结构化输入。二者可以组合，但不能互相替代。
 

@@ -56,7 +56,7 @@ Reranking 的边界很关键：如果初检没有召回正确证据，reranker �
 
 向量库返回的 top-k 不一定是最能回答问题的片段。Reranker 可以在较小候选集上做更精细的 query-document 相关性判断。
 
-## 它不是什么
+## 容易混淆的概念
 
 Reranking 不是扩大召回。
 

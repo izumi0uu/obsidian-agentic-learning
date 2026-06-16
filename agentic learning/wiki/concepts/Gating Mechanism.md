@@ -67,7 +67,7 @@ Gating Mechanism 是让模型根据当前输入，选择性放行、抑制或路
 - 稀疏计算：在 MoE 中让每个 token 只激活一部分 experts，解耦总参数量和每 token 推理计算量。
 - 抑制无关信息：不是所有上下文信息都应同等进入下一层，gate 提供了可学习的过滤入口。
 
-## 它不是什么
+## 容易混淆的概念
 
 Gating Mechanism 不是 attention 本身。Attention 计算 token 之间的加权聚合；gating 更泛，强调对信息流、特征通道或计算路径的选择性放行。二者可以共存，但不是同一个概念。
 

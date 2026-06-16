@@ -50,7 +50,7 @@ MCP Registry 的问题背景是 MCP server 数量增长后，host 不可能靠�
 
 MCP server 越多，Agent 应用越需要知道工具从哪里来、版本是什么、是否可信、怎么安装、如何更新。Registry 提供发现和分发入口。
 
-## 它不是什么
+## 容易混淆的概念
 
 MCP Registry 不是安全保证。
 

@@ -56,7 +56,7 @@ LLM 原生输出是 token 序列，应用程序需要的是可解析对象。Str
 
 它解决的是“自然语言答案无法稳定接入软件系统”的问题。常见场景包括信息抽取、分类标签、router decision、tool arguments、LLM-as-judge 输出、planner step、RAG citation object 和审批前检查结果。
 
-## 它不是什么
+## 容易混淆的概念
 
 Structured Outputs 不是 [[Constrained Decoding]] 的同义词。Structured Outputs 是应用层目标和 API / SDK surface；Constrained Decoding 是可能使用的解码层机制。
 

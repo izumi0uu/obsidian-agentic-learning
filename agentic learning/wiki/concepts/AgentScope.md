@@ -46,7 +46,7 @@ AgentScope 解决的是多 Agent 应用开发和运维中的重复工程问题�
 
 当系统从“两三个角色 demo”扩大到更多 agent、更多工具、跨机器/服务部署、需要观测和生命周期管理时，AgentScope 这类平台路线就比单纯 prompt 模板更接近生产问题。
 
-## 它不是什么
+## 容易混淆的概念
 
 AgentScope 不是 CAMEL 式 role-playing 的同义词，也不是 AutoGen 式 group chat 的简单替代。它可以支持多 Agent 协作，但它的核心学习边界更偏 framework / platform。
 

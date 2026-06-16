@@ -60,7 +60,7 @@ Agent Workflow 之所以重要，是因为不是每个 agentic task 都应该让
 
 Anthropic 的工程建议提供了一个重要边界：很多任务用 workflow 就足够，复杂自主 Agent 应该在任务确实需要动态判断、多步反馈和不确定环境时再引入。
 
-## 它不是什么
+## 容易混淆的概念
 
 Agent Workflow 不是 [[Agent Loop]] 的同义词。Loop 描述观察、决策、行动、反馈的基本循环；workflow 描述系统如何把这些循环、工具、人类确认和角色交接组织成任务路径。
 

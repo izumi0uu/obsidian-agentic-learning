@@ -59,7 +59,7 @@ DeerFlow 的学习价值在于看到一个长任务 Agent 系统如何把“模�
 - 工具执行有真实副作用：需要 sandbox、权限配置、trusted deployment 和安全边界。
 - 研究、报告、网页、幻灯片、数据分析等任务需要技能化工作流：需要按需加载 skill，而不是把所有流程塞进 prompt。
 
-## 它不是什么
+## 容易混淆的概念
 
 DeerFlow 不是 [[RAGFlow]]。RAGFlow 的中心是 RAG / 知识库 / context layer；DeerFlow 的中心是长任务 Agent harness。
 

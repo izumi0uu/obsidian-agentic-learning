@@ -57,7 +57,7 @@ source note 里用 [[Bi-Encoder]] 与 Cross-encoder 对比解释 rerank：Bi-enc
 
 它解决“初召回候选已找到，但排序不够精细”的问题。向量相似度可能把表面相似但不能回答问题的 chunk 排前；Cross-Encoder 可以更细地判断 query 和 chunk 是否真正相关。
 
-## 它不是什么
+## 容易混淆的概念
 
 Cross-Encoder 不是 [[Retriever]] 的全部，也不是大规模向量召回的替代品。
 

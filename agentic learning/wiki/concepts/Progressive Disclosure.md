@@ -59,7 +59,7 @@ Progressive Disclosure 最初是通用交互设计思想：不要一次性把所
 - 支持大规模能力库：skill registry、tool registry、repo docs 和操作手册可以很多，但每轮只加载相关部分。
 - 改善可审计性：系统可以记录“何时暴露了什么信息”，而不是只有一个巨大混合 prompt。
 
-## 它不是什么
+## 容易混淆的概念
 
 Progressive Disclosure 不是 [[Tool Calling]]。Tool Calling 是模型发出结构化工具调用请求；Progressive Disclosure 是决定工具/skill 信息什么时候、以多细粒度进入上下文。
 

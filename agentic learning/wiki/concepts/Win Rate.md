@@ -53,7 +53,7 @@ Win Rate 解决的是开放式输出和版本比较中的相对偏好问题：
 - 当模型、prompt、RAG 策略或数据生成流程改动后，可以用相同样本集做 A/B 对比。
 - 当人工绝对打分不稳定时，pairwise comparison 常比直接给 1-5 分更容易一致。
 
-## 它不是什么
+## 容易混淆的概念
 
 Win Rate 不是 [[Task Success Rate]]。Task Success Rate 问“任务是否成功完成”；Win Rate 问“两个候选里谁更好”。
 

@@ -157,7 +157,7 @@ A2A、ACP、MCP 的生态、版本和安全实践变化快。概念层应保留�
 | 协作路径需要审批、分支、重试或人工节点 | [[Agent Workflow]] | 这是执行路径设计问题 | 不要让模型在 prompt 里临时决定所有路径 |
 | 长任务可能中断、等待审批或有副作用重试 | [[Durable Execution]] | 需要 checkpoint、event log 和副作用边界 | 盲目 replay 可能重复执行不可逆动作 |
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 都不是“多个聊天机器人互相说话就能解决问题”。可靠协作需要 ownership、权限、状态、trace、evaluation 和集成权威。
 - 都不是安全保证。协议连接、handoff 和 workflow 仍需要身份、权限、least privilege、approval gate、sandbox 和 audit。

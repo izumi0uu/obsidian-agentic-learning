@@ -47,7 +47,7 @@ Data-first Agent Framework 是从数据连接、索引、检索、query engine �
 - 手写 RAG pipeline 与 tool loop 分离，导致检索结果难以被 Agent 正确使用。
 - query engine、retriever、index 和 agent workflow 缺少统一接口。
 
-## 它不是什么
+## 容易混淆的概念
 
 - 不是普通向量数据库。它可能使用 vector database，但还包括 query engine、tool wrapper、workflow 和 evaluation。
 - 不是所有 Agent 的最佳底层 runtime。非知识密集、强流程控制任务可能更适合 state graph/workflow framework。

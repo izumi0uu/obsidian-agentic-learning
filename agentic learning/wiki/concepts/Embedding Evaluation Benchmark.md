@@ -57,7 +57,7 @@ Embedding 模型的质量不能只靠“demo 看起来相关”判断。一个�
 
 它解决 embedding 模型选型缺少公共参照的问题，让团队不用只凭模型名、厂商宣传、维度或主观样例来筛模型。
 
-## 它不是什么
+## 容易混淆的概念
 
 它不是完整 [[RAG Evaluation]]。RAG evaluation 评系统链路；embedding benchmark 主要评表示模型。
 

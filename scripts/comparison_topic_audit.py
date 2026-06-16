@@ -34,20 +34,23 @@ TOPIC_DIR = ROOT / "agentic learning" / "wiki" / "topics"
 
 REQUIRED_FRONTMATTER = ["type", "topic", "status", "created", "updated", "source", "evidence", "related"]
 
-REQUIRED_SECTIONS = [
-    "## 一句话总览",
-    "## 为什么这组值得对比",
-    "## 共同问题域",
-    "## 核心区别表",
-    "## 最容易混淆的边界",
-    "## 执行时序 / 机制差异",
-    "## 学习类比（非证据）",
-    "## 现代系统如何吸收或限制",
-    "## 什么时候用哪个判断",
-    "## 它们共同不是什么",
-    "## 证据锚点",
-    "## 复习触发",
-    "## 相关链接",
+REQUIRED_SECTION_GROUPS = [
+    ("## 一句话总览", ("## 一句话总览",)),
+    ("## 为什么这组值得对比", ("## 为什么这组值得对比",)),
+    ("## 共同问题域", ("## 共同问题域",)),
+    ("## 核心区别表", ("## 核心区别表",)),
+    ("## 最容易混淆的边界", ("## 最容易混淆的边界",)),
+    ("## 执行时序 / 机制差异", ("## 执行时序 / 机制差异",)),
+    ("## 学习类比（非证据）", ("## 学习类比（非证据）",)),
+    ("## 现代系统如何吸收或限制", ("## 现代系统如何吸收或限制",)),
+    ("## 什么时候用哪个判断", ("## 什么时候用哪个判断",)),
+    (
+        "## 这组概念最容易混在哪里 / ## 它们共同不是什么",
+        ("## 这组概念最容易混在哪里", "## 它们共同不是什么"),
+    ),
+    ("## 证据锚点", ("## 证据锚点",)),
+    ("## 复习触发", ("## 复习触发",)),
+    ("## 相关链接", ("## 相关链接",)),
 ]
 
 EVIDENCE_MARKERS = ["Evidence type:", "Confidence:", "Boundary:"]
@@ -164,6 +167,10 @@ def section_body(text: str, heading: str) -> str:
     return rest.strip()
 
 
+def has_heading(text: str, heading: str) -> bool:
+    return bool(re.search(rf"(?m)^{re.escape(heading)}\s*$", text))
+
+
 def count_core_table_rows(core_section: str) -> int:
     table_lines = [line for line in core_section.splitlines() if line.startswith("|")]
     data_rows = []
@@ -200,7 +207,9 @@ def audit_page(path: Path, *, min_page_chars: int) -> ComparisonAudit:
 
     missing_frontmatter = [key for key in REQUIRED_FRONTMATTER if key not in fm]
     missing_sections = [
-        section for section in REQUIRED_SECTIONS if not re.search(rf"(?m)^{re.escape(section)}\s*$", text)
+        label
+        for label, headings in REQUIRED_SECTION_GROUPS
+        if not any(has_heading(text, heading) for heading in headings)
     ]
 
     core_section = section_body(text, "## 核心区别表")

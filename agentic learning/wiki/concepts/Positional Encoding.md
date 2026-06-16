@@ -42,7 +42,7 @@ Positional Encoding 的问题背景是 Transformer 的 self-attention 本身对�
 
 Transformer 去掉了 recurrence 和 convolution，所以模型本身不会天然知道 token 的顺序。Positional Encoding 把位置相关信息加到输入表示中，让模型能区分“我喜欢你”和“你喜欢我”这种顺序差异。
 
-## 它不是什么
+## 容易混淆的概念
 
 Positional Encoding 不是上下文窗口。
 

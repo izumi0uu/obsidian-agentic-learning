@@ -52,7 +52,7 @@ Agent 需要知道“用户是谁、项目是什么、术语如何定义、某�
 
 如果没有 semantic memory，Agent 会反复询问已知偏好，或在同一项目里重复建立概念背景。
 
-## 它不是什么
+## 容易混淆的概念
 
 Semantic Memory 不是事件流水账。“昨天我打开网页失败三次”更像 [[Episodic Memory]]；“用户偏好中文解释，并希望先讲边界”更像 semantic memory。
 

@@ -139,7 +139,7 @@ alert/dashboard -> inspect trace -> check audit log if action risky -> build rep
 | 验证一个修复是否真的解决旧失败 | [[Replay]] | 需要固定输入/工具/环境并比较新旧结果 | 环境不可复现时只能降级为近似重跑 |
 | 要把 traces 接入多个平台或标准管线 | [[OpenTelemetry GenAI]] | 需要统一 span/event/attribute 语义 | 标准化不自动解决质量和隐私 |
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 都不是模型真实内心的证明。
 - 都不是单独的质量保证；质量判断还需要 [[Evaluation]]、rubric、checker、人工或业务指标。

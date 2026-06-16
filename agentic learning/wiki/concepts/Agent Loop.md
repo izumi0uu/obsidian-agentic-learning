@@ -59,7 +59,7 @@ Agent Loop 之所以重要，是因为 Agent 面对的任务通常不是一次�
 
 Agent Loop 也解决“环境不可预知”的问题。网页按钮可能不存在，检索结果可能为空，工具参数可能报错，用户可能拒绝授权。Loop 让系统可以在每次外部反馈之后调整策略，而不是把所有步骤一次性写死。
 
-## 它不是什么
+## 容易混淆的概念
 
 Agent Loop 不是固定 prompt 模板。`Thought -> Action -> Observation` 是理解 ReAct 的学习入口，但现代系统常用结构化 tool call、state graph、checkpoint、trace 和 guardrail 承载同样的循环价值。
 

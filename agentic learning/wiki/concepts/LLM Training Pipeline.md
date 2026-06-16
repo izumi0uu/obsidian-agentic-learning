@@ -58,7 +58,7 @@ LLM Training Pipeline 解释的是“模型能力从哪里来”。[[Transformer
 
 训练流水线回答的是另一件事：模型怎样从大规模文本中获得底子，再通过指令、偏好、反馈、工具任务和评测，变得更会遵循指令、推理、写代码、调用工具和适配 Agent 框架。
 
-## 它不是什么
+## 容易混淆的概念
 
 LLM Training Pipeline 不是 [[Agent Framework]]。
 

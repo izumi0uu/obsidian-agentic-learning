@@ -62,7 +62,7 @@ LLM 也把很多 [[NLP]] 子任务统一到“上下文中预测下一个 token�
 
 现代 LLM 的一个重要架构地基是 [[Transformer]]。Transformer 让模型可以用 [[Self-Attention]] 在当前上下文中建模 token 之间的关系，并通过 [[Multi-Head Attention]] 同时关注不同类型的信息。
 
-## 它不是什么
+## 容易混淆的概念
 
 LLM 不是数据库。它可能说出看起来很确定但实际错误的内容。
 

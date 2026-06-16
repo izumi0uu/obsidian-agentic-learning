@@ -68,7 +68,7 @@ GSSC 解决的是 [[Context Engineering]] 里最容易被说虚的问题：上�
 - 让上下文问题更容易 debug：是没收集到、选错了、结构乱了，还是压缩过度。
 - 帮助面试或工程表达从“做上下文工程”落到具体执行步骤。
 
-## 它不是什么
+## 容易混淆的概念
 
 GSSC Pipeline 不是 [[Context Engineering]] 的同义词。Context Engineering 是更大的运行时信息治理问题；GSSC 是其中一种上下文构建流水线。
 

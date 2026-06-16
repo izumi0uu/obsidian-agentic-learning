@@ -80,7 +80,7 @@ Sparse Retrieval 解决的是“只靠语义向量时，精确词面信号容易
 
 没有 sparse side 时，用户问 `ERR_CONNECTION_RESET`、`M4 Pro`、`LSTM`、`invoice_id` 或某个法规条款编号，dense retrieval 可能召回语义接近但没有精确证据的 chunk。Sparse retrieval 能优先命中包含这些词项的文档，让检索系统保住“字面上必须出现”的信号。
 
-## 它不是什么
+## 容易混淆的概念
 
 Sparse Retrieval 不是 [[TF-IDF]] 的别名。TF-IDF 是一种基础词项权重方法；sparse retrieval 是更大的检索家族。
 

@@ -143,7 +143,7 @@ Replay uses saved trace / rollout record and environment assumptions to reproduc
 | 我想判断过程是否安全有效 | [[Trajectory Evaluation]] | 需要对路径评分，而不只看最终答案 | judge/rubric 可能偏差 |
 | 我想复现失败并验证修复 | [[Replay]] | 需要用保存记录重放或对比 | 环境不可复现会降低可信度 |
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 都不是最终答案本身。
 - 都不是模型真实内心的完整证明。

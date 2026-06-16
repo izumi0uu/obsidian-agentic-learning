@@ -46,7 +46,7 @@ RAG 的上限常常不是模型，而是资料进库质量。PDF 解析、表格
 
 代表工具包括 LlamaParse、Docling、Unstructured、Firecrawl。
 
-## 它不是什么
+## 容易混淆的概念
 
 Document Ingestion 不是把文件全文复制进向量库。
 

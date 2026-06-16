@@ -179,7 +179,7 @@ Task -> planning/todo -> filesystem/subagents/tools/memory -> LangGraph runtime 
 | 想快速搭长任务 Agent，复用 planning/filesystem/subagents/memory/permissions | [[LangChain DeepAgents]] | 它把 LangGraph 上的常见长任务 harness 结构预装好 | 不要把 harness 当底层 runtime 或通用标准 |
 | 任务简单、步骤固定、普通函数能解决 | 先不用这些框架 | framework 会增加延迟、成本和调试面 | “为了 Agent 而 Agent” |
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 都不是基础模型，也不直接提升模型权重能力。
 - 都不是完整安全保证；仍需要权限、沙箱、approval、trace、eval 和数据治理。

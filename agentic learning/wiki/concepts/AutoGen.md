@@ -50,7 +50,7 @@ AutoGen 解决的是“多个专门角色如何通过自动消息协作推进任
 
 典型问题包括：代码生成后让 reviewer / tester 接手、研究 agent 和写作 agent 交替、planner 分配任务给 executor、某个 agent 完成后通过 handoff 交给下一角色。
 
-## 它不是什么
+## 容易混淆的概念
 
 AutoGen 不是模型本身，也不是保证多 Agent 一定更可靠的魔法。多个 agent 只是把失败面从“单个模型生成错误”扩展成“消息、角色、工具、终止、权限和状态都可能出错”。
 

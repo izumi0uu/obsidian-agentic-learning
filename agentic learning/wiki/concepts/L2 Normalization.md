@@ -76,7 +76,7 @@ u dot v = cos(theta)
 
 它解决的是向量相似度计算里的尺度问题：让比较重点落在方向相似，而不是某个向量因为长度更大就在 dot product 里天然占优。
 
-## 它不是什么
+## 容易混淆的概念
 
 L2 Normalization 不是 [[Embedding]] 本身。Embedding 负责把文本变成向量；L2 normalization 只是在向量生成后做长度处理。
 

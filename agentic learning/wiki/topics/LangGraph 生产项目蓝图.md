@@ -289,7 +289,7 @@ validation -> final_response
 | eval 太晚 | 上线后才发现 graph 改动破坏旧流程 | offline regression + online evaluator + failure-to-dataset |
 | 框架迷信 | 认为用了 LangGraph 就是生产级 Agent | 生产级来自 state、policy、tooling、eval、deployment 的组合 |
 
-## 它不是什么
+## 容易混淆的概念
 
 - 不是 LangGraph API 教程：本页不教 `add_node` / `add_edge` 的具体语法，语法以官方文档为准。
 - 不是框架选型排行榜：如果任务不需要 state graph / durable workflow，LangGraph 不是默认答案。

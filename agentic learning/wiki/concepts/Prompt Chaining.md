@@ -56,7 +56,7 @@ Prompt Chaining 的设计重点是步骤边界，而不是调用数量。一个�
 
 它解决的是复杂任务在单次 prompt 里责任过多、不可观察、不可局部修复的问题。拆成链后，每个步骤都可以单独评估和调试。
 
-## 它不是什么
+## 容易混淆的概念
 
 Prompt Chaining 不是 [[ReAct]]。ReAct 的关键是 Thought -> Action -> Observation 的外部交互循环；Prompt Chaining 可以完全不调用外部工具，只是顺序调用模型。
 

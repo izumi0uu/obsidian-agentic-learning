@@ -98,7 +98,7 @@ LLM 的上下文限制不是一个单独参数，而是容量、计算、结构�
 | 资料过期或越权 | [[RAG]], [[RAG Citation Faithfulness]], access control | 来源标注、权限过滤、数据 freshness、审计日志 |
 | 长任务越做越散、重复调查或遗忘决策 | [[Long-Horizon Context Engineering]], [[Agent State]], [[Memory]] | compaction、结构化笔记、[[Context Projection|state projection]]、sub-agent 隔离和汇总 |
 
-## 它不是什么
+## 容易混淆的概念
 
 - 不是“模型支持 1M token 就万事大吉”。大窗口仍可能放入错误、过期、冲突或无关材料。
 - 不是 [[RAG]] 的替代品。RAG 和 memory 的价值会从“把窗口补足”变成“选择高价值信息并保持证据可追溯”。

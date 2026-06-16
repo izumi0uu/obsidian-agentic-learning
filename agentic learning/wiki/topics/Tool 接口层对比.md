@@ -178,7 +178,7 @@ MCP Registry:      Search/select server -> inspect metadata/source/version -> in
 | 要把外部服务作为可复用工具接入多个 AI app | [[MCP]] | 关注 host/client/server 协议和能力发现 | 协议接入不是安全背书 |
 | 要发现或安装 MCP server | [[MCP Registry]] | 关注 server 来源、版本、分发和升级入口 | registry 上架不等于可信或最小权限 |
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 都不是完整 Agent。工具接口层不替代 planning、state、memory、evaluation、observability 或 handoff。
 - 都不是安全保证。schema、constrained decoding、registry、MCP 和 permissioning 都需要 policy、approval、sandbox、trace 和测试配合。

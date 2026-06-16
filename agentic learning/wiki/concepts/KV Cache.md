@@ -69,7 +69,7 @@ LLM 逐 token 生成文本。生成第 `t` 个 token 时，模型需要让这个
 
 KV Cache 解决的是推理时“历史上下文已经算过，下一步能不能复用”的问题。它让 [[Decoder-only|decoder-only LLM]] 可以逐 token 连续生成，并让 prompt prefix、system prompt、few-shot 示例和历史上下文在一次请求内被复用。
 
-## 它不是什么
+## 容易混淆的概念
 
 KV Cache 不是 [[Memory]]。它只保存当前模型前向传播需要的 K/V 张量，不保存用户事实、长期偏好或可检索知识。
 

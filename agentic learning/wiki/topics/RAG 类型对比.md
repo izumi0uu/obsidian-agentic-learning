@@ -143,7 +143,7 @@ Self-RAG:        Generate-time decisions: retrieve? evidence enough? critique?
 | 高准确任务，坏检索代价高 | [[Corrective RAG]] | 检索结果先过质量门 | evaluator 错误会导致过度补救或错杀证据 |
 | 模型需要判断是否检索和证据是否支持 | [[Self-RAG]] | 自适应检索/生成/批判 | prompt 近似不等于论文训练机制 |
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 都不是“加了检索就不会幻觉”。
 - 都不是长期记忆的全部；RAG 更偏外部知识检索，记忆还涉及写入、更新、遗忘和权限。

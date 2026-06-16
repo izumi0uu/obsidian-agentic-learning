@@ -51,7 +51,7 @@ Agent 的输出可能看起来合理，但任务没有完成。Task Success Rate
 
 它适合用来比较版本：新 prompt、新模型、新工具流程是否让端到端完成率提高。
 
-## 它不是什么
+## 容易混淆的概念
 
 Task Success Rate 不解释失败原因。
 

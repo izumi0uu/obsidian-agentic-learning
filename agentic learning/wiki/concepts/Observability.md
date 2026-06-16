@@ -56,7 +56,7 @@ Agent 失败通常不是单点错误：可能是检索差、工具参数错、�
 
 它还支持线上/离线闭环：线上 trace 暴露真实失败，离线 eval harness 把失败变成 regression case，再用新的 prompt、模型或工作流验证修复是否有效。
 
-## 它不是什么
+## 容易混淆的概念
 
 Observability 不是普通日志。
 

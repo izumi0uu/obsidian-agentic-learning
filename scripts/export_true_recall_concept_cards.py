@@ -33,12 +33,11 @@ MARKDOWN_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
 COMMENT_RE = re.compile(r"<!--[\s\S]*?-->")
 
 CARD_PRIORITY = (
-    ("一句话", "用一句话解释 {title}。"),
-    ("它不是什么", "{title} 最容易被误认为哪些相邻概念？"),
-    ("边界细节", "判断 {title} 是否适用时，最小边界是什么？"),
-    ("现代性状态", "{title} 在现代系统里的状态是什么？"),
-    ("常见误解", "{title} 的常见误解或风险是什么？"),
-    ("常见误解 / 风险", "{title} 的常见误解或风险是什么？"),
+    (("一句话",), "用一句话解释 {title}。"),
+    (("容易混淆的概念", "它不是什么"), "{title} 最容易和哪些相邻概念混在一起？"),
+    (("边界细节",), "判断 {title} 是否适用时，最小边界是什么？"),
+    (("现代性状态",), "{title} 在现代系统里的状态是什么？"),
+    (("常见误解", "常见误解 / 风险"), "{title} 的常见误解或风险是什么？"),
 )
 
 
@@ -110,6 +109,14 @@ def parse_sections(body: str) -> dict[str, str]:
     return {heading: "\n".join(lines).strip() for heading, lines in sections.items()}
 
 
+def pick_section(sections: dict[str, str], names: tuple[str, ...]) -> tuple[str | None, str]:
+    for name in names:
+        content = sections.get(name)
+        if content:
+            return name, content
+    return None, ""
+
+
 def normalize_inline_markdown(text: str, *, max_chars: int) -> str:
     text = COMMENT_RE.sub("", text)
     text = WIKILINK_RE.sub(lambda m: m.group(2) or m.group(1), text)
@@ -177,10 +184,10 @@ def build_cards_for_path(
     sections = parse_sections(body)
     cards: list[ImportCard] = []
 
-    for section, front_template in CARD_PRIORITY:
+    for section_names, front_template in CARD_PRIORITY:
         if len(cards) >= max_cards_per_note:
             break
-        content = sections.get(section)
+        section, content = pick_section(sections, section_names)
         if not content:
             continue
         back = normalize_inline_markdown(content, max_chars=max_back_chars)
@@ -191,7 +198,7 @@ def build_cards_for_path(
                 title=title,
                 front=front_template.format(title=title),
                 back=back,
-                source_anchor=anchor_link(title, section),
+                source_anchor=anchor_link(title, section or section_names[0]),
                 source_path=str(path.relative_to(ROOT)),
             )
         )

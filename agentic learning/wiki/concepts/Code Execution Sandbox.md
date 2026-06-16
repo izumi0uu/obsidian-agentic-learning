@@ -44,7 +44,7 @@ Agent 运行代码时可能删除文件、访问网络、泄露密钥、跑高�
 
 代表生态包括 E2B、Daytona、Modal Sandboxes、Firecracker/microVM 等。这里的重点不是记住产品名，而是理解“代码执行必须有隔离边界”。
 
-## 它不是什么
+## 容易混淆的概念
 
 Code Execution Sandbox 不是绝对安全。隔离层配置错误、宿主目录挂载过宽、网络默认开放、凭证注入不当，都可能让 sandbox 失效。
 

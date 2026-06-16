@@ -127,7 +127,7 @@ Thought/Policy -> Action -> Environment/Tool -> Observation -> Context/State -> 
 | 过程怎么复盘？ | [[Trace]] | 保存可观察事件和调用记录 | trace 不等于质量评分 |
 | 工具调用失败该归因哪里？ | Action / Environment / Observation / Trace 都要看 | 可能是参数错、环境错、返回错或记录不足 | 只看最终答案会漏掉过程错误 |
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 都不是 LLM 内部权重或真实内心。
 - 都不等于完整 [[Agent Framework]]；它们只是 loop 中不同角色。

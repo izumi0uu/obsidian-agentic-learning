@@ -67,7 +67,7 @@ MCP 的上层语义是 host / client / server 如何发现 tools、resources、p
 - 支持本地工具和远程服务两类部署：本地可以无网络、低延迟；远程可以多 client 共享、集中运维。
 - 让同一个 MCP server 能被不同 host/client 复用，同时保留按部署场景选择通道的空间。
 
-## 它不是什么
+## 容易混淆的概念
 
 MCP Transport 不是 [[Tool Calling]]。Tool Calling 是模型输出结构化调用意图的接口；MCP Transport 是 MCP client/server 传递 JSON-RPC 消息的通道。
 

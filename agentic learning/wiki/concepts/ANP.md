@@ -65,7 +65,7 @@ ANP 的主源把这些问题放进 Agentic Web / network protocol 的语境里�
 - 让发现、描述和通信安全成为协议问题，而不是每个应用自己拼胶水。
 - 给 A2A / MCP 之外的 Agentic Web 问题提供观察入口。
 
-## 它不是什么
+## 容易混淆的概念
 
 ANP 不是 [[MCP]]。MCP 的主对象是工具、资源、prompts 和 context server；ANP 的主对象是网络中的 Agent 身份、发现、描述和通信协商。
 

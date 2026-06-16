@@ -6,7 +6,7 @@ topic:
   - workflow
 status: active
 created: 2026-05-05
-updated: 2026-05-25
+updated: 2026-06-16
 source: /Users/idah/Downloads/llm-wiki.md
 related:
   - "[[Agent 知识地图]]"
@@ -358,7 +358,7 @@ python3 scripts/interview_question_concept_links.py --dry-run
 1. `## 一句话`
 2. `## 概念详解`：主体段落，解释概念为什么出现、机制是什么、论文/官方文档/社区实践如何描述它，以及哪些是工程综合理解
 3. `## 它解决什么问题`
-4. `## 它不是什么`
+4. `## 容易混淆的概念`（旧卡兼容 `## 它不是什么`）
 5. `## 最小例子`
 6. `## 常见误解` 或 `## 风险`
 7. `## 边界细节`
@@ -368,7 +368,9 @@ python3 scripts/interview_question_concept_links.py --dry-run
 11. `## 复习触发`
 12. `## 相关链接`
 
-写法参照 [[Plan-and-Solve Prompting]]：先从这个概念自己解决的问题讲起，再用“它不是什么”“常见误解”和“边界细节”把邻近概念切开；录入时由 LLM 主动判断现代性状态。如果它来自论文时代的 prompt / agent 范式，还要说明现代系统如何把它包进 workflow、tool calling、state、guardrails、trace、evaluation 或 human-in-the-loop。
+风格边界：判断层不是固定句式练习。不要机械堆“X 不是 Y，而是 Z”。更推荐写清：为什么会混、真正差别落在对象/时序/责任边界/工程落点哪里、如果混淆会造成什么误判；只有一句对照最清楚时才使用“不是……而是……”。
+
+写法参照 [[Plan-and-Solve Prompting]]：先从这个概念自己解决的问题讲起，再用“容易混淆的概念”“常见误解”和“边界细节”把邻近概念切开；录入时由 LLM 主动判断现代性状态。如果它来自论文时代的 prompt / agent 范式，还要说明现代系统如何把它包进 workflow、tool calling、state、guardrails、trace、evaluation 或 human-in-the-loop。
 
 如果嵌入用户提供的图片或重绘 asset，必须在正文说明这张图是原论文内容、用户截图重绘，还是帮助理解的工程类比；并在 `## 证据锚点` 里写明 asset 路径。
 
@@ -379,7 +381,7 @@ python3 scripts/interview_question_concept_links.py --dry-run
 - 有 `## 一句话`，但正文不只停在一句话。
 - qualified / anchor 卡必须有 `## 概念详解`，并且它是解释主体：说明概念来源、机制、文档/论文/社区描述、现代工程吸收方式和证据边界。
 - 有 `## 它解决什么问题`，说明没有这个概念时会出现的具体困难。
-- 有 `## 它不是什么`，至少切开 1-2 个邻近概念或常见混淆。
+- 有 `## 容易混淆的概念`，或兼容旧标题 `## 它不是什么`；至少切开 1-2 个邻近概念或常见混淆。
 - 有 `## 最小例子`；如果概念不适合例子，要说明原因并给替代反例或类比。
 - 有 `## 常见误解` 或 `## 风险`。
 - 有 `## 边界细节`，写适用条件、反例、邻近概念差异或工程落点。
@@ -427,7 +429,7 @@ python3 scripts/interview_question_concept_links.py --dry-run
 7. `## 学习类比（非证据）`：可选；必须标明只是 learning analogy。
 8. `## 现代系统如何吸收或限制`：来源支持或明确标注为工程推论。
 9. `## 什么时候用哪个判断`：写适用条件和风险，不写空泛建议。
-10. `## 它们共同不是什么`：防止把整组概念误当成 Agent / framework / 训练方法等。
+10. `## 这组概念最容易混在哪里`（旧页兼容 `## 它们共同不是什么`）：防止把整组概念误当成 Agent / framework / 训练方法等。
 11. `## 证据锚点`：列出概念卡、source note、paper/docs anchor 和证据边界。
 12. `## 复习触发`：输出能检验理解的题。
 13. `## 相关链接`：回链到被比较概念和相邻 topic。
@@ -466,7 +468,7 @@ python3 scripts/interview_question_concept_links.py --dry-run
 检查：
 
 - 是否有 raw source 没有被消化。
-- 是否有概念卡没有 `它不是什么`。
+- 是否有概念卡没有 `容易混淆的概念`，且也没有兼容旧标题 `它不是什么`。
 - 是否有概念卡缺少 `## 边界细节`。
 - 是否有 Agent / prompting / framework / evaluation / RAG / memory / tooling / security / protocol / product-ecosystem 概念卡缺少 `## 现代性状态`。
 - 是否有概念卡缺少 `## 复习触发`，导致无法进入 `reviews/` 学习检查。
@@ -492,7 +494,7 @@ python3 scripts/interview_question_concept_links.py --dry-run
 
 1. 更新 [[04 页面目录]]。
 2. 运行 missing-link scan。
-3. 检查概念卡是否有 `它不是什么`、`边界细节`、`证据锚点` 和 `复习触发`。
+3. 检查概念卡是否有 `容易混淆的概念`（或旧标题 `它不是什么`）、`边界细节`、`证据锚点` 和 `复习触发`。
 4. 检查 raw source 的 `status`、`last_checked`、`freshness`。
 5. 处理 [[05 Query 写回队列]] 中的 pending 条目。
 6. 更新 [[06 Wiki 健康检查]]。
@@ -544,7 +546,7 @@ git diff --check
 
 执行步骤：
 
-1. 先读对应概念卡，确认它原本解决的问题和“它不是什么”。
+1. 先读对应概念卡，确认它原本解决的问题和“最容易与什么混”的边界。
 2. 再查最小证据集：一个原始来源（论文 / 原文）加至少一个现代官方工程来源（框架文档、SDK 文档或官方实践指南）。
 3. 给出四类判定，并说明哪些部分稳定、哪些部分需要 `freshness: watch/volatile`。
 4. 写回概念卡的 `## 现代性状态` 或 `## 现代系统怎么吸收 X 的价值/局限`。
@@ -612,4 +614,4 @@ git diff --check
 
 > LLM 可以维护 wiki，但学习完成的标准是用户能用自己的话解释。
 
-所以概念卡必须保留边界段落，尤其是“它不是什么”。
+所以概念卡必须保留边界段落，尤其是“容易混淆的概念”这一层。

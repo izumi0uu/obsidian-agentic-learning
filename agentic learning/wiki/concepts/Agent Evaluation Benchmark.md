@@ -82,7 +82,7 @@ Agent Evaluation Benchmark 是专门评估智能体在工具调用、真实环�
 - 是否能在多轮、多步骤、错误恢复和权限边界下保持稳定。
 - 分数是否来自真正完成任务，而不是 exploit checker 或讨好 judge。
 
-## 它不是什么
+## 容易混淆的概念
 
 它不是 [[Evaluation]] 的全部。Evaluation 还包括业务回归集、线上监控、人工复盘、安全评审、trace 复盘和发布门禁。
 

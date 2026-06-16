@@ -109,7 +109,7 @@ source documents -> entity/relation extraction -> entity resolution -> graph sto
 - 已有图数据库但不知道是否改善 RAG：同时跑构图评估和 [[RAG Evaluation]]。
 - 只是需要存储和查询关系数据：看 [[Neo4j]]，不必把它包装成 GraphRAG。
 
-## 它们共同不是什么
+## 这组概念最容易混在哪里
 
 - 不是“用了图就不会幻觉”。
 - 不是“图节点越多越好”。

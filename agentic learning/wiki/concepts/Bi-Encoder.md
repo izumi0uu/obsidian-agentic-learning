@@ -77,7 +77,7 @@ Bi-Encoder 解决的是大规模语义召回的在线成本问题。
 
 它让系统可以提前计算文档向量，查询时只算 query 向量并做向量搜索，从而把“每个 query 都和全库逐对深度比较”的问题，改造成“向量索引中找近邻”的问题。
 
-## 它不是什么
+## 容易混淆的概念
 
 Bi-Encoder 不是 [[Dense Retrieval]] 本身。Dense Retrieval 是检索路线，Bi-Encoder 是这条路线常见的模型结构。
 

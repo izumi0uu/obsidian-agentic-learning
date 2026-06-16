@@ -57,7 +57,7 @@ Hermes Agent 解决的是“LLM 如何变成可运行、可恢复、可接入多
 
 它也帮助学习者观察一个具体项目如何把许多分散概念组合起来：[[Tool Calling]] 负责模型发出结构化调用意图，[[MCP]] 负责接入外部工具服务，[[Long-term Memory]] 负责跨会话信息，[[Agent Workflow]] / `/goal` 负责持续推进，[[Agent Harness]] 负责把这些能力装进可执行边界。
 
-## 它不是什么
+## 容易混淆的概念
 
 - 不是 Agent 的通用定义。它是一个具体项目，不能反过来规定所有 Agent 都必须有 Telegram、skills hub、cron 或 gateway。
 - 不是模型训练方法。它的 self-improvement 多数发生在 memory、skills、session search 和 workflow 层，不等于修改底层模型权重。
