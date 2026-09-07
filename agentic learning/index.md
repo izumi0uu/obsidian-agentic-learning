@@ -55,6 +55,7 @@ reviews/ -> 概念触发式复习、费曼回答、写回候选
 - [[raw/repos/xiaolinnote/xiaolinnote 面试题索引]]
 - [[agent_java_offer Repo]]
 - [[raw/repos/agent_java_offer/agent_java_offer 面试题索引]]
+- [[赛文X 牛客面试题]]
 - [[Hello-Agents Repo]]
 - [[oh-my-codex 使用教程]]
 - [[OMX $ 指令]]

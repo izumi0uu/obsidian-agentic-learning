@@ -1672,3 +1672,11 @@ related:
 - Updated navigation and discovery surfaces: [[资料收集索引]], [[Agent 知识地图]], [[RAG 主题]], [[Agent 主题]], [[01 术语表]], and [[04 页面目录]].
 - Mention sweep: searched `Search as Code`, `SaC`, and `搜索即代码` across the vault before writeback; there were no preexisting high-confidence same-concept mentions to retarget, so the new concept was linked only from the newly updated navigation/topic surfaces.
 - Terminology / taxonomy: canonical name stays `Search as Code`; `Perplexity SaC` is product-context wording, not a separate concept card. Read [[09 概念层级审计基线]] and intentionally did not write `up` / `relations`; this is a new frontier retrieval/tooling boundary whose strict parent should not be guessed from the current conversation.
+
+
+## [2026-09-07] source-ingest | 赛文X 牛客近期面试题
+
+- Source: [[raw/repos/赛文X 牛客面试题]]
+- Added: [[raw/repos/赛文X牛客面试题/赛文X 牛客近期面试题汇总 2026-09-02]]，保留 98 篇记录的页面显示时间、原帖链接、面试问题、手撕题和完整原帖索引。
+- Updated navigation: [[资料收集索引]]、[[index]]。
+- Boundary: 这是一份候选人发布的面试复盘材料，适合补项目表达与追问覆盖面；没有新建概念卡、别名映射或 taxonomy 关系。
